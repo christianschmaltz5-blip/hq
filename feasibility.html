@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>5302 N 35th Ave — Development Feasibility — Christian's HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/shell.css">
+<style>
+.kv{display:flex; flex-wrap:wrap; gap:10px 26px; background:#fafbfd; border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:14px 18px; margin-bottom:22px; font-size:13px;}
+.kv div b{display:block; font-size:10px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-faint); font-weight:700; margin-bottom:2px;}
+
+.verdict{background:var(--danger-soft); border-left:4px solid var(--danger); border-radius:0 var(--radius-sm) var(--radius-sm) 0; padding:16px 20px; margin-bottom:22px; font-size:13.5px; line-height:1.65;}
+.verdict b{color:#b91c1c;}
+.callout{background:var(--success-soft); border-left:4px solid var(--success); border-radius:0 var(--radius-sm) var(--radius-sm) 0; padding:16px 20px; margin:18px 0; font-size:13.5px; line-height:1.65;}
+.callout b{color:#0e7a3f;}
+
+.rtbl{width:100%; border-collapse:collapse; margin:4px 0; font-size:12.5px;}
+.rtbl th,.rtbl td{border:1px solid var(--card-border); padding:9px 12px; text-align:left; vertical-align:top;}
+.rtbl th{background:#f4f7fc; color:var(--text); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em;}
+.rtbl tr:nth-child(even) td{background:#fafbfd;}
+.rtbl td.num, .rtbl th.num{text-align:right; white-space:nowrap;}
+
+.report p{font-size:13.5px; line-height:1.7; color:var(--text-soft); margin:8px 0;}
+.report ul{margin:8px 0 8px 20px; padding:0;}
+.report li{margin:5px 0; font-size:13.5px; line-height:1.65; color:var(--text-soft);}
+.report h2.sec{font-size:15px; font-weight:700; margin:0 0 12px; padding-bottom:8px; border-bottom:2px solid var(--accent); color:var(--text);}
+.report b{color:var(--text);}
+
+.report-foot{margin-top:8px; padding-top:14px; border-top:1px solid var(--card-border); font-size:11px; color:var(--text-faint); line-height:1.8;}
+</style>
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="logo-mark">C</div>
+      <div>
+        <div class="logo-text">Christian's HQ</div>
+        <div class="logo-sub">Personal dashboard</div>
+      </div>
+    </div>
+    <nav class="sidebar-scroll">
+      <div class="nav-label">Menu</div>
+      <a class="nav-item" href="index.html">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        <span class="label">Dashboard</span>
+      </a>
+      <a class="nav-item" href="phoenix-scan.html">
+        <svg class="icon" viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 6"/><polyline points="15 6 21 6 21 12"/></svg>
+        <span class="label">Phoenix Cap-Rate Watch</span>
+      </a>
+      <a class="nav-item active" href="feasibility.html">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
+        <span class="label">5302 N 35th Ave Feasibility</span>
+      </a>
+
+      <div class="nav-label">External</div>
+      <a class="nav-item" href="https://claude.ai/code/artifact/94b45b05-7917-4bc4-9c65-8ac4371a822b" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span class="label">Field Manual</span>
+        <svg class="ext" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+      <a class="nav-item" href="https://christianschmaltz5-blip.github.io/Dashboard/" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <span class="label">ARC Dashboard (work)</span>
+        <svg class="ext" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+    </nav>
+  </aside>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="topbar-title">5302 N 35th Ave Feasibility</div>
+      <div class="topbar-spacer"></div>
+      <div class="topbar-date" id="topbarDate"></div>
+    </header>
+
+    <main class="page">
+      <h1 class="page-title">5302 N 35th Ave, Phoenix AZ 85017</h1>
+      <p class="page-sub">Multifamily Redevelopment Feasibility &nbsp;·&nbsp; APN 145-16-002A &nbsp;·&nbsp; Prepared July 16, 2026 &nbsp;·&nbsp; Small/mid-size developer underwriting basis</p>
+
+      <div class="card report">
+        <div class="kv">
+          <div><b>Lot</b>36,000 SF (0.826 ac)</div>
+          <div><b>Improvements</b>±4,000 SF block bldg (2014)</div>
+          <div><b>Current use</b>Islamic educational center</div>
+          <div><b>Ask</b>$999,000</div>
+          <div><b>Offer (rejected)</b>$750,000</div>
+          <div><b>Adjacent zoning</b>29 du/ac base (R-4A)</div>
+          <div><b>Comp rents</b>$1,400–1,500/mo</div>
+        </div>
+
+        <div class="verdict"><b>Verdict: does not pencil as ground-up multifamily — not at $999K, not at $750K, not at free land.</b> Yield on cost is ~4.1% against a ~5.25% exit cap; the development spread is roughly negative $1.5M and residual land value is negative. The real deal here is the existing building at an income-property basis (Strategy A). All figures are underwriting estimates against market data, not an appraisal; zoning of the subject parcel must be verified with Phoenix P&amp;D.</div>
+
+        <h2 class="sec">1 · Site analysis — the 30–32 unit thesis breaks first</h2>
+        <p>Density is measured per acre, not per building — the neighbor's "16 units per building" doesn't transfer. At the adjacent parcel's <b>29 du/ac base (Phoenix R-4A)</b>, 0.826 acres yields <b>24 units by right</b>, and only after a rezone: the parcel's current institutional use is almost certainly not zoned multifamily today. Reaching 30–32 units means 36–39 du/ac — R-5 or a PUD with bonuses, a longer and riskier entitlement (12–18 months, ~$150–250K of soft cost before permits either way).</p>
+        <p>Physically, 32 units does not fit. Parking at Phoenix's ~1.5–1.7 spaces/unit blended (~50 spaces ≈ 17,000 SF with aisles) + a two-story 32-unit footprint (~12,000 SF) + setbacks, required open space, and Phoenix's <b>on-site stormwater retention</b> (basin eats 8–12% of an infill lot) ≈ 38,000 SF of demand on a 36,000 SF site. Three stories barely squeezes in, deep into entitlement-stretch territory.</p>
+        <p><b>Realistic program: 24–26 units, garden walk-up, surface parked.</b></p>
+
+        <h2 class="sec">2 · Development cost (base case: 24 units, ~750 SF avg, GBA ~19,000 SF)</h2>
+        <table class="rtbl">
+        <tr><th>Item</th><th class="num">Amount</th><th>Notes</th></tr>
+        <tr><td>Demolition</td><td class="num">$45K</td><td>4,000 SF block; 2014 build = no asbestos</td></tr>
+        <tr><td>Hard costs</td><td class="num">$4.00M</td><td>~$210/SF GBA incl. site work, parking, retention</td></tr>
+        <tr><td>A&amp;E + entitlement/rezone</td><td class="num">$250K</td><td></td></tr>
+        <tr><td>City fees, permits, water/sewer</td><td class="num">$250K</td><td>~$10K/unit</td></tr>
+        <tr><td>Other soft costs</td><td class="num">$350K</td><td>Legal, taxes, insurance, developer overhead</td></tr>
+        <tr><td>Contingency</td><td class="num">$240K</td><td>6% of hard</td></tr>
+        <tr><td>Construction financing</td><td class="num">$400K</td><td>~65% LTC, ~7.75% + fees, ~20-mo draw</td></tr>
+        <tr><td><b>Total ex-land</b></td><td class="num"><b>~$5.53M</b></td><td><b>~$230K/door before dirt</b></td></tr>
+        <tr><td><b>All-in @ $750K / $900K / $999K land</b></td><td class="num"><b>$6.28M / $6.43M / $6.53M</b></td><td><b>$262–272K/door</b></td></tr>
+        </table>
+
+        <h2 class="sec">3 · Stabilized revenue &amp; NOI</h2>
+        <table class="rtbl">
+        <tr><th>Line</th><th class="num">Amount</th><th>Notes</th></tr>
+        <tr><td>Gross potential rent</td><td class="num">$432K</td><td>24 × $1,500/mo (new-build premium over $1,450 comps)</td></tr>
+        <tr><td>Effective gross income</td><td class="num">~$427K</td><td>5% vacancy, ~4% other income (RUBS, fees)</td></tr>
+        <tr><td>Operating expenses</td><td class="num">~$163K</td><td>~$6,800/unit — new-assessment taxes, insurance, mgmt (38% ratio)</td></tr>
+        <tr><td><b>Net operating income</b></td><td class="num"><b>~$264K</b></td><td><b>$11.0K/door</b></td></tr>
+        </table>
+
+        <h2 class="sec">4–5 · Value, spread, and returns — where it dies</h2>
+        <p>Phoenix Q1 2026 cap rates: Class A ~4.74%, Class B ~4.92%, all-class average ~5.6% (Northmarq / Kidder Mathews). New boutique product in a C+ corridor takes a small-asset liquidity discount — exit at <b>5.25–5.5%</b>.</p>
+        <ul>
+        <li><b>Stabilized value: $4.8–5.0M</b> vs. all-in cost of <b>$6.5M</b> at ask → <b>development spread ≈ −$1.5M to −$1.7M (−23%)</b>.</li>
+        <li><b>Yield on cost: 4.1%</b> vs. a 5.25% market cap — building to negative leverage. Merchant developers need ~6%+ YOC.</li>
+        <li>32-unit stretch case: ~$7.9M all-in, $340K NOI, 4.3% YOC, ~$6.5M value → still ~$1.4M underwater.</li>
+        <li>IRR / equity multiple: profit is negative before promote, so returns are negative at any leverage.</li>
+        </ul>
+        <p>The structural problem: <b>$1,400–1,500 rents cannot carry ~$230K/door construction.</b> This site needs roughly <b>$1,950–2,000/month</b> to reach a 6% yield on cost — ~35% above today's GCU-corridor market.</p>
+
+        <h2 class="sec">6 · Residual land value</h2>
+        <p>Working backward from a 6% required yield on cost: supportable total cost = $264K ÷ 0.06 ≈ <b>$4.4M</b>, versus <b>$5.5M</b> of cost before land. <b>Residual land value ≈ −$1.1M.</b> The maximum a rational apartment developer can pay for this dirt today is zero — and they still lose. No honest underwriter outbids you on the development thesis.</p>
+
+        <h2 class="sec">7 · Strategy comparison</h2>
+        <table class="rtbl">
+        <tr><th>Strategy</th><th class="num">Basis</th><th class="num">NOI</th><th>Return</th><th>Verdict</th></tr>
+        <tr><td><b>A) Keep &amp; lease existing building</b></td><td class="num">$750–850K</td><td class="num">$56–68K</td><td>7.5–9% cap at $750K; ~10% levered cash-on-cash</td><td><b>The only one that works</b> ($14–17/SF NNN to school / daycare / congregation)</td></tr>
+        <tr><td>B) Convert block building to residential</td><td class="num">$750K + $500–700K</td><td class="num">~$48K (4–5 units)</td><td>~3.5–4% yield</td><td>Worst — interior structural block freezes the plan; wet walls are brutal</td></tr>
+        <tr><td>C) Demolish &amp; build 24–32 units</td><td class="num">$6.5–7.9M</td><td class="num">$264–340K</td><td>4.1–4.3% YOC; −$1.5M spread</td><td>Infeasible at today's rents/costs</td></tr>
+        </table>
+
+        <div class="callout"><b>The real story on price:</b> the seller isn't pricing land. $999K ≈ $250/SF for a 2014 all-block building — at or below replacement cost for that construction — with 36,000 SF of parking-rich land attached. Their market is <b>another owner-user</b> (school, daycare, congregation), and against that buyer pool $999K isn't crazy, which is why $750K was rejected. You're not competing against developers here; you're competing against a church with a building fund.</div>
+
+        <p><b>Recommendation:</b> walk away from it as a development site. As an income deal, re-engage at <b>≤$800–850K contingent on a signed or highly probable NNN tenant at $14+/SF</b> — and treat the 29 du/ac neighbor as free long-term option value you never pay for today. The only world where ground-up returns here is West Camelback rents at ~$2,000/month; don't pay 2026 prices for a 2030 thesis.</p>
+
+        <div class="report-foot">
+          Sources: Northmarq, <i>Class A and Class C properties trade to start 2026 in Phoenix's multifamily market</i> (Q1 2026) · Kidder Mathews, <i>Phoenix Multifamily Market Report Q1 2026</i> · Vestis Group, <i>Arizona Multifamily Market Trends 2026</i> · Mortenson Phoenix Construction Cost Index · Multifamily.loans construction cost guide.<br>
+          Prepared with Claude. Underwriting estimates only — verify zoning, fees, and entitlements with the City of Phoenix Planning &amp; Development Department before acting.
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="assets/js/shell.js"></script>
+<script>
+document.getElementById('topbarDate').textContent = new Date().toLocaleDateString('en-US',{weekday:'long', year:'numeric', month:'long', day:'numeric'});
+</script>
+</body>
+</html>

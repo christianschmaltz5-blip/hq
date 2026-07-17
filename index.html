@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Christian's HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/shell.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="logo-mark">C</div>
+      <div>
+        <div class="logo-text">Christian's HQ</div>
+        <div class="logo-sub">Personal dashboard</div>
+      </div>
+    </div>
+    <nav class="sidebar-scroll">
+      <div class="nav-label">Menu</div>
+      <a class="nav-item active" href="index.html">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        <span class="label">Dashboard</span>
+      </a>
+      <a class="nav-item" href="phoenix-scan.html">
+        <svg class="icon" viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 6"/><polyline points="15 6 21 6 21 12"/></svg>
+        <span class="label">Phoenix Cap-Rate Watch</span>
+      </a>
+      <a class="nav-item" href="feasibility.html">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
+        <span class="label">5302 N 35th Ave Feasibility</span>
+      </a>
+
+      <div class="nav-label">External</div>
+      <a class="nav-item" href="https://claude.ai/code/artifact/94b45b05-7917-4bc4-9c65-8ac4371a822b" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span class="label">Field Manual</span>
+        <svg class="ext" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+      <a class="nav-item" href="https://christianschmaltz5-blip.github.io/Dashboard/" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <span class="label">ARC Dashboard (work)</span>
+        <svg class="ext" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+    </nav>
+  </aside>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="topbar-title">Dashboard</div>
+      <div class="topbar-spacer"></div>
+      <div class="topbar-date" id="topbarDate"></div>
+    </header>
+
+    <main class="page">
+      <h1 class="page-title">Welcome back, Christian</h1>
+      <p class="page-sub">Personal hub for the deals and watches you're running outside of work — separate from the ARC dashboard you built for Kevin.</p>
+
+      <div class="kpi-row" id="kpiRow"></div>
+
+      <div class="card-head" style="margin-bottom:14px;">
+        <h2 style="font-size:15px;font-weight:700;">Your pages</h2>
+      </div>
+      <div class="link-cards">
+        <a class="link-card" href="phoenix-scan.html">
+          <div class="lc-icon"><svg viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 6"/><polyline points="15 6 21 6 21 12"/></svg></div>
+          <h3>Phoenix Cap-Rate Watch</h3>
+          <p>Weekly automated scan for mispriced Phoenix income property, flagged against class cap-rate benchmarks.</p>
+          <div class="lc-arrow">Open scan →</div>
+        </a>
+        <a class="link-card" href="feasibility.html">
+          <div class="lc-icon"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg></div>
+          <h3>5302 N 35th Ave Feasibility</h3>
+          <p>Ground-up multifamily redevelopment underwriting for a Phoenix site — verdict, costs, NOI, and residual land value.</p>
+          <div class="lc-arrow">Open report →</div>
+        </a>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="phoenix-scan/data.js"></script>
+<script src="assets/js/shell.js"></script>
+<script>
+(function(){
+  var D = window.PHX_SCAN || {};
+  var qualifying = (D.qualifying || []).length;
+  var scanned = D.listingsScanned != null ? D.listingsScanned : '—';
+  var updated = D.updated || '—';
+
+  document.getElementById('kpiRow').innerHTML = `
+    <div class="kpi-card">
+      <div class="kpi-icon blue"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      <div class="kpi-body"><div class="kpi-val">${scanned}</div><div class="kpi-label">Phoenix listings scanned</div></div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon green"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+      <div class="kpi-body"><div class="kpi-val">${qualifying}</div><div class="kpi-label">Qualifying deals</div></div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon amber"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+      <div class="kpi-body"><div class="kpi-val">${updated}</div><div class="kpi-label">Last scan date</div></div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon blue"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+      <div class="kpi-body"><div class="kpi-val">1</div><div class="kpi-label">Feasibility report on file</div></div>
+    </div>`;
+
+  document.getElementById('topbarDate').textContent = new Date().toLocaleDateString('en-US',{weekday:'long', year:'numeric', month:'long', day:'numeric'});
+})();
+</script>
+</body>
+</html>

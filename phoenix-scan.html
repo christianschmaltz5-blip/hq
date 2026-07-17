@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Phoenix Cap-Rate Watch — Christian's HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/shell.css">
+<style>
+.bench-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+.bench-card{background:#fafbfd; border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:14px 16px;}
+.bench-cls{font-size:10.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--text-faint); margin-bottom:6px;}
+.bench-val{font-size:21px; font-weight:700; color:var(--text);}
+.bench-sub{font-size:11px; color:var(--text-faint); margin-top:3px;}
+
+.d-name{font-weight:700; color:var(--text); font-size:13.5px; margin-bottom:2px;}
+.d-addr{font-size:11.5px; color:var(--text-faint);}
+.d-notes{font-size:12px; color:var(--text-soft); line-height:1.6; max-width:340px;}
+.spread{font-weight:700; color:var(--success);}
+.spread.mid{color:var(--warning);}
+.badge{display:inline-block; font-size:9.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:3px 9px; border-radius:11px; white-space:nowrap;}
+.badge.medium{background:var(--accent-soft); color:var(--accent-dark); border:1px solid rgba(70,128,255,.25);}
+.badge.lowmed{background:var(--warning-soft); color:#b3760a; border:1px solid rgba(255,171,0,.3);}
+.badge.low{background:#f1f3f7; color:var(--text-faint); border:1px solid var(--card-border);}
+.d-link{font-size:11.5px; color:var(--accent); text-decoration:none; font-weight:600;}
+.d-link:hover{text-decoration:underline;}
+
+.disq-toggle{display:flex; align-items:center; gap:8px; cursor:pointer; user-select:none; background:#fafbfd; border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:12px 16px; font-size:13px; font-weight:600; color:var(--text-soft);}
+.disq-toggle:hover{color:var(--text); border-color:#dfe6ee;}
+.disq-toggle svg{width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2; transition:transform .2s;}
+.disq-toggle.open svg{transform:rotate(90deg);}
+.disq-body{display:none; margin-top:10px;}
+.disq-body.show{display:block;}
+.disq-card{background:#fafbfd; border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:15px 18px; margin-bottom:10px;}
+.disq-addr{font-size:13px; font-weight:700; color:var(--text); margin-bottom:8px;}
+.disq-caps{display:flex; gap:18px; margin-bottom:8px; flex-wrap:wrap;}
+.disq-cap-label{font-size:9.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--text-faint);}
+.disq-cap-val{font-size:16px; font-weight:700;}
+.disq-cap-val.stated{color:var(--danger);}
+.disq-cap-val.real{color:var(--success);}
+.disq-arrow{color:var(--text-faint); font-size:14px; align-self:center;}
+.disq-reason{font-size:12px; color:var(--text-soft); line-height:1.65;}
+
+.hist-list{display:flex; flex-direction:column; gap:8px;}
+.hist-row{display:flex; align-items:center; gap:16px; font-size:12.5px; color:var(--text-soft); background:#fafbfd; border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:10px 16px; flex-wrap:wrap;}
+.hist-date{font-weight:700; color:var(--text); min-width:90px;}
+.hist-stat{color:var(--text-faint);}
+
+.meta-row{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:22px;}
+.meta-pill{display:flex; align-items:center; gap:7px; font-size:11.5px; font-weight:700; letter-spacing:.02em; padding:7px 13px; border-radius:20px; background:#fafbfd; border:1px solid var(--card-border); color:var(--text-soft);}
+.meta-pill b{color:var(--text); font-weight:700;}
+.meta-pill.live{background:var(--success-soft); border-color:rgba(23,198,102,.25); color:#0e9a51;}
+.meta-dot{width:6px; height:6px; border-radius:50%; background:var(--success); box-shadow:0 0 5px var(--success);}
+
+.cards-mobile{display:none;}
+@media (max-width:760px){
+  .bench-grid{grid-template-columns:repeat(2,1fr);}
+  .table-wrap{display:none;}
+  .cards-mobile{display:flex; flex-direction:column; gap:10px;}
+  .deal-card{background:#fafbfd; border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:14px 16px;}
+  .deal-card-head{display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:8px;}
+  .deal-card-stats{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:8px; font-size:11.5px; color:var(--text-soft);}
+  .deal-card-stats b{color:var(--text);}
+  .disq-caps{gap:12px;}
+}
+</style>
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="logo-mark">C</div>
+      <div>
+        <div class="logo-text">Christian's HQ</div>
+        <div class="logo-sub">Personal dashboard</div>
+      </div>
+    </div>
+    <nav class="sidebar-scroll">
+      <div class="nav-label">Menu</div>
+      <a class="nav-item" href="index.html">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        <span class="label">Dashboard</span>
+      </a>
+      <a class="nav-item active" href="phoenix-scan.html">
+        <svg class="icon" viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 6"/><polyline points="15 6 21 6 21 12"/></svg>
+        <span class="label">Phoenix Cap-Rate Watch</span>
+      </a>
+      <a class="nav-item" href="feasibility.html">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
+        <span class="label">5302 N 35th Ave Feasibility</span>
+      </a>
+
+      <div class="nav-label">External</div>
+      <a class="nav-item" href="https://claude.ai/code/artifact/94b45b05-7917-4bc4-9c65-8ac4371a822b" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span class="label">Field Manual</span>
+        <svg class="ext" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+      <a class="nav-item" href="https://christianschmaltz5-blip.github.io/Dashboard/" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <span class="label">ARC Dashboard (work)</span>
+        <svg class="ext" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+    </nav>
+  </aside>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="topbar-title">Phoenix Cap-Rate Watch</div>
+      <div class="topbar-spacer"></div>
+      <div class="topbar-date" id="topbarDate"></div>
+    </header>
+
+    <main class="page">
+      <h1 class="page-title">Phoenix Cap-Rate Watch</h1>
+      <p class="page-sub">Recurring scan for mispriced Phoenix income property — flags listings whose going-in cap rate clears its class benchmark by 100+ basis points. Every "current cap rate" a broker publishes is sanity-checked against implied operating expenses before it's trusted.</p>
+
+      <div class="meta-row" id="meta-row"></div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2>Class Benchmarks</h2>
+          <span class="card-sub">A deal qualifies at benchmark + 1.00% (100bps).</span>
+        </div>
+        <div class="bench-grid" id="bench-grid"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2>Qualifying Deals</h2>
+          <span class="card-sub">≥100bps spread, ranked by spread.</span>
+        </div>
+        <div class="table-wrap"><table class="dtbl" id="qualifying-table"></table></div>
+        <div class="cards-mobile" id="qualifying-cards"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2>Near Misses</h2>
+          <span class="card-sub">50-99bps, or a real spread on paper with no NOI to verify it.</span>
+        </div>
+        <div class="table-wrap"><table class="dtbl" id="nearmiss-table"></table></div>
+        <div class="cards-mobile" id="nearmiss-cards"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2>Disqualified — Broker Cap vs. Re-Underwritten Cap</h2>
+        </div>
+        <div class="disq-toggle" id="disq-toggle" onclick="toggleDisq()">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          <span id="disq-toggle-label">Show disqualified listings</span>
+        </div>
+        <div class="disq-body" id="disq-body"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2>Scan History</h2></div>
+        <div class="hist-list" id="hist-list"></div>
+      </div>
+
+      <p style="font-size:11px; color:var(--text-faint); line-height:1.8; text-align:center; margin-top:8px;">Sourced from live Crexi/Zillow browsing, not search snippets. Stated cap rates are re-underwritten at 5% vacancy and class-typical opex before being trusted — see notes on each deal. This page reads from a single data file; the weekly scan only ever updates <code>phoenix-scan/data.js</code>.</p>
+    </main>
+  </div>
+</div>
+
+<script src="phoenix-scan/data.js"></script>
+<script src="assets/js/shell.js"></script>
+<script>
+const D = window.PHX_SCAN;
+document.getElementById('topbarDate').textContent = new Date().toLocaleDateString('en-US',{weekday:'long', year:'numeric', month:'long', day:'numeric'});
+
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function money(n){ return n==null ? '—' : '$'+Number(n).toLocaleString(); }
+function pct(n){ return n==null ? '—' : n.toFixed(2)+'%'; }
+function badgeClass(conf){
+  const c=(conf||'').toLowerCase();
+  if(c.includes('medium') && !c.includes('low')) return 'medium';
+  if(c.includes('low-med') || c.includes('lowmed')) return 'lowmed';
+  return 'low';
+}
+function spreadClass(bps){ return bps>=150 ? '' : 'mid'; }
+
+// ── Meta row ─────────────────────────────────────────────────────────────
+document.getElementById('meta-row').innerHTML = `
+  <div class="meta-pill live"><span class="meta-dot"></span>Updated ${esc(D.updated)}</div>
+  <div class="meta-pill"><b>${esc(D.listingsScanned)}</b>&nbsp;listings scanned</div>
+  <div class="meta-pill"><b>${D.qualifying.length}</b>&nbsp;qualifying</div>
+  <div class="meta-pill"><b>${D.nearMisses.length}</b>&nbsp;near miss${D.nearMisses.length===1?'':'es'}</div>`;
+
+// ── Benchmark strip ──────────────────────────────────────────────────────
+document.getElementById('bench-grid').innerHTML = Object.entries(D.benchmarks).map(([cls,val])=>`
+  <div class="bench-card">
+    <div class="bench-cls">Class ${esc(cls)}</div>
+    <div class="bench-val">${val.toFixed(2)}%</div>
+    <div class="bench-sub">qualifies at ${(val+1).toFixed(2)}%+</div>
+  </div>`).join('');
+
+// ── Qualifying / Near-miss tables ────────────────────────────────────────
+function renderDeals(deals, tableId, cardsId, emptyMsg){
+  const table=document.getElementById(tableId), cards=document.getElementById(cardsId);
+  if(!deals.length){
+    table.parentElement.innerHTML = `<div class="empty-state">${emptyMsg}</div>`;
+    cards.innerHTML='';
+    return;
+  }
+  const sorted=[...deals].sort((a,b)=>b.spreadBps-a.spreadBps);
+
+  table.innerHTML = `
+    <thead><tr>
+      <th>Property</th><th>Ask</th><th>Units</th><th>Class</th><th>Est. NOI</th>
+      <th>Cap Rate</th><th>Spread</th><th>Confidence</th><th>Notes</th>
+    </tr></thead>
+    <tbody>${sorted.map(d=>`
+      <tr>
+        <td><div class="d-name">${esc(d.name)}</div><div class="d-addr">${esc(d.address)}, ${esc(d.zip)}</div>${d.url?`<a class="d-link" href="${esc(d.url)}" target="_blank" rel="noopener">View listing ↗</a>`:''}</td>
+        <td>${money(d.ask)}</td>
+        <td>${esc(d.units)}</td>
+        <td>${esc(d.cls)}</td>
+        <td>${money(d.noi)}</td>
+        <td>${pct(d.capPct)}</td>
+        <td class="spread ${spreadClass(d.spreadBps)}">+${esc(d.spreadBps)}bps</td>
+        <td><span class="badge ${badgeClass(d.confidence)}">${esc(d.confidence)}</span></td>
+        <td class="d-notes">${esc(d.notes)}</td>
+      </tr>`).join('')}
+    </tbody>`;
+
+  cards.innerHTML = sorted.map(d=>`
+    <div class="deal-card">
+      <div class="deal-card-head">
+        <div><div class="d-name">${esc(d.name)}</div><div class="d-addr">${esc(d.address)}, ${esc(d.zip)}</div></div>
+        <span class="badge ${badgeClass(d.confidence)}">${esc(d.confidence)}</span>
+      </div>
+      <div class="deal-card-stats">
+        <span><b>${money(d.ask)}</b> ask</span>
+        <span><b>${esc(d.units)}</b> units</span>
+        <span>Class <b>${esc(d.cls)}</b></span>
+        <span>NOI <b>${money(d.noi)}</b></span>
+        <span>Cap <b>${pct(d.capPct)}</b></span>
+        <span class="spread ${spreadClass(d.spreadBps)}">+${esc(d.spreadBps)}bps</span>
+      </div>
+      <div class="d-notes">${esc(d.notes)}</div>
+      ${d.url?`<div style="margin-top:8px;"><a class="d-link" href="${esc(d.url)}" target="_blank" rel="noopener">View listing ↗</a></div>`:''}
+    </div>`).join('');
+}
+
+renderDeals(D.qualifying, 'qualifying-table', 'qualifying-cards', 'No qualifying deals this scan.');
+renderDeals(D.nearMisses, 'nearmiss-table', 'nearmiss-cards', 'No near misses this scan.');
+
+// ── Disqualified (collapsed) ─────────────────────────────────────────────
+document.getElementById('disq-body').innerHTML = D.disqualified.length
+  ? D.disqualified.map(x=>`
+    <div class="disq-card">
+      <div class="disq-addr">${esc(x.address)}</div>
+      <div class="disq-caps">
+        <div><div class="disq-cap-label">Stated Cap</div><div class="disq-cap-val stated">${pct(x.statedCapPct)}</div></div>
+        <div class="disq-arrow">→</div>
+        <div><div class="disq-cap-label">Real Cap</div><div class="disq-cap-val real">${x.realCapPct==null?'n/a':pct(x.realCapPct)}</div></div>
+      </div>
+      <div class="disq-reason">${esc(x.reason)}</div>
+    </div>`).join('')
+  : `<div class="empty-state">Nothing disqualified this scan.</div>`;
+
+function toggleDisq(){
+  const toggle=document.getElementById('disq-toggle'), body=document.getElementById('disq-body'), label=document.getElementById('disq-toggle-label');
+  const open=body.classList.toggle('show');
+  toggle.classList.toggle('open', open);
+  label.textContent = open ? `Hide disqualified listings (${D.disqualified.length})` : 'Show disqualified listings';
+}
+document.getElementById('disq-toggle-label').textContent = `Show disqualified listings (${D.disqualified.length})`;
+
+// ── Scan history ──────────────────────────────────────────────────────────
+document.getElementById('hist-list').innerHTML = D.history.length
+  ? [...D.history].reverse().map(h=>`
+    <div class="hist-row">
+      <span class="hist-date">${esc(h.date)}</span>
+      <span>${esc(h.scanned)} scanned</span>
+      <span class="hist-stat">·</span>
+      <span>${esc(h.qualifyingCount)} qualifying</span>
+      <span class="hist-stat">·</span>
+      <span>${esc(h.top)}</span>
+    </div>`).join('')
+  : `<div class="empty-state">No scan history yet.</div>`;
+</script>
+</body>
+</html>
