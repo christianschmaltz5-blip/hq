@@ -39,15 +39,38 @@ window.PHX_SCAN = {
     }
   ],
 
-  nearMisses: [],
+  nearMisses: [
+    {
+      name: "2242 E Taylor St",
+      address: "2242 E Taylor St",
+      zip: "85006",
+      ask: 675000,
+      units: 5,
+      cls: "C",
+      noi: null,
+      capPct: 5.95,
+      spreadBps: 55,
+      confidence: "MEDIUM",
+      notes: "Marketed at 8.32% cap, but that number doesn't hold up: disclosed avg rent $1,214/unit implies $72,840 gross, while the stated NOI of $56,147 implies only ~23% expenses — unrealistic for an 80-year-old (1944) property. Re-underwritten at 5% vacancy / 42% opex: NOI ≈ $40,135, real cap ≈5.95% — a genuine +55bps over the 5.40% Class C benchmark, just short of the +100bps qualify line. Not a fake deal, just not enough spread once realistically underwritten.",
+      url: "https://www.crexi.com/properties/2357577/arizona-2242-e-taylor-st"
+    },
+    {
+      name: "Latona Fontaine",
+      address: "105-141 West Latona Road",
+      zip: "85041",
+      ask: 4995000,
+      units: 11,
+      cls: "C",
+      noi: null,
+      capPct: 5.89,
+      spreadBps: 49,
+      confidence: "LOW",
+      notes: "Stated 5.89% cap, no NOI/rent disclosed to sanity-check. At face value, +49bps over the 5.40% Class C benchmark — just under the near-miss floor, but close enough to flag. Treat as a broker-call lead, not a confirmed deal.",
+      url: ""
+    }
+  ],
 
   disqualified: [
-    {
-      address: "2242 E Taylor St, Phoenix AZ 85006",
-      statedCapPct: 8.32,
-      realCapPct: 5.95,
-      reason: "5 units, built 1944, 100% occupied. Disclosed avg rent $1,214/unit implies $72,840 gross, but stated NOI $56,147 implies only ~23% expenses — unrealistic for an 80-year-old property. Re-underwritten at 5% vacancy / 42% opex: NOI ≈ $40,135, real cap ≈5.95% — above the 5.40% Class C benchmark but below the 6.40% qualify line (100bps spread)."
-    },
     {
       address: "2719 W Maryland Ave, Phoenix AZ 85017",
       statedCapPct: 7.82,
