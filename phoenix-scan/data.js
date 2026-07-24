@@ -19,7 +19,7 @@
 
 window.PHX_SCAN = {
   updated: "2026-07-23",
-  listingsScanned: 36,
+  listingsScanned: 37,
   benchmarks: { "A": 4.75, "B": 4.90, "C": 5.40, "2-4 unit": 5.50 },
 
   qualifying: [
@@ -207,6 +207,20 @@ window.PHX_SCAN = {
       confidence: "LOW",
       notes: "4 units across 3 buildings on one lot, only 75% occupied — yet the stated 'current' cap (6.20%) barely differs from the pro-forma (6.19%/$61,824 NOI), which is inconsistent with a partially-vacant property. Likely priced off asking rents rather than actual trailing collections. Verify real occupancy/rent roll before trusting.",
       url: "https://www.crexi.com/properties/2552039/Phoenix-AZ-85013"
+    },
+    {
+      name: "Campo Bello Apartments",
+      address: "17444 N 32nd St",
+      zip: "85032",
+      ask: 4995000,
+      units: 12,
+      cls: "A",
+      noi: 265332,
+      capPct: 5.31,
+      spreadBps: 56,
+      confidence: "MEDIUM",
+      notes: "Built 2022/2023, Class A, 100% leased. Three different NOI figures appear on this one listing: full-year 2025 NOI $288,781 (5.78% cap, the headline number), a more recent trailing-4-month annualized NOI of $265,332 (5.31% cap — used here), and a pro-forma NOI of just $251,257 — lower than either actual figure, unusual since pro-formas normally project growth. Reads as a declining-income trend, not a clean qualifier. The original July 16 scan's lead on this property (then +102bps, unverified) — now verified with real numbers and reclassified as a near miss given the more current trend.",
+      url: "https://www.crexi.com/properties/2550819/Phoenix-AZ-85032"
     },
     {
       name: "2242 E Taylor St",
@@ -397,6 +411,6 @@ window.PHX_SCAN = {
     { date: "2026-07-16", scanned: 110, qualifyingCount: 2, top: "Ocotillo +185bps" },
     { date: "2026-07-23a", scanned: 12, qualifyingCount: 1, top: "2916 E Monroe St +213bps (partial spot-check, page 1 of 128 only)" },
     { date: "2026-07-23b", scanned: 19, qualifyingCount: 3, top: "Encanto Bungalows +169bps (cap-rate>=5.75% filter shortlisted 43 of 128; 16 visible without login)" },
-    { date: "2026-07-23c", scanned: 36, qualifyingCount: 9, top: "5035 N 23rd Ave +178bps (logged in, unlocked 33 of 43 shortlisted listings; ~7 of the 43 and ~85 outside the filter still unreviewed)" }
+    { date: "2026-07-23c", scanned: 37, qualifyingCount: 9, top: "5035 N 23rd Ave +178bps (logged in, unlocked 33-34 of 43 shortlisted listings via a rotating/non-paginated results feed; ~7-9 of the 43 and ~85 outside the filter remain unreviewed)" }
   ]
 };
