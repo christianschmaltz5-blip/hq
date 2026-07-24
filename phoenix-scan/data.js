@@ -19,7 +19,7 @@
 
 window.PHX_SCAN = {
   updated: "2026-07-23",
-  listingsScanned: 37,
+  listingsScanned: 52,
   benchmarks: { "A": 4.75, "B": 4.90, "C": 5.40, "2-4 unit": 5.50 },
 
   qualifying: [
@@ -92,6 +92,34 @@ window.PHX_SCAN = {
       confidence: "HIGH",
       notes: "9 units across 7 buildings, built 1929-1962, renovated 2022, 97% occupied. NOI is explicitly stated as actual trailing 2025 P&L (not pro-forma) — the strongest confidence basis of anything found this scan.",
       url: "https://www.crexi.com/properties/2372857/Phoenix-AZ-85015"
+    },
+    {
+      name: "Shorewood",
+      address: "3601 N 5th Ave",
+      zip: "85013",
+      ask: 4675000,
+      units: 21,
+      cls: "B",
+      noi: 301782,
+      capPct: 6.46,
+      spreadBps: 156,
+      confidence: "MEDIUM",
+      notes: "Built 1960, renovated 2019, listed by Marcus & Millichap. Another label-vs-math discrepancy: the listing's own 'Details' field states a stale 5.48% cap rate, but disclosed NOI ($301,782) ÷ ask ($4,675,000) is actually 6.46%, matching the site's own auto-calculated valuation box. Used the verified math, not the stale label.",
+      url: "https://www.crexi.com/properties/1841416/Phoenix-AZ-85013"
+    },
+    {
+      name: "The Apex on Central",
+      address: "40 E Sunland Ave",
+      zip: "85040",
+      ask: 18000000,
+      units: 116,
+      cls: "C",
+      noi: 1161650,
+      capPct: 6.45,
+      spreadBps: 105,
+      confidence: "MEDIUM",
+      notes: "116-unit institutional-scale asset, built 1988, partially renovated (39 of 117 units), listed by JLL. Real dollar NOI disclosed ($1,161,650). No class stated on the listing — treated conservatively as Class C given vintage and partial-only renovation. Clears the qualify line by just 5bps.",
+      url: "https://www.crexi.com/properties/2592309/PHOENIX-AZ-85040-9300"
     },
     {
       name: "Central Park Villas",
@@ -411,6 +439,7 @@ window.PHX_SCAN = {
     { date: "2026-07-16", scanned: 110, qualifyingCount: 2, top: "Ocotillo +185bps" },
     { date: "2026-07-23a", scanned: 12, qualifyingCount: 1, top: "2916 E Monroe St +213bps (partial spot-check, page 1 of 128 only)" },
     { date: "2026-07-23b", scanned: 19, qualifyingCount: 3, top: "Encanto Bungalows +169bps (cap-rate>=5.75% filter shortlisted 43 of 128; 16 visible without login)" },
-    { date: "2026-07-23c", scanned: 37, qualifyingCount: 9, top: "5035 N 23rd Ave +178bps (logged in, unlocked 33-34 of 43 shortlisted listings via a rotating/non-paginated results feed; ~7-9 of the 43 and ~85 outside the filter remain unreviewed)" }
+    { date: "2026-07-23c", scanned: 37, qualifyingCount: 9, top: "5035 N 23rd Ave +178bps (logged in, unlocked 33-34 of 43 shortlisted listings via a rotating/non-paginated results feed; ~7-9 of the 43 and ~85 outside the filter remain unreviewed)" },
+    { date: "2026-07-23d", scanned: 52, qualifyingCount: 11, top: "5035 N 23rd Ave +178bps (swept the unfiltered 127-listing pool via 'NOI (High to Low)' sort — confirms every listing with disclosed real financials is now covered; remainder has no NOI/cap posted at all, unscreenable without contacting the broker)" }
   ]
 };
