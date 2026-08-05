@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dev Underwriting Model — Christian's HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/shell.css">
+<style>
+.badge{display:inline-block; font-size:9.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:3px 9px; border-radius:11px; white-space:nowrap;}
+.badge.medium{background:var(--accent-soft); color:var(--accent-dark); border:1px solid rgba(70,128,255,.25);}
+.badge.lowmed{background:var(--warning-soft); color:#b3760a; border:1px solid rgba(255,171,0,.3);}
+.badge.low{background:#f1f3f7; color:var(--text-faint); border:1px solid var(--card-border);}
+.badge.sev-pill.sev-high{background:var(--danger-soft); color:#b91c1c; border:1px solid rgba(255,82,82,.3);}
+.badge.sev-pill.sev-med{background:var(--warning-soft); color:#b3760a; border:1px solid rgba(255,171,0,.3);}
+.badge.sev-pill.sev-low{background:var(--success-soft); color:#0e7a3f; border:1px solid rgba(23,198,102,.25);}
+
+.verdict{background:var(--danger-soft); border-left:4px solid var(--danger); border-radius:0 var(--radius-sm) var(--radius-sm) 0; padding:14px 18px; margin-bottom:20px; font-size:13.5px; line-height:1.6;}
+.verdict b{color:#b91c1c;}
+
+.d-name{font-weight:700; color:var(--text); font-size:13.5px; margin-bottom:2px;}
+.d-addr{font-size:11.5px; color:var(--text-faint);}
+
+.dm-deal-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px;}
+.dm-deal{background:#fafbfd; border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:14px 16px; cursor:pointer; transition:border-color .12s, transform .12s;}
+.dm-deal:hover{border-color:var(--accent); transform:translateY(-1px);}
+.dm-deal.selected{border-color:var(--accent); background:var(--accent-soft);}
+.dm-deal-stats{display:flex; flex-wrap:wrap; gap:10px; margin-top:8px; font-size:11.5px; color:var(--text-soft);}
+.dm-deal-stats b{color:var(--text);}
+
+.dm-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px;}
+.dm-field{display:flex; flex-direction:column; gap:5px; font-size:12px; font-weight:600; color:var(--text-soft);}
+.dm-field input{font-family:inherit; font-size:13.5px; font-weight:500; color:var(--text); padding:9px 11px; border:1px solid var(--card-border); border-radius:var(--radius-sm); background:#fafbfd;}
+.dm-field input:focus{outline:none; border-color:var(--accent); background:#fff;}
+.dm-note{font-size:11px; font-weight:500; color:var(--danger);}
+
+.dm-out-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:0 20px;}
+.dm-out-row{display:flex; justify-content:space-between; gap:10px; padding:8px 0; border-bottom:1px solid var(--card-border); font-size:13px;}
+.dm-out-row span{color:var(--text-soft);}
+.dm-out-row b{color:var(--text); font-weight:700;}
+.dm-out-row.strong b{color:var(--accent-dark); font-size:14px;}
+
+.dm-btn{margin-top:12px; background:var(--accent); color:#fff; border:none; border-radius:var(--radius-sm); padding:9px 16px; font-size:12.5px; font-weight:700; cursor:pointer;}
+.dm-btn:hover{background:var(--accent-dark);}
+
+.dtbl td b{color:var(--text);}
+
+@media (max-width:640px){
+  .dm-grid, .dm-deal-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="logo-mark">C</div>
+      <div>
+        <div class="logo-text">Christian's HQ</div>
+        <div class="logo-sub">Personal dashboard</div>
+      </div>
+    </div>
+    <nav class="sidebar-scroll">
+      <div class="nav-label">Menu</div>
+      <a class="nav-item" href="index.html">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        <span class="label">Dashboard</span>
+      </a>
+      <a class="nav-item" href="phoenix-scan.html">
+        <svg class="icon" viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 6"/><polyline points="15 6 21 6 21 12"/></svg>
+        <span class="label">Phoenix Cap-Rate Watch</span>
+      </a>
+      <a class="nav-item" href="feasibility.html">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
+        <span class="label">5302 N 35th Ave Feasibility</span>
+      </a>
+      <a class="nav-item active" href="dev-model.html">
+        <svg class="icon" viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+        <span class="label">Dev Underwriting Model</span>
+      </a>
+
+      <div class="nav-label">External</div>
+      <a class="nav-item" href="https://claude.ai/code/artifact/94b45b05-7917-4bc4-9c65-8ac4371a822b" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span class="label">Field Manual</span>
+        <svg class="ext" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+      <a class="nav-item" href="https://christianschmaltz5-blip.github.io/Dashboard/" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <span class="label">ARC Dashboard (work)</span>
+        <svg class="ext" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+    </nav>
+  </aside>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="topbar-title">Dev Underwriting Model</div>
+      <div class="topbar-spacer"></div>
+      <div class="topbar-date" id="topbarDate"></div>
+    </header>
+
+    <main class="page">
+      <h1 class="page-title">Development Underwriting Model</h1>
+      <p class="page-sub">Value-add multifamily acquisition underwriting — every input editable, every output live. Pick a scanned deal below to prefill it, or fill in a deal by hand.</p>
+
+      <div class="card">
+        <div class="card-head"><h2>Pick a Scanned Deal</h2><span class="card-sub">From Phoenix Cap-Rate Watch — qualifying + near misses</span></div>
+        <div id="dm-deal-picker"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2>Auto-Underwriting Results</h2><span class="card-sub">Every scanned deal, run through this model automatically each week</span></div>
+        <div id="dm-auto-underwrite"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2>Renovation Premium Evidence</h2><span class="card-sub">Rent comps, Classic vs. Renovated, matched by property + unit type</span></div>
+        <div id="dm-rent-comps"></div>
+      </div>
+
+      <div id="dm-noi-banner"></div>
+      <div class="kpi-row" id="dm-kpis"></div>
+
+      <div id="dm-inputs"></div>
+      <div id="dm-outputs"></div>
+
+      <div class="card">
+        <div class="card-head"><h2>Due Diligence Checklist</h2></div>
+        <div class="table-wrap"><table class="dtbl" id="dm-dd-table"></table></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2>Risk Register</h2><span class="card-sub">29 tracked risks across the deal lifecycle</span></div>
+        <div class="table-wrap"><table class="dtbl" id="dm-risk-table"></table></div>
+      </div>
+
+      <p style="font-size:11px; color:var(--text-faint); line-height:1.8; text-align:center; margin-top:8px;">Client-side only — no data leaves this page. Ports the acquisition/value-add formulas from the Real Estate Developer Training Model workbook.</p>
+    </main>
+  </div>
+</div>
+
+<script src="phoenix-scan/data.js"></script>
+<script src="dev-model/rent-comps.js"></script>
+<script src="dev-model/underwriting-runs.js"></script>
+<script src="dev-model/calc.js"></script>
+<script src="assets/js/shell.js"></script>
+<script src="dev-model/app.js"></script>
+</body>
+</html>
