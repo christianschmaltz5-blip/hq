@@ -1,10 +1,13 @@
 # Weekly rent-comps scan (headless run)
 
-You are scanning Apartments.com for rent comps in tracked Phoenix zip codes and
-updating `dev-model/rent-comps.js` on Christian's personal hq site. This feeds
-the renovation-premium and current-rent assumptions in his real estate
-underwriting model (dev-model.html). Work token-frugally; this runs unattended
-every week.
+You are scanning Apartments.com AND Zillow for rent comps in tracked Phoenix
+zip codes and updating `dev-model/rent-comps.js` on Christian's personal hq
+site. This feeds the renovation-premium and current-rent assumptions in his
+real estate underwriting model (dev-model.html). Two independent sources
+matter here because a single-source rent number is exactly the kind of
+unverified assumption this whole model exists to catch — cross-checking
+Apartments.com against Zillow surfaces disagreement instead of hiding it.
+Work token-frugally; this runs unattended every week.
 
 ## Step 0 — browser check
 Load the Chrome tools in ONE ToolSearch call: "select:mcp__claude-in-chrome__tabs_context_mcp,mcp__claude-in-chrome__tabs_create_mcp,mcp__claude-in-chrome__navigate,mcp__claude-in-chrome__get_page_text,mcp__claude-in-chrome__computer,mcp__claude-in-chrome__find". Call tabs_context_mcp. If the Chrome extension is unreachable after 2 attempts, print "RENT-COMPS SKIPPED: Chrome extension unreachable" and STOP — change nothing.
@@ -13,12 +16,19 @@ Load the Chrome tools in ONE ToolSearch call: "select:mcp__claude-in-chrome__tab
 Read `/Users/christianschmaltz/hq/phoenix-scan/data.js` first. Collect the distinct `zip` values from its `qualifying` and `nearMisses` arrays — these are the submarkets that actually matter this week. If that file has no entries yet, fall back to the last-used zip list already present in `rent-comps.js`'s `zips` field.
 
 ## Step 2 — scan (read-only browsing, user's real Chrome)
-For each tracked zip:
+For each tracked zip, scan BOTH sources:
+
+**Apartments.com:**
 - CREATE A NEW TAB; never reuse existing tabs. Never log in, never submit forms, never accept terms/consent beyond privacy-preserving dismissal, never attempt to bypass a CAPTCHA or block — skip blocked sites.
 - Navigate to `https://www.apartments.com/phoenix-az-{zip}/`. Use `computer` scroll + screenshot (get_page_text on these listing pages tends to only return the first virtualized card — don't rely on it alone) to read through the visible listing cards: property name, address, unit type(s), price(s).
 - Prioritize older/smaller garden-style properties (pre-1990, low-rise, no elevator/luxury amenities) over large new luxury communities — those are the closest comps to a Class B/C value-add deal.
 - Open individual listing pages for any property whose "Pricing & Floor Plans" section shows BOTH a "Classic" (or unlabeled/base) and a "Renovated" tier for the same floor plan — this apples-to-apples pair is the most valuable data point (see 2026-08-05 finding: Acacia Gardens at 1515 W Missouri Ave, 85015, had 1x1 Classic $847 vs 1x1 Renovated $897, and 2x2 Classic $1,097 vs 2x2 Renovated $1,197). Open at most 6 individual listing pages per zip.
-- Record every comp found, whether or not it has a Classic/Renovated pair — single-tier listings are still useful as general rent evidence.
+
+**Zillow:**
+- CREATE A NEW TAB. Navigate to `https://www.zillow.com/phoenix-az-{zip}/rentals/`. Same rules — no login, no forms, skip if blocked/CAPTCHA'd (Zillow is more bot-defensive than Apartments.com; if it blocks you after 2 attempts on a given zip, skip Zillow for that zip and note it in the summary rather than retrying repeatedly).
+- Same prioritization (older/smaller garden-style over new luxury), same Classic/Renovated pair check where the listing distinguishes tiers, same 6-listing-per-zip cap.
+
+Record every comp found from either source, whether or not it has a Classic/Renovated pair — single-tier listings are still useful as general rent evidence. Tag each comp's `source` field accurately (`"apartments.com"` or `"zillow.com"`) so the two sources stay distinguishable on the page.
 
 ## Step 3 — write data
 Edit ONLY `/Users/christianschmaltz/hq/dev-model/rent-comps.js`. Structure (keep valid JS — the page reads `window.RENT_COMPS` directly):
