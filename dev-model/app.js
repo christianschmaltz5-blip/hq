@@ -224,6 +224,9 @@
     return "low";
   }
 
+  function bucketLabel(list) { return list === "qualifying" ? "QUALIFYING" : "NEAR MISS"; }
+  function bucketClass(list) { return list === "qualifying" ? "medium" : "lowmed"; }
+
   function dealCard(d, idx, list) {
     return `<div class="dm-deal" data-list="${list}" data-idx="${idx}">
       <div class="d-name">${esc(d.name)}</div>
@@ -233,6 +236,7 @@
         <span><b>${esc(d.units)}</b> units</span>
         <span>NOI <b>${d.noi == null ? "n/a" : money(d.noi)}</b></span>
         <span>Cap <b>${d.capPct == null ? "—" : d.capPct.toFixed(2) + "%"}</b></span>
+        <span class="badge ${bucketClass(list)}">${bucketLabel(list)}</span>
         <span class="badge ${badgeClass(d.confidence)}">${esc(d.confidence)}</span>
       </div>
     </div>`;
@@ -335,9 +339,10 @@
     el.innerHTML = `
       <p class="card-sub" style="margin-bottom:12px;">Updated ${esc(UR.updated)} — ${pencilCount} of ${UR.runs.length} deals pencil with real rent-comp data. Deals in zips not yet scanned are marked insufficient rather than guessed.</p>
       <div class="table-wrap"><table class="dtbl">
-        <thead><tr><th>Deal</th><th>Ask</th><th>TAC</th><th>Value-Add Profit</th><th>Cash-on-Cash</th><th>Rent Data</th><th>Verdict</th></tr></thead>
+        <thead><tr><th>Deal</th><th>Bucket</th><th>Ask</th><th>TAC</th><th>Value-Add Profit</th><th>Cash-on-Cash</th><th>Rent Data</th><th>Verdict</th></tr></thead>
         <tbody>${UR.runs.map(r => `
           <tr><td><b>${esc(r.name)}</b><br><span class="card-sub">${esc(r.address)}, ${esc(r.zip)}</span></td>
+          <td><span class="badge ${bucketClass(r.bucket === "qualifying" ? "qualifying" : "nearMiss")}">${bucketLabel(r.bucket === "qualifying" ? "qualifying" : "nearMiss")}</span></td>
           <td>${money(r.askingPrice)}</td><td>${money(r.TAC)}</td>
           <td>${money(r.valueAddProfit)}</td><td>${pct1(r.cashOnCash)}</td>
           <td>${esc(r.currentAvgRentSource)} / ${esc(r.rentPremiumSource)}</td>

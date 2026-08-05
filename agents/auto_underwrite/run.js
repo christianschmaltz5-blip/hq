@@ -102,6 +102,7 @@ function underwrite(deal) {
     name: deal.name,
     address: deal.address,
     zip: deal.zip,
+    bucket: deal.bucket,
     units: deal.units,
     askingPrice: deal.ask,
     inPlaceNOI: deal.noi,
@@ -121,7 +122,10 @@ function underwrite(deal) {
   };
 }
 
-const allDeals = [...(phxScan.qualifying || []), ...(phxScan.nearMisses || [])];
+const allDeals = [
+  ...(phxScan.qualifying || []).map((d) => Object.assign({ bucket: "qualifying" }, d)),
+  ...(phxScan.nearMisses || []).map((d) => Object.assign({ bucket: "nearMiss" }, d)),
+];
 const runs = allDeals.map(underwrite).sort((a, b) => b.valueAddProfit - a.valueAddProfit);
 
 const today = new Date().toISOString().slice(0, 10);
