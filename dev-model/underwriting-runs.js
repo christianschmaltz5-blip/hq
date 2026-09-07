@@ -12,7 +12,7 @@
 // };
 
 window.UNDERWRITING_RUNS = {
-  "updated": "2026-08-31",
+  "updated": "2026-09-07",
   "runs": [
     {
       "name": "2916 E Monroe St",
@@ -610,6 +610,12 @@ window.UNDERWRITING_RUNS = {
     },
     {
       "date": "2026-08-31",
+      "dealsRun": 25,
+      "pencilCount": 0,
+      "topDeal": "2916 E Monroe St ($-87,530)"
+    },
+    {
+      "date": "2026-09-07",
       "dealsRun": 25,
       "pencilCount": 0,
       "topDeal": "2916 E Monroe St ($-87,530)"
