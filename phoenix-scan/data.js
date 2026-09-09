@@ -18,8 +18,8 @@
 // };
 
 window.PHX_SCAN = {
-  updated: "2026-07-23",
-  listingsScanned: 52,
+  updated: "2026-09-09",
+  listingsScanned: 3,
   benchmarks: { "A": 4.75, "B": 4.90, "C": 5.40, "2-4 unit": 5.50 },
 
   qualifying: [
@@ -247,7 +247,7 @@ window.PHX_SCAN = {
       capPct: 5.31,
       spreadBps: 56,
       confidence: "MEDIUM",
-      notes: "Built 2022/2023, Class A, 100% leased. Three different NOI figures appear on this one listing: full-year 2025 NOI $288,781 (5.78% cap, the headline number), a more recent trailing-4-month annualized NOI of $265,332 (5.31% cap — used here), and a pro-forma NOI of just $251,257 — lower than either actual figure, unusual since pro-formas normally project growth. Reads as a declining-income trend, not a clean qualifier. The original July 16 scan's lead on this property (then +102bps, unverified) — now verified with real numbers and reclassified as a near miss given the more current trend.",
+      notes: "Built 2022/2023, Class A, 100% leased. Three different NOI figures appear on this one listing: full-year 2025 NOI $288,781 (5.78% cap, the headline number), a more recent trailing-4-month annualized NOI of $265,332 (5.31% cap — used here), and a pro-forma NOI of just $251,257 — lower than either actual figure, unusual since pro-formas normally project growth. Reads as a declining-income trend, not a clean qualifier. The original July 16 scan's lead on this property (then +102bps, unverified) — now verified with real numbers and reclassified as a near miss given the more current trend. Reconfirmed 2026-09-09: same price, same T-4 NOI, same declining-trend conclusion — no change.",
       url: "https://www.crexi.com/properties/2550819/Phoenix-AZ-85032"
     },
     {
@@ -383,7 +383,7 @@ window.PHX_SCAN = {
       address: "2719 W Maryland Ave, Phoenix AZ 85017",
       statedCapPct: 7.82,
       realCapPct: 5.1,
-      reason: "8 units, built 1958, renovated 2025-2026, 100% occupied. Stated NOI $108,345 on $127,128 gross implies only ~15% opex — unrealistic for an 8-unit Phoenix property. Re-underwritten at 5% vacancy / 42% opex: NOI ≈ $70,000, real cap ≈5.1% — below the 5.40% Class C benchmark, not above it. Reconfirmed still listed at same price/cap as of 2026-07-23."
+      reason: "8 units, built 1958, renovated 2025-2026, 100% occupied. Stated NOI $108,345 on $127,128 gross implies only ~15% opex — unrealistic for an 8-unit Phoenix property. Re-underwritten at 5% vacancy / 42% opex: NOI ≈ $70,000, real cap ≈5.1% — below the 5.40% Class C benchmark, not above it. Reconfirmed still listed at same price/cap/NOI as of 2026-09-09 (84 days on market)."
     },
     {
       address: "1017-1031 E Fairmount Ave, Phoenix AZ 85014",
@@ -395,7 +395,7 @@ window.PHX_SCAN = {
       address: "3139 N 40th St, Phoenix AZ 85018 (\"Rare Arcadia Multi Family Opportunity\")",
       statedCapPct: 9.37,
       realCapPct: null,
-      reason: "5 units, Class B. Listing's own marketing copy describes sober-living/residential-assisted-living use averaging $28,000/month (>$5,000/unit/month) — specialty board-and-care income, not conventional apartment rent. Excluded as non-comparable; the \"spread\" would be measuring the wrong asset class, not a mispricing. Not re-checked in the 2026-07-23 run — carried forward as a standing exclusion."
+      reason: "5 units, Class B. Listing's own marketing copy describes sober-living/residential-assisted-living use averaging $28,000/month (>$5,000/unit/month) — specialty board-and-care income, not conventional apartment rent. Excluded as non-comparable; the \"spread\" would be measuring the wrong asset class, not a mispricing. Reconfirmed 2026-09-09: still listed (438 days on market), same $2,599,000 price, same $243,500 NOI/9.37% math (verified via Crexi's own valuation calculator) — conclusion unchanged."
     },
     {
       address: "8910 N 8th St, Phoenix AZ 85020",
@@ -440,6 +440,7 @@ window.PHX_SCAN = {
     { date: "2026-07-23a", scanned: 12, qualifyingCount: 1, top: "2916 E Monroe St +213bps (partial spot-check, page 1 of 128 only)" },
     { date: "2026-07-23b", scanned: 19, qualifyingCount: 3, top: "Encanto Bungalows +169bps (cap-rate>=5.75% filter shortlisted 43 of 128; 16 visible without login)" },
     { date: "2026-07-23c", scanned: 37, qualifyingCount: 9, top: "5035 N 23rd Ave +178bps (logged in, unlocked 33-34 of 43 shortlisted listings via a rotating/non-paginated results feed; ~7-9 of the 43 and ~85 outside the filter remain unreviewed)" },
-    { date: "2026-07-23d", scanned: 52, qualifyingCount: 11, top: "5035 N 23rd Ave +178bps (swept the unfiltered 127-listing pool via 'NOI (High to Low)' sort — confirms every listing with disclosed real financials is now covered; remainder has no NOI/cap posted at all, unscreenable without contacting the broker)" }
+    { date: "2026-07-23d", scanned: 52, qualifyingCount: 11, top: "5035 N 23rd Ave +178bps (swept the unfiltered 127-listing pool via 'NOI (High to Low)' sort — confirms every listing with disclosed real financials is now covered; remainder has no NOI/cap posted at all, unscreenable without contacting the broker)" },
+    { date: "2026-09-09", scanned: 3, qualifyingCount: 0, top: "Spot-check only, not a full sweep — 45 listings currently match the 5.75%+ filter (pool has moved since July) but only 3 previously-flagged addresses were reopened for reconfirmation (Maryland Ave, Rare Arcadia, Campo Bello); all three unchanged from prior findings. The July 23 qualifying/near-miss lists (Ocotillo, Monroe St, Polk Terrace, etc.) were NOT rechecked this pass and may be stale (sold/repriced) — verify before acting on them." }
   ]
 };
