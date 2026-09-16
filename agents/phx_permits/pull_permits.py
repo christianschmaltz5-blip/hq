@@ -1,0 +1,154 @@
+#!/usr/bin/env python3
+"""Pull City of Phoenix PDD Online issued-permit data and write hq/phx-permits/data.js.
+
+Source: apps-secure.phoenix.gov/PDD/Search/IssuedPermit — a public, unauthenticated
+JSON endpoint (no login, no anti-bot wall, unlike Crexi). Confirmed 2026-09-16 via
+plain curl with no cookies. Pulls a rolling 60-day window of ALL issued permits
+citywide, paginated at 500/page.
+"""
+import json
+import re
+import subprocess
+import sys
+import urllib.request
+from datetime import date, timedelta
+from pathlib import Path
+
+ENDPOINT = "https://apps-secure.phoenix.gov/PDD/Search/IssuedPermit/_GetIssuedPermitData"
+WINDOW_DAYS = 60
+PAGE_SIZE = 500
+OUT_PATH = Path(__file__).resolve().parents[2] / "phx-permits" / "data.js"
+
+today = date.today()
+start = today - timedelta(days=WINDOW_DAYS)
+
+
+def fetch_page(page):
+    body = (
+        f"PermitType=&StructureClass="
+        f"&StartDate={start.strftime('%m%%2F%d%%2F%Y')}"
+        f"&EndDate={today.strftime('%m%%2F%d%%2F%Y')}"
+        f"&sort=&page={page}&pageSize={PAGE_SIZE}&group=&filter="
+    ).encode()
+    req = urllib.request.Request(
+        ENDPOINT, data=body,
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return json.load(resp)
+
+
+def parse_valuation(v):
+    if not v:
+        return 0.0
+    return float(re.sub(r"[^0-9.]", "", v) or 0)
+
+
+def parse_date_ms(s):
+    if not s:
+        return None
+    m = re.search(r"/Date\((\d+)\)/", s)
+    return int(m.group(1)) if m else None
+
+
+def main():
+    first = fetch_page(1)
+    total = first.get("Total", 0)
+    rows = list(first.get("Data") or [])
+    page = 2
+    while len(rows) < total:
+        batch = fetch_page(page).get("Data") or []
+        if not batch:
+            break
+        rows.extend(batch)
+        page += 1
+
+    # Dedupe on permit Number (the grid repeats a permit once per contractor/plan line)
+    by_number = {}
+    for r in rows:
+        num = r.get("Number")
+        existing = by_number.get(num)
+        if existing is None or parse_valuation(r.get("Valuation")) > parse_valuation(existing.get("Valuation")):
+            by_number[num] = r
+
+    permits = list(by_number.values())
+    total_valuation = sum(parse_valuation(r.get("Valuation")) for r in permits)
+    contractors = {}
+    for r in permits:
+        c = (r.get("Contractor") or "").strip()
+        if not c:
+            continue
+        contractors[c] = contractors.get(c, {"count": 0, "valuation": 0.0})
+        contractors[c]["count"] += 1
+        contractors[c]["valuation"] += parse_valuation(r.get("Valuation"))
+
+    contractor_book = sorted(
+        [{"name": k, **v} for k, v in contractors.items()],
+        key=lambda x: x["valuation"], reverse=True,
+    )[:100]
+
+    sites = sorted(
+        [
+            {
+                "address": (r.get("Address") or "").strip(),
+                "permitNumber": r.get("Number"),
+                "permitType": r.get("Type"),
+                "structClass": r.get("Struct_Class"),
+                "status": r.get("Status"),
+                "issueDateMs": parse_date_ms(r.get("Issue_Date")),
+                "valuation": parse_valuation(r.get("Valuation")),
+                "contractor": (r.get("Contractor") or "").strip(),
+                "ownerName": (r.get("Owner_Name") or "").strip(),
+                "parcel": r.get("Parcel"),
+                "zoning": r.get("Zoning"),
+                "units": r.get("Units"),
+                "totalFees": r.get("Total_Fees"),
+            }
+            for r in permits
+        ],
+        key=lambda x: x["valuation"], reverse=True,
+    )
+
+    history_entry = {
+        "date": today.isoformat(),
+        "permits": len(permits),
+        "totalValuation": round(total_valuation, 2),
+    }
+
+    existing_history = []
+    if OUT_PATH.exists():
+        try:
+            text = OUT_PATH.read_text()
+            m = re.search(r'"history"\s*:\s*(\[.*?\])\s*,?\s*\n\};', text, re.S)
+            if m:
+                existing_history = json.loads(m.group(1))
+        except Exception:
+            existing_history = []
+    history = [h for h in existing_history if h.get("date") != history_entry["date"]] + [history_entry]
+    history = history[-52:]  # keep last year of weekly-ish runs
+
+    payload = {
+        "updated": today.isoformat(),
+        "windowDays": WINDOW_DAYS,
+        "windowStart": start.isoformat(),
+        "windowEnd": today.isoformat(),
+        "totalPermits": len(permits),
+        "totalValuation": round(total_valuation, 2),
+        "contractorCount": len(contractors),
+        "sites": sites[:500],  # top 500 by valuation; full count still in totalPermits
+        "contractorBook": contractor_book,
+        "history": history,
+    }
+
+    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    js = (
+        "// Phoenix Permit Tracker — pulled from City of Phoenix PDD Online (public, no auth)\n"
+        "// Regenerated by agents/phx_permits/pull_permits.py — do not hand-edit.\n"
+        "window.PHX_PERMITS = " + json.dumps(payload, indent=2) + ";\n"
+    )
+    OUT_PATH.write_text(js)
+    print(f"Wrote {len(sites[:500])} sites ({len(permits)} total permits, ${total_valuation:,.0f}) to {OUT_PATH}")
+
+
+if __name__ == "__main__":
+    sys.exit(main())
