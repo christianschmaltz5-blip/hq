@@ -8,19 +8,72 @@ citywide, paginated at 500/page.
 """
 import json
 import re
-import subprocess
 import sys
+import time
+import urllib.parse
 import urllib.request
 from datetime import date, timedelta
 from pathlib import Path
 
 ENDPOINT = "https://apps-secure.phoenix.gov/PDD/Search/IssuedPermit/_GetIssuedPermitData"
+GEOCODE_ENDPOINT = "https://nominatim.openstreetmap.org/search"
+GEOCODE_USER_AGENT = "hq-phx-permits/1.0 (personal dashboard, christianschmaltz5@gmail.com)"
+GEOCODE_MAX_NEW_PER_RUN = 300  # Nominatim usage policy: max 1 req/sec, be a good citizen
 WINDOW_DAYS = 60
 PAGE_SIZE = 500
 OUT_PATH = Path(__file__).resolve().parents[2] / "phx-permits" / "data.js"
+GEOCODE_CACHE_PATH = Path(__file__).resolve().parent / "geocode_cache.json"
 
 today = date.today()
 start = today - timedelta(days=WINDOW_DAYS)
+
+
+def load_geocode_cache():
+    if GEOCODE_CACHE_PATH.exists():
+        try:
+            return json.loads(GEOCODE_CACHE_PATH.read_text())
+        except Exception:
+            return {}
+    return {}
+
+
+def save_geocode_cache(cache):
+    GEOCODE_CACHE_PATH.write_text(json.dumps(cache, indent=2, sort_keys=True))
+
+
+def geocode(address, cache, budget):
+    """Look up lat/lng for an address, using and updating the on-disk cache.
+    Returns (lat, lng) or (None, None). Mutates `budget[0]` (new-lookup counter)."""
+    key = address.strip().upper()
+    if not key:
+        return None, None
+    if key in cache:
+        entry = cache[key]
+        return entry.get("lat"), entry.get("lng")
+    if budget[0] >= GEOCODE_MAX_NEW_PER_RUN:
+        return None, None
+
+    q = urllib.parse.urlencode({
+        "q": f"{address}, Phoenix, AZ",
+        "format": "json",
+        "limit": 1,
+    })
+    req = urllib.request.Request(
+        f"{GEOCODE_ENDPOINT}?{q}",
+        headers={"User-Agent": GEOCODE_USER_AGENT},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            results = json.load(resp)
+        lat = float(results[0]["lat"]) if results else None
+        lng = float(results[0]["lon"]) if results else None
+    except Exception:
+        lat, lng = None, None
+
+    cache[key] = {"lat": lat, "lng": lng}
+    budget[0] += 1
+    time.sleep(1.1)  # Nominatim policy: max 1 request/sec
+    return lat, lng
 
 
 def fetch_page(page):
@@ -107,7 +160,15 @@ def main():
             for r in permits
         ],
         key=lambda x: x["valuation"], reverse=True,
-    )
+    )[:500]  # top 500 by valuation; full count still in totalPermits
+
+    geocode_cache = load_geocode_cache()
+    new_lookups = [0]
+    for s in sites:
+        lat, lng = geocode(s["address"], geocode_cache, new_lookups)
+        s["lat"], s["lng"] = lat, lng
+    save_geocode_cache(geocode_cache)
+    geocoded_count = sum(1 for s in sites if s.get("lat") is not None)
 
     history_entry = {
         "date": today.isoformat(),
@@ -135,7 +196,8 @@ def main():
         "totalPermits": len(permits),
         "totalValuation": round(total_valuation, 2),
         "contractorCount": len(contractors),
-        "sites": sites[:500],  # top 500 by valuation; full count still in totalPermits
+        "geocodedCount": geocoded_count,
+        "sites": sites,
         "contractorBook": contractor_book,
         "history": history,
     }
@@ -147,7 +209,8 @@ def main():
         "window.PHX_PERMITS = " + json.dumps(payload, indent=2) + ";\n"
     )
     OUT_PATH.write_text(js)
-    print(f"Wrote {len(sites[:500])} sites ({len(permits)} total permits, ${total_valuation:,.0f}) to {OUT_PATH}")
+    print(f"Wrote {len(sites)} sites ({geocoded_count} geocoded, {len(permits)} total permits, "
+          f"${total_valuation:,.0f}) to {OUT_PATH}")
 
 
 if __name__ == "__main__":

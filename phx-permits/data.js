@@ -5,9 +5,10 @@ window.PHX_PERMITS = {
   "windowDays": 60,
   "windowStart": "2026-07-18",
   "windowEnd": "2026-09-16",
-  "totalPermits": 2266,
+  "totalPermits": 2267,
   "totalValuation": 2132938953.79,
   "contractorCount": 457,
+  "geocodedCount": 396,
   "sites": [
     {
       "address": "5100 E ROOSEVELT ST",
@@ -22,7 +23,9 @@ window.PHX_PERMITS = {
       "parcel": "125-12-037",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.4567098,
+      "lng": -111.9718984
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -37,7 +40,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1595088
+      "totalFees": 1595088,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "1 E ADAMS ST",
@@ -52,7 +57,9 @@ window.PHX_PERMITS = {
       "parcel": "112-28-139",
       "zoning": "PRIVATE",
       "units": "236",
-      "totalFees": 1560
+      "totalFees": 1560,
+      "lat": 33.449233,
+      "lng": -112.073667
     },
     {
       "address": "1 E ADAMS ST",
@@ -67,7 +74,9 @@ window.PHX_PERMITS = {
       "parcel": "112-28-139",
       "zoning": "PRIVATE",
       "units": "236",
-      "totalFees": 1560
+      "totalFees": 1560,
+      "lat": 33.449233,
+      "lng": -112.073667
     },
     {
       "address": "19829 N 27TH AVE",
@@ -82,7 +91,9 @@ window.PHX_PERMITS = {
       "parcel": "209-16-001K",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2530
+      "totalFees": 2530,
+      "lat": 33.6663494,
+      "lng": -112.1158366
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -97,7 +108,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 227188
+      "totalFees": 227188,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "500 N 55TH AVE",
@@ -112,7 +125,9 @@ window.PHX_PERMITS = {
       "parcel": "103-29-065",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1170
+      "totalFees": 1170,
+      "lat": 33.4914787,
+      "lng": -112.1777143
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -127,7 +142,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 162570.4
+      "totalFees": 162570.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "3400 E SKY HARBOR BLVD",
@@ -142,7 +159,9 @@ window.PHX_PERMITS = {
       "parcel": "121-33-001",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1852.5
+      "totalFees": 1852.5,
+      "lat": 33.4365306,
+      "lng": -112.0089513
     },
     {
       "address": "32300 N 51ST AVE",
@@ -157,7 +176,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 141402.4
+      "totalFees": 141402.4,
+      "lat": 33.475036,
+      "lng": -112.1688848
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -172,7 +193,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 199016
+      "totalFees": 199016,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "1900 W THOMAS RD",
@@ -187,7 +210,9 @@ window.PHX_PERMITS = {
       "parcel": "110-34-001B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1560
+      "totalFees": 1560,
+      "lat": 33.4813405,
+      "lng": -112.1018277
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -202,7 +227,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 161298
+      "totalFees": 161298,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32400 N 51ST AVE",
@@ -217,7 +244,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 18753
+      "totalFees": 18753,
+      "lat": 33.7809525,
+      "lng": -112.1744924
     },
     {
       "address": "32300 N 51ST AVE",
@@ -232,7 +261,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 117402.4
+      "totalFees": 117402.4,
+      "lat": 33.475036,
+      "lng": -112.1688848
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -247,7 +278,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 113506.4
+      "totalFees": 113506.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -262,7 +295,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 141883
+      "totalFees": 141883,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5309 E VAN BUREN ST",
@@ -277,7 +312,9 @@ window.PHX_PERMITS = {
       "parcel": "124-13-020",
       "zoning": "PRIVATE",
       "units": "108",
-      "totalFees": 213736
+      "totalFees": 213736,
+      "lat": 33.4508592,
+      "lng": -111.9653266
     },
     {
       "address": "5309 E VAN BUREN ST",
@@ -292,7 +329,9 @@ window.PHX_PERMITS = {
       "parcel": "124-13-020",
       "zoning": "PRIVATE",
       "units": "118",
-      "totalFees": 219625
+      "totalFees": 219625,
+      "lat": 33.4508592,
+      "lng": -111.9653266
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -307,7 +346,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 96422.4
+      "totalFees": 96422.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -322,7 +363,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 119933
+      "totalFees": 119933,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -337,7 +380,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 95946.4
+      "totalFees": 95946.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32300 N 51ST AVE",
@@ -352,7 +397,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 93402.4
+      "totalFees": 93402.4,
+      "lat": 33.475036,
+      "lng": -112.1688848
     },
     {
       "address": "4510 N 37TH AVE",
@@ -367,7 +414,9 @@ window.PHX_PERMITS = {
       "parcel": "107-08-004B",
       "zoning": "PRIVATE",
       "units": "116",
-      "totalFees": 421541
+      "totalFees": 421541,
+      "lat": 33.5027242,
+      "lng": -112.1390028
     },
     {
       "address": "32300 N 51ST AVE",
@@ -382,7 +431,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 89402.4
+      "totalFees": 89402.4,
+      "lat": 33.475036,
+      "lng": -112.1688848
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -397,7 +448,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 106293
+      "totalFees": 106293,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -412,7 +465,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 119084
+      "totalFees": 119084,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -427,7 +482,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 83394.4
+      "totalFees": 83394.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -442,7 +499,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 83154.4
+      "totalFees": 83154.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -457,7 +516,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 103943
+      "totalFees": 103943,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32300 N 51ST AVE",
@@ -472,7 +533,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 105775
+      "totalFees": 105775,
+      "lat": 33.475036,
+      "lng": -112.1688848
     },
     {
       "address": "32300 N 51ST AVE",
@@ -487,7 +550,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 77402.4
+      "totalFees": 77402.4,
+      "lat": 33.475036,
+      "lng": -112.1688848
     },
     {
       "address": "32400 N 51ST AVE",
@@ -502,7 +567,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 94753
+      "totalFees": 94753,
+      "lat": 33.7809525,
+      "lng": -112.1744924
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -517,7 +584,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 75306.4
+      "totalFees": 75306.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -532,7 +601,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 94133
+      "totalFees": 94133,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -547,7 +618,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 91433
+      "totalFees": 91433,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32300 N 51ST AVE",
@@ -562,7 +635,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 71302.4
+      "totalFees": 71302.4,
+      "lat": 33.475036,
+      "lng": -112.1688848
     },
     {
       "address": "1111 N 15TH ST",
@@ -577,7 +652,9 @@ window.PHX_PERMITS = {
       "parcel": "116-20-096C",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 54464.8
+      "totalFees": 54464.8,
+      "lat": 33.4600128,
+      "lng": -112.0497247
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -592,7 +669,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 67602.4
+      "totalFees": 67602.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "4510 N 37TH AVE",
@@ -607,7 +686,9 @@ window.PHX_PERMITS = {
       "parcel": "107-08-004B",
       "zoning": "PRIVATE",
       "units": "76",
-      "totalFees": 257743
+      "totalFees": 257743,
+      "lat": 33.5027242,
+      "lng": -112.1390028
     },
     {
       "address": "26000 N NORTERRA PKWY",
@@ -622,7 +703,9 @@ window.PHX_PERMITS = {
       "parcel": "210-04-751",
       "zoning": "PRIVATE",
       "units": "64",
-      "totalFees": 268794
+      "totalFees": 268794,
+      "lat": 33.7240593,
+      "lng": -112.1137027
     },
     {
       "address": "26000 N NORTERRA PKWY",
@@ -637,7 +720,9 @@ window.PHX_PERMITS = {
       "parcel": "210-04-751",
       "zoning": "PRIVATE",
       "units": "64",
-      "totalFees": 268794
+      "totalFees": 268794,
+      "lat": 33.7240593,
+      "lng": -112.1137027
     },
     {
       "address": "32300 N 51ST AVE",
@@ -652,7 +737,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 61753
+      "totalFees": 61753,
+      "lat": 33.475036,
+      "lng": -112.1688848
     },
     {
       "address": "2225 W PINNACLE PEAK RD",
@@ -667,7 +754,9 @@ window.PHX_PERMITS = {
       "parcel": "209-03-126A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 82767
+      "totalFees": 82767,
+      "lat": 33.6996,
+      "lng": -112.1079267
     },
     {
       "address": "3900 S 55TH AVE",
@@ -682,7 +771,9 @@ window.PHX_PERMITS = {
       "parcel": "104-58-653",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.413336,
+      "lng": -112.180105
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -697,7 +788,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 57933
+      "totalFees": 57933,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32400 N 51ST AVE",
@@ -712,7 +805,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 43402.4
+      "totalFees": 43402.4,
+      "lat": 33.7809525,
+      "lng": -112.1744924
     },
     {
       "address": "3900 S 55TH AVE",
@@ -727,7 +822,9 @@ window.PHX_PERMITS = {
       "parcel": "104-58-002M",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.413336,
+      "lng": -112.180105
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -742,7 +839,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 42362.4
+      "totalFees": 42362.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "2045 W HILTON AVE",
@@ -757,7 +856,9 @@ window.PHX_PERMITS = {
       "parcel": "105-29-004F",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 85900
+      "totalFees": 85900,
+      "lat": 33.428019,
+      "lng": -112.1029987
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -772,7 +873,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 50098
+      "totalFees": 50098,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "10500 N 25TH AVE",
@@ -787,7 +890,9 @@ window.PHX_PERMITS = {
       "parcel": "149-09-013",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 108942
+      "totalFees": 108942,
+      "lat": 33.580087,
+      "lng": -112.113535
     },
     {
       "address": "32400 N 51ST AVE",
@@ -802,7 +907,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 47003
+      "totalFees": 47003,
+      "lat": 33.7809525,
+      "lng": -112.1744924
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -817,7 +924,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 46523
+      "totalFees": 46523,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -832,7 +941,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 37218.4
+      "totalFees": 37218.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "26000 N NORTERRA PKWY",
@@ -847,7 +958,9 @@ window.PHX_PERMITS = {
       "parcel": "210-04-751",
       "zoning": "PRIVATE",
       "units": "40",
-      "totalFees": 171710
+      "totalFees": 171710,
+      "lat": 33.7240593,
+      "lng": -112.1137027
     },
     {
       "address": "26000 N NORTERRA PKWY",
@@ -862,7 +975,9 @@ window.PHX_PERMITS = {
       "parcel": "210-04-751",
       "zoning": "PRIVATE",
       "units": "40",
-      "totalFees": 171710
+      "totalFees": 171710,
+      "lat": 33.7240593,
+      "lng": -112.1137027
     },
     {
       "address": "26000 N NORTERRA PKWY",
@@ -877,7 +992,9 @@ window.PHX_PERMITS = {
       "parcel": "210-04-751",
       "zoning": "PRIVATE",
       "units": "40",
-      "totalFees": 171710
+      "totalFees": 171710,
+      "lat": 33.7240593,
+      "lng": -112.1137027
     },
     {
       "address": "440 S 51ST AVE",
@@ -892,7 +1009,9 @@ window.PHX_PERMITS = {
       "parcel": "104-20-062",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 44253
+      "totalFees": 44253,
+      "lat": 33.4425418,
+      "lng": -112.1692818
     },
     {
       "address": "10400 N 25TH AVE",
@@ -907,7 +1026,9 @@ window.PHX_PERMITS = {
       "parcel": "149-09-013",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 43563
+      "totalFees": 43563,
+      "lat": 33.5810742,
+      "lng": -112.1138994
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -922,7 +1043,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 48582
+      "totalFees": 48582,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32200 N 43RD AVE",
@@ -937,7 +1060,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 40818
+      "totalFees": 40818,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "777 W ALAMEDA RD",
@@ -952,7 +1077,9 @@ window.PHX_PERMITS = {
       "parcel": "210-07-169A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 38433
+      "totalFees": 38433,
+      "lat": 33.7057403,
+      "lng": -112.1361406
     },
     {
       "address": "13825 N CAVE CREEK RD",
@@ -967,7 +1094,9 @@ window.PHX_PERMITS = {
       "parcel": "214-51-714",
       "zoning": "PRIVATE",
       "units": "28",
-      "totalFees": 98359
+      "totalFees": 98359,
+      "lat": 33.6121798,
+      "lng": -112.034152
     },
     {
       "address": "7600 W VAN BUREN ST",
@@ -982,7 +1111,9 @@ window.PHX_PERMITS = {
       "parcel": "102-43-013A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.4530573,
+      "lng": -112.2244153
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -997,7 +1128,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 35088
+      "totalFees": 35088,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1012,7 +1145,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 42196
+      "totalFees": 42196,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1027,7 +1162,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 34928
+      "totalFees": 34928,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "",
@@ -1042,7 +1179,9 @@ window.PHX_PERMITS = {
       "parcel": "",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 27402.4
+      "totalFees": 27402.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32200 N 43RD AVE",
@@ -1057,7 +1196,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 25554.4
+      "totalFees": 25554.4,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1072,7 +1213,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 25070.4
+      "totalFees": 25070.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32400 N 51ST AVE",
@@ -1087,7 +1230,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 31253
+      "totalFees": 31253,
+      "lat": 33.7809525,
+      "lng": -112.1744924
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1102,7 +1247,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 31068
+      "totalFees": 31068,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1117,7 +1264,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 24642.4
+      "totalFees": 24642.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1132,7 +1281,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 30803
+      "totalFees": 30803,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1147,7 +1298,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 30233
+      "totalFees": 30233,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32300 N 51ST AVE",
@@ -1162,7 +1315,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 29253
+      "totalFees": 29253,
+      "lat": 33.475036,
+      "lng": -112.1688848
     },
     {
       "address": "32200 N 43RD AVE",
@@ -1177,7 +1332,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 28293
+      "totalFees": 28293,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "25435 N 15TH AVE",
@@ -1192,7 +1349,9 @@ window.PHX_PERMITS = {
       "parcel": "210-09-024C",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.7168851,
+      "lng": -112.0913175
     },
     {
       "address": "25435 N 15TH AVE",
@@ -1207,7 +1366,9 @@ window.PHX_PERMITS = {
       "parcel": "210-09-024C",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.7168851,
+      "lng": -112.0913175
     },
     {
       "address": "12770 N TATUM BLVD",
@@ -1222,7 +1383,9 @@ window.PHX_PERMITS = {
       "parcel": "167-25-157",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.603958,
+      "lng": -111.9781151
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1237,7 +1400,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 20566.4
+      "totalFees": 20566.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "2550 W HAPPY VALLEY RD",
@@ -1252,7 +1417,9 @@ window.PHX_PERMITS = {
       "parcel": "210-04-013A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 975
+      "totalFees": 975,
+      "lat": 33.7154519,
+      "lng": -112.1145721
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1267,7 +1434,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 19150.4
+      "totalFees": 19150.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1282,7 +1451,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 18150.4
+      "totalFees": 18150.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1297,7 +1468,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 22688
+      "totalFees": 22688,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "300 E JESSE OWENS PKWY",
@@ -1312,7 +1485,9 @@ window.PHX_PERMITS = {
       "parcel": "114-16-001E",
       "zoning": "PRIVATE",
       "units": "42",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.3810116,
+      "lng": -112.0698257
     },
     {
       "address": "23777 N 3RD AVE",
@@ -1327,7 +1502,9 @@ window.PHX_PERMITS = {
       "parcel": "210-16-010",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 22473
+      "totalFees": 22473,
+      "lat": 33.4715019,
+      "lng": -112.0782437
     },
     {
       "address": "4141 S 91ST AVE",
@@ -1342,7 +1519,9 @@ window.PHX_PERMITS = {
       "parcel": "101-30-966",
       "zoning": "PRIVATE",
       "units": "24",
-      "totalFees": 257419
+      "totalFees": 257419,
+      "lat": 33.4114999,
+      "lng": -112.2551575
     },
     {
       "address": "4141 S 91ST AVE",
@@ -1357,7 +1536,9 @@ window.PHX_PERMITS = {
       "parcel": "101-30-966",
       "zoning": "PRIVATE",
       "units": "24",
-      "totalFees": 257419
+      "totalFees": 257419,
+      "lat": 33.4114999,
+      "lng": -112.2551575
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1372,7 +1553,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 22078
+      "totalFees": 22078,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32300 N 51ST AVE",
@@ -1387,7 +1570,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 21753
+      "totalFees": 21753,
+      "lat": 33.475036,
+      "lng": -112.1688848
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1402,7 +1587,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 21213
+      "totalFees": 21213,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "2121 W SONORAN DESERT DR",
@@ -1417,7 +1604,9 @@ window.PHX_PERMITS = {
       "parcel": "204-13-617",
       "zoning": "PRIVATE",
       "units": "14",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.7691705,
+      "lng": -112.1240302
     },
     {
       "address": "4141 S 91ST AVE",
@@ -1432,7 +1621,9 @@ window.PHX_PERMITS = {
       "parcel": "101-30-966",
       "zoning": "PRIVATE",
       "units": "24",
-      "totalFees": 255619
+      "totalFees": 255619,
+      "lat": 33.4114999,
+      "lng": -112.2551575
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1447,7 +1638,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 16242.4
+      "totalFees": 16242.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "4141 S 91ST AVE",
@@ -1462,7 +1655,9 @@ window.PHX_PERMITS = {
       "parcel": "101-30-966",
       "zoning": "PRIVATE",
       "units": "24",
-      "totalFees": 255359
+      "totalFees": 255359,
+      "lat": 33.4114999,
+      "lng": -112.2551575
     },
     {
       "address": "4141 S 91ST AVE",
@@ -1477,7 +1672,9 @@ window.PHX_PERMITS = {
       "parcel": "101-30-966",
       "zoning": "PRIVATE",
       "units": "24",
-      "totalFees": 255359
+      "totalFees": 255359,
+      "lat": 33.4114999,
+      "lng": -112.2551575
     },
     {
       "address": "4141 S 91ST AVE",
@@ -1492,7 +1689,9 @@ window.PHX_PERMITS = {
       "parcel": "101-30-966",
       "zoning": "PRIVATE",
       "units": "24",
-      "totalFees": 255359
+      "totalFees": 255359,
+      "lat": 33.4114999,
+      "lng": -112.2551575
     },
     {
       "address": "33933 N 27TH DR",
@@ -1507,7 +1706,9 @@ window.PHX_PERMITS = {
       "parcel": "204-01-004G",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 226549
+      "totalFees": 226549,
+      "lat": 33.4993898,
+      "lng": -112.1180905
     },
     {
       "address": "32400 N 51ST AVE",
@@ -1522,7 +1723,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 15802.4
+      "totalFees": 15802.4,
+      "lat": 33.7809525,
+      "lng": -112.1744924
     },
     {
       "address": "32400 N 51ST AVE",
@@ -1537,7 +1740,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 19753
+      "totalFees": 19753,
+      "lat": 33.7809525,
+      "lng": -112.1744924
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1552,7 +1757,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 19733
+      "totalFees": 19733,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1567,7 +1774,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 19678
+      "totalFees": 19678,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1582,7 +1791,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 15742.4
+      "totalFees": 15742.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32400 N 51ST AVE",
@@ -1597,7 +1808,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 15698.4
+      "totalFees": 15698.4,
+      "lat": 33.7809525,
+      "lng": -112.1744924
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1612,7 +1825,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 15002.4
+      "totalFees": 15002.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "300 E JESSE OWENS PKWY",
@@ -1627,7 +1842,9 @@ window.PHX_PERMITS = {
       "parcel": "114-16-001E",
       "zoning": "PRIVATE",
       "units": "30",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.3810116,
+      "lng": -112.0698257
     },
     {
       "address": "300 E JESSE OWENS PKWY",
@@ -1642,7 +1859,9 @@ window.PHX_PERMITS = {
       "parcel": "114-16-001E",
       "zoning": "PRIVATE",
       "units": "30",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.3810116,
+      "lng": -112.0698257
     },
     {
       "address": "2315 E QUAIL AVE",
@@ -1657,7 +1876,9 @@ window.PHX_PERMITS = {
       "parcel": "213-09-009H",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 66816
+      "totalFees": 66816,
+      "lat": 33.6782228,
+      "lng": -112.03239
     },
     {
       "address": "4114 E WOOD ST",
@@ -1672,7 +1893,9 @@ window.PHX_PERMITS = {
       "parcel": "124-54-028C",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.40974,
+      "lng": -111.9910775
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1687,7 +1910,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 19714
+      "totalFees": 19714,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "4909 E BEVERLY RD",
@@ -1702,7 +1927,9 @@ window.PHX_PERMITS = {
       "parcel": "301-14-021N",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 38858
+      "totalFees": 38858,
+      "lat": 33.374114,
+      "lng": -111.9766036
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1717,7 +1944,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 13802.4
+      "totalFees": 13802.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1732,7 +1961,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 17253
+      "totalFees": 17253,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "2926 E MCDOWELL RD",
@@ -1747,7 +1978,9 @@ window.PHX_PERMITS = {
       "parcel": "120-27-042",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 48950
+      "totalFees": 48950,
+      "lat": 33.4658301,
+      "lng": -112.0186235
     },
     {
       "address": "3301 W VERNON AVE",
@@ -1762,7 +1995,9 @@ window.PHX_PERMITS = {
       "parcel": "108-09-067B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 16753
+      "totalFees": 16753,
+      "lat": 33.4736638,
+      "lng": -112.1302765
     },
     {
       "address": "715 E MONTECITO AVE",
@@ -1777,7 +2012,9 @@ window.PHX_PERMITS = {
       "parcel": "155-18-017",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 16753
+      "totalFees": 16753,
+      "lat": 33.4984743,
+      "lng": -112.0638326
     },
     {
       "address": "801 N 1ST AVE",
@@ -1792,7 +2029,9 @@ window.PHX_PERMITS = {
       "parcel": "111-40-052",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 16703
+      "totalFees": 16703,
+      "lat": 33.4569133,
+      "lng": -112.0747695
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1807,7 +2046,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 12390.4
+      "totalFees": 12390.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "4215 W LOWER BUCKEYE RD",
@@ -1822,7 +2063,9 @@ window.PHX_PERMITS = {
       "parcel": "105-45-001K",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1153
+      "totalFees": 1153,
+      "lat": 33.4224533,
+      "lng": -112.1508251
     },
     {
       "address": "4832 S CENTRAL AVE",
@@ -1837,7 +2080,9 @@ window.PHX_PERMITS = {
       "parcel": "113-31-042",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.4025566,
+      "lng": -112.0734344
     },
     {
       "address": "25800 N NORTERRA PKWY",
@@ -1852,7 +2097,9 @@ window.PHX_PERMITS = {
       "parcel": "210-04-015B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 14753
+      "totalFees": 14753,
+      "lat": 33.7219398,
+      "lng": -112.1155651
     },
     {
       "address": "32500 N 51ST AVE",
@@ -1867,7 +2114,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 11402.4
+      "totalFees": 11402.4,
+      "lat": 33.4490131,
+      "lng": -112.1691398
     },
     {
       "address": "32500 N 51ST AVE",
@@ -1882,7 +2131,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 14253
+      "totalFees": 14253,
+      "lat": 33.4490131,
+      "lng": -112.1691398
     },
     {
       "address": "300 E JESSE OWENS PKWY",
@@ -1897,7 +2148,9 @@ window.PHX_PERMITS = {
       "parcel": "114-16-001E",
       "zoning": "PRIVATE",
       "units": "18",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.3810116,
+      "lng": -112.0698257
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1912,7 +2165,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 11010.4
+      "totalFees": 11010.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1927,7 +2182,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 13763
+      "totalFees": 13763,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -1942,7 +2199,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 13753
+      "totalFees": 13753,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "10027 S 51ST ST",
@@ -1957,7 +2216,9 @@ window.PHX_PERMITS = {
       "parcel": "301-41-334B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 15271
+      "totalFees": 15271,
+      "lat": 33.3558186,
+      "lng": -111.9748844
     },
     {
       "address": "2720 E GREENWAY PKWY",
@@ -1972,7 +2233,9 @@ window.PHX_PERMITS = {
       "parcel": "214-40-013F",
       "zoning": "PRIVATE",
       "units": "16",
-      "totalFees": 10267.4
+      "totalFees": 10267.4,
+      "lat": 33.6266881,
+      "lng": -112.0234529
     },
     {
       "address": "4626 E SHEA BLVD",
@@ -1987,7 +2250,9 @@ window.PHX_PERMITS = {
       "parcel": "167-73-935",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.5830652,
+      "lng": -111.9808411
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2002,7 +2267,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 12553
+      "totalFees": 12553,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2017,7 +2284,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 10042.4
+      "totalFees": 10042.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2032,7 +2301,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 12553
+      "totalFees": 12553,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32200 N 43RD AVE",
@@ -2047,7 +2318,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 12288
+      "totalFees": 12288,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "32200 N 43RD AVE",
@@ -2062,7 +2335,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 12253
+      "totalFees": 12253,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "32200 N 43RD AVE",
@@ -2077,7 +2352,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 12133
+      "totalFees": 12133,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "32200 N 43RD AVE",
@@ -2092,7 +2369,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 9422.4
+      "totalFees": 9422.4,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "32200 N 43RD AVE",
@@ -2107,7 +2386,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 11778
+      "totalFees": 11778,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "1825 W BELL RD",
@@ -2122,7 +2403,9 @@ window.PHX_PERMITS = {
       "parcel": "208-13-954",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 11753
+      "totalFees": 11753,
+      "lat": 33.6370841,
+      "lng": -112.0980494
     },
     {
       "address": "21001 N TATUM BLVD",
@@ -2137,7 +2420,9 @@ window.PHX_PERMITS = {
       "parcel": "212-32-100C",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 11753
+      "totalFees": 11753,
+      "lat": 33.6775869,
+      "lng": -111.9700872
     },
     {
       "address": "4770 N 99TH AVE",
@@ -2152,7 +2437,9 @@ window.PHX_PERMITS = {
       "parcel": "102-17-992",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.5067895,
+      "lng": -112.272377
     },
     {
       "address": "32300 N 51ST AVE",
@@ -2167,7 +2454,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 9402.4
+      "totalFees": 9402.4,
+      "lat": 33.475036,
+      "lng": -112.1688848
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2182,7 +2471,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 9402.4
+      "totalFees": 9402.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2197,7 +2488,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 9402.4
+      "totalFees": 9402.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32300 N 51ST AVE",
@@ -2212,7 +2505,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 11003
+      "totalFees": 11003,
+      "lat": 33.475036,
+      "lng": -112.1688848
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2227,7 +2522,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 8702.4
+      "totalFees": 8702.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2242,7 +2539,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 10828
+      "totalFees": 10828,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "26000 N NORTERRA PKWY",
@@ -2257,7 +2556,9 @@ window.PHX_PERMITS = {
       "parcel": "210-04-751",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 71859
+      "totalFees": 71859,
+      "lat": 33.7240593,
+      "lng": -112.1137027
     },
     {
       "address": "6330 E DELCOA AVE",
@@ -2272,7 +2573,9 @@ window.PHX_PERMITS = {
       "parcel": "167-03-131",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 21906
+      "totalFees": 21906,
+      "lat": 33.6091501,
+      "lng": -111.9436111
     },
     {
       "address": "16406 N 26TH AVE",
@@ -2287,7 +2590,9 @@ window.PHX_PERMITS = {
       "parcel": "208-14-954",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 8201
+      "totalFees": 8201,
+      "lat": 33.6353799,
+      "lng": -112.1142227
     },
     {
       "address": "2828 W THUNDERBIRD RD",
@@ -2302,7 +2607,9 @@ window.PHX_PERMITS = {
       "parcel": "207-07-757B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.6112228,
+      "lng": -112.1204601
     },
     {
       "address": "32200 N 43RD AVE",
@@ -2317,7 +2624,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 7802.4
+      "totalFees": 7802.4,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "3939 W CAREFREE HWY",
@@ -2332,7 +2641,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-008A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 9623
+      "totalFees": 9623,
+      "lat": 33.798082,
+      "lng": -112.143164
     },
     {
       "address": "201 E INDIANOLA AVE",
@@ -2347,7 +2658,9 @@ window.PHX_PERMITS = {
       "parcel": "118-25-123",
       "zoning": "PRIVATE",
       "units": "1",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.49177,
+      "lng": -112.0711414
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2362,7 +2675,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 7434.4
+      "totalFees": 7434.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2377,7 +2692,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 9293
+      "totalFees": 9293,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "1201 N GALVIN PKWY",
@@ -2392,7 +2709,9 @@ window.PHX_PERMITS = {
       "parcel": "129-10-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 9253
+      "totalFees": 9253,
+      "lat": 33.4620569,
+      "lng": -111.9450006
     },
     {
       "address": "555 N 55TH AVE",
@@ -2407,7 +2726,9 @@ window.PHX_PERMITS = {
       "parcel": "103-29-071",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 190
+      "totalFees": 190,
+      "lat": 33.4549864,
+      "lng": -112.177667
     },
     {
       "address": "902 N 2ND ST",
@@ -2422,7 +2743,9 @@ window.PHX_PERMITS = {
       "parcel": "111-43-041",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 50007
+      "totalFees": 50007,
+      "lat": 33.4577986,
+      "lng": -112.0709304
     },
     {
       "address": "902 N 2ND ST",
@@ -2437,7 +2760,9 @@ window.PHX_PERMITS = {
       "parcel": "111-43-041",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 9253
+      "totalFees": 9253,
+      "lat": 33.4577986,
+      "lng": -112.0709304
     },
     {
       "address": "902 N 2ND ST",
@@ -2452,7 +2777,9 @@ window.PHX_PERMITS = {
       "parcel": "111-43-041",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 9253
+      "totalFees": 9253,
+      "lat": 33.4577986,
+      "lng": -112.0709304
     },
     {
       "address": "32200 N 43RD AVE",
@@ -2467,7 +2794,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 9253
+      "totalFees": 9253,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "2207 W HAPPY VALLEY RD",
@@ -2482,7 +2811,9 @@ window.PHX_PERMITS = {
       "parcel": "210-05-031A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 9253
+      "totalFees": 9253,
+      "lat": 33.7127863,
+      "lng": -112.1066449
     },
     {
       "address": "32200 N 43RD AVE",
@@ -2497,7 +2828,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 9253
+      "totalFees": 9253,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "4810 S CENTRAL AVE",
@@ -2512,7 +2845,9 @@ window.PHX_PERMITS = {
       "parcel": "113-31-044A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 25859
+      "totalFees": 25859,
+      "lat": 33.4027686,
+      "lng": -112.0734341
     },
     {
       "address": "32200 N 43RD AVE",
@@ -2527,7 +2862,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 9154
+      "totalFees": 9154,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "15620 N SCOTTSDALE RD",
@@ -2542,7 +2879,9 @@ window.PHX_PERMITS = {
       "parcel": "215-42-011",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 8929
+      "totalFees": 8929,
+      "lat": 33.5988053,
+      "lng": -111.9261172
     },
     {
       "address": "10505 W BROADWAY RD",
@@ -2557,7 +2896,9 @@ window.PHX_PERMITS = {
       "parcel": "101-39-569",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 7172
+      "totalFees": 7172,
+      "lat": 33.4062959,
+      "lng": -112.2886198
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2572,7 +2913,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 6840.8
+      "totalFees": 6840.8,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "7301 N 16TH ST",
@@ -2587,7 +2930,9 @@ window.PHX_PERMITS = {
       "parcel": "164-24-008",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.5438441,
+      "lng": -112.0470022
     },
     {
       "address": "2121 N 83RD AVE",
@@ -2602,7 +2947,9 @@ window.PHX_PERMITS = {
       "parcel": "102-37-009",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 8317
+      "totalFees": 8317,
+      "lat": 33.4715227,
+      "lng": -112.2328666
     },
     {
       "address": "16421 N CAVE CREEK RD",
@@ -2617,7 +2964,9 @@ window.PHX_PERMITS = {
       "parcel": "214-27-003B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.6359142,
+      "lng": -112.0306869
     },
     {
       "address": "32200 N 43RD AVE",
@@ -2632,7 +2981,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 6293.6
+      "totalFees": 6293.6,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2647,7 +2998,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "3563 W NORTHERN AVE",
@@ -2662,7 +3015,9 @@ window.PHX_PERMITS = {
       "parcel": "151-04-087",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.5530104,
+      "lng": -112.1362882
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2677,7 +3032,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 7264
+      "totalFees": 7264,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2692,7 +3049,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 5811.2
+      "totalFees": 5811.2,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2707,7 +3066,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 5782.4
+      "totalFees": 5782.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2722,7 +3083,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 7219
+      "totalFees": 7219,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2737,7 +3100,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 5775.2
+      "totalFees": 5775.2,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2752,7 +3117,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 7219
+      "totalFees": 7219,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "55 E PINNACLE PEAK RD",
@@ -2767,7 +3134,9 @@ window.PHX_PERMITS = {
       "parcel": "209-01-031",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 5602.4
+      "totalFees": 5602.4,
+      "lat": 33.6987339,
+      "lng": -111.9429178
     },
     {
       "address": "55 E PINNACLE PEAK RD",
@@ -2782,7 +3151,9 @@ window.PHX_PERMITS = {
       "parcel": "209-01-031",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 7003
+      "totalFees": 7003,
+      "lat": 33.6987339,
+      "lng": -111.9429178
     },
     {
       "address": "8787 W BUCKEYE RD",
@@ -2797,7 +3168,9 @@ window.PHX_PERMITS = {
       "parcel": "101-12-001J",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 6787
+      "totalFees": 6787,
+      "lat": 33.437128,
+      "lng": -112.1858894
     },
     {
       "address": "32400 N 51ST AVE",
@@ -2812,7 +3185,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 5422.4
+      "totalFees": 5422.4,
+      "lat": 33.7809525,
+      "lng": -112.1744924
     },
     {
       "address": "32400 N 51ST AVE",
@@ -2827,7 +3202,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 6778
+      "totalFees": 6778,
+      "lat": 33.7809525,
+      "lng": -112.1744924
     },
     {
       "address": "821 N 11TH AVE",
@@ -2842,7 +3219,9 @@ window.PHX_PERMITS = {
       "parcel": "111-29-061A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 14929
+      "totalFees": 14929,
+      "lat": 33.4571949,
+      "lng": -112.0868626
     },
     {
       "address": "2411 E INDIAN SCHOOL RD",
@@ -2857,7 +3236,9 @@ window.PHX_PERMITS = {
       "parcel": "119-04-139C",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.4947723,
+      "lng": -112.0298541
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2872,7 +3253,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "4420 N 51ST AVE",
@@ -2887,7 +3270,9 @@ window.PHX_PERMITS = {
       "parcel": "144-44-005B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.5008716,
+      "lng": -112.1697463
     },
     {
       "address": "2802 E OLD TOWER RD",
@@ -2902,7 +3287,9 @@ window.PHX_PERMITS = {
       "parcel": "121-48-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 380
+      "totalFees": 380,
+      "lat": 33.425025,
+      "lng": -112.0208218
     },
     {
       "address": "450 W INDIAN SCHOOL RD",
@@ -2917,7 +3304,9 @@ window.PHX_PERMITS = {
       "parcel": "155-32-110",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 5653
+      "totalFees": 5653,
+      "lat": 33.4951274,
+      "lng": -112.0799451
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2932,7 +3321,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 4500.8
+      "totalFees": 4500.8,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2947,7 +3338,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 5626
+      "totalFees": 5626,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -2962,7 +3355,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 4248.8
+      "totalFees": 4248.8,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32400 N 51ST AVE",
@@ -2977,7 +3372,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.7809525,
+      "lng": -112.1744924
     },
     {
       "address": "4445 N 24TH ST",
@@ -2992,7 +3389,9 @@ window.PHX_PERMITS = {
       "parcel": "163-07-092A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 13080
+      "totalFees": 13080,
+      "lat": 33.5016934,
+      "lng": -112.0299402
     },
     {
       "address": "10505 W BROADWAY RD",
@@ -3007,7 +3406,9 @@ window.PHX_PERMITS = {
       "parcel": "101-39-008H",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3911
+      "totalFees": 3911,
+      "lat": 33.4062959,
+      "lng": -112.2886198
     },
     {
       "address": "1815 W PARSONS RD",
@@ -3022,7 +3423,9 @@ window.PHX_PERMITS = {
       "parcel": "210-10-033",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.7182429,
+      "lng": -112.0983322
     },
     {
       "address": "1236 N 55TH AVE",
@@ -3037,7 +3440,9 @@ window.PHX_PERMITS = {
       "parcel": "103-27-021D",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.4609296,
+      "lng": -112.177815
     },
     {
       "address": "1236 N 55TH AVE",
@@ -3052,7 +3457,9 @@ window.PHX_PERMITS = {
       "parcel": "103-27-021D",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.4609296,
+      "lng": -112.177815
     },
     {
       "address": "4525 N 43RD AVE",
@@ -3067,7 +3474,9 @@ window.PHX_PERMITS = {
       "parcel": "107-02-060H",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 4528
+      "totalFees": 4528,
+      "lat": 33.5023325,
+      "lng": -112.1514988
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3082,7 +3491,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3521.6
+      "totalFees": 3521.6,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3097,7 +3508,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3442.4
+      "totalFees": 3442.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3112,7 +3525,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 4303
+      "totalFees": 4303,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "777 N CENTRAL AVE",
@@ -3127,7 +3542,9 @@ window.PHX_PERMITS = {
       "parcel": "111-43-150",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 4240
+      "totalFees": 4240,
+      "lat": 33.4563417,
+      "lng": -112.0737229
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3142,7 +3559,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3190.4
+      "totalFees": 3190.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3157,7 +3576,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3988
+      "totalFees": 3988,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3172,7 +3593,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3176
+      "totalFees": 3176,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "2844 W DEER VALLEY DR",
@@ -3187,7 +3610,9 @@ window.PHX_PERMITS = {
       "parcel": "206-04-073A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3853
+      "totalFees": 3853,
+      "lat": 33.6654957,
+      "lng": -112.1116395
     },
     {
       "address": "32200 N 43RD AVE",
@@ -3202,7 +3627,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3082.4
+      "totalFees": 3082.4,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "32200 N 43RD AVE",
@@ -3217,7 +3644,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3853
+      "totalFees": 3853,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "15425 S 48TH ST",
@@ -3232,7 +3661,9 @@ window.PHX_PERMITS = {
       "parcel": "301-84-724",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3709
+      "totalFees": 3709,
+      "lat": 33.3068746,
+      "lng": -111.9798757
     },
     {
       "address": "4 W CAMELBACK RD",
@@ -3247,7 +3678,9 @@ window.PHX_PERMITS = {
       "parcel": "162-23-110",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3628
+      "totalFees": 3628,
+      "lat": 33.509489,
+      "lng": -112.0742853
     },
     {
       "address": "4 W CAMELBACK RD",
@@ -3262,7 +3695,9 @@ window.PHX_PERMITS = {
       "parcel": "162-23-110",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3628
+      "totalFees": 3628,
+      "lat": 33.509489,
+      "lng": -112.0742853
     },
     {
       "address": "13637 N TATUM BLVD",
@@ -3277,7 +3712,9 @@ window.PHX_PERMITS = {
       "parcel": "167-05-001S",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.610986,
+      "lng": -111.9775233
     },
     {
       "address": "32200 N 43RD AVE",
@@ -3292,7 +3729,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3403
+      "totalFees": 3403,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "32200 N 43RD AVE",
@@ -3307,7 +3746,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3385
+      "totalFees": 3385,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3322,7 +3763,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3214
+      "totalFees": 3214,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32200 N 43RD AVE",
@@ -3337,7 +3780,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2556.8
+      "totalFees": 2556.8,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "20940 N TATUM BLVD",
@@ -3352,7 +3797,9 @@ window.PHX_PERMITS = {
       "parcel": "212-38-001N",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.676143,
+      "lng": -111.979197
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3367,7 +3814,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2499.2
+      "totalFees": 2499.2,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3382,7 +3831,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3124
+      "totalFees": 3124,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3397,7 +3848,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2499.2
+      "totalFees": 2499.2,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3412,7 +3865,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2384
+      "totalFees": 2384,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3427,7 +3882,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2980
+      "totalFees": 2980,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "7030 E GREENWAY PKWY",
@@ -3442,7 +3899,9 @@ window.PHX_PERMITS = {
       "parcel": "215-42-371C",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 380
+      "totalFees": 380,
+      "lat": 33.6229012,
+      "lng": -111.9323054
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3457,7 +3916,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2362.4
+      "totalFees": 2362.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "26000 N NORTERRA PKWY",
@@ -3472,7 +3933,9 @@ window.PHX_PERMITS = {
       "parcel": "210-04-751",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3325
+      "totalFees": 3325,
+      "lat": 33.7240593,
+      "lng": -112.1137027
     },
     {
       "address": "26000 N NORTERRA PKWY",
@@ -3487,7 +3950,9 @@ window.PHX_PERMITS = {
       "parcel": "210-04-751",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3325
+      "totalFees": 3325,
+      "lat": 33.7240593,
+      "lng": -112.1137027
     },
     {
       "address": "26000 N NORTERRA PKWY",
@@ -3502,7 +3967,9 @@ window.PHX_PERMITS = {
       "parcel": "210-04-751",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3136
+      "totalFees": 3136,
+      "lat": 33.7240593,
+      "lng": -112.1137027
     },
     {
       "address": "2425 W UTOPIA RD",
@@ -3517,7 +3984,9 @@ window.PHX_PERMITS = {
       "parcel": "209-15-011",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2683
+      "totalFees": 2683,
+      "lat": 33.6606913,
+      "lng": -112.110818
     },
     {
       "address": "32200 N 43RD AVE",
@@ -3532,7 +4001,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2413
+      "totalFees": 2413,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "32200 N 43RD AVE",
@@ -3547,7 +4018,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2161
+      "totalFees": 2161,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "7318 W LYNWOOD ST",
@@ -3562,7 +4035,9 @@ window.PHX_PERMITS = {
       "parcel": "102-41-299C",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1468
+      "totalFees": 1468,
+      "lat": 33.4648035,
+      "lng": -112.2171235
     },
     {
       "address": "125 N 53RD AVE",
@@ -3577,7 +4052,9 @@ window.PHX_PERMITS = {
       "parcel": "104-03-007E",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2053
+      "totalFees": 2053,
+      "lat": 33.4511844,
+      "lng": -112.1761262
     },
     {
       "address": "210 S 55TH AVE",
@@ -3592,7 +4069,9 @@ window.PHX_PERMITS = {
       "parcel": "104-04-004Z",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2053
+      "totalFees": 2053,
+      "lat": 33.4453009,
+      "lng": -112.1779498
     },
     {
       "address": "2502 E CAMELBACK RD",
@@ -3607,7 +4086,9 @@ window.PHX_PERMITS = {
       "parcel": "164-14-001Y",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 190
+      "totalFees": 190,
+      "lat": 33.5102813,
+      "lng": -112.027727
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3622,7 +4103,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2053
+      "totalFees": 2053,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "1248 E BROADWAY RD",
@@ -3637,7 +4120,9 @@ window.PHX_PERMITS = {
       "parcel": "113-25-017",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2053
+      "totalFees": 2053,
+      "lat": 33.4068342,
+      "lng": -112.0542245
     },
     {
       "address": "1515 N 44TH ST",
@@ -3652,7 +4137,9 @@ window.PHX_PERMITS = {
       "parcel": "125-17-005A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2035
+      "totalFees": 2035,
+      "lat": 33.4646845,
+      "lng": -111.9862924
     },
     {
       "address": "1940 E VILLA ST",
@@ -3667,7 +4154,9 @@ window.PHX_PERMITS = {
       "parcel": "116-11-003",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2008
+      "totalFees": 2008,
+      "lat": 33.4564357,
+      "lng": -112.0399398
     },
     {
       "address": "24 W CAMELBACK RD",
@@ -3682,7 +4171,9 @@ window.PHX_PERMITS = {
       "parcel": "162-23-037",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1891
+      "totalFees": 1891,
+      "lat": 33.5097263,
+      "lng": -112.075538
     },
     {
       "address": "9770 W INDIAN SCHOOL RD",
@@ -3697,7 +4188,9 @@ window.PHX_PERMITS = {
       "parcel": "102-18-993",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1828
+      "totalFees": 1828,
+      "lat": 33.4944416,
+      "lng": -112.2703303
     },
     {
       "address": "3906 E RAY RD",
@@ -3712,7 +4205,9 @@ window.PHX_PERMITS = {
       "parcel": "306-04-114",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1828
+      "totalFees": 1828,
+      "lat": 33.3174308,
+      "lng": -112.0013137
     },
     {
       "address": "32200 N 43RD AVE",
@@ -3727,7 +4222,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1810
+      "totalFees": 1810,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "32200 N 43RD AVE",
@@ -3742,7 +4239,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1810
+      "totalFees": 1810,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "7102 W ROOSEVELT ST",
@@ -3757,7 +4256,9 @@ window.PHX_PERMITS = {
       "parcel": "102-41-008B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1300
+      "totalFees": 1300,
+      "lat": 33.4597923,
+      "lng": -112.2127542
     },
     {
       "address": "32200 N 43RD AVE",
@@ -3772,7 +4273,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "4250 W BASELINE RD",
@@ -3787,7 +4290,9 @@ window.PHX_PERMITS = {
       "parcel": "105-89-954",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1531
+      "totalFees": 1531,
+      "lat": 33.378005,
+      "lng": -112.1505648
     },
     {
       "address": "32200 N 43RD AVE",
@@ -3802,7 +4307,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1138.4
+      "totalFees": 1138.4,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "3855 N 75TH AVE",
@@ -3817,7 +4324,9 @@ window.PHX_PERMITS = {
       "parcel": "102-22-763",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1378
+      "totalFees": 1378,
+      "lat": 33.4923867,
+      "lng": -112.2200909
     },
     {
       "address": "32200 N 43RD AVE",
@@ -3832,7 +4341,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1102.4
+      "totalFees": 1102.4,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "32400 N 51ST AVE",
@@ -3847,7 +4358,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1297
+      "totalFees": 1297,
+      "lat": 33.7809525,
+      "lng": -112.1744924
     },
     {
       "address": "300 E JESSE OWENS PKWY",
@@ -3862,7 +4375,9 @@ window.PHX_PERMITS = {
       "parcel": "114-16-001E",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.3810116,
+      "lng": -112.0698257
     },
     {
       "address": "3967 E CAMELBACK RD",
@@ -3877,7 +4392,9 @@ window.PHX_PERMITS = {
       "parcel": "170-17-053B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1135
+      "totalFees": 1135,
+      "lat": 33.5097798,
+      "lng": -111.9960192
     },
     {
       "address": "3633 E THUNDERBIRD RD",
@@ -3892,7 +4409,9 @@ window.PHX_PERMITS = {
       "parcel": "166-01-006C",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.612619,
+      "lng": -112.0037077
     },
     {
       "address": "32200 N 43RD AVE",
@@ -3907,7 +4426,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1081
+      "totalFees": 1081,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "615 W PIERSON ST",
@@ -3922,7 +4443,9 @@ window.PHX_PERMITS = {
       "parcel": "155-35-166",
       "zoning": "PRIVATE",
       "units": "78",
-      "totalFees": 1063
+      "totalFees": 1063,
+      "lat": 33.5074472,
+      "lng": -112.0814765
     },
     {
       "address": "16875 S 20TH DR",
@@ -3937,7 +4460,9 @@ window.PHX_PERMITS = {
       "parcel": "300-96-711A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1027
+      "totalFees": 1027,
+      "lat": 33.3755627,
+      "lng": -112.1028934
     },
     {
       "address": "32200 N 43RD AVE",
@@ -3952,7 +4477,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 814.4
+      "totalFees": 814.4,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -3967,7 +4494,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 814.4
+      "totalFees": 814.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "711 E MINNEZONA AVE",
@@ -3982,7 +4511,9 @@ window.PHX_PERMITS = {
       "parcel": "155-20-044B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 7861
+      "totalFees": 7861,
+      "lat": 33.5027869,
+      "lng": -112.0648002
     },
     {
       "address": "1224 S 7TH AVE",
@@ -3997,7 +4528,9 @@ window.PHX_PERMITS = {
       "parcel": "105-01-062B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 928
+      "totalFees": 928,
+      "lat": 33.4358487,
+      "lng": -112.082614
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -4012,7 +4545,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 742.4
+      "totalFees": 742.4,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "822 E UNION HILLS DR",
@@ -4027,7 +4562,9 @@ window.PHX_PERMITS = {
       "parcel": "213-25-001S",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 928
+      "totalFees": 928,
+      "lat": 33.6561443,
+      "lng": -112.0622359
     },
     {
       "address": "32200 N 43RD AVE",
@@ -4042,7 +4579,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 735.2
+      "totalFees": 735.2,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "32200 N 43RD AVE",
@@ -4057,7 +4596,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 919
+      "totalFees": 919,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "10505 W BROADWAY RD",
@@ -4072,7 +4613,9 @@ window.PHX_PERMITS = {
       "parcel": "101-39-569",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 984
+      "totalFees": 984,
+      "lat": 33.4062959,
+      "lng": -112.2886198
     },
     {
       "address": "11601 N 19TH AVE",
@@ -4087,7 +4630,9 @@ window.PHX_PERMITS = {
       "parcel": "159-06-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.5913954,
+      "lng": -112.0992719
     },
     {
       "address": "11601 N 19TH AVE",
@@ -4102,7 +4647,9 @@ window.PHX_PERMITS = {
       "parcel": "159-06-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 802
+      "totalFees": 802,
+      "lat": 33.5913954,
+      "lng": -112.0992719
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -4117,7 +4664,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 627.2
+      "totalFees": 627.2,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -4132,7 +4681,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1568
+      "totalFees": 1568,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32200 N 43RD AVE",
@@ -4147,7 +4698,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 748
+      "totalFees": 748,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "9330 W THOMAS RD",
@@ -4162,7 +4715,9 @@ window.PHX_PERMITS = {
       "parcel": "102-26-035",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 586
+      "totalFees": 586,
+      "lat": 33.4795474,
+      "lng": -112.2651237
     },
     {
       "address": "25455 N 13TH AVE",
@@ -4177,7 +4732,9 @@ window.PHX_PERMITS = {
       "parcel": "210-09-029A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 703
+      "totalFees": 703,
+      "lat": 33.560602,
+      "lng": -112.0896609
     },
     {
       "address": "3601 N 27TH ST",
@@ -4192,7 +4749,9 @@ window.PHX_PERMITS = {
       "parcel": "119-06-056G",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 551
+      "totalFees": 551,
+      "lat": 33.4902536,
+      "lng": -112.0225497
     },
     {
       "address": "32200 N 43RD AVE",
@@ -4207,7 +4766,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 703
+      "totalFees": 703,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "5309 E VAN BUREN ST",
@@ -4222,7 +4783,9 @@ window.PHX_PERMITS = {
       "parcel": "124-13-020",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 551
+      "totalFees": 551,
+      "lat": 33.4508592,
+      "lng": -111.9653266
     },
     {
       "address": "2396 E CAMELBACK RD",
@@ -4237,7 +4800,9 @@ window.PHX_PERMITS = {
       "parcel": "164-60-010L",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 703
+      "totalFees": 703,
+      "lat": 33.5094061,
+      "lng": -112.0304118
     },
     {
       "address": "18500 N 64TH ST",
@@ -4252,7 +4817,9 @@ window.PHX_PERMITS = {
       "parcel": "215-04-717",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.6366649,
+      "lng": -111.9428975
     },
     {
       "address": "18500 N 64TH ST",
@@ -4267,7 +4834,9 @@ window.PHX_PERMITS = {
       "parcel": "215-04-717",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.6366649,
+      "lng": -111.9428975
     },
     {
       "address": "18500 N 64TH ST",
@@ -4282,7 +4851,9 @@ window.PHX_PERMITS = {
       "parcel": "215-04-717",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.6366649,
+      "lng": -111.9428975
     },
     {
       "address": "18500 N 64TH ST",
@@ -4297,7 +4868,9 @@ window.PHX_PERMITS = {
       "parcel": "215-04-717",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.6366649,
+      "lng": -111.9428975
     },
     {
       "address": "18500 N 64TH ST",
@@ -4312,7 +4885,9 @@ window.PHX_PERMITS = {
       "parcel": "215-04-717",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.6366649,
+      "lng": -111.9428975
     },
     {
       "address": "18500 N 64TH ST",
@@ -4327,7 +4902,9 @@ window.PHX_PERMITS = {
       "parcel": "215-04-717",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.6366649,
+      "lng": -111.9428975
     },
     {
       "address": "18500 N 64TH ST",
@@ -4342,7 +4919,9 @@ window.PHX_PERMITS = {
       "parcel": "215-04-717",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.6366649,
+      "lng": -111.9428975
     },
     {
       "address": "18500 N 64TH ST",
@@ -4357,7 +4936,9 @@ window.PHX_PERMITS = {
       "parcel": "215-04-717",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.6366649,
+      "lng": -111.9428975
     },
     {
       "address": "18500 N 64TH ST",
@@ -4372,7 +4953,9 @@ window.PHX_PERMITS = {
       "parcel": "215-04-717",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.6366649,
+      "lng": -111.9428975
     },
     {
       "address": "32200 N 43RD AVE",
@@ -4387,7 +4970,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 683
+      "totalFees": 683,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "32200 N 43RD AVE",
@@ -4402,7 +4987,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 683
+      "totalFees": 683,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "3232 S 48TH ST",
@@ -4417,7 +5004,9 @@ window.PHX_PERMITS = {
       "parcel": "124-53-042",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 663
+      "totalFees": 663,
+      "lat": 33.4174439,
+      "lng": -111.9805146
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -4432,7 +5021,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 653
+      "totalFees": 653,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "2825 N 48TH ST",
@@ -4447,7 +5038,9 @@ window.PHX_PERMITS = {
       "parcel": "126-14-026",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 479
+      "totalFees": 479,
+      "lat": 33.4793778,
+      "lng": -111.9779366
     },
     {
       "address": "5309 E VAN BUREN ST",
@@ -4462,7 +5055,9 @@ window.PHX_PERMITS = {
       "parcel": "124-13-020",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 479
+      "totalFees": 479,
+      "lat": 33.4508592,
+      "lng": -111.9653266
     },
     {
       "address": "16875 S 20TH DR",
@@ -4477,7 +5072,9 @@ window.PHX_PERMITS = {
       "parcel": "300-96-711A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 463
+      "totalFees": 463,
+      "lat": 33.3755627,
+      "lng": -112.1028934
     },
     {
       "address": "2081 W SATINWOOD DR",
@@ -4492,7 +5089,9 @@ window.PHX_PERMITS = {
       "parcel": "300-96-711A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 463
+      "totalFees": 463,
+      "lat": 33.2943169,
+      "lng": -112.0953529
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -4507,7 +5106,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 573
+      "totalFees": 573,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -4522,7 +5123,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 573
+      "totalFees": 573,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "8720 W INDIAN SCHOOL RD",
@@ -4537,7 +5140,9 @@ window.PHX_PERMITS = {
       "parcel": "102-19-007Z",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 563
+      "totalFees": 563,
+      "lat": 33.4953527,
+      "lng": -112.2478184
     },
     {
       "address": "32200 N 43RD AVE",
@@ -4552,7 +5157,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 553
+      "totalFees": 553,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "31950 N 51ST AVE",
@@ -4567,7 +5174,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-006",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 533
+      "totalFees": 533,
+      "lat": 33.7981028,
+      "lng": -112.1696266
     },
     {
       "address": "323 N 4TH AVE",
@@ -4582,7 +5191,9 @@ window.PHX_PERMITS = {
       "parcel": "111-41-040",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.4524188,
+      "lng": -112.0786758
     },
     {
       "address": "2309 W ELLIS ST",
@@ -4597,7 +5208,9 @@ window.PHX_PERMITS = {
       "parcel": "105-86-014C",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 513
+      "totalFees": 513,
+      "lat": 33.379164,
+      "lng": -112.2210351
     },
     {
       "address": "6632 S 22ND ST",
@@ -4612,7 +5225,9 @@ window.PHX_PERMITS = {
       "parcel": "122-90-426A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 503
+      "totalFees": 503,
+      "lat": 33.386194,
+      "lng": -112.0347225
     },
     {
       "address": "6180 W ENCANTO BLVD",
@@ -4627,7 +5242,9 @@ window.PHX_PERMITS = {
       "parcel": "103-11-256",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.473288,
+      "lng": -112.191944
     },
     {
       "address": "33027 N CAVE CREEK RD",
@@ -4642,7 +5259,9 @@ window.PHX_PERMITS = {
       "parcel": "211-46-001Y",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.7851572,
+      "lng": -111.9716057
     },
     {
       "address": "4900 E DEER VALLEY DR",
@@ -4657,7 +5276,9 @@ window.PHX_PERMITS = {
       "parcel": "212-32-993",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "32200 N 43RD AVE",
@@ -4672,7 +5293,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 503
+      "totalFees": 503,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "7100 S 59TH AVE",
@@ -4687,7 +5310,9 @@ window.PHX_PERMITS = {
       "parcel": "104-86-007H",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 483
+      "totalFees": 483,
+      "lat": 33.3752524,
+      "lng": -112.1847822
     },
     {
       "address": "3622 N 34TH AVE",
@@ -4702,7 +5327,9 @@ window.PHX_PERMITS = {
       "parcel": "108-02-043A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 351
+      "totalFees": 351,
+      "lat": 33.4905362,
+      "lng": -112.1321207
     },
     {
       "address": "3443 S CENTRAL AVE",
@@ -4717,7 +5344,9 @@ window.PHX_PERMITS = {
       "parcel": "113-09-079C",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.4156938,
+      "lng": -112.0734174
     },
     {
       "address": "7677 N 16TH ST",
@@ -4732,7 +5361,9 @@ window.PHX_PERMITS = {
       "parcel": "164-22-122",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 453
+      "totalFees": 453,
+      "lat": 33.5480228,
+      "lng": -112.046227
     },
     {
       "address": "13010 N 48TH PL",
@@ -4747,7 +5378,9 @@ window.PHX_PERMITS = {
       "parcel": "167-05-511",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 453
+      "totalFees": 453,
+      "lat": 33.6046296,
+      "lng": -111.9758985
     },
     {
       "address": "1910 W LIBERTY LN",
@@ -4762,7 +5395,9 @@ window.PHX_PERMITS = {
       "parcel": "300-99-203",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.2947751,
+      "lng": -112.1045542
     },
     {
       "address": "1257 W PIERCE ST",
@@ -4777,7 +5412,9 @@ window.PHX_PERMITS = {
       "parcel": "111-27-148A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.4553506,
+      "lng": -112.0906942
     },
     {
       "address": "4247 N 32ND ST",
@@ -4792,7 +5429,9 @@ window.PHX_PERMITS = {
       "parcel": "170-29-079C",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.4985762,
+      "lng": -112.0124054
     },
     {
       "address": "3845 S 26TH ST",
@@ -4807,7 +5446,9 @@ window.PHX_PERMITS = {
       "parcel": "122-22-008",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.4116232,
+      "lng": -112.0249041
     },
     {
       "address": "32200 N 43RD AVE",
@@ -4822,7 +5463,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 403
+      "totalFees": 403,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "32200 N 43RD AVE",
@@ -4837,7 +5480,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 403
+      "totalFees": 403,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "2525 W TOWNLEY AVE",
@@ -4852,7 +5497,9 @@ window.PHX_PERMITS = {
       "parcel": "158-01-015A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.5656069,
+      "lng": -112.1129606
     },
     {
       "address": "100 N 3RD ST",
@@ -4867,7 +5514,9 @@ window.PHX_PERMITS = {
       "parcel": "112-29-094",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.449322,
+      "lng": -112.0700505
     },
     {
       "address": "2828 W THUNDERBIRD RD",
@@ -4882,7 +5531,9 @@ window.PHX_PERMITS = {
       "parcel": "207-07-757B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 393
+      "totalFees": 393,
+      "lat": 33.6112228,
+      "lng": -112.1204601
     },
     {
       "address": "2902 N 63RD AVE",
@@ -4897,7 +5548,9 @@ window.PHX_PERMITS = {
       "parcel": "103-49-152",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 383
+      "totalFees": 383,
+      "lat": 33.4806173,
+      "lng": -112.1951746
     },
     {
       "address": "322 W TAMARISK ST",
@@ -4912,7 +5565,9 @@ window.PHX_PERMITS = {
       "parcel": "113-29-018",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.4043164,
+      "lng": -112.0949402
     },
     {
       "address": "1025 E POLK ST",
@@ -4927,7 +5582,9 @@ window.PHX_PERMITS = {
       "parcel": "116-57-008",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.4526166,
+      "lng": -112.0594328
     },
     {
       "address": "6700 W LATHAM ST",
@@ -4942,7 +5599,9 @@ window.PHX_PERMITS = {
       "parcel": "102-41-013X",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 383
+      "totalFees": 383,
+      "lat": 33.4611457,
+      "lng": -112.2045445
     },
     {
       "address": "2380 W MINTON ST",
@@ -4957,7 +5616,9 @@ window.PHX_PERMITS = {
       "parcel": "105-86-014E",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 383
+      "totalFees": 383,
+      "lat": 33.380765,
+      "lng": -112.0853571
     },
     {
       "address": "1002 S 56TH AVE",
@@ -4972,7 +5633,9 @@ window.PHX_PERMITS = {
       "parcel": "104-19-012",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 363
+      "totalFees": 363,
+      "lat": 33.4389562,
+      "lng": -112.1808
     },
     {
       "address": "32200 N 43RD AVE",
@@ -4987,7 +5650,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 363
+      "totalFees": 363,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "4416 S 32ND ST",
@@ -5002,7 +5667,9 @@ window.PHX_PERMITS = {
       "parcel": "122-59-009",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.4059266,
+      "lng": -112.0131582
     },
     {
       "address": "32200 N 43RD AVE",
@@ -5017,7 +5684,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 743
+      "totalFees": 743,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "3750 E DYNAMITE BLVD",
@@ -5032,7 +5701,9 @@ window.PHX_PERMITS = {
       "parcel": "211-85-003",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.7416183,
+      "lng": -111.9960075
     },
     {
       "address": "12835 N 32ND ST",
@@ -5047,7 +5718,9 @@ window.PHX_PERMITS = {
       "parcel": "166-01-010D",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.6036468,
+      "lng": -112.0125669
     },
     {
       "address": "2310 W DARROW ST",
@@ -5062,7 +5735,9 @@ window.PHX_PERMITS = {
       "parcel": "105-86-014C",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 343
+      "totalFees": 343,
+      "lat": 33.3782385,
+      "lng": -112.2133621
     },
     {
       "address": "3185 E BELL RD",
@@ -5077,7 +5752,9 @@ window.PHX_PERMITS = {
       "parcel": "214-31-482",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 323
+      "totalFees": 323,
+      "lat": 33.6405143,
+      "lng": -112.0139104
     },
     {
       "address": "2115 E BETTY ELYSE LN",
@@ -5092,7 +5769,9 @@ window.PHX_PERMITS = {
       "parcel": "214-41-150",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 488
+      "totalFees": 488,
+      "lat": 33.626867,
+      "lng": -112.0382235
     },
     {
       "address": "32400 N 51ST AVE",
@@ -5107,7 +5786,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 323
+      "totalFees": 323,
+      "lat": 33.7809525,
+      "lng": -112.1744924
     },
     {
       "address": "20300 N 56TH ST",
@@ -5122,7 +5803,9 @@ window.PHX_PERMITS = {
       "parcel": "212-32-100U",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 313
+      "totalFees": 313,
+      "lat": 33.6696445,
+      "lng": -111.9598268
     },
     {
       "address": "2770 N 75TH AVE",
@@ -5137,7 +5820,9 @@ window.PHX_PERMITS = {
       "parcel": "102-38-015",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.4786998,
+      "lng": -112.2207597
     },
     {
       "address": "2770 N 75TH AVE",
@@ -5152,7 +5837,9 @@ window.PHX_PERMITS = {
       "parcel": "102-38-015",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.4786998,
+      "lng": -112.2207597
     },
     {
       "address": "2770 N 75TH AVE",
@@ -5167,7 +5854,9 @@ window.PHX_PERMITS = {
       "parcel": "102-38-015",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.4786998,
+      "lng": -112.2207597
     },
     {
       "address": "2605 N 15TH AVE",
@@ -5182,7 +5871,9 @@ window.PHX_PERMITS = {
       "parcel": "111-12-002",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.4777372,
+      "lng": -112.0912803
     },
     {
       "address": "2405 W TOWNLEY AVE",
@@ -5197,7 +5888,9 @@ window.PHX_PERMITS = {
       "parcel": "158-02-017",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.5651175,
+      "lng": -112.111015
     },
     {
       "address": "540 W MISSOURI AVE",
@@ -5212,7 +5905,9 @@ window.PHX_PERMITS = {
       "parcel": "162-29-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 303
+      "totalFees": 303,
+      "lat": 33.5169264,
+      "lng": -112.0818445
     },
     {
       "address": "420 E BELL RD",
@@ -5227,7 +5922,9 @@ window.PHX_PERMITS = {
       "parcel": "208-11-003R",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.6417611,
+      "lng": -112.0680318
     },
     {
       "address": "440 S 51ST AVE",
@@ -5242,7 +5939,9 @@ window.PHX_PERMITS = {
       "parcel": "104-20-062",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 303
+      "totalFees": 303,
+      "lat": 33.4425418,
+      "lng": -112.1692818
     },
     {
       "address": "4908 W BASELINE RD",
@@ -5257,7 +5956,9 @@ window.PHX_PERMITS = {
       "parcel": "104-89-373",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.3776452,
+      "lng": -112.1645467
     },
     {
       "address": "4908 W BASELINE RD",
@@ -5272,7 +5973,9 @@ window.PHX_PERMITS = {
       "parcel": "104-89-373",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.3776452,
+      "lng": -112.1645467
     },
     {
       "address": "4727 E THOMAS RD",
@@ -5287,7 +5990,9 @@ window.PHX_PERMITS = {
       "parcel": "126-13-094F",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 291
+      "totalFees": 291,
+      "lat": 33.4797613,
+      "lng": -111.9792257
     },
     {
       "address": "32200 N 43RD AVE",
@@ -5302,7 +6007,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 291
+      "totalFees": 291,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "1433 S 19TH AVE",
@@ -5317,7 +6024,9 @@ window.PHX_PERMITS = {
       "parcel": "105-04-036",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.4336287,
+      "lng": -112.0991906
     },
     {
       "address": "1433 S 19TH AVE",
@@ -5332,7 +6041,9 @@ window.PHX_PERMITS = {
       "parcel": "105-04-036",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.4336287,
+      "lng": -112.0991906
     },
     {
       "address": "1433 S 19TH AVE",
@@ -5347,7 +6058,9 @@ window.PHX_PERMITS = {
       "parcel": "105-04-036",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.4336287,
+      "lng": -112.0991906
     },
     {
       "address": "1433 S 19TH AVE",
@@ -5362,7 +6075,9 @@ window.PHX_PERMITS = {
       "parcel": "105-04-036",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.4336287,
+      "lng": -112.0991906
     },
     {
       "address": "32200 N 43RD AVE",
@@ -5377,7 +6092,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 474
+      "totalFees": 474,
+      "lat": 33.9136705,
+      "lng": -112.1503933
     },
     {
       "address": "5161 W POLK ST",
@@ -5392,7 +6109,9 @@ window.PHX_PERMITS = {
       "parcel": "103-29-033",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 279
+      "totalFees": 279,
+      "lat": 33.4530583,
+      "lng": -112.1709814
     },
     {
       "address": "5550 E CROWN PL",
@@ -5407,7 +6126,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "5550 E CROWN PL",
@@ -5422,7 +6143,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "5550 E CROWN PL",
@@ -5437,7 +6160,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "5550 E CROWN PL",
@@ -5452,7 +6177,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "5550 E CROWN PL",
@@ -5467,7 +6194,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "5550 E CROWN PL",
@@ -5482,7 +6211,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "5550 E CROWN PL",
@@ -5497,7 +6228,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "5550 E CROWN PL",
@@ -5512,7 +6245,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "5550 E CROWN PL",
@@ -5527,7 +6262,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "5550 E CROWN PL",
@@ -5542,7 +6279,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "5550 E CROWN PL",
@@ -5557,7 +6296,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "5550 E CROWN PL",
@@ -5572,7 +6313,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "5550 E CROWN PL",
@@ -5587,7 +6330,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "5550 E CROWN PL",
@@ -5602,7 +6347,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "5550 E CROWN PL",
@@ -5617,7 +6364,9 @@ window.PHX_PERMITS = {
       "parcel": "212-35-573B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.6746294,
+      "lng": -111.9626924
     },
     {
       "address": "18500 N ALLIED WAY",
@@ -5632,7 +6381,9 @@ window.PHX_PERMITS = {
       "parcel": "215-09-021A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.654338,
+      "lng": -111.9301409
     },
     {
       "address": "4445 N 24TH ST",
@@ -5647,7 +6398,9 @@ window.PHX_PERMITS = {
       "parcel": "163-07-092A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 396
+      "totalFees": 396,
+      "lat": 33.5016934,
+      "lng": -112.0299402
     },
     {
       "address": "12045 N 32ND ST",
@@ -5662,7 +6415,9 @@ window.PHX_PERMITS = {
       "parcel": "166-33-001L",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.5966742,
+      "lng": -112.0127153
     },
     {
       "address": "12045 N 32ND ST",
@@ -5677,7 +6432,9 @@ window.PHX_PERMITS = {
       "parcel": "166-33-001L",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.5966742,
+      "lng": -112.0127153
     },
     {
       "address": "3050 S 35TH ST",
@@ -5692,7 +6449,9 @@ window.PHX_PERMITS = {
       "parcel": "122-03-119",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.4194108,
+      "lng": -112.0057358
     },
     {
       "address": "3050 S 35TH ST",
@@ -5707,7 +6466,9 @@ window.PHX_PERMITS = {
       "parcel": "122-03-119",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.4194108,
+      "lng": -112.0057358
     },
     {
       "address": "2605 W CAREFREE HWY",
@@ -5722,7 +6483,9 @@ window.PHX_PERMITS = {
       "parcel": "204-01-926",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 243
+      "totalFees": 243,
+      "lat": 33.7978825,
+      "lng": -112.115824
     },
     {
       "address": "6601 E KINGS AVE",
@@ -5737,7 +6500,9 @@ window.PHX_PERMITS = {
       "parcel": "215-40-175",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.6363212,
+      "lng": -111.9383262
     },
     {
       "address": "6765 E BEVERLY LN",
@@ -5752,7 +6517,9 @@ window.PHX_PERMITS = {
       "parcel": "215-40-275",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.6336901,
+      "lng": -111.9344473
     },
     {
       "address": "802 E VOGEL AVE",
@@ -5767,7 +6534,9 @@ window.PHX_PERMITS = {
       "parcel": "159-37-085B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.5736955,
+      "lng": -112.0625952
     },
     {
       "address": "1440 E GLENROSA AVE",
@@ -5782,7 +6551,9 @@ window.PHX_PERMITS = {
       "parcel": "155-03-001A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.4984756,
+      "lng": -112.0509648
     },
     {
       "address": "16710 S 21ST DR",
@@ -5797,7 +6568,9 @@ window.PHX_PERMITS = {
       "parcel": "300-96-983",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 231
+      "totalFees": 231,
+      "lat": 33.3854013,
+      "lng": -112.1039375
     },
     {
       "address": "11410 N CAVE CREEK RD",
@@ -5812,7 +6585,9 @@ window.PHX_PERMITS = {
       "parcel": "166-21-041",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 231
+      "totalFees": 231,
+      "lat": 33.5900413,
+      "lng": -112.0465239
     },
     {
       "address": "21043 N CAVE CREEK RD 1",
@@ -5827,7 +6602,9 @@ window.PHX_PERMITS = {
       "parcel": "213-10-025",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "21043 N CAVE CREEK RD 1",
@@ -5842,7 +6619,9 @@ window.PHX_PERMITS = {
       "parcel": "213-10-025",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "7451 W INDIAN SCHOOL RD",
@@ -5857,7 +6636,9 @@ window.PHX_PERMITS = {
       "parcel": "102-85-576",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.4942716,
+      "lng": -112.2202779
     },
     {
       "address": "7451 W INDIAN SCHOOL RD",
@@ -5872,7 +6653,9 @@ window.PHX_PERMITS = {
       "parcel": "102-85-576",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.4942716,
+      "lng": -112.2202779
     },
     {
       "address": "3134 W CAREFREE HWY",
@@ -5887,7 +6670,9 @@ window.PHX_PERMITS = {
       "parcel": "203-26-935",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 0
+      "totalFees": 0,
+      "lat": 33.8000248,
+      "lng": -112.1282229
     },
     {
       "address": "8146 W INDIAN SCHOOL RD",
@@ -5902,7 +6687,9 @@ window.PHX_PERMITS = {
       "parcel": "102-20-942",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.4944608,
+      "lng": -112.2342525
     },
     {
       "address": "10621 N 35TH AVE",
@@ -5917,7 +6704,9 @@ window.PHX_PERMITS = {
       "parcel": "149-18-002L",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.5827139,
+      "lng": -112.1337291
     },
     {
       "address": "10621 N 35TH AVE",
@@ -5932,7 +6721,9 @@ window.PHX_PERMITS = {
       "parcel": "149-18-002L",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.5827139,
+      "lng": -112.1337291
     },
     {
       "address": "10621 N 35TH AVE",
@@ -5947,7 +6738,9 @@ window.PHX_PERMITS = {
       "parcel": "149-18-002L",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.5827139,
+      "lng": -112.1337291
     },
     {
       "address": "8146 W INDIAN SCHOOL RD",
@@ -5962,7 +6755,9 @@ window.PHX_PERMITS = {
       "parcel": "102-20-942",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.4944608,
+      "lng": -112.2342525
     },
     {
       "address": "8146 W INDIAN SCHOOL RD",
@@ -5977,7 +6772,9 @@ window.PHX_PERMITS = {
       "parcel": "102-20-942",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.4944608,
+      "lng": -112.2342525
     },
     {
       "address": "15054 N SCOTTSDALE RD",
@@ -5992,7 +6789,9 @@ window.PHX_PERMITS = {
       "parcel": "215-42-368",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 195
+      "totalFees": 195,
+      "lat": 33.5988053,
+      "lng": -111.9261172
     },
     {
       "address": "3510 W PEORIA AVE",
@@ -6007,7 +6806,9 @@ window.PHX_PERMITS = {
       "parcel": "149-32-666E",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.5823105,
+      "lng": -112.1351379
     },
     {
       "address": "3510 W PEORIA AVE",
@@ -6022,7 +6823,9 @@ window.PHX_PERMITS = {
       "parcel": "149-32-666E",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.5823105,
+      "lng": -112.1351379
     },
     {
       "address": "3510 W PEORIA AVE",
@@ -6037,7 +6840,9 @@ window.PHX_PERMITS = {
       "parcel": "149-32-666E",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.5823105,
+      "lng": -112.1351379
     },
     {
       "address": "3510 W PEORIA AVE",
@@ -6052,7 +6857,9 @@ window.PHX_PERMITS = {
       "parcel": "149-32-666E",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.5823105,
+      "lng": -112.1351379
     },
     {
       "address": "3510 W PEORIA AVE",
@@ -6067,7 +6874,9 @@ window.PHX_PERMITS = {
       "parcel": "149-32-666E",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.5823105,
+      "lng": -112.1351379
     },
     {
       "address": "3510 W PEORIA AVE",
@@ -6082,7 +6891,9 @@ window.PHX_PERMITS = {
       "parcel": "149-32-666E",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.5823105,
+      "lng": -112.1351379
     },
     {
       "address": "7677 N 16TH ST",
@@ -6097,7 +6908,9 @@ window.PHX_PERMITS = {
       "parcel": "164-22-122",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 580
+      "totalFees": 580,
+      "lat": 33.5480228,
+      "lng": -112.046227
     },
     {
       "address": "15054 N SCOTTSDALE RD",
@@ -6112,7 +6925,9 @@ window.PHX_PERMITS = {
       "parcel": "215-42-368",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.5988053,
+      "lng": -111.9261172
     },
     {
       "address": "15054 N SCOTTSDALE RD",
@@ -6127,7 +6942,9 @@ window.PHX_PERMITS = {
       "parcel": "215-42-368",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.5988053,
+      "lng": -111.9261172
     },
     {
       "address": "15054 N SCOTTSDALE RD",
@@ -6142,7 +6959,9 @@ window.PHX_PERMITS = {
       "parcel": "215-42-368",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.5988053,
+      "lng": -111.9261172
     },
     {
       "address": "355 N CENTRAL AVE",
@@ -6157,7 +6976,9 @@ window.PHX_PERMITS = {
       "parcel": "111-45-188B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.4521851,
+      "lng": -112.0734009
     },
     {
       "address": "1117 N 3RD ST",
@@ -6172,7 +6993,9 @@ window.PHX_PERMITS = {
       "parcel": "111-38-103",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 195
+      "totalFees": 195,
+      "lat": 33.4607777,
+      "lng": -112.069038
     },
     {
       "address": "119 E BASELINE RD",
@@ -6187,7 +7010,9 @@ window.PHX_PERMITS = {
       "parcel": "300-42-055",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.3773675,
+      "lng": -112.0708705
     },
     {
       "address": "119 E BASELINE RD",
@@ -6202,7 +7027,9 @@ window.PHX_PERMITS = {
       "parcel": "300-42-055",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.3773675,
+      "lng": -112.0708705
     },
     {
       "address": "119 E BASELINE RD",
@@ -6217,7 +7044,9 @@ window.PHX_PERMITS = {
       "parcel": "300-42-055",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.3773675,
+      "lng": -112.0708705
     },
     {
       "address": "119 E BASELINE RD",
@@ -6232,7 +7061,9 @@ window.PHX_PERMITS = {
       "parcel": "300-42-055",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.3773675,
+      "lng": -112.0708705
     },
     {
       "address": "32500 N 51ST AVE",
@@ -6247,7 +7078,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 402
+      "totalFees": 402,
+      "lat": 33.4490131,
+      "lng": -112.1691398
     },
     {
       "address": "2607 W BETH DR",
@@ -6262,7 +7095,9 @@ window.PHX_PERMITS = {
       "parcel": "300-17-765",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 29745
+      "totalFees": 29745,
+      "lat": 33.3644335,
+      "lng": -112.1802637
     },
     {
       "address": "5051 W CACTUS RD",
@@ -6277,7 +7112,9 @@ window.PHX_PERMITS = {
       "parcel": "148-02-003K",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 293
+      "totalFees": 293,
+      "lat": 33.5962815,
+      "lng": -112.1672779
     },
     {
       "address": "5051 W CACTUS RD",
@@ -6292,7 +7129,9 @@ window.PHX_PERMITS = {
       "parcel": "148-02-003K",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 98
+      "totalFees": 98,
+      "lat": 33.5962815,
+      "lng": -112.1672779
     },
     {
       "address": "3803 W MISSOURI AVE",
@@ -6307,7 +7146,9 @@ window.PHX_PERMITS = {
       "parcel": "145-13-003F",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 150
+      "totalFees": 150,
+      "lat": 33.516657,
+      "lng": -112.1409042
     },
     {
       "address": "26000 N NORTERRA PKWY",
@@ -6322,7 +7163,9 @@ window.PHX_PERMITS = {
       "parcel": "210-04-751",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3120
+      "totalFees": 3120,
+      "lat": 33.7240593,
+      "lng": -112.1137027
     },
     {
       "address": "26000 N NORTERRA PKWY",
@@ -6337,7 +7180,9 @@ window.PHX_PERMITS = {
       "parcel": "210-04-751",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1889.18
+      "totalFees": 1889.18,
+      "lat": 33.7240593,
+      "lng": -112.1137027
     },
     {
       "address": "26000 N NORTERRA PKWY",
@@ -6352,7 +7197,9 @@ window.PHX_PERMITS = {
       "parcel": "210-04-751",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.7240593,
+      "lng": -112.1137027
     },
     {
       "address": "2045 W HILTON AVE",
@@ -6367,7 +7214,9 @@ window.PHX_PERMITS = {
       "parcel": "105-29-004F",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1011
+      "totalFees": 1011,
+      "lat": 33.428019,
+      "lng": -112.1029987
     },
     {
       "address": "2045 W HILTON AVE",
@@ -6382,7 +7231,9 @@ window.PHX_PERMITS = {
       "parcel": "105-29-004F",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 503
+      "totalFees": 503,
+      "lat": 33.428019,
+      "lng": -112.1029987
     },
     {
       "address": "2045 W HILTON AVE",
@@ -6397,7 +7248,9 @@ window.PHX_PERMITS = {
       "parcel": "105-29-004F",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.428019,
+      "lng": -112.1029987
     },
     {
       "address": "2045 W HILTON AVE",
@@ -6412,7 +7265,9 @@ window.PHX_PERMITS = {
       "parcel": "105-29-004F",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.428019,
+      "lng": -112.1029987
     },
     {
       "address": "",
@@ -6427,7 +7282,9 @@ window.PHX_PERMITS = {
       "parcel": "",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 700
+      "totalFees": 700,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "",
@@ -6442,7 +7299,9 @@ window.PHX_PERMITS = {
       "parcel": "",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1212.38
+      "totalFees": 1212.38,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "13811 N CAVE CREEK RD",
@@ -6457,7 +7316,9 @@ window.PHX_PERMITS = {
       "parcel": "214-51-003P",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 525
+      "totalFees": 525,
+      "lat": 33.6115541,
+      "lng": -112.0355751
     },
     {
       "address": "5309 E VAN BUREN ST",
@@ -6472,7 +7333,9 @@ window.PHX_PERMITS = {
       "parcel": "124-13-020",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 988
+      "totalFees": 988,
+      "lat": 33.4508592,
+      "lng": -111.9653266
     },
     {
       "address": "27840 N 33RD AVE",
@@ -6487,7 +7350,9 @@ window.PHX_PERMITS = {
       "parcel": "205-02-027",
       "zoning": "PRIVATE",
       "units": "1",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.736627,
+      "lng": -112.130205
     },
     {
       "address": "27840 N 33RD AVE",
@@ -6502,7 +7367,9 @@ window.PHX_PERMITS = {
       "parcel": "205-02-027",
       "zoning": "PRIVATE",
       "units": "1",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.736627,
+      "lng": -112.130205
     },
     {
       "address": "5309 E VAN BUREN ST",
@@ -6517,7 +7384,9 @@ window.PHX_PERMITS = {
       "parcel": "124-13-020",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2198
+      "totalFees": 2198,
+      "lat": 33.4508592,
+      "lng": -111.9653266
     },
     {
       "address": "2355 E HIGHLAND AVE",
@@ -6532,7 +7401,9 @@ window.PHX_PERMITS = {
       "parcel": "163-21-003R",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2010
+      "totalFees": 2010,
+      "lat": 33.5056153,
+      "lng": -112.0311713
     },
     {
       "address": "20300 N 56TH ST",
@@ -6547,7 +7418,9 @@ window.PHX_PERMITS = {
       "parcel": "212-32-100U",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3049
+      "totalFees": 3049,
+      "lat": 33.6696445,
+      "lng": -111.9598268
     },
     {
       "address": "20300 N 56TH ST",
@@ -6562,7 +7435,9 @@ window.PHX_PERMITS = {
       "parcel": "212-32-100U",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.6696445,
+      "lng": -111.9598268
     },
     {
       "address": "20300 N 56TH ST",
@@ -6577,7 +7452,9 @@ window.PHX_PERMITS = {
       "parcel": "212-32-100U",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 13166
+      "totalFees": 13166,
+      "lat": 33.6696445,
+      "lng": -111.9598268
     },
     {
       "address": "3024 E WINCHCOMB DR",
@@ -6592,7 +7469,9 @@ window.PHX_PERMITS = {
       "parcel": "214-55-015B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2145
+      "totalFees": 2145,
+      "lat": 33.6161919,
+      "lng": -112.017301
     },
     {
       "address": "3024 E WINCHCOMB DR",
@@ -6607,7 +7486,9 @@ window.PHX_PERMITS = {
       "parcel": "214-55-015B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 771
+      "totalFees": 771,
+      "lat": 33.6161919,
+      "lng": -112.017301
     },
     {
       "address": "3024 E WINCHCOMB DR",
@@ -6622,7 +7503,9 @@ window.PHX_PERMITS = {
       "parcel": "214-55-015B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 371
+      "totalFees": 371,
+      "lat": 33.6161919,
+      "lng": -112.017301
     },
     {
       "address": "3024 E WINCHCOMB DR",
@@ -6637,7 +7520,9 @@ window.PHX_PERMITS = {
       "parcel": "214-55-015B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.6161919,
+      "lng": -112.017301
     },
     {
       "address": "5429 W ELECTRA LN",
@@ -6652,7 +7537,9 @@ window.PHX_PERMITS = {
       "parcel": "201-11-173",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 810
+      "totalFees": 810,
+      "lat": 33.6986036,
+      "lng": -112.1775019
     },
     {
       "address": "2202 N 26TH PL",
@@ -6667,7 +7554,9 @@ window.PHX_PERMITS = {
       "parcel": "120-30-016M",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3243
+      "totalFees": 3243,
+      "lat": 33.47187,
+      "lng": -112.0251
     },
     {
       "address": "2202 N 26TH PL",
@@ -6682,7 +7571,9 @@ window.PHX_PERMITS = {
       "parcel": "120-30-016M",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 4494
+      "totalFees": 4494,
+      "lat": 33.47187,
+      "lng": -112.0251
     },
     {
       "address": "1802 W MCNEIL ST",
@@ -6697,7 +7588,9 @@ window.PHX_PERMITS = {
       "parcel": "300-52-038",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 6843
+      "totalFees": 6843,
+      "lat": 33.3584052,
+      "lng": -112.0909799
     },
     {
       "address": "1802 W MCNEIL ST",
@@ -6712,7 +7605,9 @@ window.PHX_PERMITS = {
       "parcel": "300-52-038",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.3584052,
+      "lng": -112.0909799
     },
     {
       "address": "1133 E MCKINLEY ST",
@@ -6727,7 +7622,9 @@ window.PHX_PERMITS = {
       "parcel": "116-27-079",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.4567006,
+      "lng": -112.0580704
     },
     {
       "address": "10222 N 12TH AVE",
@@ -6742,7 +7639,9 @@ window.PHX_PERMITS = {
       "parcel": "158-27-052",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 450
+      "totalFees": 450,
+      "lat": 33.578831,
+      "lng": -112.0880724
     },
     {
       "address": "10222 N 12TH AVE",
@@ -6757,7 +7656,9 @@ window.PHX_PERMITS = {
       "parcel": "158-27-052",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 300
+      "totalFees": 300,
+      "lat": 33.578831,
+      "lng": -112.0880724
     },
     {
       "address": "922 N 2ND ST",
@@ -6772,7 +7673,9 @@ window.PHX_PERMITS = {
       "parcel": "111-43-036",
       "zoning": "PRIVATE",
       "units": "1",
-      "totalFees": 1875
+      "totalFees": 1875,
+      "lat": 33.4579405,
+      "lng": -112.071357
     },
     {
       "address": "922 N 2ND ST",
@@ -6787,7 +7690,9 @@ window.PHX_PERMITS = {
       "parcel": "111-43-036",
       "zoning": "PRIVATE",
       "units": "1",
-      "totalFees": 963
+      "totalFees": 963,
+      "lat": 33.4579405,
+      "lng": -112.071357
     },
     {
       "address": "922 N 2ND ST",
@@ -6802,7 +7707,9 @@ window.PHX_PERMITS = {
       "parcel": "111-43-036",
       "zoning": "PRIVATE",
       "units": "1",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.4579405,
+      "lng": -112.071357
     },
     {
       "address": "1030 N 1ST ST",
@@ -6817,7 +7724,9 @@ window.PHX_PERMITS = {
       "parcel": "111-36-011A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.459149,
+      "lng": -112.0726299
     },
     {
       "address": "11410 N CAVE CREEK RD",
@@ -6832,7 +7741,9 @@ window.PHX_PERMITS = {
       "parcel": "166-21-041",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.5900413,
+      "lng": -112.0465239
     },
     {
       "address": "2241 E NICOLET AVE",
@@ -6847,7 +7758,9 @@ window.PHX_PERMITS = {
       "parcel": "164-29-022",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.5432481,
+      "lng": -112.032625
     },
     {
       "address": "1522 E IRONWOOD DR",
@@ -6862,7 +7775,9 @@ window.PHX_PERMITS = {
       "parcel": "159-29-042",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.5762345,
+      "lng": -112.0491314
     },
     {
       "address": "7309 W WILLIAMS ST",
@@ -6877,7 +7792,9 @@ window.PHX_PERMITS = {
       "parcel": "104-52-222",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.420903,
+      "lng": -112.217535
     },
     {
       "address": "5703 N 11TH AVE",
@@ -6892,7 +7809,9 @@ window.PHX_PERMITS = {
       "parcel": "156-32-042",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.5204633,
+      "lng": -112.0865554
     },
     {
       "address": "9850 W LOWER BUCKEYE RD",
@@ -6907,7 +7826,9 @@ window.PHX_PERMITS = {
       "parcel": "101-14-017",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 975
+      "totalFees": 975,
+      "lat": 33.4216102,
+      "lng": -112.2710322
     },
     {
       "address": "5750 W BASELINE RD",
@@ -6922,7 +7843,9 @@ window.PHX_PERMITS = {
       "parcel": "104-80-524",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 6912
+      "totalFees": 6912,
+      "lat": 33.3775462,
+      "lng": -112.1838414
     },
     {
       "address": "14411 S CANYON DR",
@@ -6937,7 +7860,9 @@ window.PHX_PERMITS = {
       "parcel": "301-76-891",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 195
+      "totalFees": 195,
+      "lat": 33.3155635,
+      "lng": -112.0183247
     },
     {
       "address": "3555 E HIGHLINE CANAL RD",
@@ -6952,7 +7877,9 @@ window.PHX_PERMITS = {
       "parcel": "301-23-007X",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 195
+      "totalFees": 195,
+      "lat": 33.3721132,
+      "lng": -112.0067914
     },
     {
       "address": "3406 E TERE ST",
@@ -6967,7 +7894,9 @@ window.PHX_PERMITS = {
       "parcel": "301-29-560",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 195
+      "totalFees": 195,
+      "lat": 33.325151,
+      "lng": -112.0086255
     },
     {
       "address": "1505 E MISSOURI AVE",
@@ -6982,7 +7911,9 @@ window.PHX_PERMITS = {
       "parcel": "162-11-023C",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.5163954,
+      "lng": -112.0499036
     },
     {
       "address": "5615 S 91ST AVE",
@@ -6997,7 +7928,9 @@ window.PHX_PERMITS = {
       "parcel": "101-33-002",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 190
+      "totalFees": 190,
+      "lat": 33.3938663,
+      "lng": -112.2541982
     },
     {
       "address": "3351 W SANDRA TER",
@@ -7012,7 +7945,9 @@ window.PHX_PERMITS = {
       "parcel": "207-39-130",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.634317,
+      "lng": -112.1298513
     },
     {
       "address": "4602 N 31ST AVE",
@@ -7027,7 +7962,9 @@ window.PHX_PERMITS = {
       "parcel": "154-09-001G",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1150
+      "totalFees": 1150,
+      "lat": 33.5047509,
+      "lng": -112.1268328
     },
     {
       "address": "534 E TARO LN",
@@ -7042,7 +7979,9 @@ window.PHX_PERMITS = {
       "parcel": "209-24-328",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.6595149,
+      "lng": -112.0663793
     },
     {
       "address": "3256 W PEAK VIEW RD",
@@ -7057,7 +7996,9 @@ window.PHX_PERMITS = {
       "parcel": "204-23-673",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.7468383,
+      "lng": -112.1290279
     },
     {
       "address": "4330 N 43RD AVE",
@@ -7072,7 +8013,9 @@ window.PHX_PERMITS = {
       "parcel": "145-25-002B",
       "zoning": "PRIVATE",
       "units": "",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.4991432,
+      "lng": -112.1517201
     },
     {
       "address": "4502 E OAK ST",
@@ -7087,7 +8030,9 @@ window.PHX_PERMITS = {
       "parcel": "126-08-136",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 336
+      "totalFees": 336,
+      "lat": 33.473568,
+      "lng": -111.9842864
     },
     {
       "address": "22643 N 18TH AVE",
@@ -7102,7 +8047,9 @@ window.PHX_PERMITS = {
       "parcel": "209-02-077",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 336
+      "totalFees": 336,
+      "lat": 33.6916547,
+      "lng": -112.0973839
     },
     {
       "address": "10150 W WATKINS ST",
@@ -7117,7 +8064,9 @@ window.PHX_PERMITS = {
       "parcel": "101-14-101",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.4250201,
+      "lng": -112.2786387
     },
     {
       "address": "345 W MONROE ST",
@@ -7132,7 +8081,9 @@ window.PHX_PERMITS = {
       "parcel": "112-20-076",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 195
+      "totalFees": 195,
+      "lat": 33.4500542,
+      "lng": -112.078589
     },
     {
       "address": "711 N 7TH AVE",
@@ -7147,7 +8098,9 @@ window.PHX_PERMITS = {
       "parcel": "111-39-199",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 975
+      "totalFees": 975,
+      "lat": 33.456222,
+      "lng": -112.0824874
     },
     {
       "address": "",
@@ -7162,7 +8115,9 @@ window.PHX_PERMITS = {
       "parcel": "",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1228
+      "totalFees": 1228,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "",
@@ -7177,7 +8132,9 @@ window.PHX_PERMITS = {
       "parcel": "",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2790
+      "totalFees": 2790,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "",
@@ -7192,7 +8149,9 @@ window.PHX_PERMITS = {
       "parcel": "",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1164
+      "totalFees": 1164,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "",
@@ -7207,7 +8166,9 @@ window.PHX_PERMITS = {
       "parcel": "",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 7274.51
+      "totalFees": 7274.51,
+      "lat": null,
+      "lng": null
     },
     {
       "address": "22351 N BLACK CANYON HWY",
@@ -7222,7 +8183,9 @@ window.PHX_PERMITS = {
       "parcel": "209-04-394",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2970
+      "totalFees": 2970,
+      "lat": 33.6888097,
+      "lng": -112.1122162
     },
     {
       "address": "33933 N 27TH DR",
@@ -7237,7 +8200,9 @@ window.PHX_PERMITS = {
       "parcel": "204-01-004G",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 685
+      "totalFees": 685,
+      "lat": 33.4993898,
+      "lng": -112.1180905
     },
     {
       "address": "33933 N 27TH DR",
@@ -7252,7 +8217,9 @@ window.PHX_PERMITS = {
       "parcel": "204-01-004G",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 2145
+      "totalFees": 2145,
+      "lat": 33.4993898,
+      "lng": -112.1180905
     },
     {
       "address": "33933 N 27TH DR",
@@ -7267,7 +8234,9 @@ window.PHX_PERMITS = {
       "parcel": "204-01-004G",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 585
+      "totalFees": 585,
+      "lat": 33.4993898,
+      "lng": -112.1180905
     },
     {
       "address": "33933 N 27TH DR",
@@ -7282,7 +8251,9 @@ window.PHX_PERMITS = {
       "parcel": "204-01-004G",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1223
+      "totalFees": 1223,
+      "lat": 33.4993898,
+      "lng": -112.1180905
     },
     {
       "address": "33933 N 27TH DR",
@@ -7297,7 +8268,9 @@ window.PHX_PERMITS = {
       "parcel": "204-01-004G",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 547
+      "totalFees": 547,
+      "lat": 33.4993898,
+      "lng": -112.1180905
     },
     {
       "address": "33933 N 27TH DR",
@@ -7312,7 +8285,9 @@ window.PHX_PERMITS = {
       "parcel": "204-01-004G",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.4993898,
+      "lng": -112.1180905
     },
     {
       "address": "32400 N 51ST AVE",
@@ -7327,7 +8302,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-002A",
       "zoning": "PRIVATE",
       "units": "",
-      "totalFees": 195
+      "totalFees": 195,
+      "lat": 33.7809525,
+      "lng": -112.1744924
     },
     {
       "address": "2622 W BETH DR",
@@ -7342,7 +8319,9 @@ window.PHX_PERMITS = {
       "parcel": "300-17-720",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 750
+      "totalFees": 750,
+      "lat": 33.3645934,
+      "lng": -112.1157085
     },
     {
       "address": "5154 N 27TH AVE",
@@ -7357,7 +8336,9 @@ window.PHX_PERMITS = {
       "parcel": "153-28-016A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1560
+      "totalFees": 1560,
+      "lat": 33.5128377,
+      "lng": -112.117419
     },
     {
       "address": "5154 N 27TH AVE",
@@ -7372,7 +8353,9 @@ window.PHX_PERMITS = {
       "parcel": "153-28-016A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.5128377,
+      "lng": -112.117419
     },
     {
       "address": "2225 W PINNACLE PEAK RD",
@@ -7387,7 +8370,9 @@ window.PHX_PERMITS = {
       "parcel": "209-03-126A",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 408
+      "totalFees": 408,
+      "lat": 33.6996,
+      "lng": -112.1079267
     },
     {
       "address": "4121 E COTTON CENTER BLVD",
@@ -7402,7 +8387,9 @@ window.PHX_PERMITS = {
       "parcel": "123-06-087",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 780
+      "totalFees": 780,
+      "lat": 33.4024871,
+      "lng": -111.9924131
     },
     {
       "address": "4201 E COTTON CENTER BLVD",
@@ -7417,7 +8404,9 @@ window.PHX_PERMITS = {
       "parcel": "123-06-087",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1212.62
+      "totalFees": 1212.62,
+      "lat": 33.4022953,
+      "lng": -111.9903321
     },
     {
       "address": "3756 W MULBERRY DR",
@@ -7432,7 +8421,9 @@ window.PHX_PERMITS = {
       "parcel": "107-18-153",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.4871328,
+      "lng": -112.1407582
     },
     {
       "address": "4201 E COTTON CENTER BLVD",
@@ -7447,7 +8438,9 @@ window.PHX_PERMITS = {
       "parcel": "123-06-087",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 390
+      "totalFees": 390,
+      "lat": 33.4022953,
+      "lng": -111.9903321
     },
     {
       "address": "4121 E COTTON CENTER BLVD",
@@ -7462,7 +8455,9 @@ window.PHX_PERMITS = {
       "parcel": "123-06-087",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 1885
+      "totalFees": 1885,
+      "lat": 33.4024871,
+      "lng": -111.9924131
     },
     {
       "address": "2501 S 5TH AVE",
@@ -7477,7 +8472,9 @@ window.PHX_PERMITS = {
       "parcel": "112-45-004B",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 3382
+      "totalFees": 3382,
+      "lat": 33.4229774,
+      "lng": -112.0801715
     },
     {
       "address": "4121 E COTTON CENTER BLVD",
@@ -7492,7 +8489,9 @@ window.PHX_PERMITS = {
       "parcel": "123-06-087",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 660
+      "totalFees": 660,
+      "lat": 33.4024871,
+      "lng": -111.9924131
     },
     {
       "address": "5088 W INNOVATION CIR",
@@ -7507,7 +8506,9 @@ window.PHX_PERMITS = {
       "parcel": "204-09-005",
       "zoning": "PRIVATE",
       "units": "0",
-      "totalFees": 540
+      "totalFees": 540,
+      "lat": null,
+      "lng": null
     }
   ],
   "contractorBook": [
@@ -8015,7 +9016,7 @@ window.PHX_PERMITS = {
   "history": [
     {
       "date": "2026-09-16",
-      "permits": 2266,
+      "permits": 2267,
       "totalValuation": 2132938953.79
     }
   ]
