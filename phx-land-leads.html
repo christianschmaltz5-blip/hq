@@ -51,6 +51,7 @@
 .calc-kpi-label{font-size:9.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--text-faint); margin-top:3px;}
 .filter-row{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;}
 .filter-input{padding:9px 13px; font-size:13px; border:1px solid var(--card-border); border-radius:var(--radius-sm); font-family:inherit;}
+.dm-note{font-size:11.5px; color:#b3760a; background:var(--warning-soft); border:1px solid rgba(255,171,0,.3); border-radius:8px; padding:9px 12px; line-height:1.6;}
 </style>
 </head>
 <body>
@@ -167,6 +168,7 @@ document.getElementById('meta-row').innerHTML = `
   <div class="meta-pill live"><span class="meta-dot"></span>Updated ${esc(D.updated)}</div>
   <div class="meta-pill"><b>${esc(D.parcelsScanned)}</b>&nbsp;vacant parcels scanned</div>
   <div class="meta-pill"><b>${(D.leads||[]).length}</b>&nbsp;leads ranked</div>
+  ${D.newLeadsThisRun ? `<div class="meta-pill" style="background:var(--success-soft);border-color:rgba(23,198,102,.3);color:#0e9a51;"><b>${esc(D.newLeadsThisRun)}</b>&nbsp;new since last scan</div>` : ''}
   <div class="meta-pill"><b>${(D.zipCodes||[]).length}</b>&nbsp;zip codes covered</div>`;
 
 // ── Ground-up development underwriting calculator (per lead) ──────────────
@@ -208,17 +210,51 @@ const CALC_DEFAULTS = {
   ltc: 0.65, loanRate: 0.0675, holdYears: 3, sellingCostPct: 0.06,
 };
 
+// Subdivision/lot-sale model — for rezone targets landing on single-family
+// zoning (R1-x/RE-x), which is a plat-and-sell-lots play, not a rental
+// building. costPerLot default is a labeled reference from real Christian/
+// Kevin Andreson deals in Box Elder/Rapid City, SD (Highpointe North,
+// Raider Pointe) — NOT Phoenix-calibrated; AZ horizontal development
+// (grading, water rights, impact fees) typically runs higher. Get a local
+// civil engineer's estimate before trusting this number.
+const SUBDIVISION_DEFAULTS = {
+  costPerLot: 40000, lotSalePrice: 130000, sellingCostPct: 0.07, holdYears: 2,
+};
+
+function calcSubdivision(inp){
+  const r = {};
+  r.landCost = inp.askingPrice || 0;
+  r.lotDevCost = inp.lots * inp.costPerLot;
+  r.totalDevCost = r.landCost + r.lotDevCost;
+  r.costPerLot = inp.lots ? r.totalDevCost / inp.lots : null;
+  r.grossLotRevenue = inp.lots * inp.lotSalePrice;
+  r.sellingCosts = r.grossLotRevenue * inp.sellingCostPct;
+  r.netLotRevenue = r.grossLotRevenue - r.sellingCosts;
+  r.developerProfit = r.netLotRevenue - r.totalDevCost;
+  r.profitPerLot = inp.lots ? r.developerProfit / inp.lots : null;
+  r.profitMargin = r.totalDevCost ? r.developerProfit / r.totalDevCost : null;
+  r.approxAnnualizedReturn = (r.profitMargin != null && inp.holdYears) ? r.profitMargin / inp.holdYears : null;
+  return r;
+}
+
 function calcRow(label, val, cls){ return `<div class="calc-kpi"><div class="calc-kpi-val ${cls||''}">${val}</div><div class="calc-kpi-label">${esc(label)}</div></div>`; }
 
-function calcFieldsHtml(idx, state){
-  const fields = [
-    ['askingPrice','Asking Price ($)'], ['units','Est. Units'],
-    ['hardCostPerUnit','Hard Cost/Unit ($)'], ['softCostPct','Soft Cost %'],
-    ['rentPerUnit','Rent/Unit/mo ($)'], ['vacancyPct','Vacancy %'],
-    ['opexPct','OpEx %'], ['exitCapRate','Exit Cap %'],
-    ['ltc','LTC %'], ['loanRate','Loan Rate %'],
-    ['holdYears','Hold (yrs)'], ['sellingCostPct','Selling Cost %'],
-  ];
+const RENTAL_FIELDS = [
+  ['askingPrice','Asking Price ($)'], ['units','Est. Units'],
+  ['hardCostPerUnit','Hard Cost/Unit ($)'], ['softCostPct','Soft Cost %'],
+  ['rentPerUnit','Rent/Unit/mo ($)'], ['vacancyPct','Vacancy %'],
+  ['opexPct','OpEx %'], ['exitCapRate','Exit Cap %'],
+  ['ltc','LTC %'], ['loanRate','Loan Rate %'],
+  ['holdYears','Hold (yrs)'], ['sellingCostPct','Selling Cost %'],
+];
+const SUBDIVISION_FIELDS = [
+  ['askingPrice','Asking Price ($)'], ['lots','Est. Lot Count'],
+  ['costPerLot','Dev Cost/Lot ($)'], ['lotSalePrice','Lot Sale Price ($)'],
+  ['sellingCostPct','Selling Cost %'], ['holdYears','Hold (yrs)'],
+];
+
+function calcFieldsHtml(idx, state, dealType){
+  const fields = dealType === 'subdivision' ? SUBDIVISION_FIELDS : RENTAL_FIELDS;
   return fields.map(([k,label])=>{
     const isPct = k.toLowerCase().includes('pct') || k==='ltc' || k==='loanRate' || k==='exitCapRate';
     const val = state[k];
@@ -227,7 +263,21 @@ function calcFieldsHtml(idx, state){
   }).join('');
 }
 
-function renderCalcResults(idx, state){
+function renderCalcResults(idx, state, dealType){
+  if(dealType === 'subdivision'){
+    const r = calcSubdivision(state);
+    document.getElementById(`calc-kpis-${idx}`).innerHTML = `
+      ${calcRow('Total Dev Cost', money(r.totalDevCost))}
+      ${calcRow('Cost/Lot', money(r.costPerLot))}
+      ${calcRow('Gross Lot Revenue', money(r.grossLotRevenue))}
+      ${calcRow('Net Lot Revenue', money(r.netLotRevenue))}
+      ${calcRow('Developer Profit', money(r.developerProfit), r.developerProfit>0?'pos':'neg')}
+      ${calcRow('Profit/Lot', money(r.profitPerLot), r.profitPerLot>0?'pos':'neg')}
+      ${calcRow('Profit Margin', pct1(r.profitMargin), r.profitMargin>0?'pos':'neg')}
+      ${calcRow('Approx. Annualized Return', pct1(r.approxAnnualizedReturn))}
+    `;
+    return;
+  }
   const r = calcGroundUp(state);
   document.getElementById(`calc-kpis-${idx}`).innerHTML = `
     ${calcRow('Total Dev Cost', money(r.totalDevCost))}
@@ -247,18 +297,26 @@ function renderCalcResults(idx, state){
 const calcStates = {};
 
 function initCalc(idx, lead){
-  calcStates[idx] = Object.assign({
-    askingPrice: 0,
-    units: lead.rezoneTargetUnits || lead.byRightUnits || Math.max(1, Math.round(lead.landAcres * 8)),
-  }, CALC_DEFAULTS);
-  document.getElementById(`calc-fields-${idx}`).innerHTML = calcFieldsHtml(idx, calcStates[idx]);
-  renderCalcResults(idx, calcStates[idx]);
+  const dealType = lead.dealType || 'rental';
+  const units = lead.rezoneTargetUnits || lead.byRightUnits || Math.max(1, Math.round(lead.landAcres * 8));
+  if(dealType === 'subdivision'){
+    calcStates[idx] = Object.assign({askingPrice: 0, lots: Math.max(1, Math.round(units))}, SUBDIVISION_DEFAULTS,
+      lead.referenceCostPerLotSD ? {costPerLot: lead.referenceCostPerLotSD} : {});
+  } else {
+    calcStates[idx] = Object.assign({askingPrice: 0, units}, CALC_DEFAULTS);
+  }
+  const note = dealType === 'subdivision'
+    ? `<div class="dm-note" style="margin-bottom:12px;">Subdivision/lot-sale model — the rezone target here is single-family zoning, not multifamily. Default cost/lot ($${lead.referenceCostPerLotSD?.toLocaleString()||'40,000'}) is a labeled reference from real Rapid City/Box Elder, SD deals (Highpointe North, Raider Pointe) — <b>not Phoenix-calibrated</b>. AZ horizontal development typically costs more; get a local civil estimate.</div>`
+    : '';
+  document.getElementById(`calc-note-${idx}`).innerHTML = note;
+  document.getElementById(`calc-fields-${idx}`).innerHTML = calcFieldsHtml(idx, calcStates[idx], dealType);
+  renderCalcResults(idx, calcStates[idx], dealType);
   document.querySelectorAll(`#calc-fields-${idx} input`).forEach(inp=>{
     inp.addEventListener('input', ()=>{
       const key = inp.dataset.calcKey, isPct = inp.dataset.calcPct === 'true';
       const v = parseFloat(inp.value);
       calcStates[idx][key] = isNaN(v) ? 0 : (isPct ? v/100 : v);
-      renderCalcResults(idx, calcStates[idx]);
+      renderCalcResults(idx, calcStates[idx], dealType);
     });
   });
 }
@@ -271,11 +329,14 @@ function leadCard(lead, idx){
     const isFlood = r.toLowerCase().includes('flood');
     return `<span class="reason-chip ${isFlood?'flood':''}">${esc(r)}</span>`;
   }).join('');
+  const own = lead.ownership || {};
+  const newBadge = lead.isNew ? `<span class="reason-chip" style="background:var(--success-soft);color:#0e9a51;border-color:rgba(23,198,102,.3);font-weight:800;">NEW</span>` : '';
+  const dealTypeLabel = lead.dealType === 'subdivision' ? 'Subdivision/lot-sale play' : 'Rental/multifamily play';
   return `<div class="lead-card" data-idx="${idx}">
     <div class="lead-head" onclick="toggleLead(${idx})">
       <div>
-        <div class="lead-addr">${esc(lead.address)||'(no address on file)'}</div>
-        <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'} · Owner: ${esc(lead.ownerName)||'—'}</div>
+        <div class="lead-addr">${newBadge} ${esc(lead.address)||'(no address on file)'}</div>
+        <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'} · Owner: ${esc(lead.ownerName)||'—'} · ${esc(dealTypeLabel)}</div>
       </div>
       <div class="lead-score"><span class="score-badge ${scoreClass(lead.score)}">${lead.score}</span></div>
     </div>
@@ -285,6 +346,7 @@ function leadCard(lead, idx){
       <span>By-right <b>${lead.byRightUnits==null?'n/a':lead.byRightUnits+' units'}</b></span>
       <span>Rezone target <b>${lead.rezoneTargetUnits==null?'n/a':lead.rezoneTargetUnits+' units'}</b></span>
       <span>Rezonings nearby (0.5mi) <b>${lead.rezoningNearby}</b></span>
+      <span>Held <b>${own.yearsHeld==null?'—':own.yearsHeld.toFixed(1)+'y'}</b></span>
     </div>
     <div class="lead-reasons">${reasons}</div>
     <div class="lead-detail" id="detail-${idx}">
@@ -295,12 +357,15 @@ function leadCard(lead, idx){
         <div class="detail-field"><div class="detail-label">PUC Code</div><div class="detail-val">${esc(lead.puc)}</div></div>
         <div class="detail-field"><div class="detail-label">Owner Mailing Address</div><div class="detail-val">${esc(lead.ownerMailAddress)||'—'}</div></div>
         <div class="detail-field"><div class="detail-label">Rezone Basis</div><div class="detail-val" style="font-size:11.5px;font-weight:600;">${lead.rezoneTarget ? esc(lead.rezoneTarget.basis) : 'No adjacent upside detected'}</div></div>
+        <div class="detail-field"><div class="detail-label">Owner Type</div><div class="detail-val">${own.isEntityOwner ? 'Trust/Estate/LLC' : 'Individual'}</div></div>
+        <div class="detail-field"><div class="detail-label">Owner Location</div><div class="detail-val">${own.isOutOfStateOwner ? 'Out of state' : own.isAbsenteeLocal ? 'In-state, different city' : 'Local'}</div></div>
       </div>
       <div class="calc-toggle" onclick="toggleCalc(${idx})">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         Run underwriting calculator (enter the asking price once you find the listing)
       </div>
       <div class="calc-body" id="calc-${idx}">
+        <div id="calc-note-${idx}"></div>
         <div class="calc-grid" id="calc-fields-${idx}"></div>
         <div class="calc-kpis" id="calc-kpis-${idx}"></div>
       </div>

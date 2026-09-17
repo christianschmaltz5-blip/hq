@@ -76,6 +76,17 @@ RESIDENTIAL_DENSITY_BY_ZONE = {
     "RE-24": 1, "RE-35": 1, "RE-43": 1,
 }
 COMMERCIAL_ZONES = {"C-1", "C-2", "C-3", "PSC", "PCD"}
+SINGLE_FAMILY_ZONES = {"R1-6", "R1-8", "R1-10", "R1-14", "R1-18", "R1-43",
+                        "RE-24", "RE-35", "RE-43"}
+
+OWNERSHIP_ENTITY_KEYWORDS = ("TRUST", "ESTATE OF", "LLC", "LIVING TRUST")
+
+# Reference-only lot-development cost benchmarks from real Christian/Kevin
+# Andreson deals (Highpointe North, Raider Pointe — both Box Elder/Rapid
+# City, SD). NOT Phoenix-calibrated: AZ horizontal development (grading,
+# water rights, impact fees) typically runs higher. Shown as a labeled
+# starting reference in the calculator, not asserted as an AZ estimate.
+REFERENCE_COST_PER_LOT_SD = 40000
 
 
 def esri_query(url, params, retries=3):
@@ -158,7 +169,8 @@ def fetch_vacant_parcels():
         params = {
             "where": where,
             "outFields": "APN,OWNER_NAME,PHYSICAL_ADDRESS,LAND_SIZE,PUC,"
-                         "LATITUDE,LONGITUDE,FCV_CUR,MAIL_ADDRESS,JURISDICTION,SALE_DATE,SALE_PRICE",
+                         "LATITUDE,LONGITUDE,FCV_CUR,MAIL_ADDRESS,MAIL_CITY,MAIL_STATE,"
+                         "PHYSICAL_CITY,JURISDICTION,SALE_DATE,SALE_PRICE,DEED_DATE",
             "resultOffset": offset, "resultRecordCount": page_size,
         }
         result = esri_query(MARICOPA_PARCELS, params)
@@ -205,21 +217,64 @@ def estimate_rezone_target(current_zoning, surrounding_zones):
     return None
 
 
+def analyze_ownership(p):
+    owner = (p.get("OWNER_NAME") or "").upper()
+    mail_city = (p.get("MAIL_CITY") or "").upper().strip()
+    mail_state = (p.get("MAIL_STATE") or "").upper().strip()
+    phys_city = (p.get("PHYSICAL_CITY") or "").upper().strip()
+    deed_ms = p.get("DEED_DATE")
+
+    years_held = None
+    if deed_ms:
+        try:
+            years_held = round((time.time() * 1000 - deed_ms) / (1000 * 60 * 60 * 24 * 365.25), 1)
+        except Exception:
+            years_held = None
+
+    return {
+        "isOutOfStateOwner": bool(mail_state and mail_state != "AZ"),
+        "isAbsenteeLocal": bool(mail_state == "AZ" and mail_city and phys_city and mail_city != phys_city),
+        "isEntityOwner": any(kw in owner for kw in OWNERSHIP_ENTITY_KEYWORDS),
+        "yearsHeld": years_held,
+    }
+
+
 def score_lead(rec):
+    """Additive score, roughly 0-100+. Two families of signal:
+    - Development upside (does the zoning/rezoning context suggest value creation)
+    - Seller motivation (does the ownership pattern suggest an easier acquisition)
+    Recalibrated 2026-09 after the first live run showed real scores clustering
+    10-45 — weights raised so a lead with several strong signals can clear 60+."""
     score = 0
     reasons = []
+
+    # Development upside
     if rec["rezoningNearby"] >= 3:
-        score += 30; reasons.append(f"{rec['rezoningNearby']} rezoning cases within {REZONING_RADIUS_MILES}mi")
+        score += 25; reasons.append(f"{rec['rezoningNearby']} rezoning cases within {REZONING_RADIUS_MILES}mi")
     elif rec["rezoningNearby"] >= 1:
-        score += 15; reasons.append(f"{rec['rezoningNearby']} rezoning case(s) nearby")
+        score += 12; reasons.append(f"{rec['rezoningNearby']} rezoning case(s) nearby")
     if rec["rezoneTarget"]:
-        score += 25; reasons.append(rec["rezoneTarget"]["basis"])
+        score += 20; reasons.append(rec["rezoneTarget"]["basis"])
     if rec["floodZone"] and rec["floodZone"].startswith("A"):
-        score -= 30; reasons.append(f"floodplain constraint (zone {rec['floodZone']})")
+        score -= 35; reasons.append(f"floodplain constraint (zone {rec['floodZone']})")
     if rec["landAcres"] and 0.15 <= rec["landAcres"] <= 5:
-        score += 10; reasons.append("parcel size fits small-to-mid infill development")
+        score += 8; reasons.append("parcel size fits small-to-mid infill development")
     if rec["assessedValuePerAcre"] and rec["assessedValuePerAcre"] < 200000:
-        score += 10; reasons.append("assessed value/acre below typical infill land pricing — possible mispricing")
+        score += 8; reasons.append("assessed value/acre below typical infill land pricing — possible mispricing")
+
+    # Seller motivation (pure public-records inference, not a guarantee)
+    own = rec["ownership"]
+    if own["isOutOfStateOwner"]:
+        score += 15; reasons.append("owner's mailing address is out of state (absentee)")
+    elif own["isAbsenteeLocal"]:
+        score += 8; reasons.append("owner's mailing address differs from the property city")
+    if own["isEntityOwner"]:
+        score += 10; reasons.append("held in a trust/estate/LLC — often more open to an offer")
+    if own["yearsHeld"] is not None and own["yearsHeld"] >= 15:
+        score += 12; reasons.append(f"held {own['yearsHeld']:.0f}+ years — likely low or no debt on the land")
+    elif own["yearsHeld"] is not None and own["yearsHeld"] >= 8:
+        score += 6; reasons.append(f"held {own['yearsHeld']:.0f} years")
+
     return score, reasons
 
 
@@ -243,12 +298,17 @@ def enrich_parcel(p):
 
     land_acres = round(land_sf / 43560, 3)
     rezone_target = estimate_rezone_target(current_zoning, surrounding_zones)
+    ownership = analyze_ownership(p)
+
+    target_zone_for_type = (rezone_target or {}).get("targetZone") or current_zoning
+    is_single_family_play = (target_zone_for_type or "").strip().upper() in SINGLE_FAMILY_ZONES
 
     rec = {
         "apn": p.get("APN"),
         "address": (p.get("PHYSICAL_ADDRESS") or "").strip(),
         "ownerName": (p.get("OWNER_NAME") or "").strip(),
         "ownerMailAddress": (p.get("MAIL_ADDRESS") or "").strip(),
+        "ownership": ownership,
         "landSf": land_sf,
         "landAcres": land_acres,
         "puc": p.get("PUC"),
@@ -266,6 +326,8 @@ def enrich_parcel(p):
             round(rezone_target["targetDensity"] * land_acres, 1)
             if rezone_target and rezone_target.get("targetDensity") else None
         ),
+        "dealType": "subdivision" if is_single_family_play else "rental",
+        "referenceCostPerLotSD": REFERENCE_COST_PER_LOT_SD if is_single_family_play else None,
     }
     score, reasons = score_lead(rec)
     rec["score"] = score
@@ -312,17 +374,27 @@ def main():
     leads.sort(key=lambda r: r["score"], reverse=True)
 
     today = date.today().isoformat()
-    history_entry = {"date": today, "parcelsScanned": len(parcels), "leadsFound": len(leads)}
     existing_history = []
+    previous_apns = set()
     if OUT_PATH.exists():
         try:
             import re
             text = OUT_PATH.read_text()
-            m = re.search(r'"history"\s*:\s*(\[.*?\])\s*,?\s*\n\};', text, re.S)
+            m = re.search(r'"history"\s*:\s*(\[.*?\])\s*,\s*\n\s*"methodologyNote"', text, re.S)
             if m:
                 existing_history = json.loads(m.group(1))
+            prev_data = json.loads(re.search(r'window\.PHX_LAND_LEADS = (\{.*\});', text, re.S).group(1))
+            previous_apns = {l.get("apn") for l in prev_data.get("leads", [])}
         except Exception:
-            existing_history = []
+            existing_history, previous_apns = [], set()
+
+    new_count = 0
+    for lead in leads:
+        lead["isNew"] = lead["apn"] not in previous_apns
+        if lead["isNew"]:
+            new_count += 1
+
+    history_entry = {"date": today, "parcelsScanned": len(parcels), "leadsFound": len(leads), "newLeads": new_count}
     history = [h for h in existing_history if h.get("date") != today] + [history_entry]
     history = history[-52:]
 
@@ -331,13 +403,18 @@ def main():
         "market": "North Phoenix",
         "zipCodes": NORTH_PHOENIX_ZIPS,
         "parcelsScanned": len(parcels),
+        "newLeadsThisRun": new_count,
         "leads": leads[:300],
         "history": history,
         "methodologyNote": (
             "Public-records only: Maricopa Assessor parcels, Phoenix zoning + "
-            "General Plan + rezoning-case layers, FEMA flood zones. No asking "
-            "price or water/sewer availability is in any public feed found — "
-            "confirm those manually per lead before underwriting."
+            "General Plan + rezoning-case layers, FEMA flood zones, plus "
+            "ownership tenure/entity-type/mailing-address signals as a "
+            "seller-motivation proxy. No asking price or water/sewer "
+            "availability is in any public feed found — confirm those "
+            "manually per lead before underwriting. Rezone targets landing "
+            "on single-family zoning use a subdivision/lot-sale calculator; "
+            "targets on multifamily/commercial zoning use a rental pro forma."
         ),
     }
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
