@@ -2,12 +2,16 @@
 // Ports the 8-sheet "Real Estate Developer Training Model.xlsx" acquisition/
 // value-add multifamily workbook. Every function takes/returns plain objects.
 
+// loanRate basis (updated 2026-09-16): overnight SOFR 3.62% + ~313bps typical
+// value-add bridge-loan spread in the current post-hike rate environment = 6.75%.
+// SOFR is sourced/real; the spread is a typical-market assumption, not a quoted
+// deal — adjust per actual lender term sheet when you have one.
 window.DEV_MODEL_DEFAULTS = {
   address: "", units: 9, askingPrice: 1699000, propertyClass: "C", yearBuilt: "",
   currentOccupancy: 0.97, inPlaceNOI: 122000,
   unitsToRenovate: 9, renoCostPerUnit: 8000, otherCapex: 25000, rentPremium: 85, renoTimelineMonths: 8,
   currentAvgRent: 1000, stabilizedVacancy: 0.05, opexRatio: 0.42, rentGrowth: 0.03, exitCapRate: 0.0565,
-  ltc: 0.70, loanRate: 0.075, loanFeePct: 0.01, holdYears: 3, closingCostPct: 0.015,
+  ltc: 0.70, loanRate: 0.0675, loanFeePct: 0.01, holdYears: 3, closingCostPct: 0.015,
   sponsorFeePct: 0.02, workingCapitalPct: 0.02,
   surveyCost: 3000, geotechCost: 4000, utilityDeposit: 3000, bondCost: 2000,
   renoContingencyPct: 0.10, sellingCostPct: 0.07,
