@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>North Phoenix Land Leads — Christian's HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/shell.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+#leadMap{height:480px; border-radius:var(--radius-sm); border:1px solid var(--card-border);}
+.meta-row{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:22px;}
+.meta-pill{display:flex; align-items:center; gap:7px; font-size:11.5px; font-weight:700; letter-spacing:.02em; padding:7px 13px; border-radius:20px; background:#fafbfd; border:1px solid var(--card-border); color:var(--text-soft);}
+.meta-pill b{color:var(--text); font-weight:700;}
+.meta-pill.live{background:var(--success-soft); border-color:rgba(23,198,102,.25); color:#0e9a51;}
+.meta-dot{width:6px; height:6px; border-radius:50%; background:var(--success); box-shadow:0 0 5px var(--success);}
+.methodology-note{font-size:12px; color:var(--text-soft); background:var(--warning-soft); border:1px solid rgba(255,171,0,.25); border-radius:var(--radius-sm); padding:12px 16px; line-height:1.6; margin-bottom:20px;}
+
+.lead-card{background:#fafbfd; border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:16px 18px; margin-bottom:12px;}
+.lead-head{display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:10px; cursor:pointer;}
+.lead-addr{font-weight:700; font-size:14px; color:var(--text);}
+.lead-sub{font-size:11.5px; color:var(--text-faint); margin-top:2px;}
+.lead-score{display:flex; align-items:center; gap:8px; flex-shrink:0;}
+.score-badge{font-size:15px; font-weight:800; padding:5px 12px; border-radius:10px; background:var(--accent-soft); color:var(--accent-dark); border:1px solid rgba(70,128,255,.25); white-space:nowrap;}
+.score-badge.hot{background:var(--success-soft); color:#0e9a51; border-color:rgba(23,198,102,.3);}
+.score-badge.cold{background:#f1f3f7; color:var(--text-faint); border-color:var(--card-border);}
+.lead-stats{display:flex; flex-wrap:wrap; gap:16px; font-size:12px; color:var(--text-soft); margin-bottom:10px;}
+.lead-stats b{color:var(--text);}
+.lead-reasons{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:4px;}
+.reason-chip{font-size:10.5px; font-weight:600; padding:3px 9px; border-radius:11px; background:#fff; border:1px solid var(--card-border); color:var(--text-soft);}
+.reason-chip.flood{background:var(--danger-soft); color:#b91c1c; border-color:rgba(255,82,82,.25);}
+.lead-detail{display:none; margin-top:14px; padding-top:14px; border-top:1px solid var(--card-border);}
+.lead-detail.show{display:block;}
+.detail-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; margin-bottom:14px;}
+.detail-field{background:#fff; border:1px solid var(--card-border); border-radius:8px; padding:9px 12px;}
+.detail-label{font-size:9.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--text-faint);}
+.detail-val{font-size:13px; font-weight:700; color:var(--text); margin-top:2px;}
+.calc-toggle{font-size:12.5px; font-weight:700; color:var(--accent); cursor:pointer; user-select:none; display:inline-flex; align-items:center; gap:6px;}
+.calc-body{display:none; margin-top:12px; background:#fff; border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:16px;}
+.calc-body.show{display:block;}
+.calc-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-bottom:16px;}
+.calc-field label{display:block; font-size:11px; font-weight:700; color:var(--text-soft); margin-bottom:4px;}
+.calc-field input{width:100%; padding:7px 10px; font-size:13px; border:1px solid var(--card-border); border-radius:7px; font-family:inherit;}
+.calc-kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-top:14px;}
+.calc-kpi{background:#fafbfd; border:1px solid var(--card-border); border-radius:8px; padding:10px 12px; text-align:center;}
+.calc-kpi-val{font-size:16px; font-weight:800; color:var(--text);}
+.calc-kpi-val.pos{color:var(--success);}
+.calc-kpi-val.neg{color:var(--danger);}
+.calc-kpi-label{font-size:9.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--text-faint); margin-top:3px;}
+.filter-row{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;}
+.filter-input{padding:9px 13px; font-size:13px; border:1px solid var(--card-border); border-radius:var(--radius-sm); font-family:inherit;}
+</style>
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="logo-mark">C</div>
+      <div>
+        <div class="logo-text">Christian's HQ</div>
+        <div class="logo-sub">Personal dashboard</div>
+      </div>
+    </div>
+    <nav class="sidebar-scroll">
+      <div class="nav-label">Menu</div>
+      <a class="nav-item" href="index.html">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        <span class="label">Dashboard</span>
+      </a>
+      <a class="nav-item" href="phoenix-scan.html">
+        <svg class="icon" viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 6"/><polyline points="15 6 21 6 21 12"/></svg>
+        <span class="label">Phoenix Cap-Rate Watch</span>
+      </a>
+      <a class="nav-item" href="phx-permits.html">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span class="label">Phoenix Permit Tracker</span>
+      </a>
+      <a class="nav-item active" href="phx-land-leads.html">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 2 3 8l9 6 9-6-9-6z"/><path d="M3 16l9 6 9-6"/><path d="M3 12l9 6 9-6"/></svg>
+        <span class="label">North Phoenix Land Leads</span>
+      </a>
+      <a class="nav-item" href="feasibility.html">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
+        <span class="label">5302 N 35th Ave Feasibility</span>
+      </a>
+      <a class="nav-item" href="dev-model.html">
+        <svg class="icon" viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+        <span class="label">Dev Underwriting Model</span>
+      </a>
+
+      <div class="nav-label">External</div>
+      <a class="nav-item" href="https://claude.ai/code/artifact/94b45b05-7917-4bc4-9c65-8ac4371a822b" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span class="label">Field Manual</span>
+        <svg class="ext" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+      <a class="nav-item" href="https://christianschmaltz5-blip.github.io/Dashboard/" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <span class="label">ARC Dashboard (work)</span>
+        <svg class="ext" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+    </nav>
+  </aside>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="topbar-title">North Phoenix Land Leads</div>
+      <div class="topbar-spacer"></div>
+      <div class="topbar-date" id="topbarDate"></div>
+    </header>
+
+    <main class="page">
+      <h1 class="page-title">North Phoenix Land Leads</h1>
+      <p class="page-sub">Vacant land in North Phoenix zip codes, scored on public zoning/General-Plan/rezoning-activity/floodplain signals — built to surface land <b>before</b> it's an obvious, already-entitled development deal. Ranked, not verified: every lead here still needs a human to confirm it's actually for sale and pull the real price.</p>
+
+      <div class="methodology-note" id="methodology-note"></div>
+
+      <div class="meta-row" id="meta-row"></div>
+
+      <div class="card">
+        <div class="card-head"><h2>Lead Map</h2></div>
+        <div id="leadMap"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2>Ranked Leads</h2>
+          <span class="card-sub">Click a lead to see the full analysis + run it through the underwriting calculator.</span>
+        </div>
+        <div class="filter-row">
+          <input class="filter-input" id="addrSearch" type="text" placeholder="Search address or owner…" style="flex:1; min-width:200px;">
+          <input type="checkbox" id="hideFlood"> <label for="hideFlood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Hide floodplain-constrained</label>
+        </div>
+        <div id="leads-list"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2>Scan History</h2></div>
+        <div class="hist-list" id="hist-list"></div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="phx-land-leads/data.js"></script>
+<script src="assets/js/shell.js"></script>
+<script>
+const D = window.PHX_LAND_LEADS || {leads:[], history:[], zipCodes:[]};
+document.getElementById('topbarDate').textContent = new Date().toLocaleDateString('en-US',{weekday:'long', year:'numeric', month:'long', day:'numeric'});
+
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function money(n){ return n==null||isNaN(n) ? '—' : '$'+Math.round(n).toLocaleString(); }
+function pct1(n){ return n==null||isNaN(n) ? '—' : (n*100).toFixed(1)+'%'; }
+function num1(n){ return n==null||isNaN(n) ? '—' : Number(n).toLocaleString(undefined,{maximumFractionDigits:1}); }
+
+document.getElementById('methodology-note').innerHTML =
+  `<b>Methodology:</b> ${esc(D.methodologyNote || '')}`;
+
+document.getElementById('meta-row').innerHTML = `
+  <div class="meta-pill live"><span class="meta-dot"></span>Updated ${esc(D.updated)}</div>
+  <div class="meta-pill"><b>${esc(D.parcelsScanned)}</b>&nbsp;vacant parcels scanned</div>
+  <div class="meta-pill"><b>${(D.leads||[]).length}</b>&nbsp;leads ranked</div>
+  <div class="meta-pill"><b>${(D.zipCodes||[]).length}</b>&nbsp;zip codes covered</div>`;
+
+// ── Ground-up development underwriting calculator (per lead) ──────────────
+function calcGroundUp(inp){
+  const r = {};
+  r.landCost = inp.askingPrice || 0;
+  r.hardCost = inp.units * inp.hardCostPerUnit;
+  r.softCost = r.hardCost * inp.softCostPct;
+  r.totalDevCost = r.landCost + r.hardCost + r.softCost;
+  r.costPerUnit = inp.units ? r.totalDevCost / inp.units : null;
+
+  r.gpi = inp.units * inp.rentPerUnit * 12;
+  r.vacancyLoss = r.gpi * inp.vacancyPct;
+  r.egi = r.gpi - r.vacancyLoss;
+  r.opex = r.egi * inp.opexPct;
+  r.noi = r.egi - r.opex;
+
+  r.yieldOnCost = r.totalDevCost ? r.noi / r.totalDevCost : null;
+  r.stabilizedValue = inp.exitCapRate ? r.noi / inp.exitCapRate : null;
+  r.developmentSpreadBps = (r.yieldOnCost != null) ? (r.yieldOnCost - inp.exitCapRate) * 10000 : null;
+  r.developerProfit = (r.stabilizedValue != null) ? r.stabilizedValue - r.totalDevCost : null;
+  r.profitMargin = r.developerProfit != null && r.totalDevCost ? r.developerProfit / r.totalDevCost : null;
+
+  r.loanAmount = r.totalDevCost * inp.ltc;
+  r.equityRequired = r.totalDevCost - r.loanAmount;
+  r.annualDebtService = r.loanAmount * inp.loanRate;
+  r.annualCashFlow = r.noi - r.annualDebtService;
+
+  r.netSaleProceeds = (r.stabilizedValue||0) * (1 - inp.sellingCostPct) - r.loanAmount;
+  r.cumulativeCashFlow = r.annualCashFlow * inp.holdYears;
+  r.equityMultiple = r.equityRequired ? (r.netSaleProceeds + r.cumulativeCashFlow) / r.equityRequired : null;
+  r.approxIRR = (r.equityMultiple != null && inp.holdYears) ? (Math.pow(Math.max(r.equityMultiple,0.001), 1/inp.holdYears) - 1) : null;
+  return r;
+}
+
+const CALC_DEFAULTS = {
+  hardCostPerUnit: 165000, softCostPct: 0.20, rentPerUnit: 1450,
+  vacancyPct: 0.06, opexPct: 0.38, exitCapRate: 0.0565,
+  ltc: 0.65, loanRate: 0.0675, holdYears: 3, sellingCostPct: 0.06,
+};
+
+function calcRow(label, val, cls){ return `<div class="calc-kpi"><div class="calc-kpi-val ${cls||''}">${val}</div><div class="calc-kpi-label">${esc(label)}</div></div>`; }
+
+function calcFieldsHtml(idx, state){
+  const fields = [
+    ['askingPrice','Asking Price ($)'], ['units','Est. Units'],
+    ['hardCostPerUnit','Hard Cost/Unit ($)'], ['softCostPct','Soft Cost %'],
+    ['rentPerUnit','Rent/Unit/mo ($)'], ['vacancyPct','Vacancy %'],
+    ['opexPct','OpEx %'], ['exitCapRate','Exit Cap %'],
+    ['ltc','LTC %'], ['loanRate','Loan Rate %'],
+    ['holdYears','Hold (yrs)'], ['sellingCostPct','Selling Cost %'],
+  ];
+  return fields.map(([k,label])=>{
+    const isPct = k.toLowerCase().includes('pct') || k==='ltc' || k==='loanRate' || k==='exitCapRate';
+    const val = state[k];
+    const display = val==null ? '' : (isPct ? (val*100) : val);
+    return `<div class="calc-field"><label>${esc(label)}</label><input type="number" step="any" data-calc-key="${k}" data-calc-pct="${isPct}" data-lead="${idx}" value="${display}"></div>`;
+  }).join('');
+}
+
+function renderCalcResults(idx, state){
+  const r = calcGroundUp(state);
+  document.getElementById(`calc-kpis-${idx}`).innerHTML = `
+    ${calcRow('Total Dev Cost', money(r.totalDevCost))}
+    ${calcRow('Cost/Unit', money(r.costPerUnit))}
+    ${calcRow('Stabilized NOI', money(r.noi))}
+    ${calcRow('Yield on Cost', pct1(r.yieldOnCost))}
+    ${calcRow('Dev Spread', num1(r.developmentSpreadBps)+' bps')}
+    ${calcRow('Stabilized Value', money(r.stabilizedValue))}
+    ${calcRow('Developer Profit', money(r.developerProfit), r.developerProfit>0?'pos':'neg')}
+    ${calcRow('Profit Margin', pct1(r.profitMargin), r.profitMargin>0?'pos':'neg')}
+    ${calcRow('Equity Required', money(r.equityRequired))}
+    ${calcRow('Equity Multiple', r.equityMultiple==null?'—':r.equityMultiple.toFixed(2)+'x')}
+    ${calcRow('Approx. IRR', pct1(r.approxIRR))}
+  `;
+}
+
+const calcStates = {};
+
+function initCalc(idx, lead){
+  calcStates[idx] = Object.assign({
+    askingPrice: 0,
+    units: lead.rezoneTargetUnits || lead.byRightUnits || Math.max(1, Math.round(lead.landAcres * 8)),
+  }, CALC_DEFAULTS);
+  document.getElementById(`calc-fields-${idx}`).innerHTML = calcFieldsHtml(idx, calcStates[idx]);
+  renderCalcResults(idx, calcStates[idx]);
+  document.querySelectorAll(`#calc-fields-${idx} input`).forEach(inp=>{
+    inp.addEventListener('input', ()=>{
+      const key = inp.dataset.calcKey, isPct = inp.dataset.calcPct === 'true';
+      const v = parseFloat(inp.value);
+      calcStates[idx][key] = isNaN(v) ? 0 : (isPct ? v/100 : v);
+      renderCalcResults(idx, calcStates[idx]);
+    });
+  });
+}
+
+// ── Lead cards ──────────────────────────────────────────────────────────
+function scoreClass(score){ return score >= 50 ? 'hot' : score < 15 ? 'cold' : ''; }
+
+function leadCard(lead, idx){
+  const reasons = (lead.reasons||[]).map(r=>{
+    const isFlood = r.toLowerCase().includes('flood');
+    return `<span class="reason-chip ${isFlood?'flood':''}">${esc(r)}</span>`;
+  }).join('');
+  return `<div class="lead-card" data-idx="${idx}">
+    <div class="lead-head" onclick="toggleLead(${idx})">
+      <div>
+        <div class="lead-addr">${esc(lead.address)||'(no address on file)'}</div>
+        <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'} · Owner: ${esc(lead.ownerName)||'—'}</div>
+      </div>
+      <div class="lead-score"><span class="score-badge ${scoreClass(lead.score)}">${lead.score}</span></div>
+    </div>
+    <div class="lead-stats">
+      <span>Assessed <b>${money(lead.assessedValue)}</b></span>
+      <span>$/ac <b>${money(lead.assessedValuePerAcre)}</b></span>
+      <span>By-right <b>${lead.byRightUnits==null?'n/a':lead.byRightUnits+' units'}</b></span>
+      <span>Rezone target <b>${lead.rezoneTargetUnits==null?'n/a':lead.rezoneTargetUnits+' units'}</b></span>
+      <span>Rezonings nearby (0.5mi) <b>${lead.rezoningNearby}</b></span>
+    </div>
+    <div class="lead-reasons">${reasons}</div>
+    <div class="lead-detail" id="detail-${idx}">
+      <div class="detail-grid">
+        <div class="detail-field"><div class="detail-label">General Plan Code (raw)</div><div class="detail-val">${esc(lead.generalPlanDesignation)||'—'}<div style="font-size:10px;font-weight:400;color:var(--text-faint);margin-top:2px;">no public code→label legend found — cross-check the city's GP map</div></div></div>
+        <div class="detail-field"><div class="detail-label">Flood Zone</div><div class="detail-val">${esc(lead.floodZone)||'None mapped'}</div></div>
+        <div class="detail-field"><div class="detail-label">Land Size</div><div class="detail-val">${esc(lead.landSf)} sf</div></div>
+        <div class="detail-field"><div class="detail-label">PUC Code</div><div class="detail-val">${esc(lead.puc)}</div></div>
+        <div class="detail-field"><div class="detail-label">Owner Mailing Address</div><div class="detail-val">${esc(lead.ownerMailAddress)||'—'}</div></div>
+        <div class="detail-field"><div class="detail-label">Rezone Basis</div><div class="detail-val" style="font-size:11.5px;font-weight:600;">${lead.rezoneTarget ? esc(lead.rezoneTarget.basis) : 'No adjacent upside detected'}</div></div>
+      </div>
+      <div class="calc-toggle" onclick="toggleCalc(${idx})">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        Run underwriting calculator (enter the asking price once you find the listing)
+      </div>
+      <div class="calc-body" id="calc-${idx}">
+        <div class="calc-grid" id="calc-fields-${idx}"></div>
+        <div class="calc-kpis" id="calc-kpis-${idx}"></div>
+      </div>
+    </div>
+  </div>`;
+}
+
+let currentLeads = D.leads || [];
+
+function renderLeads(leads){
+  document.getElementById('leads-list').innerHTML = leads.length
+    ? leads.map((l,i)=>leadCard(l,i)).join('')
+    : `<div class="empty-state">No leads match.</div>`;
+}
+renderLeads(currentLeads);
+
+function toggleLead(idx){
+  const el = document.getElementById(`detail-${idx}`);
+  el.classList.toggle('show');
+}
+function toggleCalc(idx){
+  const el = document.getElementById(`calc-${idx}`);
+  const opening = !el.classList.contains('show');
+  el.classList.toggle('show');
+  if(opening && !calcStates[idx]) initCalc(idx, currentLeads[idx]);
+}
+
+function applyFilters(){
+  const q = document.getElementById('addrSearch').value.trim().toLowerCase();
+  const hideFlood = document.getElementById('hideFlood').checked;
+  let filtered = D.leads || [];
+  if(q) filtered = filtered.filter(l => (l.address||'').toLowerCase().includes(q) || (l.ownerName||'').toLowerCase().includes(q));
+  if(hideFlood) filtered = filtered.filter(l => !l.inFloodplain);
+  currentLeads = filtered;
+  renderLeads(filtered);
+}
+document.getElementById('addrSearch').addEventListener('input', applyFilters);
+document.getElementById('hideFlood').addEventListener('change', applyFilters);
+
+// ── History ──────────────────────────────────────────────────────────────
+document.getElementById('hist-list').innerHTML = (D.history||[]).length
+  ? [...D.history].reverse().map(h=>`
+    <div class="hist-row">
+      <span class="hist-date">${esc(h.date)}</span>
+      <span>${esc(h.parcelsScanned)} parcels scanned</span>
+      <span class="hist-stat">·</span>
+      <span>${esc(h.leadsFound)} leads ranked</span>
+    </div>`).join('')
+  : `<div class="empty-state">No scan history yet.</div>`;
+
+// ── Map ──────────────────────────────────────────────────────────────────
+(function(){
+  const withCoords = (D.leads||[]).filter(l=>l.lat!=null && l.lng!=null);
+  if(!withCoords.length){
+    document.getElementById('leadMap').innerHTML = '<div class="empty-state" style="padding:40px;">No leads yet — run the daily pull.</div>';
+    return;
+  }
+  const map = L.map('leadMap').setView([33.65, -112.05], 11);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19, attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+  function colorFor(score){ return score>=50 ? '#17c666' : score>=15 ? '#ffab00' : '#9aa4b2'; }
+  const bounds = [];
+  withCoords.forEach(l=>{
+    L.circleMarker([l.lat,l.lng], {
+      radius: 7, color: colorFor(l.score), fillColor: colorFor(l.score), fillOpacity: 0.6, weight: 1.5
+    }).addTo(map).bindPopup(`
+      <div style="font-family:'Inter',sans-serif;font-size:12.5px;">
+        <div style="font-weight:700;">${esc(l.address)||'(no address)'}</div>
+        <div style="font-weight:700;color:#2f5fd6;margin:3px 0;">Score ${l.score}</div>
+        <div>${esc(l.landAcres)} ac · Zoned ${esc(l.currentZoning)||'—'}</div>
+      </div>`);
+    bounds.push([l.lat,l.lng]);
+  });
+  if(bounds.length>1) map.fitBounds(bounds, {padding:[24,24]});
+})();
+</script>
+</body>
+</html>
