@@ -147,9 +147,12 @@
         </div>
         <div class="filter-row">
           <input class="filter-input" id="addrSearch" type="text" placeholder="Search address or owner…" style="flex:1; min-width:200px;">
+          <input class="filter-input" id="minValue" type="number" placeholder="Min assessed value ($)" style="width:180px;">
+          <input class="filter-input" id="maxValue" type="number" placeholder="Max assessed value ($)" style="width:180px;">
           <input type="checkbox" id="hotOnly"> <label for="hotOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">🔥 Hot deals only (score ≥ 50)</label>
           <input type="checkbox" id="hideFlood"> <label for="hideFlood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Hide floodplain-constrained</label>
         </div>
+        <div style="font-size:11px; color:var(--text-faint); margin:-10px 0 14px;">Price filter uses county assessed value — no real asking price is available in any public feed, so treat this as a rough size filter, not a real price range.</div>
         <div id="leads-list"></div>
       </div>
 
@@ -425,16 +428,22 @@ function applyFilters(){
   const q = document.getElementById('addrSearch').value.trim().toLowerCase();
   const hideFlood = document.getElementById('hideFlood').checked;
   const hotOnly = document.getElementById('hotOnly').checked;
+  const minValue = parseFloat(document.getElementById('minValue').value);
+  const maxValue = parseFloat(document.getElementById('maxValue').value);
   let filtered = D.leads || [];
   if(q) filtered = filtered.filter(l => (l.address||'').toLowerCase().includes(q) || (l.ownerName||'').toLowerCase().includes(q));
   if(hideFlood) filtered = filtered.filter(l => !l.inFloodplain);
   if(hotOnly) filtered = filtered.filter(l => l.score >= 50);
+  if(!isNaN(minValue)) filtered = filtered.filter(l => (l.assessedValue||0) >= minValue);
+  if(!isNaN(maxValue)) filtered = filtered.filter(l => (l.assessedValue||0) <= maxValue);
   currentLeads = filtered;
   renderLeads(filtered);
 }
 document.getElementById('addrSearch').addEventListener('input', applyFilters);
 document.getElementById('hideFlood').addEventListener('change', applyFilters);
 document.getElementById('hotOnly').addEventListener('change', applyFilters);
+document.getElementById('minValue').addEventListener('input', applyFilters);
+document.getElementById('maxValue').addEventListener('input', applyFilters);
 
 // ── History ──────────────────────────────────────────────────────────────
 document.getElementById('hist-list').innerHTML = (D.history||[]).length
