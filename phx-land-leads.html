@@ -464,9 +464,13 @@ document.getElementById('hist-list').innerHTML = (D.history||[]).length
     return;
   }
   const map = L.map('leadMap').setView([33.65, -112.05], 11);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  const streets = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19, attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
+  const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    maxZoom: 19, attribution: 'Tiles &copy; Esri'
+  });
+  L.control.layers({ 'Street': streets, 'Satellite': satellite }).addTo(map);
   function colorFor(status){ return status === 'improved' ? '#ffab00' : '#17c666'; }
   const bounds = [];
   withCoords.forEach(l=>{
