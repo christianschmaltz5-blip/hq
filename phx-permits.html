@@ -182,10 +182,14 @@ document.getElementById('meta-row').innerHTML = `
     return;
   }
   const map = L.map('siteMap').setView([33.4484, -112.0740], 10);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  const streets = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
+  const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    maxZoom: 19, attribution: 'Tiles &copy; Esri'
+  });
+  L.control.layers({ 'Street': streets, 'Satellite': satellite }).addTo(map);
 
   function colorFor(v){ return v>=25000000 ? '#ff4d4f' : v>=1000000 ? '#ffab00' : '#4680ff'; }
   function radiusFor(v){ return Math.max(5, Math.min(26, Math.sqrt(v||1)/500)); }
