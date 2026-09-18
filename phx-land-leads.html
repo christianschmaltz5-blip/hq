@@ -290,12 +290,15 @@ function calcFieldsHtml(idx, state, dealType){
   return fields.map(([k,label])=>{
     const isPct = k.toLowerCase().includes('pct') || k==='ltc' || k==='loanRate' || k==='exitCapRate';
     const val = state[k];
-    const display = val==null ? '' : (isPct ? (val*100) : val);
+    const display = val==null ? '' : (isPct ? Math.round(val*10000)/100 : val);
     return `<div class="calc-field"><label>${esc(label)}</label><input type="number" step="any" data-calc-key="${k}" data-calc-pct="${isPct}" data-lead="${idx}" value="${display}"></div>`;
   }).join('');
 }
 
 function renderCalcResults(idx, state, dealType){
+  const warnEl = document.getElementById(`calc-kpis-warn-${idx}`);
+  if(warnEl) warnEl.innerHTML = state.askingPrice ? '' :
+    `<div class="dm-note" style="margin-bottom:12px;">⚠️ Asking price is $0 — every profit/return figure below assumes free land until you enter one.</div>`;
   if(dealType === 'subdivision'){
     const r = calcSubdivision(state);
     document.getElementById(`calc-kpis-${idx}`).innerHTML = `
@@ -472,6 +475,7 @@ function leadCard(lead, idx){
         <div class="section-label">Development</div>
         <div id="calc-note-${idx}"></div>
         <div class="calc-grid" id="calc-fields-${idx}"></div>
+        <div id="calc-kpis-warn-${idx}"></div>
         <div class="calc-kpis" id="calc-kpis-${idx}"></div>
       </div>
     </div>
