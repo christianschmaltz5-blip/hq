@@ -109,6 +109,8 @@ MIN_IMPROVED_LAND_SIZE_SF = 14000   # ~0.32 acre — meaningfully oversized vs
                                      # a standard 6-8k sf platted lot
 MAX_UNDERUSE_FAR = 0.14             # structure occupies <14% of the lot
 MAX_IMPROVED_ENRICHED = 200         # separate cap from vacant-parcel enrichment
+COMPS_MAX_LEADS = 60                # only the top-scored leads get a comps lookup
+                                     # (bounds daily load on the county's public GIS)
 
 # Flat demolition-cost placeholders for the calculator (improved parcels
 # only) — generic, not sourced from a real AZ demo bid. Editable per lead.
@@ -478,6 +480,23 @@ def main():
                 print(f"  enriched {i+1}/{len(candidates)}...")
 
     leads.sort(key=lambda r: r["score"], reverse=True)
+
+    from comps import build_comps_for_lead
+    comp_targets = leads[:COMPS_MAX_LEADS]
+    print(f"Pulling comparable sales for the top {len(comp_targets)} leads...")
+    with ThreadPoolExecutor(max_workers=ENRICH_WORKERS) as pool:
+        futures = {pool.submit(build_comps_for_lead, lead): lead for lead in comp_targets}
+        for i, fut in enumerate(as_completed(futures)):
+            lead = futures[fut]
+            try:
+                result = fut.result()
+            except Exception as e:
+                result = {"comps": [], "valuation": None, "note": f"Comps lookup failed: {e}"}
+            lead["comps"] = result["comps"]
+            lead["valuation"] = result["valuation"]
+            lead["compsNote"] = result["note"]
+            if (i + 1) % 20 == 0:
+                print(f"  comped {i+1}/{len(comp_targets)}...")
 
     today = date.today().isoformat()
     existing_history = []
