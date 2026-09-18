@@ -119,7 +119,7 @@
 
     <main class="page">
       <h1 class="page-title">North Phoenix Land Leads</h1>
-      <p class="page-sub">Vacant land in North Phoenix zip codes, scored on public zoning/General-Plan/rezoning-activity/floodplain signals — built to surface land <b>before</b> it's an obvious, already-entitled development deal. Ranked, not verified: every lead here still needs a human to confirm it's actually for sale and pull the real price.</p>
+      <p class="page-sub">Vacant land and underused/teardown-candidate parcels in North Phoenix zip codes, scored on public zoning/General-Plan/rezoning-activity/floodplain signals — built to surface land <b>before</b> it's an obvious, already-entitled development deal. Ranked, not verified: every lead here still needs a human to confirm it's actually for sale and pull the real price.</p>
 
       <div class="methodology-note" id="methodology-note"></div>
 
@@ -166,7 +166,7 @@ document.getElementById('methodology-note').innerHTML =
 
 document.getElementById('meta-row').innerHTML = `
   <div class="meta-pill live"><span class="meta-dot"></span>Updated ${esc(D.updated)}</div>
-  <div class="meta-pill"><b>${esc(D.parcelsScanned)}</b>&nbsp;vacant parcels scanned</div>
+  <div class="meta-pill"><b>${esc(D.parcelsScanned)}</b>&nbsp;parcels scanned</div>
   <div class="meta-pill"><b>${(D.leads||[]).length}</b>&nbsp;leads ranked</div>
   ${D.newLeadsThisRun ? `<div class="meta-pill" style="background:var(--success-soft);border-color:rgba(23,198,102,.3);color:#0e9a51;"><b>${esc(D.newLeadsThisRun)}</b>&nbsp;new since last scan</div>` : ''}
   <div class="meta-pill"><b>${(D.zipCodes||[]).length}</b>&nbsp;zip codes covered</div>`;
@@ -175,9 +175,10 @@ document.getElementById('meta-row').innerHTML = `
 function calcGroundUp(inp){
   const r = {};
   r.landCost = inp.askingPrice || 0;
+  r.demoCost = inp.demoCost || 0;
   r.hardCost = inp.units * inp.hardCostPerUnit;
   r.softCost = r.hardCost * inp.softCostPct;
-  r.totalDevCost = r.landCost + r.hardCost + r.softCost;
+  r.totalDevCost = r.landCost + r.demoCost + r.hardCost + r.softCost;
   r.costPerUnit = inp.units ? r.totalDevCost / inp.units : null;
 
   r.gpi = inp.units * inp.rentPerUnit * 12;
@@ -224,8 +225,9 @@ const SUBDIVISION_DEFAULTS = {
 function calcSubdivision(inp){
   const r = {};
   r.landCost = inp.askingPrice || 0;
+  r.demoCost = inp.demoCost || 0;
   r.lotDevCost = inp.lots * inp.costPerLot;
-  r.totalDevCost = r.landCost + r.lotDevCost;
+  r.totalDevCost = r.landCost + r.demoCost + r.lotDevCost;
   r.costPerLot = inp.lots ? r.totalDevCost / inp.lots : null;
   r.grossLotRevenue = inp.lots * inp.lotSalePrice;
   r.sellingCosts = r.grossLotRevenue * inp.sellingCostPct;
@@ -240,7 +242,7 @@ function calcSubdivision(inp){
 function calcRow(label, val, cls){ return `<div class="calc-kpi"><div class="calc-kpi-val ${cls||''}">${val}</div><div class="calc-kpi-label">${esc(label)}</div></div>`; }
 
 const RENTAL_FIELDS = [
-  ['askingPrice','Asking Price ($)'], ['units','Est. Units'],
+  ['askingPrice','Asking Price ($)'], ['demoCost','Demolition Cost ($)'], ['units','Est. Units'],
   ['hardCostPerUnit','Hard Cost/Unit ($)'], ['softCostPct','Soft Cost %'],
   ['rentPerUnit','Rent/Unit/mo ($)'], ['vacancyPct','Vacancy %'],
   ['opexPct','OpEx %'], ['exitCapRate','Exit Cap %'],
@@ -248,7 +250,7 @@ const RENTAL_FIELDS = [
   ['holdYears','Hold (yrs)'], ['sellingCostPct','Selling Cost %'],
 ];
 const SUBDIVISION_FIELDS = [
-  ['askingPrice','Asking Price ($)'], ['lots','Est. Lot Count'],
+  ['askingPrice','Asking Price ($)'], ['demoCost','Demolition Cost ($)'], ['lots','Est. Lot Count'],
   ['costPerLot','Dev Cost/Lot ($)'], ['lotSalePrice','Lot Sale Price ($)'],
   ['sellingCostPct','Selling Cost %'], ['holdYears','Hold (yrs)'],
 ];
@@ -268,6 +270,7 @@ function renderCalcResults(idx, state, dealType){
     const r = calcSubdivision(state);
     document.getElementById(`calc-kpis-${idx}`).innerHTML = `
       ${calcRow('Total Dev Cost', money(r.totalDevCost))}
+      ${calcRow('Demo Cost', money(r.demoCost))}
       ${calcRow('Cost/Lot', money(r.costPerLot))}
       ${calcRow('Gross Lot Revenue', money(r.grossLotRevenue))}
       ${calcRow('Net Lot Revenue', money(r.netLotRevenue))}
@@ -281,6 +284,7 @@ function renderCalcResults(idx, state, dealType){
   const r = calcGroundUp(state);
   document.getElementById(`calc-kpis-${idx}`).innerHTML = `
     ${calcRow('Total Dev Cost', money(r.totalDevCost))}
+    ${calcRow('Demo Cost', money(r.demoCost))}
     ${calcRow('Cost/Unit', money(r.costPerUnit))}
     ${calcRow('Stabilized NOI', money(r.noi))}
     ${calcRow('Yield on Cost', pct1(r.yieldOnCost))}
@@ -299,15 +303,21 @@ const calcStates = {};
 function initCalc(idx, lead){
   const dealType = lead.dealType || 'rental';
   const units = lead.rezoneTargetUnits || lead.byRightUnits || Math.max(1, Math.round(lead.landAcres * 8));
+  const demoCost = lead.parcelStatus === 'improved' ? (lead.defaultDemoCost || 0) : 0;
   if(dealType === 'subdivision'){
-    calcStates[idx] = Object.assign({askingPrice: 0, lots: Math.max(1, Math.round(units))}, SUBDIVISION_DEFAULTS,
+    calcStates[idx] = Object.assign({askingPrice: 0, demoCost, lots: Math.max(1, Math.round(units))}, SUBDIVISION_DEFAULTS,
       lead.referenceCostPerLotSD ? {costPerLot: lead.referenceCostPerLotSD} : {});
   } else {
-    calcStates[idx] = Object.assign({askingPrice: 0, units}, CALC_DEFAULTS);
+    calcStates[idx] = Object.assign({askingPrice: 0, demoCost, units}, CALC_DEFAULTS);
   }
-  const note = dealType === 'subdivision'
-    ? `<div class="dm-note" style="margin-bottom:12px;">Subdivision/lot-sale model — the rezone target here is single-family zoning, not multifamily. Default cost/lot ($${lead.referenceCostPerLotSD?.toLocaleString()||'40,000'}) is a labeled reference from real Rapid City/Box Elder, SD deals (Highpointe North, Raider Pointe) — <b>not Phoenix-calibrated</b>. AZ horizontal development typically costs more; get a local civil estimate.</div>`
-    : '';
+  const notes = [];
+  if(dealType === 'subdivision'){
+    notes.push(`Subdivision/lot-sale model — the rezone target here is single-family zoning, not multifamily. Default cost/lot ($${lead.referenceCostPerLotSD?.toLocaleString()||'40,000'}) is a labeled reference from real Rapid City/Box Elder, SD deals (Highpointe North, Raider Pointe) — <b>not Phoenix-calibrated</b>. AZ horizontal development typically costs more; get a local civil estimate.`);
+  }
+  if(lead.parcelStatus === 'improved'){
+    notes.push(`This lead has an existing structure (${lead.livingSpaceSf?.toLocaleString()||'?'} sf, built ${lead.yearBuilt||'unknown year'}) occupying only ${lead.farRatio!=null?(lead.farRatio*100).toFixed(0):'?'}% of the lot. Demolition cost defaults to a generic placeholder ($${demoCost.toLocaleString()}) — not a real AZ demo bid, just a starting number.`);
+  }
+  const note = notes.length ? `<div class="dm-note" style="margin-bottom:12px;">${notes.join('<br><br>')}</div>` : '';
   document.getElementById(`calc-note-${idx}`).innerHTML = note;
   document.getElementById(`calc-fields-${idx}`).innerHTML = calcFieldsHtml(idx, calcStates[idx], dealType);
   renderCalcResults(idx, calcStates[idx], dealType);
@@ -332,10 +342,13 @@ function leadCard(lead, idx){
   const own = lead.ownership || {};
   const newBadge = lead.isNew ? `<span class="reason-chip" style="background:var(--success-soft);color:#0e9a51;border-color:rgba(23,198,102,.3);font-weight:800;">NEW</span>` : '';
   const dealTypeLabel = lead.dealType === 'subdivision' ? 'Subdivision/lot-sale play' : 'Rental/multifamily play';
+  const statusBadge = lead.parcelStatus === 'improved'
+    ? `<span class="reason-chip" style="background:var(--warning-soft);color:#b3760a;border-color:rgba(255,171,0,.3);font-weight:700;">TEARDOWN</span>`
+    : '';
   return `<div class="lead-card" data-idx="${idx}">
     <div class="lead-head" onclick="toggleLead(${idx})">
       <div>
-        <div class="lead-addr">${newBadge} ${esc(lead.address)||'(no address on file)'}</div>
+        <div class="lead-addr">${newBadge} ${statusBadge} ${esc(lead.address)||'(no address on file)'}</div>
         <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'} · Owner: ${esc(lead.ownerName)||'—'} · ${esc(dealTypeLabel)}</div>
       </div>
       <div class="lead-score"><span class="score-badge ${scoreClass(lead.score)}">${lead.score}</span></div>
@@ -359,6 +372,8 @@ function leadCard(lead, idx){
         <div class="detail-field"><div class="detail-label">Rezone Basis</div><div class="detail-val" style="font-size:11.5px;font-weight:600;">${lead.rezoneTarget ? esc(lead.rezoneTarget.basis) : 'No adjacent upside detected'}</div></div>
         <div class="detail-field"><div class="detail-label">Owner Type</div><div class="detail-val">${own.isEntityOwner ? 'Trust/Estate/LLC' : 'Individual'}</div></div>
         <div class="detail-field"><div class="detail-label">Owner Location</div><div class="detail-val">${own.isOutOfStateOwner ? 'Out of state' : own.isAbsenteeLocal ? 'In-state, different city' : 'Local'}</div></div>
+        ${lead.parcelStatus === 'improved' ? `<div class="detail-field"><div class="detail-label">Existing Structure</div><div class="detail-val">${lead.livingSpaceSf?.toLocaleString()||'?'} sf, built ${esc(lead.yearBuilt)||'unknown'}</div></div>
+        <div class="detail-field"><div class="detail-label">Floor-Area Ratio</div><div class="detail-val">${lead.farRatio!=null?(lead.farRatio*100).toFixed(1)+'%':'—'} of lot built on</div></div>` : ''}
       </div>
       <div class="calc-toggle" onclick="toggleCalc(${idx})">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>

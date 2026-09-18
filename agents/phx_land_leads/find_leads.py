@@ -3,14 +3,24 @@
 
 Pipeline (all public, unauthenticated ArcGIS REST + Assessor endpoints,
 confirmed live 2026-09-17):
-  1. Maricopa County Assessor parcel layer -> vacant land parcels in North
-     Phoenix zip codes (PUC = vacant land/residential/commercial use codes).
-  2. Phoenix Zoning layer -> current zoning at the parcel's centroid.
-  3. Phoenix General Plan layer -> future land-use designation at centroid.
+  1. Maricopa County Assessor parcel layer -> two candidate pools in North
+     Phoenix zip codes: (a) vacant land (PUC vacant-land/residential/
+     commercial codes), and (b) "underused improved" parcels — an existing
+     structure occupying a small fraction of an oversized lot (floor-area
+     ratio filter), i.e. teardown/redevelopment material.
+  2. Phoenix Zoning layer -> current zoning at the parcel's centroid, plus
+     a distinct-values query of neighboring parcels' zoning (realistic
+     rezone-target signal).
+  3. Phoenix General Plan layer -> raw land-use code at centroid.
   4. Phoenix Rezoning Cases (5yr) layer -> count of recent rezoning
      activity within a radius, as a proxy for "surrounded by rezoning
      momentum."
   5. FEMA NFHL Flood Hazard Zones -> floodplain flag at centroid.
+
+Each lead also carries a seller-motivation signal derived from the same
+Assessor record: out-of-state/absentee mailing address, trust/estate/LLC
+ownership, and years held (via DEED_DATE) — a public-records proxy for
+"how open might this owner be to an offer," not a guarantee.
 
 NOT included (deliberately, no fabricated numbers):
   - Asking price. No public feed carries active listing prices; get this
@@ -88,6 +98,23 @@ OWNERSHIP_ENTITY_KEYWORDS = ("TRUST", "ESTATE OF", "LLC", "LIVING TRUST")
 # starting reference in the calculator, not asserted as an AZ estimate.
 REFERENCE_COST_PER_LOT_SD = 40000
 
+# "Underused improved" parcels: an existing (non-vacant) structure sitting
+# on a lot much larger than the structure needs — classic teardown/
+# redevelopment material, especially when adjacent zoning is already
+# denser. Detected via floor-area ratio (structure sf / lot sf), since
+# Maricopa's data has no separate land-vs-improvement value split to use
+# instead. Confirmed live 2026-09-17 e.g. 12608 N 24th St: 850sf house on
+# a 16,993sf lot (FAR 0.05), held in a living trust since 1955-era build.
+MIN_IMPROVED_LAND_SIZE_SF = 14000   # ~0.32 acre — meaningfully oversized vs
+                                     # a standard 6-8k sf platted lot
+MAX_UNDERUSE_FAR = 0.14             # structure occupies <14% of the lot
+MAX_IMPROVED_ENRICHED = 200         # separate cap from vacant-parcel enrichment
+
+# Flat demolition-cost placeholders for the calculator (improved parcels
+# only) — generic, not sourced from a real AZ demo bid. Editable per lead.
+DEFAULT_DEMO_COST_RESIDENTIAL = 18000
+DEFAULT_DEMO_COST_COMMERCIAL = 45000
+
 
 def esri_query(url, params, retries=3):
     params = {**params, "f": "json"}
@@ -157,20 +184,22 @@ def buffer_distinct_values(url, lat, lng, miles, field, out_fields=None):
     return [f["attributes"].get(field) for f in feats if f["attributes"].get(field)]
 
 
-def fetch_vacant_parcels():
-    where = (
-        "PHYSICAL_ZIP IN (" + ",".join(f"'{z}'" for z in NORTH_PHOENIX_ZIPS) + ")"
-        " AND (" + " OR ".join(f"PUC LIKE '{p}%'" for p in VACANT_PUC_PREFIXES) + ")"
-    )
+PARCEL_OUT_FIELDS = (
+    "APN,OWNER_NAME,PHYSICAL_ADDRESS,LAND_SIZE,PUC,"
+    "LATITUDE,LONGITUDE,FCV_CUR,MAIL_ADDRESS,MAIL_CITY,MAIL_STATE,"
+    "PHYSICAL_CITY,JURISDICTION,SALE_DATE,SALE_PRICE,DEED_DATE,"
+    "LIVING_SPACE,CONST_YEAR"
+)
+
+
+def fetch_parcels(where):
     all_features = []
     offset = 0
     page_size = 1000
     while True:
         params = {
             "where": where,
-            "outFields": "APN,OWNER_NAME,PHYSICAL_ADDRESS,LAND_SIZE,PUC,"
-                         "LATITUDE,LONGITUDE,FCV_CUR,MAIL_ADDRESS,MAIL_CITY,MAIL_STATE,"
-                         "PHYSICAL_CITY,JURISDICTION,SALE_DATE,SALE_PRICE,DEED_DATE",
+            "outFields": PARCEL_OUT_FIELDS,
             "resultOffset": offset, "resultRecordCount": page_size,
         }
         result = esri_query(MARICOPA_PARCELS, params)
@@ -182,6 +211,49 @@ def fetch_vacant_parcels():
             break
         offset += page_size
     return [f["attributes"] for f in all_features]
+
+
+def fetch_vacant_parcels():
+    where = (
+        "PHYSICAL_ZIP IN (" + ",".join(f"'{z}'" for z in NORTH_PHOENIX_ZIPS) + ")"
+        " AND (" + " OR ".join(f"PUC LIKE '{p}%'" for p in VACANT_PUC_PREFIXES) + ")"
+    )
+    return fetch_parcels(where)
+
+
+def fetch_underused_improved_parcels():
+    """Non-vacant parcels on lots much larger than their structure needs —
+    the FAR filter (structure sf / lot sf) is applied client-side below
+    since LIVING_SPACE is a formatted string, not directly comparable in
+    an Esri WHERE clause.
+
+    Restricted to PUC '01%' (single-family residential codes) only. Found
+    live 2026-09-17: multi-unit/apartment PUC codes (e.g. 0733) record the
+    ENTIRE COMPLEX's land size on every individual unit record, which makes
+    a per-record FAR calc meaningless (produced fake near-zero FAR "leads"
+    that were actually fully-built apartment complexes). Single-family
+    codes don't share parcels this way — each has its own land size —
+    so they're the only PUC family safe for this heuristic today.
+    Commercial-teardown detection is deliberately out of scope for now
+    until commercial PUC codes are vetted the same way."""
+    where = (
+        "PHYSICAL_ZIP IN (" + ",".join(f"'{z}'" for z in NORTH_PHOENIX_ZIPS) + ")"
+        f" AND LAND_SIZE >= {MIN_IMPROVED_LAND_SIZE_SF} AND LAND_SIZE <= {MAX_LAND_SIZE_SF}"
+        " AND LIVING_SPACE IS NOT NULL AND PUC LIKE '01%'"
+    )
+    parcels = fetch_parcels(where)
+    candidates = []
+    for p in parcels:
+        living_sf = _to_float(p.get("LIVING_SPACE"))
+        land_sf = p.get("LAND_SIZE") or 0
+        if living_sf <= 0 or land_sf <= 0:
+            continue
+        far = living_sf / land_sf
+        if far <= MAX_UNDERUSE_FAR:
+            p["_farRatio"] = far
+            p["_livingSpaceSf"] = living_sf
+            candidates.append(p)
+    return candidates
 
 
 def estimate_byright_units(zoning_code, land_acres):
@@ -275,6 +347,12 @@ def score_lead(rec):
     elif own["yearsHeld"] is not None and own["yearsHeld"] >= 8:
         score += 6; reasons.append(f"held {own['yearsHeld']:.0f} years")
 
+    # Underused improved parcel (existing structure occupies little of a large lot)
+    if rec["parcelStatus"] == "improved" and rec.get("farRatio") is not None:
+        pct = rec["farRatio"] * 100
+        score += 18
+        reasons.append(f"existing structure occupies only {pct:.0f}% of the lot — under-improved for the land size")
+
     return score, reasons
 
 
@@ -303,6 +381,15 @@ def enrich_parcel(p):
     target_zone_for_type = (rezone_target or {}).get("targetZone") or current_zoning
     is_single_family_play = (target_zone_for_type or "").strip().upper() in SINGLE_FAMILY_ZONES
 
+    is_improved = "_farRatio" in p
+    living_sf = p.get("_livingSpaceSf")
+    far_ratio = p.get("_farRatio")
+    const_year = (p.get("CONST_YEAR") or "").strip() or None
+    demo_cost = None
+    if is_improved:
+        is_commercial_teardown = (target_zone_for_type or "").strip().upper() in COMMERCIAL_ZONES
+        demo_cost = DEFAULT_DEMO_COST_COMMERCIAL if is_commercial_teardown else DEFAULT_DEMO_COST_RESIDENTIAL
+
     rec = {
         "apn": p.get("APN"),
         "address": (p.get("PHYSICAL_ADDRESS") or "").strip(),
@@ -328,6 +415,11 @@ def enrich_parcel(p):
         ),
         "dealType": "subdivision" if is_single_family_play else "rental",
         "referenceCostPerLotSD": REFERENCE_COST_PER_LOT_SD if is_single_family_play else None,
+        "parcelStatus": "improved" if is_improved else "vacant",
+        "livingSpaceSf": living_sf,
+        "farRatio": far_ratio,
+        "yearBuilt": const_year,
+        "defaultDemoCost": demo_cost,
     }
     score, reasons = score_lead(rec)
     rec["score"] = score
@@ -337,28 +429,42 @@ def enrich_parcel(p):
 
 def main():
     print("Pulling vacant land parcels in North Phoenix zip codes...")
-    parcels = fetch_vacant_parcels()
-    print(f"  {len(parcels)} vacant-classified parcels found")
+    vacant_parcels = fetch_vacant_parcels()
+    print(f"  {len(vacant_parcels)} vacant-classified parcels found")
+
+    print("Pulling underused improved parcels (small structure, large lot)...")
+    improved_parcels = fetch_underused_improved_parcels()
+    print(f"  {len(improved_parcels)} underused-improved candidates found (FAR <= {MAX_UNDERUSE_FAR})")
 
     def is_builder_inventory(p):
         owner = (p.get("OWNER_NAME") or "").upper()
         return any(kw in owner for kw in BUILDER_OWNER_KEYWORDS)
 
-    candidates = [
-        p for p in parcels
+    vacant_candidates = [
+        p for p in vacant_parcels
         if p.get("LATITUDE") is not None and p.get("LONGITUDE") is not None
         and MIN_LAND_SIZE_SF <= (p.get("LAND_SIZE") or 0) <= MAX_LAND_SIZE_SF
         and not is_builder_inventory(p)
     ]
     # Prioritize the infill-friendly size band (0.15-5 acres) for the
     # expensive per-parcel GIS enrichment, since that's the range this
-    # thesis actually targets — cheap pre-filter before 4x network calls/parcel.
+    # thesis actually targets — cheap pre-filter before network calls/parcel.
     def infill_priority(p):
         acres = (p.get("LAND_SIZE") or 0) / 43560
         return 0 if 0.15 <= acres <= 5 else 1
-    candidates.sort(key=infill_priority)
-    candidates = candidates[:MAX_PARCELS_ENRICHED]
-    print(f"  enriching top {len(candidates)} candidates (zoning/GP/flood/rezoning lookups)...")
+    vacant_candidates.sort(key=infill_priority)
+    vacant_candidates = vacant_candidates[:MAX_PARCELS_ENRICHED]
+
+    improved_candidates = [
+        p for p in improved_parcels
+        if p.get("LATITUDE") is not None and p.get("LONGITUDE") is not None
+    ]
+    improved_candidates.sort(key=lambda p: p["_farRatio"])  # lowest FAR (most underused) first
+    improved_candidates = improved_candidates[:MAX_IMPROVED_ENRICHED]
+
+    candidates = vacant_candidates + improved_candidates
+    print(f"  enriching {len(vacant_candidates)} vacant + {len(improved_candidates)} improved "
+          f"= {len(candidates)} candidates (zoning/GP/flood/rezoning lookups)...")
 
     leads = []
     with ThreadPoolExecutor(max_workers=ENRICH_WORKERS) as pool:
@@ -394,7 +500,8 @@ def main():
         if lead["isNew"]:
             new_count += 1
 
-    history_entry = {"date": today, "parcelsScanned": len(parcels), "leadsFound": len(leads), "newLeads": new_count}
+    total_parcels_scanned = len(vacant_parcels) + len(improved_parcels)
+    history_entry = {"date": today, "parcelsScanned": total_parcels_scanned, "leadsFound": len(leads), "newLeads": new_count}
     history = [h for h in existing_history if h.get("date") != today] + [history_entry]
     history = history[-52:]
 
@@ -402,19 +509,22 @@ def main():
         "updated": today,
         "market": "North Phoenix",
         "zipCodes": NORTH_PHOENIX_ZIPS,
-        "parcelsScanned": len(parcels),
+        "parcelsScanned": total_parcels_scanned,
         "newLeadsThisRun": new_count,
         "leads": leads[:300],
         "history": history,
         "methodologyNote": (
-            "Public-records only: Maricopa Assessor parcels, Phoenix zoning + "
-            "General Plan + rezoning-case layers, FEMA flood zones, plus "
-            "ownership tenure/entity-type/mailing-address signals as a "
-            "seller-motivation proxy. No asking price or water/sewer "
+            "Public-records only: Maricopa Assessor parcels (vacant land AND "
+            "underused single-family-improved parcels — an existing house "
+            "occupying a small share of an oversized lot, tagged TEARDOWN), "
+            "Phoenix zoning + General Plan + rezoning-case layers, FEMA flood "
+            "zones, plus ownership tenure/entity-type/mailing-address signals "
+            "as a seller-motivation proxy. No asking price or water/sewer "
             "availability is in any public feed found — confirm those "
             "manually per lead before underwriting. Rezone targets landing "
-            "on single-family zoning use a subdivision/lot-sale calculator; "
-            "targets on multifamily/commercial zoning use a rental pro forma."
+            "on single-family zoning use a subdivision/lot-sale calculator "
+            "(add a demolition cost for TEARDOWN leads); targets on "
+            "multifamily/commercial zoning use a rental pro forma."
         ),
     }
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
