@@ -30,7 +30,7 @@ COMP_OUT_FIELDS = (
     "CONST_YEAR,PUC,CITY_ZONING,LATITUDE,LONGITUDE"
 )
 
-RADII_MI = (1.0, 2.0, 3.0)  # expand gradually until >=3 comps qualify
+RADII_MI = (1.0, 2.0, 3.0, 5.0)  # expand gradually until >=3 well-sized comps qualify
 MAX_SALE_AGE_YEARS = 5
 MIN_COMPS = 3
 MAX_COMPS = 5
@@ -186,7 +186,16 @@ def build_comps_for_lead(lead, today=None):
             months_since = (today - sold).days / 30.44
             score = _score_comp(lead, cand, dist_mi, months_since)
             scored.append((score, dist_mi, sold, cand))
-        if len(scored) >= MIN_COMPS:
+        # Don't settle for the first 3 comps found if they're wildly
+        # different-sized lots -- keep expanding radius (up to the max)
+        # looking for comps a valuation could actually be based on.
+        subj_land_sf = lead.get("landSf")
+        well_sized = sum(
+            1 for _, _, _, cand in scored
+            if subj_land_sf and cand.get("LAND_SIZE")
+            and min(subj_land_sf, cand["LAND_SIZE"]) / max(subj_land_sf, cand["LAND_SIZE"]) >= MIN_SIZE_RATIO_FOR_VALUATION
+        )
+        if well_sized >= MIN_COMPS or miles == RADII_MI[-1]:
             break
 
     if not scored:

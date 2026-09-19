@@ -91,12 +91,15 @@ SINGLE_FAMILY_ZONES = {"R1-6", "R1-8", "R1-10", "R1-14", "R1-18", "R1-43",
 
 OWNERSHIP_ENTITY_KEYWORDS = ("TRUST", "ESTATE OF", "LLC", "LIVING TRUST")
 
-# Reference-only lot-development cost benchmarks from real Christian/Kevin
-# Andreson deals (Highpointe North, Raider Pointe — both Box Elder/Rapid
-# City, SD). NOT Phoenix-calibrated: AZ horizontal development (grading,
-# water rights, impact fees) typically runs higher. Shown as a labeled
-# starting reference in the calculator, not asserted as an AZ estimate.
-REFERENCE_COST_PER_LOT_SD = 40000
+# Reference-only lot-development cost benchmark for Phoenix-metro/Maricopa
+# horizontal development (grading, roads, utility connections, impact
+# fees). No single verified local deal to anchor this to (unlike the old
+# Highpointe North/Raider Pointe, SD figures it replaces) -- built from
+# published general-market ranges: site grading/prep $20k-$80k/lot +
+# utility connections $10k-$40k/lot, general subdivision-lot benchmarks
+# $25k-$140k. $65k is the rough midpoint. Shown as a labeled starting
+# reference in the calculator, not a real AZ civil bid -- get one.
+REFERENCE_COST_PER_LOT_AZ = 65000
 
 # "Underused improved" parcels: an existing (non-vacant) structure sitting
 # on a lot much larger than the structure needs — classic teardown/
@@ -416,7 +419,7 @@ def enrich_parcel(p):
             if rezone_target and rezone_target.get("targetDensity") else None
         ),
         "dealType": "subdivision" if is_single_family_play else "rental",
-        "referenceCostPerLotSD": REFERENCE_COST_PER_LOT_SD if is_single_family_play else None,
+        "referenceCostPerLotAZ": REFERENCE_COST_PER_LOT_AZ if is_single_family_play else None,
         "parcelStatus": "improved" if is_improved else "vacant",
         "livingSpaceSf": living_sf,
         "farRatio": far_ratio,

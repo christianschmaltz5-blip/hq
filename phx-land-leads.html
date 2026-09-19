@@ -243,13 +243,12 @@ const CALC_DEFAULTS = {
 
 // Subdivision/lot-sale model — for rezone targets landing on single-family
 // zoning (R1-x/RE-x), which is a plat-and-sell-lots play, not a rental
-// building. costPerLot default is a labeled reference from real Christian/
-// Kevin Andreson deals in Box Elder/Rapid City, SD (Highpointe North,
-// Raider Pointe) — NOT Phoenix-calibrated; AZ horizontal development
-// (grading, water rights, impact fees) typically runs higher. Get a local
-// civil engineer's estimate before trusting this number.
+// building. costPerLot default ($65k) is a Phoenix-metro/Maricopa general-
+// market estimate (grading/site prep $20k-$80k + utility connections
+// $10k-$40k per lot), not a real local civil bid — get one before trusting
+// this number.
 const SUBDIVISION_DEFAULTS = {
-  costPerLot: 40000, lotSalePrice: 130000, sellingCostPct: 0.07, holdYears: 2,
+  costPerLot: 65000, lotSalePrice: 130000, sellingCostPct: 0.07, holdYears: 2,
 };
 
 function calcSubdivision(inp){
@@ -339,13 +338,13 @@ function initCalc(idx, lead){
   const demoCost = lead.parcelStatus === 'improved' ? (lead.defaultDemoCost || 0) : 0;
   if(dealType === 'subdivision'){
     calcStates[idx] = Object.assign({askingPrice: 0, demoCost, lots: Math.max(1, Math.round(units))}, SUBDIVISION_DEFAULTS,
-      lead.referenceCostPerLotSD ? {costPerLot: lead.referenceCostPerLotSD} : {});
+      lead.referenceCostPerLotAZ ? {costPerLot: lead.referenceCostPerLotAZ} : {});
   } else {
     calcStates[idx] = Object.assign({askingPrice: 0, demoCost, units}, CALC_DEFAULTS);
   }
   const notes = [];
   if(dealType === 'subdivision'){
-    notes.push(`Subdivision/lot-sale model — the rezone target here is single-family zoning, not multifamily. Default cost/lot ($${lead.referenceCostPerLotSD?.toLocaleString()||'40,000'}) is a labeled reference from real Rapid City/Box Elder, SD deals (Highpointe North, Raider Pointe) — <b>not Phoenix-calibrated</b>. AZ horizontal development typically costs more; get a local civil estimate.`);
+    notes.push(`Subdivision/lot-sale model — the rezone target here is single-family zoning, not multifamily. Default cost/lot ($${lead.referenceCostPerLotAZ?.toLocaleString()||'65,000'}) is a Phoenix-metro/Maricopa general-market estimate (site grading/prep + utility connections per lot), <b>not a real local civil bid</b> — get one before underwriting off this number.`);
   }
   if(lead.parcelStatus === 'improved'){
     notes.push(`This lead has an existing structure (${lead.livingSpaceSf?.toLocaleString()||'?'} sf, built ${lead.yearBuilt||'unknown year'}) occupying only ${lead.farRatio!=null?(lead.farRatio*100).toFixed(0):'?'}% of the lot. Demolition cost defaults to a generic placeholder ($${demoCost.toLocaleString()}) — not a real AZ demo bid, just a starting number.`);
