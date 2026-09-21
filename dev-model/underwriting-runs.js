@@ -12,7 +12,7 @@
 // };
 
 window.UNDERWRITING_RUNS = {
-  "updated": "2026-09-14",
+  "updated": "2026-09-21",
   "runs": [
     {
       "name": "2916 E Monroe St",
@@ -30,8 +30,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 1142764,
       "valueAddProfit": -87530,
       "profitMargin": -0.0711,
-      "cashOnCash": 0.0011,
-      "equityMultiple": 0.56,
+      "cashOnCash": 0.0182,
+      "equityMultiple": 0.61,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2371894/Phoenix-AZ-85008"
@@ -52,8 +52,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 634869,
       "valueAddProfit": -170406,
       "profitMargin": -0.2116,
-      "cashOnCash": -0.0249,
-      "equityMultiple": 0.05,
+      "cashOnCash": -0.0078,
+      "equityMultiple": 0.1,
       "noiVarianceFlag": false,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2357577/arizona-2242-e-taylor-st"
@@ -74,8 +74,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 507895,
       "valueAddProfit": -224356,
       "profitMargin": -0.3064,
-      "cashOnCash": -0.0425,
-      "equityMultiple": -0.29,
+      "cashOnCash": -0.0254,
+      "equityMultiple": -0.24,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2604987/PHOENIX-AZ-85031"
@@ -96,8 +96,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 1269738,
       "valueAddProfit": -352599,
       "profitMargin": -0.2173,
-      "cashOnCash": -0.026,
-      "equityMultiple": 0.03,
+      "cashOnCash": -0.0089,
+      "equityMultiple": 0.08,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2461527/Phoenix-AZ-85006"
@@ -118,8 +118,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 1269738,
       "valueAddProfit": -458939,
       "profitMargin": -0.2655,
-      "cashOnCash": -0.0349,
-      "equityMultiple": -0.14,
+      "cashOnCash": -0.0178,
+      "equityMultiple": -0.09,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2289585/Phoenix-AZ-85020"
@@ -140,8 +140,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 253948,
       "valueAddProfit": -518352,
       "profitMargin": -0.6712,
-      "cashOnCash": -0.1101,
-      "equityMultiple": -1.61,
+      "cashOnCash": -0.093,
+      "equityMultiple": -1.56,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2368389/Phoenix-AZ-85003"
@@ -162,8 +162,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 507895,
       "valueAddProfit": -632701,
       "profitMargin": -0.5547,
-      "cashOnCash": -0.0885,
-      "equityMultiple": -1.19,
+      "cashOnCash": -0.0714,
+      "equityMultiple": -1.14,
       "noiVarianceFlag": false,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2552039/Phoenix-AZ-85013"
@@ -184,8 +184,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 3809214,
       "valueAddProfit": -650693,
       "profitMargin": -0.1459,
-      "cashOnCash": -0.0127,
-      "equityMultiple": 0.29,
+      "cashOnCash": 0.0044,
+      "equityMultiple": 0.34,
       "noiVarianceFlag": false,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/1469283/Phoenix-AZ-85006"
@@ -206,8 +206,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 1015790,
       "valueAddProfit": -694447,
       "profitMargin": -0.4061,
-      "cashOnCash": -0.0609,
-      "equityMultiple": -0.65,
+      "cashOnCash": -0.0438,
+      "equityMultiple": -0.6,
       "noiVarianceFlag": false,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2559723/Phoenix-AZ-85020"
@@ -228,8 +228,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 1102741,
       "valueAddProfit": -828332,
       "profitMargin": -0.4289,
-      "cashOnCash": -0.0652,
-      "equityMultiple": -0.73,
+      "cashOnCash": -0.0481,
+      "equityMultiple": -0.68,
       "noiVarianceFlag": true,
       "verdict": "DOES NOT PENCIL",
       "sourceUrl": "https://www.crexi.com/properties/2372857/Phoenix-AZ-85015"
@@ -250,8 +250,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 888817,
       "valueAddProfit": -891956,
       "profitMargin": -0.5009,
-      "cashOnCash": -0.0785,
-      "equityMultiple": -0.99,
+      "cashOnCash": -0.0614,
+      "equityMultiple": -0.94,
       "noiVarianceFlag": false,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2559722/Phoenix-AZ-85008"
@@ -272,8 +272,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 3555267,
       "valueAddProfit": -997858,
       "profitMargin": -0.2192,
-      "cashOnCash": -0.0263,
-      "equityMultiple": 0.02,
+      "cashOnCash": -0.0092,
+      "equityMultiple": 0.07,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2321086/Phoenix-AZ-85008"
@@ -294,8 +294,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 1015790,
       "valueAddProfit": -1013466,
       "profitMargin": -0.4994,
-      "cashOnCash": -0.0782,
-      "equityMultiple": -0.99,
+      "cashOnCash": -0.0611,
+      "equityMultiple": -0.94,
       "noiVarianceFlag": false,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2257563/Phoenix-AZ-85032"
@@ -316,8 +316,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 1777633,
       "valueAddProfit": -1689359,
       "profitMargin": -0.4873,
-      "cashOnCash": -0.076,
-      "equityMultiple": -0.94,
+      "cashOnCash": -0.0589,
+      "equityMultiple": -0.89,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2419649/Phoenix-AZ-85018"
@@ -338,8 +338,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 1269738,
       "valueAddProfit": -1744587,
       "profitMargin": -0.5788,
-      "cashOnCash": -0.0929,
-      "equityMultiple": -1.27,
+      "cashOnCash": -0.0758,
+      "equityMultiple": -1.22,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2372766/Phoenix-AZ-85014"
@@ -360,8 +360,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 1269738,
       "valueAddProfit": -1918984,
       "profitMargin": -0.6018,
-      "cashOnCash": -0.0972,
-      "equityMultiple": -1.36,
+      "cashOnCash": -0.0801,
+      "equityMultiple": -1.31,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2372784/Phoenix-AZ-85014"
@@ -382,8 +382,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 2666450,
       "valueAddProfit": -2539931,
       "profitMargin": -0.4878,
-      "cashOnCash": -0.0761,
-      "equityMultiple": -0.95,
+      "cashOnCash": -0.059,
+      "equityMultiple": -0.89,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/1841416/Phoenix-AZ-85013"
@@ -404,8 +404,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 12062512,
       "valueAddProfit": -2678909,
       "profitMargin": -0.1817,
-      "cashOnCash": -0.0194,
-      "equityMultiple": 0.16,
+      "cashOnCash": -0.0023,
+      "equityMultiple": 0.21,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2318285/Phoenix-AZ-85051"
@@ -426,8 +426,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 2205482,
       "valueAddProfit": -2781828,
       "profitMargin": -0.5578,
-      "cashOnCash": -0.0891,
-      "equityMultiple": -1.2,
+      "cashOnCash": -0.072,
+      "equityMultiple": -1.15,
       "noiVarianceFlag": true,
       "verdict": "DOES NOT PENCIL",
       "sourceUrl": "https://www.crexi.com/properties/2501366/Phoenix-AZ-85015"
@@ -448,8 +448,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 1523686,
       "valueAddProfit": -3940006,
       "profitMargin": -0.7211,
-      "cashOnCash": -0.1193,
-      "equityMultiple": -1.79,
+      "cashOnCash": -0.1022,
+      "equityMultiple": -1.74,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2550819/Phoenix-AZ-85032"
@@ -470,8 +470,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 1396712,
       "valueAddProfit": -4057761,
       "profitMargin": -0.7439,
-      "cashOnCash": -0.1236,
-      "equityMultiple": -1.87,
+      "cashOnCash": -0.1065,
+      "equityMultiple": -1.82,
       "noiVarianceFlag": false,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": ""
@@ -492,8 +492,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 14728961,
       "valueAddProfit": -5523061,
       "profitMargin": -0.2727,
-      "cashOnCash": -0.0362,
-      "equityMultiple": -0.17,
+      "cashOnCash": -0.0191,
+      "equityMultiple": -0.12,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2592309/PHOENIX-AZ-85040-9300"
@@ -514,8 +514,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 4317109,
       "valueAddProfit": -7278921,
       "profitMargin": -0.6277,
-      "cashOnCash": -0.102,
-      "equityMultiple": -1.45,
+      "cashOnCash": -0.0849,
+      "equityMultiple": -1.4,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2370868/Phoenix-AZ-85018"
@@ -536,8 +536,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 5459874,
       "valueAddProfit": -8001389,
       "profitMargin": -0.5944,
-      "cashOnCash": -0.0958,
-      "equityMultiple": -1.33,
+      "cashOnCash": -0.0787,
+      "equityMultiple": -1.28,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/2370896/Phoenix-AZ-85008"
@@ -558,8 +558,8 @@ window.UNDERWRITING_RUNS = {
       "stabilizedValue": 1904607,
       "valueAddProfit": -8111502,
       "profitMargin": -0.8098,
-      "cashOnCash": -0.1358,
-      "equityMultiple": -2.11,
+      "cashOnCash": -0.1187,
+      "equityMultiple": -2.06,
       "noiVarianceFlag": true,
       "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
       "sourceUrl": "https://www.crexi.com/properties/1521990/Phoenix-AZ-85018"
@@ -622,6 +622,12 @@ window.UNDERWRITING_RUNS = {
     },
     {
       "date": "2026-09-14",
+      "dealsRun": 25,
+      "pencilCount": 0,
+      "topDeal": "2916 E Monroe St ($-87,530)"
+    },
+    {
+      "date": "2026-09-21",
       "dealsRun": 25,
       "pencilCount": 0,
       "topDeal": "2916 E Monroe St ($-87,530)"
