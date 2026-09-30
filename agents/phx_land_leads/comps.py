@@ -37,6 +37,33 @@ MAX_COMPS = 5
 MIN_SIZE_RATIO_FOR_VALUATION = 0.3  # comp land size must be within ~3x of subject's to price off it
 UNKNOWN_ZONING = "CONTACT LOCAL JURISDICTION"
 
+# Per the Arizona Dept. of Revenue's statewide Property Use Code manual: a 4-digit
+# code where the first two digits give the general category (00=vacant land,
+# 01=single-family residential, 02=PUD common area, 03=multi-residential,
+# 04-29=commercial subtypes, 30/37/45/49=industrial/ag, 87=residential >5ac,
+# etc.), except vacant land (00-xx) where the THIRD digit itself carries the
+# category (1=residential, 2=commercial, 3=industrial, 4=condo, 8=manufactured
+# home). Used as a HARD filter so a commercial parcel never gets comped
+# against residential house-lot sales (or vice versa) -- a mismatch that
+# produced a misleading valuation before this was added.
+RESIDENTIAL_PUC_PREFIXES = ("01", "02", "03", "07", "08", "87")
+COMMERCIAL_PUC_PREFIXES = tuple(f"{n:02d}" for n in range(4, 30))
+VACANT_THIRD_DIGIT_CLASS = {"1": "residential", "2": "commercial", "3": "industrial",
+                             "4": "residential", "8": "residential"}
+
+
+def _land_use_class(puc):
+    puc = (puc or "").strip()
+    if len(puc) < 4:
+        return None
+    if puc[:2] == "00":
+        return VACANT_THIRD_DIGIT_CLASS.get(puc[2])
+    if puc[:2] in RESIDENTIAL_PUC_PREFIXES:
+        return "residential"
+    if puc[:2] in COMMERCIAL_PUC_PREFIXES:
+        return "commercial"
+    return None
+
 
 def _esri_query(params, retries=3):
     body = urllib.parse.urlencode({**params, "f": "json"}).encode()
@@ -169,6 +196,7 @@ def build_comps_for_lead(lead, today=None):
         return {"comps": [], "valuation": None, "note": "No coordinates on file for this parcel."}
 
     min_sale_date = today.replace(year=today.year - MAX_SALE_AGE_YEARS)
+    subj_class = _land_use_class(lead.get("puc"))
     scored, radius_used = [], RADII_MI[-1]
     for miles in RADII_MI:
         radius_used = miles
@@ -179,6 +207,12 @@ def build_comps_for_lead(lead, today=None):
                 continue
             sold = _parse_sale_date(cand.get("SALE_DATE"))
             if not sold or sold < min_sale_date:
+                continue
+            # Hard filter: never comp a commercial parcel against residential
+            # sales or vice versa. Only applies when the subject's class is
+            # known -- an unclassified subject falls back to the old
+            # distance/size/recency scoring rather than filtering everything out.
+            if subj_class and _land_use_class(cand.get("PUC")) != subj_class:
                 continue
             dist_mi = _haversine_mi(lat, lng, cand.get("LATITUDE"), cand.get("LONGITUDE"))
             if dist_mi > miles:
@@ -199,9 +233,10 @@ def build_comps_for_lead(lead, today=None):
             break
 
     if not scored:
+        class_note = f" of the same land-use type ({subj_class})" if subj_class else ""
         return {"comps": [], "valuation": None,
-                "note": f"No comparable sales found within {RADII_MI[-1]:.0f} miles in the last "
-                        f"{MAX_SALE_AGE_YEARS} years -- too rural/thin a market to comp automatically."}
+                "note": f"No comparable sales{class_note} found within {RADII_MI[-1]:.0f} miles in the "
+                        f"last {MAX_SALE_AGE_YEARS} years -- too rural/thin a market to comp automatically."}
 
     scored.sort(key=lambda t: -t[0])
     top = scored[:MAX_COMPS]
