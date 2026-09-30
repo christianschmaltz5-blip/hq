@@ -35,6 +35,7 @@ been verified for actual "for sale" status.
 """
 import json
 import math
+import re
 import sys
 import time
 import urllib.parse
@@ -90,6 +91,14 @@ SINGLE_FAMILY_ZONES = {"R1-6", "R1-8", "R1-10", "R1-14", "R1-18", "R1-43",
                         "RE-24", "RE-35", "RE-43"}
 
 OWNERSHIP_ENTITY_KEYWORDS = ("TRUST", "ESTATE OF", "LLC", "LIVING TRUST")
+# Corporate suffixes checked as whole words (regex boundary) so e.g. "LINCOLN"
+# doesn't false-positive on "INC". Used alongside OWNERSHIP_ENTITY_KEYWORDS to
+# flag owners that are companies/government, not traceable people.
+OWNERSHIP_CORPORATE_WORDS = ("INC", "INCORPORATED", "CORP", "CORPORATION", "CO",
+                             "COMPANY", "LP", "LLP", "L L C", "L P",
+                             "ASSOCIATION", "ASSOC", "FOUNDATION", "CHURCH",
+                             "CITY OF", "COUNTY OF", "STATE OF", "CREDIT UNION",
+                             "BANK", "N A")
 
 # Reference-only lot-development cost benchmark for Phoenix-metro/Maricopa
 # horizontal development (grading, roads, utility connections, impact
@@ -311,7 +320,10 @@ def analyze_ownership(p):
     return {
         "isOutOfStateOwner": bool(mail_state and mail_state != "AZ"),
         "isAbsenteeLocal": bool(mail_state == "AZ" and mail_city and phys_city and mail_city != phys_city),
-        "isEntityOwner": any(kw in owner for kw in OWNERSHIP_ENTITY_KEYWORDS),
+        "isEntityOwner": (
+            any(kw in owner for kw in OWNERSHIP_ENTITY_KEYWORDS)
+            or any(re.search(rf"\b{re.escape(w)}\b", owner) for w in OWNERSHIP_CORPORATE_WORDS)
+        ),
         "yearsHeld": years_held,
     }
 
