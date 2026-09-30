@@ -179,25 +179,49 @@ def trace_person(first, last, address):
     return _select_provider().trace(first, last, address)
 
 
+TRUST_WORDS_RE = re.compile(
+    r"\b(LIVING TRUST|REVOCABLE TRUST|FAMILY TRUST|TRUST|ESTATE OF|FAMILY|TR)\b")
+
+
+def _name_from_trust(owner):
+    """'BEFUS FAMILY LIVING TRUST' -> 'BEFUS'; 'PAMELA A LETNER LIVING TRUST' ->
+    'PAMELA A LETNER'. Best-effort — a trust name isn't guaranteed to contain a
+    clean person name, so results from this path are lower-confidence."""
+    stripped = TRUST_WORDS_RE.sub("", owner)
+    return re.sub(r"\s+", " ", stripped).strip()
+
+
 def from_lead(lead):
     """Take a find_leads.py record and trace the owner.
 
-    Entity owners (LLC/trust) can't be traced directly here — Arizona Business
-    Connect (LLC-member lookup) is WAF+reCAPTCHA blocked (verified 2026-09-28),
-    so entity-owned leads return a note instead of a contact.
+    A true hidden owner (LLC/trust NOT at the property's own address) can't be
+    traced directly — Arizona Business Connect (LLC-member lookup) is
+    WAF+reCAPTCHA blocked (verified 2026-09-28), so those return a note instead
+    of a contact. But a trust whose mailing address IS the property address
+    (ownership.isOwnerOccupied) isn't hiding anyone — it's a family's own
+    estate-planning wrapper, and the family surname is usually right in the
+    trust name, so those get traced like a normal person (lower confidence).
     """
     if not lead or not lead.get("ownerName"):
         return _empty_result("", "n/a", note="No lead/owner to trace.")
     owner = lead["ownerName"]
-    if lead.get("ownership", {}).get("isEntityOwner"):
+    ownership = lead.get("ownership", {})
+    if ownership.get("isHiddenOwner"):
         return _empty_result(
             owner, "n/a",
-            note="Owner is an LLC/trust — Arizona has no free/automatable member "
-                 "lookup (Business Connect is WAF+reCAPTCHA blocked). Trace the "
-                 "registered agent manually if pursuing this lead.")
+            note="Owner is an LLC/trust not at the property address — Arizona has "
+                 "no free/automatable member lookup (Business Connect is "
+                 "WAF+reCAPTCHA blocked). Trace the registered agent manually if "
+                 "pursuing this lead.")
+    if ownership.get("isEntityOwner") and ownership.get("isOwnerOccupied"):
+        owner = _name_from_trust(owner)
     first, last = _split_name(owner)
     address = lead.get("ownerMailAddress")
-    return trace_person(first, last, address)
+    res = trace_person(first, last, address)
+    if ownership.get("isEntityOwner") and ownership.get("isOwnerOccupied"):
+        res["note"] = (res.get("note") or "") + \
+            " Name extracted from a trust — verify before using."
+    return res
 
 
 def format_contacts(res):

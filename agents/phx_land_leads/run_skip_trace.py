@@ -70,12 +70,12 @@ def main():
     candidates = [
         lead for lead in leads
         if lead.get("score", 0) >= args.min_score
-        and not lead.get("ownership", {}).get("isEntityOwner")
+        and not lead.get("ownership", {}).get("isHiddenOwner")
         and _cache_key(lead) not in cache
     ][:args.limit]
 
     print(f"{len(leads)} leads total, {len(candidates)} eligible to trace "
-          f"(score>={args.min_score}, non-entity, not cached)")
+          f"(score>={args.min_score}, not a hidden LLC/trust, not cached)")
 
     if args.dry_run:
         for lead in candidates:

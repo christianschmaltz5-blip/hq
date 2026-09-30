@@ -28,6 +28,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 21.3
       },
       "landSf": 152460,
@@ -140,6 +142,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 45.2
       },
       "landSf": 114387,
@@ -256,6 +260,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 20.5
       },
       "landSf": 208130,
@@ -367,6 +373,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 33.8
       },
       "landSf": 90344,
@@ -483,6 +491,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 34.4
       },
       "landSf": 87120,
@@ -599,6 +609,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 35.5
       },
       "landSf": 14101,
@@ -715,6 +727,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 17.1
       },
       "landSf": 24098,
@@ -823,117 +837,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "21433141",
-      "address": "16812 N 38TH ST   PHOENIX  85032",
-      "ownerName": "VHS ACQUISITION SUBSIDIARY NUMBER 1 INC",
-      "ownerMailAddress": "14400 METCALF OVERLAND PARK KS USA 66223",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "yearsHeld": 24.8
-      },
-      "landSf": 85203,
-      "landAcres": 1.956,
-      "puc": "0021",
-      "lat": 33.63924292249471,
-      "lng": -112.00106034662147,
-      "assessedValue": 1799600.0,
-      "assessedValuePerAcre": 920041.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 11.7,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 65,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 25+ years \u2014 likely low or no debt on the land"
-      ],
-      "comps": [
-        {
-          "apn": "21401026",
-          "address": "17047 N 36TH CT   PHOENIX  85032",
-          "distanceMi": 0.36,
-          "soldDate": "2026-08-01",
-          "soldPrice": 725000.0,
-          "landSf": 14876,
-          "livingSpaceSf": 2240.0,
-          "pricePerSf": 324,
-          "pricePerAcre": 2122950,
-          "similarity": 57
-        },
-        {
-          "apn": "21401183",
-          "address": "17431 N 36TH ST   PHOENIX  85032",
-          "distanceMi": 0.4,
-          "soldDate": "2026-07-01",
-          "soldPrice": 303000.0,
-          "landSf": 6801,
-          "livingSpaceSf": 1297.0,
-          "pricePerSf": 234,
-          "pricePerAcre": 1940697,
-          "similarity": 54
-        },
-        {
-          "apn": "21401113",
-          "address": "3531 E CAMPO BELLO DR   PHOENIX  85032",
-          "distanceMi": 0.41,
-          "soldDate": "2026-07-01",
-          "soldPrice": 457000.0,
-          "landSf": 6548,
-          "livingSpaceSf": 1388.0,
-          "pricePerSf": 329,
-          "pricePerAcre": 3040153,
-          "similarity": 54
-        },
-        {
-          "apn": "21401309",
-          "address": "3531 E ST JOHN RD   PHOENIX  85032",
-          "distanceMi": 0.52,
-          "soldDate": "2026-08-01",
-          "soldPrice": 310000.0,
-          "landSf": 6688,
-          "livingSpaceSf": 884.0,
-          "pricePerSf": 351,
-          "pricePerAcre": 2019079,
-          "similarity": 53
-        },
-        {
-          "apn": "21401121",
-          "address": "3508 E CAMPO BELLO DR   PHOENIX  85032",
-          "distanceMi": 0.5,
-          "soldDate": "2026-07-01",
-          "soldPrice": 429000.0,
-          "landSf": 6969,
-          "livingSpaceSf": 1388.0,
-          "pricePerSf": 309,
-          "pricePerAcre": 2681481,
-          "similarity": 53
-        }
-      ],
-      "valuation": null,
-      "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "isNew": false
-    },
-    {
       "apn": "21433022P",
       "address": "16810 N 38TH ST   PHOENIX  85032",
       "ownerName": "VHS ACQUISITION SUBSIDIARY NUMBER I INC",
@@ -942,6 +845,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 24.9
       },
       "landSf": 91772,
@@ -1045,6 +950,119 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "21433141",
+      "address": "16812 N 38TH ST   PHOENIX  85032",
+      "ownerName": "VHS ACQUISITION SUBSIDIARY NUMBER 1 INC",
+      "ownerMailAddress": "14400 METCALF OVERLAND PARK KS USA 66223",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 24.8
+      },
+      "landSf": 85203,
+      "landAcres": 1.956,
+      "puc": "0021",
+      "lat": 33.63924292249471,
+      "lng": -112.00106034662147,
+      "assessedValue": 1799600.0,
+      "assessedValuePerAcre": 920041.0,
+      "currentZoning": "C-2",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 11.7,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 65,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 25+ years \u2014 likely low or no debt on the land"
+      ],
+      "comps": [
+        {
+          "apn": "21401026",
+          "address": "17047 N 36TH CT   PHOENIX  85032",
+          "distanceMi": 0.36,
+          "soldDate": "2026-08-01",
+          "soldPrice": 725000.0,
+          "landSf": 14876,
+          "livingSpaceSf": 2240.0,
+          "pricePerSf": 324,
+          "pricePerAcre": 2122950,
+          "similarity": 57
+        },
+        {
+          "apn": "21401183",
+          "address": "17431 N 36TH ST   PHOENIX  85032",
+          "distanceMi": 0.4,
+          "soldDate": "2026-07-01",
+          "soldPrice": 303000.0,
+          "landSf": 6801,
+          "livingSpaceSf": 1297.0,
+          "pricePerSf": 234,
+          "pricePerAcre": 1940697,
+          "similarity": 54
+        },
+        {
+          "apn": "21401113",
+          "address": "3531 E CAMPO BELLO DR   PHOENIX  85032",
+          "distanceMi": 0.41,
+          "soldDate": "2026-07-01",
+          "soldPrice": 457000.0,
+          "landSf": 6548,
+          "livingSpaceSf": 1388.0,
+          "pricePerSf": 329,
+          "pricePerAcre": 3040153,
+          "similarity": 54
+        },
+        {
+          "apn": "21401309",
+          "address": "3531 E ST JOHN RD   PHOENIX  85032",
+          "distanceMi": 0.52,
+          "soldDate": "2026-08-01",
+          "soldPrice": 310000.0,
+          "landSf": 6688,
+          "livingSpaceSf": 884.0,
+          "pricePerSf": 351,
+          "pricePerAcre": 2019079,
+          "similarity": 53
+        },
+        {
+          "apn": "21401121",
+          "address": "3508 E CAMPO BELLO DR   PHOENIX  85032",
+          "distanceMi": 0.5,
+          "soldDate": "2026-07-01",
+          "soldPrice": 429000.0,
+          "landSf": 6969,
+          "livingSpaceSf": 1388.0,
+          "pricePerSf": 309,
+          "pricePerAcre": 2681481,
+          "similarity": 53
+        }
+      ],
+      "valuation": null,
+      "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "isNew": false
+    },
+    {
       "apn": "21451002U",
       "address": "13825 N CAVE CREEK RD   PHOENIX  85022",
       "ownerName": "BETHESDA FOUNDATION",
@@ -1053,6 +1071,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 30.0
       },
       "landSf": 151545,
@@ -1169,6 +1189,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.1
       },
       "landSf": 91476,
@@ -1285,6 +1307,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 2.5
       },
       "landSf": 54322,
@@ -1396,6 +1420,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 6.6
       },
       "landSf": 113254,
@@ -1512,6 +1538,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 3.3
       },
       "landSf": 107237,
@@ -1628,6 +1656,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 15.2
       },
       "landSf": 211408,
@@ -1735,6 +1765,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 9.9
       },
       "landSf": 51975,
@@ -1846,6 +1878,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 11.2
       },
       "landSf": 66461,
@@ -1962,6 +1996,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 10.7
       },
       "landSf": 29182,
@@ -2078,6 +2114,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 3.1
       },
       "landSf": 167479,
@@ -2182,118 +2220,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "21153081A",
-      "address": "35035 N 3RD AVE   PHOENIX  85086",
-      "ownerName": "STEVEN W RIESER REVOCABLE TRUST/SANDRA S RIESER REVOCABLE TRUST",
-      "ownerMailAddress": "1421 COUNTY RD 230 DURANGO CO USA 81301",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "yearsHeld": 7.2
-      },
-      "landSf": 208681,
-      "landAcres": 4.791,
-      "puc": "0131",
-      "lat": 33.803809694871916,
-      "lng": -112.07749073106595,
-      "assessedValue": 572100.0,
-      "assessedValuePerAcre": 119411.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": null,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 1696.0,
-      "farRatio": 0.008127237266449748,
-      "yearBuilt": "1993",
-      "defaultDemoCost": 18000,
-      "score": 59,
-      "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "existing structure occupies only 1% of the lot \u2014 under-improved for the land size"
-      ],
-      "comps": [
-        {
-          "apn": "21153059F",
-          "address": "35011 N 3RD ST   PHOENIX  85086",
-          "distanceMi": 0.49,
-          "soldDate": "2026-06-01",
-          "soldPrice": 650000.0,
-          "landSf": 86942,
-          "livingSpaceSf": 1736.0,
-          "pricePerSf": 374,
-          "pricePerAcre": 325665,
-          "similarity": 77
-        },
-        {
-          "apn": "21153025H",
-          "address": "501 E CLOUD RD   PHOENIX  85086",
-          "distanceMi": 0.88,
-          "soldDate": "2026-07-01",
-          "soldPrice": 815000.0,
-          "landSf": 92044,
-          "livingSpaceSf": 1846.0,
-          "pricePerSf": 441,
-          "pricePerAcre": 385700,
-          "similarity": 73
-        },
-        {
-          "apn": "21151036R",
-          "address": "36232 N 11TH AVE   PHOENIX  85086",
-          "distanceMi": 0.96,
-          "soldDate": "2026-08-01",
-          "soldPrice": 800000.0,
-          "landSf": 48137,
-          "livingSpaceSf": 1760.0,
-          "pricePerSf": 455,
-          "pricePerAcre": 723934,
-          "similarity": 73
-        },
-        {
-          "apn": "21151036T",
-          "address": "36206 N 11TH AVE   PHOENIX  85086",
-          "distanceMi": 0.91,
-          "soldDate": "2026-06-01",
-          "soldPrice": 660000.0,
-          "landSf": 48646,
-          "livingSpaceSf": 1830.0,
-          "pricePerSf": 361,
-          "pricePerAcre": 590996,
-          "similarity": 72
-        },
-        {
-          "apn": "21153076C",
-          "address": "608 W RESTIN RD   PHOENIX  85086",
-          "distanceMi": 0.51,
-          "soldDate": "2026-03-01",
-          "soldPrice": 1005000.0,
-          "landSf": 50486,
-          "livingSpaceSf": 2260.0,
-          "pricePerSf": 445,
-          "pricePerAcre": 867128,
-          "similarity": 72
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1700120,
-        "rangeLow": 1560151,
-        "rangeHigh": 1847758,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,700,120 (range $1,560,151-$1,847,758)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "isNew": false
-    },
-    {
       "apn": "21154027C",
       "address": "35708 N 7TH AVE   PHOENIX  85086",
       "ownerName": "ROCKIN P PROPERTIES LLC",
@@ -2302,6 +2228,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.7
       },
       "landSf": 102279,
@@ -2406,6 +2334,120 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "21153081A",
+      "address": "35035 N 3RD AVE   PHOENIX  85086",
+      "ownerName": "STEVEN W RIESER REVOCABLE TRUST/SANDRA S RIESER REVOCABLE TRUST",
+      "ownerMailAddress": "1421 COUNTY RD 230 DURANGO CO USA 81301",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 7.2
+      },
+      "landSf": 208681,
+      "landAcres": 4.791,
+      "puc": "0131",
+      "lat": 33.803809694871916,
+      "lng": -112.07749073106595,
+      "assessedValue": 572100.0,
+      "assessedValuePerAcre": 119411.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 990",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": null,
+      "byRightUnits": null,
+      "rezoneTargetUnits": null,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 1696.0,
+      "farRatio": 0.008127237266449748,
+      "yearBuilt": "1993",
+      "defaultDemoCost": 18000,
+      "score": 59,
+      "reasons": [
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "existing structure occupies only 1% of the lot \u2014 under-improved for the land size"
+      ],
+      "comps": [
+        {
+          "apn": "21153059F",
+          "address": "35011 N 3RD ST   PHOENIX  85086",
+          "distanceMi": 0.49,
+          "soldDate": "2026-06-01",
+          "soldPrice": 650000.0,
+          "landSf": 86942,
+          "livingSpaceSf": 1736.0,
+          "pricePerSf": 374,
+          "pricePerAcre": 325665,
+          "similarity": 77
+        },
+        {
+          "apn": "21153025H",
+          "address": "501 E CLOUD RD   PHOENIX  85086",
+          "distanceMi": 0.88,
+          "soldDate": "2026-07-01",
+          "soldPrice": 815000.0,
+          "landSf": 92044,
+          "livingSpaceSf": 1846.0,
+          "pricePerSf": 441,
+          "pricePerAcre": 385700,
+          "similarity": 73
+        },
+        {
+          "apn": "21151036R",
+          "address": "36232 N 11TH AVE   PHOENIX  85086",
+          "distanceMi": 0.96,
+          "soldDate": "2026-08-01",
+          "soldPrice": 800000.0,
+          "landSf": 48137,
+          "livingSpaceSf": 1760.0,
+          "pricePerSf": 455,
+          "pricePerAcre": 723934,
+          "similarity": 73
+        },
+        {
+          "apn": "21151036T",
+          "address": "36206 N 11TH AVE   PHOENIX  85086",
+          "distanceMi": 0.91,
+          "soldDate": "2026-06-01",
+          "soldPrice": 660000.0,
+          "landSf": 48646,
+          "livingSpaceSf": 1830.0,
+          "pricePerSf": 361,
+          "pricePerAcre": 590996,
+          "similarity": 72
+        },
+        {
+          "apn": "21153076C",
+          "address": "608 W RESTIN RD   PHOENIX  85086",
+          "distanceMi": 0.51,
+          "soldDate": "2026-03-01",
+          "soldPrice": 1005000.0,
+          "landSf": 50486,
+          "livingSpaceSf": 2260.0,
+          "pricePerSf": 445,
+          "pricePerAcre": 867128,
+          "similarity": 72
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1700120,
+        "rangeLow": 1560151,
+        "rangeHigh": 1847758,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,700,120 (range $1,560,151-$1,847,758)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "isNew": false
+    },
+    {
       "apn": "20715022C",
       "address": "3845 W PARADISE LN   PHOENIX  85053",
       "ownerName": "EARL DEAN KENNEDY FAMILY TRUST",
@@ -2414,6 +2456,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 15.1
       },
       "landSf": 143557,
@@ -2530,6 +2574,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 20.4
       },
       "landSf": 44213,
@@ -2638,122 +2684,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "21311004C",
-      "address": "2713 E MOHAWK LN   PHOENIX  85050",
-      "ownerName": "JAMES WELLER INC",
-      "ownerMailAddress": "9393 N 90TH ST SUITE 102 SCOTTSDALE AZ USA 85258",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "yearsHeld": 34.8
-      },
-      "landSf": 86859,
-      "landAcres": 1.994,
-      "puc": "0023",
-      "lat": 33.673799136271576,
-      "lng": -112.02941002522529,
-      "assessedValue": 1179100.0,
-      "assessedValuePerAcre": 591324.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3",
-        "targetDensity": 16,
-        "basis": "adjacent parcels already zoned R-3"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 31.9,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 58,
-      "reasons": [
-        "adjacent parcels already zoned R-3",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 35+ years \u2014 likely low or no debt on the land"
-      ],
-      "comps": [
-        {
-          "apn": "21311135",
-          "address": "20820 N 25TH PL   PHOENIX  85050",
-          "distanceMi": 0.16,
-          "soldDate": "2025-12-01",
-          "soldPrice": 5375000.0,
-          "landSf": 67074,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 3490697,
-          "similarity": 60
-        },
-        {
-          "apn": "21308001H",
-          "address": "2131 E ROSE GARDEN LN   PHOENIX  85024",
-          "distanceMi": 0.43,
-          "soldDate": "2025-05-01",
-          "soldPrice": 655000.0,
-          "landSf": 45564,
-          "livingSpaceSf": 1624.0,
-          "pricePerSf": 403,
-          "pricePerAcre": 626192,
-          "similarity": 57
-        },
-        {
-          "apn": "21308013G",
-          "address": "20420 N 22ND ST   PHOENIX  85024",
-          "distanceMi": 0.39,
-          "soldDate": "2025-04-01",
-          "soldPrice": 927000.0,
-          "landSf": 43782,
-          "livingSpaceSf": 2261.0,
-          "pricePerSf": 410,
-          "pricePerAcre": 922300,
-          "similarity": 56
-        },
-        {
-          "apn": "21312360",
-          "address": "3150 E BEARDSLEY RD  1098 PHOENIX  85050",
-          "distanceMi": 0.83,
-          "soldDate": "2026-03-01",
-          "soldPrice": 360000.0,
-          "landSf": 38400,
-          "livingSpaceSf": 1361.0,
-          "pricePerSf": 265,
-          "pricePerAcre": 408375,
-          "similarity": 56
-        },
-        {
-          "apn": "21311014",
-          "address": "2601 E ROSE GARDEN LN   PHOENIX  85050",
-          "distanceMi": 0.24,
-          "soldDate": "2023-06-01",
-          "soldPrice": 4750000.0,
-          "landSf": 205168,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1008491,
-          "similarity": 55
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 2633859,
-        "rangeLow": 814303,
-        "rangeHigh": 6960478,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,633,859 (range $814,303-$6,960,478)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "isNew": false
-    },
-    {
       "apn": "21311004D",
       "address": "2713 E MOHAWK LN   PHOENIX  85050",
       "ownerName": "JAMES WELLER INC",
@@ -2762,6 +2692,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 34.8
       },
       "landSf": 60036,
@@ -2870,6 +2802,124 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "21311004C",
+      "address": "2713 E MOHAWK LN   PHOENIX  85050",
+      "ownerName": "JAMES WELLER INC",
+      "ownerMailAddress": "9393 N 90TH ST SUITE 102 SCOTTSDALE AZ USA 85258",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 34.8
+      },
+      "landSf": 86859,
+      "landAcres": 1.994,
+      "puc": "0023",
+      "lat": 33.673799136271576,
+      "lng": -112.02941002522529,
+      "assessedValue": 1179100.0,
+      "assessedValuePerAcre": 591324.0,
+      "currentZoning": "C-2",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3",
+        "targetDensity": 16,
+        "basis": "adjacent parcels already zoned R-3"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 31.9,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 58,
+      "reasons": [
+        "adjacent parcels already zoned R-3",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 35+ years \u2014 likely low or no debt on the land"
+      ],
+      "comps": [
+        {
+          "apn": "21311135",
+          "address": "20820 N 25TH PL   PHOENIX  85050",
+          "distanceMi": 0.16,
+          "soldDate": "2025-12-01",
+          "soldPrice": 5375000.0,
+          "landSf": 67074,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 3490697,
+          "similarity": 60
+        },
+        {
+          "apn": "21308001H",
+          "address": "2131 E ROSE GARDEN LN   PHOENIX  85024",
+          "distanceMi": 0.43,
+          "soldDate": "2025-05-01",
+          "soldPrice": 655000.0,
+          "landSf": 45564,
+          "livingSpaceSf": 1624.0,
+          "pricePerSf": 403,
+          "pricePerAcre": 626192,
+          "similarity": 57
+        },
+        {
+          "apn": "21308013G",
+          "address": "20420 N 22ND ST   PHOENIX  85024",
+          "distanceMi": 0.39,
+          "soldDate": "2025-04-01",
+          "soldPrice": 927000.0,
+          "landSf": 43782,
+          "livingSpaceSf": 2261.0,
+          "pricePerSf": 410,
+          "pricePerAcre": 922300,
+          "similarity": 56
+        },
+        {
+          "apn": "21312360",
+          "address": "3150 E BEARDSLEY RD  1098 PHOENIX  85050",
+          "distanceMi": 0.83,
+          "soldDate": "2026-03-01",
+          "soldPrice": 360000.0,
+          "landSf": 38400,
+          "livingSpaceSf": 1361.0,
+          "pricePerSf": 265,
+          "pricePerAcre": 408375,
+          "similarity": 56
+        },
+        {
+          "apn": "21311014",
+          "address": "2601 E ROSE GARDEN LN   PHOENIX  85050",
+          "distanceMi": 0.24,
+          "soldDate": "2023-06-01",
+          "soldPrice": 4750000.0,
+          "landSf": 205168,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1008491,
+          "similarity": 55
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 2633859,
+        "rangeLow": 814303,
+        "rangeHigh": 6960478,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,633,859 (range $814,303-$6,960,478)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "isNew": false
+    },
+    {
       "apn": "21172010B",
       "address": "42225 N CENTRAL AVE   PHOENIX  85086",
       "ownerName": "NAGLER TRAXLER FAMILY LIVING TRUST",
@@ -2878,6 +2928,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 13.8
       },
       "landSf": 108900,
@@ -2991,6 +3043,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 28.8
       },
       "landSf": 108900,
@@ -3101,6 +3155,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 18.9
       },
       "landSf": 68879,
@@ -3217,6 +3273,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 7.8
       },
       "landSf": 28437,
@@ -3332,6 +3390,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 15.8
       },
       "landSf": 207346,
@@ -3444,6 +3504,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.0
       },
       "landSf": 56392,
@@ -3554,6 +3616,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 17.1
       },
       "landSf": 154986,
@@ -3666,6 +3730,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 4.4
       },
       "landSf": 198198,
@@ -3781,6 +3847,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 48.0
       },
       "landSf": 16244,
@@ -3896,6 +3964,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 15.5
       },
       "landSf": 45190,
@@ -4011,6 +4081,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 15.8
       },
       "landSf": 43527,
@@ -4126,6 +4198,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 14.8
       },
       "landSf": 108900,
@@ -4238,6 +4312,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.3
       },
       "landSf": 148975,
@@ -4349,6 +4425,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.9
       },
       "landSf": 69502,
@@ -4457,122 +4535,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "20325687",
-      "address": "36011 N 24TH AVE   PHOENIX  85086",
-      "ownerName": "JOY FAMILY TRUST",
-      "ownerMailAddress": "38710 N NATIONAL TRL ANTHEM AZ USA 85086",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "yearsHeld": 2.9
-      },
-      "landSf": 124085,
-      "landAcres": 2.849,
-      "puc": "0011",
-      "lat": 33.81044862411434,
-      "lng": -112.10969979703195,
-      "assessedValue": 395300.0,
-      "assessedValuePerAcre": 138750.0,
-      "currentZoning": "RE-35",
-      "generalPlanDesignation": "GP code 932",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-18",
-        "targetDensity": 2,
-        "basis": "adjacent parcels already zoned R1-18"
-      },
-      "byRightUnits": 2.8,
-      "rezoneTargetUnits": 5.7,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 54,
-      "reasons": [
-        "adjacent parcels already zoned R1-18",
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [
-        {
-          "apn": "20325689",
-          "address": "36031 N 24TH AVE   PHOENIX  85086",
-          "distanceMi": 0.07,
-          "soldDate": "2025-02-01",
-          "soldPrice": 375000.0,
-          "landSf": 78389,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 208384,
-          "similarity": 69
-        },
-        {
-          "apn": "20325525",
-          "address": "2398 W ESPARTERO WAY   PHOENIX  85086",
-          "distanceMi": 0.12,
-          "soldDate": "2026-04-01",
-          "soldPrice": 340000.0,
-          "landSf": 38547,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 384217,
-          "similarity": 68
-        },
-        {
-          "apn": "20325667",
-          "address": "35605 N VIA TRAMONTO    PHOENIX  85086",
-          "distanceMi": 0.33,
-          "soldDate": "2026-08-01",
-          "soldPrice": 398600.0,
-          "landSf": 22817,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 760968,
-          "similarity": 65
-        },
-        {
-          "apn": "20325691",
-          "address": "36133 N 24TH AVE   PHOENIX  85086",
-          "distanceMi": 0.13,
-          "soldDate": "2025-10-01",
-          "soldPrice": 2850000.0,
-          "landSf": 76524,
-          "livingSpaceSf": 5201.0,
-          "pricePerSf": 548,
-          "pricePerAcre": 1622315,
-          "similarity": 63
-        },
-        {
-          "apn": "20325698",
-          "address": "2434 W PRAIANO WAY   PHOENIX  85086",
-          "distanceMi": 0.16,
-          "soldDate": "2025-03-01",
-          "soldPrice": 250000.0,
-          "landSf": 45314,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 240323,
-          "similarity": 63
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1714200,
-        "rangeLow": 593602,
-        "rangeHigh": 4621325,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,714,200 (range $593,602-$4,621,325)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "isNew": false
-    },
-    {
       "apn": "20325688",
       "address": "36021 N 24TH AVE   PHOENIX  85086",
       "ownerName": "SBH SUGAR PINE LLC",
@@ -4581,6 +4543,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 3.5
       },
       "landSf": 94766,
@@ -4689,6 +4653,124 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "20325687",
+      "address": "36011 N 24TH AVE   PHOENIX  85086",
+      "ownerName": "JOY FAMILY TRUST",
+      "ownerMailAddress": "38710 N NATIONAL TRL ANTHEM AZ USA 85086",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 2.9
+      },
+      "landSf": 124085,
+      "landAcres": 2.849,
+      "puc": "0011",
+      "lat": 33.81044862411434,
+      "lng": -112.10969979703195,
+      "assessedValue": 395300.0,
+      "assessedValuePerAcre": 138750.0,
+      "currentZoning": "RE-35",
+      "generalPlanDesignation": "GP code 932",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-18",
+        "targetDensity": 2,
+        "basis": "adjacent parcels already zoned R1-18"
+      },
+      "byRightUnits": 2.8,
+      "rezoneTargetUnits": 5.7,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 54,
+      "reasons": [
+        "adjacent parcels already zoned R1-18",
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [
+        {
+          "apn": "20325689",
+          "address": "36031 N 24TH AVE   PHOENIX  85086",
+          "distanceMi": 0.07,
+          "soldDate": "2025-02-01",
+          "soldPrice": 375000.0,
+          "landSf": 78389,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 208384,
+          "similarity": 69
+        },
+        {
+          "apn": "20325525",
+          "address": "2398 W ESPARTERO WAY   PHOENIX  85086",
+          "distanceMi": 0.12,
+          "soldDate": "2026-04-01",
+          "soldPrice": 340000.0,
+          "landSf": 38547,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 384217,
+          "similarity": 68
+        },
+        {
+          "apn": "20325667",
+          "address": "35605 N VIA TRAMONTO    PHOENIX  85086",
+          "distanceMi": 0.33,
+          "soldDate": "2026-08-01",
+          "soldPrice": 398600.0,
+          "landSf": 22817,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 760968,
+          "similarity": 65
+        },
+        {
+          "apn": "20325691",
+          "address": "36133 N 24TH AVE   PHOENIX  85086",
+          "distanceMi": 0.13,
+          "soldDate": "2025-10-01",
+          "soldPrice": 2850000.0,
+          "landSf": 76524,
+          "livingSpaceSf": 5201.0,
+          "pricePerSf": 548,
+          "pricePerAcre": 1622315,
+          "similarity": 63
+        },
+        {
+          "apn": "20325698",
+          "address": "2434 W PRAIANO WAY   PHOENIX  85086",
+          "distanceMi": 0.16,
+          "soldDate": "2025-03-01",
+          "soldPrice": 250000.0,
+          "landSf": 45314,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 240323,
+          "similarity": 63
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1714200,
+        "rangeLow": 593602,
+        "rangeHigh": 4621325,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,714,200 (range $593,602-$4,621,325)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "isNew": false
+    },
+    {
       "apn": "21168083",
       "address": "37511 N 12TH ST   PHOENIX  85086",
       "ownerName": "BURIAN JOANNE G TR",
@@ -4697,6 +4779,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 23.7
       },
       "landSf": 204209,
@@ -4809,6 +4893,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 26.8
       },
       "landSf": 145186,
@@ -4921,6 +5007,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 16.3
       },
       "landSf": 187569,
@@ -5033,6 +5121,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 17.4
       },
       "landSf": 217800,
@@ -5140,6 +5230,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 31.8
       },
       "landSf": 207781,
@@ -5252,6 +5344,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 15.8
       },
       "landSf": 97662,
@@ -5364,6 +5458,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 24.9
       },
       "landSf": 108900,
@@ -5476,6 +5572,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 6.1
       },
       "landSf": 150326,
@@ -5591,6 +5689,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.7
       },
       "landSf": 184985,
@@ -5701,6 +5801,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.9
       },
       "landSf": 184302,
@@ -5816,6 +5918,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.9
       },
       "landSf": 12632,
@@ -5923,6 +6027,123 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "20807084F",
+      "address": "17049 N 21ST AVE   PHOENIX  85023",
+      "ownerName": "LITHIA REAL ESTATE INC",
+      "ownerMailAddress": "150 N BARTLETT ST MEDFORD OR USA 97501",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 5.9
+      },
+      "landSf": 16730,
+      "landAcres": 0.384,
+      "puc": "0012",
+      "lat": 33.64146980594733,
+      "lng": -112.10510371789698,
+      "assessedValue": 178700.0,
+      "assessedValuePerAcre": 465365.0,
+      "currentZoning": "C-2",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 2.3,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 53,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [
+        {
+          "apn": "20804142",
+          "address": "1634 W GROVERS AVE   PHOENIX  85023",
+          "distanceMi": 0.72,
+          "soldDate": "2026-07-01",
+          "soldPrice": 315000.0,
+          "landSf": 8797,
+          "livingSpaceSf": 1210.0,
+          "pricePerSf": 260,
+          "pricePerAcre": 1559782,
+          "similarity": 60
+        },
+        {
+          "apn": "20804099",
+          "address": "1726 W CHARLESTON AVE   PHOENIX  85023",
+          "distanceMi": 0.7,
+          "soldDate": "2026-07-01",
+          "soldPrice": 370000.0,
+          "landSf": 8337,
+          "livingSpaceSf": 1361.0,
+          "pricePerSf": 272,
+          "pricePerAcre": 1933213,
+          "similarity": 60
+        },
+        {
+          "apn": "20804070",
+          "address": "1814 W LIBBY ST   PHOENIX  85023",
+          "distanceMi": 0.62,
+          "soldDate": "2026-05-01",
+          "soldPrice": 375000.0,
+          "landSf": 8388,
+          "livingSpaceSf": 1548.0,
+          "pricePerSf": 242,
+          "pricePerAcre": 1947425,
+          "similarity": 60
+        },
+        {
+          "apn": "20804293",
+          "address": "18216 N 18TH DR   PHOENIX  85023",
+          "distanceMi": 0.78,
+          "soldDate": "2026-08-01",
+          "soldPrice": 295000.0,
+          "landSf": 8364,
+          "livingSpaceSf": 935.0,
+          "pricePerSf": 316,
+          "pricePerAcre": 1536370,
+          "similarity": 60
+        },
+        {
+          "apn": "20739744",
+          "address": "2910 W SANDRA TER   PHOENIX  85053",
+          "distanceMi": 0.99,
+          "soldDate": "2026-06-01",
+          "soldPrice": 320000.0,
+          "landSf": 9908,
+          "livingSpaceSf": 1861.0,
+          "pricePerSf": 172,
+          "pricePerAcre": 1406863,
+          "similarity": 59
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 644232,
+        "rangeLow": 540331,
+        "rangeHigh": 747943,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $644,232 (range $540,331-$747,943)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "isNew": false
+    },
+    {
       "apn": "20807084E",
       "address": "17035 N 21ST AVE   PHOENIX  85023",
       "ownerName": "LITHIA REAL ESTATE INC",
@@ -5931,6 +6152,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.9
       },
       "landSf": 20329,
@@ -6038,6 +6261,123 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "20807084G",
+      "address": "2094 W BELL RD   PHOENIX  85023",
+      "ownerName": "LITHIA REAL ESTATE INC",
+      "ownerMailAddress": "150 N BARTLETT ST MEDFORD OR USA 97501",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 5.9
+      },
+      "landSf": 19618,
+      "landAcres": 0.45,
+      "puc": "0012",
+      "lat": 33.64180897217745,
+      "lng": -112.10505348395697,
+      "assessedValue": 197700.0,
+      "assessedValuePerAcre": 439333.0,
+      "currentZoning": "C-2",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 2.7,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 53,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [
+        {
+          "apn": "20804142",
+          "address": "1634 W GROVERS AVE   PHOENIX  85023",
+          "distanceMi": 0.71,
+          "soldDate": "2026-07-01",
+          "soldPrice": 315000.0,
+          "landSf": 8797,
+          "livingSpaceSf": 1210.0,
+          "pricePerSf": 260,
+          "pricePerAcre": 1559782,
+          "similarity": 59
+        },
+        {
+          "apn": "20804099",
+          "address": "1726 W CHARLESTON AVE   PHOENIX  85023",
+          "distanceMi": 0.68,
+          "soldDate": "2026-07-01",
+          "soldPrice": 370000.0,
+          "landSf": 8337,
+          "livingSpaceSf": 1361.0,
+          "pricePerSf": 272,
+          "pricePerAcre": 1933213,
+          "similarity": 59
+        },
+        {
+          "apn": "20804070",
+          "address": "1814 W LIBBY ST   PHOENIX  85023",
+          "distanceMi": 0.6,
+          "soldDate": "2026-05-01",
+          "soldPrice": 375000.0,
+          "landSf": 8388,
+          "livingSpaceSf": 1548.0,
+          "pricePerSf": 242,
+          "pricePerAcre": 1947425,
+          "similarity": 58
+        },
+        {
+          "apn": "20804293",
+          "address": "18216 N 18TH DR   PHOENIX  85023",
+          "distanceMi": 0.76,
+          "soldDate": "2026-08-01",
+          "soldPrice": 295000.0,
+          "landSf": 8364,
+          "livingSpaceSf": 935.0,
+          "pricePerSf": 316,
+          "pricePerAcre": 1536370,
+          "similarity": 58
+        },
+        {
+          "apn": "20804290",
+          "address": "1647 W VILLA RITA DR   PHOENIX  85023",
+          "distanceMi": 0.79,
+          "soldDate": "2026-05-01",
+          "soldPrice": 492000.0,
+          "landSf": 8925,
+          "livingSpaceSf": 2122.0,
+          "pricePerSf": 232,
+          "pricePerAcre": 2401291,
+          "similarity": 57
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 843690,
+        "rangeLow": 691931,
+        "rangeHigh": 1081463,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $843,690 (range $691,931-$1,081,463)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "isNew": false
+    },
+    {
       "apn": "20807084H",
       "address": "17205 N 21ST AVE   PHOENIX  85023",
       "ownerName": "LITHIA REAL ESTATE INC",
@@ -6046,6 +6386,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.9
       },
       "landSf": 16502,
@@ -6161,6 +6503,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 2.6
       },
       "landSf": 40249,
@@ -6268,236 +6612,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "20807084F",
-      "address": "17049 N 21ST AVE   PHOENIX  85023",
-      "ownerName": "LITHIA REAL ESTATE INC",
-      "ownerMailAddress": "150 N BARTLETT ST MEDFORD OR USA 97501",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "yearsHeld": 5.9
-      },
-      "landSf": 16730,
-      "landAcres": 0.384,
-      "puc": "0012",
-      "lat": 33.64146980594733,
-      "lng": -112.10510371789698,
-      "assessedValue": 178700.0,
-      "assessedValuePerAcre": 465365.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 2.3,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 53,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [
-        {
-          "apn": "20804142",
-          "address": "1634 W GROVERS AVE   PHOENIX  85023",
-          "distanceMi": 0.72,
-          "soldDate": "2026-07-01",
-          "soldPrice": 315000.0,
-          "landSf": 8797,
-          "livingSpaceSf": 1210.0,
-          "pricePerSf": 260,
-          "pricePerAcre": 1559782,
-          "similarity": 60
-        },
-        {
-          "apn": "20804099",
-          "address": "1726 W CHARLESTON AVE   PHOENIX  85023",
-          "distanceMi": 0.7,
-          "soldDate": "2026-07-01",
-          "soldPrice": 370000.0,
-          "landSf": 8337,
-          "livingSpaceSf": 1361.0,
-          "pricePerSf": 272,
-          "pricePerAcre": 1933213,
-          "similarity": 60
-        },
-        {
-          "apn": "20804070",
-          "address": "1814 W LIBBY ST   PHOENIX  85023",
-          "distanceMi": 0.62,
-          "soldDate": "2026-05-01",
-          "soldPrice": 375000.0,
-          "landSf": 8388,
-          "livingSpaceSf": 1548.0,
-          "pricePerSf": 242,
-          "pricePerAcre": 1947425,
-          "similarity": 60
-        },
-        {
-          "apn": "20804293",
-          "address": "18216 N 18TH DR   PHOENIX  85023",
-          "distanceMi": 0.78,
-          "soldDate": "2026-08-01",
-          "soldPrice": 295000.0,
-          "landSf": 8364,
-          "livingSpaceSf": 935.0,
-          "pricePerSf": 316,
-          "pricePerAcre": 1536370,
-          "similarity": 60
-        },
-        {
-          "apn": "20739744",
-          "address": "2910 W SANDRA TER   PHOENIX  85053",
-          "distanceMi": 0.99,
-          "soldDate": "2026-06-01",
-          "soldPrice": 320000.0,
-          "landSf": 9908,
-          "livingSpaceSf": 1861.0,
-          "pricePerSf": 172,
-          "pricePerAcre": 1406863,
-          "similarity": 59
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 644232,
-        "rangeLow": 540331,
-        "rangeHigh": 747943,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $644,232 (range $540,331-$747,943)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "isNew": false
-    },
-    {
-      "apn": "20807084G",
-      "address": "2094 W BELL RD   PHOENIX  85023",
-      "ownerName": "LITHIA REAL ESTATE INC",
-      "ownerMailAddress": "150 N BARTLETT ST MEDFORD OR USA 97501",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "yearsHeld": 5.9
-      },
-      "landSf": 19618,
-      "landAcres": 0.45,
-      "puc": "0012",
-      "lat": 33.64180897217745,
-      "lng": -112.10505348395697,
-      "assessedValue": 197700.0,
-      "assessedValuePerAcre": 439333.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 2.7,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 53,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [
-        {
-          "apn": "20804142",
-          "address": "1634 W GROVERS AVE   PHOENIX  85023",
-          "distanceMi": 0.71,
-          "soldDate": "2026-07-01",
-          "soldPrice": 315000.0,
-          "landSf": 8797,
-          "livingSpaceSf": 1210.0,
-          "pricePerSf": 260,
-          "pricePerAcre": 1559782,
-          "similarity": 59
-        },
-        {
-          "apn": "20804099",
-          "address": "1726 W CHARLESTON AVE   PHOENIX  85023",
-          "distanceMi": 0.68,
-          "soldDate": "2026-07-01",
-          "soldPrice": 370000.0,
-          "landSf": 8337,
-          "livingSpaceSf": 1361.0,
-          "pricePerSf": 272,
-          "pricePerAcre": 1933213,
-          "similarity": 59
-        },
-        {
-          "apn": "20804070",
-          "address": "1814 W LIBBY ST   PHOENIX  85023",
-          "distanceMi": 0.6,
-          "soldDate": "2026-05-01",
-          "soldPrice": 375000.0,
-          "landSf": 8388,
-          "livingSpaceSf": 1548.0,
-          "pricePerSf": 242,
-          "pricePerAcre": 1947425,
-          "similarity": 58
-        },
-        {
-          "apn": "20804293",
-          "address": "18216 N 18TH DR   PHOENIX  85023",
-          "distanceMi": 0.76,
-          "soldDate": "2026-08-01",
-          "soldPrice": 295000.0,
-          "landSf": 8364,
-          "livingSpaceSf": 935.0,
-          "pricePerSf": 316,
-          "pricePerAcre": 1536370,
-          "similarity": 58
-        },
-        {
-          "apn": "20804290",
-          "address": "1647 W VILLA RITA DR   PHOENIX  85023",
-          "distanceMi": 0.79,
-          "soldDate": "2026-05-01",
-          "soldPrice": 492000.0,
-          "landSf": 8925,
-          "livingSpaceSf": 2122.0,
-          "pricePerSf": 232,
-          "pricePerAcre": 2401291,
-          "similarity": 57
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 843690,
-        "rangeLow": 691931,
-        "rangeHigh": 1081463,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $843,690 (range $691,931-$1,081,463)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "isNew": false
-    },
-    {
       "apn": "21150014F",
       "address": "38405 N 17TH AVE   PHOENIX  85086",
       "ownerName": "CARTS REVOCABLE TRUST",
@@ -6506,6 +6620,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 16.3
       },
       "landSf": 54450,
@@ -6618,6 +6734,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.1
       },
       "landSf": 208652,
@@ -6733,6 +6851,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 2.8
       },
       "landSf": 23578,
@@ -6843,6 +6963,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.8
       },
       "landSf": 166401,
@@ -6889,6 +7011,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 1.7
       },
       "landSf": 33876,
@@ -6935,6 +7059,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.8
       },
       "landSf": 15394,
@@ -6981,6 +7107,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 39.8
       },
       "landSf": 190232,
@@ -7023,6 +7151,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 17.5
       },
       "landSf": 122752,
@@ -7065,6 +7195,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 27.7
       },
       "landSf": 53177,
@@ -7107,6 +7239,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 16.5
       },
       "landSf": 130252,
@@ -7149,6 +7283,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 12.8
       },
       "landSf": 10911,
@@ -7196,6 +7332,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 8.0
       },
       "landSf": 32960,
@@ -7243,6 +7381,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 11.1
       },
       "landSf": 19780,
@@ -7290,6 +7430,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 11.7
       },
       "landSf": 50206,
@@ -7337,6 +7479,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 14.2
       },
       "landSf": 109074,
@@ -7384,6 +7528,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 9.1
       },
       "landSf": 43266,
@@ -7423,53 +7569,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "21426008D",
-      "address": "2431 E BELL RD   PHOENIX  85032",
-      "ownerName": "SAGE FAMILY INVESTMENTS LLC",
-      "ownerMailAddress": "3845 STOCKTON HILL RD KINGMAN AZ USA 86409",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "yearsHeld": 10.7
-      },
-      "landSf": 39472,
-      "landAcres": 0.906,
-      "puc": "0021",
-      "lat": 33.6397746131683,
-      "lng": -112.03020646913305,
-      "assessedValue": 587400.0,
-      "assessedValuePerAcre": 648344.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3A",
-        "targetDensity": 21,
-        "basis": "adjacent parcels already zoned R-3A"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 19.0,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 52,
-      "reasons": [
-        "adjacent parcels already zoned R-3A",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 11 years"
-      ],
-      "isNew": false
-    },
-    {
       "apn": "21426009",
       "address": "2429 E BELL RD   PHOENIX  85032",
       "ownerName": "SAGE FAMILY INVESTMENTS LLC",
@@ -7478,6 +7577,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 10.7
       },
       "landSf": 28174,
@@ -7517,6 +7618,55 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "21426008D",
+      "address": "2431 E BELL RD   PHOENIX  85032",
+      "ownerName": "SAGE FAMILY INVESTMENTS LLC",
+      "ownerMailAddress": "3845 STOCKTON HILL RD KINGMAN AZ USA 86409",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 10.7
+      },
+      "landSf": 39472,
+      "landAcres": 0.906,
+      "puc": "0021",
+      "lat": 33.6397746131683,
+      "lng": -112.03020646913305,
+      "assessedValue": 587400.0,
+      "assessedValuePerAcre": 648344.0,
+      "currentZoning": "C-2",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3A",
+        "targetDensity": 21,
+        "basis": "adjacent parcels already zoned R-3A"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 19.0,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 52,
+      "reasons": [
+        "adjacent parcels already zoned R-3A",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 11 years"
+      ],
+      "isNew": false
+    },
+    {
       "apn": "21169003E",
       "address": "37228 N 19TH ST   PHOENIX  85086",
       "ownerName": "THRAPP FAMILY TRUST",
@@ -7525,6 +7675,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 6.2
       },
       "landSf": 217800,
@@ -7568,6 +7720,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 10.0
       },
       "landSf": 36864,
@@ -7614,6 +7768,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 5.8
       },
       "landSf": 108900,
@@ -7657,6 +7813,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.9
       },
       "landSf": 108900,
@@ -7700,6 +7858,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.9
       },
       "landSf": 72828,
@@ -7743,6 +7903,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 9.7
       },
       "landSf": 48901,
@@ -7789,6 +7951,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 6.9
       },
       "landSf": 105209,
@@ -7832,6 +7996,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 4.5
       },
       "landSf": 107932,
@@ -7875,6 +8041,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 5.4
       },
       "landSf": 102897,
@@ -7921,6 +8089,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 3.1
       },
       "landSf": 218324,
@@ -7963,6 +8133,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 3.3
       },
       "landSf": 49920,
@@ -8005,6 +8177,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.2
       },
       "landSf": 209088,
@@ -8047,6 +8221,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 40.7
       },
       "landSf": 31363,
@@ -8093,6 +8269,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 24.7
       },
       "landSf": 14686,
@@ -8139,6 +8317,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 17.1
       },
       "landSf": 10019,
@@ -8185,6 +8365,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 23.7
       },
       "landSf": 40895,
@@ -8231,6 +8413,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 21.4
       },
       "landSf": 48089,
@@ -8277,6 +8461,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 16.0
       },
       "landSf": 11030,
@@ -8323,6 +8509,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 32.1
       },
       "landSf": 40511,
@@ -8369,6 +8557,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 46.8
       },
       "landSf": 80376,
@@ -8415,6 +8605,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 46.7
       },
       "landSf": 102381,
@@ -8461,6 +8653,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 8.5
       },
       "landSf": 209175,
@@ -8504,6 +8698,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 9.2
       },
       "landSf": 208217,
@@ -8547,6 +8743,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 8.4
       },
       "landSf": 217183,
@@ -8590,6 +8788,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 10.9
       },
       "landSf": 18189,
@@ -8636,6 +8836,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 12.1
       },
       "landSf": 11064,
@@ -8682,6 +8884,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 16.5
       },
       "landSf": 28178,
@@ -8728,6 +8932,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 21.2
       },
       "landSf": 51338,
@@ -8774,6 +8980,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 19.0
       },
       "landSf": 39655,
@@ -8820,6 +9028,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 15.3
       },
       "landSf": 219022,
@@ -8862,6 +9072,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 22.0
       },
       "landSf": 110860,
@@ -8904,6 +9116,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 9.2
       },
       "landSf": 43651,
@@ -8947,6 +9161,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.1
       },
       "landSf": 32421,
@@ -8993,6 +9209,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 4.6
       },
       "landSf": 14505,
@@ -9039,6 +9257,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.3
       },
       "landSf": 11785,
@@ -9085,6 +9305,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 17.0
       },
       "landSf": 50086,
@@ -9128,6 +9350,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.2
       },
       "landSf": 55496,
@@ -9174,6 +9398,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 2.4
       },
       "landSf": 41929,
@@ -9220,6 +9446,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 2.1
       },
       "landSf": 61731,
@@ -9266,6 +9494,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 1.6
       },
       "landSf": 78389,
@@ -9312,6 +9542,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.7
       },
       "landSf": 47191,
@@ -9358,6 +9590,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 3.1
       },
       "landSf": 47641,
@@ -9404,6 +9638,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 6.5
       },
       "landSf": 75134,
@@ -9450,6 +9686,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 4.3
       },
       "landSf": 26479,
@@ -9496,6 +9734,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 4.3
       },
       "landSf": 17048,
@@ -9534,52 +9774,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "21174036C",
-      "address": "33106 N 12TH ST   PHOENIX  85085",
-      "ownerName": "BAT/MJT TRUST",
-      "ownerMailAddress": "34915 N 12TH ST PHOENIX AZ USA 85086",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "yearsHeld": 7.4
-      },
-      "landSf": 69254,
-      "landAcres": 1.59,
-      "puc": "0014",
-      "lat": 33.78600640513655,
-      "lng": -112.05726406365605,
-      "assessedValue": 262000.0,
-      "assessedValuePerAcre": 164780.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "RE-35",
-        "targetDensity": 1,
-        "basis": "adjacent parcels already zoned RE-35"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 1.6,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 46,
-      "reasons": [
-        "adjacent parcels already zoned RE-35",
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "isNew": false
-    },
-    {
       "apn": "21174095G",
       "address": "33109 N 7TH ST   PHOENIX  85085",
       "ownerName": "VERRYDEN FAMILY TRUST",
@@ -9588,6 +9782,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 0.9
       },
       "landSf": 51906,
@@ -9626,6 +9822,54 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "21174036C",
+      "address": "33106 N 12TH ST   PHOENIX  85085",
+      "ownerName": "BAT/MJT TRUST",
+      "ownerMailAddress": "34915 N 12TH ST PHOENIX AZ USA 85086",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 7.4
+      },
+      "landSf": 69254,
+      "landAcres": 1.59,
+      "puc": "0014",
+      "lat": 33.78600640513655,
+      "lng": -112.05726406365605,
+      "assessedValue": 262000.0,
+      "assessedValuePerAcre": 164780.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 971",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "RE-35",
+        "targetDensity": 1,
+        "basis": "adjacent parcels already zoned RE-35"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 1.6,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 46,
+      "reasons": [
+        "adjacent parcels already zoned RE-35",
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "isNew": false
+    },
+    {
       "apn": "21309007H",
       "address": "2275 E LONE CACTUS RD   PHOENIX  85024",
       "ownerName": "LONE CACTUS PROPERTY LLC",
@@ -9634,6 +9878,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.6
       },
       "landSf": 46174,
@@ -9680,6 +9926,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 3.4
       },
       "landSf": 60548,
@@ -9726,6 +9974,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.5
       },
       "landSf": 191141,
@@ -9772,6 +10022,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.5
       },
       "landSf": 173763,
@@ -9818,6 +10070,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 2.5
       },
       "landSf": 11351,
@@ -9864,6 +10118,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.7
       },
       "landSf": 32922,
@@ -9910,6 +10166,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 2.2
       },
       "landSf": 48436,
@@ -9956,6 +10214,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 2.9
       },
       "landSf": 37556,
@@ -10002,6 +10262,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 2.5
       },
       "landSf": 50035,
@@ -10048,6 +10310,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 41.8
       },
       "landSf": 205323,
@@ -10090,6 +10354,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 26.4
       },
       "landSf": 217800,
@@ -10132,6 +10398,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 19.9
       },
       "landSf": 217800,
@@ -10174,6 +10442,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 30.5
       },
       "landSf": 99012,
@@ -10216,6 +10486,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 35.1
       },
       "landSf": 139436,
@@ -10258,6 +10530,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 25.2
       },
       "landSf": 108900,
@@ -10300,6 +10574,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 39.1
       },
       "landSf": 200445,
@@ -10342,6 +10618,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 27.4
       },
       "landSf": 43516,
@@ -10384,6 +10662,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 20.6
       },
       "landSf": 69870,
@@ -10426,6 +10706,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 37.9
       },
       "landSf": 109423,
@@ -10468,6 +10750,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 17.9
       },
       "landSf": 185914,
@@ -10510,6 +10794,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 6.2
       },
       "landSf": 46575,
@@ -10555,6 +10841,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 19.6
       },
       "landSf": 131539,
@@ -10597,6 +10885,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 22.6
       },
       "landSf": 166766,
@@ -10631,48 +10921,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "20332013F",
-      "address": "38252 N 19TH AVE   PHOENIX  85086",
-      "ownerName": "CAYLOR ALAN JOSEPH",
-      "ownerMailAddress": "38252 N 19TH AVE PHOENIX AZ USA 85027",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": false,
-        "yearsHeld": 38.5
-      },
-      "landSf": 87120,
-      "landAcres": 2.0,
-      "puc": "0134",
-      "lat": 33.83266567360874,
-      "lng": -112.1018785754256,
-      "assessedValue": 387600.0,
-      "assessedValuePerAcre": 193800.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": null,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 1224.0,
-      "farRatio": 0.014049586776859505,
-      "yearBuilt": "1990",
-      "defaultDemoCost": 18000,
-      "score": 46,
-      "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "held 38+ years \u2014 likely low or no debt on the land",
-        "existing structure occupies only 1% of the lot \u2014 under-improved for the land size"
-      ],
-      "isNew": false
-    },
-    {
       "apn": "21174039",
       "address": "33511 N 12TH ST   PHOENIX  85085",
       "ownerName": "MERRILL-LOVESEY CINDY S",
@@ -10681,6 +10929,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 22.6
       },
       "landSf": 204732,
@@ -10723,6 +10973,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 53.1
       },
       "landSf": 107506,
@@ -10765,6 +11017,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 25.4
       },
       "landSf": 89995,
@@ -10799,6 +11053,50 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "20332013F",
+      "address": "38252 N 19TH AVE   PHOENIX  85086",
+      "ownerName": "CAYLOR ALAN JOSEPH",
+      "ownerMailAddress": "38252 N 19TH AVE PHOENIX AZ USA 85027",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
+        "yearsHeld": 38.5
+      },
+      "landSf": 87120,
+      "landAcres": 2.0,
+      "puc": "0134",
+      "lat": 33.83266567360874,
+      "lng": -112.1018785754256,
+      "assessedValue": 387600.0,
+      "assessedValuePerAcre": 193800.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 990",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": null,
+      "byRightUnits": null,
+      "rezoneTargetUnits": null,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 1224.0,
+      "farRatio": 0.014049586776859505,
+      "yearBuilt": "1990",
+      "defaultDemoCost": 18000,
+      "score": 46,
+      "reasons": [
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "held 38+ years \u2014 likely low or no debt on the land",
+        "existing structure occupies only 1% of the lot \u2014 under-improved for the land size"
+      ],
+      "isNew": false
+    },
+    {
       "apn": "21011022",
       "address": "26027 N 17TH AVE   PHOENIX  85085",
       "ownerName": "RIMBEY HARRY E JR/MICHAEL",
@@ -10807,6 +11105,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 1.9
       },
       "landSf": 212159,
@@ -10852,6 +11152,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 29.9
       },
       "landSf": 109150,
@@ -10894,6 +11196,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 25.5
       },
       "landSf": 40075,
@@ -10936,6 +11240,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 13.6
       },
       "landSf": 28762,
@@ -10982,6 +11288,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 14.1
       },
       "landSf": 35343,
@@ -11028,6 +11336,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 12.4
       },
       "landSf": 13580,
@@ -11074,6 +11384,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 2.4
       },
       "landSf": 60693,
@@ -11120,6 +11432,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 4.4
       },
       "landSf": 54482,
@@ -11166,6 +11480,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 2.6
       },
       "landSf": 44343,
@@ -11204,52 +11520,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "21411917",
-      "address": "18249 N 13TH PL   PHOENIX  85022",
-      "ownerName": "INDER JIT VERMA REVOCABLE LIVING TRUST",
-      "ownerMailAddress": "32009 N 16TH AVE PHOENIX AZ USA 85085",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "yearsHeld": 11.9
-      },
-      "landSf": 29698,
-      "landAcres": 0.682,
-      "puc": "0011",
-      "lat": 33.6529146143946,
-      "lng": -112.05314083517646,
-      "assessedValue": 383600.0,
-      "assessedValuePerAcre": 562463.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-2",
-        "targetDensity": 12,
-        "basis": "adjacent parcels already zoned R-2"
-      },
-      "byRightUnits": 3.4,
-      "rezoneTargetUnits": 8.2,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 44,
-      "reasons": [
-        "adjacent parcels already zoned R-2",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 12 years"
-      ],
-      "isNew": false
-    },
-    {
       "apn": "21411894",
       "address": "18055 N 14TH PL   PHOENIX  85022",
       "ownerName": "NUNEZ-RODRIGUEZ LIVING TRUST/PRATS GISELIA",
@@ -11258,6 +11528,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 8.4
       },
       "landSf": 19708,
@@ -11296,6 +11568,54 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "21411917",
+      "address": "18249 N 13TH PL   PHOENIX  85022",
+      "ownerName": "INDER JIT VERMA REVOCABLE LIVING TRUST",
+      "ownerMailAddress": "32009 N 16TH AVE PHOENIX AZ USA 85085",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 11.9
+      },
+      "landSf": 29698,
+      "landAcres": 0.682,
+      "puc": "0011",
+      "lat": 33.6529146143946,
+      "lng": -112.05314083517646,
+      "assessedValue": 383600.0,
+      "assessedValuePerAcre": 562463.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-2",
+        "targetDensity": 12,
+        "basis": "adjacent parcels already zoned R-2"
+      },
+      "byRightUnits": 3.4,
+      "rezoneTargetUnits": 8.2,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 44,
+      "reasons": [
+        "adjacent parcels already zoned R-2",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 12 years"
+      ],
+      "isNew": false
+    },
+    {
       "apn": "21411918",
       "address": "18241 N 13TH PL   PHOENIX  85022",
       "ownerName": "INDER JIT VERMA REVOCABLE LIVING TRUST",
@@ -11304,6 +11624,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 11.9
       },
       "landSf": 38021,
@@ -11350,6 +11672,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 13.9
       },
       "landSf": 23577,
@@ -11396,6 +11720,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 13.9
       },
       "landSf": 23577,
@@ -11442,6 +11768,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 11.4
       },
       "landSf": 42128,
@@ -11488,6 +11816,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 13.6
       },
       "landSf": 32922,
@@ -11534,6 +11864,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 11.0
       },
       "landSf": 40497,
@@ -11580,6 +11912,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 12.1
       },
       "landSf": 47788,
@@ -11626,6 +11960,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 12.1
       },
       "landSf": 43326,
@@ -11664,48 +12000,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "21169020A",
-      "address": "37015 N 20TH ST   PHOENIX  85086",
-      "ownerName": "DOUBLE D 2 LIVING TRUST",
-      "ownerMailAddress": "37015 N 20TH ST PHOENIX AZ USA 85086",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "yearsHeld": 4.2
-      },
-      "landSf": 202180,
-      "landAcres": 4.641,
-      "puc": "0131",
-      "lat": 33.821335639310675,
-      "lng": -112.03800893647445,
-      "assessedValue": 433500.0,
-      "assessedValuePerAcre": 93407.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": null,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 1344.0,
-      "farRatio": 0.006647541794440597,
-      "yearBuilt": "1985",
-      "defaultDemoCost": 18000,
-      "score": 44,
-      "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "existing structure occupies only 1% of the lot \u2014 under-improved for the land size"
-      ],
-      "isNew": false
-    },
-    {
       "apn": "21173039B",
       "address": "133 W RIDGECREST RD   PHOENIX  85086",
       "ownerName": "RIDGECREST RANCH LLC",
@@ -11714,6 +12008,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 2.3
       },
       "landSf": 88834,
@@ -11748,6 +12044,50 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "21169020A",
+      "address": "37015 N 20TH ST   PHOENIX  85086",
+      "ownerName": "DOUBLE D 2 LIVING TRUST",
+      "ownerMailAddress": "37015 N 20TH ST PHOENIX AZ USA 85086",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
+        "yearsHeld": 4.2
+      },
+      "landSf": 202180,
+      "landAcres": 4.641,
+      "puc": "0131",
+      "lat": 33.821335639310675,
+      "lng": -112.03800893647445,
+      "assessedValue": 433500.0,
+      "assessedValuePerAcre": 93407.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 990",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": null,
+      "byRightUnits": null,
+      "rezoneTargetUnits": null,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 1344.0,
+      "farRatio": 0.006647541794440597,
+      "yearBuilt": "1985",
+      "defaultDemoCost": 18000,
+      "score": 44,
+      "reasons": [
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "existing structure occupies only 1% of the lot \u2014 under-improved for the land size"
+      ],
+      "isNew": false
+    },
+    {
       "apn": "21172029",
       "address": "42002 N 3RD ST   PHOENIX  85086",
       "ownerName": "MIRACLE FAMILY LIVING TRUST",
@@ -11756,6 +12096,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 7.8
       },
       "landSf": 160050,
@@ -11798,6 +12140,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 3.5
       },
       "landSf": 217800,
@@ -11840,6 +12184,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 4.6
       },
       "landSf": 155400,
@@ -11882,6 +12228,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 3.7
       },
       "landSf": 195672,
@@ -11924,6 +12272,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 7.9
       },
       "landSf": 114171,
@@ -11966,6 +12316,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 5.1
       },
       "landSf": 207912,
@@ -12008,6 +12360,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 3.9
       },
       "landSf": 139168,
@@ -12050,6 +12404,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.3
       },
       "landSf": 108900,
@@ -12092,6 +12448,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 2.9
       },
       "landSf": 199635,
@@ -12134,6 +12492,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 1.4
       },
       "landSf": 102279,
@@ -12176,6 +12536,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 7.4
       },
       "landSf": 204601,
@@ -12218,6 +12580,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 2.9
       },
       "landSf": 167733,
@@ -12260,6 +12624,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 5.5
       },
       "landSf": 22443,
@@ -12305,6 +12671,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 3.0
       },
       "landSf": 27731,
@@ -12350,6 +12718,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 0.1
       },
       "landSf": 36147,
@@ -12395,6 +12765,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 22.1
       },
       "landSf": 67509,
@@ -12437,6 +12809,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 0.2
       },
       "landSf": 19873,
@@ -12482,6 +12856,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 13.8
       },
       "landSf": 63177,
@@ -12528,6 +12904,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 1.3
       },
       "landSf": 124048,
@@ -12570,6 +12948,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 3.9
       },
       "landSf": 199906,
@@ -12612,6 +12992,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 8.3
       },
       "landSf": 109572,
@@ -12654,6 +13036,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 4.2
       },
       "landSf": 190793,
@@ -12696,6 +13080,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 8.5
       },
       "landSf": 218441,
@@ -12738,6 +13124,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 4.1
       },
       "landSf": 209436,
@@ -12780,6 +13168,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 11.2
       },
       "landSf": 99012,
@@ -12822,6 +13212,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 10.3
       },
       "landSf": 52098,
@@ -12864,6 +13256,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.9
       },
       "landSf": 108900,
@@ -12906,6 +13300,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.2
       },
       "landSf": 44955,
@@ -12948,6 +13344,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 2.5
       },
       "landSf": 47350,
@@ -12989,6 +13387,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 1.7
       },
       "landSf": 52200,
@@ -13030,6 +13430,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 5.3
       },
       "landSf": 208215,
@@ -13071,6 +13473,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 4.6
       },
       "landSf": 108900,
@@ -13112,6 +13516,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 3.3
       },
       "landSf": 103934,
@@ -13153,6 +13559,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 20.7
       },
       "landSf": 17018,
@@ -13198,6 +13606,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 29.7
       },
       "landSf": 10482,
@@ -13243,6 +13653,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 35.7
       },
       "landSf": 17989,
@@ -13288,6 +13700,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 25.8
       },
       "landSf": 12030,
@@ -13333,6 +13747,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 19.8
       },
       "landSf": 10395,
@@ -13378,6 +13794,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 20.4
       },
       "landSf": 18879,
@@ -13423,6 +13841,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 16.7
       },
       "landSf": 23169,
@@ -13468,6 +13888,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 19.9
       },
       "landSf": 33611,
@@ -13513,6 +13935,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 18.0
       },
       "landSf": 26242,
@@ -13558,6 +13982,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 12.0
       },
       "landSf": 126474,
@@ -13590,7 +14016,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 12 years"
       ],
-      "isNew": true
+      "isNew": false
     },
     {
       "apn": "21149021C",
@@ -13601,6 +14027,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 11.1
       },
       "landSf": 94699,
@@ -13644,6 +14072,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 9.5
       },
       "landSf": 207911,
@@ -13687,6 +14117,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 21.0
       },
       "landSf": 12252,
@@ -13732,6 +14164,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 24.4
       },
       "landSf": 11918,
@@ -13777,6 +14211,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 15.8
       },
       "landSf": 52577,
@@ -13822,6 +14258,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 24.3
       },
       "landSf": 58894,
@@ -13867,6 +14305,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 16.3
       },
       "landSf": 55627,
@@ -13912,6 +14352,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 17.0
       },
       "landSf": 20007,
@@ -13957,6 +14399,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 9.2
       },
       "landSf": 204601,
@@ -13999,6 +14443,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 14.8
       },
       "landSf": 204601,
@@ -14041,6 +14487,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 10.2
       },
       "landSf": 55704,
@@ -14083,6 +14531,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 13.3
       },
       "landSf": 217522,
@@ -14125,6 +14575,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 14.5
       },
       "landSf": 109771,
@@ -14167,6 +14619,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 14.3
       },
       "landSf": 108900,
@@ -14209,6 +14663,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 12.4
       },
       "landSf": 208280,
@@ -14251,6 +14707,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 8.9
       },
       "landSf": 94961,
@@ -14293,6 +14751,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 12.5
       },
       "landSf": 203198,
@@ -14335,6 +14795,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 11.1
       },
       "landSf": 104131,
@@ -14377,6 +14839,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 3.5
       },
       "landSf": 59416,
@@ -14414,51 +14878,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "16611007",
-      "address": "13202 N 22ND ST   PHOENIX  85022",
-      "ownerName": "13202 N 22ND STREET LLC",
-      "ownerMailAddress": "14425 N 7TH ST STE 101 PHOENIX AZ USA 85022",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "yearsHeld": 1.7
-      },
-      "landSf": 15302,
-      "landAcres": 0.351,
-      "puc": "0021",
-      "lat": 33.60582761910352,
-      "lng": -112.03541042996949,
-      "assessedValue": 202100.0,
-      "assessedValuePerAcre": 575783.0,
-      "currentZoning": "R-3",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-5",
-        "targetDensity": 43,
-        "basis": "adjacent parcels already zoned R-5"
-      },
-      "byRightUnits": 5.6,
-      "rezoneTargetUnits": 15.1,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 38,
-      "reasons": [
-        "adjacent parcels already zoned R-5",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "isNew": false
-    },
-    {
       "apn": "16611005",
       "address": "13202 N 22ND ST   PHOENIX  85022",
       "ownerName": "13202 N 22ND STREET LLC",
@@ -14467,6 +14886,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 1.7
       },
       "landSf": 15238,
@@ -14504,6 +14925,53 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "16611007",
+      "address": "13202 N 22ND ST   PHOENIX  85022",
+      "ownerName": "13202 N 22ND STREET LLC",
+      "ownerMailAddress": "14425 N 7TH ST STE 101 PHOENIX AZ USA 85022",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 1.7
+      },
+      "landSf": 15302,
+      "landAcres": 0.351,
+      "puc": "0021",
+      "lat": 33.60582761910352,
+      "lng": -112.03541042996949,
+      "assessedValue": 202100.0,
+      "assessedValuePerAcre": 575783.0,
+      "currentZoning": "R-3",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-5",
+        "targetDensity": 43,
+        "basis": "adjacent parcels already zoned R-5"
+      },
+      "byRightUnits": 5.6,
+      "rezoneTargetUnits": 15.1,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 38,
+      "reasons": [
+        "adjacent parcels already zoned R-5",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "isNew": false
+    },
+    {
       "apn": "16643029",
       "address": "1702 E CALLE SANTA CRUZ    PHOENIX  85022",
       "ownerName": "1702 E CALLE SANTA CRUZ LLC",
@@ -14512,6 +14980,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 2.3
       },
       "landSf": 11914,
@@ -14557,6 +15027,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.6
       },
       "landSf": 24947,
@@ -14602,6 +15074,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 6.6
       },
       "landSf": 21376,
@@ -14647,6 +15121,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 1.2
       },
       "landSf": 31991,
@@ -14692,6 +15168,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 2.5
       },
       "landSf": 57969,
@@ -14737,6 +15215,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 7.4
       },
       "landSf": 53183,
@@ -14774,51 +15254,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "20325697",
-      "address": "2424 W PRAIANO WAY   PHOENIX  85086",
-      "ownerName": "MICHAEL AND CINDY FARRAGE TRUST",
-      "ownerMailAddress": "4814 W SADDLEHORN RD PHOENIX AZ USA 85083",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "yearsHeld": 7.4
-      },
-      "landSf": 47257,
-      "landAcres": 1.085,
-      "puc": "0011",
-      "lat": 33.81143834530267,
-      "lng": -112.1114786702295,
-      "assessedValue": 237300.0,
-      "assessedValuePerAcre": 218710.0,
-      "currentZoning": "RE-35",
-      "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-18",
-        "targetDensity": 2,
-        "basis": "adjacent parcels already zoned R1-18"
-      },
-      "byRightUnits": 1.1,
-      "rezoneTargetUnits": 2.2,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 38,
-      "reasons": [
-        "adjacent parcels already zoned R1-18",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "isNew": false
-    },
-    {
       "apn": "20325700",
       "address": "2516 W PRAIANO WAY   PHOENIX  85086",
       "ownerName": "JRM TRUST",
@@ -14827,6 +15262,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 5.4
       },
       "landSf": 49023,
@@ -14864,6 +15301,53 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "20325697",
+      "address": "2424 W PRAIANO WAY   PHOENIX  85086",
+      "ownerName": "MICHAEL AND CINDY FARRAGE TRUST",
+      "ownerMailAddress": "4814 W SADDLEHORN RD PHOENIX AZ USA 85083",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 7.4
+      },
+      "landSf": 47257,
+      "landAcres": 1.085,
+      "puc": "0011",
+      "lat": 33.81143834530267,
+      "lng": -112.1114786702295,
+      "assessedValue": 237300.0,
+      "assessedValuePerAcre": 218710.0,
+      "currentZoning": "RE-35",
+      "generalPlanDesignation": "GP code 971",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-18",
+        "targetDensity": 2,
+        "basis": "adjacent parcels already zoned R1-18"
+      },
+      "byRightUnits": 1.1,
+      "rezoneTargetUnits": 2.2,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 38,
+      "reasons": [
+        "adjacent parcels already zoned R1-18",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "isNew": false
+    },
+    {
       "apn": "20604060A",
       "address": "2702 W ROBIN LN   PHOENIX  85027",
       "ownerName": "AM TRAILER PARK LLC",
@@ -14872,6 +15356,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.7
       },
       "landSf": 18115,
@@ -14917,6 +15403,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 2.3
       },
       "landSf": 127239,
@@ -14962,6 +15450,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 2.9
       },
       "landSf": 52533,
@@ -15007,6 +15497,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 4.3
       },
       "landSf": 30429,
@@ -15041,7 +15533,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
-      "isNew": true
+      "isNew": false
     },
     {
       "apn": "20907014",
@@ -15052,6 +15544,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 4.6
       },
       "landSf": 38982,
@@ -15059,6 +15553,53 @@ window.PHX_LAND_LEADS = {
       "puc": "0021",
       "lat": 33.681560244130935,
       "lng": -112.10991749819534,
+      "assessedValue": 353200.0,
+      "assessedValuePerAcre": 394637.0,
+      "currentZoning": "A-1",
+      "generalPlanDesignation": "GP code 110",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-5",
+        "targetDensity": 43,
+        "basis": "adjacent parcels already zoned R-5"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 38.5,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 38,
+      "reasons": [
+        "adjacent parcels already zoned R-5",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "isNew": false
+    },
+    {
+      "apn": "20907017",
+      "address": "21435 N 24TH AVE   PHOENIX  85027",
+      "ownerName": "ANTIQUE TILE LLC",
+      "ownerMailAddress": "22026 N 24TH AVE PHOENIX AZ USA 85027",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 4.6
+      },
+      "landSf": 38982,
+      "landAcres": 0.895,
+      "puc": "0021",
+      "lat": 33.68107104272052,
+      "lng": -112.10991342963334,
       "assessedValue": 353200.0,
       "assessedValuePerAcre": 394637.0,
       "currentZoning": "A-1",
@@ -15097,6 +15638,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 4.0
       },
       "landSf": 65170,
@@ -15134,51 +15677,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "20907017",
-      "address": "21435 N 24TH AVE   PHOENIX  85027",
-      "ownerName": "ANTIQUE TILE LLC",
-      "ownerMailAddress": "22026 N 24TH AVE PHOENIX AZ USA 85027",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "yearsHeld": 4.6
-      },
-      "landSf": 38982,
-      "landAcres": 0.895,
-      "puc": "0021",
-      "lat": 33.68107104272052,
-      "lng": -112.10991342963334,
-      "assessedValue": 353200.0,
-      "assessedValuePerAcre": 394637.0,
-      "currentZoning": "A-1",
-      "generalPlanDesignation": "GP code 110",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-5",
-        "targetDensity": 43,
-        "basis": "adjacent parcels already zoned R-5"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 38.5,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 38,
-      "reasons": [
-        "adjacent parcels already zoned R-5",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "isNew": false
-    },
-    {
       "apn": "21011001D",
       "address": "25847 N 19TH AVE   PHOENIX  85085",
       "ownerName": "LITTLE INVESTMENTS L L C",
@@ -15187,6 +15685,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 6.9
       },
       "landSf": 76851,
@@ -15232,6 +15732,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.6
       },
       "landSf": 14834,
@@ -15277,6 +15779,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 15.1
       },
       "landSf": 54502,
@@ -15319,6 +15823,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 23.1
       },
       "landSf": 53897,
@@ -15361,6 +15867,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 15.7
       },
       "landSf": 181252,
@@ -15403,6 +15911,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.6
       },
       "landSf": 48057,
@@ -15440,51 +15950,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "21316023B",
-      "address": "19047 N 28TH ST   PHOENIX  85050",
-      "ownerName": "19047 NORTH 28TH STREET LLC",
-      "ownerMailAddress": "2601 E BELL RD STE 7 PHOENIX AZ USA 85032",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "yearsHeld": 1.5
-      },
-      "landSf": 43560,
-      "landAcres": 1.0,
-      "puc": "0012",
-      "lat": 33.66034398694982,
-      "lng": -112.02168491219123,
-      "assessedValue": 362900.0,
-      "assessedValuePerAcre": 362900.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3",
-        "targetDensity": 16,
-        "basis": "adjacent parcels already zoned R-3"
-      },
-      "byRightUnits": 5.0,
-      "rezoneTargetUnits": 16.0,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 38,
-      "reasons": [
-        "adjacent parcels already zoned R-3",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "isNew": false
-    },
-    {
       "apn": "21316016C",
       "address": "2818 E SIESTA LN   PHOENIX  85050",
       "ownerName": "CAMPBELL FAMILY LIVING TRUST",
@@ -15493,6 +15958,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 7.3
       },
       "landSf": 19036,
@@ -15530,35 +15997,37 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "21317070",
-      "address": "2923 E ESCUDA RD   PHOENIX  85050",
-      "ownerName": "JL REMODELING LLC",
-      "ownerMailAddress": "PO BOX 72413 PHOENIX AZ USA 85050",
+      "apn": "21316023B",
+      "address": "19047 N 28TH ST   PHOENIX  85050",
+      "ownerName": "19047 NORTH 28TH STREET LLC",
+      "ownerMailAddress": "2601 E BELL RD STE 7 PHOENIX AZ USA 85032",
       "ownership": {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
-        "yearsHeld": 2.2
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 1.5
       },
-      "landSf": 14649,
-      "landAcres": 0.336,
-      "puc": "0011",
-      "lat": 33.66857917039071,
-      "lng": -112.02031325432026,
-      "assessedValue": 205000.0,
-      "assessedValuePerAcre": 610119.0,
+      "landSf": 43560,
+      "landAcres": 1.0,
+      "puc": "0012",
+      "lat": 33.66034398694982,
+      "lng": -112.02168491219123,
+      "assessedValue": 362900.0,
+      "assessedValuePerAcre": 362900.0,
       "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 40",
+      "generalPlanDesignation": "GP code 38",
       "floodZone": "X",
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
-        "targetZone": "R-4",
-        "targetDensity": 25,
-        "basis": "adjacent parcels already zoned R-4"
+        "targetZone": "R-3",
+        "targetDensity": 16,
+        "basis": "adjacent parcels already zoned R-3"
       },
-      "byRightUnits": 1.7,
-      "rezoneTargetUnits": 8.4,
+      "byRightUnits": 5.0,
+      "rezoneTargetUnits": 16.0,
       "dealType": "rental",
       "referenceCostPerLotAZ": null,
       "parcelStatus": "vacant",
@@ -15568,7 +16037,7 @@ window.PHX_LAND_LEADS = {
       "defaultDemoCost": null,
       "score": 38,
       "reasons": [
-        "adjacent parcels already zoned R-4",
+        "adjacent parcels already zoned R-3",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
@@ -15583,6 +16052,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 5.7
       },
       "landSf": 10296,
@@ -15628,6 +16099,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 4.9
       },
       "landSf": 21659,
@@ -15665,6 +16138,53 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "21317070",
+      "address": "2923 E ESCUDA RD   PHOENIX  85050",
+      "ownerName": "JL REMODELING LLC",
+      "ownerMailAddress": "PO BOX 72413 PHOENIX AZ USA 85050",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 2.2
+      },
+      "landSf": 14649,
+      "landAcres": 0.336,
+      "puc": "0011",
+      "lat": 33.66857917039071,
+      "lng": -112.02031325432026,
+      "assessedValue": 205000.0,
+      "assessedValuePerAcre": 610119.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 40",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-4",
+        "targetDensity": 25,
+        "basis": "adjacent parcels already zoned R-4"
+      },
+      "byRightUnits": 1.7,
+      "rezoneTargetUnits": 8.4,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 38,
+      "reasons": [
+        "adjacent parcels already zoned R-4",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "isNew": false
+    },
+    {
       "apn": "21326002R",
       "address": "19819 N 22ND ST   PHOENIX  85024",
       "ownerName": "NORTHERN SNOW LLC",
@@ -15673,6 +16193,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.6
       },
       "landSf": 49484,
@@ -15718,6 +16240,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 2.9
       },
       "landSf": 36746,
@@ -15755,51 +16279,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "21403086A",
-      "address": "2827 E ANGELA DR   PHOENIX  85032",
-      "ownerName": "21606 NORTH 23RD AVENUE LLC",
-      "ownerMailAddress": "4643 E THOMAS RD STE 1 PHOENIX AZ USA 85018",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "yearsHeld": 3.3
-      },
-      "landSf": 12261,
-      "landAcres": 0.281,
-      "puc": "0011",
-      "lat": 33.64507260188399,
-      "lng": -112.02090186099421,
-      "assessedValue": 171600.0,
-      "assessedValuePerAcre": 610676.0,
-      "currentZoning": "R-3",
-      "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3A",
-        "targetDensity": 21,
-        "basis": "adjacent parcels already zoned R-3A"
-      },
-      "byRightUnits": 4.5,
-      "rezoneTargetUnits": 5.9,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 38,
-      "reasons": [
-        "adjacent parcels already zoned R-3A",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "isNew": false
-    },
-    {
       "apn": "21403086B",
       "address": "2823 E ANGELA DR   PHOENIX  85032",
       "ownerName": "21606 NORTH 23RD AVENUE LLC",
@@ -15808,6 +16287,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 3.3
       },
       "landSf": 12276,
@@ -15845,6 +16326,53 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "21403086A",
+      "address": "2827 E ANGELA DR   PHOENIX  85032",
+      "ownerName": "21606 NORTH 23RD AVENUE LLC",
+      "ownerMailAddress": "4643 E THOMAS RD STE 1 PHOENIX AZ USA 85018",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 3.3
+      },
+      "landSf": 12261,
+      "landAcres": 0.281,
+      "puc": "0011",
+      "lat": 33.64507260188399,
+      "lng": -112.02090186099421,
+      "assessedValue": 171600.0,
+      "assessedValuePerAcre": 610676.0,
+      "currentZoning": "R-3",
+      "generalPlanDesignation": "GP code 41",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3A",
+        "targetDensity": 21,
+        "basis": "adjacent parcels already zoned R-3A"
+      },
+      "byRightUnits": 4.5,
+      "rezoneTargetUnits": 5.9,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 38,
+      "reasons": [
+        "adjacent parcels already zoned R-3A",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "isNew": false
+    },
+    {
       "apn": "21403086C",
       "address": "2819 E ANGELA DR   PHOENIX  85032",
       "ownerName": "21606 NORTH 23RD AVENUE LLC",
@@ -15853,6 +16381,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 3.3
       },
       "landSf": 12276,
@@ -15898,6 +16428,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 4.9
       },
       "landSf": 12300,
@@ -15943,6 +16475,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 1.4
       },
       "landSf": 17927,
@@ -15988,6 +16522,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.1
       },
       "landSf": 174239,
@@ -16033,6 +16569,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 3.9
       },
       "landSf": 11930,
@@ -16078,6 +16616,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 2.0
       },
       "landSf": 32810,
@@ -16123,6 +16663,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 0.6
       },
       "landSf": 111005,
@@ -16168,6 +16710,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 4.9
       },
       "landSf": 33826,
@@ -16213,6 +16757,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
         "yearsHeld": 3.0
       },
       "landSf": 96975,
@@ -16258,6 +16804,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 21.5
       },
       "landSf": 102322,
@@ -16299,6 +16847,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 19.3
       },
       "landSf": 217931,
@@ -16340,6 +16890,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 40.1
       },
       "landSf": 54561,
@@ -16381,6 +16933,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 23.3
       },
       "landSf": 115809,
@@ -16422,6 +16976,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 26.7
       },
       "landSf": 195197,
@@ -16463,6 +17019,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 22.3
       },
       "landSf": 106157,
@@ -16504,6 +17062,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 14.8
       },
       "landSf": 43500,
@@ -16546,6 +17106,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 3.2
       },
       "landSf": 11979,
@@ -16591,6 +17153,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 2.2
       },
       "landSf": 10026,
@@ -16636,6 +17200,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 0.4
       },
       "landSf": 17951,
@@ -16681,6 +17247,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 2.6
       },
       "landSf": 23087,
@@ -16726,6 +17294,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 0.3
       },
       "landSf": 23349,
@@ -16771,6 +17341,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 5.4
       },
       "landSf": 22826,
@@ -16816,6 +17388,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 0.1
       },
       "landSf": 22817,
@@ -16853,51 +17427,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "20816430",
-      "address": "1540 W ST MORITZ LN   PHOENIX  85023",
-      "ownerName": "REYNOLDS LIANNE NOEL",
-      "ownerMailAddress": "6100 W AUDREY LN GLENDALE AZ USA 85308",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": false,
-        "yearsHeld": 3.0
-      },
-      "landSf": 37830,
-      "landAcres": 0.868,
-      "puc": "0011",
-      "lat": 33.62068127428327,
-      "lng": -112.09482424926118,
-      "assessedValue": 253100.0,
-      "assessedValuePerAcre": 291590.0,
-      "currentZoning": "PAD-3",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-8",
-        "targetDensity": 5,
-        "basis": "adjacent parcels already zoned R1-8"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 4.3,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 36,
-      "reasons": [
-        "adjacent parcels already zoned R1-8",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city"
-      ],
-      "isNew": false
-    },
-    {
       "apn": "20816425",
       "address": "1515 W ST MORITZ LN   PHOENIX  85023",
       "ownerName": "OROBIYI MICHAEL/ROGERS  NIKE",
@@ -16906,6 +17435,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 1.2
       },
       "landSf": 27261,
@@ -16943,6 +17474,53 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "20816430",
+      "address": "1540 W ST MORITZ LN   PHOENIX  85023",
+      "ownerName": "REYNOLDS LIANNE NOEL",
+      "ownerMailAddress": "6100 W AUDREY LN GLENDALE AZ USA 85308",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
+        "yearsHeld": 3.0
+      },
+      "landSf": 37830,
+      "landAcres": 0.868,
+      "puc": "0011",
+      "lat": 33.62068127428327,
+      "lng": -112.09482424926118,
+      "assessedValue": 253100.0,
+      "assessedValuePerAcre": 291590.0,
+      "currentZoning": "PAD-3",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": "X",
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-8",
+        "targetDensity": 5,
+        "basis": "adjacent parcels already zoned R1-8"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 4.3,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 36,
+      "reasons": [
+        "adjacent parcels already zoned R1-8",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city"
+      ],
+      "isNew": false
+    },
+    {
       "apn": "20816439",
       "address": "15202 N 15TH DR   PHOENIX  85023",
       "ownerName": "DINAKARANRAO AADEN NITHIN KUMAR/RAJENDRAN ARCHANA",
@@ -16951,6 +17529,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 4.4
       },
       "landSf": 53110,
@@ -16996,6 +17576,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 7.2
       },
       "landSf": 75134,
@@ -17041,6 +17623,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 3.6
       },
       "landSf": 58847,
@@ -17086,6 +17670,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 31.5
       },
       "landSf": 53186,
@@ -17128,6 +17714,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 1.7
       },
       "landSf": 18842,
@@ -17173,6 +17761,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 2.2
       },
       "landSf": 40816,
@@ -17218,6 +17808,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 6.1
       },
       "landSf": 27257,
@@ -17263,6 +17855,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
         "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
         "yearsHeld": 3.1
       },
       "landSf": 32581,
@@ -17308,6 +17902,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 2.6
       },
       "landSf": 390409,
@@ -17349,6 +17945,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 2.0
       },
       "landSf": 310835,
@@ -17390,6 +17988,8 @@ window.PHX_LAND_LEADS = {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
         "yearsHeld": 1.5
       },
       "landSf": 215459,

@@ -303,6 +303,17 @@ def estimate_rezone_target(current_zoning, surrounding_zones):
     return None
 
 
+def _street_part(addr, city):
+    """Strip an address down to its street segment (everything before the city),
+    normalized, so a situs address and a differently-formatted mailing address
+    can be compared for a match."""
+    addr = re.sub(r"\s+", " ", (addr or "").upper()).strip()
+    city = (city or "").upper().strip()
+    if city and city in addr:
+        return addr.split(city)[0].strip()
+    return addr
+
+
 def analyze_ownership(p):
     owner = (p.get("OWNER_NAME") or "").upper()
     mail_city = (p.get("MAIL_CITY") or "").upper().strip()
@@ -317,13 +328,24 @@ def analyze_ownership(p):
         except Exception:
             years_held = None
 
+    is_entity_owner = (
+        any(kw in owner for kw in OWNERSHIP_ENTITY_KEYWORDS)
+        or any(re.search(rf"\b{re.escape(w)}\b", owner) for w in OWNERSHIP_CORPORATE_WORDS)
+    )
+    is_owner_occupied = bool(
+        _street_part(p.get("MAIL_ADDRESS"), mail_city)
+        and _street_part(p.get("MAIL_ADDRESS"), mail_city) == _street_part(p.get("PHYSICAL_ADDRESS"), phys_city)
+    )
+
     return {
         "isOutOfStateOwner": bool(mail_state and mail_state != "AZ"),
         "isAbsenteeLocal": bool(mail_state == "AZ" and mail_city and phys_city and mail_city != phys_city),
-        "isEntityOwner": (
-            any(kw in owner for kw in OWNERSHIP_ENTITY_KEYWORDS)
-            or any(re.search(rf"\b{re.escape(w)}\b", owner) for w in OWNERSHIP_CORPORATE_WORDS)
-        ),
+        "isEntityOwner": is_entity_owner,
+        # A trust/LLC whose mailing address IS the property address isn't a hidden
+        # shell — it's a family's own estate-planning wrapper around their house.
+        # Only flag it as needing real ownership unmasking when it's NOT owner-occupied.
+        "isOwnerOccupied": is_owner_occupied,
+        "isHiddenOwner": bool(is_entity_owner and not is_owner_occupied),
         "yearsHeld": years_held,
     }
 
