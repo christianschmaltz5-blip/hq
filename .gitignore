@@ -2,3 +2,5 @@
 __pycache__/
 agents/phx_land_leads/.env
 agents/phx_land_leads/contact_cache.json
+agents/phx_cap_scan/.venv/
+agents/phx_cap_scan/scrape_output.json
