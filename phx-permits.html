@@ -133,7 +133,13 @@
           <h2>Active Sites — Ranked by Reported Valuation</h2>
           <span class="card-sub">Click an address for the full dossier. Showing top 500 of the window.</span>
         </div>
-        <div class="search-row"><input class="search-input" id="siteSearch" type="text" placeholder="Search address or contractor…"></div>
+        <div class="search-row" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
+          <input class="search-input" id="siteSearch" type="text" placeholder="Search address or contractor…" style="flex:1; min-width:200px;">
+          <input class="search-input" id="minPrice" type="number" placeholder="Min valuation $" style="width:150px;">
+          <input class="search-input" id="maxPrice" type="number" placeholder="Max valuation $" style="width:150px;">
+          <input class="search-input" id="minIssued" type="date" title="Issued after" style="width:150px;">
+          <input class="search-input" id="maxIssued" type="date" title="Issued before" style="width:150px;">
+        </div>
         <div class="table-wrap"><table class="dtbl" id="sites-table"></table></div>
       </div>
 
@@ -260,12 +266,24 @@ function toggleDossier(i){
   document.getElementById(`dossier-${i}`).classList.toggle('show');
 }
 
-document.getElementById('siteSearch').addEventListener('input', e=>{
-  const q = e.target.value.trim().toLowerCase();
-  const filtered = !q ? siteRows : siteRows.filter(s =>
-    (s.address||'').toLowerCase().includes(q) || (s.contractor||'').toLowerCase().includes(q));
+function applyFilters(){
+  const q = document.getElementById('siteSearch').value.trim().toLowerCase();
+  const minP = parseFloat(document.getElementById('minPrice').value);
+  const maxP = parseFloat(document.getElementById('maxPrice').value);
+  const minD = document.getElementById('minIssued').value ? new Date(document.getElementById('minIssued').value).getTime() : null;
+  const maxD = document.getElementById('maxIssued').value ? new Date(document.getElementById('maxIssued').value).getTime() + 86400000 - 1 : null;
+  const filtered = siteRows.filter(s => {
+    if(q && !((s.address||'').toLowerCase().includes(q) || (s.contractor||'').toLowerCase().includes(q))) return false;
+    if(!isNaN(minP) && !(s.valuation >= minP)) return false;
+    if(!isNaN(maxP) && !(s.valuation <= maxP)) return false;
+    if(minD != null && !(s.issueDateMs >= minD)) return false;
+    if(maxD != null && !(s.issueDateMs <= maxD)) return false;
+    return true;
+  });
   renderSites(filtered);
-});
+}
+['siteSearch','minPrice','maxPrice'].forEach(id => document.getElementById(id).addEventListener('input', applyFilters));
+['minIssued','maxIssued'].forEach(id => document.getElementById(id).addEventListener('change', applyFilters));
 
 // ── Contractor book ──────────────────────────────────────────────────────
 const cb = D.contractorBook || [];

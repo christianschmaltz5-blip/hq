@@ -1,2 +1,4 @@
 .gstack/
 __pycache__/
+agents/phx_land_leads/.env
+agents/phx_land_leads/contact_cache.json
