@@ -74,8 +74,11 @@ BUILDER_OWNER_KEYWORDS = (
 )
 REZONING_RADIUS_MILES = 0.5
 NEIGHBOR_ZONING_RADIUS_MILES = 0.15  # tight radius — "immediately adjacent" zoning context
-MAX_PARCELS_ENRICHED = 400    # cap per-parcel GIS lookups (5 calls each) to be
-                               # a good citizen on public/government servers
+MAX_PARCELS_ENRICHED = 50000  # effectively unlimited -- full coverage every run.
+                               # ~1.15s/parcel single-threaded, so full North
+                               # Phoenix backlog (~9k parcels) runs in ~20min at
+                               # ENRICH_WORKERS concurrency -- no rate-limit risk,
+                               # same peak load as before, just longer duration.
 ENRICH_WORKERS = 8
 OUT_PATH = Path(__file__).resolve().parents[2] / "phx-land-leads" / "data.js"
 
@@ -120,7 +123,7 @@ REFERENCE_COST_PER_LOT_AZ = 65000
 MIN_IMPROVED_LAND_SIZE_SF = 14000   # ~0.32 acre — meaningfully oversized vs
                                      # a standard 6-8k sf platted lot
 MAX_UNDERUSE_FAR = 0.14             # structure occupies <14% of the lot
-MAX_IMPROVED_ENRICHED = 200         # separate cap from vacant-parcel enrichment
+MAX_IMPROVED_ENRICHED = 50000        # effectively unlimited, see MAX_PARCELS_ENRICHED
 COMPS_MAX_LEADS = 60                # only the top-scored leads get a comps lookup
                                      # (bounds daily load on the county's public GIS)
 
