@@ -420,7 +420,8 @@ function renderAcqKpis(idx, state, lead){
 // ── Comparable sales ────────────────────────────────────────────────────
 function compsSectionHtml(lead){
   if(!('comps' in lead)){
-    return ''; // outside the top-scored batch the daily job comps automatically
+    return `<div class="comps-section"><div class="comps-title">Comparable Sales</div>
+      <div class="comps-empty">Not pulled yet — the daily scan only runs comps on the top 60 scored leads to keep the job fast. This lead is ranked outside that batch; if its score climbs into the top 60 on a future run, comps will appear here automatically.</div></div>`;
   }
   const comps = lead.comps || [];
   if(!comps.length){
