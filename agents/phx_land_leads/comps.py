@@ -15,9 +15,11 @@ appraisal.
 
 No network calls happen unless build_comps_for_lead() is called.
 """
+import http.client
 import json
 import math
 import re
+import threading
 import time
 import urllib.parse
 import urllib.request
@@ -65,15 +67,30 @@ def _land_use_class(puc):
     return None
 
 
+_MARICOPA_HOST = urllib.parse.urlsplit(MARICOPA_PARCELS).netloc
+_MARICOPA_PATH = urllib.parse.urlsplit(MARICOPA_PARCELS).path
+_thread_local = threading.local()  # one keep-alive HTTPSConnection per thread
+
+
+def _get_conn():
+    conn = getattr(_thread_local, "conn", None)
+    if conn is None:
+        conn = _thread_local.conn = http.client.HTTPSConnection(_MARICOPA_HOST, timeout=30)
+    return conn
+
+
 def _esri_query(params, retries=3):
     body = urllib.parse.urlencode({**params, "f": "json"}).encode()
+    headers = {"Content-Type": "application/x-www-form-urlencoded"}
     for attempt in range(retries):
+        conn = _get_conn()
         try:
-            req = urllib.request.Request(MARICOPA_PARCELS, data=body, headers={
-                "Content-Type": "application/x-www-form-urlencoded"})
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                return json.load(resp)
+            conn.request("POST", _MARICOPA_PATH, body=body, headers=headers)
+            data = conn.getresponse().read()
+            return json.loads(data)
         except Exception:
+            conn.close()
+            _thread_local.conn = None
             if attempt == retries - 1:
                 return {"features": []}
             time.sleep(1.0)

@@ -33,10 +33,12 @@ Scoring is a simple additive point system (see score_lead) meant to RANK
 candidates for a human to review, not to make the call — no lead here has
 been verified for actual "for sale" status.
 """
+import http.client
 import json
 import math
 import re
 import sys
+import threading
 import time
 import urllib.parse
 import urllib.request
@@ -135,16 +137,33 @@ DEFAULT_DEMO_COST_RESIDENTIAL = 18000
 DEFAULT_DEMO_COST_COMMERCIAL = 45000
 
 
+_thread_local = threading.local()  # one keep-alive HTTPSConnection per (thread, host)
+
+
+def _get_conn(host):
+    conns = getattr(_thread_local, "conns", None)
+    if conns is None:
+        conns = _thread_local.conns = {}
+    conn = conns.get(host)
+    if conn is None:
+        conn = conns[host] = http.client.HTTPSConnection(host, timeout=30)
+    return conn
+
+
 def esri_query(url, params, retries=3):
     params = {**params, "f": "json"}
     body = urllib.parse.urlencode(params).encode()
+    parsed = urllib.parse.urlsplit(url)
+    headers = {"Content-Type": "application/x-www-form-urlencoded"}
     for attempt in range(retries):
+        conn = _get_conn(parsed.netloc)
         try:
-            req = urllib.request.Request(url, data=body, headers={
-                "Content-Type": "application/x-www-form-urlencoded"})
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                return json.load(resp)
+            conn.request("POST", parsed.path, body=body, headers=headers)
+            data = conn.getresponse().read()
+            return json.loads(data)
         except Exception:
+            conn.close()
+            _thread_local.conns.pop(parsed.netloc, None)
             if attempt == retries - 1:
                 return {"features": []}
             time.sleep(1.5)
