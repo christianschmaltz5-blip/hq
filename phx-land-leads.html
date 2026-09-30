@@ -510,6 +510,11 @@ function leadCard(lead, idx){
       </div>
       <div class="lead-score">${isHot?'<span class="hot-flag">🔥</span>':''}<span class="score-badge ${scoreClass(lead.score)}">${lead.score}</span></div>
     </div>
+    ${lead.lat!=null && lead.lng!=null ? `<div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">
+      <a href="https://www.google.com/maps/@${lead.lat},${lead.lng},19z/data=!3m1!1e3" target="_blank" rel="noopener">🛰️ Satellite</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.google.com/maps?layer=c&cbll=${lead.lat},${lead.lng}" target="_blank" rel="noopener">🚶 Street View</a>
+    </div>` : ''}
     <div class="lead-stats">
       <span>Assessed <b>${money(lead.assessedValue)}</b></span>
       <span>$/ac <b>${money(lead.assessedValuePerAcre)}</b></span>
