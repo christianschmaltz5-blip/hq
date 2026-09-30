@@ -458,13 +458,29 @@ function compsSectionHtml(lead){
 // ── Lead cards ──────────────────────────────────────────────────────────
 function scoreClass(score){ return score >= 50 ? 'hot' : score < 15 ? 'cold' : ''; }
 
+function loadContacted(){
+  try{ return JSON.parse(localStorage.getItem('contactedLeads') || '{}'); }catch(e){ return {}; }
+}
+function isContacted(apn){ return !!loadContacted()[apn]; }
+function toggleContacted(apn){
+  const map = loadContacted();
+  if(map[apn]) delete map[apn];
+  else map[apn] = new Date().toISOString().slice(0,10);
+  try{ localStorage.setItem('contactedLeads', JSON.stringify(map)); }catch(e){}
+  renderLeads(currentLeads);
+  const idx = currentLeads.findIndex(l => l.apn === apn);
+  if(idx >= 0) document.getElementById(`detail-${idx}`)?.classList.add('show');
+}
+
 function leadCard(lead, idx){
   const reasons = (lead.reasons||[]).map(r=>{
     const isFlood = r.toLowerCase().includes('flood');
     return `<span class="reason-chip ${isFlood?'flood':''}">${esc(r)}</span>`;
   }).join('');
   const own = lead.ownership || {};
+  const contactedDate = loadContacted()[lead.apn];
   const newBadge = lead.isNew ? `<span class="reason-chip" style="background:var(--success-soft);color:#0e9a51;border-color:rgba(23,198,102,.3);font-weight:800;">NEW</span>` : '';
+  const contactedBadge = contactedDate ? `<span class="reason-chip" style="background:#eef2ff;color:#4338ca;border-color:rgba(67,56,202,.25);font-weight:700;">📨 Contacted ${esc(contactedDate)}</span>` : '';
   const dealTypeLabel = lead.dealType === 'subdivision' ? 'Subdivision/lot-sale play' : 'Rental/multifamily play';
   const statusBadge = lead.parcelStatus === 'improved'
     ? `<span class="reason-chip" style="background:var(--warning-soft);color:#b3760a;border-color:rgba(255,171,0,.3);font-weight:700;">TEARDOWN</span>`
@@ -474,7 +490,7 @@ function leadCard(lead, idx){
   return `<div class="lead-card ${typeClass}${isHot?' is-hot':''}" data-idx="${idx}">
     <div class="lead-head" onclick="toggleLead(${idx})">
       <div>
-        <div class="lead-addr">${newBadge} ${statusBadge} ${esc(lead.address)||'(no address on file)'}</div>
+        <div class="lead-addr">${newBadge} ${statusBadge} ${contactedBadge} ${esc(lead.address)||'(no address on file)'}</div>
         <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'} · Owner: ${esc(lead.ownerName)||'—'} · ${esc(dealTypeLabel)}</div>
       </div>
       <div class="lead-score">${isHot?'<span class="hot-flag">🔥</span>':''}<span class="score-badge ${scoreClass(lead.score)}">${lead.score}</span></div>
@@ -496,12 +512,15 @@ function leadCard(lead, idx){
         <div class="detail-field"><div class="detail-label">PUC Code</div><div class="detail-val">${esc(lead.puc)}</div></div>
         <div class="detail-field"><div class="detail-label">Owner Mailing Address</div><div class="detail-val">${esc(lead.ownerMailAddress)||'—'}</div>
           ${lead.ownerMailAddress && !own.isHiddenOwner ? `<button class="mail-btn" onclick="event.stopPropagation(); openLetter(${idx})">✉️ Generate Mail Letter</button>` : own.isHiddenOwner ? `<div style="font-size:10.5px;color:var(--text-faint);margin-top:6px;">Hidden LLC/Trust — find the registered agent before mailing</div>` : ''}
+          <button class="mail-btn" style="background:${contactedDate?'#f1f3f7':'var(--success)'}; color:${contactedDate?'var(--text-soft)':'#fff'}; margin-left:8px;" onclick="event.stopPropagation(); toggleContacted('${esc(lead.apn)}')">${contactedDate ? 'Undo Contacted' : '📨 Mark Contacted'}</button>
         </div>
         <div class="detail-field"><div class="detail-label">Rezone Basis</div><div class="detail-val" style="font-size:11.5px;font-weight:600;">${lead.rezoneTarget ? esc(lead.rezoneTarget.basis) : 'No adjacent upside detected'}</div></div>
         <div class="detail-field"><div class="detail-label">Owner Type</div><div class="detail-val">${own.isHiddenOwner ? 'Hidden LLC/Trust — needs manual unmasking' : own.isEntityOwner ? 'Trust at owner\'s own address — family name likely in trust name' : 'Individual'}</div></div>
         <div class="detail-field"><div class="detail-label">Owner Location</div><div class="detail-val">${own.isOutOfStateOwner ? 'Out of state' : own.isAbsenteeLocal ? 'In-state, different city' : 'Local'}</div></div>
         ${lead.parcelStatus === 'improved' ? `<div class="detail-field"><div class="detail-label">Existing Structure</div><div class="detail-val">${lead.livingSpaceSf?.toLocaleString()||'?'} sf, built ${esc(lead.yearBuilt)||'unknown'}</div></div>
-        <div class="detail-field"><div class="detail-label">Floor-Area Ratio</div><div class="detail-val">${lead.farRatio!=null?(lead.farRatio*100).toFixed(1)+'%':'—'} of lot built on</div></div>` : ''}
+        <div class="detail-field"><div class="detail-label">Floor-Area Ratio</div><div class="detail-val">${lead.farRatio!=null?(lead.farRatio*100).toFixed(1)+'%':'—'} of lot built on</div></div>
+        <div class="detail-field"><div class="detail-label">Est. Demolition Cost</div><div class="detail-val">${money(lead.defaultDemoCost||0)}<div style="font-size:10px;font-weight:400;color:var(--text-faint);margin-top:2px;">generic placeholder, not a real AZ demo bid</div></div></div>` : ''}
+        ${lead.dealType === 'subdivision' ? `<div class="detail-field"><div class="detail-label">Est. Dev Cost / Lot</div><div class="detail-val">${money(lead.referenceCostPerLotAZ||65000)}<div style="font-size:10px;font-weight:400;color:var(--text-faint);margin-top:2px;">Phoenix-metro estimate, not a local civil bid</div></div></div>` : ''}
       </div>
       ${compsSectionHtml(lead)}
       <div class="calc-toggle" onclick="toggleCalc(${idx})">
