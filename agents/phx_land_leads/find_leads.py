@@ -124,7 +124,9 @@ MIN_IMPROVED_LAND_SIZE_SF = 14000   # ~0.32 acre — meaningfully oversized vs
                                      # a standard 6-8k sf platted lot
 MAX_UNDERUSE_FAR = 0.14             # structure occupies <14% of the lot
 MAX_IMPROVED_ENRICHED = 50000        # effectively unlimited, see MAX_PARCELS_ENRICHED
-COMPS_MAX_LEADS = 60                # only the top-scored leads get a comps lookup
+COMPS_MAX_LEADS = 60                # only the top-scored leads (per category) get a comps lookup
+LEADS_SHOWN_PER_CATEGORY = 150       # top vacant + top improved shown, kept separate
+                                      # so one category can't crowd out the other
                                      # (bounds daily load on the county's public GIS)
 
 # Flat demolition-cost placeholders for the calculator (improved parcels
@@ -521,8 +523,20 @@ def main():
 
     leads.sort(key=lambda r: r["score"], reverse=True)
 
+    # Vacant and teardown/improved leads are scored on the same scale, but
+    # improved leads pick up extra points (existing-structure/FAR signals)
+    # and there are ~13x more of them in the raw pool -- a single combined
+    # top-N cut let teardown leads crowd out vacant land almost entirely
+    # (293/300 improved on the run that surfaced this). Rank and cap each
+    # category separately instead, so vacant land is always represented.
+    vacant_leads = [l for l in leads if l["parcelStatus"] == "vacant"]
+    improved_leads = [l for l in leads if l["parcelStatus"] == "improved"]
+    top_leads = (vacant_leads[:LEADS_SHOWN_PER_CATEGORY]
+                 + improved_leads[:LEADS_SHOWN_PER_CATEGORY])
+    top_leads.sort(key=lambda r: r["score"], reverse=True)
+
     from comps import build_comps_for_lead
-    comp_targets = leads[:COMPS_MAX_LEADS]
+    comp_targets = (vacant_leads[:COMPS_MAX_LEADS] + improved_leads[:COMPS_MAX_LEADS])
     print(f"Pulling comparable sales for the top {len(comp_targets)} leads...")
     with ThreadPoolExecutor(max_workers=ENRICH_WORKERS) as pool:
         futures = {pool.submit(build_comps_for_lead, lead): lead for lead in comp_targets}
@@ -570,7 +584,7 @@ def main():
         "zipCodes": NORTH_PHOENIX_ZIPS,
         "parcelsScanned": total_parcels_scanned,
         "newLeadsThisRun": new_count,
-        "leads": leads[:300],
+        "leads": top_leads,
         "history": history,
         "methodologyNote": (
             "Public-records only: Maricopa Assessor parcels (vacant land AND "
@@ -593,7 +607,8 @@ def main():
         "window.PHX_LAND_LEADS = " + json.dumps(payload, indent=2) + ";\n"
     )
     OUT_PATH.write_text(js)
-    print(f"Wrote {len(leads[:300])} leads (of {len(leads)} scored) to {OUT_PATH}")
+    print(f"Wrote {len(top_leads)} leads ({len(vacant_leads[:LEADS_SHOWN_PER_CATEGORY])} vacant, "
+          f"{len(improved_leads[:LEADS_SHOWN_PER_CATEGORY])} teardown, of {len(leads)} scored) to {OUT_PATH}")
 
 
 def _to_float(v):

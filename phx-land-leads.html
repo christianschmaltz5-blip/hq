@@ -185,6 +185,11 @@
           <span class="card-sub">Click a lead to see the full analysis + run it through the underwriting calculator.</span>
         </div>
         <div class="filter-row">
+          <select class="filter-input" id="typeFilter" style="width:160px;">
+            <option value="all">All types</option>
+            <option value="vacant">🟢 Vacant land only</option>
+            <option value="improved">🟠 Teardown only</option>
+          </select>
           <input class="filter-input" id="addrSearch" type="text" placeholder="Search address or owner…" style="flex:1; min-width:200px;">
           <input class="filter-input" id="minValue" type="number" placeholder="Min assessed value ($)" style="width:180px;">
           <input class="filter-input" id="maxValue" type="number" placeholder="Max assessed value ($)" style="width:180px;">
@@ -637,12 +642,14 @@ function toggleCalc(idx){
 }
 
 function applyFilters(){
+  const type = document.getElementById('typeFilter').value;
   const q = document.getElementById('addrSearch').value.trim().toLowerCase();
   const hideFlood = document.getElementById('hideFlood').checked;
   const hotOnly = document.getElementById('hotOnly').checked;
   const minValue = parseFloat(document.getElementById('minValue').value);
   const maxValue = parseFloat(document.getElementById('maxValue').value);
   let filtered = D.leads || [];
+  if(type !== 'all') filtered = filtered.filter(l => l.parcelStatus === type);
   if(q) filtered = filtered.filter(l => (l.address||'').toLowerCase().includes(q) || (l.ownerName||'').toLowerCase().includes(q));
   if(hideFlood) filtered = filtered.filter(l => !l.inFloodplain);
   if(hotOnly) filtered = filtered.filter(l => l.score >= 50);
@@ -650,7 +657,9 @@ function applyFilters(){
   if(!isNaN(maxValue)) filtered = filtered.filter(l => (l.assessedValue||0) <= maxValue);
   currentLeads = filtered;
   renderLeads(filtered);
+  renderMap(filtered);
 }
+document.getElementById('typeFilter').addEventListener('change', applyFilters);
 document.getElementById('addrSearch').addEventListener('input', applyFilters);
 document.getElementById('hideFlood').addEventListener('change', applyFilters);
 document.getElementById('hotOnly').addEventListener('change', applyFilters);
@@ -669,28 +678,34 @@ document.getElementById('hist-list').innerHTML = (D.history||[]).length
   : `<div class="empty-state">No scan history yet.</div>`;
 
 // ── Map ──────────────────────────────────────────────────────────────────
-(function(){
-  const withCoords = (D.leads||[]).filter(l=>l.lat!=null && l.lng!=null);
-  if(!withCoords.length){
-    document.getElementById('leadMap').innerHTML = '<div class="empty-state" style="padding:40px;">No leads yet — run the daily pull.</div>';
-    return;
+let leadMap = null;
+let mapMarkers = [];
+function colorFor(status){ return status === 'improved' ? '#ffab00' : '#17c666'; }
+function renderMap(leads){
+  const withCoords = (leads||[]).filter(l=>l.lat!=null && l.lng!=null);
+  if(!leadMap){
+    if(!withCoords.length){
+      document.getElementById('leadMap').innerHTML = '<div class="empty-state" style="padding:40px;">No leads yet — run the daily pull.</div>';
+      return;
+    }
+    leadMap = L.map('leadMap').setView([33.65, -112.05], 11);
+    const streets = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19, attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(leadMap);
+    const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 19, attribution: 'Tiles &copy; Esri'
+    });
+    L.control.layers({ 'Street': streets, 'Satellite': satellite }).addTo(leadMap);
   }
-  const map = L.map('leadMap').setView([33.65, -112.05], 11);
-  const streets = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19, attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
-  const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-    maxZoom: 19, attribution: 'Tiles &copy; Esri'
-  });
-  L.control.layers({ 'Street': streets, 'Satellite': satellite }).addTo(map);
-  function colorFor(status){ return status === 'improved' ? '#ffab00' : '#17c666'; }
+  mapMarkers.forEach(m => leadMap.removeLayer(m));
+  mapMarkers = [];
   const bounds = [];
   withCoords.forEach(l=>{
     const c = colorFor(l.parcelStatus);
-    L.circleMarker([l.lat,l.lng], {
+    const marker = L.circleMarker([l.lat,l.lng], {
       radius: 5 + Math.min(l.score, 80)/12, color: c, fillColor: c, fillOpacity: 0.6, weight: 1.5,
       dashArray: l.parcelStatus === 'improved' ? '3,2' : null
-    }).addTo(map).bindTooltip(String(l.score), {
+    }).addTo(leadMap).bindTooltip(String(l.score), {
       permanent: true, direction: 'center', className: 'score-tooltip'
     }).bindPopup(`
       <div style="font-family:'Inter',sans-serif;font-size:12.5px;">
@@ -698,10 +713,12 @@ document.getElementById('hist-list').innerHTML = (D.history||[]).length
         <div style="font-weight:700;color:#2f5fd6;margin:3px 0;">Score ${l.score} · ${l.parcelStatus === 'improved' ? 'Teardown' : 'Vacant'}</div>
         <div>${esc(l.landAcres)} ac · Zoned ${esc(l.currentZoning)||'—'}</div>
       </div>`);
+    mapMarkers.push(marker);
     bounds.push([l.lat,l.lng]);
   });
-  if(bounds.length>1) map.fitBounds(bounds, {padding:[24,24]});
-})();
+  if(bounds.length>1) leadMap.fitBounds(bounds, {padding:[24,24]});
+}
+renderMap(D.leads || []);
 </script>
 </body>
 </html>
