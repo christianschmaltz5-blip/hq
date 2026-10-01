@@ -131,6 +131,7 @@ MIN_IMPROVED_LAND_SIZE_SF = 14000   # ~0.32 acre — meaningfully oversized vs
 MAX_UNDERUSE_FAR = 0.14             # structure occupies <14% of the lot
 MAX_IMPROVED_ENRICHED = 50000        # effectively unlimited, see MAX_PARCELS_ENRICHED
 COMPS_MAX_LEADS = 60                # only the top-scored leads (per category) get a comps lookup
+HOT_SCORE = 65                    # leads that ever hit this score are kept permanently
 LEADS_SHOWN_PER_CATEGORY = 150       # top vacant + top improved shown, kept separate
                                       # so one category can't crowd out the other
                                      # (bounds daily load on the county's public GIS)
@@ -580,6 +581,8 @@ def main():
     print("Pulling underused improved parcels (small structure, large lot)...")
     improved_parcels = fetch_underused_improved_parcels()
     print(f"  {len(improved_parcels)} underused-improved candidates found (FAR <= {MAX_UNDERUSE_FAR})")
+    if not vacant_parcels and not improved_parcels:
+        sys.exit("GIS returned 0 parcels (likely network/outage) — keeping existing data.js")
 
     def is_builder_inventory(p):
         owner = (p.get("OWNER_NAME") or "").upper()
@@ -677,6 +680,7 @@ def main():
     today = date.today().isoformat()
     existing_history = []
     previous_apns = set()
+    prev_leads = {}
     if OUT_PATH.exists():
         try:
             import re
@@ -685,15 +689,29 @@ def main():
             if m:
                 existing_history = json.loads(m.group(1))
             prev_data = json.loads(re.search(r'window\.PHX_LAND_LEADS = (\{.*\});', text, re.S).group(1))
-            previous_apns = {l.get("apn") for l in prev_data.get("leads", [])}
+            prev_leads = {l.get("apn"): l for l in prev_data.get("leads", [])}
+            previous_apns = set(prev_leads)
         except Exception:
-            existing_history, previous_apns = [], set()
+            existing_history, previous_apns, prev_leads = [], set(), {}
 
     new_count = 0
     for lead in leads:
         lead["isNew"] = lead["apn"] not in previous_apns
         if lead["isNew"]:
             new_count += 1
+
+    # Hot leads accumulate: any prior lead scoring >= HOT_SCORE is kept (marked
+    # stale) even when it drops out of today's top lists; peak score is tracked.
+    seen_now = {l["apn"] for l in top_leads}
+    for l in top_leads:
+        old = prev_leads.get(l["apn"], {})
+        l["firstSeen"] = old.get("firstSeen", today)
+        l["lastSeen"] = today
+        l["peakScore"] = max(l["score"], old.get("peakScore", 0))
+    kept = [dict(l, isNew=False, stale=True) for a, l in prev_leads.items()
+            if a not in seen_now and l.get("peakScore", l.get("score", 0)) >= HOT_SCORE]
+    top_leads = top_leads + kept
+    print(f"  carried over {len(kept)} hot leads (peak score >= {HOT_SCORE}) not in today's pull")
 
     total_parcels_scanned = len(vacant_parcels) + len(improved_parcels)
     history_entry = {"date": today, "parcelsScanned": total_parcels_scanned, "leadsFound": len(leads), "newLeads": new_count}
