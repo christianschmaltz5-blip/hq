@@ -1,26 +1,26 @@
 /* Christian's HQ — shared Datta Able-inspired shell */
 
 :root{
-  --bg:#f4f7fc;
+  --bg:#f1f2f5;
   --sidebar-bg:#ffffff;
-  --sidebar-border:#e8edf3;
+  --sidebar-border:#e3e6ec;
   --card-bg:#ffffff;
-  --card-border:#edf1f6;
-  --shadow:0 1px 2px rgba(20,30,60,.04), 0 6px 20px rgba(20,30,60,.06);
-  --text:#22293b;
-  --text-soft:#66707f;
-  --text-faint:#9aa4b2;
-  --accent:#4680ff;
-  --accent-soft:#eaf1ff;
-  --accent-dark:#2f5fd6;
-  --success:#17c666;
-  --success-soft:#e8faf0;
-  --warning:#ffab00;
-  --warning-soft:#fff6e0;
-  --danger:#ff5252;
-  --danger-soft:#ffefef;
-  --radius:14px;
-  --radius-sm:9px;
+  --card-border:#e6e9ef;
+  --shadow:0 1px 2px rgba(20,30,50,.04), 0 6px 18px rgba(20,30,50,.05);
+  --text:#1c2430;
+  --text-soft:#5b6472;
+  --text-faint:#919aa8;
+  --accent:#2d4a73;
+  --accent-soft:#e8ecf3;
+  --accent-dark:#1d3252;
+  --success:#3f7a57;
+  --success-soft:#e8f0ea;
+  --warning:#b3831f;
+  --warning-soft:#f5efe0;
+  --danger:#aa3f3c;
+  --danger-soft:#f3e6e5;
+  --radius:10px;
+  --radius-sm:6px;
   --sidebar-w:264px;
   --sidebar-w-collapsed:78px;
   --topbar-h:66px;
@@ -90,7 +90,7 @@ h1,h2,h3,p,ul,ol{margin:0;}
   height:var(--topbar-h);
   display:flex; align-items:center; gap:16px;
   padding:0 28px;
-  background:rgba(244,247,252,.85);
+  background:rgba(241,242,245,.85);
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--sidebar-border);
 }

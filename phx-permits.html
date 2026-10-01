@@ -19,7 +19,7 @@
 .meta-row{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:22px;}
 .meta-pill{display:flex; align-items:center; gap:7px; font-size:11.5px; font-weight:700; letter-spacing:.02em; padding:7px 13px; border-radius:20px; background:#fafbfd; border:1px solid var(--card-border); color:var(--text-soft);}
 .meta-pill b{color:var(--text); font-weight:700;}
-.meta-pill.live{background:var(--success-soft); border-color:rgba(23,198,102,.25); color:#0e9a51;}
+.meta-pill.live{background:var(--success-soft); border-color:rgba(63,122,87,.25); color:#2f5b41;}
 .meta-dot{width:6px; height:6px; border-radius:50%; background:var(--success); box-shadow:0 0 5px var(--success);}
 
 .search-row{margin-bottom:14px;}
@@ -35,7 +35,7 @@
 .dossier-field{background:#fff; border:1px solid var(--card-border); border-radius:8px; padding:8px 11px;}
 .dossier-label{font-size:9.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--text-faint);}
 .dossier-val{font-size:13px; font-weight:700; color:var(--text); margin-top:2px;}
-.status-pill{display:inline-block; font-size:9.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:3px 9px; border-radius:11px; background:var(--accent-soft); color:var(--accent-dark); border:1px solid rgba(70,128,255,.25);}
+.status-pill{display:inline-block; font-size:9.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:3px 9px; border-radius:11px; background:var(--accent-soft); color:var(--accent-dark); border:1px solid rgba(45,74,115,.25);}
 
 .hist-list{display:flex; flex-direction:column; gap:8px;}
 .hist-row{display:flex; align-items:center; gap:16px; font-size:12.5px; color:var(--text-soft); background:#fafbfd; border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:10px 16px; flex-wrap:wrap;}
@@ -97,8 +97,8 @@
         </div>
         <div id="siteMap"></div>
         <div class="map-legend">
-          <span><span class="map-legend-dot" style="background:#4680ff;"></span>Under $1M</span>
-          <span><span class="map-legend-dot" style="background:#ffab00;"></span>$1M–$25M</span>
+          <span><span class="map-legend-dot" style="background:#2d4a73;"></span>Under $1M</span>
+          <span><span class="map-legend-dot" style="background:#b3831f;"></span>$1M–$25M</span>
           <span><span class="map-legend-dot" style="background:#ff4d4f;"></span>$25M+</span>
           <span style="margin-left:auto;">Circle size scales with reported cost to build. Click a pin for the dossier.</span>
         </div>
@@ -173,7 +173,7 @@ document.getElementById('meta-row').innerHTML = `
   });
   L.control.layers({ 'Street': streets, 'Satellite': satellite }).addTo(map);
 
-  function colorFor(v){ return v>=25000000 ? '#ff4d4f' : v>=1000000 ? '#ffab00' : '#4680ff'; }
+  function colorFor(v){ return v>=25000000 ? '#aa3f3c' : v>=1000000 ? '#b3831f' : '#2d4a73'; }
   function radiusFor(v){ return Math.max(5, Math.min(26, Math.sqrt(v||1)/500)); }
 
   const bounds = [];

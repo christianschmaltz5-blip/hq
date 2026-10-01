@@ -1,0 +1,9 @@
+[
+  {"date": "2026-09-30", "title": "Dashboard decluttered + formal color theme", "detail": "Removed Phoenix Cap-Rate Watch, 5302 N 35th Feasibility, Dev Underwriting Model, Field Manual, and ARC Dashboard from the nav. Swapped the bright SaaS palette for a muted navy/forest/gold theme site-wide."},
+  {"date": "2026-09-30", "title": "Mail letter now pitches land-for-equity JV", "detail": "Letter to land leads explains, in plain terms, the option to contribute land into the development for an ownership stake instead of a cash sale. Preview card added to the top of the leads page."},
+  {"date": "2026-09-30", "title": "Skip-Trace Priority min equity margin lowered to 50%", "detail": "Default threshold for which leads are worth paying for a skip-trace lookup dropped from 100% to 50% equity margin, qualifying more leads (62 → 87)."},
+  {"date": "2026-09-29", "title": "Residential/commercial zoning filter added to leads list", "detail": "New filter dropdown plus inline zoning-class badge on each lead, reusing the PUC-based classifier from comps.py."},
+  {"date": "2026-09-29", "title": "Skip-Trace Priority card + CSV export shipped", "detail": "Score + equity-margin gating algorithm decides which leads are worth paying ~$0.10/record to skip-trace, with a ready-to-upload CSV export."},
+  {"date": "2026-09-29", "title": "LLC owner unmasking via OpenCorporates", "detail": "Hidden-owner leads now resolve a registered agent name/address through a free, CAPTCHA-free Arizona filing mirror."},
+  {"date": "2026-09-29", "title": "Satellite/Street View links added to each lead", "detail": "Manual visual condition check for teardown candidates, since public data has no reliable \"house condition\" signal."}
+]
