@@ -33,6 +33,7 @@ Scoring is a simple additive point system (see score_lead) meant to RANK
 candidates for a human to review, not to make the call — no lead here has
 been verified for actual "for sale" status.
 """
+import html
 import http.client
 import json
 import math
@@ -167,6 +168,83 @@ def esri_query(url, params, retries=3):
             if attempt == retries - 1:
                 return {"features": []}
             time.sleep(1.5)
+
+
+# A trust name (e.g. "JILL PREECE BLEVINS FAMILY TRUST") usually already
+# carries the real person's name -- no lookup needed. An LLC/corp name does
+# not. The Arizona Corporation Commission's own search (the authoritative
+# source for registered-agent names) now gates every query behind a CAPTCHA,
+# which can't be scripted -- OpenCorporates mirrors the same state filings
+# (registered agent name + address) on plain server-rendered pages with no
+# CAPTCHA or login wall, so that's the free source used here instead.
+REGISTERED_ENTITY_RE = re.compile(r"\b(LLC|L\.?L\.?C\.?|INC|CORP|CO|LP|LLP)\b")
+OPENCORP_HOST = "opencorporates.com"
+
+
+def _http_get(host, path, retries=3):
+    for attempt in range(retries):
+        conn = _get_conn(host)
+        try:
+            conn.request("GET", path, headers={"User-Agent": "Mozilla/5.0"})
+            resp = conn.getresponse()
+            data = resp.read()
+            if resp.status != 200:
+                return None
+            return data.decode("utf-8", errors="replace")
+        except Exception:
+            conn.close()
+            _thread_local.conns.pop(host, None)
+            if attempt == retries - 1:
+                return None
+            time.sleep(1.0)
+
+
+def lookup_registered_agent(owner_name):
+    """Look up an Arizona LLC/corp's registered agent (name + address) on
+    OpenCorporates, as a free stand-in for the now-CAPTCHA-gated AZ
+    Corporation Commission search. Returns None for non-entity names, trusts,
+    or on any lookup failure -- this is a best-effort enrichment, not a
+    required field."""
+    name = (owner_name or "").strip()
+    if not name or not REGISTERED_ENTITY_RE.search(name.upper()):
+        return None
+
+    search_path = f"/companies/us_az?q={urllib.parse.quote(name)}"
+    search_html = _http_get(OPENCORP_HOST, search_path)
+    if not search_html:
+        return None
+
+    candidates = re.findall(r'/companies/us_az/([A-Za-z0-9]+)"[^>]*>([^<]+)</a>', search_html)
+    if not candidates:
+        return None
+
+    target = re.sub(r"[^A-Z0-9]", "", name.upper())
+    best = None
+    for company_id, raw_label in candidates:
+        label = html.unescape(raw_label)
+        if re.sub(r"[^A-Z0-9]", "", label.upper()) == target:
+            best = company_id
+            break
+    if not best:
+        best = candidates[0][0]  # fall back to the top search hit
+
+    detail_html = _http_get(OPENCORP_HOST, f"/companies/us_az/{best}")
+    if not detail_html:
+        return None
+
+    m = re.search(r"content='([^']*)' name='description'", detail_html)
+    if not m:
+        return None
+    desc = html.unescape(m.group(1))
+    # Format: "... company BUTTERS, LLC (company number L18077184), % AGENT NAME, ADDRESS"
+    tail = desc.split("),", 1)
+    if len(tail) < 2:
+        return None
+    agent_line = tail[1].strip().lstrip("%").strip()
+    if not agent_line:
+        return None
+    return {"source": "OpenCorporates (AZ filing mirror)", "agentLine": agent_line,
+            "companyUrl": f"https://opencorporates.com/companies/us_az/{best}"}
 
 
 def point_query(url, lat, lng, out_fields="*", extra_where=None):
@@ -570,6 +648,22 @@ def main():
             lead["compsNote"] = result["note"]
             if (i + 1) % 20 == 0:
                 print(f"  comped {i+1}/{len(comp_targets)}...")
+
+    # Unmask hidden LLC owners (not trusts -- a trust name already carries the
+    # real person's name) via OpenCorporates. Scoped to top_leads only (not
+    # all ~9k scanned parcels) and run at low concurrency out of courtesy to
+    # a free third-party service, not our own infra.
+    entity_targets = [l for l in top_leads if l["ownership"]["isHiddenOwner"]]
+    if entity_targets:
+        print(f"Looking up registered agents for {len(entity_targets)} entity-owned leads...")
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            futures = {pool.submit(lookup_registered_agent, l["ownerName"]): l for l in entity_targets}
+            for fut in as_completed(futures):
+                lead = futures[fut]
+                try:
+                    lead["registeredAgent"] = fut.result()
+                except Exception:
+                    lead["registeredAgent"] = None
 
     today = date.today().isoformat()
     existing_history = []
