@@ -35,13 +35,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 17914,
       "landAcres": 0.411,
       "puc": "0122",
+      "landUseClass": "residential",
       "lat": 33.660725045080014,
       "lng": -112.01871737586478,
       "assessedValue": 258000.0,
       "assessedValuePerAcre": 627737.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -136,6 +137,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,249,171 (range $833,421-$1,699,137)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 384,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -154,13 +157,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 45482,
       "landAcres": 1.044,
       "puc": "0151",
+      "landUseClass": "residential",
       "lat": 33.586779951146454,
       "lng": -111.98132905675492,
       "assessedValue": 1696000.0,
       "assessedValuePerAcre": 1624521.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -255,6 +259,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,694,235 (range $1,251,775-$5,627,322)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 59,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -273,13 +279,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16477,
       "landAcres": 0.378,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.62347777086355,
       "lng": -112.01132477498736,
       "assessedValue": 497600.0,
       "assessedValuePerAcre": 1316402.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -374,6 +381,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $933,933 (range $563,904-$1,181,905)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 88,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "BUSTER DMO MAGEE 2315 E KELTON LANE, PHOENIX, AZ, 85022",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L18077184"
+      },
       "isNew": false
     },
     {
@@ -392,13 +405,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 152460,
       "landAcres": 3.5,
       "puc": "0111",
+      "landUseClass": "residential",
       "lat": 33.62330487015187,
       "lng": -112.1432675998558,
       "assessedValue": 303600.0,
       "assessedValuePerAcre": 86743.0,
       "currentZoning": "S-1",
       "generalPlanDesignation": "GP code 20",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -488,6 +502,7 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
       "isNew": false
     },
     {
@@ -506,13 +521,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 71952,
       "landAcres": 1.652,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.61928110506723,
       "lng": -112.14639264659121,
       "assessedValue": 644100.0,
       "assessedValuePerAcre": 389891.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 20",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -601,6 +617,7 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
       "isNew": false
     },
     {
@@ -619,13 +636,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 28298,
       "landAcres": 0.65,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.631008970494385,
       "lng": -112.04232496179735,
       "assessedValue": 417600.0,
       "assessedValuePerAcre": 642462.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -714,6 +732,7 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
       "isNew": false
     },
     {
@@ -732,13 +751,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 42801,
       "landAcres": 0.983,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.63490981368069,
       "lng": -111.99353653210412,
       "assessedValue": 698700.0,
       "assessedValuePerAcre": 710783.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -832,6 +852,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,150,905 (range $691,424-$2,085,959)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 65,
       "isNew": false
     },
     {
@@ -850,13 +871,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 45275,
       "landAcres": 1.039,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.58940775955126,
       "lng": -111.98132350033897,
       "assessedValue": 1179600.0,
       "assessedValuePerAcre": 1135322.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -950,6 +972,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $4,046,512 (range $2,482,781-$5,601,710)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 243,
       "isNew": false
     },
     {
@@ -968,13 +991,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 19559,
       "landAcres": 0.449,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.61772764883987,
       "lng": -112.14472106189771,
       "assessedValue": 364500.0,
       "assessedValuePerAcre": 811804.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -1068,6 +1092,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $760,020 (range $574,420-$930,200)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 109,
       "isNew": false
     },
     {
@@ -1086,13 +1111,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 17870,
       "landAcres": 0.41,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.587383299881864,
       "lng": -111.990687672639,
       "assessedValue": 678700.0,
       "assessedValuePerAcre": 1655366.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -1186,6 +1212,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,133,741 (range $810,100-$1,840,587)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 67,
       "isNew": false
     },
     {
@@ -1204,13 +1231,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15207,
       "landAcres": 0.349,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.65109331065568,
       "lng": -111.99195900651846,
       "assessedValue": 401800.0,
       "assessedValuePerAcre": 1151289.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -1304,6 +1332,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,102,796 (range $677,506-$1,471,086)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 174,
       "isNew": false
     },
     {
@@ -1322,13 +1351,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16566,
       "landAcres": 0.38,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.59776218889378,
       "lng": -112.01496195021234,
       "assessedValue": 598700.0,
       "assessedValuePerAcre": 1575526.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -1422,6 +1452,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $924,228 (range $736,134-$1,188,071)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 54,
       "isNew": false
     },
     {
@@ -1440,13 +1471,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15030,
       "landAcres": 0.345,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.58772785446687,
       "lng": -112.00893150453575,
       "assessedValue": 458800.0,
       "assessedValuePerAcre": 1329855.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 180",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -1540,6 +1572,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,031,203 (range $762,713-$1,304,474)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 125,
       "isNew": false
     },
     {
@@ -1558,13 +1591,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15849,
       "landAcres": 0.364,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.64262172313357,
       "lng": -112.10405979831586,
       "assessedValue": 375300.0,
       "assessedValuePerAcre": 1031044.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -1658,6 +1692,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $726,982 (range $567,516-$873,693)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 94,
       "isNew": false
     },
     {
@@ -1676,13 +1711,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15285,
       "landAcres": 0.351,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.64347980834105,
       "lng": -112.10241845513451,
       "assessedValue": 368800.0,
       "assessedValuePerAcre": 1050712.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -1776,6 +1812,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $746,350 (range $678,356-$842,602)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 102,
       "isNew": false
     },
     {
@@ -1794,13 +1831,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 54501,
       "landAcres": 1.251,
       "puc": "0142",
+      "landUseClass": "residential",
       "lat": 33.580689379204784,
       "lng": -111.99633733799983,
       "assessedValue": 985700.0,
       "assessedValuePerAcre": 787930.0,
       "currentZoning": "RE-43",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -1894,6 +1932,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,790,181 (range $1,637,143-$1,937,098)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 82,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -1912,13 +1952,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 45417,
       "landAcres": 1.043,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.587626090219516,
       "lng": -111.98132792249059,
       "assessedValue": 916500.0,
       "assessedValuePerAcre": 878715.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -2012,6 +2053,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,331,299 (range $1,249,986-$1,408,566)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 45,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -2030,13 +2073,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 39857,
       "landAcres": 0.915,
       "puc": "0132",
+      "landUseClass": "residential",
       "lat": 33.65792332618483,
       "lng": -112.03739870613916,
       "assessedValue": 570800.0,
       "assessedValuePerAcre": 623825.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -2130,6 +2174,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $938,673 (range $843,896-$1,032,282)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 64,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "2058 E Topeka Drive, PHOENIX, AZ, 85024",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23756341"
+      },
       "isNew": false
     },
     {
@@ -2148,13 +2198,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 42239,
       "landAcres": 0.97,
       "puc": "0144",
+      "landUseClass": "residential",
       "lat": 33.78507230105066,
       "lng": -112.05321386095196,
       "assessedValue": 800500.0,
       "assessedValuePerAcre": 825258.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -2248,6 +2299,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,021,083 (range $708,077-$1,358,416)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 28,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -2266,13 +2319,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 39552,
       "landAcres": 0.908,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.572081108431576,
       "lng": -111.97842934029711,
       "assessedValue": 1204500.0,
       "assessedValuePerAcre": 1326542.0,
       "currentZoning": "PAD-2",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -2366,6 +2420,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,076,663 (range $1,100,239-$2,601,939)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 72,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -2384,13 +2440,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 48860,
       "landAcres": 1.122,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.63590424859938,
       "lng": -111.98712753864775,
       "assessedValue": 1054000.0,
       "assessedValuePerAcre": 939394.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -2484,6 +2541,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $949,894 (range $789,304-$1,111,131)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": -10,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "1309 Coffeen Avenue STE 1200, SHERIDAN, WY, 82801",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23830440"
+      },
       "isNew": false
     },
     {
@@ -2502,13 +2565,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 61939,
       "landAcres": 1.422,
       "puc": "0151",
+      "landUseClass": "residential",
       "lat": 33.61365689899844,
       "lng": -112.08915104320687,
       "assessedValue": 852200.0,
       "assessedValuePerAcre": 599297.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -2597,6 +2661,8 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -2615,13 +2681,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 14151,
       "landAcres": 0.325,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.673451540788136,
       "lng": -112.0849424047638,
       "assessedValue": 340600.0,
       "assessedValuePerAcre": 1048000.0,
       "currentZoning": "R1-6",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -2715,6 +2782,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $619,589 (range $561,008-$683,278)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 82,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "251 Little Falls Drive, WILMINGTON, DE, 19808",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23698806"
+      },
       "isNew": false
     },
     {
@@ -2733,13 +2806,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 37347,
       "landAcres": 0.857,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.6310243781978,
       "lng": -112.14861940891619,
       "assessedValue": 610000.0,
       "assessedValuePerAcre": 711785.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 20",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -2833,6 +2907,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $773,511 (range $665,049-$855,770)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 27,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "193 Chauncey St., BROOKLYN, NY, 11233",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23914407"
+      },
       "isNew": false
     },
     {
@@ -2851,13 +2931,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 54715,
       "landAcres": 1.256,
       "puc": "0144",
+      "landUseClass": "residential",
       "lat": 33.81417908559908,
       "lng": -112.12675410921362,
       "assessedValue": 1013000.0,
       "assessedValuePerAcre": 806529.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -2951,6 +3032,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,280,474 (range $599,470-$3,609,950)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 125,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "330 E 7th Street, TUCSON, AZ, 85705",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L22077596"
+      },
       "isNew": false
     },
     {
@@ -2969,13 +3056,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16100,
       "landAcres": 0.37,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.59426343217407,
       "lng": -112.01609110872022,
       "assessedValue": 419800.0,
       "assessedValuePerAcre": 1134595.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -3069,6 +3157,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $862,746 (range $630,807-$1,071,429)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 106,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "4539 N 22nd St, Ste R, Phoenix, AZ, 85016-4639",
+        "companyUrl": "https://opencorporates.com/companies/us_az/1944423"
+      },
       "isNew": false
     },
     {
@@ -3087,13 +3181,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 18799,
       "landAcres": 0.432,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.615612350146456,
       "lng": -112.00888505762191,
       "assessedValue": 411300.0,
       "assessedValuePerAcre": 952083.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -3187,6 +3282,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,112,573 (range $682,515-$1,391,759)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 171,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -3205,13 +3302,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 46228,
       "landAcres": 1.061,
       "puc": "0151",
+      "landUseClass": "residential",
       "lat": 33.81262452502485,
       "lng": -112.11224656173128,
       "assessedValue": 1610600.0,
       "assessedValuePerAcre": 1518002.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -3305,6 +3403,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,849,000 (range $1,710,796-$4,324,387)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 77,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -3323,13 +3423,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 14123,
       "landAcres": 0.324,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.64630432629037,
       "lng": -111.9910364319112,
       "assessedValue": 363200.0,
       "assessedValuePerAcre": 1120988.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -3423,6 +3524,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $782,723 (range $533,492-$1,083,696)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 116,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -3441,13 +3544,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 46809,
       "landAcres": 1.075,
       "puc": "0151",
+      "landUseClass": "residential",
       "lat": 33.58403885017577,
       "lng": -111.98082898685854,
       "assessedValue": 2255100.0,
       "assessedValuePerAcre": 2097767.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -3541,6 +3645,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,372,304 (range $1,288,297-$1,451,737)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": -39,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "1734 E. Boston Street, Suite 103, GILBERT, AZ, 85295",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23291387"
+      },
       "isNew": false
     },
     {
@@ -3559,13 +3669,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16204,
       "landAcres": 0.372,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.64379274519411,
       "lng": -112.04016206321558,
       "assessedValue": 399600.0,
       "assessedValuePerAcre": 1074194.0,
       "currentZoning": "R1-6",
       "generalPlanDesignation": "GP code 47",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -3659,6 +3770,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $5,959,604 (range $667,331-$25,957,960)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 1391,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "401 Congress Ave, 33rd Floor, AUSTIN, TX, 78701",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23745159"
+      },
       "isNew": false
     },
     {
@@ -3677,13 +3794,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 49484,
       "landAcres": 1.136,
       "puc": "0142",
+      "landUseClass": "residential",
       "lat": 33.679968477140534,
       "lng": -112.03300578292486,
       "assessedValue": 1065600.0,
       "assessedValuePerAcre": 938028.0,
       "currentZoning": "S-1",
       "generalPlanDesignation": "GP code 110",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -3777,6 +3895,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $878,703 (range $711,352-$1,047,729)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": -18,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -3795,13 +3915,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 23459,
       "landAcres": 0.539,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.63268163772415,
       "lng": -112.14732092773154,
       "assessedValue": 692800.0,
       "assessedValuePerAcre": 1285343.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -3895,6 +4016,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $499,675 (range $417,741-$537,540)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": -28,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -3913,13 +4036,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15405,
       "landAcres": 0.354,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.65026929618382,
       "lng": -111.99372787202137,
       "assessedValue": 427700.0,
       "assessedValuePerAcre": 1208192.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -4013,6 +4137,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $947,687 (range $725,655-$1,174,813)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 122,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -4031,13 +4157,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16061,
       "landAcres": 0.369,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.6455520002557,
       "lng": -112.07059336503042,
       "assessedValue": 460700.0,
       "assessedValuePerAcre": 1248509.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -4131,6 +4258,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $809,996 (range $567,559-$992,220)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 76,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "P.O. Box 150210, 8330 Austin Street, JAMAICA, NY, 11415",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23409500"
+      },
       "isNew": false
     },
     {
@@ -4149,13 +4282,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 14205,
       "landAcres": 0.326,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.58826576945054,
       "lng": -111.9982194828769,
       "assessedValue": 541300.0,
       "assessedValuePerAcre": 1660429.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -4249,6 +4383,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $845,001 (range $643,955-$1,023,649)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 56,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -4267,13 +4403,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16018,
       "landAcres": 0.368,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.63051207012204,
       "lng": -111.9851161905737,
       "assessedValue": 680500.0,
       "assessedValuePerAcre": 1849185.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -4367,6 +4504,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,340,614 (range $739,923-$2,206,924)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 97,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -4385,13 +4524,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 103365,
       "landAcres": 2.373,
       "puc": "0134",
+      "landUseClass": "residential",
       "lat": 33.660978666863365,
       "lng": -112.08092684450514,
       "assessedValue": 420600.0,
       "assessedValuePerAcre": 177244.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -4481,7 +4621,129 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
       "isNew": false
+    },
+    {
+      "apn": "20338009K",
+      "address": "2821 W LONG RIFLE RD   PHOENIX  85086",
+      "ownerName": "SANDERS FAMILY TRUST",
+      "ownerMailAddress": "2821 W LONG RIFLE RD ANTHEM AZ USA 85086",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
+        "yearsHeld": 11.2
+      },
+      "landSf": 133920,
+      "landAcres": 3.074,
+      "puc": "0144",
+      "landUseClass": "residential",
+      "lat": 33.81434933209148,
+      "lng": -112.12037607455323,
+      "assessedValue": 1011100.0,
+      "assessedValuePerAcre": 328920.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 990",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-10",
+        "targetDensity": 4,
+        "basis": "adjacent parcels already zoned R1-10"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 12.3,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 3203.0,
+      "farRatio": 0.02391726403823178,
+      "yearBuilt": "2003",
+      "defaultDemoCost": 18000,
+      "score": 70,
+      "reasons": [
+        "adjacent parcels already zoned R1-10",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 11 years",
+        "existing structure occupies only 2% of the lot \u2014 under-improved for the land size"
+      ],
+      "comps": [
+        {
+          "apn": "20323017D",
+          "address": "37020 N 31ST AVE   PHOENIX  85086",
+          "distanceMi": 0.62,
+          "soldDate": "2026-02-01",
+          "soldPrice": 1175000.0,
+          "landSf": 107245,
+          "livingSpaceSf": 3800.0,
+          "pricePerSf": 309,
+          "pricePerAcre": 477253,
+          "similarity": 77
+        },
+        {
+          "apn": "20323016D",
+          "address": "37103 N 33RD AVE   PHOENIX  85086",
+          "distanceMi": 0.72,
+          "soldDate": "2026-01-01",
+          "soldPrice": 760000.0,
+          "landSf": 108900,
+          "livingSpaceSf": 2696.0,
+          "pricePerSf": 282,
+          "pricePerAcre": 304000,
+          "similarity": 77
+        },
+        {
+          "apn": "20326323",
+          "address": "2925 W DONATELLO DR   PHOENIX  85086",
+          "distanceMi": 0.24,
+          "soldDate": "2026-03-01",
+          "soldPrice": 640000.0,
+          "landSf": 7762,
+          "livingSpaceSf": 3138.0,
+          "pricePerSf": 204,
+          "pricePerAcre": 3591652,
+          "similarity": 75
+        },
+        {
+          "apn": "20326485",
+          "address": "3102 W DONATELLO DR   PHOENIX  85086",
+          "distanceMi": 0.4,
+          "soldDate": "2026-03-01",
+          "soldPrice": 649990.0,
+          "landSf": 6937,
+          "livingSpaceSf": 3380.0,
+          "pricePerSf": 192,
+          "pricePerAcre": 4081529,
+          "similarity": 74
+        },
+        {
+          "apn": "20326274",
+          "address": "3005 W LANGUID LN   PHOENIX  85086",
+          "distanceMi": 0.44,
+          "soldDate": "2026-08-01",
+          "soldPrice": 493000.0,
+          "landSf": 7026,
+          "livingSpaceSf": 2269.0,
+          "pricePerSf": 217,
+          "pricePerAcre": 3056516,
+          "similarity": 73
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1201454,
+        "rangeLow": 934612,
+        "rangeHigh": 1467257,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,201,454 (range $934,612-$1,467,257)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 19,
+      "isNew": true
     },
     {
       "apn": "21174093G",
@@ -4494,18 +4756,19 @@ window.PHX_LAND_LEADS = {
         "isEntityOwner": true,
         "isOwnerOccupied": false,
         "isHiddenOwner": true,
-        "yearsHeld": 14.4
+        "yearsHeld": 14.5
       },
       "landSf": 147599,
       "landAcres": 3.388,
       "puc": "0144",
+      "landUseClass": "residential",
       "lat": 33.784958296335326,
       "lng": -112.06463544361593,
       "assessedValue": 1115000.0,
       "assessedValuePerAcre": 329103.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 204",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -4600,6 +4863,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,916,787 (range $962,308-$4,763,959)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 162,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -4618,13 +4883,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 36787,
       "landAcres": 0.845,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.64332325024515,
       "lng": -112.01983640201175,
       "assessedValue": 300100.0,
       "assessedValuePerAcre": 355148.0,
       "currentZoning": "R-3",
       "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -4714,6 +4980,8 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -4732,13 +5000,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 49833,
       "landAcres": 1.144,
       "puc": "0134",
+      "landUseClass": "residential",
       "lat": 33.78568622296049,
       "lng": -112.05177391081675,
       "assessedValue": 520500.0,
       "assessedValuePerAcre": 454983.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -4833,6 +5102,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $872,495 (range $343,202-$1,346,853)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 68,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -4851,13 +5122,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 36837,
       "landAcres": 0.846,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.64573957882459,
       "lng": -112.01921721296426,
       "assessedValue": 315000.0,
       "assessedValuePerAcre": 372340.0,
       "currentZoning": "R-3",
       "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -4952,6 +5224,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,409,876 (range $1,025,562-$1,795,296)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 348,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "26766 N 73rd Way, SCOTTSDALE, AZ, 85266",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L16315747"
+      },
       "isNew": false
     },
     {
@@ -4970,13 +5248,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 55495,
       "landAcres": 1.274,
       "puc": "0132",
+      "landUseClass": "residential",
       "lat": 33.67995886475129,
       "lng": -112.03404491581851,
       "assessedValue": 529800.0,
       "assessedValuePerAcre": 415856.0,
       "currentZoning": "S-1",
       "generalPlanDesignation": "GP code 110",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -5066,6 +5345,8 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -5084,13 +5365,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 35170,
       "landAcres": 0.807,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.62469574501764,
       "lng": -112.0100257465739,
       "assessedValue": 357100.0,
       "assessedValuePerAcre": 442503.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -5180,6 +5462,12 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "6001 E SURREY AVE, SCOTTSDALE, AZ, 85254",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L22197860"
+      },
       "isNew": false
     },
     {
@@ -5198,13 +5486,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 45942,
       "landAcres": 1.055,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.6279308396688,
       "lng": -112.00096446119176,
       "assessedValue": 549700.0,
       "assessedValuePerAcre": 521043.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -5299,6 +5588,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,570,363 (range $742,165-$3,233,594)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 186,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "6937 E OAK ST, SCOTTSDALE, AZ, 85257",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L11218663"
+      },
       "isNew": false
     },
     {
@@ -5317,13 +5612,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 70893,
       "landAcres": 1.627,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.624096745124376,
       "lng": -112.00900569477334,
       "assessedValue": 719300.0,
       "assessedValuePerAcre": 442102.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -5418,6 +5714,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 5 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,514,940 (range $1,951,148-$3,086,264)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 250,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "15111 N 33RD PL, PHOENIX, AZ, 85032",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L20475281"
+      },
       "isNew": false
     },
     {
@@ -5436,13 +5738,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 78319,
       "landAcres": 1.798,
       "puc": "0151",
+      "landUseClass": "residential",
       "lat": 33.811887836442175,
       "lng": -112.1097446651104,
       "assessedValue": 2153100.0,
       "assessedValuePerAcre": 1197497.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -5537,6 +5840,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $3,957,209 (range $2,916,852-$5,167,278)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 84,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -5555,13 +5860,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 43576,
       "landAcres": 1.0,
       "puc": "0144",
+      "landUseClass": "residential",
       "lat": 33.79449476823775,
       "lng": -112.08074208678592,
       "assessedValue": 1014700.0,
       "assessedValuePerAcre": 1014700.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -5656,6 +5962,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,224,960 (range $662,249-$1,798,597)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 21,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -5674,13 +5982,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 17576,
       "landAcres": 0.403,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.62469765232995,
       "lng": -112.01248631005264,
       "assessedValue": 382300.0,
       "assessedValuePerAcre": 948635.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -5775,6 +6084,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,068,255 (range $902,339-$1,218,026)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 179,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "6001 E SURREY AVE, SCOTTSDALE, AZ, 85254",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L17038937"
+      },
       "isNew": false
     },
     {
@@ -5793,13 +6108,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16466,
       "landAcres": 0.378,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.605505927512425,
       "lng": -112.02380531615513,
       "assessedValue": 431100.0,
       "assessedValuePerAcre": 1140476.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -5894,6 +6210,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $677,966 (range $174,141-$1,023,369)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 57,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "6225 E VOLTAIRE AVE, SCOTTSDALE, AZ, 85254",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L17860579"
+      },
       "isNew": false
     },
     {
@@ -5912,13 +6234,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16129,
       "landAcres": 0.37,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.59460700344242,
       "lng": -112.01609171695458,
       "assessedValue": 360600.0,
       "assessedValuePerAcre": 974595.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -6013,6 +6336,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $864,712 (range $631,943-$1,073,358)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 140,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "5154 W JUPITER WAY, CHANDLER, AZ, 85226",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L11352350"
+      },
       "isNew": false
     },
     {
@@ -6031,6 +6360,7 @@ window.PHX_LAND_LEADS = {
       "landSf": 15227,
       "landAcres": 0.35,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.65265068452651,
       "lng": -112.09932389356739,
       "assessedValue": 296700.0,
@@ -6132,6 +6462,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $665,282 (range $545,243-$747,246)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 124,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -6150,13 +6482,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 31830,
       "landAcres": 0.731,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.638480194767375,
       "lng": -111.99230798231356,
       "assessedValue": 805300.0,
       "assessedValuePerAcre": 1101642.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -6251,6 +6584,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,209,930 (range $514,194-$1,603,739)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 50,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "9310 E. BRONCO TRL., SCOTTSDALE, AZ, 85255",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L17048431"
+      },
       "isNew": false
     },
     {
@@ -6269,13 +6608,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 24234,
       "landAcres": 0.556,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.629485895854984,
       "lng": -112.07088124343517,
       "assessedValue": 664600.0,
       "assessedValuePerAcre": 1195324.0,
       "currentZoning": "R1-6",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -6370,6 +6710,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,572,181 (range $1,054,893-$1,807,470)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 137,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -6388,13 +6730,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15983,
       "landAcres": 0.367,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.60492435560869,
       "lng": -112.0266109506697,
       "assessedValue": 434600.0,
       "assessedValuePerAcre": 1184196.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -6489,6 +6832,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $635,829 (range $169,033-$993,350)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 46,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "6225 E VOLTAIRE AVE, SCOTTSDALE, AZ, 85254",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L17860579"
+      },
       "isNew": false
     },
     {
@@ -6507,13 +6856,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 18861,
       "landAcres": 0.433,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.605890960365805,
       "lng": -112.02654948067614,
       "assessedValue": 479600.0,
       "assessedValuePerAcre": 1107621.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -6608,6 +6958,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $616,669 (range $199,470-$1,172,219)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 29,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "5428 E SANNA ST, PARADISE VALLEY, AZ, 85253",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L18487823"
+      },
       "isNew": false
     },
     {
@@ -6626,13 +6982,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15779,
       "landAcres": 0.362,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.58574758453777,
       "lng": -111.99530110255199,
       "assessedValue": 537800.0,
       "assessedValuePerAcre": 1485635.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -6727,6 +7084,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $819,650 (range $703,922-$1,041,576)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 52,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "8327 E DESERT CAVE AVE, SCOTTSDALE, AZ, 85260",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L20166684"
+      },
       "isNew": false
     },
     {
@@ -6745,13 +7108,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 114387,
       "landAcres": 2.626,
       "puc": "0134",
+      "landUseClass": "residential",
       "lat": 33.724368181605044,
       "lng": -112.09117999445067,
       "assessedValue": 564200.0,
       "assessedValuePerAcre": 214851.0,
       "currentZoning": "COUNTY",
       "generalPlanDesignation": "GP code 220",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -6845,6 +7209,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,565,565 (range $1,198,292-$6,459,076)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 355,
       "isNew": false
     },
     {
@@ -6863,13 +7228,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 211814,
       "landAcres": 4.863,
       "puc": "0161",
+      "landUseClass": "residential",
       "lat": 33.61919508290753,
       "lng": -112.09030490232136,
       "assessedValue": 1535700.0,
       "assessedValuePerAcre": 315793.0,
       "currentZoning": "S-1",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -6958,6 +7324,7 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
       "isNew": false
     },
     {
@@ -6976,13 +7343,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 42719,
       "landAcres": 0.981,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.63391780219177,
       "lng": -111.9878635706214,
       "assessedValue": 519300.0,
       "assessedValuePerAcre": 529358.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7007,75 +7375,11 @@ window.PHX_LAND_LEADS = {
         "held 22+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size"
       ],
-      "comps": [
-        {
-          "apn": "21522038",
-          "address": "16423 N 41ST PL   PHOENIX  85032",
-          "distanceMi": 0.27,
-          "soldDate": "2025-08-01",
-          "soldPrice": 970000.0,
-          "landSf": 42654,
-          "livingSpaceSf": 1635.0,
-          "pricePerSf": 593,
-          "pricePerAcre": 990603,
-          "similarity": 80
-        },
-        {
-          "apn": "21434046A",
-          "address": "15621 N 37TH ST   PHOENIX  85032",
-          "distanceMi": 0.89,
-          "soldDate": "2026-06-01",
-          "soldPrice": 750000.0,
-          "landSf": 46427,
-          "livingSpaceSf": 2344.0,
-          "pricePerSf": 320,
-          "pricePerAcre": 703685,
-          "similarity": 76
-        },
-        {
-          "apn": "21464037",
-          "address": "16401 N 37TH PL   PHOENIX  85032",
-          "distanceMi": 0.77,
-          "soldDate": "2026-08-01",
-          "soldPrice": 415000.0,
-          "landSf": 8984,
-          "livingSpaceSf": 1776.0,
-          "pricePerSf": 234,
-          "pricePerAcre": 2012177,
-          "similarity": 72
-        },
-        {
-          "apn": "21464092",
-          "address": "3630 E PARADISE LN   PHOENIX  85032",
-          "distanceMi": 0.89,
-          "soldDate": "2026-06-01",
-          "soldPrice": 360000.0,
-          "landSf": 8086,
-          "livingSpaceSf": 1502.0,
-          "pricePerSf": 240,
-          "pricePerAcre": 1939352,
-          "similarity": 72
-        },
-        {
-          "apn": "21434191",
-          "address": "15652 N 38TH PL   PHOENIX  85032",
-          "distanceMi": 0.76,
-          "soldDate": "2026-08-01",
-          "soldPrice": 415000.0,
-          "landSf": 5148,
-          "livingSpaceSf": 1383.0,
-          "pricePerSf": 300,
-          "pricePerAcre": 3511538,
-          "similarity": 71
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 834577,
-        "rangeLow": 690100,
-        "rangeHigh": 971478,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $834,577 (range $690,100-$971,478)."
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "3609 E. Robin Lane, PHOENIX, AZ, 85050",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L11107389"
       },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "isNew": false
     },
     {
@@ -7094,6 +7398,7 @@ window.PHX_LAND_LEADS = {
       "landSf": 47219,
       "landAcres": 1.084,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.67293908437129,
       "lng": -112.03806876625465,
       "assessedValue": 591000.0,
@@ -7143,13 +7448,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 22390,
       "landAcres": 0.514,
       "puc": "0132",
+      "landUseClass": "residential",
       "lat": 33.61695666180782,
       "lng": -112.06449827587485,
       "assessedValue": 292200.0,
       "assessedValuePerAcre": 568482.0,
       "currentZoning": "S-1",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7174,6 +7480,7 @@ window.PHX_LAND_LEADS = {
         "held 32+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -7192,13 +7499,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 36837,
       "landAcres": 0.846,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.645074739968095,
       "lng": -112.020477207126,
       "assessedValue": 493500.0,
       "assessedValuePerAcre": 583333.0,
       "currentZoning": "R-3",
       "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7241,13 +7549,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 71382,
       "landAcres": 1.639,
       "puc": "0142",
+      "landUseClass": "residential",
       "lat": 33.62833037714857,
       "lng": -111.98046888887444,
       "assessedValue": 1170890.0,
       "assessedValuePerAcre": 714393.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7290,13 +7599,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 47045,
       "landAcres": 1.08,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.634456966576266,
       "lng": -112.05211470124908,
       "assessedValue": 779100.0,
       "assessedValuePerAcre": 721389.0,
       "currentZoning": "S-1",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7321,6 +7631,7 @@ window.PHX_LAND_LEADS = {
         "held 15+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -7339,13 +7650,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 62624,
       "landAcres": 1.438,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.63734200950337,
       "lng": -111.99353265243832,
       "assessedValue": 803200.0,
       "assessedValuePerAcre": 558554.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7388,13 +7700,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16198,
       "landAcres": 0.372,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.6044548671109,
       "lng": -112.02767689703208,
       "assessedValue": 257700.0,
       "assessedValuePerAcre": 692742.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7419,6 +7732,11 @@ window.PHX_LAND_LEADS = {
         "held 23+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "2624 E EMILE ZOLA, PHOENIX, AZ, 85032",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L08368249"
+      },
       "isNew": false
     },
     {
@@ -7437,13 +7755,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 47262,
       "landAcres": 1.085,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.63224778983776,
       "lng": -111.99353880835895,
       "assessedValue": 675300.0,
       "assessedValuePerAcre": 622396.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7471,6 +7790,61 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "21444008D",
+      "address": "731 E HEARN RD   PHOENIX  85022",
+      "ownerName": "731 E HEARN RD LLC",
+      "ownerMailAddress": "19820 N 7TH ST STE 260 PHOENIX AZ USA 85024",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 18.3
+      },
+      "landSf": 19602,
+      "landAcres": 0.45,
+      "puc": "0131",
+      "landUseClass": "residential",
+      "lat": 33.61461384495521,
+      "lng": -112.06398927916392,
+      "assessedValue": 308100.0,
+      "assessedValuePerAcre": 684667.0,
+      "currentZoning": "S-1",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-2",
+        "targetDensity": 12,
+        "basis": "adjacent parcels already zoned R-2"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 5.4,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 1151.0,
+      "farRatio": 0.058718498112437505,
+      "yearBuilt": "1949",
+      "defaultDemoCost": 18000,
+      "score": 68,
+      "reasons": [
+        "adjacent parcels already zoned R-2",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 18+ years \u2014 likely low or no debt on the land",
+        "existing structure occupies only 6% of the lot \u2014 under-improved for the land size"
+      ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "21230 N 53RD AVE, GLENDALE, AZ, 85308",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L10953387"
+      },
+      "isNew": true
+    },
+    {
       "apn": "20816007B",
       "address": "1717 W MANDALAY LN   PHOENIX  85023",
       "ownerName": "BALLS LIVING TRUST",
@@ -7486,13 +7860,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 116538,
       "landAcres": 2.675,
       "puc": "0151",
+      "landUseClass": "residential",
       "lat": 33.61920207189439,
       "lng": -112.09699633035333,
       "assessedValue": 1275200.0,
       "assessedValuePerAcre": 476710.0,
       "currentZoning": "S-1",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7535,13 +7910,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 70881,
       "landAcres": 1.627,
       "puc": "0151",
+      "landUseClass": "residential",
       "lat": 33.61452237738539,
       "lng": -112.09191528457427,
       "assessedValue": 754600.0,
       "assessedValuePerAcre": 463798.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7584,13 +7960,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 59381,
       "landAcres": 1.363,
       "puc": "0151",
+      "landUseClass": "residential",
       "lat": 33.61430001765194,
       "lng": -112.09122935724386,
       "assessedValue": 858600.0,
       "assessedValuePerAcre": 629934.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7615,6 +7992,11 @@ window.PHX_LAND_LEADS = {
         "held 19+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "18047 N TATUM BLVD, PHOENIX, AZ, 85032",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L14302427"
+      },
       "isNew": false
     },
     {
@@ -7633,13 +8015,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 49330,
       "landAcres": 1.132,
       "puc": "0132",
+      "landUseClass": "residential",
       "lat": 33.63443023847231,
       "lng": -112.03571567121394,
       "assessedValue": 602500.0,
       "assessedValuePerAcre": 532244.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7682,13 +8065,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 45983,
       "landAcres": 1.056,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.6305506764114,
       "lng": -111.99545106270905,
       "assessedValue": 750500.0,
       "assessedValuePerAcre": 710701.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7731,13 +8115,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 36864,
       "landAcres": 0.846,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.646928123647776,
       "lng": -112.02048266625961,
       "assessedValue": 547800.0,
       "assessedValuePerAcre": 647518.0,
       "currentZoning": "R-3",
       "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7762,6 +8147,7 @@ window.PHX_LAND_LEADS = {
         "held 16+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 7% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -7780,13 +8166,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 42471,
       "landAcres": 0.975,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.611813132436474,
       "lng": -112.04466949222015,
       "assessedValue": 860500.0,
       "assessedValuePerAcre": 882564.0,
       "currentZoning": "S-1",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7829,13 +8216,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 21289,
       "landAcres": 0.489,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.60725562966027,
       "lng": -112.02345879518076,
       "assessedValue": 442700.0,
       "assessedValuePerAcre": 905317.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7860,6 +8248,11 @@ window.PHX_LAND_LEADS = {
         "held 23+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 8% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "2624 E EMILE ZOLA, PHOENIX, AZ, 85032",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L08368249"
+      },
       "isNew": false
     },
     {
@@ -7878,6 +8271,7 @@ window.PHX_LAND_LEADS = {
       "landSf": 16431,
       "landAcres": 0.377,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.59392593779681,
       "lng": -112.01560562907936,
       "assessedValue": 397800.0,
@@ -7909,6 +8303,7 @@ window.PHX_LAND_LEADS = {
         "held 25+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 8% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -7927,13 +8322,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 28096,
       "landAcres": 0.645,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.618190872250224,
       "lng": -112.01894748673439,
       "assessedValue": 678000.0,
       "assessedValuePerAcre": 1051163.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -7958,6 +8354,11 @@ window.PHX_LAND_LEADS = {
         "held 16+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 8% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "P O BOX 31654, PHOENIX, AZ, 85046",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L08685252"
+      },
       "isNew": false
     },
     {
@@ -7976,13 +8377,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 29163,
       "landAcres": 0.669,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.60518799444566,
       "lng": -112.0308477898026,
       "assessedValue": 529200.0,
       "assessedValuePerAcre": 791031.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8025,13 +8427,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 21195,
       "landAcres": 0.487,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.60658475491117,
       "lng": -112.02414091177353,
       "assessedValue": 444000.0,
       "assessedValuePerAcre": 911704.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8074,13 +8477,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 17185,
       "landAcres": 0.395,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.60780696369893,
       "lng": -112.02420393864689,
       "assessedValue": 349200.0,
       "assessedValuePerAcre": 884051.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8123,13 +8527,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 14707,
       "landAcres": 0.338,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.62767209627184,
       "lng": -112.00882736511812,
       "assessedValue": 397700.0,
       "assessedValuePerAcre": 1176627.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8172,13 +8577,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16957,
       "landAcres": 0.389,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.63599481407324,
       "lng": -112.05500859100052,
       "assessedValue": 435300.0,
       "assessedValuePerAcre": 1119023.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8221,13 +8627,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 19989,
       "landAcres": 0.459,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.590996195162994,
       "lng": -112.02809612270123,
       "assessedValue": 627100.0,
       "assessedValuePerAcre": 1366231.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8270,13 +8677,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 19838,
       "landAcres": 0.455,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.58923967726582,
       "lng": -111.98726131085995,
       "assessedValue": 691700.0,
       "assessedValuePerAcre": 1520220.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8301,6 +8709,7 @@ window.PHX_LAND_LEADS = {
         "held 20+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 10% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -8319,13 +8728,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 19547,
       "landAcres": 0.449,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.64028274321791,
       "lng": -111.98312611730904,
       "assessedValue": 567500.0,
       "assessedValuePerAcre": 1263920.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8368,13 +8778,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 17781,
       "landAcres": 0.408,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.59376905570825,
       "lng": -112.02945462841075,
       "assessedValue": 496800.0,
       "assessedValuePerAcre": 1217647.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8417,13 +8828,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16098,
       "landAcres": 0.37,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.59597960769185,
       "lng": -112.0160941461475,
       "assessedValue": 454600.0,
       "assessedValuePerAcre": 1228649.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8466,13 +8878,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 26507,
       "landAcres": 0.609,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.5780011929379,
       "lng": -111.98525271084516,
       "assessedValue": 1322800.0,
       "assessedValuePerAcre": 2172085.0,
       "currentZoning": "PAD-2",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8515,13 +8928,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 23988,
       "landAcres": 0.551,
       "puc": "0151",
+      "landUseClass": "residential",
       "lat": 33.809501324180935,
       "lng": -112.11655216007924,
       "assessedValue": 918300.0,
       "assessedValuePerAcre": 1666606.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 30",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8546,6 +8960,7 @@ window.PHX_LAND_LEADS = {
         "held 17+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 13% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -8564,13 +8979,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15863,
       "landAcres": 0.364,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.65622217198862,
       "lng": -112.1261482253092,
       "assessedValue": 385700.0,
       "assessedValuePerAcre": 1059615.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8613,13 +9029,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 17593,
       "landAcres": 0.404,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.625592811014165,
       "lng": -111.98017143465165,
       "assessedValue": 299000.0,
       "assessedValuePerAcre": 740099.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8662,13 +9079,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15017,
       "landAcres": 0.345,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.58574496935758,
       "lng": -111.99487414150936,
       "assessedValue": 644600.0,
       "assessedValuePerAcre": 1868406.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8711,13 +9129,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 17291,
       "landAcres": 0.397,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.65596730345497,
       "lng": -112.12233262297636,
       "assessedValue": 507600.0,
       "assessedValuePerAcre": 1278589.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8760,13 +9179,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15689,
       "landAcres": 0.36,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.63089968345278,
       "lng": -111.98585786917606,
       "assessedValue": 683000.0,
       "assessedValuePerAcre": 1897222.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8809,13 +9229,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 14122,
       "landAcres": 0.324,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.610668882443086,
       "lng": -112.10627255912337,
       "assessedValue": 339200.0,
       "assessedValuePerAcre": 1046914.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8840,6 +9261,7 @@ window.PHX_LAND_LEADS = {
         "held 19+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 14% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -8858,13 +9280,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 65300,
       "landAcres": 1.499,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.580469007816106,
       "lng": -112.00161516646489,
       "assessedValue": 1521300.0,
       "assessedValuePerAcre": 1014877.0,
       "currentZoning": "RE-43",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8907,13 +9330,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 40511,
       "landAcres": 0.93,
       "puc": "0151",
+      "landUseClass": "residential",
       "lat": 33.65969429301776,
       "lng": -112.03496430504507,
       "assessedValue": 1151200.0,
       "assessedValuePerAcre": 1237849.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -8956,13 +9380,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 33865,
       "landAcres": 0.777,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.574937657111604,
       "lng": -111.98146183631637,
       "assessedValue": 1392000.0,
       "assessedValuePerAcre": 1791506.0,
       "currentZoning": "PAD-2",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9005,13 +9430,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 43107,
       "landAcres": 0.99,
       "puc": "0151",
+      "landUseClass": "residential",
       "lat": 33.809798033997545,
       "lng": -112.11343519306683,
       "assessedValue": 1290500.0,
       "assessedValuePerAcre": 1303535.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 30",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9054,13 +9480,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 17227,
       "landAcres": 0.395,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.59066667737824,
       "lng": -112.02219982423887,
       "assessedValue": 507800.0,
       "assessedValuePerAcre": 1285570.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9103,13 +9530,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15000,
       "landAcres": 0.344,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.625401846279175,
       "lng": -112.0851183524292,
       "assessedValue": 530300.0,
       "assessedValuePerAcre": 1541570.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9152,13 +9580,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15856,
       "landAcres": 0.364,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.5839547170311,
       "lng": -111.98894162671698,
       "assessedValue": 650300.0,
       "assessedValuePerAcre": 1786538.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9201,13 +9630,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 14164,
       "landAcres": 0.325,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.583922202132584,
       "lng": -111.99491859427738,
       "assessedValue": 541000.0,
       "assessedValuePerAcre": 1664615.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9250,13 +9680,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 208130,
       "landAcres": 4.778,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.6109294405754,
       "lng": -112.02684906852869,
       "assessedValue": 622800.0,
       "assessedValuePerAcre": 130347.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9299,13 +9730,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 90344,
       "landAcres": 2.074,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.639259727166106,
       "lng": -112.01411638359234,
       "assessedValue": 264500.0,
       "assessedValuePerAcre": 127531.0,
       "currentZoning": "C-3",
       "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9348,13 +9780,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 106280,
       "landAcres": 2.44,
       "puc": "0144",
+      "landUseClass": "residential",
       "lat": 33.719668076504405,
       "lng": -112.09768590571126,
       "assessedValue": 385500.0,
       "assessedValuePerAcre": 157992.0,
       "currentZoning": "COUNTY",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9397,13 +9830,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 50729,
       "landAcres": 1.165,
       "puc": "0134",
+      "landUseClass": "residential",
       "lat": 33.72527010386233,
       "lng": -112.08987361880695,
       "assessedValue": 475300.0,
       "assessedValuePerAcre": 407983.0,
       "currentZoning": "COUNTY",
       "generalPlanDesignation": "GP code 20",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9446,13 +9880,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 56661,
       "landAcres": 1.301,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.648782958035355,
       "lng": -112.04881114098256,
       "assessedValue": 367100.0,
       "assessedValuePerAcre": 282168.0,
       "currentZoning": "R1-6",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9495,13 +9930,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 57787,
       "landAcres": 1.327,
       "puc": "0144",
+      "landUseClass": "residential",
       "lat": 33.81457530232579,
       "lng": -112.13324803842644,
       "assessedValue": 769000.0,
       "assessedValuePerAcre": 579503.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 987",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9544,13 +9980,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 45606,
       "landAcres": 1.047,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.617837864649395,
       "lng": -112.01950078162042,
       "assessedValue": 732100.0,
       "assessedValuePerAcre": 699236.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9593,13 +10030,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 52675,
       "landAcres": 1.209,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.66550736625874,
       "lng": -112.03120969858786,
       "assessedValue": 734600.0,
       "assessedValuePerAcre": 607610.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 40",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9642,13 +10080,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 17511,
       "landAcres": 0.402,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.62538603406346,
       "lng": -112.01190621794692,
       "assessedValue": 248500.0,
       "assessedValuePerAcre": 618159.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9691,13 +10130,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 43613,
       "landAcres": 1.001,
       "puc": "0144",
+      "landUseClass": "residential",
       "lat": 33.81420352635135,
       "lng": -112.13238173580613,
       "assessedValue": 709300.0,
       "assessedValuePerAcre": 708591.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 987",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9740,13 +10180,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 43562,
       "landAcres": 1.0,
       "puc": "0144",
+      "landUseClass": "residential",
       "lat": 33.81408523831889,
       "lng": -112.13396402598923,
       "assessedValue": 773600.0,
       "assessedValuePerAcre": 773600.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 987",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9789,13 +10230,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 22202,
       "landAcres": 0.51,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.586218284263715,
       "lng": -112.01971092256555,
       "assessedValue": 515300.0,
       "assessedValuePerAcre": 1010392.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9833,18 +10275,19 @@ window.PHX_LAND_LEADS = {
         "isEntityOwner": false,
         "isOwnerOccupied": true,
         "isHiddenOwner": false,
-        "yearsHeld": 16.9
+        "yearsHeld": 17.0
       },
       "landSf": 43561,
       "landAcres": 1.0,
       "puc": "0154",
+      "landUseClass": "residential",
       "lat": 33.81366381429613,
       "lng": -112.12567967147994,
       "assessedValue": 961100.0,
       "assessedValuePerAcre": 961100.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9872,55 +10315,6 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
-      "apn": "21316018U",
-      "address": "18648 N 30TH ST   PHOENIX  85050",
-      "ownerName": "YATES JAMES E/WANDA M TR",
-      "ownerMailAddress": "5510 E ANDERSON DR SCOTTSDALE AZ USA 85254",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": false,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": false,
-        "yearsHeld": 28.6
-      },
-      "landSf": 35719,
-      "landAcres": 0.82,
-      "puc": "0132",
-      "lat": 33.65672946002404,
-      "lng": -112.01844923715582,
-      "assessedValue": 451200.0,
-      "assessedValuePerAcre": 550244.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3",
-        "targetDensity": 16,
-        "basis": "adjacent parcels already zoned R-3"
-      },
-      "byRightUnits": 4.1,
-      "rezoneTargetUnits": 13.1,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 2904.0,
-      "farRatio": 0.0813012682325933,
-      "yearBuilt": "1980",
-      "defaultDemoCost": 18000,
-      "score": 66,
-      "reasons": [
-        "adjacent parcels already zoned R-3",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city",
-        "held 29+ years \u2014 likely low or no debt on the land",
-        "existing structure occupies only 8% of the lot \u2014 under-improved for the land size"
-      ],
-      "isNew": false
-    },
-    {
       "apn": "21326006",
       "address": "2325 E MARCO POLO RD   PHOENIX  85024",
       "ownerName": "BROOKSHIRE MICHAEL D",
@@ -9936,13 +10330,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16986,
       "landAcres": 0.39,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.66657047630963,
       "lng": -112.03240524257083,
       "assessedValue": 318528.0,
       "assessedValuePerAcre": 816738.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 40",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -9970,6 +10365,56 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "21316018U",
+      "address": "18648 N 30TH ST   PHOENIX  85050",
+      "ownerName": "YATES JAMES E/WANDA M TR",
+      "ownerMailAddress": "5510 E ANDERSON DR SCOTTSDALE AZ USA 85254",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
+        "yearsHeld": 28.6
+      },
+      "landSf": 35719,
+      "landAcres": 0.82,
+      "puc": "0132",
+      "landUseClass": "residential",
+      "lat": 33.65672946002404,
+      "lng": -112.01844923715582,
+      "assessedValue": 451200.0,
+      "assessedValuePerAcre": 550244.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3",
+        "targetDensity": 16,
+        "basis": "adjacent parcels already zoned R-3"
+      },
+      "byRightUnits": 4.1,
+      "rezoneTargetUnits": 13.1,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 2904.0,
+      "farRatio": 0.0813012682325933,
+      "yearBuilt": "1980",
+      "defaultDemoCost": 18000,
+      "score": 66,
+      "reasons": [
+        "adjacent parcels already zoned R-3",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "held 29+ years \u2014 likely low or no debt on the land",
+        "existing structure occupies only 8% of the lot \u2014 under-improved for the land size"
+      ],
+      "isNew": false
+    },
+    {
       "apn": "21513174",
       "address": "18006 N VILLA RITA DR   PHOENIX  85032",
       "ownerName": "LIVINGSTON WANDA TR",
@@ -9985,13 +10430,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 21363,
       "landAcres": 0.49,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.65024089331208,
       "lng": -111.98978111267819,
       "assessedValue": 510600.0,
       "assessedValuePerAcre": 1042041.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -10034,13 +10480,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15140,
       "landAcres": 0.348,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.60900532817508,
       "lng": -112.02007331218704,
       "assessedValue": 406100.0,
       "assessedValuePerAcre": 1166954.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -10083,13 +10530,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16290,
       "landAcres": 0.374,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.660267069769475,
       "lng": -112.03048482717708,
       "assessedValue": 542100.0,
       "assessedValuePerAcre": 1449465.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 40",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -10132,13 +10580,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 14065,
       "landAcres": 0.323,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.65669625262906,
       "lng": -112.08322458299355,
       "assessedValue": 352200.0,
       "assessedValuePerAcre": 1090402.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -10181,13 +10630,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15823,
       "landAcres": 0.363,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.60594900070366,
       "lng": -112.02510216682633,
       "assessedValue": 470300.0,
       "assessedValuePerAcre": 1295592.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -10230,13 +10680,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16542,
       "landAcres": 0.38,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.630095340952906,
       "lng": -112.00621213043404,
       "assessedValue": 498536.0,
       "assessedValuePerAcre": 1311937.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -10279,13 +10730,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 87120,
       "landAcres": 2.0,
       "puc": "0022",
+      "landUseClass": "commercial",
       "lat": 33.612318820581365,
       "lng": -112.11929323824664,
       "assessedValue": 1299300.0,
       "assessedValuePerAcre": 649650.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 60",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -10379,6 +10831,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,362,975 (range $1,726,108-$3,058,485)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 82,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -10397,13 +10851,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 14101,
       "landAcres": 0.324,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.68138978223397,
       "lng": -112.11151851384322,
       "assessedValue": 242100.0,
       "assessedValuePerAcre": 747222.0,
       "currentZoning": "C-3",
       "generalPlanDesignation": "GP code 110",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -10473,6 +10928,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 3 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $792,442 (range $779,041-$801,689)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 227,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "2502 N BLACK CANYON HWY, PHOENIX, AZ, 85009",
+        "companyUrl": "https://opencorporates.com/companies/us_az/01286204"
+      },
       "isNew": false
     },
     {
@@ -10491,13 +10952,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 24098,
       "landAcres": 0.553,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.640062355612905,
       "lng": -112.01689501315569,
       "assessedValue": 379800.0,
       "assessedValuePerAcre": 686799.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -10591,6 +11053,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,463,383 (range $878,837-$2,848,055)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 285,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "NATIONAL REGISTERED AGENTS INC 3800 N CENTRAL AVE SUITE 460, PHOENIX, AZ, 85012",
+        "companyUrl": "https://opencorporates.com/companies/us_az/R13712321"
+      },
       "isNew": false
     },
     {
@@ -10609,13 +11077,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 91772,
       "landAcres": 2.107,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.63925639659533,
       "lng": -112.00202689038018,
       "assessedValue": 1921600.0,
       "assessedValuePerAcre": 912008.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -10709,6 +11178,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $3,371,407 (range $2,486,233-$4,432,288)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 75,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -10727,13 +11198,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 85203,
       "landAcres": 1.956,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.63924292249471,
       "lng": -112.00106034662147,
       "assessedValue": 1799600.0,
       "assessedValuePerAcre": 920041.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -10827,6 +11299,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $3,392,980 (range $3,063,399-$4,058,663)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 89,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "3800 N CENTRAL AVE SUITE 460, PHOENIX, AZ, 85012",
+        "companyUrl": "https://opencorporates.com/companies/us_az/F10033979"
+      },
       "isNew": false
     },
     {
@@ -10845,13 +11323,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 151545,
       "landAcres": 3.479,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.61358826822269,
       "lng": -112.03451052648379,
       "assessedValue": 1928000.0,
       "assessedValuePerAcre": 554182.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 200",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -10892,6 +11371,8 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -10910,13 +11391,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16879,
       "landAcres": 0.387,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.64023607084797,
       "lng": -111.9795550716899,
       "assessedValue": 768900.0,
       "assessedValuePerAcre": 1986822.0,
       "currentZoning": "PSC",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11010,6 +11492,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,652,744 (range $1,023,133-$4,399,473)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 245,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "NATIONAL REGISTERED AGENTS INC 3800 N CENTRAL AVE SUITE 460, PHOENIX, AZ, 85012",
+        "companyUrl": "https://opencorporates.com/companies/us_az/R16876777"
+      },
       "isNew": false
     },
     {
@@ -11028,13 +11516,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 91476,
       "landAcres": 2.1,
       "puc": "0132",
+      "landUseClass": "residential",
       "lat": 33.679104671299754,
       "lng": -112.03601662146163,
       "assessedValue": 470600.0,
       "assessedValuePerAcre": 224095.0,
       "currentZoning": "CP/GCP",
       "generalPlanDesignation": "GP code 110",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11059,6 +11548,11 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "6021 E CAVE CREEK RD, CAVE CREEK, AZ, 85331",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L19596303"
+      },
       "isNew": false
     },
     {
@@ -11077,13 +11571,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 54322,
       "landAcres": 1.247,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.64357483821865,
       "lng": -112.04204607570462,
       "assessedValue": 280200.0,
       "assessedValuePerAcre": 224699.0,
       "currentZoning": "R1-6",
       "generalPlanDesignation": "GP code 47",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11108,6 +11603,11 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "8711 E Pinnacle Peak Rd., PMB 109, SCOTTSDALE, AZ, 85255",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23589689"
+      },
       "isNew": false
     },
     {
@@ -11126,13 +11626,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 46621,
       "landAcres": 1.07,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.6576046978402,
       "lng": -112.01956067065534,
       "assessedValue": 279600.0,
       "assessedValuePerAcre": 261308.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11157,6 +11658,11 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "8425 W El Cortez Place, PEORIA, AZ, 85383",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23484837"
+      },
       "isNew": false
     },
     {
@@ -11175,13 +11681,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 49484,
       "landAcres": 1.136,
       "puc": "0132",
+      "landUseClass": "residential",
       "lat": 33.679936296237,
       "lng": -112.03680077766855,
       "assessedValue": 545200.0,
       "assessedValuePerAcre": 479930.0,
       "currentZoning": "S-1",
       "generalPlanDesignation": "GP code 110",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11206,6 +11713,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -11224,13 +11732,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 37399,
       "landAcres": 0.859,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.631837618087644,
       "lng": -112.1494366572335,
       "assessedValue": 519600.0,
       "assessedValuePerAcre": 604889.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 20",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11255,6 +11764,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -11273,13 +11783,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 39390,
       "landAcres": 0.904,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.62485235362264,
       "lng": -112.14443269993541,
       "assessedValue": 440100.0,
       "assessedValuePerAcre": 486836.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 20",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11304,6 +11815,11 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "19516 N 71st Ave, GLENDALE, AZ, 85308",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23887699"
+      },
       "isNew": false
     },
     {
@@ -11322,13 +11838,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 46086,
       "landAcres": 1.058,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.630976017938025,
       "lng": -111.99545571959092,
       "assessedValue": 511700.0,
       "assessedValuePerAcre": 483648.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11353,6 +11870,11 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "8355 E. Hartford Drive, Suite 200, SCOTTSDALE, AZ, 85255",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23738529"
+      },
       "isNew": false
     },
     {
@@ -11371,13 +11893,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 20203,
       "landAcres": 0.464,
       "puc": "0122",
+      "landUseClass": "residential",
       "lat": 33.634483093972015,
       "lng": -112.03788223914356,
       "assessedValue": 215235.0,
       "assessedValuePerAcre": 463869.0,
       "currentZoning": "S-1",
       "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11402,6 +11925,11 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "10510 E WETHERSFIELD RD, SCOTTSDALE, AZ, 85259",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L07599450"
+      },
       "isNew": false
     },
     {
@@ -11420,13 +11948,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 46778,
       "landAcres": 1.074,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.58403984745801,
       "lng": -111.98133855087251,
       "assessedValue": 1130200.0,
       "assessedValuePerAcre": 1052328.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11451,6 +11980,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -11469,13 +11999,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 37394,
       "landAcres": 0.858,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.63105947972164,
       "lng": -112.14346690258786,
       "assessedValue": 469500.0,
       "assessedValuePerAcre": 547203.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11500,6 +12031,11 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "12158 W Mazatzal Dr, Peoria, AZ, 85383-5409",
+        "companyUrl": "https://opencorporates.com/companies/us_az/25026479"
+      },
       "isNew": false
     },
     {
@@ -11518,13 +12054,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 45835,
       "landAcres": 1.052,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.629260692410995,
       "lng": -111.99354137229346,
       "assessedValue": 711600.0,
       "assessedValuePerAcre": 676426.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11549,6 +12086,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -11567,6 +12105,7 @@ window.PHX_LAND_LEADS = {
       "landSf": 30293,
       "landAcres": 0.695,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.68608279239902,
       "lng": -112.11982823478439,
       "assessedValue": 362300.0,
@@ -11598,6 +12137,11 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "27622 N 203RD AVE, WITTMANN, AZ, 85361",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L17949038"
+      },
       "isNew": false
     },
     {
@@ -11616,13 +12160,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 83042,
       "landAcres": 1.906,
       "puc": "0151",
+      "landUseClass": "residential",
       "lat": 33.574104819510204,
       "lng": -112.00275579660752,
       "assessedValue": 1986000.0,
       "assessedValuePerAcre": 1041973.0,
       "currentZoning": "RE-43",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11647,7 +12192,62 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "7114 E. Stetson Dr., Suite 350, SCOTTSDALE, AZ, 85251",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L12074682"
+      },
       "isNew": false
+    },
+    {
+      "apn": "20338009G",
+      "address": "36309 N 29TH AVE   PHOENIX  85086",
+      "ownerName": "MUNICE FAMILY LIVING TRUST",
+      "ownerMailAddress": "36309 N 29TH AVE DESERT HILLS AZ USA 85086",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
+        "yearsHeld": 5.3
+      },
+      "landSf": 61479,
+      "landAcres": 1.411,
+      "puc": "0144",
+      "landUseClass": "residential",
+      "lat": 33.813913379249875,
+      "lng": -112.1212867676915,
+      "assessedValue": 1062700.0,
+      "assessedValuePerAcre": 753154.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 990",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-10",
+        "targetDensity": 4,
+        "basis": "adjacent parcels already zoned R1-10"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 5.6,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 3187.0,
+      "farRatio": 0.05183883927845281,
+      "yearBuilt": "2006",
+      "defaultDemoCost": 18000,
+      "score": 64,
+      "reasons": [
+        "adjacent parcels already zoned R1-10",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "existing structure occupies only 5% of the lot \u2014 under-improved for the land size"
+      ],
+      "isNew": true
     },
     {
       "apn": "16501015A",
@@ -11665,6 +12265,7 @@ window.PHX_LAND_LEADS = {
       "landSf": 49484,
       "landAcres": 1.136,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.58056006525312,
       "lng": -112.00062944763565,
       "assessedValue": 1163300.0,
@@ -11696,6 +12297,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -11714,13 +12316,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 35022,
       "landAcres": 0.804,
       "puc": "0141",
+      "landUseClass": "residential",
       "lat": 33.61856065861655,
       "lng": -112.01747854786181,
       "assessedValue": 686600.0,
       "assessedValuePerAcre": 853980.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11745,6 +12348,11 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "4815 E.CAREFREE HWY., 108-206, CAVE CREEK, AZ, 85331",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L22614094"
+      },
       "isNew": false
     },
     {
@@ -11763,13 +12371,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 37835,
       "landAcres": 0.869,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.63186575283776,
       "lng": -112.14553958026022,
       "assessedValue": 514200.0,
       "assessedValuePerAcre": 591715.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11794,6 +12403,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -11812,13 +12422,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 43824,
       "landAcres": 1.006,
       "puc": "0144",
+      "landUseClass": "residential",
       "lat": 33.81467012679332,
       "lng": -112.13227517342074,
       "assessedValue": 756800.0,
       "assessedValuePerAcre": 752286.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 987",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11843,6 +12454,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -11861,13 +12473,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 28850,
       "landAcres": 0.662,
       "puc": "0132",
+      "landUseClass": "residential",
       "lat": 33.65044405587349,
       "lng": -111.98521247853448,
       "assessedValue": 533017.0,
       "assessedValuePerAcre": 805162.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11892,6 +12505,11 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "4420 E Michelle Dr, Phoenix, AZ, 85032",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L12332664"
+      },
       "isNew": false
     },
     {
@@ -11910,13 +12528,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 36940,
       "landAcres": 0.848,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.64213087899431,
       "lng": -112.01983047953,
       "assessedValue": 642700.0,
       "assessedValuePerAcre": 757901.0,
       "currentZoning": "R-3",
       "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11941,6 +12560,11 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "6608 E. BEVERLY LANE, SCOTTSDALE, AZ, 85254",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23582025"
+      },
       "isNew": false
     },
     {
@@ -11959,13 +12583,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 61507,
       "landAcres": 1.412,
       "puc": "0144",
+      "landUseClass": "residential",
       "lat": 33.71875934951896,
       "lng": -112.09792808797648,
       "assessedValue": 936600.0,
       "assessedValuePerAcre": 663314.0,
       "currentZoning": "COUNTY",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -11990,6 +12615,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -12008,13 +12634,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 43560,
       "landAcres": 1.0,
       "puc": "0144",
+      "landUseClass": "residential",
       "lat": 33.81412887898576,
       "lng": -112.12329458660221,
       "assessedValue": 911200.0,
       "assessedValuePerAcre": 911200.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -12057,13 +12684,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 25091,
       "landAcres": 0.576,
       "puc": "0131",
+      "landUseClass": "residential",
       "lat": 33.60628766175244,
       "lng": -112.0051460052689,
       "assessedValue": 503000.0,
       "assessedValuePerAcre": 873264.0,
       "currentZoning": "R1-6",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -12088,129 +12716,37 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 7% of the lot \u2014 under-improved for the land size"
       ],
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "PO BOX 130 WADDEL, WADDELL, AZ, 85355",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L15937989"
+      },
       "isNew": false
     },
     {
-      "apn": "16639004B",
-      "address": "2732 E CHOLLA ST   PHOENIX  85028",
-      "ownerName": "LB TRUST/NICKOLAS A BISCOTTI LIVING TRUST",
-      "ownerMailAddress": "12412 N 49TH WAY SCOTTSDALE AZ USA 85254",
+      "apn": "21174107G",
+      "address": "33005 N 15TH PL   PHOENIX  85085",
+      "ownerName": "KC VENTURES II",
+      "ownerMailAddress": "2429 COUNTY ROAD 39 MEEKER CO USA 81641",
       "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": false,
         "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 2.0
+        "isHiddenOwner": false,
+        "yearsHeld": 21.3
       },
-      "landSf": 47228,
-      "landAcres": 1.084,
-      "puc": "0141",
-      "lat": 33.590112969237836,
-      "lng": -112.0227222294237,
-      "assessedValue": 879600.0,
-      "assessedValuePerAcre": 811439.0,
-      "currentZoning": "R1-10",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-8",
-        "targetDensity": 5,
-        "basis": "adjacent parcels already zoned R1-8"
-      },
-      "byRightUnits": 4.3,
-      "rezoneTargetUnits": 5.4,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 3380.0,
-      "farRatio": 0.07156771406792581,
-      "yearBuilt": "2024",
-      "defaultDemoCost": 18000,
-      "score": 64,
-      "reasons": [
-        "adjacent parcels already zoned R1-8",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "existing structure occupies only 7% of the lot \u2014 under-improved for the land size"
-      ],
-      "isNew": false
-    },
-    {
-      "apn": "21524014",
-      "address": "16014 N 40TH PL   PHOENIX  85032",
-      "ownerName": "MAGSAM REVOCABLE TRUST",
-      "ownerMailAddress": "8337 E QUARTERHORSE TRL SCOTTSDALE AZ USA 85258",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 5.8
-      },
-      "landSf": 32295,
-      "landAcres": 0.741,
-      "puc": "0141",
-      "lat": 33.632255145773826,
-      "lng": -111.99456860074744,
-      "assessedValue": 741300.0,
-      "assessedValuePerAcre": 1000405.0,
-      "currentZoning": "R1-14",
-      "generalPlanDesignation": "GP code 24",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": 2.2,
-      "rezoneTargetUnits": 4.4,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 2319.0,
-      "farRatio": 0.07180678123548537,
-      "yearBuilt": "1971",
-      "defaultDemoCost": 18000,
-      "score": 64,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "existing structure occupies only 7% of the lot \u2014 under-improved for the land size"
-      ],
-      "isNew": false
-    },
-    {
-      "apn": "21174092F",
-      "address": "1411 E RED RANGE WAY   PHOENIX  85085",
-      "ownerName": "DALLAS LIVING TRUST",
-      "ownerMailAddress": "PO BOX 7192 CAVE CREEK AZ USA 85327",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 1.9
-      },
-      "landSf": 43679,
-      "landAcres": 1.003,
-      "puc": "0144",
-      "lat": 33.786662208317274,
-      "lng": -112.05197894483906,
-      "assessedValue": 877000.0,
-      "assessedValuePerAcre": 874377.0,
+      "landSf": 66301,
+      "landAcres": 1.522,
+      "puc": "0014",
+      "landUseClass": "residential",
+      "lat": 33.78487645619976,
+      "lng": -112.04851071009699,
+      "assessedValue": 157600.0,
+      "assessedValuePerAcre": 103548.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 20",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -12219,23 +12755,93 @@ window.PHX_LAND_LEADS = {
         "basis": "adjacent parcels already zoned RE-35"
       },
       "byRightUnits": null,
-      "rezoneTargetUnits": 1.0,
+      "rezoneTargetUnits": 1.5,
       "dealType": "subdivision",
       "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 3280.0,
-      "farRatio": 0.07509329426039973,
-      "yearBuilt": "2017",
-      "defaultDemoCost": 18000,
-      "score": 64,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 63,
       "reasons": [
         "adjacent parcels already zoned RE-35",
         "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "existing structure occupies only 8% of the lot \u2014 under-improved for the land size"
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "owner's mailing address is out of state (absentee)",
+        "held 21+ years \u2014 likely low or no debt on the land"
       ],
-      "isNew": false
+      "comps": [
+        {
+          "apn": "21174124",
+          "address": "1421 E COYOTE WASH DR   PHOENIX  85085",
+          "distanceMi": 0.33,
+          "soldDate": "2026-07-01",
+          "soldPrice": 325000.0,
+          "landSf": 43681,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 324100,
+          "similarity": 74
+        },
+        {
+          "apn": "21174007L",
+          "address": "1311 E SAGEBRUSH DR   PHOENIX  85085",
+          "distanceMi": 0.75,
+          "soldDate": "2026-06-01",
+          "soldPrice": 335000.0,
+          "landSf": 53862,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 270926,
+          "similarity": 73
+        },
+        {
+          "apn": "21174007M",
+          "address": "1312 E SAGEBRUSH DR   PHOENIX  85085",
+          "distanceMi": 0.78,
+          "soldDate": "2026-06-01",
+          "soldPrice": 335000.0,
+          "landSf": 53928,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 270594,
+          "similarity": 73
+        },
+        {
+          "apn": "21174123",
+          "address": "1420 E COYOTE WASH DR   PHOENIX  85085",
+          "distanceMi": 0.36,
+          "soldDate": "2026-03-01",
+          "soldPrice": 375000.0,
+          "landSf": 43681,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 373961,
+          "similarity": 72
+        },
+        {
+          "apn": "21174007K",
+          "address": "1319  SAGEBRUSH DR   PHOENIX  85085",
+          "distanceMi": 0.73,
+          "soldDate": "2026-06-01",
+          "soldPrice": 335000.0,
+          "landSf": 48131,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 303185,
+          "similarity": 72
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 469488,
+        "rangeLow": 411861,
+        "rangeHigh": 569192,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $469,488 (range $411,861-$569,192)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 198,
+      "isNew": true
     },
     {
       "apn": "20325527",
@@ -12253,13 +12859,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 113254,
       "landAcres": 2.6,
       "puc": "0013",
+      "landUseClass": "residential",
       "lat": 33.808622282551056,
       "lng": -112.11233319324747,
       "assessedValue": 208000.0,
       "assessedValuePerAcre": 80000.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 30",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -12353,6 +12960,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,561,078 (range $541,788-$4,217,943)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 651,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -12371,13 +12980,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 107237,
       "landAcres": 2.462,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.724363478070664,
       "lng": -112.08032791427965,
       "assessedValue": 301100.0,
       "assessedValuePerAcre": 122299.0,
       "currentZoning": "COUNTY",
       "generalPlanDesignation": "GP code 204",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -12471,6 +13081,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,697,048 (range $468,551-$6,060,471)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 464,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -12489,13 +13101,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 92408,
       "landAcres": 2.121,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.7859340683382,
       "lng": -112.05498792083664,
       "assessedValue": 295100.0,
       "assessedValuePerAcre": 139132.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -12589,6 +13202,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $461,339 (range $210,475-$734,696)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 56,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -12607,13 +13222,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 66461,
       "landAcres": 1.526,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.79788927994111,
       "lng": -112.11745510780348,
       "assessedValue": 2220500.0,
       "assessedValuePerAcre": 1455111.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 60",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -12641,6 +13257,8 @@ window.PHX_LAND_LEADS = {
       "comps": [],
       "valuation": null,
       "compsNote": "No comparable sales of the same land-use type (commercial) found within 5 miles in the last 5 years -- too rural/thin a market to comp automatically.",
+      "equityMarginPct": null,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -12659,13 +13277,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 29182,
       "landAcres": 0.67,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.62733032419993,
       "lng": -111.99470098934096,
       "assessedValue": 698300.0,
       "assessedValuePerAcre": 1042239.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 60",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -12759,141 +13378,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $12,819,599 (range $12,514,135-$13,101,917)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "isNew": false
-    },
-    {
-      "apn": "20424981",
-      "address": "28333 N NORTH VALLEY PKWY   PHOENIX  85085",
-      "ownerName": "DE RITO NORTERRA LLC",
-      "ownerMailAddress": "2424 RIDGE RD ROCKWALL TX USA 75087",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 10.4
-      },
-      "landSf": 98871,
-      "landAcres": 2.27,
-      "puc": "0021",
-      "lat": 33.74127748123058,
-      "lng": -112.10539970147278,
-      "assessedValue": 1830100.0,
-      "assessedValuePerAcre": 806211.0,
-      "currentZoning": "PCD",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3A",
-        "targetDensity": 21,
-        "basis": "adjacent parcels already zoned R-3A"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 47.7,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 59,
-      "reasons": [
-        "adjacent parcels already zoned R-3A",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 10 years"
-      ],
-      "comps": [
-        {
-          "apn": "20111315",
-          "address": "5452 W FALLEN LEAF LN   GLENDALE  85310",
-          "distanceMi": 4.66,
-          "soldDate": "2025-09-01",
-          "soldPrice": 1840034.0,
-          "landSf": 19176,
-          "livingSpaceSf": 4513.0,
-          "pricePerSf": 408,
-          "pricePerAcre": 4179802,
-          "similarity": 24
-        }
-      ],
-      "valuation": null,
-      "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "isNew": false
-    },
-    {
-      "apn": "20424982",
-      "address": "28375 N NORTH VALLEY PKWY   PHOENIX  85085",
-      "ownerName": "DE RITO NORTERRA LLC",
-      "ownerMailAddress": "2424 RIDGE RD ROCKWALL TX USA 75087",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 10.4
-      },
-      "landSf": 31056,
-      "landAcres": 0.713,
-      "puc": "0021",
-      "lat": 33.74117709396374,
-      "lng": -112.10599473976303,
-      "assessedValue": 1208300.0,
-      "assessedValuePerAcre": 1694670.0,
-      "currentZoning": "PCD",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3A",
-        "targetDensity": 21,
-        "basis": "adjacent parcels already zoned R-3A"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 15.0,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 59,
-      "reasons": [
-        "adjacent parcels already zoned R-3A",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 10 years"
-      ],
-      "comps": [
-        {
-          "apn": "20111315",
-          "address": "5452 W FALLEN LEAF LN   GLENDALE  85310",
-          "distanceMi": 4.62,
-          "soldDate": "2025-09-01",
-          "soldPrice": 1840034.0,
-          "landSf": 19176,
-          "livingSpaceSf": 4513.0,
-          "pricePerSf": 408,
-          "pricePerAcre": 4179802,
-          "similarity": 32
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 2979980,
-        "rangeLow": 2979980,
-        "rangeHigh": 2979980,
-        "explanation": "Based on 1 comparable sale within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,979,980 (range $2,979,980-$2,979,980)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 1736,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -12912,13 +13398,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 35161,
       "landAcres": 0.807,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.74084748248534,
       "lng": -112.10540581427584,
       "assessedValue": 1341200.0,
       "assessedValuePerAcre": 1661958.0,
       "currentZoning": "PCD",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -12964,7 +13451,282 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 1 comparable sale within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $3,373,875 (range $3,373,875-$3,373,875)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 152,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "9120 E TALKING STICK WAY STE E-1, SCOTTSDALE, AZ, 85250",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L20362387"
+      },
       "isNew": false
+    },
+    {
+      "apn": "20424982",
+      "address": "28375 N NORTH VALLEY PKWY   PHOENIX  85085",
+      "ownerName": "DE RITO NORTERRA LLC",
+      "ownerMailAddress": "2424 RIDGE RD ROCKWALL TX USA 75087",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 10.4
+      },
+      "landSf": 31056,
+      "landAcres": 0.713,
+      "puc": "0021",
+      "landUseClass": "commercial",
+      "lat": 33.74117709396374,
+      "lng": -112.10599473976303,
+      "assessedValue": 1208300.0,
+      "assessedValuePerAcre": 1694670.0,
+      "currentZoning": "PCD",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3A",
+        "targetDensity": 21,
+        "basis": "adjacent parcels already zoned R-3A"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 15.0,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 59,
+      "reasons": [
+        "adjacent parcels already zoned R-3A",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 10 years"
+      ],
+      "comps": [
+        {
+          "apn": "20111315",
+          "address": "5452 W FALLEN LEAF LN   GLENDALE  85310",
+          "distanceMi": 4.62,
+          "soldDate": "2025-09-01",
+          "soldPrice": 1840034.0,
+          "landSf": 19176,
+          "livingSpaceSf": 4513.0,
+          "pricePerSf": 408,
+          "pricePerAcre": 4179802,
+          "similarity": 32
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 2979980,
+        "rangeLow": 2979980,
+        "rangeHigh": 2979980,
+        "explanation": "Based on 1 comparable sale within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,979,980 (range $2,979,980-$2,979,980)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 147,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "9120 E TALKING STICK WAY STE E-1, SCOTTSDALE, AZ, 85250",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L20362387"
+      },
+      "isNew": false
+    },
+    {
+      "apn": "20424981",
+      "address": "28333 N NORTH VALLEY PKWY   PHOENIX  85085",
+      "ownerName": "DE RITO NORTERRA LLC",
+      "ownerMailAddress": "2424 RIDGE RD ROCKWALL TX USA 75087",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 10.4
+      },
+      "landSf": 98871,
+      "landAcres": 2.27,
+      "puc": "0021",
+      "landUseClass": "commercial",
+      "lat": 33.74127748123058,
+      "lng": -112.10539970147278,
+      "assessedValue": 1830100.0,
+      "assessedValuePerAcre": 806211.0,
+      "currentZoning": "PCD",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3A",
+        "targetDensity": 21,
+        "basis": "adjacent parcels already zoned R-3A"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 47.7,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 59,
+      "reasons": [
+        "adjacent parcels already zoned R-3A",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 10 years"
+      ],
+      "comps": [
+        {
+          "apn": "20111315",
+          "address": "5452 W FALLEN LEAF LN   GLENDALE  85310",
+          "distanceMi": 4.66,
+          "soldDate": "2025-09-01",
+          "soldPrice": 1840034.0,
+          "landSf": 19176,
+          "livingSpaceSf": 4513.0,
+          "pricePerSf": 408,
+          "pricePerAcre": 4179802,
+          "similarity": 24
+        }
+      ],
+      "valuation": null,
+      "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "9120 E TALKING STICK WAY STE E-1, SCOTTSDALE, AZ, 85250",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L20362387"
+      },
+      "isNew": false
+    },
+    {
+      "apn": "21174092P",
+      "address": "1501 E PAINT YOUR WAGON TRL   PHOENIX  85085",
+      "ownerName": "DESERT HILLS RANCH LLC",
+      "ownerMailAddress": "341 W MEATS AVE ORANGE CA USA 92815",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 10.5
+      },
+      "landSf": 900537,
+      "landAcres": 20.673,
+      "puc": "0014",
+      "landUseClass": "residential",
+      "lat": 33.79020071551759,
+      "lng": -112.04909915400411,
+      "assessedValue": 1003600.0,
+      "assessedValuePerAcre": 48546.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 20",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "RE-35",
+        "targetDensity": 1,
+        "basis": "adjacent parcels already zoned RE-35"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 20.7,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 59,
+      "reasons": [
+        "adjacent parcels already zoned RE-35",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 10 years"
+      ],
+      "comps": [
+        {
+          "apn": "20325667",
+          "address": "35605 N VIA TRAMONTO    PHOENIX  85086",
+          "distanceMi": 3.92,
+          "soldDate": "2026-08-01",
+          "soldPrice": 398600.0,
+          "landSf": 22817,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 760968,
+          "similarity": 40
+        },
+        {
+          "apn": "20325525",
+          "address": "2398 W ESPARTERO WAY   PHOENIX  85086",
+          "distanceMi": 3.78,
+          "soldDate": "2026-04-01",
+          "soldPrice": 340000.0,
+          "landSf": 38547,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 384217,
+          "similarity": 38
+        },
+        {
+          "apn": "20325609",
+          "address": "2313 W VILLA CASANDRA DR   PHOENIX  85086",
+          "distanceMi": 3.66,
+          "soldDate": "2026-02-01",
+          "soldPrice": 300000.0,
+          "landSf": 18096,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 722149,
+          "similarity": 37
+        },
+        {
+          "apn": "20325644",
+          "address": "35806 N 26TH AVE   PHOENIX  85086",
+          "distanceMi": 4.07,
+          "soldDate": "2025-07-01",
+          "soldPrice": 245000.0,
+          "landSf": 31991,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 333600,
+          "similarity": 34
+        },
+        {
+          "apn": "20325338",
+          "address": "2406 W VIA SAVELLI    PHOENIX  85086",
+          "distanceMi": 3.73,
+          "soldDate": "2025-06-01",
+          "soldPrice": 305000.0,
+          "landSf": 24660,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 538759,
+          "similarity": 34
+        }
+      ],
+      "valuation": null,
+      "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "SANDERS & PARKS PC 3030 N 3RD ST #1300, PHOENIX, AZ, 85012",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L12304013"
+      },
+      "isNew": true
     },
     {
       "apn": "20715022C",
@@ -12982,13 +13744,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 143557,
       "landAcres": 3.296,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.631644644752875,
       "lng": -112.14175267560414,
       "assessedValue": 545100.0,
       "assessedValuePerAcre": 165382.0,
       "currentZoning": "S-1",
       "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -13077,6 +13840,8 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -13095,13 +13860,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 44213,
       "landAcres": 1.015,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.67909761659388,
       "lng": -112.03675359214678,
       "assessedValue": 365100.0,
       "assessedValuePerAcre": 359704.0,
       "currentZoning": "S-1",
       "generalPlanDesignation": "GP code 110",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -13190,6 +13956,12 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "27224 N 65TH PLACE, SCOTTSDALE, AZ, 85262",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L12667731"
+      },
       "isNew": false
     },
     {
@@ -13208,13 +13980,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 86859,
       "landAcres": 1.994,
       "puc": "0023",
+      "landUseClass": "commercial",
       "lat": 33.673799136271576,
       "lng": -112.02941002522529,
       "assessedValue": 1179100.0,
       "assessedValuePerAcre": 591324.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -13308,6 +14081,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $5,701,089 (range $2,010,939-$13,431,298)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 384,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "9393 N 90TH ST  #102, SCOTTSDALE, AZ, 85258",
+        "companyUrl": "https://opencorporates.com/companies/us_az/00451939"
+      },
       "isNew": false
     },
     {
@@ -13326,13 +14105,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 60036,
       "landAcres": 1.378,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.67357832203882,
       "lng": -112.03036628910584,
       "assessedValue": 850800.0,
       "assessedValuePerAcre": 617417.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -13426,6 +14206,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $5,341,573 (range $1,530,409-$9,283,568)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 528,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "9393 N 90TH ST  #102, SCOTTSDALE, AZ, 85258",
+        "companyUrl": "https://opencorporates.com/companies/us_az/00451939"
+      },
       "isNew": false
     },
     {
@@ -13444,13 +14230,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 36389,
       "landAcres": 0.835,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.667231887851315,
       "lng": -112.03081808956259,
       "assessedValue": 546700.0,
       "assessedValuePerAcre": 654731.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 50",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -13544,6 +14331,12 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $3,735,920 (range $1,660,696-$5,626,953)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 583,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "THEMA, LLC 12036 E CASITAS DEL RIO DR, SCOTTSDALE, AZ, 85255",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L12912507"
+      },
       "isNew": false
     },
     {
@@ -13562,13 +14355,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 841130,
       "landAcres": 19.31,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.63037885914139,
       "lng": -112.09308342503041,
       "assessedValue": 4294600.0,
       "assessedValuePerAcre": 222403.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 30",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -13656,6 +14450,8 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -13674,13 +14470,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 68879,
       "landAcres": 1.581,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.812764241807685,
       "lng": -112.11541944224297,
       "assessedValue": 294900.0,
       "assessedValuePerAcre": 186528.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -13774,6 +14571,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,168,757 (range $329,506-$3,361,810)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 296,
       "isNew": false
     },
     {
@@ -13792,13 +14590,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 45190,
       "landAcres": 1.037,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.58677481584977,
       "lng": -111.98031124296223,
       "assessedValue": 1218000.0,
       "assessedValuePerAcre": 1174542.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -13891,6 +14690,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,781,507 (range $483,026-$6,802,239)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 128,
       "isNew": false
     },
     {
@@ -13909,13 +14709,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16244,
       "landAcres": 0.373,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.59168321340602,
       "lng": -112.02748857748745,
       "assessedValue": 229900.0,
       "assessedValuePerAcre": 616354.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -14008,6 +14809,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $593,170 (range $171,793-$1,124,280)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 158,
       "isNew": false
     },
     {
@@ -14026,13 +14828,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 43527,
       "landAcres": 0.999,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.79689022021586,
       "lng": -112.08214211782402,
       "assessedValue": 214000.0,
       "assessedValuePerAcre": 214214.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -14125,6 +14928,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $845,865 (range $259,535-$1,396,307)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 295,
       "isNew": false
     },
     {
@@ -14143,13 +14947,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 30188,
       "landAcres": 0.693,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.62088069452252,
       "lng": -112.09418692737349,
       "assessedValue": 296700.0,
       "assessedValuePerAcre": 428139.0,
       "currentZoning": "PAD-3",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -14242,6 +15047,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,444,436 (range $509,582-$2,935,542)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 387,
       "isNew": false
     },
     {
@@ -14260,13 +15066,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 148975,
       "landAcres": 3.42,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.61019965897822,
       "lng": -112.02663511913516,
       "assessedValue": 309100.0,
       "assessedValuePerAcre": 90380.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -14355,6 +15162,12 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "6741 E Milton Dr, CAVE CREEK, AZ, 85331",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23143841"
+      },
       "isNew": false
     },
     {
@@ -14373,13 +15186,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 69502,
       "landAcres": 1.596,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.811857612099516,
       "lng": -112.11385516361912,
       "assessedValue": 297200.0,
       "assessedValuePerAcre": 186216.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -14473,124 +15287,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,179,131 (range $332,486-$3,392,217)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "isNew": false
-    },
-    {
-      "apn": "20325688",
-      "address": "36021 N 24TH AVE   PHOENIX  85086",
-      "ownerName": "SBH SUGAR PINE LLC",
-      "ownerMailAddress": "10122 W WESTWIND DR PEORIA AZ USA 85383",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 3.5
-      },
-      "landSf": 94766,
-      "landAcres": 2.176,
-      "puc": "0011",
-      "lat": 33.81101718297637,
-      "lng": -112.10968551321771,
-      "assessedValue": 357200.0,
-      "assessedValuePerAcre": 164154.0,
-      "currentZoning": "RE-35",
-      "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-18",
-        "targetDensity": 2,
-        "basis": "adjacent parcels already zoned R1-18"
-      },
-      "byRightUnits": 2.2,
-      "rezoneTargetUnits": 4.4,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 54,
-      "reasons": [
-        "adjacent parcels already zoned R1-18",
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [
-        {
-          "apn": "20325689",
-          "address": "36031 N 24TH AVE   PHOENIX  85086",
-          "distanceMi": 0.03,
-          "soldDate": "2025-02-01",
-          "soldPrice": 375000.0,
-          "landSf": 78389,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 208384,
-          "similarity": 73
-        },
-        {
-          "apn": "20325525",
-          "address": "2398 W ESPARTERO WAY   PHOENIX  85086",
-          "distanceMi": 0.16,
-          "soldDate": "2026-04-01",
-          "soldPrice": 340000.0,
-          "landSf": 38547,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 384217,
-          "similarity": 69
-        },
-        {
-          "apn": "20325691",
-          "address": "36133 N 24TH AVE   PHOENIX  85086",
-          "distanceMi": 0.09,
-          "soldDate": "2025-10-01",
-          "soldPrice": 2850000.0,
-          "landSf": 76524,
-          "livingSpaceSf": 5201.0,
-          "pricePerSf": 548,
-          "pricePerAcre": 1622315,
-          "similarity": 67
-        },
-        {
-          "apn": "20325667",
-          "address": "35605 N VIA TRAMONTO    PHOENIX  85086",
-          "distanceMi": 0.36,
-          "soldDate": "2026-08-01",
-          "soldPrice": 398600.0,
-          "landSf": 22817,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 760968,
-          "similarity": 66
-        },
-        {
-          "apn": "20325698",
-          "address": "2434 W PRAIANO WAY   PHOENIX  85086",
-          "distanceMi": 0.14,
-          "soldDate": "2025-03-01",
-          "soldPrice": 250000.0,
-          "landSf": 45314,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 240323,
-          "similarity": 66
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1319573,
-        "rangeLow": 453345,
-        "rangeHigh": 3529391,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,319,573 (range $453,345-$3,529,391)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 297,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -14609,13 +15307,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 124085,
       "landAcres": 2.849,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.81044862411434,
       "lng": -112.10969979703195,
       "assessedValue": 395300.0,
       "assessedValuePerAcre": 138750.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 932",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -14709,7 +15408,376 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,714,626 (range $593,602-$4,621,325)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 334,
+      "registeredAgent": null,
       "isNew": false
+    },
+    {
+      "apn": "20325688",
+      "address": "36021 N 24TH AVE   PHOENIX  85086",
+      "ownerName": "SBH SUGAR PINE LLC",
+      "ownerMailAddress": "10122 W WESTWIND DR PEORIA AZ USA 85383",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 3.5
+      },
+      "landSf": 94766,
+      "landAcres": 2.176,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.81101718297637,
+      "lng": -112.10968551321771,
+      "assessedValue": 357200.0,
+      "assessedValuePerAcre": 164154.0,
+      "currentZoning": "RE-35",
+      "generalPlanDesignation": "GP code 971",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-18",
+        "targetDensity": 2,
+        "basis": "adjacent parcels already zoned R1-18"
+      },
+      "byRightUnits": 2.2,
+      "rezoneTargetUnits": 4.4,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 54,
+      "reasons": [
+        "adjacent parcels already zoned R1-18",
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [
+        {
+          "apn": "20325689",
+          "address": "36031 N 24TH AVE   PHOENIX  85086",
+          "distanceMi": 0.03,
+          "soldDate": "2025-02-01",
+          "soldPrice": 375000.0,
+          "landSf": 78389,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 208384,
+          "similarity": 73
+        },
+        {
+          "apn": "20325525",
+          "address": "2398 W ESPARTERO WAY   PHOENIX  85086",
+          "distanceMi": 0.16,
+          "soldDate": "2026-04-01",
+          "soldPrice": 340000.0,
+          "landSf": 38547,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 384217,
+          "similarity": 69
+        },
+        {
+          "apn": "20325691",
+          "address": "36133 N 24TH AVE   PHOENIX  85086",
+          "distanceMi": 0.09,
+          "soldDate": "2025-10-01",
+          "soldPrice": 2850000.0,
+          "landSf": 76524,
+          "livingSpaceSf": 5201.0,
+          "pricePerSf": 548,
+          "pricePerAcre": 1622315,
+          "similarity": 67
+        },
+        {
+          "apn": "20325667",
+          "address": "35605 N VIA TRAMONTO    PHOENIX  85086",
+          "distanceMi": 0.36,
+          "soldDate": "2026-08-01",
+          "soldPrice": 398600.0,
+          "landSf": 22817,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 760968,
+          "similarity": 66
+        },
+        {
+          "apn": "20325698",
+          "address": "2434 W PRAIANO WAY   PHOENIX  85086",
+          "distanceMi": 0.14,
+          "soldDate": "2025-03-01",
+          "soldPrice": 250000.0,
+          "landSf": 45314,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 240323,
+          "similarity": 66
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1319573,
+        "rangeLow": 453345,
+        "rangeHigh": 3529391,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,319,573 (range $453,345-$3,529,391)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 269,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "10122 W. Westwind Drive, PEORIA, AZ, 85383",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23408285"
+      },
+      "isNew": false
+    },
+    {
+      "apn": "20904070C",
+      "address": "22453 N 27TH AVE   PHOENIX  85027",
+      "ownerName": "J&D CONCEPTS LLC",
+      "ownerMailAddress": "5808 W MARYLAND AVE GLENDALE AZ USA 85301",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 3.6
+      },
+      "landSf": 25990,
+      "landAcres": 0.597,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.69089019878404,
+      "lng": -112.11487979878834,
+      "assessedValue": 119200.0,
+      "assessedValuePerAcre": 199665.0,
+      "currentZoning": "R-4A",
+      "generalPlanDesignation": "GP code 200",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "RE-43",
+        "targetDensity": 1,
+        "basis": "adjacent parcels already zoned RE-43"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 0.6,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 54,
+      "reasons": [
+        "adjacent parcels already zoned RE-43",
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [
+        {
+          "apn": "20604007P",
+          "address": "2819 W LOUISE DR  B PHOENIX  85027",
+          "distanceMi": 0.52,
+          "soldDate": "2026-04-01",
+          "soldPrice": 751209.0,
+          "landSf": 16509,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1982111,
+          "similarity": 63
+        },
+        {
+          "apn": "20604006L",
+          "address": "2825 W LOUISE DR   PHOENIX  85027",
+          "distanceMi": 0.51,
+          "soldDate": "2024-07-01",
+          "soldPrice": 695000.0,
+          "landSf": 11718,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 2583564,
+          "similarity": 58
+        },
+        {
+          "apn": "20604007M",
+          "address": "2819 W LOUISE DR   PHOENIX  85027",
+          "distanceMi": 0.49,
+          "soldDate": "2026-04-01",
+          "soldPrice": 751209.0,
+          "landSf": 8320,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 3933013,
+          "similarity": 57
+        },
+        {
+          "apn": "20604007N",
+          "address": "2819 W LOUISE DR   PHOENIX  85027",
+          "distanceMi": 0.51,
+          "soldDate": "2026-04-01",
+          "soldPrice": 751209.0,
+          "landSf": 8276,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 3953923,
+          "similarity": 57
+        },
+        {
+          "apn": "20603376",
+          "address": "3061 W COUNTRY CLUB TER   PHOENIX  85027",
+          "distanceMi": 0.56,
+          "soldDate": "2026-08-01",
+          "soldPrice": 322500.0,
+          "landSf": 6656,
+          "livingSpaceSf": 2082.0,
+          "pricePerSf": 155,
+          "pricePerAcre": 2110592,
+          "similarity": 57
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1837432,
+        "rangeLow": 1182623,
+        "rangeHigh": 2359101,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,837,432 (range $1,182,623-$2,359,101)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 1441,
+      "registeredAgent": null,
+      "isNew": true
+    },
+    {
+      "apn": "20904069A",
+      "address": "22435 N 27TH AVE   PHOENIX  85027",
+      "ownerName": "22435 N 27TH AVENUE LLC",
+      "ownerMailAddress": "7443 W CREST LN GLENDALE AZ USA 85310",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 2.3
+      },
+      "landSf": 58957,
+      "landAcres": 1.353,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.69024559487788,
+      "lng": -112.11574263116937,
+      "assessedValue": 215500.0,
+      "assessedValuePerAcre": 159276.0,
+      "currentZoning": "R-4A",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "RE-43",
+        "targetDensity": 1,
+        "basis": "adjacent parcels already zoned RE-43"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 1.4,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 54,
+      "reasons": [
+        "adjacent parcels already zoned RE-43",
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [
+        {
+          "apn": "21010015B",
+          "address": "",
+          "distanceMi": 2.35,
+          "soldDate": "2026-06-01",
+          "soldPrice": 950000.0,
+          "landSf": 37225,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1111672,
+          "similarity": 56
+        },
+        {
+          "apn": "20604057",
+          "address": "2709 W ROBIN LN   PHOENIX  85027",
+          "distanceMi": 0.13,
+          "soldDate": "2025-09-01",
+          "soldPrice": 247500.0,
+          "landSf": 6000,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1796850,
+          "similarity": 52
+        },
+        {
+          "apn": "20604056",
+          "address": "2715 W ROBIN LN   PHOENIX  85027",
+          "distanceMi": 0.14,
+          "soldDate": "2025-08-01",
+          "soldPrice": 85500.0,
+          "landSf": 6000,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 620730,
+          "similarity": 52
+        },
+        {
+          "apn": "20641054",
+          "address": "3068 W SALTER DR   PHOENIX  85027",
+          "distanceMi": 0.77,
+          "soldDate": "2026-04-01",
+          "soldPrice": 393000.0,
+          "landSf": 4426,
+          "livingSpaceSf": 1395.0,
+          "pricePerSf": 282,
+          "pricePerAcre": 3867845,
+          "similarity": 50
+        },
+        {
+          "apn": "20604249",
+          "address": "22225 N 29TH DR   PHOENIX  85027",
+          "distanceMi": 0.38,
+          "soldDate": "2025-06-01",
+          "soldPrice": 326500.0,
+          "landSf": 2800,
+          "livingSpaceSf": 1308.0,
+          "pricePerSf": 250,
+          "pricePerAcre": 5079407,
+          "similarity": 48
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1504611,
+        "rangeLow": 1504611,
+        "rangeHigh": 1504611,
+        "explanation": "Based on 5 comparable sales within 3 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,504,611 (range $1,504,611-$1,504,611)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 598,
+      "registeredAgent": null,
+      "isNew": true
     },
     {
       "apn": "16745001M",
@@ -14727,13 +15795,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 150326,
       "landAcres": 3.451,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.59642351464136,
       "lng": -111.98173599402367,
       "assessedValue": 3452700.0,
       "assessedValuePerAcre": 1000493.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -14802,6 +15871,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 3 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,109,182 (range $1,109,182-$1,109,182)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": -68,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -14820,13 +15891,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 184985,
       "landAcres": 4.247,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.68479776558137,
       "lng": -112.12447167645477,
       "assessedValue": 1271900.0,
       "assessedValuePerAcre": 299482.0,
       "currentZoning": "PUD",
       "generalPlanDesignation": "GP code 50",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -14883,352 +15955,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 2 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $18,175,893 (range $18,175,893-$18,175,893)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "isNew": false
-    },
-    {
-      "apn": "20807084E",
-      "address": "17035 N 21ST AVE   PHOENIX  85023",
-      "ownerName": "LITHIA REAL ESTATE INC",
-      "ownerMailAddress": "150 N BARTLETT ST MEDFORD OR USA 97501",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 5.9
-      },
-      "landSf": 20329,
-      "landAcres": 0.467,
-      "puc": "0022",
-      "lat": 33.64119570676199,
-      "lng": -112.10515315875446,
-      "assessedValue": 294900.0,
-      "assessedValuePerAcre": 631478.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 2.8,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 53,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [
-        {
-          "apn": "20814005Q",
-          "address": "15700 N 19TH AVE   PHOENIX  85023",
-          "distanceMi": 0.93,
-          "soldDate": "2025-04-01",
-          "soldPrice": 675000.0,
-          "landSf": 63075,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 466159,
-          "similarity": 56
-        },
-        {
-          "apn": "20704234",
-          "address": "2727 W GROVERS AVE   PHOENIX  85053",
-          "distanceMi": 0.89,
-          "soldDate": "2025-06-01",
-          "soldPrice": 7250000.0,
-          "landSf": 52000,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 6073269,
-          "similarity": 44
-        },
-        {
-          "apn": "20742261",
-          "address": "16215 N 28TH AVE   PHOENIX  85053",
-          "distanceMi": 0.95,
-          "soldDate": "2025-06-01",
-          "soldPrice": 7650000.0,
-          "landSf": 62117,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 5364618,
-          "similarity": 42
-        },
-        {
-          "apn": "20804003H",
-          "address": "1843 W UNION HILLS DR   PHOENIX  85023",
-          "distanceMi": 0.97,
-          "soldDate": "2022-06-01",
-          "soldPrice": 2500000.0,
-          "landSf": 31285,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 3480901,
-          "similarity": 33
-        },
-        {
-          "apn": "20804003U",
-          "address": "18433 N 19TH AVE   PHOENIX  85023",
-          "distanceMi": 0.94,
-          "soldDate": "2022-11-01",
-          "soldPrice": 4314074.0,
-          "landSf": 61423,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 3059458,
-          "similarity": 29
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1648870,
-        "rangeLow": 217552,
-        "rangeHigh": 2834332,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,648,870 (range $217,552-$2,834,332)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "isNew": false
-    },
-    {
-      "apn": "20807083",
-      "address": "2098 W BELL RD   PHOENIX  85023",
-      "ownerName": "LITHIA REAL ESTATE INC",
-      "ownerMailAddress": "150 N BARTLETT ST MEDFORD OR USA 97501",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 5.9
-      },
-      "landSf": 12632,
-      "landAcres": 0.29,
-      "puc": "0022",
-      "lat": 33.640431848435966,
-      "lng": -112.10550426368172,
-      "assessedValue": 223100.0,
-      "assessedValuePerAcre": 769310.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 1.7,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 53,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [
-        {
-          "apn": "14801001J",
-          "address": "4323 W CACTUS RD   GLENDALE  85304",
-          "distanceMi": 4.1,
-          "soldDate": "2025-10-01",
-          "soldPrice": 4500000.0,
-          "landSf": 107985,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1815252,
-          "similarity": 22
-        },
-        {
-          "apn": "14802334",
-          "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 4.8,
-          "soldDate": "2024-09-01",
-          "soldPrice": 925000.0,
-          "landSf": 1555,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 25911897,
-          "similarity": 17
-        },
-        {
-          "apn": "14802335",
-          "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 4.81,
-          "soldDate": "2024-09-01",
-          "soldPrice": 925000.0,
-          "landSf": 1526,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 26404325,
-          "similarity": 17
-        },
-        {
-          "apn": "14802348",
-          "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 4.84,
-          "soldDate": "2024-08-01",
-          "soldPrice": 2625000.0,
-          "landSf": 1555,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 73533762,
-          "similarity": 17
-        },
-        {
-          "apn": "14802345",
-          "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 4.84,
-          "soldDate": "2024-08-01",
-          "soldPrice": 2625000.0,
-          "landSf": 1526,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 74931193,
-          "similarity": 17
-        }
-      ],
-      "valuation": null,
-      "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "isNew": false
-    },
-    {
-      "apn": "20807084G",
-      "address": "2094 W BELL RD   PHOENIX  85023",
-      "ownerName": "LITHIA REAL ESTATE INC",
-      "ownerMailAddress": "150 N BARTLETT ST MEDFORD OR USA 97501",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 5.9
-      },
-      "landSf": 19618,
-      "landAcres": 0.45,
-      "puc": "0012",
-      "lat": 33.64180897217745,
-      "lng": -112.10505348395697,
-      "assessedValue": 197700.0,
-      "assessedValuePerAcre": 439333.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 2.7,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 53,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [
-        {
-          "apn": "20804142",
-          "address": "1634 W GROVERS AVE   PHOENIX  85023",
-          "distanceMi": 0.71,
-          "soldDate": "2026-07-01",
-          "soldPrice": 315000.0,
-          "landSf": 8797,
-          "livingSpaceSf": 1210.0,
-          "pricePerSf": 260,
-          "pricePerAcre": 1559782,
-          "similarity": 59
-        },
-        {
-          "apn": "20804099",
-          "address": "1726 W CHARLESTON AVE   PHOENIX  85023",
-          "distanceMi": 0.68,
-          "soldDate": "2026-07-01",
-          "soldPrice": 370000.0,
-          "landSf": 8337,
-          "livingSpaceSf": 1361.0,
-          "pricePerSf": 272,
-          "pricePerAcre": 1933213,
-          "similarity": 59
-        },
-        {
-          "apn": "20804070",
-          "address": "1814 W LIBBY ST   PHOENIX  85023",
-          "distanceMi": 0.6,
-          "soldDate": "2026-05-01",
-          "soldPrice": 375000.0,
-          "landSf": 8388,
-          "livingSpaceSf": 1548.0,
-          "pricePerSf": 242,
-          "pricePerAcre": 1947425,
-          "similarity": 58
-        },
-        {
-          "apn": "20804293",
-          "address": "18216 N 18TH DR   PHOENIX  85023",
-          "distanceMi": 0.76,
-          "soldDate": "2026-08-01",
-          "soldPrice": 295000.0,
-          "landSf": 8364,
-          "livingSpaceSf": 935.0,
-          "pricePerSf": 316,
-          "pricePerAcre": 1536370,
-          "similarity": 58
-        },
-        {
-          "apn": "20804290",
-          "address": "1647 W VILLA RITA DR   PHOENIX  85023",
-          "distanceMi": 0.79,
-          "soldDate": "2026-05-01",
-          "soldPrice": 492000.0,
-          "landSf": 8925,
-          "livingSpaceSf": 2122.0,
-          "pricePerSf": 232,
-          "pricePerAcre": 2401291,
-          "similarity": 57
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 843738,
-        "rangeLow": 691931,
-        "rangeHigh": 1081463,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $843,738 (range $691,931-$1,081,463)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 1329,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -15247,13 +15975,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 184302,
       "landAcres": 4.231,
       "puc": "0022",
+      "landUseClass": "commercial",
       "lat": 33.64178909555138,
       "lng": -112.10421798171829,
       "assessedValue": 1880500.0,
       "assessedValuePerAcre": 444458.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -15346,6 +16075,243 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $7,680,317 (range $7,680,317-$7,680,317)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 308,
+      "registeredAgent": null,
+      "isNew": false
+    },
+    {
+      "apn": "20807083",
+      "address": "2098 W BELL RD   PHOENIX  85023",
+      "ownerName": "LITHIA REAL ESTATE INC",
+      "ownerMailAddress": "150 N BARTLETT ST MEDFORD OR USA 97501",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 5.9
+      },
+      "landSf": 12632,
+      "landAcres": 0.29,
+      "puc": "0022",
+      "landUseClass": "commercial",
+      "lat": 33.640431848435966,
+      "lng": -112.10550426368172,
+      "assessedValue": 223100.0,
+      "assessedValuePerAcre": 769310.0,
+      "currentZoning": "C-2",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 1.7,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 53,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [
+        {
+          "apn": "14801001J",
+          "address": "4323 W CACTUS RD   GLENDALE  85304",
+          "distanceMi": 4.1,
+          "soldDate": "2025-10-01",
+          "soldPrice": 4500000.0,
+          "landSf": 107985,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1815252,
+          "similarity": 22
+        },
+        {
+          "apn": "14802334",
+          "address": "11851 N 51ST AVE   GLENDALE  85304",
+          "distanceMi": 4.8,
+          "soldDate": "2024-09-01",
+          "soldPrice": 925000.0,
+          "landSf": 1555,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 25911897,
+          "similarity": 17
+        },
+        {
+          "apn": "14802335",
+          "address": "11851 N 51ST AVE   GLENDALE  85304",
+          "distanceMi": 4.81,
+          "soldDate": "2024-09-01",
+          "soldPrice": 925000.0,
+          "landSf": 1526,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 26404325,
+          "similarity": 17
+        },
+        {
+          "apn": "14802348",
+          "address": "11851 N 51ST AVE   GLENDALE  85304",
+          "distanceMi": 4.84,
+          "soldDate": "2024-08-01",
+          "soldPrice": 2625000.0,
+          "landSf": 1555,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 73533762,
+          "similarity": 17
+        },
+        {
+          "apn": "14802345",
+          "address": "11851 N 51ST AVE   GLENDALE  85304",
+          "distanceMi": 4.84,
+          "soldDate": "2024-08-01",
+          "soldPrice": 2625000.0,
+          "landSf": 1526,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 74931193,
+          "similarity": 17
+        }
+      ],
+      "valuation": null,
+      "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": null,
+      "isNew": false
+    },
+    {
+      "apn": "20807084E",
+      "address": "17035 N 21ST AVE   PHOENIX  85023",
+      "ownerName": "LITHIA REAL ESTATE INC",
+      "ownerMailAddress": "150 N BARTLETT ST MEDFORD OR USA 97501",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 5.9
+      },
+      "landSf": 20329,
+      "landAcres": 0.467,
+      "puc": "0022",
+      "landUseClass": "commercial",
+      "lat": 33.64119570676199,
+      "lng": -112.10515315875446,
+      "assessedValue": 294900.0,
+      "assessedValuePerAcre": 631478.0,
+      "currentZoning": "C-2",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 2.8,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 53,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [
+        {
+          "apn": "20814005Q",
+          "address": "15700 N 19TH AVE   PHOENIX  85023",
+          "distanceMi": 0.93,
+          "soldDate": "2025-04-01",
+          "soldPrice": 675000.0,
+          "landSf": 63075,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 466159,
+          "similarity": 56
+        },
+        {
+          "apn": "20704234",
+          "address": "2727 W GROVERS AVE   PHOENIX  85053",
+          "distanceMi": 0.89,
+          "soldDate": "2025-06-01",
+          "soldPrice": 7250000.0,
+          "landSf": 52000,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 6073269,
+          "similarity": 44
+        },
+        {
+          "apn": "20742261",
+          "address": "16215 N 28TH AVE   PHOENIX  85053",
+          "distanceMi": 0.95,
+          "soldDate": "2025-06-01",
+          "soldPrice": 7650000.0,
+          "landSf": 62117,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 5364618,
+          "similarity": 42
+        },
+        {
+          "apn": "20804003H",
+          "address": "1843 W UNION HILLS DR   PHOENIX  85023",
+          "distanceMi": 0.97,
+          "soldDate": "2022-06-01",
+          "soldPrice": 2500000.0,
+          "landSf": 31285,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 3480901,
+          "similarity": 33
+        },
+        {
+          "apn": "20804003U",
+          "address": "18433 N 19TH AVE   PHOENIX  85023",
+          "distanceMi": 0.94,
+          "soldDate": "2022-11-01",
+          "soldPrice": 4314074.0,
+          "landSf": 61423,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 3059458,
+          "similarity": 29
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1648870,
+        "rangeLow": 217552,
+        "rangeHigh": 2834332,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,648,870 (range $217,552-$2,834,332)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 459,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -15364,13 +16330,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16730,
       "landAcres": 0.384,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.64146980594733,
       "lng": -112.10510371789698,
       "assessedValue": 178700.0,
       "assessedValuePerAcre": 465365.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -15463,6 +16430,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $644,267 (range $540,331-$747,943)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 261,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -15481,13 +16450,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 16502,
       "landAcres": 0.379,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.64222464120772,
       "lng": -112.10501947346161,
       "assessedValue": 177100.0,
       "assessedValuePerAcre": 467282.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -15580,6 +16550,128 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $709,776 (range $582,029-$909,690)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 301,
+      "registeredAgent": null,
+      "isNew": false
+    },
+    {
+      "apn": "20807084G",
+      "address": "2094 W BELL RD   PHOENIX  85023",
+      "ownerName": "LITHIA REAL ESTATE INC",
+      "ownerMailAddress": "150 N BARTLETT ST MEDFORD OR USA 97501",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 5.9
+      },
+      "landSf": 19618,
+      "landAcres": 0.45,
+      "puc": "0012",
+      "landUseClass": "residential",
+      "lat": 33.64180897217745,
+      "lng": -112.10505348395697,
+      "assessedValue": 197700.0,
+      "assessedValuePerAcre": 439333.0,
+      "currentZoning": "C-2",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 2.7,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 53,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [
+        {
+          "apn": "20804142",
+          "address": "1634 W GROVERS AVE   PHOENIX  85023",
+          "distanceMi": 0.71,
+          "soldDate": "2026-07-01",
+          "soldPrice": 315000.0,
+          "landSf": 8797,
+          "livingSpaceSf": 1210.0,
+          "pricePerSf": 260,
+          "pricePerAcre": 1559782,
+          "similarity": 59
+        },
+        {
+          "apn": "20804099",
+          "address": "1726 W CHARLESTON AVE   PHOENIX  85023",
+          "distanceMi": 0.68,
+          "soldDate": "2026-07-01",
+          "soldPrice": 370000.0,
+          "landSf": 8337,
+          "livingSpaceSf": 1361.0,
+          "pricePerSf": 272,
+          "pricePerAcre": 1933213,
+          "similarity": 59
+        },
+        {
+          "apn": "20804070",
+          "address": "1814 W LIBBY ST   PHOENIX  85023",
+          "distanceMi": 0.6,
+          "soldDate": "2026-05-01",
+          "soldPrice": 375000.0,
+          "landSf": 8388,
+          "livingSpaceSf": 1548.0,
+          "pricePerSf": 242,
+          "pricePerAcre": 1947425,
+          "similarity": 58
+        },
+        {
+          "apn": "20804293",
+          "address": "18216 N 18TH DR   PHOENIX  85023",
+          "distanceMi": 0.76,
+          "soldDate": "2026-08-01",
+          "soldPrice": 295000.0,
+          "landSf": 8364,
+          "livingSpaceSf": 935.0,
+          "pricePerSf": 316,
+          "pricePerAcre": 1536370,
+          "similarity": 58
+        },
+        {
+          "apn": "20804290",
+          "address": "1647 W VILLA RITA DR   PHOENIX  85023",
+          "distanceMi": 0.79,
+          "soldDate": "2026-05-01",
+          "soldPrice": 492000.0,
+          "landSf": 8925,
+          "livingSpaceSf": 2122.0,
+          "pricePerSf": 232,
+          "pricePerAcre": 2401291,
+          "similarity": 57
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 843738,
+        "rangeLow": 691931,
+        "rangeHigh": 1081463,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $843,738 (range $691,931-$1,081,463)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 327,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -15598,13 +16690,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 40249,
       "landAcres": 0.924,
       "puc": "0022",
+      "landUseClass": "commercial",
       "lat": 33.62571607821104,
       "lng": -112.11313805916618,
       "assessedValue": 766400.0,
       "assessedValuePerAcre": 829437.0,
       "currentZoning": "C-1",
       "generalPlanDesignation": "GP code 50",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -15697,6 +16790,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,677,275 (range $1,677,275-$1,677,275)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 119,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -15715,13 +16810,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 54450,
       "landAcres": 1.25,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.83427952491983,
       "lng": -112.09425801238585,
       "assessedValue": 195600.0,
       "assessedValuePerAcre": 156480.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": null,
@@ -15811,6 +16907,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $370,354 (range $26,565-$757,273)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 89,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -15829,13 +16927,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 208652,
       "landAcres": 4.79,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.67419726910605,
       "lng": -112.0239644954429,
       "assessedValue": 1317200.0,
       "assessedValuePerAcre": 274990.0,
       "currentZoning": "CP/GCP",
       "generalPlanDesignation": "GP code 110",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -15923,6 +17022,8 @@ window.PHX_LAND_LEADS = {
       ],
       "valuation": null,
       "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -15941,13 +17042,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 23578,
       "landAcres": 0.541,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.651681949397606,
       "lng": -112.0375865445316,
       "assessedValue": 282300.0,
       "assessedValuePerAcre": 521811.0,
       "currentZoning": "R-4A",
       "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -16040,6 +17142,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $971,015 (range $971,015-$971,015)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 244,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -16058,13 +17162,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 166401,
       "landAcres": 3.82,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.63120669754584,
       "lng": -112.0078004722608,
       "assessedValue": 1356100.0,
       "assessedValuePerAcre": 355000.0,
       "currentZoning": "R1-6",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -16157,6 +17262,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $4,579,760 (range $4,579,760-$4,579,760)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 238,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -16175,13 +17282,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 33876,
       "landAcres": 0.778,
       "puc": "0022",
+      "landUseClass": "commercial",
       "lat": 33.62414579389099,
       "lng": -112.01290988106588,
       "assessedValue": 539500.0,
       "assessedValuePerAcre": 693445.0,
       "currentZoning": "R-O",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -16274,6 +17382,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,727,036 (range $335,207-$4,597,837)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 220,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -16292,13 +17402,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 15394,
       "landAcres": 0.353,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.651368601128716,
       "lng": -111.991961229736,
       "assessedValue": 225600.0,
       "assessedValuePerAcre": 639093.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -16391,6 +17502,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $927,615 (range $593,172-$1,489,176)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 311,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -16409,13 +17522,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 24576,
       "landAcres": 0.564,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.63310576096772,
       "lng": -111.99377125702723,
       "assessedValue": 409500.0,
       "assessedValuePerAcre": 726064.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -16508,6 +17622,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $933,626 (range $397,010-$1,729,764)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 128,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -16526,13 +17642,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 10911,
       "landAcres": 0.25,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.598658692143744,
       "lng": -112.0421050977395,
       "assessedValue": 116000.0,
       "assessedValuePerAcre": 464000.0,
       "currentZoning": "R1-6",
       "generalPlanDesignation": "GP code 40",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -16626,6 +17743,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $679,828 (range $159,362-$1,413,071)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 486,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -16644,13 +17763,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 32960,
       "landAcres": 0.757,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.610970017310166,
       "lng": -112.04409460605088,
       "assessedValue": 260900.0,
       "assessedValuePerAcre": 344650.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -16744,6 +17864,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $3,370,164 (range $468,402-$9,580,482)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 1192,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -16762,13 +17884,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 19780,
       "landAcres": 0.454,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.607124562955825,
       "lng": -112.05111539071686,
       "assessedValue": 244600.0,
       "assessedValuePerAcre": 538767.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -16862,124 +17985,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $823,349 (range $517,962-$1,803,014)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "isNew": false
-    },
-    {
-      "apn": "20303023",
-      "address": "4211 W INNOVATIVE DR   PHOENIX  85086",
-      "ownerName": "E & T LP",
-      "ownerMailAddress": "6201 E HUMMINGBIRD LN PARADISE VALLEY AZ USA 85253",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 11.7
-      },
-      "landSf": 50206,
-      "landAcres": 1.153,
-      "puc": "0021",
-      "lat": 33.8664970157684,
-      "lng": -112.14928767321119,
-      "assessedValue": 630500.0,
-      "assessedValuePerAcre": 546834.0,
-      "currentZoning": "CP/GCP",
-      "generalPlanDesignation": "GP code 247",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-8",
-        "targetDensity": 5,
-        "basis": "adjacent parcels already zoned R1-8"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 5.8,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 52,
-      "reasons": [
-        "adjacent parcels already zoned R1-8",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 12 years"
-      ],
-      "comps": [
-        {
-          "apn": "20212086B",
-          "address": "47801 N BLACK CANYON HWY   NEW RIVER  85087",
-          "distanceMi": 3.66,
-          "soldDate": "2026-01-01",
-          "soldPrice": 882421.0,
-          "landSf": 116105,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 331065,
-          "similarity": 30
-        },
-        {
-          "apn": "20211057C",
-          "address": "2725 W SUNSET DR   NEW RIVER  85087",
-          "distanceMi": 4.08,
-          "soldDate": "2024-02-01",
-          "soldPrice": 109000.0,
-          "landSf": 44213,
-          "livingSpaceSf": 1748.0,
-          "pricePerSf": 62,
-          "pricePerAcre": 107390,
-          "similarity": 29
-        },
-        {
-          "apn": "20212020",
-          "address": "",
-          "distanceMi": 3.45,
-          "soldDate": "2023-08-01",
-          "soldPrice": 2400000.0,
-          "landSf": 217800,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 480000,
-          "similarity": 29
-        },
-        {
-          "apn": "20212002",
-          "address": "47020 N BLACK CANYON HWY   NEW RIVER  85087",
-          "distanceMi": 3.39,
-          "soldDate": "2023-08-01",
-          "soldPrice": 2400000.0,
-          "landSf": 222592,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 469666,
-          "similarity": 29
-        },
-        {
-          "apn": "20222001D",
-          "address": "",
-          "distanceMi": 2.07,
-          "soldDate": "2021-11-01",
-          "soldPrice": 6345046.0,
-          "landSf": 1416789,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 195082,
-          "similarity": 24
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 253982,
-        "rangeLow": 123775,
-        "rangeHigh": 381576,
-        "explanation": "Based on 5 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $253,982 (range $123,775-$381,576)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 237,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -16998,13 +18005,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 109074,
       "landAcres": 2.504,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.767923872855064,
       "lng": -112.1080107166789,
       "assessedValue": 2022200.0,
       "assessedValuePerAcre": 807588.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 30",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -17098,6 +18106,129 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 3 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $693,268 (range $385,579-$962,076)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": -66,
+      "registeredAgent": null,
+      "isNew": false
+    },
+    {
+      "apn": "20303023",
+      "address": "4211 W INNOVATIVE DR   PHOENIX  85086",
+      "ownerName": "E & T LP",
+      "ownerMailAddress": "6201 E HUMMINGBIRD LN PARADISE VALLEY AZ USA 85253",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 11.7
+      },
+      "landSf": 50206,
+      "landAcres": 1.153,
+      "puc": "0021",
+      "landUseClass": "commercial",
+      "lat": 33.8664970157684,
+      "lng": -112.14928767321119,
+      "assessedValue": 630500.0,
+      "assessedValuePerAcre": 546834.0,
+      "currentZoning": "CP/GCP",
+      "generalPlanDesignation": "GP code 247",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-8",
+        "targetDensity": 5,
+        "basis": "adjacent parcels already zoned R1-8"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 5.8,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 52,
+      "reasons": [
+        "adjacent parcels already zoned R1-8",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 12 years"
+      ],
+      "comps": [
+        {
+          "apn": "20212086B",
+          "address": "47801 N BLACK CANYON HWY   NEW RIVER  85087",
+          "distanceMi": 3.66,
+          "soldDate": "2026-01-01",
+          "soldPrice": 882421.0,
+          "landSf": 116105,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 331065,
+          "similarity": 30
+        },
+        {
+          "apn": "20211057C",
+          "address": "2725 W SUNSET DR   NEW RIVER  85087",
+          "distanceMi": 4.08,
+          "soldDate": "2024-02-01",
+          "soldPrice": 109000.0,
+          "landSf": 44213,
+          "livingSpaceSf": 1748.0,
+          "pricePerSf": 62,
+          "pricePerAcre": 107390,
+          "similarity": 29
+        },
+        {
+          "apn": "20212020",
+          "address": "",
+          "distanceMi": 3.45,
+          "soldDate": "2023-08-01",
+          "soldPrice": 2400000.0,
+          "landSf": 217800,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 480000,
+          "similarity": 29
+        },
+        {
+          "apn": "20212002",
+          "address": "47020 N BLACK CANYON HWY   NEW RIVER  85087",
+          "distanceMi": 3.39,
+          "soldDate": "2023-08-01",
+          "soldPrice": 2400000.0,
+          "landSf": 222592,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 469666,
+          "similarity": 29
+        },
+        {
+          "apn": "20222001D",
+          "address": "",
+          "distanceMi": 2.07,
+          "soldDate": "2021-11-01",
+          "soldPrice": 6345046.0,
+          "landSf": 1416789,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 195082,
+          "similarity": 24
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 253982,
+        "rangeLow": 123775,
+        "rangeHigh": 381576,
+        "explanation": "Based on 5 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $253,982 (range $123,775-$381,576)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": -60,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -17116,13 +18247,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 43266,
       "landAcres": 0.993,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.61713352672351,
       "lng": -112.09184396903815,
       "assessedValue": 393000.0,
       "assessedValuePerAcre": 395770.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -17216,6 +18348,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,865,398 (range $1,865,398-$1,865,398)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 375,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -17234,13 +18368,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 39472,
       "landAcres": 0.906,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.6397746131683,
       "lng": -112.03020646913305,
       "assessedValue": 587400.0,
       "assessedValuePerAcre": 648344.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -17322,6 +18457,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 4 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,064,664 (range $1,880,257-$2,244,115)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 251,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -17340,13 +18477,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 28174,
       "landAcres": 0.647,
       "puc": "0022",
+      "landUseClass": "commercial",
       "lat": 33.63943890224188,
       "lng": -112.0302037112519,
       "assessedValue": 436000.0,
       "assessedValuePerAcre": 673879.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -17416,6 +18554,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 3 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,578,525 (range $1,556,535-$1,601,786)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 262,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -17434,13 +18574,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 39558,
       "landAcres": 0.908,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.60738681390297,
       "lng": -112.00855993375988,
       "assessedValue": 403000.0,
       "assessedValuePerAcre": 443833.0,
       "currentZoning": "R1-6",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -17534,6 +18675,8 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $730,746 (range $685,226-$774,815)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 81,
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -17552,13 +18695,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 102897,
       "landAcres": 2.362,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.67004741551173,
       "lng": -112.04367788478373,
       "assessedValue": 446100.0,
       "assessedValuePerAcre": 188865.0,
       "currentZoning": "RE-43",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -17651,6 +18795,7 @@ window.PHX_LAND_LEADS = {
         "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,830,213 (range $1,479,184-$2,178,647)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 310,
       "isNew": false
     },
     {
@@ -17664,11 +18809,12 @@ window.PHX_LAND_LEADS = {
         "isEntityOwner": true,
         "isOwnerOccupied": false,
         "isHiddenOwner": true,
-        "yearsHeld": 40.7
+        "yearsHeld": 40.8
       },
       "landSf": 31363,
       "landAcres": 0.72,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.5970010336225,
       "lng": -112.0446893600903,
       "assessedValue": 266500.0,
@@ -17699,75 +18845,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 41+ years \u2014 likely low or no debt on the land"
       ],
-      "comps": [
-        {
-          "apn": "16619026N",
-          "address": "1824 E RONALD RD   PHOENIX  85022",
-          "distanceMi": 0.21,
-          "soldDate": "2026-03-01",
-          "soldPrice": 760000.0,
-          "landSf": 19950,
-          "livingSpaceSf": 2477.0,
-          "pricePerSf": 307,
-          "pricePerAcre": 1659429,
-          "similarity": 65
-        },
-        {
-          "apn": "16621022",
-          "address": "1654 E CORTEZ ST   PHOENIX  85020",
-          "distanceMi": 0.41,
-          "soldDate": "2025-10-01",
-          "soldPrice": 365000.0,
-          "landSf": 43560,
-          "livingSpaceSf": 1347.0,
-          "pricePerSf": 271,
-          "pricePerAcre": 365000,
-          "similarity": 63
-        },
-        {
-          "apn": "16612015",
-          "address": "12602 N 22ND ST   PHOENIX  85022",
-          "distanceMi": 0.57,
-          "soldDate": "2026-08-01",
-          "soldPrice": 420000.0,
-          "landSf": 16039,
-          "livingSpaceSf": 1644.0,
-          "pricePerSf": 255,
-          "pricePerAcre": 1140670,
-          "similarity": 62
-        },
-        {
-          "apn": "16610055",
-          "address": "13605 N 20TH ST   PHOENIX  85022",
-          "distanceMi": 0.95,
-          "soldDate": "2025-06-01",
-          "soldPrice": 2050000.0,
-          "landSf": 29016,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 3077543,
-          "similarity": 61
-        },
-        {
-          "apn": "16621014",
-          "address": "11607 N 17TH PL   PHOENIX  85020",
-          "distanceMi": 0.37,
-          "soldDate": "2025-03-01",
-          "soldPrice": 372000.0,
-          "landSf": 43560,
-          "livingSpaceSf": 1066.0,
-          "pricePerSf": 349,
-          "pricePerAcre": 372000,
-          "similarity": 60
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 951922,
-        "rangeLow": 262798,
-        "rangeHigh": 2215817,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $951,922 (range $262,798-$2,215,817)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -17786,13 +18864,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 14686,
       "landAcres": 0.337,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.8097287865246,
       "lng": -112.13202984464553,
       "assessedValue": 171700.0,
       "assessedValuePerAcre": 509496.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 30",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -17816,75 +18895,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 25+ years \u2014 likely low or no debt on the land"
       ],
-      "comps": [
-        {
-          "apn": "20326699",
-          "address": "35326 N 27TH DR   PHOENIX  85086",
-          "distanceMi": 0.81,
-          "soldDate": "2026-07-01",
-          "soldPrice": 690000.0,
-          "landSf": 15960,
-          "livingSpaceSf": 2851.0,
-          "pricePerSf": 242,
-          "pricePerAcre": 1883233,
-          "similarity": 67
-        },
-        {
-          "apn": "20326072",
-          "address": "3010 W LEISURE LN   PHOENIX  85086",
-          "distanceMi": 0.5,
-          "soldDate": "2026-04-01",
-          "soldPrice": 679000.0,
-          "landSf": 11049,
-          "livingSpaceSf": 3936.0,
-          "pricePerSf": 173,
-          "pricePerAcre": 2676916,
-          "similarity": 65
-        },
-        {
-          "apn": "20326516",
-          "address": "35914 N 31ST AVE   PHOENIX  85086",
-          "distanceMi": 0.3,
-          "soldDate": "2026-07-01",
-          "soldPrice": 599999.0,
-          "landSf": 6900,
-          "livingSpaceSf": 2350.0,
-          "pricePerSf": 255,
-          "pricePerAcre": 3787820,
-          "similarity": 63
-        },
-        {
-          "apn": "20326683",
-          "address": "3127 W LANGUID LN   PHOENIX  85086",
-          "distanceMi": 0.26,
-          "soldDate": "2026-06-01",
-          "soldPrice": 565000.0,
-          "landSf": 6600,
-          "livingSpaceSf": 2276.0,
-          "pricePerSf": 248,
-          "pricePerAcre": 3729000,
-          "similarity": 62
-        },
-        {
-          "apn": "20326274",
-          "address": "3005 W LANGUID LN   PHOENIX  85086",
-          "distanceMi": 0.45,
-          "soldDate": "2026-08-01",
-          "soldPrice": 493000.0,
-          "landSf": 7026,
-          "livingSpaceSf": 2269.0,
-          "pricePerSf": 217,
-          "pricePerAcre": 3056516,
-          "similarity": 62
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1013219,
-        "rangeLow": 634921,
-        "rangeHigh": 1277041,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,013,219 (range $634,921-$1,277,041)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -17903,13 +18914,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 10019,
       "landAcres": 0.23,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.68800594414453,
       "lng": -112.12419340907965,
       "assessedValue": 117700.0,
       "assessedValuePerAcre": 511739.0,
       "currentZoning": "R-4A",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -17933,192 +18945,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 17+ years \u2014 likely low or no debt on the land"
       ],
-      "comps": [
-        {
-          "apn": "20603223",
-          "address": "22616 N 31ST DR   PHOENIX  85027",
-          "distanceMi": 0.31,
-          "soldDate": "2026-03-01",
-          "soldPrice": 458000.0,
-          "landSf": 10054,
-          "livingSpaceSf": 1465.0,
-          "pricePerSf": 313,
-          "pricePerAcre": 1984333,
-          "similarity": 71
-        },
-        {
-          "apn": "20602122",
-          "address": "3311 W WALTER WAY   PHOENIX  85027",
-          "distanceMi": 0.63,
-          "soldDate": "2026-06-01",
-          "soldPrice": 608000.0,
-          "landSf": 9363,
-          "livingSpaceSf": 2313.0,
-          "pricePerSf": 263,
-          "pricePerAcre": 2828632,
-          "similarity": 69
-        },
-        {
-          "apn": "20604007M",
-          "address": "2819 W LOUISE DR   PHOENIX  85027",
-          "distanceMi": 0.28,
-          "soldDate": "2026-04-01",
-          "soldPrice": 751209.0,
-          "landSf": 8320,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 3933013,
-          "similarity": 69
-        },
-        {
-          "apn": "20602010",
-          "address": "3235 W CASITAS DEL RIO DR   PHOENIX  85027",
-          "distanceMi": 0.72,
-          "soldDate": "2026-02-01",
-          "soldPrice": 508000.0,
-          "landSf": 10058,
-          "livingSpaceSf": 1611.0,
-          "pricePerSf": 315,
-          "pricePerAcre": 2200087,
-          "similarity": 68
-        },
-        {
-          "apn": "20603376",
-          "address": "3061 W COUNTRY CLUB TER   PHOENIX  85027",
-          "distanceMi": 0.23,
-          "soldDate": "2026-08-01",
-          "soldPrice": 322500.0,
-          "landSf": 6656,
-          "livingSpaceSf": 2082.0,
-          "pricePerSf": 155,
-          "pricePerAcre": 2110592,
-          "similarity": 68
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 600294,
-        "rangeLow": 456406,
-        "rangeHigh": 904611,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $600,294 (range $456,406-$904,611)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "isNew": false
-    },
-    {
-      "apn": "20715002D",
-      "address": "16044 N 35TH AVE   PHOENIX  85053",
-      "ownerName": "SUNRISE 1 LLC",
-      "ownerMailAddress": "4122 W PARADISE LN PHOENIX AZ USA 85053",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 21.4
-      },
-      "landSf": 48089,
-      "landAcres": 1.104,
-      "puc": "0021",
-      "lat": 33.63212701971715,
-      "lng": -112.13426518092041,
-      "assessedValue": 686200.0,
-      "assessedValuePerAcre": 621558.0,
-      "currentZoning": "C-1",
-      "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-2",
-        "targetDensity": 12,
-        "basis": "adjacent parcels already zoned R-2"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 13.2,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 50,
-      "reasons": [
-        "adjacent parcels already zoned R-2",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 21+ years \u2014 likely low or no debt on the land"
-      ],
-      "comps": [
-        {
-          "apn": "14801001J",
-          "address": "4323 W CACTUS RD   GLENDALE  85304",
-          "distanceMi": 2.73,
-          "soldDate": "2025-10-01",
-          "soldPrice": 4500000.0,
-          "landSf": 107985,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1815252,
-          "similarity": 31
-        },
-        {
-          "apn": "14802348",
-          "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 3.31,
-          "soldDate": "2024-08-01",
-          "soldPrice": 2625000.0,
-          "landSf": 1555,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 73533762,
-          "similarity": 15
-        },
-        {
-          "apn": "14802345",
-          "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 3.3,
-          "soldDate": "2024-08-01",
-          "soldPrice": 2625000.0,
-          "landSf": 1526,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 74931193,
-          "similarity": 15
-        },
-        {
-          "apn": "14802346",
-          "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 3.29,
-          "soldDate": "2024-08-01",
-          "soldPrice": 2625000.0,
-          "landSf": 1525,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 74980328,
-          "similarity": 15
-        },
-        {
-          "apn": "14802347",
-          "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 3.3,
-          "soldDate": "2024-08-01",
-          "soldPrice": 2625000.0,
-          "landSf": 1555,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 73533762,
-          "similarity": 15
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 2003987,
-        "rangeLow": 2003987,
-        "rangeHigh": 2003987,
-        "explanation": "Based on 5 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,003,987 (range $2,003,987-$2,003,987)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -18137,13 +18964,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 40895,
       "landAcres": 0.939,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.69058966198765,
       "lng": -112.1242584177837,
       "assessedValue": 302200.0,
       "assessedValuePerAcre": 321832.0,
       "currentZoning": "R-4A",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -18167,6 +18995,57 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 24+ years \u2014 likely low or no debt on the land"
       ],
+      "registeredAgent": null,
+      "isNew": false
+    },
+    {
+      "apn": "20715002D",
+      "address": "16044 N 35TH AVE   PHOENIX  85053",
+      "ownerName": "SUNRISE 1 LLC",
+      "ownerMailAddress": "4122 W PARADISE LN PHOENIX AZ USA 85053",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 21.4
+      },
+      "landSf": 48089,
+      "landAcres": 1.104,
+      "puc": "0021",
+      "landUseClass": "commercial",
+      "lat": 33.63212701971715,
+      "lng": -112.13426518092041,
+      "assessedValue": 686200.0,
+      "assessedValuePerAcre": 621558.0,
+      "currentZoning": "C-1",
+      "generalPlanDesignation": "GP code 41",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-2",
+        "targetDensity": 12,
+        "basis": "adjacent parcels already zoned R-2"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 13.2,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 50,
+      "reasons": [
+        "adjacent parcels already zoned R-2",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 21+ years \u2014 likely low or no debt on the land"
+      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -18185,13 +19064,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 11030,
       "landAcres": 0.253,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.681661422510786,
       "lng": -112.11144849090307,
       "assessedValue": 196900.0,
       "assessedValuePerAcre": 778261.0,
       "currentZoning": "C-3",
       "generalPlanDesignation": "GP code 110",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -18215,6 +19095,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 16+ years \u2014 likely low or no debt on the land"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -18233,13 +19114,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 40511,
       "landAcres": 0.93,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.659860175261855,
       "lng": -112.03541147355482,
       "assessedValue": 304700.0,
       "assessedValuePerAcre": 327634.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -18263,6 +19145,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 32+ years \u2014 likely low or no debt on the land"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -18281,13 +19164,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 80376,
       "landAcres": 1.845,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.624664469804486,
       "lng": -112.00894164788042,
       "assessedValue": 667200.0,
       "assessedValuePerAcre": 361626.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -18311,6 +19195,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 47+ years \u2014 likely low or no debt on the land"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -18329,13 +19214,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 102381,
       "landAcres": 2.35,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.62586020700365,
       "lng": -112.00894703758198,
       "assessedValue": 778100.0,
       "assessedValuePerAcre": 331106.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -18359,7 +19245,58 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 47+ years \u2014 likely low or no debt on the land"
       ],
+      "registeredAgent": null,
       "isNew": false
+    },
+    {
+      "apn": "16601957A",
+      "address": "3524 E SWEETWATER AVE   PHOENIX  85032",
+      "ownerName": "SUNSHINE PROPERTIES LLC",
+      "ownerMailAddress": "515 E CAREFREE HWY 764 PHOENIX AZ USA 85085",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 20.0
+      },
+      "landSf": 211371,
+      "landAcres": 4.852,
+      "puc": "0014",
+      "landUseClass": "residential",
+      "lat": 33.60258084782689,
+      "lng": -112.00216003368591,
+      "assessedValue": 1114400.0,
+      "assessedValuePerAcre": 229678.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 200",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": 24.3,
+      "rezoneTargetUnits": 29.1,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 50,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 20+ years \u2014 likely low or no debt on the land"
+      ],
+      "registeredAgent": null,
+      "isNew": true
     },
     {
       "apn": "20701768C",
@@ -18377,13 +19314,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 28224,
       "landAcres": 0.648,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.653859931494665,
       "lng": -112.11851344101598,
       "assessedValue": 500300.0,
       "assessedValuePerAcre": 772068.0,
       "currentZoning": "R-O",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -18407,6 +19345,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 18+ years \u2014 likely low or no debt on the land"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -18425,13 +19364,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 18189,
       "landAcres": 0.418,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.6079868408344,
       "lng": -112.050622659892,
       "assessedValue": 232000.0,
       "assessedValuePerAcre": 555024.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -18473,13 +19413,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 11064,
       "landAcres": 0.254,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.7049416772515,
       "lng": -112.03300874074002,
       "assessedValue": 207200.0,
       "assessedValuePerAcre": 815748.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 30",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -18521,13 +19462,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 28178,
       "landAcres": 0.647,
       "puc": "0013",
+      "landUseClass": "residential",
       "lat": 33.80866999583864,
       "lng": -112.11453194170022,
       "assessedValue": 231800.0,
       "assessedValuePerAcre": 358269.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 30",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -18569,13 +19511,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 51338,
       "landAcres": 1.179,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.673382272843874,
       "lng": -112.03907701420579,
       "assessedValue": 388100.0,
       "assessedValuePerAcre": 329177.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -18617,13 +19560,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 39655,
       "landAcres": 0.91,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.613068614551,
       "lng": -112.02369031033076,
       "assessedValue": 403600.0,
       "assessedValuePerAcre": 443516.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -18665,13 +19609,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 25038,
       "landAcres": 0.575,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.61653644329203,
       "lng": -112.09034270384608,
       "assessedValue": 263700.0,
       "assessedValuePerAcre": 458609.0,
       "currentZoning": "PAD-3",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -18713,13 +19658,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 43651,
       "landAcres": 1.002,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.788964040569034,
       "lng": -112.06636609073453,
       "assessedValue": 158300.0,
       "assessedValuePerAcre": 157984.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 204",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": null,
@@ -18740,6 +19686,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 9 years"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -18758,13 +19705,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 32421,
       "landAcres": 0.744,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.608024223919365,
       "lng": -112.03827129158128,
       "assessedValue": 411500.0,
       "assessedValuePerAcre": 553091.0,
       "currentZoning": "R-3",
       "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -18788,54 +19736,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
-      "isNew": false
-    },
-    {
-      "apn": "16619007",
-      "address": "1833 E RONALD RD   PHOENIX  85022",
-      "ownerName": "POWER ONE ELECTRIC LLC",
-      "ownerMailAddress": "17193 N 52ND AVE GLENDALE AZ USA 85308",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 5.3
-      },
-      "landSf": 11785,
-      "landAcres": 0.271,
-      "puc": "0011",
-      "lat": 33.598993959844194,
-      "lng": -112.04209684352733,
-      "assessedValue": 121800.0,
-      "assessedValuePerAcre": 449446.0,
-      "currentZoning": "R1-6",
-      "generalPlanDesignation": "GP code 40",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3A",
-        "targetDensity": 21,
-        "basis": "adjacent parcels already zoned R-3A"
-      },
-      "byRightUnits": 1.6,
-      "rezoneTargetUnits": 5.7,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 46,
-      "reasons": [
-        "adjacent parcels already zoned R-3A",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -18854,6 +19755,7 @@ window.PHX_LAND_LEADS = {
       "landSf": 14505,
       "landAcres": 0.333,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.60663087554222,
       "lng": -112.03688812120672,
       "assessedValue": 242500.0,
@@ -18884,6 +19786,57 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
+      "isNew": false
+    },
+    {
+      "apn": "16619007",
+      "address": "1833 E RONALD RD   PHOENIX  85022",
+      "ownerName": "POWER ONE ELECTRIC LLC",
+      "ownerMailAddress": "17193 N 52ND AVE GLENDALE AZ USA 85308",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 5.3
+      },
+      "landSf": 11785,
+      "landAcres": 0.271,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.598993959844194,
+      "lng": -112.04209684352733,
+      "assessedValue": 121800.0,
+      "assessedValuePerAcre": 449446.0,
+      "currentZoning": "R1-6",
+      "generalPlanDesignation": "GP code 40",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3A",
+        "targetDensity": 21,
+        "basis": "adjacent parcels already zoned R-3A"
+      },
+      "byRightUnits": 1.6,
+      "rezoneTargetUnits": 5.7,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 46,
+      "reasons": [
+        "adjacent parcels already zoned R-3A",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -18902,13 +19855,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 50086,
       "landAcres": 1.15,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.82110821471658,
       "lng": -112.13104619889157,
       "assessedValue": 124600.0,
       "assessedValuePerAcre": 108348.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 987",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": null,
@@ -18929,54 +19883,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 17+ years \u2014 likely low or no debt on the land"
       ],
-      "isNew": false
-    },
-    {
-      "apn": "20325646",
-      "address": "2610 W ESPARTERO WAY   PHOENIX  85086",
-      "ownerName": "RAKKAR FAMILY PROTECTION TRUST",
-      "ownerMailAddress": "26202 N 47TH DR GLENDALE AZ USA 85310",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 2.4
-      },
-      "landSf": 41929,
-      "landAcres": 0.963,
-      "puc": "0013",
-      "lat": 33.81088767617444,
-      "lng": -112.11600093105697,
-      "assessedValue": 237700.0,
-      "assessedValuePerAcre": 246833.0,
-      "currentZoning": "R1-18",
-      "generalPlanDesignation": "GP code 973",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-10",
-        "targetDensity": 4,
-        "basis": "adjacent parcels already zoned R1-10"
-      },
-      "byRightUnits": 1.9,
-      "rezoneTargetUnits": 3.9,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 46,
-      "reasons": [
-        "adjacent parcels already zoned R1-10",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -18995,13 +19902,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 55496,
       "landAcres": 1.274,
       "puc": "0013",
+      "landUseClass": "residential",
       "lat": 33.810433122567034,
       "lng": -112.11827596374019,
       "assessedValue": 258400.0,
       "assessedValuePerAcre": 202826.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 30",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -19025,40 +19933,42 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
-      "apn": "20325689",
-      "address": "36031 N 24TH AVE   PHOENIX  85086",
-      "ownerName": "CHARLES FAMILY TRUST",
-      "ownerMailAddress": "36031 N 24TH AVE PHOENIX AZ USA 85086",
+      "apn": "20325646",
+      "address": "2610 W ESPARTERO WAY   PHOENIX  85086",
+      "ownerName": "RAKKAR FAMILY PROTECTION TRUST",
+      "ownerMailAddress": "26202 N 47TH DR GLENDALE AZ USA 85310",
       "ownership": {
         "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
+        "isAbsenteeLocal": true,
         "isEntityOwner": true,
-        "isOwnerOccupied": true,
-        "isHiddenOwner": false,
-        "yearsHeld": 1.6
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 2.4
       },
-      "landSf": 78389,
-      "landAcres": 1.8,
-      "puc": "0011",
-      "lat": 33.811476845021346,
-      "lng": -112.10974405869888,
-      "assessedValue": 329000.0,
-      "assessedValuePerAcre": 182778.0,
-      "currentZoning": "RE-35",
-      "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
+      "landSf": 41929,
+      "landAcres": 0.963,
+      "puc": "0013",
+      "landUseClass": "residential",
+      "lat": 33.81088767617444,
+      "lng": -112.11600093105697,
+      "assessedValue": 237700.0,
+      "assessedValuePerAcre": 246833.0,
+      "currentZoning": "R1-18",
+      "generalPlanDesignation": "GP code 973",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
-        "targetZone": "R1-18",
-        "targetDensity": 2,
-        "basis": "adjacent parcels already zoned R1-18"
+        "targetZone": "R1-10",
+        "targetDensity": 4,
+        "basis": "adjacent parcels already zoned R1-10"
       },
-      "byRightUnits": 1.8,
-      "rezoneTargetUnits": 3.6,
+      "byRightUnits": 1.9,
+      "rezoneTargetUnits": 3.9,
       "dealType": "subdivision",
       "referenceCostPerLotAZ": 65000,
       "parcelStatus": "vacant",
@@ -19068,11 +19978,12 @@ window.PHX_LAND_LEADS = {
       "defaultDemoCost": null,
       "score": 46,
       "reasons": [
-        "adjacent parcels already zoned R1-18",
+        "adjacent parcels already zoned R1-10",
         "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -19091,6 +20002,7 @@ window.PHX_LAND_LEADS = {
       "landSf": 61731,
       "landAcres": 1.417,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.81219053777896,
       "lng": -112.11435637885246,
       "assessedValue": 256600.0,
@@ -19124,6 +20036,55 @@ window.PHX_LAND_LEADS = {
       "isNew": false
     },
     {
+      "apn": "20325689",
+      "address": "36031 N 24TH AVE   PHOENIX  85086",
+      "ownerName": "CHARLES FAMILY TRUST",
+      "ownerMailAddress": "36031 N 24TH AVE PHOENIX AZ USA 85086",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
+        "yearsHeld": 1.6
+      },
+      "landSf": 78389,
+      "landAcres": 1.8,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.811476845021346,
+      "lng": -112.10974405869888,
+      "assessedValue": 329000.0,
+      "assessedValuePerAcre": 182778.0,
+      "currentZoning": "RE-35",
+      "generalPlanDesignation": "GP code 971",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-18",
+        "targetDensity": 2,
+        "basis": "adjacent parcels already zoned R1-18"
+      },
+      "byRightUnits": 1.8,
+      "rezoneTargetUnits": 3.6,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 46,
+      "reasons": [
+        "adjacent parcels already zoned R1-18",
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "isNew": false
+    },
+    {
       "apn": "20325699",
       "address": "2506 W PRAIANO WAY   PHOENIX  85086",
       "ownerName": "RTE GROUP LLC",
@@ -19139,13 +20100,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 47191,
       "landAcres": 1.083,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.81204826346381,
       "lng": -112.11237002153756,
       "assessedValue": 250800.0,
       "assessedValuePerAcre": 231579.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -19169,6 +20131,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -19187,13 +20150,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 47641,
       "landAcres": 1.094,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.6202827486864,
       "lng": -112.09508859313256,
       "assessedValue": 262500.0,
       "assessedValuePerAcre": 239945.0,
       "currentZoning": "PAD-3",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -19217,54 +20181,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
-      "isNew": false
-    },
-    {
-      "apn": "21014036E",
-      "address": "303 E JOMAX RD   PHOENIX  85085",
-      "ownerName": "MCCLENAGHAN FAMILY TRUST",
-      "ownerMailAddress": "303 E JOMAX RD PHOENIX AZ USA 85085",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": true,
-        "isHiddenOwner": false,
-        "yearsHeld": 4.3
-      },
-      "landSf": 17048,
-      "landAcres": 0.391,
-      "puc": "0012",
-      "lat": 33.72594794906338,
-      "lng": -112.06856397231957,
-      "assessedValue": 61600.0,
-      "assessedValuePerAcre": 157545.0,
-      "currentZoning": "S-1",
-      "generalPlanDesignation": "GP code 204",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "RE-43",
-        "targetDensity": 1,
-        "basis": "adjacent parcels already zoned RE-43"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 0.4,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 46,
-      "reasons": [
-        "adjacent parcels already zoned RE-43",
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -19283,6 +20200,7 @@ window.PHX_LAND_LEADS = {
       "landSf": 75134,
       "landAcres": 1.725,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.72564949966445,
       "lng": -112.08470869847432,
       "assessedValue": 262700.0,
@@ -19313,6 +20231,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -19331,13 +20250,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 26479,
       "landAcres": 0.608,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.725631901414445,
       "lng": -112.06856437838258,
       "assessedValue": 85300.0,
       "assessedValuePerAcre": 140296.0,
       "currentZoning": "COUNTY",
       "generalPlanDesignation": "GP code 204",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -19347,6 +20267,55 @@ window.PHX_LAND_LEADS = {
       },
       "byRightUnits": null,
       "rezoneTargetUnits": 0.6,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 46,
+      "reasons": [
+        "adjacent parcels already zoned RE-43",
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "isNew": false
+    },
+    {
+      "apn": "21014036E",
+      "address": "303 E JOMAX RD   PHOENIX  85085",
+      "ownerName": "MCCLENAGHAN FAMILY TRUST",
+      "ownerMailAddress": "303 E JOMAX RD PHOENIX AZ USA 85085",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
+        "yearsHeld": 4.3
+      },
+      "landSf": 17048,
+      "landAcres": 0.391,
+      "puc": "0012",
+      "landUseClass": "residential",
+      "lat": 33.72594794906338,
+      "lng": -112.06856397231957,
+      "assessedValue": 61600.0,
+      "assessedValuePerAcre": 157545.0,
+      "currentZoning": "S-1",
+      "generalPlanDesignation": "GP code 204",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "RE-43",
+        "targetDensity": 1,
+        "basis": "adjacent parcels already zoned RE-43"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 0.4,
       "dealType": "subdivision",
       "referenceCostPerLotAZ": 65000,
       "parcelStatus": "vacant",
@@ -19379,13 +20348,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 69254,
       "landAcres": 1.59,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.78600640513655,
       "lng": -112.05726406365605,
       "assessedValue": 262000.0,
       "assessedValuePerAcre": 164780.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -19409,6 +20379,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -19427,13 +20398,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 51906,
       "landAcres": 1.192,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.78567465908516,
       "lng": -112.06368805786892,
       "assessedValue": 155000.0,
       "assessedValuePerAcre": 130034.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 204",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -19475,13 +20447,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 46174,
       "landAcres": 1.06,
       "puc": "0022",
+      "landUseClass": "commercial",
       "lat": 33.67996241695498,
       "lng": -112.03350689506118,
       "assessedValue": 610500.0,
       "assessedValuePerAcre": 575943.0,
       "currentZoning": "CP/GCP",
       "generalPlanDesignation": "GP code 110",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -19505,54 +20478,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
-      "isNew": false
-    },
-    {
-      "apn": "21324013B",
-      "address": "1423 E ROSEMONTE DR   PHOENIX  85024",
-      "ownerName": "STONE MOUNTAIN PROPERTY OWNER LLC",
-      "ownerMailAddress": "17470 N PACESETTER WAY SCOTTSDALE AZ USA 85255",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 5.5
-      },
-      "landSf": 173763,
-      "landAcres": 3.989,
-      "puc": "0012",
-      "lat": 33.655904246581215,
-      "lng": -112.05209941684198,
-      "assessedValue": 1455300.0,
-      "assessedValuePerAcre": 364828.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": 19.9,
-      "rezoneTargetUnits": 23.9,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 46,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -19571,6 +20497,7 @@ window.PHX_LAND_LEADS = {
       "landSf": 60548,
       "landAcres": 1.39,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.658089301006285,
       "lng": -112.0195645588825,
       "assessedValue": 399900.0,
@@ -19601,6 +20528,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -19619,13 +20547,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 191141,
       "landAcres": 4.388,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.655865814532994,
       "lng": -112.05426485209765,
       "assessedValue": 1553600.0,
       "assessedValuePerAcre": 354057.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -19649,6 +20578,57 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
+      "isNew": false
+    },
+    {
+      "apn": "21324013B",
+      "address": "1423 E ROSEMONTE DR   PHOENIX  85024",
+      "ownerName": "STONE MOUNTAIN PROPERTY OWNER LLC",
+      "ownerMailAddress": "17470 N PACESETTER WAY SCOTTSDALE AZ USA 85255",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 5.5
+      },
+      "landSf": 173763,
+      "landAcres": 3.989,
+      "puc": "0012",
+      "landUseClass": "residential",
+      "lat": 33.655904246581215,
+      "lng": -112.05209941684198,
+      "assessedValue": 1455300.0,
+      "assessedValuePerAcre": 364828.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": 19.9,
+      "rezoneTargetUnits": 23.9,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 46,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -19667,6 +20647,7 @@ window.PHX_LAND_LEADS = {
       "landSf": 11351,
       "landAcres": 0.261,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.66614208773537,
       "lng": -112.03358464375077,
       "assessedValue": 158900.0,
@@ -19697,6 +20678,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -19715,13 +20697,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 32922,
       "landAcres": 0.756,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.61213026003738,
       "lng": -112.02233229894051,
       "assessedValue": 358900.0,
       "assessedValuePerAcre": 474735.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -19745,6 +20728,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -19758,18 +20742,19 @@ window.PHX_LAND_LEADS = {
         "isEntityOwner": true,
         "isOwnerOccupied": false,
         "isHiddenOwner": true,
-        "yearsHeld": 2.2
+        "yearsHeld": 2.3
       },
       "landSf": 48436,
       "landAcres": 1.112,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.613138180837275,
       "lng": -112.02420959663513,
       "assessedValue": 457900.0,
       "assessedValuePerAcre": 411781.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -19793,6 +20778,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -19811,13 +20797,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 37556,
       "landAcres": 0.862,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.61564534643018,
       "lng": -112.0224897630937,
       "assessedValue": 390000.0,
       "assessedValuePerAcre": 452436.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -19841,6 +20828,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -19859,13 +20847,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 50035,
       "landAcres": 1.149,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.61673867352326,
       "lng": -112.02574165111622,
       "assessedValue": 467300.0,
       "assessedValuePerAcre": 406701.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -19889,7 +20878,58 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
+    },
+    {
+      "apn": "20904070G",
+      "address": "22461 N 27TH AVE   PHOENIX  85027",
+      "ownerName": "J AND D CONCEPTS LLC",
+      "ownerMailAddress": "7374 W LOS GATOS DR GLENDALE AZ USA 85310",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 3.5
+      },
+      "landSf": 12943,
+      "landAcres": 0.297,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.69064572285879,
+      "lng": -112.11547040529777,
+      "assessedValue": 155700.0,
+      "assessedValuePerAcre": 524242.0,
+      "currentZoning": "R-4A",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "RE-43",
+        "targetDensity": 1,
+        "basis": "adjacent parcels already zoned RE-43"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 0.3,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 46,
+      "reasons": [
+        "adjacent parcels already zoned RE-43",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "registeredAgent": null,
+      "isNew": true
     },
     {
       "apn": "21325001P",
@@ -19907,13 +20947,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 120198,
       "landAcres": 2.759,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.655821899417326,
       "lng": -112.06155601957276,
       "assessedValue": 1571100.0,
       "assessedValuePerAcre": 569445.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -19937,6 +20978,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -19955,13 +20997,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 109074,
       "landAcres": 2.504,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.76883269004887,
       "lng": -112.10802104648558,
       "assessedValue": 2154200.0,
       "assessedValuePerAcre": 860304.0,
       "currentZoning": "PCD",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -19985,6 +21028,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20003,13 +21047,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 28476,
       "landAcres": 0.654,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.68933027685713,
       "lng": -112.04588631082943,
       "assessedValue": 398300.0,
       "assessedValuePerAcre": 609021.0,
       "currentZoning": "A-1",
       "generalPlanDesignation": "GP code 110",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20033,6 +21078,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20051,13 +21097,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 72786,
       "landAcres": 1.671,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.64239056586998,
       "lng": -112.0293013104248,
       "assessedValue": 912600.0,
       "assessedValuePerAcre": 546140.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20081,54 +21128,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
-      "isNew": false
-    },
-    {
-      "apn": "21431012A",
-      "address": "16601 N 31ST ST   PHOENIX  85032",
-      "ownerName": "19PIN LLC",
-      "ownerMailAddress": "30600 N PIMA RD UNIT 75 SCOTTSDALE AZ USA 85266",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 3.8
-      },
-      "landSf": 85229,
-      "landAcres": 1.957,
-      "puc": "0021",
-      "lat": 33.637542431137106,
-      "lng": -112.01506036843263,
-      "assessedValue": 900500.0,
-      "assessedValuePerAcre": 460143.0,
-      "currentZoning": "R-3",
-      "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-4",
-        "targetDensity": 25,
-        "basis": "adjacent parcels already zoned R-4"
-      },
-      "byRightUnits": 31.3,
-      "rezoneTargetUnits": 48.9,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 46,
-      "reasons": [
-        "adjacent parcels already zoned R-4",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20147,13 +21147,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 128936,
       "landAcres": 2.96,
       "puc": "0022",
+      "landUseClass": "commercial",
       "lat": 33.73254274735564,
       "lng": -112.12024286278651,
       "assessedValue": 1392800.0,
       "assessedValuePerAcre": 470541.0,
       "currentZoning": "PUD",
       "generalPlanDesignation": "GP code 279",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20177,6 +21178,57 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
+      "isNew": false
+    },
+    {
+      "apn": "21431012A",
+      "address": "16601 N 31ST ST   PHOENIX  85032",
+      "ownerName": "19PIN LLC",
+      "ownerMailAddress": "30600 N PIMA RD UNIT 75 SCOTTSDALE AZ USA 85266",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 3.8
+      },
+      "landSf": 85229,
+      "landAcres": 1.957,
+      "puc": "0021",
+      "landUseClass": "commercial",
+      "lat": 33.637542431137106,
+      "lng": -112.01506036843263,
+      "assessedValue": 900500.0,
+      "assessedValuePerAcre": 460143.0,
+      "currentZoning": "R-3",
+      "generalPlanDesignation": "GP code 41",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-4",
+        "targetDensity": 25,
+        "basis": "adjacent parcels already zoned R-4"
+      },
+      "byRightUnits": 31.3,
+      "rezoneTargetUnits": 48.9,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 46,
+      "reasons": [
+        "adjacent parcels already zoned R-4",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20195,13 +21247,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 178636,
       "landAcres": 4.101,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.67418711640806,
       "lng": -111.96492707915739,
       "assessedValue": 6060600.0,
       "assessedValuePerAcre": 1477835.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 80",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20225,6 +21278,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20243,13 +21297,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 12364,
       "landAcres": 0.284,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.64484452021461,
       "lng": -112.03437972489716,
       "assessedValue": 173000.0,
       "assessedValuePerAcre": 609155.0,
       "currentZoning": "R1-6",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20273,6 +21328,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20291,13 +21347,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 111652,
       "landAcres": 2.563,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.71425782340493,
       "lng": -112.09657759976079,
       "assessedValue": 1294500.0,
       "assessedValuePerAcre": 505072.0,
       "currentZoning": "PUD",
       "generalPlanDesignation": "GP code 50",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20321,6 +21378,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20339,13 +21397,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 208640,
       "landAcres": 4.79,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.71559356040475,
       "lng": -112.09655021892182,
       "assessedValue": 1730000.0,
       "assessedValuePerAcre": 361169.0,
       "currentZoning": "PUD",
       "generalPlanDesignation": "GP code 50",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20369,6 +21428,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20387,13 +21447,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 35437,
       "landAcres": 0.814,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.61123981636523,
       "lng": -112.13242015800053,
       "assessedValue": 212400.0,
       "assessedValuePerAcre": 260934.0,
       "currentZoning": "PUD",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20417,6 +21478,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20435,13 +21497,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 40075,
       "landAcres": 0.92,
       "puc": "0022",
+      "landUseClass": "commercial",
       "lat": 33.822318416675095,
       "lng": -112.13684174272974,
       "assessedValue": 291600.0,
       "assessedValuePerAcre": 316957.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 987",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": null,
@@ -20461,53 +21524,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 26+ years \u2014 likely low or no debt on the land"
       ],
-      "isNew": false
-    },
-    {
-      "apn": "20814984",
-      "address": "2202 W GRANDVIEW RD   PHOENIX  85023",
-      "ownerName": "SUNBELT BELL 17 LP",
-      "ownerMailAddress": "8095 OTHELLO AVE SAN DIEGO CA USA 92111",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 4.7
-      },
-      "landSf": 643425,
-      "landAcres": 14.771,
-      "puc": "0021",
-      "lat": 33.63546160425822,
-      "lng": -112.10653156830489,
-      "assessedValue": 5377100.0,
-      "assessedValuePerAcre": 364031.0,
-      "currentZoning": "PCD",
-      "generalPlanDesignation": "GP code 240",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-2",
-        "targetDensity": 12,
-        "basis": "adjacent parcels already zoned R-2"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 177.3,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 45,
-      "reasons": [
-        "adjacent parcels already zoned R-2",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20526,13 +21543,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 564992,
       "landAcres": 12.97,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.76832047494093,
       "lng": -112.1110026137912,
       "assessedValue": 6465300.0,
       "assessedValuePerAcre": 498481.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20555,6 +21573,56 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
+      "isNew": false
+    },
+    {
+      "apn": "20814984",
+      "address": "2202 W GRANDVIEW RD   PHOENIX  85023",
+      "ownerName": "SUNBELT BELL 17 LP",
+      "ownerMailAddress": "8095 OTHELLO AVE SAN DIEGO CA USA 92111",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 4.7
+      },
+      "landSf": 643425,
+      "landAcres": 14.771,
+      "puc": "0021",
+      "landUseClass": "commercial",
+      "lat": 33.63546160425822,
+      "lng": -112.10653156830489,
+      "assessedValue": 5377100.0,
+      "assessedValuePerAcre": 364031.0,
+      "currentZoning": "PCD",
+      "generalPlanDesignation": "GP code 240",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-2",
+        "targetDensity": 12,
+        "basis": "adjacent parcels already zoned R-2"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 177.3,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 45,
+      "reasons": [
+        "adjacent parcels already zoned R-2",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20573,13 +21641,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 554537,
       "landAcres": 12.73,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.675075137365795,
       "lng": -112.11472179021128,
       "assessedValue": 6946400.0,
       "assessedValuePerAcre": 545672.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20602,6 +21671,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20620,13 +21690,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 28762,
       "landAcres": 0.66,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.61100032658922,
       "lng": -112.03894700824178,
       "assessedValue": 381600.0,
       "assessedValuePerAcre": 578182.0,
       "currentZoning": "R-3",
       "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20650,54 +21721,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 14 years"
       ],
-      "isNew": false
-    },
-    {
-      "apn": "16632020",
-      "address": "12041 N 30TH PL   PHOENIX  85028",
-      "ownerName": "NICHOLAS ZALKOW REAL PROPERTY TRUST",
-      "ownerMailAddress": "24 W CAMELBACK RD A633 PHOENIX AZ USA 85013",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 12.4
-      },
-      "landSf": 13580,
-      "landAcres": 0.312,
-      "puc": "0011",
-      "lat": 33.5966420799494,
-      "lng": -112.01609498142882,
-      "assessedValue": 205300.0,
-      "assessedValuePerAcre": 658013.0,
-      "currentZoning": "R1-10",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-5",
-        "targetDensity": 43,
-        "basis": "adjacent parcels already zoned R-5"
-      },
-      "byRightUnits": 1.2,
-      "rezoneTargetUnits": 13.4,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 44,
-      "reasons": [
-        "adjacent parcels already zoned R-5",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 12 years"
-      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20716,13 +21740,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 35343,
       "landAcres": 0.811,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.601728599294894,
       "lng": -112.04431219907275,
       "assessedValue": 287500.0,
       "assessedValuePerAcre": 354501.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20746,6 +21771,57 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 14 years"
       ],
+      "registeredAgent": null,
+      "isNew": false
+    },
+    {
+      "apn": "16632020",
+      "address": "12041 N 30TH PL   PHOENIX  85028",
+      "ownerName": "NICHOLAS ZALKOW REAL PROPERTY TRUST",
+      "ownerMailAddress": "24 W CAMELBACK RD A633 PHOENIX AZ USA 85013",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 12.4
+      },
+      "landSf": 13580,
+      "landAcres": 0.312,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.5966420799494,
+      "lng": -112.01609498142882,
+      "assessedValue": 205300.0,
+      "assessedValuePerAcre": 658013.0,
+      "currentZoning": "R1-10",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-5",
+        "targetDensity": 43,
+        "basis": "adjacent parcels already zoned R-5"
+      },
+      "byRightUnits": 1.2,
+      "rezoneTargetUnits": 13.4,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 44,
+      "reasons": [
+        "adjacent parcels already zoned R-5",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 12 years"
+      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20764,13 +21840,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 60693,
       "landAcres": 1.393,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.81036711113719,
       "lng": -112.11134678423107,
       "assessedValue": 277700.0,
       "assessedValuePerAcre": 199354.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 932",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20812,13 +21889,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 54482,
       "landAcres": 1.251,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.623277955840805,
       "lng": -112.09519014456028,
       "assessedValue": 231400.0,
       "assessedValuePerAcre": 184972.0,
       "currentZoning": "PAD-3",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20860,13 +21938,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 44343,
       "landAcres": 1.018,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.79246322409682,
       "lng": -112.0807779524553,
       "assessedValue": 160300.0,
       "assessedValuePerAcre": 157466.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 971",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20908,13 +21987,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 19708,
       "landAcres": 0.452,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.65099972663222,
       "lng": -112.05074227248886,
       "assessedValue": 296100.0,
       "assessedValuePerAcre": 655088.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20938,6 +22018,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 8 years"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -20956,13 +22037,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 29698,
       "landAcres": 0.682,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.6529146143946,
       "lng": -112.05314083517646,
       "assessedValue": 383600.0,
       "assessedValuePerAcre": 562463.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -20986,6 +22068,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 12 years"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -21004,13 +22087,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 38021,
       "landAcres": 0.873,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.65260150933452,
       "lng": -112.05313586770029,
       "assessedValue": 448200.0,
       "assessedValuePerAcre": 513402.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21034,54 +22118,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 12 years"
       ],
-      "isNew": false
-    },
-    {
-      "apn": "21431021D",
-      "address": "16239 N 31ST ST   PHOENIX  85032",
-      "ownerName": "NUVO LLC",
-      "ownerMailAddress": "4210 E ST JOSEPH WAY PHOENIX AZ USA 85018",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 13.9
-      },
-      "landSf": 23577,
-      "landAcres": 0.541,
-      "puc": "0021",
-      "lat": 33.63519115023367,
-      "lng": -112.01504665613021,
-      "assessedValue": 294400.0,
-      "assessedValuePerAcre": 544177.0,
-      "currentZoning": "R-3",
-      "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3A",
-        "targetDensity": 21,
-        "basis": "adjacent parcels already zoned R-3A"
-      },
-      "byRightUnits": 8.7,
-      "rezoneTargetUnits": 11.4,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 44,
-      "reasons": [
-        "adjacent parcels already zoned R-3A",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 14 years"
-      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -21100,13 +22137,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 23577,
       "landAcres": 0.541,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.63497105384233,
       "lng": -112.01504525203848,
       "assessedValue": 294400.0,
       "assessedValuePerAcre": 544177.0,
       "currentZoning": "R-3",
       "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21130,6 +22168,57 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 14 years"
       ],
+      "registeredAgent": null,
+      "isNew": false
+    },
+    {
+      "apn": "21431021D",
+      "address": "16239 N 31ST ST   PHOENIX  85032",
+      "ownerName": "NUVO LLC",
+      "ownerMailAddress": "4210 E ST JOSEPH WAY PHOENIX AZ USA 85018",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "yearsHeld": 13.9
+      },
+      "landSf": 23577,
+      "landAcres": 0.541,
+      "puc": "0021",
+      "landUseClass": "commercial",
+      "lat": 33.63519115023367,
+      "lng": -112.01504665613021,
+      "assessedValue": 294400.0,
+      "assessedValuePerAcre": 544177.0,
+      "currentZoning": "R-3",
+      "generalPlanDesignation": "GP code 41",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3A",
+        "targetDensity": 21,
+        "basis": "adjacent parcels already zoned R-3A"
+      },
+      "byRightUnits": 8.7,
+      "rezoneTargetUnits": 11.4,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 44,
+      "reasons": [
+        "adjacent parcels already zoned R-3A",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 14 years"
+      ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -21148,13 +22237,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 42128,
       "landAcres": 0.967,
       "puc": "0022",
+      "landUseClass": "commercial",
       "lat": 33.6299585320408,
       "lng": -112.0300955169311,
       "assessedValue": 622200.0,
       "assessedValuePerAcre": 643433.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21178,6 +22268,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 11 years"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -21196,13 +22287,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 32922,
       "landAcres": 0.756,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.612629650632975,
       "lng": -112.02231395396574,
       "assessedValue": 358900.0,
       "assessedValuePerAcre": 474735.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21226,6 +22318,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 14 years"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -21244,13 +22337,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 40497,
       "landAcres": 0.93,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.61671356561687,
       "lng": -112.02497028713017,
       "assessedValue": 409000.0,
       "assessedValuePerAcre": 439785.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 24",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21274,6 +22368,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 11 years"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -21292,13 +22387,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 47788,
       "landAcres": 1.097,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.62297092473243,
       "lng": -111.9782526382225,
       "assessedValue": 1254400.0,
       "assessedValuePerAcre": 1143482.0,
       "currentZoning": "C-O/G-O",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21322,6 +22418,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 12 years"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -21340,13 +22437,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 43326,
       "landAcres": 0.995,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.62294762570719,
       "lng": -111.97872643474227,
       "assessedValue": 990100.0,
       "assessedValuePerAcre": 995075.0,
       "currentZoning": "C-O/G-O",
       "generalPlanDesignation": "GP code 70",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21370,6 +22468,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 12 years"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -21388,13 +22487,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 48262,
       "landAcres": 1.108,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.62920283037786,
       "lng": -112.00096875426269,
       "assessedValue": 456800.0,
       "assessedValuePerAcre": 412274.0,
       "currentZoning": "R1-14",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21418,6 +22518,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 9 years"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -21436,13 +22537,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 43561,
       "landAcres": 1.0,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.813675876076964,
       "lng": -112.12478163557789,
       "assessedValue": 162600.0,
       "assessedValuePerAcre": 162600.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21484,13 +22586,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 47178,
       "landAcres": 1.083,
       "puc": "0021",
+      "landUseClass": "commercial",
       "lat": 33.63463862693101,
       "lng": -112.0150432120541,
       "assessedValue": 538300.0,
       "assessedValuePerAcre": 497045.0,
       "currentZoning": "R-3",
       "generalPlanDesignation": "GP code 41",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21514,7 +22617,57 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 14 years"
       ],
+      "registeredAgent": null,
       "isNew": false
+    },
+    {
+      "apn": "20338004C",
+      "address": "2812 W CLOUD RD   PHOENIX  85086",
+      "ownerName": "TOFSTAD NANCY/RONNIE",
+      "ownerMailAddress": "7999 SW SPUR DR PEORIA AZ USA 85383",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
+        "yearsHeld": 0.4
+      },
+      "landSf": 145627,
+      "landAcres": 3.343,
+      "puc": "0014",
+      "landUseClass": "residential",
+      "lat": 33.81392518335375,
+      "lng": -112.11906742641479,
+      "assessedValue": 168400.0,
+      "assessedValuePerAcre": 50374.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 220",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-10",
+        "targetDensity": 4,
+        "basis": "adjacent parcels already zoned R1-10"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 13.4,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "defaultDemoCost": null,
+      "score": 44,
+      "reasons": [
+        "adjacent parcels already zoned R1-10",
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "owner's mailing address differs from the property city"
+      ],
+      "isNew": true
     },
     {
       "apn": "20903006A",
@@ -21532,13 +22685,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 1029128,
       "landAcres": 23.626,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.69303536353583,
       "lng": -112.11609803822442,
       "assessedValue": 1798800.0,
       "assessedValuePerAcre": 76136.0,
       "currentZoning": "RE-43",
       "generalPlanDesignation": "GP code 200",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21562,6 +22716,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 14 years"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
@@ -21580,13 +22735,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 22443,
       "landAcres": 0.515,
       "puc": "0013",
+      "landUseClass": "residential",
       "lat": 33.803064924994544,
       "lng": -112.11280974841031,
       "assessedValue": 209800.0,
       "assessedValuePerAcre": 407379.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 30",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21627,13 +22783,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 27731,
       "landAcres": 0.637,
       "puc": "0013",
+      "landUseClass": "residential",
       "lat": 33.81085497533816,
       "lng": -112.11540950599115,
       "assessedValue": 228800.0,
       "assessedValuePerAcre": 359184.0,
       "currentZoning": "R1-18",
       "generalPlanDesignation": "GP code 973",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21674,13 +22831,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 36147,
       "landAcres": 0.83,
       "puc": "0012",
+      "landUseClass": "residential",
       "lat": 33.6151093209078,
       "lng": -112.09587140522595,
       "assessedValue": 291600.0,
       "assessedValuePerAcre": 351325.0,
       "currentZoning": "PAD-14",
       "generalPlanDesignation": "GP code 50",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21721,13 +22879,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 67509,
       "landAcres": 1.55,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.838264585882435,
       "lng": -112.0845699475166,
       "assessedValue": 124700.0,
       "assessedValuePerAcre": 80452.0,
       "currentZoning": null,
       "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": null,
@@ -21765,13 +22924,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 19873,
       "landAcres": 0.456,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.605696084108885,
       "lng": -112.04573594706767,
       "assessedValue": 245300.0,
       "assessedValuePerAcre": 537939.0,
       "currentZoning": "R1-10",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21812,13 +22972,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 29377,
       "landAcres": 0.674,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.62059169737751,
       "lng": -112.093945421646,
       "assessedValue": 291700.0,
       "assessedValuePerAcre": 432789.0,
       "currentZoning": "PAD-3",
       "generalPlanDesignation": "GP code 38",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21859,13 +23020,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 13586,
       "landAcres": 0.312,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.70213897817982,
       "lng": -112.0325841432262,
       "assessedValue": 225300.0,
       "assessedValuePerAcre": 722115.0,
       "currentZoning": "R1-8",
       "generalPlanDesignation": "GP code 30",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21906,13 +23068,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 63177,
       "landAcres": 1.45,
       "puc": "0011",
+      "landUseClass": "residential",
       "lat": 33.810709892631124,
       "lng": -112.11193853558842,
       "assessedValue": 274000.0,
       "assessedValuePerAcre": 188966.0,
       "currentZoning": "RE-35",
       "generalPlanDesignation": "GP code 932",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21954,13 +23117,14 @@ window.PHX_LAND_LEADS = {
       "landSf": 435449,
       "landAcres": 9.997,
       "puc": "0014",
+      "landUseClass": "residential",
       "lat": 33.76290534460103,
       "lng": -112.10094823417928,
       "assessedValue": 5126200.0,
       "assessedValuePerAcre": 512774.0,
       "currentZoning": "S-1",
       "generalPlanDesignation": "GP code 30",
-      "floodZone": "X",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
@@ -21983,403 +23147,106 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 20+ years \u2014 likely low or no debt on the land"
       ],
+      "registeredAgent": null,
       "isNew": false
     },
     {
-      "apn": "20323016F",
-      "address": "37017 N 33RD AVE   PHOENIX  85086",
-      "ownerName": "MICHAEL AND GINA WARNER TRUST",
-      "ownerMailAddress": "PO BOX 291 FERNDALE CA USA 95536",
+      "apn": "16601003H",
+      "address": "3524 E SWEETWATER AVE   PHOENIX  85032",
+      "ownerName": "SUNSHINE PROPERTIES LLC",
+      "ownerMailAddress": "515 E CAREFREE HWY 764 PHOENIX AZ USA 85085",
       "ownership": {
-        "isOutOfStateOwner": true,
+        "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
         "isOwnerOccupied": false,
         "isHiddenOwner": true,
-        "yearsHeld": 0.9
+        "yearsHeld": 20.0
       },
-      "landSf": 108900,
-      "landAcres": 2.5,
+      "landSf": 220551,
+      "landAcres": 5.063,
       "puc": "0014",
-      "lat": 33.82086252737657,
-      "lng": -112.12892918693714,
-      "assessedValue": 237000.0,
-      "assessedValuePerAcre": 94800.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
+      "landUseClass": "residential",
+      "lat": 33.60182845641709,
+      "lng": -112.00232308768327,
+      "assessedValue": 1938800.0,
+      "assessedValuePerAcre": 382935.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 200",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": null,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": 25.3,
+      "rezoneTargetUnits": 30.4,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
       "parcelStatus": "vacant",
       "livingSpaceSf": null,
       "farRatio": null,
       "yearBuilt": null,
       "defaultDemoCost": null,
-      "score": 41,
+      "score": 42,
       "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
+        "adjacent parcels already zoned R1-6",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 20+ years \u2014 likely low or no debt on the land"
       ],
-      "isNew": false
+      "registeredAgent": null,
+      "isNew": true
     },
     {
-      "apn": "21153007C",
-      "address": "35007 N 7TH AVE   PHOENIX  85086",
-      "ownerName": "WILLIAM L KING REVOCABLE TRUST/MANKIN JOHN W/CINDY/MYERS RICK/KAREN/ETAL",
-      "ownerMailAddress": "190 N MAIN ST SHERIDAN WY USA 82801",
+      "apn": "16656226",
+      "address": "3524 E SWEETWATER AVE   PHOENIX  85032",
+      "ownerName": "SUNSHINE PROPERTIES LLC",
+      "ownerMailAddress": "515 E CAREFREE HWY 764 PHOENIX AZ USA 85085",
       "ownership": {
-        "isOutOfStateOwner": true,
+        "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": true,
         "isOwnerOccupied": false,
         "isHiddenOwner": true,
-        "yearsHeld": 5.3
+        "yearsHeld": 18.3
       },
-      "landSf": 44955,
-      "landAcres": 1.032,
-      "puc": "0014",
-      "lat": 33.80252500139472,
-      "lng": -112.08105215009397,
-      "assessedValue": 171600.0,
-      "assessedValuePerAcre": 166279.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
+      "landSf": 230898,
+      "landAcres": 5.301,
+      "puc": "0012",
+      "landUseClass": "residential",
+      "lat": 33.59954984175772,
+      "lng": -111.99806032450302,
+      "assessedValue": 2375000.0,
+      "assessedValuePerAcre": 448029.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 200",
+      "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": null,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": 26.5,
+      "rezoneTargetUnits": 31.8,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
       "parcelStatus": "vacant",
       "livingSpaceSf": null,
       "farRatio": null,
       "yearBuilt": null,
       "defaultDemoCost": null,
-      "score": 41,
+      "score": 42,
       "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
+        "adjacent parcels already zoned R1-6",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 18+ years \u2014 likely low or no debt on the land"
       ],
-      "isNew": false
-    },
-    {
-      "apn": "21153013G",
-      "address": "35012 N 3RD AVE   PHOENIX  85086",
-      "ownerName": "PREMIER DESERT HILLS HOLDINGS LLC",
-      "ownerMailAddress": "1931 CORDOVA RD STE 220 FORT LAUDERDALE FL USA 33316",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 1.5
-      },
-      "landSf": 42079,
-      "landAcres": 0.966,
-      "puc": "0014",
-      "lat": 33.80298181167459,
-      "lng": -112.07893122805993,
-      "assessedValue": 157200.0,
-      "assessedValuePerAcre": 162733.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": null,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 41,
-      "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "isNew": false
-    },
-    {
-      "apn": "21174118C",
-      "address": "33315 N 10TH ST   PHOENIX  85085",
-      "ownerName": "SCOTT A AND KAREN L MCLEOD LIVING TRUST",
-      "ownerMailAddress": "PO BOX 870570 WASILLA AK USA 99687",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 3.9
-      },
-      "landSf": 75559,
-      "landAcres": 1.735,
-      "puc": "0014",
-      "lat": 33.78783499595819,
-      "lng": -112.06038503796432,
-      "assessedValue": 279000.0,
-      "assessedValuePerAcre": 160807.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 20",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": null,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 41,
-      "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "isNew": false
-    },
-    {
-      "apn": "21150097L",
-      "address": "38352 N 7TH AVE   PHOENIX  85086",
-      "ownerName": "SOUNDBUILT HOMES ARIZONA LLC",
-      "ownerMailAddress": "PO BOX 73790 PUYALLUP WA USA 98373",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 1.6
-      },
-      "landSf": 43560,
-      "landAcres": 1.0,
-      "puc": "0014",
-      "lat": 33.833383553700074,
-      "lng": -112.08415742865483,
-      "assessedValue": 172400.0,
-      "assessedValuePerAcre": 172400.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": null,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 41,
-      "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "isNew": false
-    },
-    {
-      "apn": "21150097F",
-      "address": "38360 N 7TH AVE   PHOENIX  85086",
-      "ownerName": "SOUNDBUILT HOMES ARIZONA LLC",
-      "ownerMailAddress": "PO BOX 73790 PUYALLUP WA USA 98373",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 1.6
-      },
-      "landSf": 43573,
-      "landAcres": 1.0,
-      "puc": "0014",
-      "lat": 33.83336973440252,
-      "lng": -112.083285098726,
-      "assessedValue": 178800.0,
-      "assessedValuePerAcre": 178800.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": null,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 41,
-      "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "isNew": false
-    },
-    {
-      "apn": "21150097M",
-      "address": "38324 N 7TH AVE   PHOENIX  85086",
-      "ownerName": "SOUNDBUILT HOMES ARIZONA LLC",
-      "ownerMailAddress": "PO BOX 73790 PUYALLUP WA USA 98373",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 1.6
-      },
-      "landSf": 43560,
-      "landAcres": 1.0,
-      "puc": "0014",
-      "lat": 33.83290608820281,
-      "lng": -112.08415604509183,
-      "assessedValue": 172400.0,
-      "assessedValuePerAcre": 172400.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": null,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 41,
-      "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "isNew": false
-    },
-    {
-      "apn": "21150097N",
-      "address": "38336 N 7TH AVE   PHOENIX  85086",
-      "ownerName": "SOUNDBUILT HOMES ARIZONA LLC",
-      "ownerMailAddress": "PO BOX 73790 PUYALLUP WA USA 98373",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 1.6
-      },
-      "landSf": 43563,
-      "landAcres": 1.0,
-      "puc": "0014",
-      "lat": 33.83314429511799,
-      "lng": -112.08479947385408,
-      "assessedValue": 172400.0,
-      "assessedValuePerAcre": 172400.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": null,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 41,
-      "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "isNew": false
-    },
-    {
-      "apn": "21169170",
-      "address": "1730 E NEW RIVER RD   PHOENIX  85086",
-      "ownerName": "KEEGANS KEEP LLC",
-      "ownerMailAddress": "798 COUNTY ROAD 217 DURANGO CO USA 81303",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "yearsHeld": 0.3
-      },
-      "landSf": 43560,
-      "landAcres": 1.0,
-      "puc": "0014",
-      "lat": 33.81581089337263,
-      "lng": -112.0444311215373,
-      "assessedValue": 154100.0,
-      "assessedValuePerAcre": 154100.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 990",
-      "floodZone": "X",
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": null,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "defaultDemoCost": null,
-      "score": 41,
-      "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "isNew": false
+      "registeredAgent": null,
+      "isNew": true
     }
   ],
   "history": [
