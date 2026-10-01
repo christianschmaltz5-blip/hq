@@ -47,6 +47,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from datetime import date
 
+from comps import _land_use_class  # same PUC-based classifier comps already uses to
+                                    # match residential-to-residential / commercial-to-commercial
+
 MARICOPA_PARCELS = "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query"
 PHX_ZONING = "https://maps.phoenix.gov/pub/rest/services/Public/Zoning/MapServer/0/query"
 PHX_GENERAL_PLAN = "https://maps.phoenix.gov/pub/rest/services/Public/GeneralPlan/MapServer/0/query"
@@ -540,6 +543,7 @@ def enrich_parcel(p):
         "landSf": land_sf,
         "landAcres": land_acres,
         "puc": p.get("PUC"),
+        "landUseClass": _land_use_class(p.get("PUC")),
         "lat": lat, "lng": lng,
         "assessedValue": _to_float(p.get("FCV_CUR")),
         "assessedValuePerAcre": round(_to_float(p.get("FCV_CUR")) / land_acres, 0) if land_acres else None,

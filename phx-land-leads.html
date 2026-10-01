@@ -218,6 +218,12 @@
             <option value="vacant">🟢 Vacant land only</option>
             <option value="improved">🟠 Teardown only</option>
           </select>
+          <select class="filter-input" id="landUseFilter" style="width:170px;">
+            <option value="all">All zoning (res + comm)</option>
+            <option value="residential">🏠 Residential only</option>
+            <option value="commercial">🏢 Commercial only</option>
+            <option value="industrial">🏭 Industrial only</option>
+          </select>
           <input class="filter-input" id="addrSearch" type="text" placeholder="Search address or owner…" style="flex:1; min-width:200px;">
           <input class="filter-input" id="minValue" type="number" placeholder="Min assessed value ($)" style="width:180px;">
           <input class="filter-input" id="maxValue" type="number" placeholder="Max assessed value ($)" style="width:180px;">
@@ -527,7 +533,7 @@ function leadCard(lead, idx){
     <div class="lead-head" onclick="toggleLead(${idx})">
       <div>
         <div class="lead-addr">${newBadge} ${statusBadge} ${contactedBadge} ${esc(lead.address)||'(no address on file)'}</div>
-        <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'} · Owner: ${esc(lead.ownerName)||'—'} · ${esc(dealTypeLabel)}</div>
+        <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'}${lead.landUseClass ? ` (${lead.landUseClass === 'commercial' ? '🏢 commercial' : lead.landUseClass === 'industrial' ? '🏭 industrial' : '🏠 residential'})` : ''} · Owner: ${esc(lead.ownerName)||'—'} · ${esc(dealTypeLabel)}</div>
       </div>
       <div class="lead-score">${isHot?'<span class="hot-flag">🔥</span>':''}<span class="score-badge ${scoreClass(lead.score)}">${lead.score}</span></div>
     </div>
@@ -676,6 +682,7 @@ function toggleCalc(idx){
 
 function applyFilters(){
   const type = document.getElementById('typeFilter').value;
+  const landUse = document.getElementById('landUseFilter').value;
   const q = document.getElementById('addrSearch').value.trim().toLowerCase();
   const hideFlood = document.getElementById('hideFlood').checked;
   const hotOnly = document.getElementById('hotOnly').checked;
@@ -691,12 +698,14 @@ function applyFilters(){
   if(!isNaN(minValue)) base = base.filter(l => (l.assessedValue||0) >= minValue);
   if(!isNaN(maxValue)) base = base.filter(l => (l.assessedValue||0) <= maxValue);
 
-  const listFiltered = type === 'all' ? base : base.filter(l => l.parcelStatus === type);
+  let listFiltered = type === 'all' ? base : base.filter(l => l.parcelStatus === type);
+  if(landUse !== 'all') listFiltered = listFiltered.filter(l => l.landUseClass === landUse);
   currentLeads = listFiltered;
   renderLeads(listFiltered);
   renderMaps(base);
 }
 document.getElementById('typeFilter').addEventListener('change', applyFilters);
+document.getElementById('landUseFilter').addEventListener('change', applyFilters);
 document.getElementById('addrSearch').addEventListener('input', applyFilters);
 document.getElementById('hideFlood').addEventListener('change', applyFilters);
 document.getElementById('hotOnly').addEventListener('change', applyFilters);
