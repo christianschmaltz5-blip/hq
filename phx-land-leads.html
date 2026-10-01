@@ -188,6 +188,27 @@
 
       <div class="card">
         <div class="card-head">
+          <h2>Skip-Trace Priority</h2>
+          <span class="card-sub">Only leads worth paying ~$0.10/record for a phone number — high score AND a real equity spread, not just one or the other.</span>
+        </div>
+        <div class="filter-row">
+          <label style="font-size:12.5px;color:var(--text-soft);">Min score
+            <input class="filter-input" id="stMinScore" type="number" value="50" style="width:70px;">
+          </label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Min equity margin %
+            <input class="filter-input" id="stMinMargin" type="number" value="100" style="width:80px;">
+          </label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Cost per record ($)
+            <input class="filter-input" id="stCostPerRecord" type="number" value="0.10" step="0.01" style="width:70px;">
+          </label>
+          <button class="mail-btn" onclick="copySkipTraceCsv()">📋 Copy CSV for BatchSkipTracing</button>
+        </div>
+        <div id="skip-trace-summary" style="font-size:13px;color:var(--text-soft);margin-bottom:10px;"></div>
+        <div style="overflow-x:auto;"><table class="comps-table" id="skip-trace-table"></table></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
           <h2>Ranked Leads</h2>
           <span class="card-sub">Click a lead to see the full analysis + run it through the underwriting calculator.</span>
         </div>
@@ -455,7 +476,7 @@ function compsSectionHtml(lead){
   const valuationHtml = v
     ? `<div class="valuation-box">
         <div class="valuation-range">${money(v.rangeLow)} – ${money(v.rangeHigh)}</div>
-        <div class="valuation-likely">Most likely value: <b>${money(v.mostLikelyValue)}</b></div>
+        <div class="valuation-likely">Most likely value: <b>${money(v.mostLikelyValue)}</b>${lead.equityMarginPct!=null ? ` <span style="color:${lead.equityMarginPct>=0?'#0e9a51':'#c0392b'};font-weight:700;">(${lead.equityMarginPct>=0?'+':''}${lead.equityMarginPct}% vs assessed)</span>` : ''}</div>
         <div class="valuation-explain">${esc(v.explanation)}</div>
       </div>`
     : `<div class="comps-empty" style="margin-bottom:8px;">No dollar estimate — comps below aren't close enough in lot size to extrapolate from reliably.</div>`;
@@ -681,6 +702,52 @@ document.getElementById('hideFlood').addEventListener('change', applyFilters);
 document.getElementById('hotOnly').addEventListener('change', applyFilters);
 document.getElementById('minValue').addEventListener('input', applyFilters);
 document.getElementById('maxValue').addEventListener('input', applyFilters);
+
+// ── Skip-Trace Priority ─────────────────────────────────────────────────
+// Only leads that clear BOTH a score threshold (motivated-seller + upside
+// signals) AND a real equity-margin threshold (comps-estimated value well
+// above assessed value) -- a high score alone just means "promising", not
+// "worth a paid lookup." Leads outside the comps budget have no
+// equityMarginPct and are correctly excluded (undefined >= N is false).
+function skipTraceCandidates(){
+  const minScore = parseFloat(document.getElementById('stMinScore').value) || 0;
+  const minMargin = parseFloat(document.getElementById('stMinMargin').value) || 0;
+  return (D.leads || [])
+    .filter(l => l.score >= minScore && l.equityMarginPct != null && l.equityMarginPct >= minMargin)
+    .sort((a,b) => b.equityMarginPct - a.equityMarginPct);
+}
+function renderSkipTrace(){
+  const rows = skipTraceCandidates();
+  const costPer = parseFloat(document.getElementById('stCostPerRecord').value) || 0;
+  document.getElementById('skip-trace-summary').textContent =
+    `${rows.length} leads qualify — est. cost $${(rows.length * costPer).toFixed(2)} at $${costPer.toFixed(2)}/record.`;
+  const table = document.getElementById('skip-trace-table');
+  if(!rows.length){
+    table.innerHTML = `<tbody><tr><td style="padding:12px;color:var(--text-faint);">No leads clear both thresholds yet.</td></tr></tbody>`;
+    return;
+  }
+  table.innerHTML = `<thead><tr><th>Address</th><th>Score</th><th>Equity Margin</th><th>Owner</th><th>APN</th></tr></thead>
+    <tbody>${rows.map(l => `<tr>
+      <td>${esc(l.address)}</td>
+      <td>${l.score}</td>
+      <td>${l.equityMarginPct>=0?'+':''}${l.equityMarginPct}%</td>
+      <td>${esc(l.ownerName)||'—'}</td>
+      <td>${esc(l.apn)}</td>
+    </tr>`).join('')}</tbody>`;
+}
+function copySkipTraceCsv(){
+  const rows = skipTraceCandidates();
+  const header = 'apn,address,owner_name,owner_mailing_address,registered_agent,score,equity_margin_pct';
+  const csv = [header, ...rows.map(l => [
+    l.apn, l.address, l.ownerName, l.ownerMailAddress,
+    l.registeredAgent ? l.registeredAgent.agentLine : '',
+    l.score, l.equityMarginPct
+  ].map(v => `"${String(v==null?'':v).replace(/"/g,'""')}"`).join(','))].join('\n');
+  navigator.clipboard?.writeText(csv).catch(()=>{});
+}
+['stMinScore','stMinMargin','stCostPerRecord'].forEach(id =>
+  document.getElementById(id).addEventListener('input', renderSkipTrace));
+renderSkipTrace();
 
 // ── History ──────────────────────────────────────────────────────────────
 document.getElementById('hist-list').innerHTML = (D.history||[]).length

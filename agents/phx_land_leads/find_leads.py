@@ -646,6 +646,11 @@ def main():
             lead["comps"] = result["comps"]
             lead["valuation"] = result["valuation"]
             lead["compsNote"] = result["note"]
+            lead["equityMarginPct"] = None
+            if result["valuation"] and lead.get("assessedValue"):
+                lead["equityMarginPct"] = round(
+                    (result["valuation"]["mostLikelyValue"] - lead["assessedValue"])
+                    / lead["assessedValue"] * 100)
             if (i + 1) % 20 == 0:
                 print(f"  comped {i+1}/{len(comp_targets)}...")
 
