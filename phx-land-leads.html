@@ -117,10 +117,6 @@
         <svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
         <span class="label">Dashboard</span>
       </a>
-      <a class="nav-item" href="phoenix-scan.html">
-        <svg class="icon" viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 6"/><polyline points="15 6 21 6 21 12"/></svg>
-        <span class="label">Phoenix Cap-Rate Watch</span>
-      </a>
       <a class="nav-item" href="phx-permits.html">
         <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         <span class="label">Phoenix Permit Tracker</span>
@@ -128,26 +124,6 @@
       <a class="nav-item active" href="phx-land-leads.html">
         <svg class="icon" viewBox="0 0 24 24"><path d="M12 2 3 8l9 6 9-6-9-6z"/><path d="M3 16l9 6 9-6"/><path d="M3 12l9 6 9-6"/></svg>
         <span class="label">North Phoenix Land Leads</span>
-      </a>
-      <a class="nav-item" href="feasibility.html">
-        <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
-        <span class="label">5302 N 35th Ave Feasibility</span>
-      </a>
-      <a class="nav-item" href="dev-model.html">
-        <svg class="icon" viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
-        <span class="label">Dev Underwriting Model</span>
-      </a>
-
-      <div class="nav-label">External</div>
-      <a class="nav-item" href="https://claude.ai/code/artifact/94b45b05-7917-4bc4-9c65-8ac4371a822b" target="_blank" rel="noopener">
-        <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        <span class="label">Field Manual</span>
-        <svg class="ext" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-      </a>
-      <a class="nav-item" href="https://christianschmaltz5-blip.github.io/Dashboard/" target="_blank" rel="noopener">
-        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        <span class="label">ARC Dashboard (work)</span>
-        <svg class="ext" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
       </a>
     </nav>
   </aside>
@@ -170,6 +146,22 @@
       <div class="methodology-note" id="methodology-note"></div>
 
       <div class="meta-row" id="meta-row"></div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2>Mail Letter Template</h2>
+          <span class="card-sub">Generic version of the letter sent to every lead — cash sale or land-for-equity partnership. Edit here to change the template; per-lead copies open from each lead card below with the address/owner filled in.</span>
+        </div>
+        <div class="letter-from-row" style="max-width:600px;">
+          <input id="previewFromName" type="text" placeholder="Your name">
+          <input id="previewFromAddress" type="text" placeholder="Your return address">
+        </div>
+        <textarea id="previewLetterText" style="width:100%; min-height:420px; font-family:'Courier New', monospace; font-size:12.5px; line-height:1.6; padding:16px; border:1px solid var(--card-border); border-radius:8px; resize:vertical; box-sizing:border-box;"></textarea>
+        <div class="letter-actions" style="justify-content:flex-start; margin-top:12px;">
+          <button onclick="copyPreviewLetter()">Copy</button>
+          <button class="primary" onclick="printPreviewLetter()">Print</button>
+        </div>
+      </div>
 
       <div class="map-pair">
         <div class="card">
@@ -624,9 +616,11 @@ Re: ${lead.address || 'your property'} (Parcel ${lead.apn || ''})
 
 Dear ${salutationName}${own.isEntityOwner ? ' Family' : ''},
 
-My name is ${fromName || '[Your Name]'}, and I'm a local real estate investor. I came across public records showing you own the ${lead.landAcres || ''}-acre property at ${lead.address || 'the address above'} here in the North Phoenix area, and wanted to reach out directly in case you'd ever consider selling.
+My name is ${fromName || '[Your Name]'}, and I'm a local real estate developer. I came across public records showing you own the ${lead.landAcres || ''}-acre property at ${lead.address || 'the address above'} here in the North Phoenix area, and wanted to reach out directly.
 
-I buy land and underused properties as-is — no repairs, no realtor commissions, and I can move at whatever pace works for you, including a simple cash closing. There's no obligation at all; I just wanted to introduce myself in case the timing is ever right.
+I'd welcome a straightforward cash sale if that's what works for you — as-is, no repairs, no realtor commissions, closing on whatever timeline suits you.
+
+I also want to mention a second option, since it's less commonly known: a land-for-equity partnership. In plain terms, instead of selling your property for a one-time cash payment, you contribute it into the development project — the same way an investor would contribute cash — and in exchange you receive an ownership percentage in that project. You wouldn't do any of the work yourself; I handle the permitting, construction, and sale (or lease-up) of what gets built. When the project is finished and sold, or refinanced, you're paid out your share of the profit based on your ownership stake, which is tied to the value of the land you put in. Depending on how the project performs, this can end up paying you more than a straight cash sale would — the tradeoff is that you wait until the project is complete to get paid, rather than getting cash right away, and like any investment there's no guaranteed outcome. Either option is genuinely on the table; I'm happy to walk through real numbers on your property for whichever one interests you.
 
 If you're open to a conversation, I'd love to hear from you at your convenience.
 
@@ -635,6 +629,42 @@ ${fromName || '[Your Name]'}
 ${fromAddress || '[Your Return Address]'}`;
 }
 
+const PREVIEW_LEAD = {
+  address: '[Property Address], Phoenix, AZ',
+  apn: '[Parcel Number]',
+  landAcres: 'X',
+  ownerName: '',
+  ownerMailAddress: '[Owner Mailing Address]',
+  ownership: {}
+};
+function refreshPreviewLetter(){
+  const fromName = document.getElementById('previewFromName').value;
+  const fromAddress = document.getElementById('previewFromAddress').value;
+  try{
+    localStorage.setItem('letterFromName', fromName);
+    localStorage.setItem('letterFromAddress', fromAddress);
+  }catch(e){}
+  document.getElementById('previewLetterText').value = buildLetter(PREVIEW_LEAD, fromName, fromAddress);
+}
+function copyPreviewLetter(){
+  const ta = document.getElementById('previewLetterText');
+  navigator.clipboard?.writeText(ta.value).catch(()=>{});
+  ta.select();
+  try{ document.execCommand('copy'); }catch(e){}
+}
+function printPreviewLetter(){
+  document.getElementById('letterPrintArea').textContent = document.getElementById('previewLetterText').value;
+  window.print();
+}
+(function initPreviewLetter(){
+  const fromName = localStorage.getItem('letterFromName') || '';
+  const fromAddress = localStorage.getItem('letterFromAddress') || '';
+  document.getElementById('previewFromName').value = fromName;
+  document.getElementById('previewFromAddress').value = fromAddress;
+  document.getElementById('previewLetterText').value = buildLetter(PREVIEW_LEAD, fromName, fromAddress);
+  document.getElementById('previewFromName').addEventListener('input', refreshPreviewLetter);
+  document.getElementById('previewFromAddress').addEventListener('input', refreshPreviewLetter);
+})();
 function openLetter(idx){
   const lead = currentLeads[idx];
   const fromName = localStorage.getItem('letterFromName') || '';
