@@ -778,7 +778,8 @@ function skipTraceCandidates(){
   return (D.leads || [])
     .filter(l => loadCondition()[l.apn] !== 'good')
     .filter(l => l.score >= minScore && l.equityMarginPct != null && l.equityMarginPct >= minMargin)
-    .sort((a,b) => b.equityMarginPct - a.equityMarginPct);
+    .sort((a,b) => b.score - a.score)
+    .slice(0, 50);
 }
 function renderSkipTrace(){
   const rows = skipTraceCandidates();

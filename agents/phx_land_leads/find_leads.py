@@ -78,6 +78,11 @@ BUILDER_OWNER_KEYWORDS = (
     "KB HOME", "MERITAGE", "ASHTON WOODS", "TOLL BROTHERS", "MATTAMY",
     "RICHMOND AMERICAN", "WILLIAM LYON", "TRI POINTE", "CENTURY COMMUNITIES",
     "SHEA HOMES", "FULTON HOMES", "CACHET HOMES", "HOMES INC", "HOMES LLC",
+    "SOUNDBUILT",
+    # utilities / telecom — cell sites, substations, easements; not acquirable land plays
+    "VERIZON", "AT&T", "T-MOBILE", "CROWN CASTLE", "CENTURYLINK", "COX COMM",
+    "ARIZONA PUBLIC SERVICE", "SALT RIVER PROJECT", "SOUTHWEST GAS", "CITY OF PHOENIX",
+    "STATE OF ARIZONA", "MARICOPA COUNTY", "WIRELESS",
 )
 REZONING_RADIUS_MILES = 0.5
 NEIGHBOR_ZONING_RADIUS_MILES = 0.15  # tight radius — "immediately adjacent" zoning context
@@ -686,6 +691,7 @@ def main():
     improved_candidates = [
         p for p in improved_parcels
         if p.get("LATITUDE") is not None and p.get("LONGITUDE") is not None
+        and not is_builder_inventory(p)
     ]
     improved_candidates.sort(key=lambda p: p["_farRatio"])  # lowest FAR (most underused) first
     improved_candidates = improved_candidates[:MAX_IMPROVED_ENRICHED]
@@ -815,14 +821,14 @@ def main():
         "methodologyNote": (
             "Public-records only: Maricopa Assessor parcels (vacant land AND "
             "underused single-family-improved parcels — an existing house "
-            "occupying a small share of an oversized lot, tagged TEARDOWN), "
+            "occupying a small share of an oversized lot, tagged UNDERUSED LOT — condition is not in public data, verify by eye), "
             "Phoenix zoning + General Plan + rezoning-case layers, FEMA flood "
             "zones, plus ownership tenure/entity-type/mailing-address signals "
             "as a seller-motivation proxy. No asking price or water/sewer "
             "availability is in any public feed found — confirm those "
             "manually per lead before underwriting. Rezone targets landing "
             "on single-family zoning use a subdivision/lot-sale calculator "
-            "(add a demolition cost for TEARDOWN leads); targets on "
+            "(add a demolition cost for underused-lot leads); targets on "
             "multifamily/commercial zoning use a rental pro forma."
         ),
     }
