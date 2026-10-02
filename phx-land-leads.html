@@ -221,6 +221,7 @@
           <input class="filter-input" id="maxValue" type="number" placeholder="Max assessed value ($)" style="width:180px;">
           <input type="checkbox" id="hotOnly"> <label for="hotOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">🔥 Hot deals only (score ≥ 50)</label>
           <input type="checkbox" id="showGood"> <label for="showGood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Show leads I tagged "Good house"</label>
+          <input type="checkbox" id="estateOnly"> <label for="estateOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Estate-owned only</label>
           <input type="checkbox" id="hideFlood"> <label for="hideFlood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Hide floodplain-constrained</label>
         </div>
         <div style="font-size:11px; color:var(--text-faint); margin:-10px 0 14px;">Price filter uses county assessed value — no real asking price is available in any public feed, so treat this as a rough size filter, not a real price range.</div>
@@ -742,6 +743,7 @@ function applyFilters(){
   // category side by side, that's the whole point of having two of them.
   let base = D.leads || [];
   if(q) base = base.filter(l => (l.address||'').toLowerCase().includes(q) || (l.ownerName||'').toLowerCase().includes(q));
+  if(document.getElementById('estateOnly').checked) base = base.filter(l => l.ownership?.isEstateOwner);
   if(hideFlood) base = base.filter(l => !l.inFloodplain);
   if(!document.getElementById('showGood').checked) base = base.filter(l => loadCondition()[l.apn] !== 'good');
   if(hotOnly) base = base.filter(l => l.score >= 50);
@@ -759,6 +761,7 @@ document.getElementById('landUseFilter').addEventListener('change', applyFilters
 document.getElementById('addrSearch').addEventListener('input', applyFilters);
 document.getElementById('hideFlood').addEventListener('change', applyFilters);
 document.getElementById('showGood').addEventListener('change', applyFilters);
+document.getElementById('estateOnly').addEventListener('change', applyFilters);
 document.getElementById('hotOnly').addEventListener('change', applyFilters);
 document.getElementById('minValue').addEventListener('input', applyFilters);
 document.getElementById('maxValue').addEventListener('input', applyFilters);

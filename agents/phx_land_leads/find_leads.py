@@ -54,6 +54,7 @@ MARICOPA_PARCELS = "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/Mar
 PHX_ZONING = "https://maps.phoenix.gov/pub/rest/services/Public/Zoning/MapServer/0/query"
 PHX_GENERAL_PLAN = "https://maps.phoenix.gov/pub/rest/services/Public/GeneralPlan/MapServer/0/query"
 PHX_REZONING = "https://maps.phoenix.gov/pds/rest/services/Hosted/Rezoning_Proposed_5_Year/FeatureServer/0/query"
+PHX_CODE_CASES = "https://maps.phoenix.gov/pub/rest/services/Public/NSD_Property_Maintenance/MapServer/0/query"
 FEMA_FLOOD = "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query"
 
 # North Phoenix + nearby growth-corridor zip codes (Deer Valley, Desert Ridge,
@@ -420,6 +421,35 @@ def _street_part(addr, city):
     return addr
 
 
+DISTRESS_NOTE_WORDS = ("VACANT", "BOARDED", "UNSECURED", "ABANDON", "DILAPIDAT")
+SEVERE_STATUS_WORDS = ("ABATEMENT", "NOTICE OF VIOLATION", "ABATED BY CITY", "TICKET ISSUED", "VACANT UNIT")
+_code_cases = {}
+
+
+def load_code_cases():
+    """Bulk-pull Phoenix NSD complaint cases (~31k, 2024+) once, indexed by street address."""
+    offset = 0
+    while True:
+        feats = esri_query(PHX_CODE_CASES, {
+            "where": "1=1", "outFields": "CSM_ADDRESS,CSM_STATUS,NOTES,ESRI_OID", "orderByFields": "ESRI_OID",  # service 400s without the OID field
+            "resultOffset": offset, "resultRecordCount": 1000,
+        }).get("features") or []
+        for f in feats:
+            a = f["attributes"]
+            key = _street_part(a.get("CSM_ADDRESS"), "PHOENIX")
+            if not key:
+                continue
+            c = _code_cases.setdefault(key, {"count": 0, "severe": False, "distress": False})
+            text = ((a.get("CSM_STATUS") or "") + " " + (a.get("NOTES") or "")).upper()
+            c["count"] += 1
+            c["severe"] |= any(w in (a.get("CSM_STATUS") or "").upper() for w in SEVERE_STATUS_WORDS)
+            c["distress"] |= any(w in text for w in DISTRESS_NOTE_WORDS)
+        if len(feats) < 1000:
+            break
+        offset += 1000
+    print(f"  loaded code-violation cases for {len(_code_cases)} addresses")
+
+
 def analyze_ownership(p):
     owner = (p.get("OWNER_NAME") or "").upper()
     mail_city = (p.get("MAIL_CITY") or "").upper().strip()
@@ -452,6 +482,7 @@ def analyze_ownership(p):
         # Only flag it as needing real ownership unmasking when it's NOT owner-occupied.
         "isOwnerOccupied": is_owner_occupied,
         "isHiddenOwner": bool(is_entity_owner and not is_owner_occupied),
+        "isEstateOwner": "ESTATE OF" in owner,
         "yearsHeld": years_held,
     }
 
@@ -491,6 +522,18 @@ def score_lead(rec):
         score += 12; reasons.append(f"held {own['yearsHeld']:.0f}+ years — likely low or no debt on the land")
     elif own["yearsHeld"] is not None and own["yearsHeld"] >= 8:
         score += 6; reasons.append(f"held {own['yearsHeld']:.0f} years")
+
+    # Distress signals from public records (apply to vacant and improved alike)
+    cc = rec.get("codeCases")
+    if cc:
+        if cc["distress"]:
+            score += 15; reasons.append("code complaint mentions vacant/boarded/unsecured/abandoned/dilapidated")
+        if cc["severe"]:
+            score += 8; reasons.append("city issued a violation notice, ticket, or abatement here")
+        if cc["count"] >= 2:
+            score += 6; reasons.append(f"{cc['count']} code-enforcement cases at this address (2024+)")
+    if own.get("isEstateOwner"):
+        score += 15; reasons.append("owned by an estate — heirs are often motivated sellers")
 
     # Underused improved parcel (existing structure occupies little of a large lot)
     if rec["parcelStatus"] == "improved" and rec.get("farRatio") is not None:
@@ -578,6 +621,7 @@ def enrich_parcel(p):
         "livingSpaceSf": living_sf,
         "farRatio": far_ratio,
         "yearBuilt": const_year,
+        "codeCases": _code_cases.get(_street_part(p.get("PHYSICAL_ADDRESS"), p.get("PHYSICAL_CITY"))),
         "saleDate": p.get("SALE_DATE"),
         "salePrice": _to_float(p.get("SALE_PRICE")) or None,
         "defaultDemoCost": demo_cost,
@@ -589,6 +633,7 @@ def enrich_parcel(p):
 
 
 def main():
+    load_code_cases()
     print("Pulling vacant land parcels in North Phoenix zip codes...")
     vacant_parcels = fetch_vacant_parcels()
     print(f"  {len(vacant_parcels)} vacant-classified parcels found")
