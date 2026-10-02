@@ -132,7 +132,7 @@ MIN_IMPROVED_LAND_SIZE_SF = 14000   # ~0.32 acre — meaningfully oversized vs
 MAX_UNDERUSE_FAR = 0.14             # structure occupies <14% of the lot
 MAX_IMPROVED_ENRICHED = 50000        # effectively unlimited, see MAX_PARCELS_ENRICHED
 COMPS_MAX_LEADS = 300               # comp a pool 2x the shown size (per category); comps then decide who makes the top 150
-HOT_SCORE = 65                    # leads that ever hit this score are kept permanently
+HOT_SCORE = 80                    # leads that ever hit this score are kept permanently
 LEADS_SHOWN_PER_CATEGORY = 150       # top vacant + top improved shown, kept separate
                                       # so one category can't crowd out the other
                                      # (bounds daily load on the county's public GIS)
@@ -494,13 +494,15 @@ def apply_comps_adjustment(leads):
     for l in leads:
         old = l.pop("compsAdj", 0)
         l["score"] -= old
-        l["reasons"] = [r for r in l["reasons"] if not r.startswith("comps value")]
+        l["reasons"] = [r for r in l["reasons"] if not r.startswith(("comps value", "comps margin"))]
     pool = sorted((l for l in leads if l.get("equityMarginPct") is not None), key=lambda l: l["equityMarginPct"], reverse=True)
     for i, l in enumerate(pool):
         m = l["equityMarginPct"]
         adj = -10 if m <= 0 else 20 if i < len(pool) * .25 else 10 if i < len(pool) * .5 else 4 if i < len(pool) * .75 else 0
         l["compsAdj"] = adj
         l["score"] += adj
+        if m > 300:
+            l["reasons"].append(f"comps margin {m}% looks extreme — verify assessed value/comps before trusting")
         if adj:
             l["reasons"].append(f"comps value ~{m:+d}% vs assessed, rank {i+1}/{len(pool)} ({adj:+d} pts)")
 

@@ -78,6 +78,7 @@ window.PHX_LAND_LEADS = {
         "2 code-enforcement cases at this address (2024+)",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size",
         "built 1956 \u2014 older housing stock",
+        "comps margin 356% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+356% vs assessed, rank 63/327 (+20 pts)"
       ],
       "comps": [
@@ -210,6 +211,7 @@ window.PHX_LAND_LEADS = {
         "held 8 years",
         "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
         "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 348% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+348% vs assessed, rank 66/327 (+20 pts)"
       ],
       "comps": [
@@ -345,6 +347,7 @@ window.PHX_LAND_LEADS = {
         "held 32+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
         "built 1945, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 314% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+314% vs assessed, rank 75/327 (+20 pts)"
       ],
       "comps": [
@@ -476,6 +479,7 @@ window.PHX_LAND_LEADS = {
         "held 34+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 1% of the lot \u2014 under-improved for the land size",
         "built 1958, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 840% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+840% vs assessed, rank 16/327 (+20 pts)"
       ],
       "comps": [
@@ -606,6 +610,7 @@ window.PHX_LAND_LEADS = {
         "held 26+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "built 1956, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 344% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+344% vs assessed, rank 67/327 (+20 pts)"
       ],
       "comps": [
@@ -740,6 +745,7 @@ window.PHX_LAND_LEADS = {
         "2 code-enforcement cases at this address (2024+)",
         "existing structure occupies only 9% of the lot \u2014 under-improved for the land size",
         "built 1967, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 1922% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+1922% vs assessed, rank 8/327 (+20 pts)"
       ],
       "comps": [
@@ -865,6 +871,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 12% of the lot \u2014 under-improved for the land size",
+        "comps margin 1427% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+1427% vs assessed, rank 13/327 (+20 pts)"
       ],
       "comps": [
@@ -1274,6 +1281,7 @@ window.PHX_LAND_LEADS = {
         "2 code-enforcement cases at this address (2024+)",
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size",
         "built 1959, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 565% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+565% vs assessed, rank 24/327 (+20 pts)"
       ],
       "comps": [
@@ -1404,6 +1412,7 @@ window.PHX_LAND_LEADS = {
         "held 8 years",
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size",
         "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 424% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+424% vs assessed, rank 46/327 (+20 pts)"
       ],
       "comps": [
@@ -1534,6 +1543,7 @@ window.PHX_LAND_LEADS = {
         "held 8 years",
         "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
         "built 1956, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 336% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+336% vs assessed, rank 70/327 (+20 pts)"
       ],
       "comps": [
@@ -1670,6 +1680,7 @@ window.PHX_LAND_LEADS = {
         "9 code-enforcement cases at this address (2024+)",
         "existing structure occupies only 12% of the lot \u2014 under-improved for the land size",
         "built 1962, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 1932% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+1932% vs assessed, rank 7/327 (+20 pts)"
       ],
       "comps": [
@@ -1800,6 +1811,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 45+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size",
+        "comps margin 355% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+355% vs assessed, rank 64/327 (+20 pts)"
       ],
       "comps": [
@@ -2341,6 +2353,7 @@ window.PHX_LAND_LEADS = {
         "held 22+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size",
         "built 1953, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 461% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+461% vs assessed, rank 39/327 (+20 pts)"
       ],
       "comps": [
@@ -2470,6 +2483,7 @@ window.PHX_LAND_LEADS = {
         "held 35+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
         "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 318% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+318% vs assessed, rank 73/327 (+20 pts)"
       ],
       "comps": [
@@ -2599,6 +2613,7 @@ window.PHX_LAND_LEADS = {
         "held 16+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
         "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 387% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+387% vs assessed, rank 53/327 (+20 pts)"
       ],
       "comps": [
@@ -2728,6 +2743,7 @@ window.PHX_LAND_LEADS = {
         "held 21+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "built 1960, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 349% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+349% vs assessed, rank 65/327 (+20 pts)"
       ],
       "comps": [
@@ -2857,6 +2873,7 @@ window.PHX_LAND_LEADS = {
         "held 17+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size",
         "built 1962, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 2744% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+2744% vs assessed, rank 3/327 (+20 pts)"
       ],
       "comps": [
@@ -2986,6 +3003,7 @@ window.PHX_LAND_LEADS = {
         "held 16+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 9% of the lot \u2014 under-improved for the land size",
         "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 2015% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+2015% vs assessed, rank 6/327 (+20 pts)"
       ],
       "comps": [
@@ -3115,6 +3133,7 @@ window.PHX_LAND_LEADS = {
         "held 18+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 9% of the lot \u2014 under-improved for the land size",
         "built 1901, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 3692% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+3692% vs assessed, rank 2/327 (+20 pts)"
       ],
       "comps": [
@@ -3244,6 +3263,7 @@ window.PHX_LAND_LEADS = {
         "held 22+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 10% of the lot \u2014 under-improved for the land size",
         "built 1971, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 748% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+748% vs assessed, rank 17/327 (+20 pts)"
       ],
       "comps": [
@@ -4826,6 +4846,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 651% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+651% vs assessed, rank 20/327 (+20 pts)"
       ],
       "comps": [
@@ -4956,6 +4977,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 464% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+464% vs assessed, rank 38/327 (+20 pts)"
       ],
       "comps": [
@@ -6670,6 +6692,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "3 code-enforcement cases at this address (2024+)",
+        "comps margin 308% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+308% vs assessed, rank 80/327 (+20 pts)"
       ],
       "comps": [
@@ -6808,6 +6831,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "code complaint mentions vacant/boarded/unsecured/abandoned/dilapidated",
         "13 code-enforcement cases at this address (2024+)",
+        "comps margin 1620% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+1620% vs assessed, rank 10/327 (+20 pts)"
       ],
       "comps": [
@@ -6942,6 +6966,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 11 years",
+        "comps margin 1736% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+1736% vs assessed, rank 9/327 (+20 pts)"
       ],
       "comps": [
@@ -7859,6 +7884,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 35+ years \u2014 likely low or no debt on the land",
+        "comps margin 384% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+384% vs assessed, rank 55/327 (+20 pts)"
       ],
       "comps": [
@@ -7993,6 +8019,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 35+ years \u2014 likely low or no debt on the land",
+        "comps margin 528% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+528% vs assessed, rank 29/327 (+20 pts)"
       ],
       "comps": [
@@ -8127,6 +8154,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 20+ years \u2014 likely low or no debt on the land",
+        "comps margin 583% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+583% vs assessed, rank 23/327 (+20 pts)"
       ],
       "comps": [
@@ -10986,6 +11014,7 @@ window.PHX_LAND_LEADS = {
         "held 36+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "built 1945, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps margin 301% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+301% vs assessed, rank 83/327 (+10 pts)"
       ],
       "comps": [
@@ -12924,6 +12953,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held 16+ years \u2014 likely low or no debt on the land",
+        "comps margin 458% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+458% vs assessed, rank 42/327 (+20 pts)"
       ],
       "comps": [
@@ -13180,7 +13210,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 10% of the lot \u2014 under-improved for the land size",
-        "comps value ~+170% vs assessed, rank 176/327 (+4 pts)"
+        "comps value ~+170% vs assessed, rank 175/327 (+4 pts)"
       ],
       "comps": [
         {
@@ -13311,6 +13341,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 334% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+334% vs assessed, rank 71/327 (+20 pts)"
       ],
       "comps": [
@@ -13441,6 +13472,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 1442% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+1442% vs assessed, rank 12/327 (+20 pts)"
       ],
       "comps": [
@@ -13575,6 +13607,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 307% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+307% vs assessed, rank 82/327 (+20 pts)"
       ],
       "comps": [
@@ -13838,7 +13871,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 14 years",
         "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
-        "comps value ~+162% vs assessed, rank 191/327 (+4 pts)"
+        "comps value ~+162% vs assessed, rank 190/327 (+4 pts)"
       ],
       "comps": [
         {
@@ -13966,7 +13999,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 9 years",
         "existing structure occupies only 10% of the lot \u2014 under-improved for the land size",
-        "comps value ~+137% vs assessed, rank 219/327 (+4 pts)"
+        "comps value ~+137% vs assessed, rank 218/327 (+4 pts)"
       ],
       "comps": [
         {
@@ -15149,6 +15182,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 1329% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+1329% vs assessed, rank 14/327 (+20 pts)"
       ],
       "comps": [
@@ -15246,6 +15280,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 459% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+459% vs assessed, rank 41/327 (+20 pts)"
       ],
       "comps": [
@@ -15379,6 +15414,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 327% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+327% vs assessed, rank 72/327 (+20 pts)"
       ],
       "comps": [
@@ -16137,6 +16173,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 13 years",
+        "comps margin 486% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+486% vs assessed, rank 35/327 (+20 pts)"
       ],
       "comps": [
@@ -16271,6 +16308,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 8 years",
+        "comps margin 1192% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+1192% vs assessed, rank 15/327 (+20 pts)"
       ],
       "comps": [
@@ -16405,6 +16443,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 9 years",
+        "comps margin 375% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+375% vs assessed, rank 60/327 (+20 pts)"
       ],
       "comps": [
@@ -18118,6 +18157,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
+        "comps margin 310% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+310% vs assessed, rank 77/327 (+20 pts)"
       ],
       "comps": [
@@ -19386,6 +19426,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 25+ years \u2014 likely low or no debt on the land",
+        "comps margin 490% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+490% vs assessed, rank 34/327 (+20 pts)"
       ],
       "comps": [
@@ -19515,6 +19556,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 17+ years \u2014 likely low or no debt on the land",
+        "comps margin 387% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+387% vs assessed, rank 54/327 (+20 pts)"
       ],
       "comps": [
@@ -19648,6 +19690,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 24+ years \u2014 likely low or no debt on the land",
+        "comps margin 395% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+395% vs assessed, rank 52/327 (+20 pts)"
       ],
       "comps": [
@@ -19777,6 +19820,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 18+ years \u2014 likely low or no debt on the land",
+        "comps margin 14626% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+14626% vs assessed, rank 1/327 (+20 pts)"
       ],
       "comps": [
@@ -25025,7 +25069,7 @@ window.PHX_LAND_LEADS = {
         "held 22+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 9% of the lot \u2014 under-improved for the land size",
         "built 1966, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+162% vs assessed, rank 190/327 (+4 pts)"
+        "comps value ~+162% vs assessed, rank 191/327 (+4 pts)"
       ],
       "comps": [
         {
@@ -25541,7 +25585,7 @@ window.PHX_LAND_LEADS = {
         "held 16+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 9% of the lot \u2014 under-improved for the land size",
         "built 1971, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+170% vs assessed, rank 175/327 (+4 pts)"
+        "comps value ~+170% vs assessed, rank 176/327 (+4 pts)"
       ],
       "comps": [
         {
@@ -26190,7 +26234,7 @@ window.PHX_LAND_LEADS = {
         "held 23+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 10% of the lot \u2014 under-improved for the land size",
         "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+137% vs assessed, rank 218/327 (+4 pts)"
+        "comps value ~+137% vs assessed, rank 219/327 (+4 pts)"
       ],
       "comps": [
         {
@@ -26452,6 +26496,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held 12 years",
+        "comps margin 384% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+384% vs assessed, rank 56/327 (+20 pts)"
       ],
       "comps": [
@@ -28577,6 +28622,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 308% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+308% vs assessed, rank 81/327 (+20 pts)"
       ],
       "comps": [
@@ -28707,6 +28753,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 17+ years \u2014 likely low or no debt on the land",
+        "comps margin 380% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+380% vs assessed, rank 58/327 (+20 pts)"
       ],
       "comps": [
@@ -28836,6 +28883,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 312% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+312% vs assessed, rank 76/327 (+20 pts)"
       ],
       "comps": [
@@ -28964,6 +29012,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 496% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+496% vs assessed, rank 33/327 (+20 pts)"
       ],
       "comps": [
@@ -29092,6 +29141,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 2276% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+2276% vs assessed, rank 4/327 (+20 pts)"
       ],
       "comps": [
@@ -29220,6 +29270,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 398% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+398% vs assessed, rank 51/327 (+20 pts)"
       ],
       "comps": [
@@ -29348,6 +29399,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 1555% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+1555% vs assessed, rank 11/327 (+20 pts)"
       ],
       "comps": [
@@ -29465,6 +29517,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 344% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+344% vs assessed, rank 68/327 (+20 pts)"
       ],
       "comps": [
@@ -29594,6 +29647,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 2020% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+2020% vs assessed, rank 5/327 (+20 pts)"
       ],
       "comps": [
@@ -29711,6 +29765,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 384% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+384% vs assessed, rank 57/327 (+20 pts)"
       ],
       "comps": [
@@ -29840,6 +29895,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 642% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+642% vs assessed, rank 21/327 (+20 pts)"
       ],
       "comps": [
@@ -29969,6 +30025,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 654% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+654% vs assessed, rank 19/327 (+20 pts)"
       ],
       "comps": [
@@ -32574,6 +32631,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 26+ years \u2014 likely low or no debt on the land",
+        "comps margin 554% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+554% vs assessed, rank 26/327 (+20 pts)"
       ],
       "comps": [
@@ -33030,6 +33088,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 14 years",
+        "comps margin 309% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+309% vs assessed, rank 78/327 (+20 pts)"
       ],
       "comps": [
@@ -33159,6 +33218,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address differs from the property city",
+        "comps margin 315% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+315% vs assessed, rank 74/327 (+20 pts)"
       ],
       "comps": [
@@ -33287,6 +33347,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address differs from the property city",
+        "comps margin 453% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+453% vs assessed, rank 43/327 (+20 pts)"
       ],
       "comps": [
@@ -33415,6 +33476,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 14 years",
+        "comps margin 376% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+376% vs assessed, rank 59/327 (+20 pts)"
       ],
       "comps": [
@@ -33544,6 +33606,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address differs from the property city",
+        "comps margin 555% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+555% vs assessed, rank 25/327 (+20 pts)"
       ],
       "comps": [
@@ -33977,6 +34040,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 301% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+301% vs assessed, rank 84/327 (+10 pts)"
       ],
       "comps": [
@@ -34242,6 +34306,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-8",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
+        "comps margin 362% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+362% vs assessed, rank 62/327 (+20 pts)"
       ],
       "comps": [
@@ -34366,6 +34431,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held 22+ years \u2014 likely low or no debt on the land",
+        "comps margin 478% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+478% vs assessed, rank 36/327 (+20 pts)"
       ],
       "comps": [
@@ -34493,6 +34559,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-8",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
+        "comps margin 423% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+423% vs assessed, rank 47/327 (+20 pts)"
       ],
       "comps": [
@@ -34620,6 +34687,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
+        "comps margin 444% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+444% vs assessed, rank 44/327 (+20 pts)"
       ],
       "comps": [
@@ -35094,6 +35162,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "2 code-enforcement cases at this address (2024+)",
+        "comps margin 309% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+309% vs assessed, rank 79/327 (+20 pts)"
       ],
       "comps": [
@@ -35347,6 +35416,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "owned by an estate \u2014 heirs are often motivated sellers",
+        "comps margin 503% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+503% vs assessed, rank 31/327 (+20 pts)"
       ],
       "comps": [
@@ -35472,6 +35542,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 411% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+411% vs assessed, rank 49/327 (+20 pts)"
       ],
       "comps": [
@@ -35597,6 +35668,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 365% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+365% vs assessed, rank 61/327 (+20 pts)"
       ],
       "comps": [
@@ -35722,6 +35794,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 412% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+412% vs assessed, rank 48/327 (+20 pts)"
       ],
       "comps": [
@@ -35847,6 +35920,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 461% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+461% vs assessed, rank 40/327 (+20 pts)"
       ],
       "comps": [
@@ -35972,6 +36046,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 540% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+540% vs assessed, rank 27/327 (+20 pts)"
       ],
       "comps": [
@@ -36097,6 +36172,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 530% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+530% vs assessed, rank 28/327 (+20 pts)"
       ],
       "comps": [
@@ -36222,6 +36298,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 434% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+434% vs assessed, rank 45/327 (+20 pts)"
       ],
       "comps": [
@@ -36347,6 +36424,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 588% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+588% vs assessed, rank 22/327 (+20 pts)"
       ],
       "comps": [
@@ -37625,6 +37703,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-5",
         "parcel size fits small-to-mid infill development",
         "held 30+ years \u2014 likely low or no debt on the land",
+        "comps margin 509% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+509% vs assessed, rank 30/327 (+20 pts)"
       ],
       "comps": [
@@ -37752,6 +37831,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
         "held 26+ years \u2014 likely low or no debt on the land",
+        "comps margin 408% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+408% vs assessed, rank 50/327 (+20 pts)"
       ],
       "comps": [
@@ -37879,6 +37959,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
         "held 20+ years \u2014 likely low or no debt on the land",
+        "comps margin 469% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+469% vs assessed, rank 37/327 (+20 pts)"
       ],
       "comps": [
@@ -38006,6 +38087,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held 17+ years \u2014 likely low or no debt on the land",
+        "comps margin 502% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+502% vs assessed, rank 32/327 (+20 pts)"
       ],
       "comps": [
@@ -38131,6 +38213,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 11 years",
+        "comps margin 343% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+343% vs assessed, rank 69/327 (+20 pts)"
       ],
       "comps": [
@@ -38262,6 +38345,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-18",
         "parcel size fits small-to-mid infill development",
         "held 20+ years \u2014 likely low or no debt on the land",
+        "comps margin 704% looks extreme \u2014 verify assessed value/comps before trusting",
         "comps value ~+704% vs assessed, rank 18/327 (+20 pts)"
       ],
       "comps": [
