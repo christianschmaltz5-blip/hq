@@ -487,6 +487,24 @@ def analyze_ownership(p):
     }
 
 
+def apply_comps_adjustment(leads):
+    """Score bonus by equity-margin RANK within the pool (assessed values run far below
+    market, so absolute margins are all high and don't separate leads): top quarter +20,
+    next +10, next +4, bottom 0; margin <= 0 is -10. Idempotent via the compsAdj field."""
+    for l in leads:
+        old = l.pop("compsAdj", 0)
+        l["score"] -= old
+        l["reasons"] = [r for r in l["reasons"] if not r.startswith("comps value")]
+    pool = sorted((l for l in leads if l.get("equityMarginPct") is not None), key=lambda l: l["equityMarginPct"], reverse=True)
+    for i, l in enumerate(pool):
+        m = l["equityMarginPct"]
+        adj = -10 if m <= 0 else 20 if i < len(pool) * .25 else 10 if i < len(pool) * .5 else 4 if i < len(pool) * .75 else 0
+        l["compsAdj"] = adj
+        l["score"] += adj
+        if adj:
+            l["reasons"].append(f"comps value ~{m:+d}% vs assessed, rank {i+1}/{len(pool)} ({adj:+d} pts)")
+
+
 def score_lead(rec):
     """Additive score, roughly 0-100+. Two families of signal:
     - Development upside (does the zoning/rezoning context suggest value creation)
@@ -718,14 +736,9 @@ def main():
                 lead["equityMarginPct"] = round(
                     (result["valuation"]["mostLikelyValue"] - lead["assessedValue"])
                     / lead["assessedValue"] * 100)
-            m = lead["equityMarginPct"]
-            if m is not None:
-                adj = 25 if m >= 100 else 15 if m >= 50 else 8 if m >= 25 else -10 if m <= 0 else 0
-                if adj:
-                    lead["score"] += adj
-                    lead["reasons"].append(f"comps value ~{m:+d}% vs assessed ({'+' if adj > 0 else ''}{adj} pts)")
             if (i + 1) % 20 == 0:
                 print(f"  comped {i+1}/{len(comp_targets)}...")
+    apply_comps_adjustment(comp_targets)
     # Re-rank on comps-adjusted score and cut to the shown size per category.
     by_score = lambda ls: sorted(ls, key=lambda r: r["score"], reverse=True)[:LEADS_SHOWN_PER_CATEGORY]
     top_leads = by_score([l for l in comp_targets if l["parcelStatus"] == "vacant"]) \
