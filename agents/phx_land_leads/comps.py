@@ -258,6 +258,11 @@ def build_comps_for_lead(lead, today=None):
     scored.sort(key=lambda t: -t[0])
     top = scored[:MAX_COMPS]
 
+    # Bulk/portfolio sales: the Assessor stamps one deal price on every parcel in the
+    # deal, so the same price+date on 2+ candidate parcels is a bulk sale, not a lot
+    # price ($33.7M "per parcel" produced +70,000% margins). Excluded from VALUE only.
+    from collections import Counter
+    sale_counts = Counter((_parse_num(c.get("SALE_PRICE")), sold) for _, _, sold, c in scored)
     comps_out = []
     implied_values, weights = [], []
     for score, dist_mi, sold, cand in top:
@@ -285,7 +290,8 @@ def build_comps_for_lead(lead, today=None):
         # 0.15-acre house-lot sale can still be a fine NEIGHBORHOOD comp
         # (shown in the table) without being a valid VALUE comp for a
         # 3.5-acre teardown lot.
-        if iv and land_sf and lead.get("landSf"):
+        is_bulk = sale_counts[(price, sold)] > 1
+        if iv and land_sf and lead.get("landSf") and not is_bulk:
             size_ratio = min(land_sf, lead["landSf"]) / max(land_sf, lead["landSf"])
             if size_ratio >= MIN_SIZE_RATIO_FOR_VALUATION:
                 implied_values.append(iv)
@@ -293,7 +299,13 @@ def build_comps_for_lead(lead, today=None):
 
     valuation = None
     if implied_values:
-        weighted_avg = sum(v * w for v, w in zip(implied_values, weights)) / sum(weights)
+        # weighted MEDIAN, not mean — one outlier comp can't drag the estimate
+        half, acc = sum(weights) / 2, 0
+        for v, w in sorted(zip(implied_values, weights)):
+            acc += w
+            if acc >= half:
+                weighted_avg = v
+                break
         low, high = min(implied_values), max(implied_values)
         land_basis = "as a redevelopment/land play (existing structure ignored)" if lead.get("parcelStatus") == "improved" else "as vacant land"
         valuation = {
