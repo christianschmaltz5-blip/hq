@@ -131,7 +131,7 @@ MIN_IMPROVED_LAND_SIZE_SF = 14000   # ~0.32 acre — meaningfully oversized vs
                                      # a standard 6-8k sf platted lot
 MAX_UNDERUSE_FAR = 0.14             # structure occupies <14% of the lot
 MAX_IMPROVED_ENRICHED = 50000        # effectively unlimited, see MAX_PARCELS_ENRICHED
-COMPS_MAX_LEADS = 60                # only the top-scored leads (per category) get a comps lookup
+COMPS_MAX_LEADS = 150               # every shown lead (per category) gets a comps lookup, so comps can re-rank
 HOT_SCORE = 65                    # leads that ever hit this score are kept permanently
 LEADS_SHOWN_PER_CATEGORY = 150       # top vacant + top improved shown, kept separate
                                       # so one category can't crowd out the other
@@ -718,8 +718,15 @@ def main():
                 lead["equityMarginPct"] = round(
                     (result["valuation"]["mostLikelyValue"] - lead["assessedValue"])
                     / lead["assessedValue"] * 100)
+            m = lead["equityMarginPct"]
+            if m is not None:
+                adj = 25 if m >= 100 else 15 if m >= 50 else 8 if m >= 25 else -10 if m <= 0 else 0
+                if adj:
+                    lead["score"] += adj
+                    lead["reasons"].append(f"comps value ~{m:+d}% vs assessed ({'+' if adj > 0 else ''}{adj} pts)")
             if (i + 1) % 20 == 0:
                 print(f"  comped {i+1}/{len(comp_targets)}...")
+    top_leads.sort(key=lambda r: r["score"], reverse=True)  # re-rank now that comps are in
 
     # Unmask hidden LLC owners (not trusts -- a trust name already carries the
     # real person's name) via OpenCorporates. Scoped to top_leads only (not
