@@ -786,11 +786,9 @@ def main():
         except Exception:
             existing_history, previous_apns, prev_leads = [], set(), {}
 
-    new_count = 0
     for lead in leads:
         lead["isNew"] = lead["apn"] not in previous_apns
-        if lead["isNew"]:
-            new_count += 1
+    new_count = sum(l["isNew"] for l in top_leads)  # shown leads only, not all ~9k scored
 
     # Hot leads accumulate: any prior lead scoring >= HOT_SCORE is kept (marked
     # stale) even when it drops out of today's top lists; peak score is tracked.

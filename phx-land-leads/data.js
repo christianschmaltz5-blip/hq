@@ -17,7 +17,7 @@ window.PHX_LAND_LEADS = {
     "85022"
   ],
   "parcelsScanned": 9713,
-  "newLeadsThisRun": 8576,
+  "newLeadsThisRun": 65,
   "leads": [
     {
       "apn": "21316019F",
@@ -40140,7 +40140,7 @@ window.PHX_LAND_LEADS = {
       "date": "2026-10-02",
       "parcelsScanned": 9713,
       "leadsFound": 8952,
-      "newLeads": 8576
+      "newLeads": 65
     }
   ],
   "methodologyNote": "Public-records only: Maricopa Assessor parcels (vacant land AND underused single-family-improved parcels \u2014 an existing house occupying a small share of an oversized lot, tagged UNDERUSED LOT \u2014 condition is not in public data, verify by eye), Phoenix zoning + General Plan + rezoning-case layers, FEMA flood zones, plus ownership tenure/entity-type/mailing-address signals as a seller-motivation proxy. No asking price or water/sewer availability is in any public feed found \u2014 confirm those manually per lead before underwriting. Rezone targets landing on single-family zoning use a subdivision/lot-sale calculator (add a demolition cost for underused-lot leads); targets on multifamily/commercial zoning use a rental pro forma."
