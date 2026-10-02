@@ -508,6 +508,17 @@ function toggleContacted(apn){
   if(idx >= 0) document.getElementById(`detail-${idx}`)?.classList.add('show');
 }
 
+function loadNotes(){
+  try{ return JSON.parse(localStorage.getItem('leadNotes') || '{}'); }catch(e){ return {}; }
+}
+function saveNote(apn, idx, text){
+  const map = loadNotes();
+  if(text.trim()) map[apn] = text; else delete map[apn];
+  try{ localStorage.setItem('leadNotes', JSON.stringify(map)); }catch(e){}
+  const b = document.getElementById(`notebadge-${idx}`);
+  if(b) b.style.display = text.trim() ? '' : 'none';
+}
+
 function loadCondition(){
   try{ return JSON.parse(localStorage.getItem('leadCondition') || '{}'); }catch(e){ return {}; }
 }
@@ -543,7 +554,7 @@ function leadCard(lead, idx){
   return `<div class="lead-card ${typeClass}${isHot?' is-hot':''}" data-idx="${idx}">
     <div class="lead-head" onclick="toggleLead(${idx})">
       <div>
-        <div class="lead-addr">${newBadge} ${statusBadge} ${condBadge} ${staleBadge} ${contactedBadge} ${esc(lead.address)||'(no address on file)'}</div>
+        <div class="lead-addr">${newBadge} ${statusBadge} ${condBadge} <span id="notebadge-${idx}" class="reason-chip" title="You have a note on this lead" style="${loadNotes()[lead.apn] ? '' : 'display:none;'}">📝 Note</span> ${staleBadge} ${contactedBadge} ${esc(lead.address)||'(no address on file)'}</div>
         <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'}${lead.landUseClass ? ` (${lead.landUseClass === 'commercial' ? '🏢 commercial' : lead.landUseClass === 'industrial' ? '🏭 industrial' : '🏠 residential'})` : ''} · Owner: ${esc(lead.ownerName)||'—'} · ${esc(dealTypeLabel)}</div>
       </div>
       <div class="lead-score">${isHot?'<span class="hot-flag">🔥</span>':''}<span class="score-badge ${scoreClass(lead.score)}">${lead.score}</span></div>
@@ -580,6 +591,10 @@ function leadCard(lead, idx){
         <div class="detail-field"><div class="detail-label">Floor-Area Ratio</div><div class="detail-val">${lead.farRatio!=null?(lead.farRatio*100).toFixed(1)+'%':'—'} of lot built on</div></div>
         <div class="detail-field"><div class="detail-label">Est. Demolition Cost</div><div class="detail-val">${money(lead.defaultDemoCost||0)}<div style="font-size:10px;font-weight:400;color:var(--text-faint);margin-top:2px;">generic placeholder, not a real AZ demo bid</div></div></div>` : ''}
         ${lead.dealType === 'subdivision' ? `<div class="detail-field"><div class="detail-label">Est. Dev Cost / Lot</div><div class="detail-val">${money(lead.referenceCostPerLotAZ||65000)}<div style="font-size:10px;font-weight:400;color:var(--text-faint);margin-top:2px;">Phoenix-metro estimate, not a local civil bid</div></div></div>` : ''}
+      </div>
+      <div class="detail-field" style="margin-top:12px;" onclick="event.stopPropagation()">
+        <div class="detail-label">My Notes (saved in this browser)</div>
+        <textarea style="width:100%;min-height:80px;margin-top:6px;padding:8px;border:1px solid var(--card-border);border-radius:8px;font:inherit;font-size:13px;resize:vertical;" placeholder="Calls, owner details, what you saw on Street View…" oninput="saveNote('${esc(lead.apn)}', ${idx}, this.value)">${esc(loadNotes()[lead.apn] || '')}</textarea>
       </div>
       ${compsSectionHtml(lead)}
       <div class="calc-toggle" onclick="toggleCalc(${idx})">
