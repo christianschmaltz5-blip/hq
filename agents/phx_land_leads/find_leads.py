@@ -131,7 +131,7 @@ MIN_IMPROVED_LAND_SIZE_SF = 14000   # ~0.32 acre — meaningfully oversized vs
                                      # a standard 6-8k sf platted lot
 MAX_UNDERUSE_FAR = 0.14             # structure occupies <14% of the lot
 MAX_IMPROVED_ENRICHED = 50000        # effectively unlimited, see MAX_PARCELS_ENRICHED
-COMPS_MAX_LEADS = 150               # every shown lead (per category) gets a comps lookup, so comps can re-rank
+COMPS_MAX_LEADS = 300               # comp a pool 2x the shown size (per category); comps then decide who makes the top 150
 HOT_SCORE = 65                    # leads that ever hit this score are kept permanently
 LEADS_SHOWN_PER_CATEGORY = 150       # top vacant + top improved shown, kept separate
                                       # so one category can't crowd out the other
@@ -726,7 +726,11 @@ def main():
                     lead["reasons"].append(f"comps value ~{m:+d}% vs assessed ({'+' if adj > 0 else ''}{adj} pts)")
             if (i + 1) % 20 == 0:
                 print(f"  comped {i+1}/{len(comp_targets)}...")
-    top_leads.sort(key=lambda r: r["score"], reverse=True)  # re-rank now that comps are in
+    # Re-rank on comps-adjusted score and cut to the shown size per category.
+    by_score = lambda ls: sorted(ls, key=lambda r: r["score"], reverse=True)[:LEADS_SHOWN_PER_CATEGORY]
+    top_leads = by_score([l for l in comp_targets if l["parcelStatus"] == "vacant"]) \
+              + by_score([l for l in comp_targets if l["parcelStatus"] == "improved"])
+    top_leads.sort(key=lambda r: r["score"], reverse=True)
 
     # Unmask hidden LLC owners (not trusts -- a trust name already carries the
     # real person's name) via OpenCorporates. Scoped to top_leads only (not
