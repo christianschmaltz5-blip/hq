@@ -45,7 +45,7 @@ import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from datetime import date
+from datetime import date, datetime
 
 from comps import _land_use_class  # same PUC-based classifier comps already uses to
                                     # match residential-to-residential / commercial-to-commercial
@@ -495,8 +495,21 @@ def score_lead(rec):
     # Underused improved parcel (existing structure occupies little of a large lot)
     if rec["parcelStatus"] == "improved" and rec.get("farRatio") is not None:
         pct = rec["farRatio"] * 100
-        score += 18
+        score += 10
         reasons.append(f"existing structure occupies only {pct:.0f}% of the lot — under-improved for the land size")
+        # Condition is NOT in public data. Proxy it: recent sale = likely renovated/flip
+        # (anti-signal); old house + long hold = likely dated, deferred maintenance.
+        try:
+            yrs_since_sale = (date.today() - datetime.strptime(rec["saleDate"], "%m/%d/%Y").date()).days / 365.25
+        except (TypeError, ValueError):
+            yrs_since_sale = None
+        built = int(rec["yearBuilt"]) if (rec.get("yearBuilt") or "").isdigit() else None
+        if yrs_since_sale is not None and yrs_since_sale <= 5:
+            score -= 20; reasons.append(f"sold {yrs_since_sale:.0f}y ago — likely renovated/flipped, probably not a teardown")
+        elif built and built <= 1975 and (yrs_since_sale is None or yrs_since_sale >= 15):
+            score += 15; reasons.append(f"built {built}, no sale in 15+ years — likely dated/deferred maintenance")
+        elif built and built <= 1975:
+            score += 6; reasons.append(f"built {built} — older housing stock")
 
     return score, reasons
 
@@ -565,6 +578,8 @@ def enrich_parcel(p):
         "livingSpaceSf": living_sf,
         "farRatio": far_ratio,
         "yearBuilt": const_year,
+        "saleDate": p.get("SALE_DATE"),
+        "salePrice": _to_float(p.get("SALE_PRICE")) or None,
         "defaultDemoCost": demo_cost,
     }
     score, reasons = score_lead(rec)
@@ -709,9 +724,9 @@ def main():
         l["lastSeen"] = today
         l["peakScore"] = max(l["score"], old.get("peakScore", 0))
     kept = [dict(l, isNew=False, stale=True) for a, l in prev_leads.items()
-            if a not in seen_now and l.get("peakScore", l.get("score", 0)) >= HOT_SCORE]
+            if a not in seen_now and l.get("score", 0) >= HOT_SCORE]
     top_leads = top_leads + kept
-    print(f"  carried over {len(kept)} hot leads (peak score >= {HOT_SCORE}) not in today's pull")
+    print(f"  carried over {len(kept)} hot leads (score >= {HOT_SCORE}) not in today's pull")
 
     total_parcels_scanned = len(vacant_parcels) + len(improved_parcels)
     history_entry = {"date": today, "parcelsScanned": total_parcels_scanned, "leadsFound": len(leads), "newLeads": new_count}

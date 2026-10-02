@@ -141,7 +141,7 @@
 
     <main class="page">
       <h1 class="page-title">North Phoenix Land Leads</h1>
-      <p class="page-sub">Vacant land and underused/teardown-candidate parcels in North Phoenix zip codes, scored on public zoning/General-Plan/rezoning-activity/floodplain signals — built to surface land <b>before</b> it's an obvious, already-entitled development deal. Ranked, not verified: every lead here still needs a human to confirm it's actually for sale and pull the real price.</p>
+      <p class="page-sub">Vacant land and underused-lot parcels (big lot, small house — condition unverified) in North Phoenix zip codes, scored on public zoning/General-Plan/rezoning-activity/floodplain signals — built to surface land <b>before</b> it's an obvious, already-entitled development deal. Ranked, not verified: every lead here still needs a human to confirm it's actually for sale and pull the real price.</p>
 
       <div class="methodology-note" id="methodology-note"></div>
 
@@ -171,8 +171,8 @@
           <div id="vacantMap"></div>
         </div>
         <div class="card">
-          <div class="card-head"><h2>Teardown Map</h2>
-            <span style="font-size:12px;color:var(--text-faint);"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#b3831f;border:1px dashed #8f6418;margin-right:5px;"></span>Teardown candidate</span>
+          <div class="card-head"><h2>Underused Lot Map</h2>
+            <span style="font-size:12px;color:var(--text-faint);"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#b3831f;border:1px dashed #8f6418;margin-right:5px;"></span>Underused lot</span>
           </div>
           <div id="teardownMap"></div>
         </div>
@@ -208,7 +208,7 @@
           <select class="filter-input" id="typeFilter" style="width:160px;">
             <option value="all">All types</option>
             <option value="vacant">🟢 Vacant land only</option>
-            <option value="improved">🟠 Teardown only</option>
+            <option value="improved">🟠 Underused lots only</option>
           </select>
           <select class="filter-input" id="landUseFilter" style="width:170px;">
             <option value="all">All zoning (res + comm)</option>
@@ -220,6 +220,7 @@
           <input class="filter-input" id="minValue" type="number" placeholder="Min assessed value ($)" style="width:180px;">
           <input class="filter-input" id="maxValue" type="number" placeholder="Max assessed value ($)" style="width:180px;">
           <input type="checkbox" id="hotOnly"> <label for="hotOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">🔥 Hot deals only (score ≥ 50)</label>
+          <input type="checkbox" id="showGood"> <label for="showGood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Show leads I tagged "Good house"</label>
           <input type="checkbox" id="hideFlood"> <label for="hideFlood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Hide floodplain-constrained</label>
         </div>
         <div style="font-size:11px; color:var(--text-faint); margin:-10px 0 14px;">Price filter uses county assessed value — no real asking price is available in any public feed, so treat this as a rough size filter, not a real price range.</div>
@@ -506,6 +507,17 @@ function toggleContacted(apn){
   if(idx >= 0) document.getElementById(`detail-${idx}`)?.classList.add('show');
 }
 
+function loadCondition(){
+  try{ return JSON.parse(localStorage.getItem('leadCondition') || '{}'); }catch(e){ return {}; }
+}
+function setCondition(apn, c){
+  const map = loadCondition();
+  if(map[apn] === c) delete map[apn]; else map[apn] = c;
+  try{ localStorage.setItem('leadCondition', JSON.stringify(map)); }catch(e){}
+  applyFilters();
+}
+const CONDITIONS = [['good','🏡 Good house'],['dated','🛠️ Dated'],['teardown','🔨 True teardown']];
+
 function leadCard(lead, idx){
   const reasons = (lead.reasons||[]).map(r=>{
     const isFlood = r.toLowerCase().includes('flood');
@@ -517,14 +529,20 @@ function leadCard(lead, idx){
   const contactedBadge = contactedDate ? `<span class="reason-chip" style="background:#eef2ff;color:#4338ca;border-color:rgba(67,56,202,.25);font-weight:700;">📨 Contacted ${esc(contactedDate)}</span>` : '';
   const dealTypeLabel = lead.dealType === 'subdivision' ? 'Subdivision/lot-sale play' : 'Rental/multifamily play';
   const statusBadge = lead.parcelStatus === 'improved'
-    ? `<span class="reason-chip" style="background:var(--warning-soft);color:#8f6418;border-color:rgba(179,131,31,.3);font-weight:700;">TEARDOWN</span>`
+    ? `<span class="reason-chip" style="background:var(--warning-soft);color:#8f6418;border-color:rgba(179,131,31,.3);font-weight:700;">UNDERUSED LOT</span>`
     : '';
   const typeClass = lead.parcelStatus === 'improved' ? 'teardown' : 'vacant';
   const isHot = lead.score >= 50;
+  const cond = loadCondition()[lead.apn];
+  const condBadge = cond ? `<span class="reason-chip" style="font-weight:700;">${CONDITIONS.find(c=>c[0]===cond)[1]}</span>` : '';
+  const staleBadge = lead.stale ? `<span class="reason-chip" title="Not in latest pull; kept as a hot lead">KEPT · last seen ${esc(lead.lastSeen)}</span>` : '';
+  const condBtns = lead.parcelStatus === 'improved' ? `<div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">Condition after a look:
+      ${CONDITIONS.map(([k,l])=>`<button class="mail-btn" style="margin-left:6px;${cond===k?'outline:2px solid var(--success);':''}" onclick="setCondition('${esc(lead.apn)}','${k}')">${l}</button>`).join('')}
+    </div>` : '';
   return `<div class="lead-card ${typeClass}${isHot?' is-hot':''}" data-idx="${idx}">
     <div class="lead-head" onclick="toggleLead(${idx})">
       <div>
-        <div class="lead-addr">${newBadge} ${statusBadge} ${contactedBadge} ${esc(lead.address)||'(no address on file)'}</div>
+        <div class="lead-addr">${newBadge} ${statusBadge} ${condBadge} ${staleBadge} ${contactedBadge} ${esc(lead.address)||'(no address on file)'}</div>
         <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'}${lead.landUseClass ? ` (${lead.landUseClass === 'commercial' ? '🏢 commercial' : lead.landUseClass === 'industrial' ? '🏭 industrial' : '🏠 residential'})` : ''} · Owner: ${esc(lead.ownerName)||'—'} · ${esc(dealTypeLabel)}</div>
       </div>
       <div class="lead-score">${isHot?'<span class="hot-flag">🔥</span>':''}<span class="score-badge ${scoreClass(lead.score)}">${lead.score}</span></div>
@@ -534,6 +552,7 @@ function leadCard(lead, idx){
       &nbsp;·&nbsp;
       <a href="https://www.google.com/maps?layer=c&cbll=${lead.lat},${lead.lng}" target="_blank" rel="noopener">🚶 Street View</a>
     </div>` : ''}
+    ${condBtns}
     <div class="lead-stats">
       <span>Assessed <b>${money(lead.assessedValue)}</b></span>
       <span>$/ac <b>${money(lead.assessedValuePerAcre)}</b></span>
@@ -724,6 +743,7 @@ function applyFilters(){
   let base = D.leads || [];
   if(q) base = base.filter(l => (l.address||'').toLowerCase().includes(q) || (l.ownerName||'').toLowerCase().includes(q));
   if(hideFlood) base = base.filter(l => !l.inFloodplain);
+  if(!document.getElementById('showGood').checked) base = base.filter(l => loadCondition()[l.apn] !== 'good');
   if(hotOnly) base = base.filter(l => l.score >= 50);
   if(!isNaN(minValue)) base = base.filter(l => (l.assessedValue||0) >= minValue);
   if(!isNaN(maxValue)) base = base.filter(l => (l.assessedValue||0) <= maxValue);
@@ -738,6 +758,7 @@ document.getElementById('typeFilter').addEventListener('change', applyFilters);
 document.getElementById('landUseFilter').addEventListener('change', applyFilters);
 document.getElementById('addrSearch').addEventListener('input', applyFilters);
 document.getElementById('hideFlood').addEventListener('change', applyFilters);
+document.getElementById('showGood').addEventListener('change', applyFilters);
 document.getElementById('hotOnly').addEventListener('change', applyFilters);
 document.getElementById('minValue').addEventListener('input', applyFilters);
 document.getElementById('maxValue').addEventListener('input', applyFilters);
@@ -752,6 +773,7 @@ function skipTraceCandidates(){
   const minScore = parseFloat(document.getElementById('stMinScore').value) || 0;
   const minMargin = parseFloat(document.getElementById('stMinMargin').value) || 0;
   return (D.leads || [])
+    .filter(l => loadCondition()[l.apn] !== 'good')
     .filter(l => l.score >= minScore && l.equityMarginPct != null && l.equityMarginPct >= minMargin)
     .sort((a,b) => b.equityMarginPct - a.equityMarginPct);
 }
@@ -827,7 +849,7 @@ function renderMapInstance(inst, leads){
     }).bindPopup(`
       <div style="font-family:'Inter',sans-serif;font-size:12.5px;">
         <div style="font-weight:700;">${esc(l.address)||'(no address)'}</div>
-        <div style="font-weight:700;color:#1d3252;margin:3px 0;">Score ${l.score} · ${l.parcelStatus === 'improved' ? 'Teardown' : 'Vacant'}</div>
+        <div style="font-weight:700;color:#1d3252;margin:3px 0;">Score ${l.score} · ${l.parcelStatus === 'improved' ? 'Underused lot' : 'Vacant'}</div>
         <div>${esc(l.landAcres)} ac · Zoned ${esc(l.currentZoning)||'—'}</div>
       </div>`);
     inst.markers.push(marker);
