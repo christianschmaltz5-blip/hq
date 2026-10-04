@@ -119,7 +119,7 @@ def _haversine_mi(lat1, lng1, lat2, lng2):
     return 2 * r * math.asin(math.sqrt(a))
 
 
-def _fetch_pool(lat, lng, miles):
+def _fetch_pool(lat, lng, miles, vacant_only=False):
     """Parcels with a recorded sale within `miles` of (lat, lng)."""
     params = {
         "geometry": json.dumps({"x": lng, "y": lat, "spatialReference": {"wkid": 4326}}),
@@ -128,7 +128,7 @@ def _fetch_pool(lat, lng, miles):
         "distance": miles * 1609.34,
         "units": "esriSRUnit_Meter",
         "spatialRel": "esriSpatialRelIntersects",
-        "where": "SALE_DATE IS NOT NULL AND SALE_PRICE IS NOT NULL AND SALE_PRICE <> '0'",
+        "where": "SALE_DATE IS NOT NULL AND SALE_PRICE IS NOT NULL AND SALE_PRICE <> '0'" + (" AND PUC LIKE '00%'" if vacant_only else ""),
         "outFields": COMP_OUT_FIELDS,
         "resultRecordCount": 500,
     }
@@ -203,11 +203,15 @@ def _implied_value(subject, cand):
     return price / cand_land_sf * subj_land_sf
 
 
-def build_comps_for_lead(lead, today=None):
+def build_comps_for_lead(lead, today=None, vacant_only=None):
     """Returns {"comps": [...], "valuation": {...} or None, "note": str} for
     a single lead dict (in the same shape find_leads.py's enrich_parcel
     produces). Never raises -- a lookup failure just yields no comps."""
     today = today or date.today()
+    # Underused-lot leads are valued as land: price them off vacant-land sales, not house
+    # sales scaled by lot size (that inflated margins). Falls back to all sales if none.
+    if vacant_only is None:
+        vacant_only = lead.get("parcelStatus") == "improved"
     lat, lng = lead.get("lat"), lead.get("lng")
     if lat is None or lng is None:
         return {"comps": [], "valuation": None, "note": "No coordinates on file for this parcel."}
@@ -217,7 +221,7 @@ def build_comps_for_lead(lead, today=None):
     scored, radius_used = [], RADII_MI[-1]
     for miles in RADII_MI:
         radius_used = miles
-        pool = _fetch_pool(lat, lng, miles)
+        pool = _fetch_pool(lat, lng, miles, vacant_only)
         scored = []
         for cand in pool:
             if cand.get("APN") == lead.get("apn"):
@@ -249,6 +253,8 @@ def build_comps_for_lead(lead, today=None):
         if well_sized >= MIN_COMPS or miles == RADII_MI[-1]:
             break
 
+    if not scored and vacant_only:
+        return build_comps_for_lead(lead, today, vacant_only=False)
     if not scored:
         class_note = f" of the same land-use type ({subj_class})" if subj_class else ""
         return {"comps": [], "valuation": None,
@@ -307,7 +313,7 @@ def build_comps_for_lead(lead, today=None):
                 weighted_avg = v
                 break
         low, high = min(implied_values), max(implied_values)
-        land_basis = "as a redevelopment/land play (existing structure ignored)" if lead.get("parcelStatus") == "improved" else "as vacant land"
+        land_basis = ("as a redevelopment/land play (existing structure ignored)" + (", priced off vacant-land sales" if vacant_only else "")) if lead.get("parcelStatus") == "improved" else "as vacant land"
         valuation = {
             "mostLikelyValue": round(weighted_avg),
             "rangeLow": round(low),

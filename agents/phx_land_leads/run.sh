@@ -27,8 +27,9 @@ else
   echo "--- skip-trace: no SKIPTRACE_API_KEY set, skipping ---"
 fi
 
-if ! git diff --quiet -- phx-land-leads/data.js; then
-  git add phx-land-leads/data.js
+python3 agents/phx_land_leads/track.py || echo "track.py failed, continuing"
+if ! git diff --quiet -- phx-land-leads/data.js phx-land-leads/history.jsonl || [ -n "$(git ls-files -o --exclude-standard phx-land-leads/history.jsonl)" ]; then
+  git add phx-land-leads/data.js phx-land-leads/history.jsonl
   git commit -m "phx-land-leads: daily pull $(date +%Y-%m-%d)"
   git push || notify "Pull OK but git push FAILED — dashboard not updated"
 fi
