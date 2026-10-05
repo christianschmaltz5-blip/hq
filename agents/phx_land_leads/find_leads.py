@@ -314,7 +314,7 @@ PARCEL_OUT_FIELDS = (
     "APN,OWNER_NAME,PHYSICAL_ADDRESS,LAND_SIZE,PUC,"
     "LATITUDE,LONGITUDE,FCV_CUR,MAIL_ADDRESS,MAIL_CITY,MAIL_STATE,"
     "PHYSICAL_CITY,JURISDICTION,SALE_DATE,SALE_PRICE,DEED_DATE,"
-    "LIVING_SPACE,CONST_YEAR"
+    "LIVING_SPACE,CONST_YEAR,SUBNAME"
 )
 
 
@@ -429,6 +429,24 @@ def _street_part(addr, city):
 DISTRESS_NOTE_WORDS = ("VACANT", "BOARDED", "UNSECURED", "ABANDON", "DILAPIDAT")
 SEVERE_STATUS_WORDS = ("ABATEMENT", "NOTICE OF VIOLATION", "ABATED BY CITY", "TICKET ISSUED", "VACANT UNIT")
 _code_cases = {}
+_rebuild_momentum = {}  # subdivision -> # single-family rebuilds since 2015 (established subdivisions only)
+
+
+def load_rebuild_momentum():
+    """Backtest finding (backtest.py): rebuilds cluster in specific old subdivisions. Count 2015+ single-family
+    builds per subdivision, skipping brand-new subdivisions (>30% of parcels new) and tiny ones (<15 parcels)."""
+    zips = ",".join(f"'{z}'" for z in NORTH_PHOENIX_ZIPS)
+    stat = json.dumps([{"statisticType": "count", "onStatisticField": "APN", "outStatisticFieldName": "n"}])
+
+    def counts(extra):
+        r = esri_query(MARICOPA_PARCELS, {"where": f"PHYSICAL_ZIP IN ({zips}) AND PUC LIKE '01%' AND SUBNAME IS NOT NULL{extra}",
+                                          "groupByFieldsForStatistics": "SUBNAME", "outStatistics": stat})
+        return {(x["attributes"]["SUBNAME"] or "").strip(): x["attributes"]["n"] for x in r.get("features") or []}
+    total, rebuilt = counts(""), counts(" AND CONST_YEAR >= '2015'")
+    for sub, n in rebuilt.items():
+        if total.get(sub, 0) >= 15 and n / total[sub] <= 0.30:
+            _rebuild_momentum[sub] = n
+    print(f"rebuild momentum: {len(_rebuild_momentum)} subdivisions with 2015+ rebuilds")
 
 
 def load_code_cases():
@@ -565,6 +583,19 @@ def score_lead(rec):
         pct = rec["farRatio"] * 100
         score += 10
         reasons.append(f"existing structure occupies only {pct:.0f}% of the lot — under-improved for the land size")
+        # Backtest (backtest.py): rebuild rate climbs with lot size (0.8% at 14-20k sf, 1.8% at
+        # 20k-1ac, 4.4% at 1ac+) and clusters in subdivisions that are already being rebuilt.
+        if rec["landSf"] >= 43560:
+            score += 10; reasons.append("1+ acre lot — redevelopment rate ~5x a 14-20k sf lot")
+        elif rec["landSf"] >= 20000:
+            score += 6; reasons.append("20k+ sf lot — redevelopment rate ~2x a 14-20k sf lot")
+        rb = rec.get("rebuildsInSub") or 0
+        if rb >= 5:
+            score += 12; reasons.append(f"{rb} homes rebuilt since 2015 in {rec.get('subdivision')} — proven teardown neighborhood")
+        elif rb >= 2:
+            score += 7; reasons.append(f"{rb} homes rebuilt since 2015 in {rec.get('subdivision')}")
+        elif rb == 1:
+            score += 3; reasons.append(f"1 home rebuilt since 2015 in {rec.get('subdivision')}")
         # Condition is NOT in public data. Proxy it: recent sale = likely renovated/flip
         # (anti-signal); old house + long hold = likely dated, deferred maintenance.
         try:
@@ -648,6 +679,8 @@ def enrich_parcel(p):
         "yearBuilt": const_year,
         "codeCases": _code_cases.get(_street_part(p.get("PHYSICAL_ADDRESS"), p.get("PHYSICAL_CITY"))),
         "saleDate": p.get("SALE_DATE"),
+        "subdivision": (p.get("SUBNAME") or "").strip(),
+        "rebuildsInSub": _rebuild_momentum.get((p.get("SUBNAME") or "").strip(), 0),
         "salePrice": _to_float(p.get("SALE_PRICE")) or None,
         "defaultDemoCost": demo_cost,
     }
@@ -659,6 +692,7 @@ def enrich_parcel(p):
 
 def main():
     load_code_cases()
+    load_rebuild_momentum()
     print("Pulling vacant land parcels in North Phoenix zip codes...")
     vacant_parcels = fetch_vacant_parcels()
     print(f"  {len(vacant_parcels)} vacant-classified parcels found")
