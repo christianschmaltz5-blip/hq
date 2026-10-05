@@ -844,20 +844,20 @@ document.getElementById('maxValue').addEventListener('input', applyFilters);
 // ── Street View render prompt (paste into an image-EDIT model with a Street View screenshot) ──
 function renderPrompt(l, kind){
   const sf = Math.round(l.landSf || 0).toLocaleString();
-  const zone = l.currentZoning ? ` (zoned ${l.currentZoning})` : '';
+  const zone = l.currentZoning ? `, zoned ${l.currentZoning}` : '';
   let build;
   if(kind === 'multi'){
     const u = Math.max(2, Math.round(l.rezoneTargetUnits || l.byRightUnits || 4));
-    build = `a small modern multifamily / townhome building with about ${u} units, 2-3 stories, individual entries, balconies, covered parking and desert landscaping`;
+    build = `a small modern multifamily building with about ${u} townhome-style units, 2-3 stories, clean rectangular massing, private entries, steel-railing balconies, covered parking and desert landscaping`;
   } else {
     const n = splitLots(l);
     build = n > 1
-      ? `${n} new single-family homes side by side, each on its own lot with a driveway, in a modern desert-contemporary style`
-      : `one new modern desert-contemporary single-family home, two-car garage, on the full lot`;
+      ? `${n} new modern single-family homes side by side, each on its own lot with a driveway`
+      : `one new modern single-family home with a two-car garage on the full lot`;
   }
   return `Use the uploaded Street View image as the base photograph. Perform an in-place photorealistic redevelopment edit instead of generating a new scene.
 
-Replace ONLY the existing structure and lot (about ${sf} sf${zone}) with ${build}. Phoenix style: stucco and stone, flat or low-pitch tile roofs, desert landscaping (gravel, agave, a saguaro or palo verde), block-wall details.
+Replace ONLY the existing structure and lot (${sf} sf${zone}) with ${build}.\n\nArchitecture: modern desert contemporary. Clean lines, flat or low-slope roofs with crisp parapets, smooth white or warm-gray stucco, charcoal or black metal accents, large floor-to-ceiling windows with dark frames, wood-look garage doors, mixed stone or board-formed concrete accents. Landscaping: gravel, agave, ocotillo, a mature palo verde, low screen walls, warm landscape lighting.
 
 Preserve exactly: camera angle, perspective, horizon, street, curb, sidewalk, power lines, neighboring houses, sky and the surrounding environment. Match the sun angle, shadows and lighting of the original photo. Photorealistic, brochure quality, like a real builder's marketing photo, not a sketch. Add realistic cars and finished landscaping.
 
