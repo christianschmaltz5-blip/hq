@@ -65,6 +65,8 @@
 .comps-section{margin-top:14px; padding-top:14px; border-top:1px solid var(--card-border);}
 .comps-title{font-size:12.5px; font-weight:700; color:var(--text); margin-bottom:8px; display:flex; align-items:center; gap:6px;}
 .comps-empty{font-size:12px; color:var(--text-faint); font-style:italic;}
+.x-btn{background:none;border:2px solid #c9a0a0;color:#aa3f3c;font-size:18px;font-weight:800;line-height:1;width:30px;height:30px;border-radius:8px;cursor:pointer;padding:0;}
+.x-btn:hover{background:#aa3f3c;color:#fff;border-color:#aa3f3c;}
 .comps-table{width:100%; border-collapse:collapse; font-size:12px; margin-bottom:10px;}
 .comps-table th{text-align:left; font-size:9.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--text-faint); padding:5px 8px; border-bottom:1px solid var(--card-border);}
 .comps-table td{padding:6px 8px; border-bottom:1px solid #f1f3f7; color:var(--text-soft);}
@@ -268,6 +270,13 @@
         </div>
         <div style="font-size:11px; color:var(--text-faint); margin:-10px 0 14px;">Price filter uses county assessed value — no real asking price is available in any public feed, so treat this as a rough size filter, not a real price range.</div>
         <div id="leads-list"></div>
+      </div>
+
+      <div class="card" id="discarded">
+        <div class="card-head"><h2>✕ Discarded Leads</h2></div>
+        <div id="discarded-summary" style="font-size:13px;color:var(--text-soft);margin-bottom:10px;"></div>
+        <datalist id="discard-reasons"><option value="House is fine / not a teardown"><option value="Owner won't sell"><option value="Equity margin is fake"><option value="Lot too small"><option value="Zoning won't work"><option value="Already redeveloped"><option value="Bad location"></datalist>
+        <div style="overflow-x:auto;"><table class="comps-table" id="discarded-table"></table></div>
       </div>
 
       <div class="card">
@@ -599,7 +608,7 @@ function leadCard(lead, idx){
         <div class="lead-addr">${newBadge} ${statusBadge} ${condBadge} <span id="notebadge-${idx}" class="reason-chip" title="You have a note on this lead" style="${loadNotes()[lead.apn] ? '' : 'display:none;'}">📝 Note</span> ${staleBadge} ${contactedBadge} ${esc(lead.address)||'(no address on file)'}</div>
         <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'}${lead.landUseClass ? ` (${lead.landUseClass === 'commercial' ? '🏢 commercial' : lead.landUseClass === 'industrial' ? '🏭 industrial' : '🏠 residential'})` : ''} · Owner: ${esc(lead.ownerName)||'—'} · ${esc(dealTypeLabel)}</div>
       </div>
-      <div class="lead-score">${isHot?'<span class="hot-flag">🔥</span>':''}<span class="score-badge ${scoreClass(lead.score)}">${lead.score}</span></div>
+      <div class="lead-score">${isHot?'<span class="hot-flag">🔥</span>':''}<span class="score-badge ${scoreClass(lead.score)}">${lead.score}</span> ${xBtn(lead.apn)}</div>
     </div>
     ${lead.lat!=null && lead.lng!=null ? `<div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">
       <a href="https://www.google.com/maps/@${lead.lat},${lead.lng},19z/data=!3m1!1e3" target="_blank" rel="noopener">🛰️ Satellite</a>
@@ -798,7 +807,7 @@ function applyFilters(){
   // Shared filters (search/value/flood/hot) apply to both the list and both
   // maps. Type only narrows the LIST -- the two maps always show their own
   // category side by side, that's the whole point of having two of them.
-  let base = D.leads || [];
+  let base = (D.leads || []).filter(l => !isDiscarded(l.apn));
   if(q) base = base.filter(l => (l.address||'').toLowerCase().includes(q) || (l.ownerName||'').toLowerCase().includes(q));
   if(document.getElementById('estateOnly').checked) base = base.filter(l => l.ownership?.isEstateOwner);
   if(hideFlood) base = base.filter(l => !l.inFloodplain);
@@ -823,6 +832,42 @@ document.getElementById('hotOnly').addEventListener('change', applyFilters);
 document.getElementById('minValue').addEventListener('input', applyFilters);
 document.getElementById('maxValue').addEventListener('input', applyFilters);
 
+// ── Discarded leads (big X) ─────────────────────────────────────────────
+// Stored per-browser like notes/tags. Hidden everywhere; review the reasons in the Discarded card.
+function loadDiscarded(){
+  try{ return JSON.parse(localStorage.getItem('discardedLeads') || '{}'); }catch(e){ return {}; }
+}
+function isDiscarded(apn){ return !!loadDiscarded()[apn]; }
+function refreshAll(){ applyFilters(); renderSkipTrace(); renderMaxOffer(); renderDiscarded(); }
+function discardLead(apn){
+  const map = loadDiscarded();
+  map[apn] = { date: new Date().toISOString().slice(0,10), reason: '' };
+  try{ localStorage.setItem('discardedLeads', JSON.stringify(map)); }catch(e){}
+  refreshAll();
+}
+function restoreLead(apn){
+  const map = loadDiscarded(); delete map[apn];
+  try{ localStorage.setItem('discardedLeads', JSON.stringify(map)); }catch(e){}
+  refreshAll();
+}
+function setDiscardReason(apn, text){
+  const map = loadDiscarded();
+  if(map[apn]){ map[apn].reason = text; try{ localStorage.setItem('discardedLeads', JSON.stringify(map)); }catch(e){} }
+}
+const xBtn = apn => `<button class="x-btn" title="Discard this lead" onclick="event.stopPropagation();discardLead('${esc(apn)}')">✕</button>`;
+function renderDiscarded(){
+  const map = loadDiscarded();
+  const rows = (D.leads || []).filter(l => map[l.apn]);
+  document.getElementById('discarded-summary').textContent = rows.length
+    ? `${rows.length} discarded — add why each one wouldn't work, so we can go over them.` : 'Nothing discarded yet. Hit the ✕ on any lead.';
+  document.getElementById('discarded-table').innerHTML = rows.length ? `<thead><tr><th>Address</th><th>Score</th><th>Owner</th><th>Discarded</th><th>Why it won't work</th><th></th></tr></thead>
+    <tbody>${rows.map(l => `<tr>
+      <td>${esc(l.address.split('  ')[0])}<div style="font-size:10.5px;color:var(--text-faint);">APN ${esc(l.apn)}</div></td>
+      <td>${l.score}</td><td>${esc(l.ownerName)||'—'}</td><td>${esc(map[l.apn].date)}</td>
+      <td><input list="discard-reasons" value="${esc(map[l.apn].reason)}" placeholder="why?" style="width:100%;min-width:200px;" onchange="setDiscardReason('${esc(l.apn)}', this.value)"></td>
+      <td><button class="mail-btn" onclick="restoreLead('${esc(l.apn)}')">Restore</button></td></tr>`).join('')}</tbody>` : '';
+}
+
 // ── Skip-Trace Priority ─────────────────────────────────────────────────
 // Only leads that clear BOTH a score threshold (motivated-seller + upside
 // signals) AND a real equity-margin threshold (comps-estimated value well
@@ -833,6 +878,7 @@ function skipTraceCandidates(){
   const minScore = parseFloat(document.getElementById('stMinScore').value) || 0;
   const minMargin = parseFloat(document.getElementById('stMinMargin').value) || 0;
   return (D.leads || [])
+    .filter(l => !isDiscarded(l.apn))
     .filter(l => loadCondition()[l.apn] !== 'good')
     .filter(l => l.score >= minScore && l.equityMarginPct != null && l.equityMarginPct >= minMargin)
     .sort((a,b) => b.score - a.score)
@@ -848,13 +894,14 @@ function renderSkipTrace(){
     table.innerHTML = `<tbody><tr><td style="padding:12px;color:var(--text-faint);">No leads clear both thresholds yet.</td></tr></tbody>`;
     return;
   }
-  table.innerHTML = `<thead><tr><th>Address</th><th>Score</th><th>Equity Margin</th><th>Owner</th><th>APN</th></tr></thead>
+  table.innerHTML = `<thead><tr><th>Address</th><th>Score</th><th>Equity Margin</th><th>Owner</th><th>APN</th><th></th></tr></thead>
     <tbody>${rows.map(l => `<tr>
       <td>${esc(l.address)}</td>
       <td>${l.score}</td>
       <td>${l.equityMarginPct>=0?'+':''}${l.equityMarginPct}%</td>
       <td>${esc(l.ownerName)||'—'}</td>
       <td>${esc(l.apn)}</td>
+      <td>${xBtn(l.apn)}</td>
     </tr>`).join('')}</tbody>`;
 }
 function copySkipTraceCsv(){
@@ -884,7 +931,7 @@ function maxOfferRows(){
   const lotPct = v('moLotPct'), profit = v('moProfitPct'), costs = v('moCostPct');
   const doSplit = document.getElementById('moSplit').checked, splitCost = parseFloat(document.getElementById('moSplitCost').value) || 0, haircut = (parseFloat(document.getElementById('moSplitHaircut').value) || 100) / 100;
   const tags = loadCondition();
-  return (D.leads || []).filter(l => l.newBuild && tags[l.apn] !== 'good').map(l => {
+  return (D.leads || []).filter(l => l.newBuild && tags[l.apn] !== 'good' && !isDiscarded(l.apn)).map(l => {
     const potential = splitLots(l), n = doSplit ? potential : 1;
     const lotSale = l.newBuild.arv * lotPct * (n > 1 ? n * haircut : 1);  // smaller lots sell for less each
     const demo = l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0;
@@ -903,7 +950,7 @@ function renderMaxOffer(){
     `${all.length} leads have a positive max offer under these assumptions — showing the top ${rows.length}.`;
   const table = document.getElementById('mo-table');
   if(!rows.length){ table.innerHTML = '<tbody><tr><td style="padding:12px;color:var(--text-faint);">No new-build values yet — they fill in on the next daily pull.</td></tr></tbody>'; return; }
-  table.innerHTML = `<thead><tr><th>Address</th><th>Type</th><th>Lot</th><th>Split?</th><th>New-build value</th><th>Builder pays (total)</th><th>MAX OFFER</th><th>Open at</th><th>Assessed</th><th>Cushion</th><th>Score</th></tr></thead>
+  table.innerHTML = `<thead><tr><th>Address</th><th>Type</th><th>Lot</th><th>Split?</th><th>New-build value</th><th>Builder pays (total)</th><th>MAX OFFER</th><th>Open at</th><th>Assessed</th><th>Cushion</th><th>Score</th><th></th></tr></thead>
     <tbody>${rows.map(r => { const l = r.l, n = l.newBuild;
       const ex = n.examples.map(e => `${e.address} ${money(e.price)} (${e.sf.toLocaleString()} sf, ${e.sold.slice(0,7)})`).join(' · ');
       return `<tr>
@@ -917,11 +964,12 @@ function renderMaxOffer(){
         <td>${money(r.max * open)}</td>
         <td>${l.assessedValue ? money(l.assessedValue) : '—'}</td>
         <td>${r.cushion == null ? '—' : (r.cushion >= 0 ? '+' : '−') + money(Math.abs(r.cushion))}</td>
-        <td>${l.score}</td></tr>`; }).join('')}</tbody>`;
+        <td>${l.score}</td><td>${xBtn(l.apn)}</td></tr>`; }).join('')}</tbody>`;
 }
 ['moLotPct','moProfitPct','moCostPct','moOpenPct','moSplit','moSplitCost','moSplitHaircut','moMinLot','moSort'].forEach(id =>
   document.getElementById(id).addEventListener('input', renderMaxOffer));
 renderMaxOffer();
+renderDiscarded();
 
 // ── History ──────────────────────────────────────────────────────────────
 document.getElementById('hist-list').innerHTML = (D.history||[]).length
