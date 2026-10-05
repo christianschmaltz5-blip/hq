@@ -165,6 +165,11 @@
             <input class="filter-input" id="moCostPct" type="number" value="5" style="width:70px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Open offer at (% of max)
             <input class="filter-input" id="moOpenPct" type="number" value="75" style="width:70px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);align-self:center;"><input type="checkbox" id="moSplit"> Count lot splits</label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Split cost per extra lot ($)
+            <input class="filter-input" id="moSplitCost" type="number" value="25000" style="width:90px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Min lot size if zoning unknown (sf)
+            <input class="filter-input" id="moMinLot" type="number" value="7000" style="width:80px;"></label>
           <select class="filter-input" id="moSort" style="width:230px;">
             <option value="cushion">Sort: biggest cushion over assessed</option>
             <option value="max">Sort: highest max offer</option>
@@ -178,7 +183,7 @@
           The 25% lot share is a rule of thumb for infill lots — confirm with a real builder; it moves every number here.
           Home value is a median of recent newly built single-family sales, not an appraisal; luxury areas (e.g. 85028) run far higher.
           Assessed value lags the market, so "cushion" shows room, not a guaranteed discount. Assumes the lot is zoned and sized for a home;
-          it does not yet account for splitting a big lot into two.
+          lot splits are a rough ceiling (85% usable, minimum lot size from R1-x zoning, 6 lots max) and need city approval — check the zoning and lot width before counting on one.
         </div>
       </div>
 
@@ -865,15 +870,24 @@ function copySkipTraceCsv(){
 renderSkipTrace();
 
 // ── Max Offer (sell the lot to a builder) ────────────────────────────────
+// How many home lots a parcel could split into: 85% usable (setbacks/access), min lot size from R1-x zoning
+// (R1-8 = 8,000 sf ...) else the fallback input. Capped at 6. Needs city lot-split approval — a rough ceiling.
+function splitLots(l){
+  const m = /^R1-(\d+)/i.exec(l.currentZoning || '');
+  const minLot = m ? parseInt(m[1],10) * 1000 : (parseFloat(document.getElementById('moMinLot').value) || 7000);
+  return Math.max(1, Math.min(6, Math.floor((l.landSf || 0) * 0.85 / minLot)));
+}
 function maxOfferRows(){
   const v = id => (parseFloat(document.getElementById(id).value) || 0) / 100;
   const lotPct = v('moLotPct'), profit = v('moProfitPct'), costs = v('moCostPct');
+  const doSplit = document.getElementById('moSplit').checked, splitCost = parseFloat(document.getElementById('moSplitCost').value) || 0;
   const tags = loadCondition();
   return (D.leads || []).filter(l => l.newBuild && tags[l.apn] !== 'good').map(l => {
-    const lotSale = l.newBuild.arv * lotPct;
+    const potential = splitLots(l), n = doSplit ? potential : 1;
+    const lotSale = l.newBuild.arv * lotPct * n;
     const demo = l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0;
-    const max = lotSale * (1 - profit - costs) - demo;
-    return { l, lotSale, demo, max, cushion: l.assessedValue ? max - l.assessedValue : null };
+    const max = lotSale * (1 - profit - costs) - demo - splitCost * (n - 1);
+    return { l, lotSale, demo, max, n, potential, cushion: l.assessedValue ? max - l.assessedValue : null };
   }).filter(r => r.max > 0);
 }
 function renderMaxOffer(){
@@ -887,13 +901,14 @@ function renderMaxOffer(){
     `${all.length} leads have a positive max offer under these assumptions — showing the top ${rows.length}.`;
   const table = document.getElementById('mo-table');
   if(!rows.length){ table.innerHTML = '<tbody><tr><td style="padding:12px;color:var(--text-faint);">No new-build values yet — they fill in on the next daily pull.</td></tr></tbody>'; return; }
-  table.innerHTML = `<thead><tr><th>Address</th><th>Type</th><th>Lot</th><th>New-build value</th><th>Builder pays</th><th>MAX OFFER</th><th>Open at</th><th>Assessed</th><th>Cushion</th><th>Score</th></tr></thead>
+  table.innerHTML = `<thead><tr><th>Address</th><th>Type</th><th>Lot</th><th>Split?</th><th>New-build value</th><th>Builder pays (total)</th><th>MAX OFFER</th><th>Open at</th><th>Assessed</th><th>Cushion</th><th>Score</th></tr></thead>
     <tbody>${rows.map(r => { const l = r.l, n = l.newBuild;
       const ex = n.examples.map(e => `${e.address} ${money(e.price)} (${e.sf.toLocaleString()} sf, ${e.sold.slice(0,7)})`).join(' · ');
       return `<tr>
         <td>${esc(l.address.split('  ')[0])}<div style="font-size:10.5px;color:var(--text-faint);max-width:340px;">${esc(l.ownerName)||''}</div></td>
         <td>${l.parcelStatus === 'improved' ? 'Underused' : 'Vacant'}</td>
         <td>${l.landSf ? Math.round(l.landSf).toLocaleString() + ' sf' : '—'}</td>
+        <td>${r.potential > 1 ? (r.n > 1 ? `<b>${r.n} lots</b>` : `up to ${r.potential}`) : '—'}</td>
         <td title="${esc(ex)}">${money(n.arv)}<div style="font-size:10.5px;color:var(--text-faint);">${n.n} sales · ${n.radiusMi}mi</div></td>
         <td>${money(r.lotSale)}</td>
         <td><b style="color:#2f6b47;">${money(r.max)}</b></td>
@@ -902,7 +917,7 @@ function renderMaxOffer(){
         <td>${r.cushion == null ? '—' : (r.cushion >= 0 ? '+' : '−') + money(Math.abs(r.cushion))}</td>
         <td>${l.score}</td></tr>`; }).join('')}</tbody>`;
 }
-['moLotPct','moProfitPct','moCostPct','moOpenPct','moSort'].forEach(id =>
+['moLotPct','moProfitPct','moCostPct','moOpenPct','moSplit','moSplitCost','moMinLot','moSort'].forEach(id =>
   document.getElementById(id).addEventListener('input', renderMaxOffer));
 renderMaxOffer();
 
