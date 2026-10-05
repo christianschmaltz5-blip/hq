@@ -168,8 +168,10 @@
           <label style="font-size:12.5px;color:var(--text-soft);align-self:center;"><input type="checkbox" id="moSplit"> Count lot splits</label>
           <label style="font-size:12.5px;color:var(--text-soft);">Split cost per extra lot ($)
             <input class="filter-input" id="moSplitCost" type="number" value="25000" style="width:90px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Split lots sell at (% of full-lot value)
+            <input class="filter-input" id="moSplitHaircut" type="number" value="80" style="width:70px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Min lot size if zoning unknown (sf)
-            <input class="filter-input" id="moMinLot" type="number" value="7000" style="width:80px;"></label>
+            <input class="filter-input" id="moMinLot" type="number" value="10000" style="width:80px;"></label>
           <select class="filter-input" id="moSort" style="width:230px;">
             <option value="cushion">Sort: biggest cushion over assessed</option>
             <option value="max">Sort: highest max offer</option>
@@ -183,7 +185,7 @@
           The 25% lot share is a rule of thumb for infill lots — confirm with a real builder; it moves every number here.
           Home value is a median of recent newly built single-family sales, not an appraisal; luxury areas (e.g. 85028) run far higher.
           Assessed value lags the market, so "cushion" shows room, not a guaranteed discount. Assumes the lot is zoned and sized for a home;
-          lot splits are a rough ceiling (85% usable, minimum lot size from R1-x zoning, 6 lots max) and need city approval — check the zoning and lot width before counting on one.
+          lot splits are a rough ceiling (85% usable, minimum lot size from R1-x zoning, 4 lots max, each split lot valued at the haircut %) and need city approval — check the zoning and lot width before counting on one.
         </div>
       </div>
 
@@ -874,17 +876,17 @@ renderSkipTrace();
 // (R1-8 = 8,000 sf ...) else the fallback input. Capped at 6. Needs city lot-split approval — a rough ceiling.
 function splitLots(l){
   const m = /^R1-(\d+)/i.exec(l.currentZoning || '');
-  const minLot = m ? parseInt(m[1],10) * 1000 : (parseFloat(document.getElementById('moMinLot').value) || 7000);
-  return Math.max(1, Math.min(6, Math.floor((l.landSf || 0) * 0.85 / minLot)));
+  const minLot = m ? parseInt(m[1],10) * 1000 : (parseFloat(document.getElementById('moMinLot').value) || 10000);
+  return Math.max(1, Math.min(4, Math.floor((l.landSf || 0) * 0.85 / minLot)));
 }
 function maxOfferRows(){
   const v = id => (parseFloat(document.getElementById(id).value) || 0) / 100;
   const lotPct = v('moLotPct'), profit = v('moProfitPct'), costs = v('moCostPct');
-  const doSplit = document.getElementById('moSplit').checked, splitCost = parseFloat(document.getElementById('moSplitCost').value) || 0;
+  const doSplit = document.getElementById('moSplit').checked, splitCost = parseFloat(document.getElementById('moSplitCost').value) || 0, haircut = (parseFloat(document.getElementById('moSplitHaircut').value) || 100) / 100;
   const tags = loadCondition();
   return (D.leads || []).filter(l => l.newBuild && tags[l.apn] !== 'good').map(l => {
     const potential = splitLots(l), n = doSplit ? potential : 1;
-    const lotSale = l.newBuild.arv * lotPct * n;
+    const lotSale = l.newBuild.arv * lotPct * (n > 1 ? n * haircut : 1);  // smaller lots sell for less each
     const demo = l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0;
     const max = lotSale * (1 - profit - costs) - demo - splitCost * (n - 1);
     return { l, lotSale, demo, max, n, potential, cushion: l.assessedValue ? max - l.assessedValue : null };
@@ -917,7 +919,7 @@ function renderMaxOffer(){
         <td>${r.cushion == null ? '—' : (r.cushion >= 0 ? '+' : '−') + money(Math.abs(r.cushion))}</td>
         <td>${l.score}</td></tr>`; }).join('')}</tbody>`;
 }
-['moLotPct','moProfitPct','moCostPct','moOpenPct','moSplit','moSplitCost','moMinLot','moSort'].forEach(id =>
+['moLotPct','moProfitPct','moCostPct','moOpenPct','moSplit','moSplitCost','moSplitHaircut','moMinLot','moSort'].forEach(id =>
   document.getElementById(id).addEventListener('input', renderMaxOffer));
 renderMaxOffer();
 
