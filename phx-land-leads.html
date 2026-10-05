@@ -318,7 +318,7 @@ const D = window.PHX_LAND_LEADS || {leads:[], history:[], zipCodes:[]};
 document.getElementById('topbarDate').textContent = new Date().toLocaleDateString('en-US',{weekday:'long', year:'numeric', month:'long', day:'numeric'});
 
 function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
-function money(n){ return n==null||isNaN(n) ? '—' : '$'+Math.round(n).toLocaleString(); }
+function money(n){ return n==null||isNaN(n) ? '—' : (n<0?'-':'')+'$'+Math.abs(Math.round(n)).toLocaleString(); }
 function pct1(n){ return n==null||isNaN(n) ? '—' : (n*100).toFixed(1)+'%'; }
 function num1(n){ return n==null||isNaN(n) ? '—' : Number(n).toLocaleString(undefined,{maximumFractionDigits:1}); }
 
@@ -333,45 +333,6 @@ document.getElementById('meta-row').innerHTML = `
   <div class="meta-pill"><b>${(D.zipCodes||[]).length}</b>&nbsp;zip codes covered</div>`;
 
 // ── Ground-up development underwriting calculator (per lead) ──────────────
-function calcGroundUp(inp){
-  const r = {};
-  r.landCost = inp.askingPrice || 0;
-  r.demoCost = inp.demoCost || 0;
-  r.hardCost = inp.units * inp.hardCostPerUnit;
-  r.softCost = r.hardCost * inp.softCostPct;
-  r.totalDevCost = r.landCost + r.demoCost + r.hardCost + r.softCost;
-  r.costPerUnit = inp.units ? r.totalDevCost / inp.units : null;
-
-  r.gpi = inp.units * inp.rentPerUnit * 12;
-  r.vacancyLoss = r.gpi * inp.vacancyPct;
-  r.egi = r.gpi - r.vacancyLoss;
-  r.opex = r.egi * inp.opexPct;
-  r.noi = r.egi - r.opex;
-
-  r.yieldOnCost = r.totalDevCost ? r.noi / r.totalDevCost : null;
-  r.stabilizedValue = inp.exitCapRate ? r.noi / inp.exitCapRate : null;
-  r.developmentSpreadBps = (r.yieldOnCost != null) ? (r.yieldOnCost - inp.exitCapRate) * 10000 : null;
-  r.developerProfit = (r.stabilizedValue != null) ? r.stabilizedValue - r.totalDevCost : null;
-  r.profitMargin = r.developerProfit != null && r.totalDevCost ? r.developerProfit / r.totalDevCost : null;
-
-  r.loanAmount = r.totalDevCost * inp.ltc;
-  r.equityRequired = r.totalDevCost - r.loanAmount;
-  r.annualDebtService = r.loanAmount * inp.loanRate;
-  r.annualCashFlow = r.noi - r.annualDebtService;
-
-  r.netSaleProceeds = (r.stabilizedValue||0) * (1 - inp.sellingCostPct) - r.loanAmount;
-  r.cumulativeCashFlow = r.annualCashFlow * inp.holdYears;
-  r.equityMultiple = r.equityRequired ? (r.netSaleProceeds + r.cumulativeCashFlow) / r.equityRequired : null;
-  r.approxIRR = (r.equityMultiple != null && inp.holdYears) ? (Math.pow(Math.max(r.equityMultiple,0.001), 1/inp.holdYears) - 1) : null;
-  return r;
-}
-
-const CALC_DEFAULTS = {
-  hardCostPerUnit: 165000, softCostPct: 0.20, rentPerUnit: 1450,
-  vacancyPct: 0.06, opexPct: 0.38, exitCapRate: 0.0565,
-  ltc: 0.65, loanRate: 0.0675, holdYears: 3, sellingCostPct: 0.06,
-};
-
 // Subdivision/lot-sale model — for rezone targets landing on single-family
 // zoning (R1-x/RE-x), which is a plat-and-sell-lots play, not a rental
 // building. costPerLot default ($65k) is a Phoenix-metro/Maricopa general-
@@ -401,35 +362,176 @@ function calcSubdivision(inp){
 
 function calcRow(label, val, cls){ return `<div class="calc-kpi"><div class="calc-kpi-val ${cls||''}">${val}</div><div class="calc-kpi-label">${esc(label)}</div></div>`; }
 
-const RENTAL_FIELDS = [
-  ['askingPrice','Asking Price ($)'], ['demoCost','Demolition Cost ($)'], ['units','Est. Units'],
-  ['hardCostPerUnit','Hard Cost/Unit ($)'], ['softCostPct','Soft Cost %'],
-  ['rentPerUnit','Rent/Unit/mo ($)'], ['vacancyPct','Vacancy %'],
-  ['opexPct','OpEx %'], ['exitCapRate','Exit Cap %'],
-  ['ltc','LTC %'], ['loanRate','Loan Rate %'],
-  ['holdYears','Hold (yrs)'], ['sellingCostPct','Selling Cost %'],
-];
 const SUBDIVISION_FIELDS = [
   ['askingPrice','Asking Price ($)'], ['demoCost','Demolition Cost ($)'], ['lots','Est. Lot Count'],
   ['costPerLot','Dev Cost/Lot ($)'], ['lotSalePrice','Lot Sale Price ($)'],
   ['sellingCostPct','Selling Cost %'], ['holdYears','Hold (yrs)'],
 ];
 
-function calcFieldsHtml(idx, state, dealType){
-  const fields = dealType === 'subdivision' ? SUBDIVISION_FIELDS : RENTAL_FIELDS;
-  return fields.map(([k,label])=>{
-    const isPct = k.toLowerCase().includes('pct') || k==='ltc' || k==='loanRate' || k==='exitCapRate';
-    const val = state[k];
-    const display = val==null ? '' : (isPct ? Math.round(val*10000)/100 : val);
-    return `<div class="calc-field"><label>${esc(label)}</label><input type="number" step="any" data-calc-key="${k}" data-calc-pct="${isPct}" data-lead="${idx}" value="${display}"></div>`;
-  }).join('');
+// ── Build-and-hold pro forma (replaces the old rental calculator) ───────────
+// kind: usd | pct | num ; auto = blank means "computed" (shown as placeholder "auto")
+const HOLD_SECTIONS = [
+  ['Property', [['acres','Acres','num'],['lotSf','Lot Square Footage','num'],['buildingSf','Building Square Footage (to build)','num'],['units','Units','num']]],
+  ['Revenue', [['rent','Rent / unit / mo ($) — long-term','usd'],['vacancyPct','Vacancy %','pct'],['adr','Nightly rate ($) — short-term','usd'],['occPct','Occupancy % — short-term','pct'],['avgStay','Avg stay (nights) — short-term','num']]],
+  ['Operating Expenses — Utilities (monthly $)', [['water','Water','usd'],['gas','Gas','usd'],['electric','Electric','usd'],['internet','Internet','usd']]],
+  ['Short-Term Rental Specific', [['cleaningFee','Cleaning (fee x turnovers/mo)','usd'],['repairs','Repairs & Maintenance (monthly $)','usd'],['supplies','Supplies (monthly $)','usd'],['software','Software (monthly $)','usd']]],
+  ['Taxes & Insurance', [['salesTaxPct','Sales Tax (% of revenue)','pct'],['occTaxPct','Occupancy Tax (% of revenue)','pct'],['assessedValue','Assessed value ($) — auto = 10% of total cost','usd','auto'],['millRate','Mill rate ($ per $100 assessed)','num'],['insurance','Insurance (annual quote $)','usd'],['other1','Other Expense 1 (annual $)','usd'],['other2','Other Expense 2 (annual $)','usd'],['other3','Other Expense 3 (annual $)','usd']]],
+  ['Land', [['askingPrice','Purchase Price','usd'],['landExp1','Land Acquisition Expense 1','usd'],['demoCost','Demolition (teardown lots)','usd']]],
+  ['Hard Costs', [['hard1','Contract 1 (construction)','usd'],['hard2','Contract 2 (landscaping/utility)','usd']]],
+  ['Soft Costs', [['permit','Permit/Inspection Fee 1','usd'],['design','Design Fee 1','usd'],['survey','Survey','usd'],['ffe','FF&E ($10/sqft) — auto','usd','auto'],['misc','Miscellaneous','usd'],['finConstr','Financing/Closing Cost (construction)','usd'],['finPerm','Financing/Closing Cost (permanent)','usd'],['otherCost1','Other Cost 1','usd']]],
+  ['Contingency, Reserve & Fee', [['contPct','Contingency %','pct'],['interestReserve','Interest Reserve ($) — auto','usd','auto'],['devFeePct','Developer Fee %','pct']]],
+  ['Construction Loan', [['ltcPct','Construction Loan-to-Cost %','pct'],['constrRate','Construction Interest Rate','pct'],['constrTerm','Construction Term (months)','num']]],
+  ['Permanent Loan', [['appraisedValue','Appraised Value (post-construction) — auto = NOI ÷ cap','usd','auto'],['ltvPct','Permanent Loan-to-Value % (max)','pct'],['permRate','Permanent Interest Rate','pct'],['permTerm','Permanent Term (months)','num']]],
+  ['Exit & Growth', [['holdYears','Hold Period (years, 1-5)','num'],['exitCap','Exit Cap Rate','pct'],['sellPct','Selling Closing Cost %','pct'],['rentGrowth','Rent Growth % / yr','pct'],['expGrowth','Expense Growth % / yr','pct']]],
+];
+const LOTS_SECTIONS = [
+  ['Property', [['acres','Acres','num'],['lotSf','Lot Square Footage','num']]],
+  ['Sell-the-lots model', SUBDIVISION_FIELDS.map(([k,l]) => [k, l, k==='sellingCostPct' ? 'pct' : (k==='lots'||k==='holdYears' ? 'num' : 'usd')])],
+];
+
+function holdDefaults(lead, units){
+  const sf = Math.round(units * 900), hard1 = Math.round(units * 165000);
+  return {
+    acres: lead.landAcres || 0, lotSf: lead.landSf || Math.round((lead.landAcres||0)*43560), buildingSf: sf, units,
+    rent: 1450, vacancyPct: 0.06, adr: 0, occPct: 0, avgStay: 3, strMode: false,
+    water: units*50, gas: 0, electric: units*40, internet: 0,
+    cleaningFee: 0, repairs: units*75, supplies: 0, software: 0,
+    salesTaxPct: 0, occTaxPct: 0, assessedValue: null, millRate: 11.5, insurance: units*700, other1: 0, other2: 0, other3: 0,
+    askingPrice: 0, landExp1: 0,
+    hard1, hard2: Math.round(units*12000),
+    permit: Math.round(hard1*0.02), design: Math.round(hard1*0.04), survey: 6000, ffe: null, misc: 10000, finConstr: Math.round(hard1*0.015), finPerm: Math.round(hard1*0.01), otherCost1: 0,
+    contPct: 0.05, interestReserve: null, devFeePct: 0.03,
+    ltcPct: 0.65, constrRate: 0.075, constrTerm: 18,
+    appraisedValue: null, ltvPct: 0.70, permRate: 0.0675, permTerm: 360,
+    holdYears: 3, exitCap: 0.0565, sellPct: 0.06, rentGrowth: 0.03, expGrowth: 0.03,
+  };
 }
 
-function renderCalcResults(idx, state, dealType){
+function pmt(rate, n, loan){ if(!loan || !n) return 0; if(!rate) return loan / n; const f = Math.pow(1 + rate, n); return loan * rate * f / (f - 1); }
+function loanBal(rate, n, loan, paid){ if(!rate) return Math.max(0, loan - loan / n * paid); const f = Math.pow(1 + rate, paid); return loan * f - pmt(rate, n, loan) * (f - 1) / rate; }
+function irrOf(cfs){
+  const npv = r => cfs.reduce((a, c, t) => a + c / Math.pow(1 + r, t), 0);
+  let lo = -0.9, hi = 5;
+  if(npv(lo) * npv(hi) > 0) return null;
+  for(let i = 0; i < 80; i++){ const m = (lo + hi) / 2; if(npv(lo) * npv(m) <= 0) hi = m; else lo = m; }
+  return (lo + hi) / 2;
+}
+
+function calcHold(s){
+  const r = {}, n = s.units || 0, hold = Math.min(5, Math.max(1, Math.round(s.holdYears || 1)));
+  r.land = (s.askingPrice||0) + (s.landExp1||0) + (s.demoCost||0);
+  r.hard = (s.hard1||0) + (s.hard2||0);
+  r.ffe = s.ffe != null ? s.ffe : 10 * (s.buildingSf || 0);
+  r.softBase = (s.permit||0) + (s.design||0) + (s.survey||0) + r.ffe + (s.misc||0) + (s.otherCost1||0);
+  r.soft = r.softBase + (s.finConstr||0) + (s.finPerm||0);
+  r.contingency = (s.contPct||0) * (r.hard + r.softBase);
+  r.direct = r.hard + r.softBase + r.contingency;               // bank-financeable: hard + soft (ex-financing) + contingency
+  r.constrLoan = (s.ltcPct||0) * r.direct;
+  r.interestReserve = s.interestReserve != null ? s.interestReserve : r.constrLoan * (s.constrRate||0) * ((s.constrTerm||0) / 12) * 0.5;
+  r.devFee = (s.devFeePct||0) * (r.hard + r.softBase);
+  r.total = r.land + r.hard + r.soft + r.contingency + r.interestReserve + r.devFee;
+  r.equity = r.total - r.constrLoan;
+  // revenue + opex, year 1
+  const str = !!s.strMode;
+  const rev1 = str ? n * (s.adr||0) * 365 * (s.occPct||0) : n * (s.rent||0) * 12 * (1 - (s.vacancyPct||0));
+  const turns = str ? n * ((s.occPct||0) * 30 / Math.max(1, s.avgStay||1)) : 0;
+  const fixed1 = 12 * ((s.water||0)+(s.gas||0)+(s.electric||0)+(s.internet||0)+(s.repairs||0)+(s.supplies||0)+(s.software||0))
+               + 12 * (s.cleaningFee||0) * turns + (s.insurance||0) + (s.other1||0)+(s.other2||0)+(s.other3||0);
+  r.assessed = s.assessedValue != null ? s.assessedValue : 0.10 * r.total;
+  r.propTax1 = r.assessed / 100 * (s.millRate||0);
+  r.years = [];
+  for(let t = 1; t <= hold + 1; t++){
+    const rev = rev1 * Math.pow(1 + (s.rentGrowth||0), t - 1), g = Math.pow(1 + (s.expGrowth||0), t - 1);
+    const opex = rev * ((s.salesTaxPct||0) + (s.occTaxPct||0)) + (fixed1 + r.propTax1) * g;
+    r.years.push({ t, rev, opex, noi: rev - opex });
+  }
+  r.noi1 = r.years[0].noi;
+  r.appraised = s.appraisedValue != null ? s.appraisedValue : (s.exitCap ? r.noi1 / s.exitCap : 0);
+  r.permLoan = (s.ltvPct||0) * r.appraised;
+  r.permMonthly = pmt((s.permRate||0)/12, s.permTerm||0, r.permLoan);
+  r.ds = r.permMonthly * 12;
+  r.yieldOnCost = r.total ? r.noi1 / r.total : null;
+  r.spreadBps = r.yieldOnCost != null ? (r.yieldOnCost - (s.exitCap||0)) * 10000 : null;
+  r.profit = r.appraised - r.total;
+  r.profitMargin = r.total ? r.profit / r.total : null;
+  r.dscr = r.ds ? r.noi1 / r.ds : null;
+  r.exitValue = s.exitCap ? r.years[hold].noi / s.exitCap : 0;
+  r.balance = loanBal((s.permRate||0)/12, s.permTerm||0, r.permLoan, hold * 12);
+  const cfs = [-r.equity];
+  for(let t = 1; t <= hold; t++){
+    let cf = r.years[t-1].noi - r.ds;
+    if(t === 1) cf += r.permLoan - r.constrLoan;                 // refinance construction loan into the permanent loan
+    if(t === hold) cf += r.exitValue * (1 - (s.sellPct||0)) - r.balance;
+    cfs.push(cf);
+  }
+  r.cfs = cfs; r.hold = hold;
+  r.equityMultiple = r.equity > 0 ? cfs.slice(1).reduce((a, c) => a + c, 0) / r.equity : null;
+  r.irr = r.equity > 0 ? irrOf(cfs) : null;
+  return r;
+}
+
+function sectionsFor(state){ return state.mode === 'lots' ? LOTS_SECTIONS : HOLD_SECTIONS; }
+
+function calcFieldsHtml(idx, state){
+  const modeSel = `<div class="calc-field" style="grid-column:1/-1;"><label>Model</label>
+    <select data-calc-mode="${idx}" style="padding:7px 10px;font-size:13px;border:1px solid var(--card-border);border-radius:7px;">
+      <option value="hold" ${state.mode==='hold'?'selected':''}>Build &amp; hold (full pro forma)</option>
+      <option value="lots" ${state.mode==='lots'?'selected':''}>Subdivide &amp; sell lots</option></select></div>`;
+  const strSel = state.mode === 'hold' ? `<div class="calc-field"><label>Rental type</label>
+    <select data-calc-str="${idx}" style="padding:7px 10px;font-size:13px;border:1px solid var(--card-border);border-radius:7px;">
+      <option value="0" ${!state.strMode?'selected':''}>Long-term rental</option>
+      <option value="1" ${state.strMode?'selected':''}>Short-term rental</option></select></div>` : '';
+  const body = sectionsFor(state).map(([title, fields]) => {
+    const head = `<div style="grid-column:1/-1;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);margin-top:10px;">${esc(title)}</div>`;
+    const extra = title === 'Revenue' ? strSel : '';
+    return head + extra + fields.map(([k, label, kind, auto]) => {
+      const val = state[k];
+      const display = val == null ? '' : (kind === 'pct' ? Math.round(val * 10000) / 100 : (kind === 'num' ? Math.round(val * 100) / 100 : Math.round(val)));
+      return `<div class="calc-field"><label>${esc(label)}</label><input type="number" step="any" data-calc-key="${k}" data-calc-kind="${kind}" data-calc-auto="${auto ? 1 : 0}" data-lead="${idx}" value="${display}" ${auto ? 'placeholder="auto"' : ''}></div>`;
+    }).join('');
+  }).join('');
+  return modeSel + body;
+}
+
+function renderHoldResults(idx, state){
+  const r = calcHold(state), x = v => v == null ? '—' : money(v);
+  document.getElementById(`calc-kpis-${idx}`).innerHTML = `
+    ${calcRow('Total Development Budget', money(r.total))}
+    ${calcRow('Equity Required (construction)', money(r.equity))}
+    ${calcRow('Stabilized NOI (yr 1)', money(r.noi1), r.noi1>0?'pos':'neg')}
+    ${calcRow('Yield on Cost', pct1(r.yieldOnCost))}
+    ${calcRow('Dev Spread vs Exit Cap', num1(r.spreadBps)+' bps', r.spreadBps>0?'pos':'neg')}
+    ${calcRow('Appraised Value', money(r.appraised))}
+    ${calcRow('Developer Profit', money(r.profit), r.profit>0?'pos':'neg')}
+    ${calcRow('Profit Margin', pct1(r.profitMargin), r.profitMargin>0?'pos':'neg')}
+    ${calcRow('Permanent Loan', money(r.permLoan))}
+    ${calcRow('Perm Monthly Payment', money(r.permMonthly))}
+    ${calcRow('DSCR (yr 1)', r.dscr==null?'—':r.dscr.toFixed(2)+'x', r.dscr>=1.25?'pos':'neg')}
+    ${calcRow('Equity Multiple', r.equityMultiple==null?'—':r.equityMultiple.toFixed(2)+'x')}
+    ${calcRow('IRR', pct1(r.irr))}
+  `;
+  const row = (a, b) => `<tr><td>${a}</td><td style="text-align:right;">${b}</td></tr>`;
+  document.getElementById(`calc-detail-${idx}`).innerHTML = `
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:14px;">
+      <table class="comps-table"><thead><tr><th colspan="2">Development budget</th></tr></thead><tbody>
+        ${row('Land Total', money(r.land))}${row('Hard Cost Total', money(r.hard))}${row('Soft Cost Total', money(r.soft))}
+        ${row('Contingency $', money(r.contingency))}${row('Interest Reserve', money(r.interestReserve))}${row('Developer Fee $', money(r.devFee))}
+        ${row('<b>Total Development Budget</b>', '<b>'+money(r.total)+'</b>')}${row('Direct Costs (bank-financeable)', money(r.direct))}
+        ${row('Construction Loan Amount', money(r.constrLoan))}${row('Equity Required (construction)', money(r.equity))}</tbody></table>
+      <table class="comps-table"><thead><tr><th>Year</th><th style="text-align:right;">Revenue</th><th style="text-align:right;">Opex</th><th style="text-align:right;">NOI</th><th style="text-align:right;">Cash flow</th></tr></thead><tbody>
+        <tr><td>0</td><td></td><td></td><td></td><td style="text-align:right;">${money(r.cfs[0])}</td></tr>
+        ${r.cfs.slice(1).map((cf, i) => `<tr><td>${i+1}</td><td style="text-align:right;">${money(r.years[i].rev)}</td><td style="text-align:right;">${money(r.years[i].opex)}</td><td style="text-align:right;">${money(r.years[i].noi)}</td><td style="text-align:right;">${money(cf)}</td></tr>`).join('')}
+        </tbody></table>
+    </div>
+    <div style="font-size:11px;color:var(--text-faint);margin-top:6px;">Year 1 cash flow includes the refinance into the permanent loan; last year includes sale proceeds after the loan balance. Exit value = next year's NOI ÷ exit cap. Simplified: construction and lease-up time are not modeled. Defaults are placeholders, not bids.</div>`;
+}
+
+function renderCalcResults(idx, state){
   const warnEl = document.getElementById(`calc-kpis-warn-${idx}`);
   if(warnEl) warnEl.innerHTML = state.askingPrice ? '' :
-    `<div class="dm-note" style="margin-bottom:12px;">⚠️ Asking price is $0 — every profit/return figure below assumes free land until you enter one.</div>`;
-  if(dealType === 'subdivision'){
+    `<div class="dm-note" style="margin-bottom:12px;">⚠️ Purchase price is $0 — every profit/return figure below assumes free land until you enter one.</div>`;
+  document.getElementById(`calc-detail-${idx}`).innerHTML = '';
+  if(state.mode === 'lots'){
     const r = calcSubdivision(state);
     document.getElementById(`calc-kpis-${idx}`).innerHTML = `
       ${calcRow('Total Dev Cost', money(r.totalDevCost))}
@@ -444,54 +546,49 @@ function renderCalcResults(idx, state, dealType){
     `;
     return;
   }
-  const r = calcGroundUp(state);
-  document.getElementById(`calc-kpis-${idx}`).innerHTML = `
-    ${calcRow('Total Dev Cost', money(r.totalDevCost))}
-    ${calcRow('Demo Cost', money(r.demoCost))}
-    ${calcRow('Cost/Unit', money(r.costPerUnit))}
-    ${calcRow('Stabilized NOI', money(r.noi))}
-    ${calcRow('Yield on Cost', pct1(r.yieldOnCost))}
-    ${calcRow('Dev Spread', num1(r.developmentSpreadBps)+' bps')}
-    ${calcRow('Stabilized Value', money(r.stabilizedValue))}
-    ${calcRow('Developer Profit', money(r.developerProfit), r.developerProfit>0?'pos':'neg')}
-    ${calcRow('Profit Margin', pct1(r.profitMargin), r.profitMargin>0?'pos':'neg')}
-    ${calcRow('Equity Required', money(r.equityRequired))}
-    ${calcRow('Equity Multiple', r.equityMultiple==null?'—':r.equityMultiple.toFixed(2)+'x')}
-    ${calcRow('Approx. IRR', pct1(r.approxIRR))}
-  `;
+  renderHoldResults(idx, state);
 }
 
 const calcStates = {};
 
 function initCalc(idx, lead){
   const dealType = lead.dealType || 'rental';
-  const units = lead.rezoneTargetUnits || lead.byRightUnits || Math.max(1, Math.round(lead.landAcres * 8));
+  const units = Math.max(1, Math.round(lead.rezoneTargetUnits || lead.byRightUnits || (lead.landAcres||0) * 8));
   const demoCost = lead.parcelStatus === 'improved' ? (lead.defaultDemoCost || 0) : 0;
-  if(dealType === 'subdivision'){
-    calcStates[idx] = Object.assign({askingPrice: 0, demoCost, lots: Math.max(1, Math.round(units))}, SUBDIVISION_DEFAULTS,
-      lead.referenceCostPerLotAZ ? {costPerLot: lead.referenceCostPerLotAZ} : {});
-  } else {
-    calcStates[idx] = Object.assign({askingPrice: 0, demoCost, units}, CALC_DEFAULTS);
-  }
+  calcStates[idx] = Object.assign({}, SUBDIVISION_DEFAULTS, holdDefaults(lead, units),
+    { mode: dealType === 'subdivision' ? 'lots' : 'hold', demoCost, lots: units, sellingCostPct: SUBDIVISION_DEFAULTS.sellingCostPct },
+    lead.referenceCostPerLotAZ ? { costPerLot: lead.referenceCostPerLotAZ } : {});
   const notes = [];
+  notes.push(`Acres and lot square footage come from the county record for this parcel; building square footage defaults to ${calcStates[idx].buildingSf.toLocaleString()} sf (${units} units x 900) — change it to your plan. Every default below is a placeholder, <b>not a bid</b>.`);
   if(dealType === 'subdivision'){
-    notes.push(`Subdivision/lot-sale model — the rezone target here is single-family zoning, not multifamily. Default cost/lot ($${lead.referenceCostPerLotAZ?.toLocaleString()||'65,000'}) is a Phoenix-metro/Maricopa general-market estimate (site grading/prep + utility connections per lot), <b>not a real local civil bid</b> — get one before underwriting off this number.`);
+    notes.push(`The rezone target here is single-family zoning, so this lead opens in the "sell lots" model. Default cost/lot ($${lead.referenceCostPerLotAZ?.toLocaleString()||'65,000'}) is a Phoenix-metro general-market estimate, <b>not a real local civil bid</b>.`);
   }
   if(lead.parcelStatus === 'improved'){
-    notes.push(`This lead has an existing structure (${lead.livingSpaceSf?.toLocaleString()||'?'} sf, built ${lead.yearBuilt||'unknown year'}) occupying only ${lead.farRatio!=null?(lead.farRatio*100).toFixed(0):'?'}% of the lot. Demolition cost defaults to a generic placeholder ($${demoCost.toLocaleString()}) — not a real AZ demo bid, just a starting number.`);
+    notes.push(`This lead has an existing structure (${lead.livingSpaceSf?.toLocaleString()||'?'} sf, built ${lead.yearBuilt||'unknown year'}) occupying only ${lead.farRatio!=null?(lead.farRatio*100).toFixed(0):'?'}% of the lot. Demolition defaults to a generic placeholder ($${demoCost.toLocaleString()}), not a real AZ demo bid.`);
   }
-  const note = notes.length ? `<div class="dm-note" style="margin-bottom:12px;">${notes.join('<br><br>')}</div>` : '';
-  document.getElementById(`calc-note-${idx}`).innerHTML = note;
-  document.getElementById(`calc-fields-${idx}`).innerHTML = calcFieldsHtml(idx, calcStates[idx], dealType);
-  renderCalcResults(idx, calcStates[idx], dealType);
-  renderAcqKpis(idx, calcStates[idx], lead);
-  document.querySelectorAll(`#calc-fields-${idx} input`).forEach(inp=>{
-    inp.addEventListener('input', ()=>{
-      const key = inp.dataset.calcKey, isPct = inp.dataset.calcPct === 'true';
-      const v = parseFloat(inp.value);
-      calcStates[idx][key] = isNaN(v) ? 0 : (isPct ? v/100 : v);
-      renderCalcResults(idx, calcStates[idx], dealType);
-      if(key === 'askingPrice') renderAcqKpis(idx, calcStates[idx], lead);
+  document.getElementById(`calc-note-${idx}`).innerHTML = `<div class="dm-note" style="margin-bottom:12px;">${notes.join('<br><br>')}</div>`;
+  calcRender(idx, lead);
+}
+
+function calcRender(idx, lead){
+  const st = calcStates[idx];
+  document.getElementById(`calc-fields-${idx}`).innerHTML = calcFieldsHtml(idx, st);
+  renderCalcResults(idx, st);
+  renderAcqKpis(idx, st, lead);
+  const root = document.getElementById(`calc-fields-${idx}`);
+  root.querySelector('[data-calc-mode]').addEventListener('change', e => { st.mode = e.target.value; st.holdYears = st.mode === 'lots' ? 2 : 3; calcRender(idx, lead); });
+  const strEl = root.querySelector('[data-calc-str]');
+  if(strEl) strEl.addEventListener('change', e => { st.strMode = e.target.value === '1'; renderCalcResults(idx, st); });
+  root.querySelectorAll('input[data-calc-key]').forEach(inp => {
+    inp.addEventListener('input', () => {
+      const key = inp.dataset.calcKey, kind = inp.dataset.calcKind, v = parseFloat(inp.value);
+      if(inp.value === '' && inp.dataset.calcAuto === '1') st[key] = null;
+      else st[key] = isNaN(v) ? 0 : (kind === 'pct' ? v / 100 : v);
+      // keep acres and lot square footage in sync
+      const syncTo = key === 'acres' ? ['lotSf', Math.round(st.acres * 43560)] : key === 'lotSf' ? ['acres', Math.round(st.lotSf / 43560 * 1000) / 1000] : null;
+      if(syncTo){ st[syncTo[0]] = syncTo[1]; const o = root.querySelector(`[data-calc-key="${syncTo[0]}"]`); if(o) o.value = syncTo[1]; }
+      renderCalcResults(idx, st);
+      if(key === 'askingPrice') renderAcqKpis(idx, st, lead);
     });
   });
 }
@@ -665,7 +762,7 @@ function leadCard(lead, idx){
       ${compsSectionHtml(lead)}
       <div class="calc-toggle" onclick="toggleCalc(${idx})">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-        Run underwriting calculator (enter the asking price once you find the listing)
+        Run underwriting calculator (acres, sq ft, full budget &amp; pro forma — enter the purchase price)
       </div>
       <div class="calc-body" id="calc-${idx}">
         <div class="section-label">Acquisition</div>
@@ -675,6 +772,7 @@ function leadCard(lead, idx){
         <div class="calc-grid" id="calc-fields-${idx}"></div>
         <div id="calc-kpis-warn-${idx}"></div>
         <div class="calc-kpis" id="calc-kpis-${idx}"></div>
+        <div id="calc-detail-${idx}"></div>
       </div>
     </div>
   </div>`;
