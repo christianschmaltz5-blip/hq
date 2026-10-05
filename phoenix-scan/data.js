@@ -18,47 +18,44 @@
 // };
 
 window.PHX_SCAN = {
-  updated: "2026-09-29",
-  listingsScanned: 27,
+  updated: "2026-10-05",
+  listingsScanned: 9,
   benchmarks: { "A": 4.75, "B": 4.90, "C": 5.40, "2-4 unit": 5.50 },
 
   qualifying: [],
 
-  nearMisses: [
-    {
-      name: "Clubhouse at Arcadia",
-      address: "2620 N 40th St",
-      zip: "85008",
-      ask: 12247000,
-      units: 43,
-      cls: "B",
-      noi: 704197,
-      capPct: 5.75,
-      spreadBps: 85,
-      confidence: "MEDIUM",
-      notes: "Built 1951, renovated 2018, listed by CBRE, 211 days on market. Real dollar NOI disclosed ($704,197; matches Crexi valuation box) but no rent roll to rebuild it. Reconfirmed 2026-09-29: same price and NOI as prior scan. 15bps short of the +100bps line.",
-      url: "https://www.crexi.com/properties/2370896/arizona-clubhouse-at-arcadia"
-    }
-  ],
+  nearMisses: [],
 
   disqualified: [
     {
-      address: "2014 W Berridge Ln, Phoenix AZ 85015 (Signature 18 Apartments)",
-      statedCapPct: 8.0,
+      address: "1477 S Warner Dr, Apache Junction AZ 85120 (Mesquite Ranch RV Park)",
+      statedCapPct: 6.11,
       realCapPct: null,
-      reason: "18 units, Class C, built 1961, renovated 2023, listed by HomeSmart, price cut from $4,495,000 to $3,780,000 (141 days on market). Broker markets an '8% actual T-4 cap' (~$302k NOI per Crexi's calculator) - a ~260bps spread over the 5.40% Class C benchmark, but NOI/rents are login-gated. Unbelievable on its face: at 40-42% opex an $302k NOI needs ~$2,100/unit/month gross rent for 800 SF units, and the same asset was marketed in the prior scan at NOI $273,652 (6.09%) after a '7.04% actual' claim - the story keeps changing. Treated as pro-forma fluff; LOW confidence, not a qualifier. Verify with a T-12 and rent roll if interested."
+      reason: "$1,125,000 ask, 20 sites (17 RV, 2 MH, 1 apartment), Class C, Marcus & Millichap, 416 days on market. Stated NOI $68,761 (6.11%, +71bps vs Class C) is a broker underwrite at 53.73% expense ratio, but the park is only 64% occupied post-renovation with infill in progress, so it is pro forma, not actual. RV/MH park, not conventional multifamily - non-comparable. LOW confidence."
     },
     {
-      address: "3139 N 40th St, Phoenix AZ 85018 (\"Rare Arcadia Multi Family Opportunity\")",
-      statedCapPct: 9.37,
+      address: "409 S Montezuma St, Prescott AZ 86303",
+      statedCapPct: 5.4,
       realCapPct: null,
-      reason: "5 units, Class B. Marketing copy describes sober-living/residential-assisted-living use (>$5,000/unit/month) - specialty board-and-care income, not conventional apartment rent. Excluded as non-comparable. Reconfirmed 2026-09-29: still listed at $2,599,000 / 9.37% cap."
+      reason: "$2,375,000 ask, hotel/apartment mixed use, outside Phoenix metro. Stated 5.40% cap, NOI gated, spread ~0bps vs Class C. Not a qualifier."
     },
     {
-      address: "1429 N Scottsdale Rd, Tempe AZ 85288 (118 Unit Apartment Complex)",
+      address: "257-267 W 5 St, Yuma AZ 85364",
       statedCapPct: null,
       realCapPct: null,
-      reason: "$19,000,000 ask (~$161k/unit), 118 units. Currently operating as a hotel and 'in the process of being converted' to apartments - no rent roll or NOI, so no going-in cap exists. Conversion/entitlement play, not a stabilized multifamily comp. Excluded as non-comparable."
+      reason: "$788,000 ask, 8 units ($98.5k/unit), triplex plus 5 cottages, 196 days on market. No rents or NOI disclosed, cannot underwrite. Outside Phoenix metro."
+    },
+    {
+      address: "1407 N Gilbert Ave, Casa Grande AZ 85122",
+      statedCapPct: null,
+      realCapPct: null,
+      reason: "$995,000 ask, 6 units, ABI Multifamily. No rents or NOI disclosed, cannot underwrite. Outside Phoenix metro (Pinal County)."
+    },
+    {
+      address: "Other listings in feed: 1022 S Hunter Creek Dr (Payson cabins), Surprise 10-bed assisted living home, 1082 W Picacho Dr (Williams land), 207 W Speedway Blvd (Tucson), 2873 N Edmond Dantes Ct (Tucson townhomes)",
+      statedCapPct: null,
+      realCapPct: null,
+      reason: "Non-comparable: hospitality/cabin, assisted living business, vacant land/RV lot, unfinished townhomes, or outside the Phoenix metro. No financials disclosed."
     }
   ],
 
@@ -69,6 +66,7 @@ window.PHX_SCAN = {
     { date: "2026-07-23c", scanned: 37, qualifyingCount: 9, top: "5035 N 23rd Ave +178bps (logged in, unlocked 33-34 of 43 shortlisted listings via a rotating/non-paginated results feed; ~7-9 of the 43 and ~85 outside the filter remain unreviewed)" },
     { date: "2026-07-23d", scanned: 52, qualifyingCount: 11, top: "5035 N 23rd Ave +178bps (swept the unfiltered 127-listing pool via 'NOI (High to Low)' sort — confirms every listing with disclosed real financials is now covered; remainder has no NOI/cap posted at all, unscreenable without contacting the broker)" },
     { date: "2026-09-09", scanned: 3, qualifyingCount: 0, top: "Spot-check only, not a full sweep — 45 listings currently match the 5.75%+ filter (pool has moved since July) but only 3 previously-flagged addresses were reopened for reconfirmation (Maryland Ave, Rare Arcadia, Campo Bello); all three unchanged from prior findings. The July 23 qualifying/near-miss lists (Ocotillo, Monroe St, Polk Terrace, etc.) were NOT rechecked this pass and may be stale (sold/repriced) — verify before acting on them." },
-    { date: "2026-09-29", scanned: 27, qualifyingCount: 0, top: "Clubhouse at Arcadia +85bps (near miss). Headless scrape returned only the unfiltered 'Recommended' feed (pages 1-3, ~25 unique listings, 437 in pool) plus 8 detail pages; no cap-rate filter and most financials login-gated. Also reviewed, no flag: Macallister 5.04% actual vs 4.48% headline (Class A, +29bps), Alegre Park Tempe 5.75% (+35bps vs C), Row 31 in lease-up (~4.6% re-underwritten at $1,587 avg rent, Class A). Prior-scan qualifying/near-miss lists not re-scraped this run and dropped - verify individually before acting." }
+    { date: "2026-09-29", scanned: 27, qualifyingCount: 0, top: "Clubhouse at Arcadia +85bps (near miss). Headless scrape returned only the unfiltered 'Recommended' feed (pages 1-3, ~25 unique listings, 437 in pool) plus 8 detail pages; no cap-rate filter and most financials login-gated. Also reviewed, no flag: Macallister 5.04% actual vs 4.48% headline (Class A, +29bps), Alegre Park Tempe 5.75% (+35bps vs C), Row 31 in lease-up (~4.6% re-underwritten at $1,587 avg rent, Class A). Prior-scan qualifying/near-miss lists not re-scraped this run and dropped - verify individually before acting." },
+    { date: "2026-10-05", scanned: 9, qualifyingCount: 0, top: "No qualifiers, no near misses. Headless scrape again returned only the unfiltered 'Recommended' feed (438 in pool; 9 unique listings, most outside the Phoenix metro: Payson, Yuma, Prescott, Tucson, Williams, Casa Grande) plus 8 detail pages; no cap-rate filter and nearly all financials login-gated. Closest: Mesquite Ranch RV Park (Apache Junction) stated 6.11% = +71bps vs Class C, but 64% occupied, 20 sites, RV/MH specialty, so excluded. Prior near-miss (Clubhouse at Arcadia) and Signature 18 / Rare Arcadia / Tempe 118-unit not in this scrape and dropped - verify individually before acting." }
   ]
 };
