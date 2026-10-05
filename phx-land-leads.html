@@ -989,7 +989,7 @@ const FemaFlood = L.TileLayer.extend({
   getTileUrl(c){
     const R = 20037508.342789244, s = 2 * R / Math.pow(2, c.z);
     const x0 = -R + c.x * s, y1 = R - c.y * s;
-    return `${this._url}?bbox=${x0},${y1 - s},${x0 + s},${y1}&bboxSR=3857&imageSR=3857&size=256,256&format=png32&transparent=true&layers=show:28&f=image`;
+    return `${this._url}?bbox=${x0},${y1 - s},${x0 + s},${y1}&bboxSR=3857&imageSR=3857&size=256,256&format=png32&transparent=true&layers=show:28&layerDefs=${encodeURIComponent("28:SFHA_TF='T'")}&f=image`;
   }
 });
 function initMap(containerId){
