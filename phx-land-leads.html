@@ -913,8 +913,8 @@ function importContacts(input){
     });
     try{ localStorage.setItem('leadContacts', JSON.stringify(store)); }catch(e){}
     input.value = '';
-    document.getElementById('skip-trace-summary').textContent = `Imported ${rows.length} rows: ${matched} matched to leads, ${withPhone} with a phone. Stored in this browser only.`;
     refreshAll();
+    document.getElementById('skip-trace-summary').textContent = `Imported ${rows.length} rows: ${matched} matched to leads, ${withPhone} with a phone. Stored in this browser only.`;
   });
 }
 function fmtPhone(n){ const d = String(n).replace(/\D/g, ''); return d.length === 10 ? `(${d.slice(0,3)}) ${d.slice(3,6)}-${d.slice(6)}` : n; }
