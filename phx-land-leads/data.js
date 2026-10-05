@@ -65,7 +65,7 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 97,
+      "score": 77,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
@@ -73,8 +73,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "2 code-enforcement cases at this address (2024+)",
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
-        "built 1961, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+155% vs assessed, rank 139/565 (+20 pts)"
+        "built 1961, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -142,11 +141,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 925071,
         "rangeLow": 145695,
         "rangeHigh": 1796692,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $925,071 (range $145,695-$1,796,692)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $925,071 (range $145,695-$1,796,692).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 155,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "27622 N 203RD AVE, WITTMANN, AZ, 85361",
@@ -3531,14 +3530,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": "02/01/2020",
       "salePrice": 375000.0,
       "defaultDemoCost": null,
-      "score": 81,
+      "score": 61,
       "reasons": [
         "adjacent parcels already zoned R1-10",
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+200% vs assessed, rank 123/565 (+20 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -3606,11 +3604,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 624829,
         "rangeLow": 541788,
         "rangeHigh": 4217943,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $624,829 (range $541,788-$4,217,943)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $624,829 (range $541,788-$4,217,943).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 200,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -4497,15 +4495,14 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 81,
+      "score": 71,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size",
-        "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+85% vs assessed, rank 206/565 (+10 pts)"
+        "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -4573,11 +4570,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 518095,
         "rangeLow": 340019,
         "rangeHigh": 1879328,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $518,095 (range $340,019-$1,879,328)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $518,095 (range $340,019-$1,879,328).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 85,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "8425 W El Cortez Place, PEORIA, AZ, 85383",
@@ -5839,15 +5836,14 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 79,
+      "score": 75,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 25+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
-        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+4% vs assessed, rank 360/565 (+4 pts)"
+        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -5915,11 +5911,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 411896,
         "rangeLow": 117214,
         "rangeHigh": 1077567,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $411,896 (range $117,214-$1,077,567)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $411,896 (range $117,214-$1,077,567).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 4,
-      "compsAdj": 4,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -6466,15 +6462,14 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 79,
+      "score": 69,
       "reasons": [
         "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 8 years",
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size",
-        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+69% vs assessed, rank 232/565 (+10 pts)"
+        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -6542,11 +6537,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 1253263,
         "rangeLow": 210104,
         "rangeHigh": 1702966,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,253,263 (range $210,104-$1,702,966)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,253,263 (range $210,104-$1,702,966).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 69,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -6782,15 +6777,14 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 79,
+      "score": 69,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 8 years",
         "existing structure occupies only 7% of the lot \u2014 under-improved for the land size",
-        "built 1965, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+48% vs assessed, rank 269/565 (+10 pts)"
+        "built 1965, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -6858,11 +6852,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 1017224,
         "rangeLow": 320085,
         "rangeHigh": 1655691,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,017,224 (range $320,085-$1,655,691)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,017,224 (range $320,085-$1,655,691).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 48,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": true,
       "firstSeen": "2026-10-04",
@@ -7095,15 +7089,14 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 79,
+      "score": 69,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 8 years",
         "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
-        "built 1956, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+105% vs assessed, rank 185/565 (+10 pts)"
+        "built 1956, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -7171,11 +7164,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 894992,
         "rangeLow": 140958,
         "rangeHigh": 1738271,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $894,992 (range $140,958-$1,738,271)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $894,992 (range $140,958-$1,738,271).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 105,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "11026 N. 42ND STREET, PHOENIX, AZ, 85032",
@@ -7986,15 +7979,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 78,
+      "score": 58,
       "reasons": [
         "adjacent parcels already zoned R-4",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 35+ years \u2014 likely low or no debt on the land",
-        "comps margin 434% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+434% vs assessed, rank 32/565 (+20 pts)"
+        "held 35+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [
         {
@@ -8062,11 +8053,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 4543587,
         "rangeLow": 1530409,
         "rangeHigh": 9283568,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $4,543,587 (range $1,530,409-$9,283,568)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $4,543,587 (range $1,530,409-$9,283,568).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 434,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "9393 N 90TH ST  #102, SCOTTSDALE, AZ, 85258",
@@ -8412,15 +8403,14 @@ window.PHX_LAND_LEADS = {
       "saleDate": "12/01/2010",
       "salePrice": 170000.0,
       "defaultDemoCost": 18000,
-      "score": 77,
+      "score": 73,
       "reasons": [
         "adjacent parcels already zoned R-4",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held 16+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
-        "built 1960, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+8% vs assessed, rank 348/565 (+4 pts)"
+        "built 1960, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -8488,11 +8478,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 556565,
         "rangeLow": 93277,
         "rangeHigh": 1456037,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $556,565 (range $93,277-$1,456,037)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $556,565 (range $93,277-$1,456,037).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 8,
-      "compsAdj": 4,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -8859,13 +8849,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 75,
+      "score": 55,
       "reasons": [
         "adjacent parcels already zoned R-5",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
-        "held 48+ years \u2014 likely low or no debt on the land",
-        "comps value ~+151% vs assessed, rank 142/565 (+20 pts)"
+        "held 48+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [
         {
@@ -8933,11 +8922,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 576860,
         "rangeLow": 171793,
         "rangeHigh": 1124280,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $576,860 (range $171,793-$1,124,280)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $576,860 (range $171,793-$1,124,280).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 151,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -9013,13 +9002,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 75,
+      "score": 55,
       "reasons": [
         "adjacent parcels already zoned RE-35",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
-        "held 16+ years \u2014 likely low or no debt on the land",
-        "comps value ~+297% vs assessed, rank 69/565 (+20 pts)"
+        "held 16+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [
         {
@@ -9087,11 +9075,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 849140,
         "rangeLow": 259535,
         "rangeHigh": 1396307,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $849,140 (range $259,535-$1,396,307)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $849,140 (range $259,535-$1,396,307).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 297,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -11944,14 +11932,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 75,
+      "score": 65,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held 18+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size",
-        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+38% vs assessed, rank 283/565 (+10 pts)"
+        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -12019,11 +12006,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 411921,
         "rangeLow": 117221,
         "rangeHigh": 1077633,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $411,921 (range $117,221-$1,077,633)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $411,921 (range $117,221-$1,077,633).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 38,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -12099,14 +12086,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 75,
+      "score": 65,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held 24+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 7% of the lot \u2014 under-improved for the land size",
-        "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+56% vs assessed, rank 253/565 (+10 pts)"
+        "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -12174,11 +12160,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 466078,
         "rangeLow": 101414,
         "rangeHigh": 517304,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $466,078 (range $101,414-$517,304)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $466,078 (range $101,414-$517,304).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 56,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-04",
@@ -14660,15 +14646,14 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 73,
+      "score": 69,
       "reasons": [
         "adjacent parcels already zoned R-5",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 8 years",
         "existing structure occupies only 7% of the lot \u2014 under-improved for the land size",
-        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+10% vs assessed, rank 344/565 (+4 pts)"
+        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -14736,11 +14721,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 404225,
         "rangeLow": 115031,
         "rangeHigh": 1057499,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $404,225 (range $115,031-$1,057,499)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $404,225 (range $115,031-$1,057,499).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 10,
-      "compsAdj": 4,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-04",
@@ -15128,15 +15113,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": "12/01/2013",
       "salePrice": 1325000.0,
       "defaultDemoCost": null,
-      "score": 72,
+      "score": 52,
       "reasons": [
         "adjacent parcels already zoned R-3A",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 13 years",
-        "comps margin 468% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+468% vs assessed, rank 26/565 (+20 pts)"
+        "held 13 years"
       ],
       "comps": [
         {
@@ -15204,11 +15187,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 658573,
         "rangeLow": 159362,
         "rangeHigh": 1413071,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $658,573 (range $159,362-$1,413,071)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $658,573 (range $159,362-$1,413,071).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 468,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -15289,15 +15272,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 72,
+      "score": 52,
       "reasons": [
         "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 8 years",
-        "comps margin 793% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+793% vs assessed, rank 13/565 (+20 pts)"
+        "held 8 years"
       ],
       "comps": [
         {
@@ -15365,11 +15346,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 2328646,
         "rangeLow": 468402,
         "rangeHigh": 3004415,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,328,646 (range $468,402-$3,004,415)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,328,646 (range $468,402-$3,004,415).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 793,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "6003 W THUNDERBIRD RD STE 2, GLENDALE, AZ, 85306",
@@ -15975,7 +15956,7 @@ window.PHX_LAND_LEADS = {
       "saleDate": "01/01/2017",
       "salePrice": 191000.0,
       "defaultDemoCost": 18000,
-      "score": 72,
+      "score": 68,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
@@ -15983,8 +15964,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 10 years",
         "existing structure occupies only 9% of the lot \u2014 under-improved for the land size",
-        "built 1955 \u2014 older housing stock",
-        "comps value ~+12% vs assessed, rank 340/565 (+4 pts)"
+        "built 1955 \u2014 older housing stock"
       ],
       "comps": [
         {
@@ -16052,11 +16032,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 404326,
         "rangeLow": 115059,
         "rangeHigh": 1057762,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $404,326 (range $115,059-$1,057,762)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $404,326 (range $115,059-$1,057,762).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 12,
-      "compsAdj": 4,
+      "equityMarginPct": null,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "5154 W JUPITER WAY, CHANDLER, AZ, 85226",
@@ -16604,13 +16584,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 70,
+      "score": 50,
       "reasons": [
         "adjacent parcels already zoned R-3A",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 41+ years \u2014 likely low or no debt on the land",
-        "comps value ~+208% vs assessed, rank 114/565 (+20 pts)"
+        "held 41+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [
         {
@@ -16678,11 +16657,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 821277,
         "rangeLow": 262798,
         "rangeHigh": 2215817,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $821,277 (range $262,798-$2,215,817)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $821,277 (range $262,798-$2,215,817).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 208,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -17814,15 +17793,14 @@ window.PHX_LAND_LEADS = {
       "saleDate": "09/01/1998",
       "salePrice": 109000.0,
       "defaultDemoCost": 18000,
-      "score": 70,
+      "score": 80,
       "reasons": [
         "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held 28+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 9% of the lot \u2014 under-improved for the land size",
-        "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-62% vs assessed, rank 554/565 (-10 pts)"
+        "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -17890,11 +17868,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 137745,
         "rangeLow": 84425,
         "rangeHigh": 446770,
-        "explanation": "Based on 5 comparable sales within 3 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $137,745 (range $84,425-$446,770)."
+        "explanation": "Based on 5 comparable sales within 3 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $137,745 (range $84,425-$446,770).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": -62,
-      "compsAdj": -10,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -18720,14 +18698,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": "08/01/2021",
       "salePrice": 475000.0,
       "defaultDemoCost": null,
-      "score": 69,
+      "score": 59,
       "reasons": [
         "adjacent parcels already zoned R-3",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "code complaint mentions vacant/boarded/unsecured/abandoned/dilapidated",
-        "19 code-enforcement cases at this address (2024+)",
-        "comps value ~+122% vs assessed, rank 163/565 (+10 pts)"
+        "19 code-enforcement cases at this address (2024+)"
       ],
       "comps": [
         {
@@ -18795,11 +18772,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 421869,
         "rangeLow": 148397,
         "rangeHigh": 1013357,
-        "explanation": "Based on 5 comparable sales within 3 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $421,869 (range $148,397-$1,013,357)."
+        "explanation": "Based on 5 comparable sales within 3 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $421,869 (range $148,397-$1,013,357).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 122,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "4340 E Indian School Road #21-589, PHOENIX, AZ, 85018",
@@ -20967,14 +20944,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 69,
+      "score": 65,
       "reasons": [
         "adjacent parcels already zoned R-3",
         "parcel size fits small-to-mid infill development",
         "held 25+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
-        "built 1973, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+22% vs assessed, rank 314/565 (+4 pts)"
+        "built 1973, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -21042,11 +21018,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 533313,
         "rangeLow": 179301,
         "rangeHigh": 948841,
-        "explanation": "Based on 5 comparable sales within 3 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $533,313 (range $179,301-$948,841)."
+        "explanation": "Based on 5 comparable sales within 3 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $533,313 (range $179,301-$948,841).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 22,
-      "compsAdj": 4,
+      "equityMarginPct": null,
       "isNew": true,
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-04",
@@ -22239,14 +22215,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 69,
+      "score": 65,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held 39+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size",
-        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+34% vs assessed, rank 293/565 (+4 pts)"
+        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -22314,11 +22289,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 402195,
         "rangeLow": 114453,
         "rangeHigh": 1052187,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $402,195 (range $114,453-$1,052,187)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $402,195 (range $114,453-$1,052,187).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 34,
-      "compsAdj": 4,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -22368,14 +22343,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 69,
+      "score": 65,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held 40+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size",
-        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+35% vs assessed, rank 289/565 (+4 pts)"
+        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -22443,11 +22417,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 401994,
         "rangeLow": 114396,
         "rangeHigh": 1051663,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $401,994 (range $114,396-$1,051,663)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $401,994 (range $114,396-$1,051,663).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 35,
-      "compsAdj": 4,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -22626,14 +22600,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 69,
+      "score": 65,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held 21+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 7% of the lot \u2014 under-improved for the land size",
-        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+28% vs assessed, rank 306/565 (+4 pts)"
+        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -22701,11 +22674,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 404276,
         "rangeLow": 115045,
         "rangeHigh": 1057631,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $404,276 (range $115,045-$1,057,631)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $404,276 (range $115,045-$1,057,631).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 28,
-      "compsAdj": 4,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-04",
@@ -23013,14 +22986,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 69,
+      "score": 65,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held 22+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 7% of the lot \u2014 under-improved for the land size",
-        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+20% vs assessed, rank 318/565 (+4 pts)"
+        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -23088,11 +23060,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 411746,
         "rangeLow": 117171,
         "rangeHigh": 1077174,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $411,746 (range $117,171-$1,077,174)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $411,746 (range $117,171-$1,077,174).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 20,
-      "compsAdj": 4,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -23142,14 +23114,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 69,
+      "score": 65,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held 17+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
-        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+25% vs assessed, rank 309/565 (+4 pts)"
+        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -23217,11 +23188,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 405353,
         "rangeLow": 115352,
         "rangeHigh": 1060451,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $405,353 (range $115,352-$1,060,451)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $405,353 (range $115,352-$1,060,451).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 25,
-      "compsAdj": 4,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -23529,14 +23500,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 69,
+      "score": 65,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held 16+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 9% of the lot \u2014 under-improved for the land size",
-        "built 1969, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+34% vs assessed, rank 294/565 (+4 pts)"
+        "built 1969, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -23604,11 +23574,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 846115,
         "rangeLow": 266243,
         "rangeHigh": 1377184,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $846,115 (range $266,243-$1,377,184)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $846,115 (range $266,243-$1,377,184).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 34,
-      "compsAdj": 4,
+      "equityMarginPct": null,
       "isNew": true,
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-04",
@@ -24049,14 +24019,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 68,
+      "score": 58,
       "reasons": [
         "adjacent parcels already zoned R-3",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 35+ years \u2014 likely low or no debt on the land",
-        "comps value ~+88% vs assessed, rank 204/565 (+10 pts)"
+        "held 35+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [
         {
@@ -24124,11 +24093,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 2214168,
         "rangeLow": 2010939,
         "rangeHigh": 13431298,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,214,168 (range $2,010,939-$13,431,298)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,214,168 (range $2,010,939-$13,431,298).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 88,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "9393 N 90TH ST  #102, SCOTTSDALE, AZ, 85258",
@@ -24435,15 +24404,14 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 68,
+      "score": 78,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 10% of the lot \u2014 under-improved for the land size",
-        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-4% vs assessed, rank 376/565 (-10 pts)"
+        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -24511,11 +24479,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 403599,
         "rangeLow": 114852,
         "rangeHigh": 1055860,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $403,599 (range $114,852-$1,055,860)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $403,599 (range $114,852-$1,055,860).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": -4,
-      "compsAdj": -10,
+      "equityMarginPct": null,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "4539 N 22nd St, Ste R, Phoenix, AZ, 85016-4639",
@@ -25642,14 +25610,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": "10/01/2007",
       "salePrice": 490000.0,
       "defaultDemoCost": null,
-      "score": 66,
+      "score": 56,
       "reasons": [
         "adjacent parcels already zoned R1-18",
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address differs from the property city",
-        "held 19+ years \u2014 likely low or no debt on the land",
-        "comps value ~+106% vs assessed, rank 179/565 (+10 pts)"
+        "held 19+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [
         {
@@ -25717,11 +25684,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 607540,
         "rangeLow": 329506,
         "rangeHigh": 3361810,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $607,540 (range $329,506-$3,361,810)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $607,540 (range $329,506-$3,361,810).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 106,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -26038,14 +26005,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 66,
+      "score": 46,
       "reasons": [
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 17+ years \u2014 likely low or no debt on the land",
-        "comps value ~+181% vs assessed, rank 131/565 (+20 pts)"
+        "held 17+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [
         {
@@ -26113,11 +26079,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 349544,
         "rangeLow": 43949,
         "rangeHigh": 1305042,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $349,544 (range $43,949-$1,305,042)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $349,544 (range $43,949-$1,305,042).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 181,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "5722 W ACOMA, GLENDALE, AZ, 85306",
@@ -27977,15 +27943,14 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 65,
+      "score": 75,
       "reasons": [
         "adjacent parcels already zoned R1-8",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 26+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size",
-        "built 1960, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-33% vs assessed, rank 475/565 (-10 pts)"
+        "built 1960, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -28053,11 +28018,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 504104,
         "rangeLow": 305954,
         "rangeHigh": 1619076,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $504,104 (range $305,954-$1,619,076)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $504,104 (range $305,954-$1,619,076).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": -33,
-      "compsAdj": -10,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -28107,15 +28072,14 @@ window.PHX_LAND_LEADS = {
       "saleDate": "01/01/2008",
       "salePrice": 1200000.0,
       "defaultDemoCost": 18000,
-      "score": 65,
+      "score": 75,
       "reasons": [
         "adjacent parcels already zoned R1-8",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 19+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size",
-        "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-51% vs assessed, rank 528/565 (-10 pts)"
+        "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -28183,11 +28147,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 422316,
         "rangeLow": 256315,
         "rangeHigh": 1356391,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $422,316 (range $256,315-$1,356,391)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $422,316 (range $256,315-$1,356,391).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": -51,
-      "compsAdj": -10,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -29269,14 +29233,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 64,
+      "score": 54,
       "reasons": [
         "adjacent parcels already zoned R1-18",
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+106% vs assessed, rank 180/565 (+10 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -29344,11 +29307,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 613036,
         "rangeLow": 332486,
         "rangeHigh": 3392217,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $613,036 (range $332,486-$3,392,217)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $613,036 (range $332,486-$3,392,217).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 106,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -29399,14 +29362,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 64,
+      "score": 54,
       "reasons": [
         "adjacent parcels already zoned R1-18",
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+73% vs assessed, rank 220/565 (+10 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -29474,11 +29436,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 684584,
         "rangeLow": 593602,
         "rangeHigh": 4621325,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $684,584 (range $593,602-$4,621,325)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $684,584 (range $593,602-$4,621,325).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 73,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -29529,14 +29491,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": "04/01/2023",
       "salePrice": 335000.0,
       "defaultDemoCost": null,
-      "score": 64,
+      "score": 54,
       "reasons": [
         "adjacent parcels already zoned R1-18",
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+46% vs assessed, rank 271/565 (+10 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -29604,11 +29565,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 522830,
         "rangeLow": 453345,
         "rangeHigh": 3529391,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $522,830 (range $453,345-$3,529,391)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $522,830 (range $453,345-$3,529,391).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 46,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-03",
@@ -29659,13 +29620,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": "08/01/2012",
       "salePrice": 25000.0,
       "defaultDemoCost": null,
-      "score": 64,
+      "score": 44,
       "reasons": [
         "adjacent parcels already zoned R-3A",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 14 years",
-        "comps value ~+222% vs assessed, rank 101/565 (+20 pts)"
+        "held 14 years"
       ],
       "comps": [
         {
@@ -29733,11 +29693,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 925498,
         "rangeLow": 296148,
         "rangeHigh": 2497007,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $925,498 (range $296,148-$2,497,007)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $925,498 (range $296,148-$2,497,007).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 222,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -30272,13 +30232,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": "09/01/2012",
       "salePrice": 160000.0,
       "defaultDemoCost": null,
-      "score": 64,
+      "score": 44,
       "reasons": [
         "adjacent parcels already zoned R-3A",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 14 years",
-        "comps value ~+219% vs assessed, rank 104/565 (+20 pts)"
+        "held 14 years"
       ],
       "comps": [
         {
@@ -30346,11 +30305,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 939023,
         "rangeLow": 174632,
         "rangeHigh": 1313767,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $939,023 (range $174,632-$1,313,767)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $939,023 (range $174,632-$1,313,767).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 219,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": true,
       "firstSeen": "2026-10-04",
@@ -30401,13 +30360,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": "09/01/2012",
       "salePrice": 160000.0,
       "defaultDemoCost": null,
-      "score": 64,
+      "score": 44,
       "reasons": [
         "adjacent parcels already zoned R-3A",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 14 years",
-        "comps value ~+219% vs assessed, rank 105/565 (+20 pts)"
+        "held 14 years"
       ],
       "comps": [
         {
@@ -30475,11 +30433,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 939023,
         "rangeLow": 174632,
         "rangeHigh": 1313767,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $939,023 (range $174,632-$1,313,767)."
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $939,023 (range $174,632-$1,313,767).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 219,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": true,
       "firstSeen": "2026-10-04",
@@ -31258,14 +31216,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 63,
+      "score": 53,
       "reasons": [
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 16+ years \u2014 likely low or no debt on the land",
-        "comps value ~+148% vs assessed, rank 145/565 (+10 pts)"
+        "held 16+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [
         {
@@ -31333,11 +31290,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 485294,
         "rangeLow": 87500,
         "rangeHigh": 757273,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $485,294 (range $87,500-$757,273)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $485,294 (range $87,500-$757,273).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 148,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -31388,13 +31345,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": "10/01/2025",
       "salePrice": 2260000.0,
       "defaultDemoCost": null,
-      "score": 63,
+      "score": 53,
       "reasons": [
         "adjacent parcels already zoned R-3",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+100% vs assessed, rank 190/565 (+10 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -31462,11 +31418,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 2713700,
         "rangeLow": 446034,
         "rangeHigh": 2713700,
-        "explanation": "Based on 5 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,713,700 (range $446,034-$2,713,700)."
+        "explanation": "Based on 5 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,713,700 (range $446,034-$2,713,700).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 100,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -31517,13 +31473,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": "01/01/2025",
       "salePrice": 700000.0,
       "defaultDemoCost": null,
-      "score": 63,
+      "score": 53,
       "reasons": [
         "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+105% vs assessed, rank 182/565 (+10 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -31591,11 +31546,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 1103528,
         "rangeLow": 335207,
         "rangeHigh": 4597837,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,103,528 (range $335,207-$4,597,837)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,103,528 (range $335,207-$4,597,837).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 105,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -31770,14 +31725,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": "08/01/2004",
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 63,
+      "score": 43,
       "reasons": [
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
-        "held 22+ years \u2014 likely low or no debt on the land",
-        "comps margin 802% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+802% vs assessed, rank 12/565 (+20 pts)"
+        "held 22+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [
         {
@@ -31845,11 +31798,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 1124571,
         "rangeLow": 108486,
         "rangeHigh": 1262395,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,124,571 (range $108,486-$1,262,395)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,124,571 (range $108,486-$1,262,395).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 802,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -32804,13 +32757,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 61,
+      "score": 41,
       "reasons": [
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+221% vs assessed, rank 103/565 (+20 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -32878,11 +32830,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 760000,
         "rangeLow": 74961,
         "rangeHigh": 1796471,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $760,000 (range $74,961-$1,796,471)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $760,000 (range $74,961-$1,796,471).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 221,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": true,
       "firstSeen": "2026-10-04",
@@ -32929,14 +32881,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 61,
+      "score": 41,
       "reasons": [
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "owned by an estate \u2014 heirs are often motivated sellers",
-        "comps margin 495% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+495% vs assessed, rank 25/565 (+20 pts)"
+        "owned by an estate \u2014 heirs are often motivated sellers"
       ],
       "comps": [
         {
@@ -33004,11 +32954,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 499006,
         "rangeLow": 85644,
         "rangeHigh": 1254913,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $499,006 (range $85,644-$1,254,913)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $499,006 (range $85,644-$1,254,913).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 495,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -33055,14 +33005,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": "01/01/2026",
       "salePrice": 1120000.0,
       "defaultDemoCost": null,
-      "score": 61,
+      "score": 41,
       "reasons": [
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps margin 855% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+855% vs assessed, rank 10/565 (+20 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -33130,11 +33078,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 1442141,
         "rangeLow": 320000,
         "rangeHigh": 1615000,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,442,141 (range $320,000-$1,615,000)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,442,141 (range $320,000-$1,615,000).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 855,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -33181,14 +33129,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": "01/01/2026",
       "salePrice": 1120000.0,
       "defaultDemoCost": null,
-      "score": 61,
+      "score": 41,
       "reasons": [
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps margin 839% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+839% vs assessed, rank 11/565 (+20 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -33256,11 +33202,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 1442141,
         "rangeLow": 320000,
         "rangeHigh": 1615000,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,442,141 (range $320,000-$1,615,000)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,442,141 (range $320,000-$1,615,000).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 839,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -34165,13 +34111,11 @@ window.PHX_LAND_LEADS = {
       "saleDate": "12/01/1996",
       "salePrice": 31000.0,
       "defaultDemoCost": null,
-      "score": 60,
+      "score": 40,
       "reasons": [
         "adjacent parcels already zoned R-5",
         "parcel size fits small-to-mid infill development",
-        "held 30+ years \u2014 likely low or no debt on the land",
-        "comps margin 511% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+511% vs assessed, rank 21/565 (+20 pts)"
+        "held 30+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [
         {
@@ -34239,11 +34183,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 659279,
         "rangeLow": 153096,
         "rangeHigh": 1357512,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $659,279 (range $153,096-$1,357,512)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $659,279 (range $153,096-$1,357,512).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 511,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -34293,12 +34237,11 @@ window.PHX_LAND_LEADS = {
       "saleDate": "11/01/2000",
       "salePrice": 35000.0,
       "defaultDemoCost": null,
-      "score": 60,
+      "score": 40,
       "reasons": [
         "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
-        "held 26+ years \u2014 likely low or no debt on the land",
-        "comps value ~+202% vs assessed, rank 121/565 (+20 pts)"
+        "held 26+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [
         {
@@ -34366,11 +34309,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 355263,
         "rangeLow": 175706,
         "rangeHigh": 1557991,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $355,263 (range $175,706-$1,557,991)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $355,263 (range $175,706-$1,557,991).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 202,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "isNew": true,
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-04",
@@ -34420,13 +34363,11 @@ window.PHX_LAND_LEADS = {
       "saleDate": "12/01/2006",
       "salePrice": 90500.0,
       "defaultDemoCost": null,
-      "score": 60,
+      "score": 40,
       "reasons": [
         "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
-        "held 20+ years \u2014 likely low or no debt on the land",
-        "comps margin 509% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+509% vs assessed, rank 22/565 (+20 pts)"
+        "held 20+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [
         {
@@ -34494,11 +34435,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 653807,
         "rangeLow": 151826,
         "rangeHigh": 1346244,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $653,807 (range $151,826-$1,346,244)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $653,807 (range $151,826-$1,346,244).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 509,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -35376,13 +35317,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": "10/01/2010",
       "salePrice": 320000.0,
       "defaultDemoCost": null,
-      "score": 59,
+      "score": 55,
       "reasons": [
         "adjacent parcels already zoned R1-18",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
-        "held 16+ years \u2014 likely low or no debt on the land",
-        "comps value ~+15% vs assessed, rank 329/565 (+4 pts)"
+        "held 16+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [
         {
@@ -35450,11 +35390,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 1401525,
         "rangeLow": 483026,
         "rangeHigh": 6802239,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,401,525 (range $483,026-$6,802,239)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,401,525 (range $483,026-$6,802,239).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 15,
-      "compsAdj": 4,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-04",
@@ -36147,12 +36087,11 @@ window.PHX_LAND_LEADS = {
       "saleDate": "03/01/2023",
       "salePrice": 950000.0,
       "defaultDemoCost": null,
-      "score": 58,
+      "score": 38,
       "reasons": [
         "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+204% vs assessed, rank 116/565 (+20 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -36220,11 +36159,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 3052285,
         "rangeLow": 640595,
         "rangeHigh": 4316085,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $3,052,285 (range $640,595-$4,316,085)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $3,052,285 (range $640,595-$4,316,085).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 204,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": true,
       "firstSeen": "2026-10-04",
@@ -36403,12 +36342,11 @@ window.PHX_LAND_LEADS = {
       "saleDate": "12/01/2024",
       "salePrice": 450000.0,
       "defaultDemoCost": null,
-      "score": 58,
+      "score": 38,
       "reasons": [
         "adjacent parcels already zoned R-5",
         "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+231% vs assessed, rank 97/565 (+20 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -36476,11 +36414,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 668716,
         "rangeLow": 184616,
         "rangeHigh": 1260682,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $668,716 (range $184,616-$1,260,682)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $668,716 (range $184,616-$1,260,682).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 231,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
@@ -37009,13 +36947,11 @@ window.PHX_LAND_LEADS = {
       "saleDate": "01/01/2022",
       "salePrice": 882000.0,
       "defaultDemoCost": null,
-      "score": 58,
+      "score": 38,
       "reasons": [
         "adjacent parcels already zoned R-5",
         "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps margin 1181% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+1181% vs assessed, rank 6/565 (+20 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -37083,11 +37019,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 4525389,
         "rangeLow": 2215480,
         "rangeHigh": 11605325,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $4,525,389 (range $2,215,480-$11,605,325)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $4,525,389 (range $2,215,480-$11,605,325).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 1181,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
@@ -37138,13 +37074,11 @@ window.PHX_LAND_LEADS = {
       "saleDate": "01/01/2022",
       "salePrice": 882000.0,
       "defaultDemoCost": null,
-      "score": 58,
+      "score": 38,
       "reasons": [
         "adjacent parcels already zoned R-5",
         "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps margin 1181% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+1181% vs assessed, rank 7/565 (+20 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -37212,11 +37146,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 4525389,
         "rangeLow": 2215480,
         "rangeHigh": 11605325,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $4,525,389 (range $2,215,480-$11,605,325)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $4,525,389 (range $2,215,480-$11,605,325).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 1181,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
@@ -37267,13 +37201,11 @@ window.PHX_LAND_LEADS = {
       "saleDate": "09/01/2022",
       "salePrice": 900000.0,
       "defaultDemoCost": null,
-      "score": 58,
+      "score": 38,
       "reasons": [
         "adjacent parcels already zoned R-5",
         "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps margin 372% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+372% vs assessed, rank 41/565 (+20 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -37341,11 +37273,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 3703834,
         "rangeLow": 1347543,
         "rangeHigh": 19401751,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $3,703,834 (range $1,347,543-$19,401,751)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $3,703,834 (range $1,347,543-$19,401,751).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 372,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
@@ -37646,14 +37578,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 58,
+      "score": 38,
       "reasons": [
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 23+ years \u2014 likely low or no debt on the land",
-        "comps margin 2573% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+2573% vs assessed, rank 1/565 (+20 pts)"
+        "held 23+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [
         {
@@ -37721,11 +37651,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 1376721,
         "rangeLow": 76815,
         "rangeHigh": 1857684,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,376,721 (range $76,815-$1,857,684)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,376,721 (range $76,815-$1,857,684).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 2573,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
@@ -37893,12 +37823,11 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 58,
+      "score": 38,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+237% vs assessed, rank 87/565 (+20 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -37966,11 +37895,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 872301,
         "rangeLow": 178462,
         "rangeHigh": 1805558,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $872,301 (range $178,462-$1,805,558)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $872,301 (range $178,462-$1,805,558).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 237,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-04",
@@ -38787,13 +38716,11 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 58,
+      "score": 38,
       "reasons": [
         "adjacent parcels already zoned R1-8",
         "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps margin 345% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+345% vs assessed, rank 52/565 (+20 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -38861,11 +38788,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 640708,
         "rangeLow": 149482,
         "rangeHigh": 1332442,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $640,708 (range $149,482-$1,332,442)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $640,708 (range $149,482-$1,332,442).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 345,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
@@ -40417,13 +40344,11 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 58,
+      "score": 38,
       "reasons": [
         "adjacent parcels already zoned R1-10",
         "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps margin 304% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+304% vs assessed, rank 64/565 (+20 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -40491,11 +40416,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 1604761,
         "rangeLow": 368320,
         "rangeHigh": 2163352,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,604,761 (range $368,320-$2,163,352)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,604,761 (range $368,320-$2,163,352).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 304,
-      "compsAdj": 20,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
@@ -40797,13 +40722,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 57,
+      "score": 53,
       "reasons": [
         "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+1% vs assessed, rank 364/565 (+4 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -40871,11 +40795,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 411788,
         "rangeLow": 290187,
         "rangeHigh": 1729764,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $411,788 (range $290,187-$1,729,764)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $411,788 (range $290,187-$1,729,764).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 1,
-      "compsAdj": 4,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": true,
       "firstSeen": "2026-10-04",
@@ -41176,13 +41100,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": "08/01/2021",
       "salePrice": 410000.0,
       "defaultDemoCost": null,
-      "score": 56,
+      "score": 46,
       "reasons": [
         "adjacent parcels already zoned R-5",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+133% vs assessed, rank 157/565 (+10 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -41250,11 +41173,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 957439,
         "rangeLow": 460742,
         "rangeHigh": 2955283,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $957,439 (range $460,742-$2,955,283)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $957,439 (range $460,742-$2,955,283).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 133,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -41305,13 +41228,12 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": null,
-      "score": 56,
+      "score": 46,
       "reasons": [
         "adjacent parcels already zoned R1-10",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+89% vs assessed, rank 203/565 (+10 pts)"
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
       ],
       "comps": [
         {
@@ -41379,11 +41301,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 489497,
         "rangeLow": 306175,
         "rangeHigh": 2708619,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $489,497 (range $306,175-$2,708,619)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $489,497 (range $306,175-$2,708,619).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 89,
-      "compsAdj": 10,
+      "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": true,
       "firstSeen": "2026-10-04",
@@ -42628,16 +42550,14 @@ window.PHX_LAND_LEADS = {
       "saleDate": "04/01/2011",
       "salePrice": 263000.0,
       "defaultDemoCost": 18000,
-      "score": 91,
+      "score": 71,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held 15+ years \u2014 likely low or no debt on the land",
         "2 code-enforcement cases at this address (2024+)",
         "existing structure occupies only 9% of the lot \u2014 under-improved for the land size",
-        "built 1967, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps margin 1922% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+1922% vs assessed, rank 8/327 (+20 pts)"
+        "built 1967, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -42705,15 +42625,15 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 8886554,
         "rangeLow": 473299,
         "rangeHigh": 42708717,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $8,886,554 (range $473,299-$42,708,717)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $8,886,554 (range $473,299-$42,708,717).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 1922,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-01",
       "peakScore": 96,
-      "compsAdj": 20,
       "stale": true
     },
     {
@@ -42756,15 +42676,13 @@ window.PHX_LAND_LEADS = {
       "farRatio": 0.11750185139471736,
       "yearBuilt": "1984",
       "defaultDemoCost": 18000,
-      "score": 91,
+      "score": 71,
       "reasons": [
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "existing structure occupies only 12% of the lot \u2014 under-improved for the land size",
-        "comps margin 1427% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+1427% vs assessed, rank 13/327 (+20 pts)"
+        "existing structure occupies only 12% of the lot \u2014 under-improved for the land size"
       ],
       "comps": [
         {
@@ -42832,10 +42750,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 6102821,
         "rangeLow": 667331,
         "rangeHigh": 25957960,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $6,102,821 (range $667,331-$25,957,960)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $6,102,821 (range $667,331-$25,957,960).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 1427,
+      "equityMarginPct": null,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "401 Congress Ave, 33rd Floor, AUSTIN, TX, 78701",
@@ -42845,8 +42764,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-01",
       "peakScore": 71,
-      "stale": true,
-      "compsAdj": 20
+      "stale": true
     },
     {
       "apn": "21316010E",
@@ -43028,7 +42946,7 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 89,
+      "score": 69,
       "reasons": [
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
@@ -43036,9 +42954,7 @@ window.PHX_LAND_LEADS = {
         "held 17+ years \u2014 likely low or no debt on the land",
         "9 code-enforcement cases at this address (2024+)",
         "existing structure occupies only 12% of the lot \u2014 under-improved for the land size",
-        "built 1962, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps margin 1932% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+1932% vs assessed, rank 7/327 (+20 pts)"
+        "built 1962, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -43106,10 +43022,11 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 7358490,
         "rangeLow": 387148,
         "rangeHigh": 34934734,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $7,358,490 (range $387,148-$34,934,734)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $7,358,490 (range $387,148-$34,934,734).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 1932,
+      "equityMarginPct": null,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "18801 N THOMPSON PEAK PKWY STE 240, SCOTTSDALE, AZ, 85255",
@@ -43119,7 +43036,6 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-01",
       "peakScore": 94,
-      "compsAdj": 20,
       "stale": true
     },
     {
@@ -43162,15 +43078,13 @@ window.PHX_LAND_LEADS = {
       "farRatio": 0.015893414461433556,
       "yearBuilt": "1981",
       "defaultDemoCost": 18000,
-      "score": 88,
+      "score": 68,
       "reasons": [
         "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 45+ years \u2014 likely low or no debt on the land",
-        "existing structure occupies only 2% of the lot \u2014 under-improved for the land size",
-        "comps margin 355% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+355% vs assessed, rank 64/327 (+20 pts)"
+        "existing structure occupies only 2% of the lot \u2014 under-improved for the land size"
       ],
       "comps": [
         {
@@ -43238,16 +43152,16 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 2565565,
         "rangeLow": 1198292,
         "rangeHigh": 6459076,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,565,565 (range $1,198,292-$6,459,076)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,565,565 (range $1,198,292-$6,459,076).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 355,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-01",
       "peakScore": 68,
-      "stale": true,
-      "compsAdj": 20
+      "stale": true
     },
     {
       "apn": "16610054B",
@@ -43293,15 +43207,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": "05/01/2009",
       "salePrice": 56000.0,
       "defaultDemoCost": 18000,
-      "score": 85,
+      "score": 65,
       "reasons": [
         "adjacent parcels already zoned R-5",
         "parcel size fits small-to-mid infill development",
         "held 17+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size",
-        "built 1962, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps margin 2744% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+2744% vs assessed, rank 3/327 (+20 pts)"
+        "built 1962, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -43369,15 +43281,15 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 7019999,
         "rangeLow": 348465,
         "rangeHigh": 34328236,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $7,019,999 (range $348,465-$34,328,236)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $7,019,999 (range $348,465-$34,328,236).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 2744,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-01",
       "peakScore": 90,
-      "compsAdj": 20,
       "stale": true
     },
     {
@@ -43424,15 +43336,13 @@ window.PHX_LAND_LEADS = {
       "saleDate": null,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 85,
+      "score": 65,
       "reasons": [
         "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
         "held 16+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 9% of the lot \u2014 under-improved for the land size",
-        "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps margin 2015% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+2015% vs assessed, rank 6/327 (+20 pts)"
+        "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance"
       ],
       "comps": [
         {
@@ -43500,15 +43410,15 @@ window.PHX_LAND_LEADS = {
         "mostLikelyValue": 8921968,
         "rangeLow": 470069,
         "rangeHigh": 42417222,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $8,921,968 (range $470,069-$42,417,222)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored) and adjusted for lot size and sale date, the subject's land is estimated at approximately $8,921,968 (range $470,069-$42,417,222).",
+        "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 2015,
+      "equityMarginPct": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-01",
       "peakScore": 90,
-      "compsAdj": 20,
       "stale": true
     }
   ],

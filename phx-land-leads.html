@@ -528,7 +528,7 @@ function compsSectionHtml(lead){
     ? `<div class="valuation-box">
         <div class="valuation-range">${money(v.rangeLow)} – ${money(v.rangeHigh)}</div>
         <div class="valuation-likely">Most likely value: <b>${money(v.mostLikelyValue)}</b>${lead.equityMarginPct!=null ? ` <span style="color:${lead.equityMarginPct>=0?'#2f5b41':'#c0392b'};font-weight:700;">(${lead.equityMarginPct>=0?'+':''}${lead.equityMarginPct}% vs assessed)</span>` : ''}</div>
-        <div class="valuation-explain">${esc(v.explanation)}</div>
+        <div class="valuation-explain">${esc(v.explanation)}</div>${v.unreliable ? '<div style="margin-top:6px;font-size:12px;font-weight:700;color:#aa3f3c;">⚠ Comps too spread out / too rich per sf — don\'t trust this value or margin.</div>' : ''}
       </div>`
     : `<div class="comps-empty" style="margin-bottom:8px;">No dollar estimate — comps below aren't close enough in lot size to extrapolate from reliably.</div>`;
   return `<div class="comps-section">
@@ -984,6 +984,14 @@ document.getElementById('hist-list').innerHTML = (D.history||[]).length
 
 // ── Maps (two separate instances: vacant-only and teardown-only) ──────────
 function colorFor(status){ return status === 'improved' ? '#b3831f' : '#3f7a57'; }
+// FEMA flood-hazard tiles (layer 28) via ArcGIS export, one 256px web-mercator tile per request.
+const FemaFlood = L.TileLayer.extend({
+  getTileUrl(c){
+    const R = 20037508.342789244, s = 2 * R / Math.pow(2, c.z);
+    const x0 = -R + c.x * s, y1 = R - c.y * s;
+    return `${this._url}?bbox=${x0},${y1 - s},${x0 + s},${y1}&bboxSR=3857&imageSR=3857&size=256,256&format=png32&transparent=true&layers=show:28&f=image`;
+  }
+});
 function initMap(containerId){
   const map = L.map(containerId).setView([33.65, -112.05], 11);
   const streets = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -992,7 +1000,10 @@ function initMap(containerId){
   const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     maxZoom: 19, attribution: 'Tiles &copy; Esri'
   });
-  L.control.layers({ 'Street': streets, 'Satellite': satellite }).addTo(map);
+  const flood = new FemaFlood('https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/export', {
+    maxZoom: 19, opacity: 0.5, attribution: 'Flood zones: FEMA NFHL'
+  }).addTo(map);
+  L.control.layers({ 'Street': streets, 'Satellite': satellite }, { 'FEMA flood zones': flood }).addTo(map);
   return { map, markers: [] };
 }
 function renderMapInstance(inst, leads){
