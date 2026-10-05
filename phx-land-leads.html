@@ -272,6 +272,12 @@
         <div id="leads-list"></div>
       </div>
 
+      <div class="card" id="contacted">
+        <div class="card-head"><h2>📬 Contacted Leads</h2></div>
+        <div id="contacted-summary" style="font-size:13px;color:var(--text-soft);margin-bottom:10px;"></div>
+        <div style="overflow-x:auto;"><table class="comps-table" id="contacted-table"></table></div>
+      </div>
+
       <div class="card" id="discarded">
         <div class="card-head"><h2>✕ Discarded Leads</h2></div>
         <div id="discarded-summary" style="font-size:13px;color:var(--text-soft);margin-bottom:10px;"></div>
@@ -554,9 +560,7 @@ function toggleContacted(apn){
   if(map[apn]) delete map[apn];
   else map[apn] = new Date().toISOString().slice(0,10);
   try{ localStorage.setItem('contactedLeads', JSON.stringify(map)); }catch(e){}
-  renderLeads(currentLeads);
-  const idx = currentLeads.findIndex(l => l.apn === apn);
-  if(idx >= 0) document.getElementById(`detail-${idx}`)?.classList.add('show');
+  refreshAll();
 }
 
 function loadNotes(){
@@ -807,7 +811,7 @@ function applyFilters(){
   // Shared filters (search/value/flood/hot) apply to both the list and both
   // maps. Type only narrows the LIST -- the two maps always show their own
   // category side by side, that's the whole point of having two of them.
-  let base = (D.leads || []).filter(l => !isDiscarded(l.apn));
+  let base = (D.leads || []).filter(l => !isDiscarded(l.apn) && !isContacted(l.apn));
   if(q) base = base.filter(l => (l.address||'').toLowerCase().includes(q) || (l.ownerName||'').toLowerCase().includes(q));
   if(document.getElementById('estateOnly').checked) base = base.filter(l => l.ownership?.isEstateOwner);
   if(hideFlood) base = base.filter(l => !l.inFloodplain);
@@ -838,7 +842,7 @@ function loadDiscarded(){
   try{ return JSON.parse(localStorage.getItem('discardedLeads') || '{}'); }catch(e){ return {}; }
 }
 function isDiscarded(apn){ return !!loadDiscarded()[apn]; }
-function refreshAll(){ applyFilters(); renderSkipTrace(); renderMaxOffer(); renderDiscarded(); }
+function refreshAll(){ applyFilters(); renderSkipTrace(); renderMaxOffer(); renderDiscarded(); renderContacted(); }
 function discardLead(apn){
   const map = loadDiscarded();
   map[apn] = { date: new Date().toISOString().slice(0,10), reason: '' };
@@ -855,6 +859,24 @@ function setDiscardReason(apn, text){
   if(map[apn]){ map[apn].reason = text; try{ localStorage.setItem('discardedLeads', JSON.stringify(map)); }catch(e){} }
 }
 function xBtn(apn){ return `<button class="x-btn" title="Discard this lead" onclick="event.stopPropagation();discardLead('${esc(apn)}')">✕</button>`; }
+function setContactNote(apn, text){
+  const map = loadNotes(); if(text.trim()) map[apn] = text; else delete map[apn];
+  try{ localStorage.setItem('leadNotes', JSON.stringify(map)); }catch(e){}
+}
+function renderContacted(){
+  const map = loadContacted(), notes = loadNotes(), today = Date.now();
+  const rows = (D.leads || []).filter(l => map[l.apn]).sort((a,b) => map[a.apn].localeCompare(map[b.apn]));
+  document.getElementById('contacted-summary').textContent = rows.length
+    ? `${rows.length} contacted — oldest first, so the ones due a follow-up (7+ days) are at the top.` : 'No one marked contacted yet. Use "Mark contacted" on a lead.';
+  document.getElementById('contacted-table').innerHTML = rows.length ? `<thead><tr><th>Address</th><th>Score</th><th>Owner</th><th>Contacted</th><th>Notes</th><th></th></tr></thead>
+    <tbody>${rows.map(l => { const d = map[l.apn], days = Math.floor((today - new Date(d + 'T12:00:00')) / 864e5);
+      return `<tr>
+      <td>${esc(l.address.split('  ')[0])}<div style="font-size:10.5px;color:var(--text-faint);">APN ${esc(l.apn)}</div></td>
+      <td>${l.score}</td><td>${esc(l.ownerName)||'—'}</td>
+      <td>${esc(d)}<div style="font-size:10.5px;font-weight:700;color:${days>=7?'#aa3f3c':'var(--text-faint)'};">${days} day${days===1?'':'s'} ago${days>=7?' · follow up':''}</div></td>
+      <td><input value="${esc(notes[l.apn]||'')}" placeholder="what they said…" style="width:100%;min-width:200px;" onchange="setContactNote('${esc(l.apn)}', this.value)"></td>
+      <td><button class="mail-btn" onclick="toggleContacted('${esc(l.apn)}')">Unmark</button></td></tr>`; }).join('')}</tbody>` : '';
+}
 function renderDiscarded(){
   const map = loadDiscarded();
   const rows = (D.leads || []).filter(l => map[l.apn]);
@@ -878,7 +900,7 @@ function skipTraceCandidates(){
   const minScore = parseFloat(document.getElementById('stMinScore').value) || 0;
   const minMargin = parseFloat(document.getElementById('stMinMargin').value) || 0;
   return (D.leads || [])
-    .filter(l => !isDiscarded(l.apn))
+    .filter(l => !isDiscarded(l.apn) && !isContacted(l.apn))
     .filter(l => loadCondition()[l.apn] !== 'good')
     .filter(l => l.score >= minScore && l.equityMarginPct != null && l.equityMarginPct >= minMargin)
     .sort((a,b) => b.score - a.score)
@@ -931,7 +953,7 @@ function maxOfferRows(){
   const lotPct = v('moLotPct'), profit = v('moProfitPct'), costs = v('moCostPct');
   const doSplit = document.getElementById('moSplit').checked, splitCost = parseFloat(document.getElementById('moSplitCost').value) || 0, haircut = (parseFloat(document.getElementById('moSplitHaircut').value) || 100) / 100;
   const tags = loadCondition();
-  return (D.leads || []).filter(l => l.newBuild && tags[l.apn] !== 'good' && !isDiscarded(l.apn)).map(l => {
+  return (D.leads || []).filter(l => l.newBuild && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn)).map(l => {
     const potential = splitLots(l), n = doSplit ? potential : 1;
     const lotSale = l.newBuild.arv * lotPct * (n > 1 ? n * haircut : 1);  // smaller lots sell for less each
     const demo = l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0;
@@ -970,6 +992,7 @@ function renderMaxOffer(){
   document.getElementById(id).addEventListener('input', renderMaxOffer));
 renderMaxOffer();
 renderDiscarded();
+renderContacted();
 
 // ── History ──────────────────────────────────────────────────────────────
 document.getElementById('hist-list').innerHTML = (D.history||[]).length
