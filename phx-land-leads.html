@@ -910,7 +910,7 @@ function importContacts(input){
       if(!l) return;
       const phones = [1,2,3].map(i => ({ n: g('Phone ' + i), type: g('Phone ' + i + ' Type') })).filter(p => p.n);
       const emails = [1,2,3,4,5].map(i => g('Email ' + i)).filter(Boolean);
-      store[l.apn] = { phones, emails, ownerType: g('Owner Type'), marketValue: g('Market Value Total'),
+      store[l.apn] = { phones, emails, first: g('First Name'), last: g('Last Name'), mcity: g('Mailing City'), mstate: g('Mailing State'), ownerType: g('Owner Type'), marketValue: g('Market Value Total'),
         taxDelinquentYear: g('Tax Delinquent Year'), lastSaleDate: g('Assessor Last Sale Date').slice(0,10),
         lastSaleAmount: g('Assessor Last Sale Amount'), importedAt: new Date().toISOString().slice(0,10) };
       matched++; if(phones.length) withPhone++;
@@ -926,6 +926,16 @@ function contactInline(apn){
   const c = loadContacts()[apn]; if(!c) return '';
   return c.phones.length ? c.phones.map(p => `<a href="tel:${esc(String(p.n).replace(/\D/g,''))}">${esc(fmtPhone(p.n))}</a>`).join(' · ') : '<span style="color:var(--text-faint);">traced – no phone found</span>';
 }
+function loadChecks(){ try{ return JSON.parse(localStorage.getItem('contactChecks') || '{}'); }catch(e){ return {}; } }
+function setCheck(apn, v){
+  const m = loadChecks(); if(m[apn] === v) delete m[apn]; else m[apn] = v;
+  try{ localStorage.setItem('contactChecks', JSON.stringify(m)); }catch(e){}
+  const el = document.getElementById('cb-' + apn), lead = (D.leads || []).find(l => l.apn === apn);
+  if(el && lead) el.outerHTML = contactBlock(lead);
+  renderSkipTrace();
+}
+const tpsPhone = n => 'https://www.truepeoplesearch.com/results?phoneno=' + encodeURIComponent(fmtPhone(n));
+const tpsName = c => 'https://www.truepeoplesearch.com/results?name=' + encodeURIComponent(((c.first || '') + ' ' + (c.last || '')).trim()) + '&citystatezip=' + encodeURIComponent(((c.mcity || '') + ' ' + (c.mstate || '')).trim());
 function contactBlock(lead){
   const c = loadContacts()[lead.apn]; if(!c) return '';
   const usd = v => v ? '$' + Math.round(parseFloat(v)).toLocaleString() : '';
@@ -935,7 +945,14 @@ function contactBlock(lead){
   if(c.marketValue) bits.push('Market value ' + usd(c.marketValue));
   if(c.lastSaleAmount && c.lastSaleAmount !== '0') bits.push(`Last sale ${usd(c.lastSaleAmount)}${c.lastSaleDate ? ' (' + c.lastSaleDate.slice(0,4) + ')' : ''}`);
   if(c.taxDelinquentYear) bits.push(`<b style="color:#aa3f3c;">⚠ tax delinquent since ${esc(c.taxDelinquentYear)}</b>`);
-  return `<div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">🔎 Skip trace (${esc(c.importedAt)}): ${bits.join(' &nbsp;·&nbsp; ')}</div>`;
+  const chk = loadChecks()[lead.apn];
+  const verify = `<div style="margin-top:4px;">Verify on TruePeopleSearch:
+      ${c.phones.map(p => `<a href="${tpsPhone(p.n)}" target="_blank" rel="noopener">🔍 ${esc(fmtPhone(p.n))}</a>`).join(' · ')}
+      ${c.first || c.last ? ` · <a href="${tpsName(c)}" target="_blank" rel="noopener">🔍 by name + mailing city</a>` : ''}
+      <span style="margin-left:8px;">Right person?
+        <button class="mail-btn" style="margin-left:4px;${chk==='yes'?'outline:2px solid var(--success);':''}" onclick="setCheck('${esc(lead.apn)}','yes')">✓ Yes</button>
+        <button class="mail-btn" style="margin-left:4px;${chk==='no'?'outline:2px solid #aa3f3c;':''}" onclick="setCheck('${esc(lead.apn)}','no')">✗ No</button></span></div>`;
+  return `<div id="cb-${esc(lead.apn)}" class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">🔎 Skip trace (${esc(c.importedAt)}): ${bits.join(' &nbsp;·&nbsp; ')}${c.phones.length ? verify : ''}</div>`;
 }
 
 // ── Discarded leads (big X) ─────────────────────────────────────────────
@@ -1011,8 +1028,10 @@ function skipTraceCandidates(){
 function renderSkipTrace(){
   const rows = skipTraceCandidates();
   const costPer = parseFloat(document.getElementById('stCostPerRecord').value) || 0;
+  const ck = Object.entries(loadChecks()).filter(([a]) => loadContacts()[a]), yes = ck.filter(([, v]) => v === 'yes').length, no = ck.length - yes;
   document.getElementById('skip-trace-summary').textContent =
-    `${rows.length} leads qualify — est. cost $${(rows.length * costPer).toFixed(2)} at $${costPer.toFixed(2)}/record.`;
+    `${rows.length} leads qualify — est. cost $${(rows.length * costPer).toFixed(2)} at $${costPer.toFixed(2)}/record.` +
+    (ck.length ? `  Verified so far: ${yes} right person, ${no} wrong (${Math.round(yes / ck.length * 100)}% accurate).` : '');
   const table = document.getElementById('skip-trace-table');
   if(!rows.length){
     table.innerHTML = `<tbody><tr><td style="padding:12px;color:var(--text-faint);">No leads clear both thresholds yet.</td></tr></tbody>`;
