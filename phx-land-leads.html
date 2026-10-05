@@ -121,6 +121,10 @@
         <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         <span class="label">Phoenix Permit Tracker</span>
       </a>
+      <a class="nav-item" href="phx-land-leads.html#max-offer">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h4a1.5 1.5 0 0 1 0 3h-3a1.5 1.5 0 0 0 0 3h4"/></svg>
+        <span class="label">Max Offer (Sell to Builder)</span>
+      </a>
       <a class="nav-item active" href="phx-land-leads.html">
         <svg class="icon" viewBox="0 0 24 24"><path d="M12 2 3 8l9 6 9-6-9-6z"/><path d="M3 16l9 6 9-6"/><path d="M3 12l9 6 9-6"/></svg>
         <span class="label">North Phoenix Land Leads</span>
@@ -146,6 +150,37 @@
       <div class="methodology-note" id="methodology-note"></div>
 
       <div class="meta-row" id="meta-row"></div>
+
+      <div class="card" id="max-offer" style="border:2px solid #3f7a57; background:#f6fbf8;">
+        <div class="card-head">
+          <h2>💰 Max Offer — Sell the Lot to a Builder</h2>
+          <span class="card-sub">The most you can pay the owner and still clear your profit when you flip the lot to a builder. Built from what newly built homes nearby actually sold for (County Assessor, last 3 years).</span>
+        </div>
+        <div class="filter-row">
+          <label style="font-size:12.5px;color:var(--text-soft);">Builder pays for lot (% of finished home value)
+            <input class="filter-input" id="moLotPct" type="number" value="25" style="width:70px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Your profit target (% of lot sale)
+            <input class="filter-input" id="moProfitPct" type="number" value="15" style="width:70px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Closing + holding (% of lot sale)
+            <input class="filter-input" id="moCostPct" type="number" value="5" style="width:70px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Open offer at (% of max)
+            <input class="filter-input" id="moOpenPct" type="number" value="75" style="width:70px;"></label>
+          <select class="filter-input" id="moSort" style="width:230px;">
+            <option value="cushion">Sort: biggest cushion over assessed</option>
+            <option value="max">Sort: highest max offer</option>
+            <option value="score">Sort: lead score</option>
+          </select>
+        </div>
+        <div id="mo-summary" style="font-size:13px;color:var(--text-soft);margin-bottom:10px;"></div>
+        <div style="overflow-x:auto;"><table class="comps-table" id="mo-table"></table></div>
+        <div style="font-size:11px; color:var(--text-faint); margin-top:10px; line-height:1.55;">
+          <b>Math:</b> max offer = new-build home value × lot % × (1 − profit % − closing %) − demo cost (underused lots only).
+          The 25% lot share is a rule of thumb for infill lots — confirm with a real builder; it moves every number here.
+          Home value is a median of recent newly built single-family sales, not an appraisal; luxury areas (e.g. 85028) run far higher.
+          Assessed value lags the market, so "cushion" shows room, not a guaranteed discount. Assumes the lot is zoned and sized for a home;
+          it does not yet account for splitting a big lot into two.
+        </div>
+      </div>
 
       <div class="card">
         <div class="card-head">
@@ -828,6 +863,48 @@ function copySkipTraceCsv(){
 ['stMinScore','stMinMargin','stCostPerRecord'].forEach(id =>
   document.getElementById(id).addEventListener('input', renderSkipTrace));
 renderSkipTrace();
+
+// ── Max Offer (sell the lot to a builder) ────────────────────────────────
+function maxOfferRows(){
+  const v = id => (parseFloat(document.getElementById(id).value) || 0) / 100;
+  const lotPct = v('moLotPct'), profit = v('moProfitPct'), costs = v('moCostPct');
+  const tags = loadCondition();
+  return (D.leads || []).filter(l => l.newBuild && tags[l.apn] !== 'good').map(l => {
+    const lotSale = l.newBuild.arv * lotPct;
+    const demo = l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0;
+    const max = lotSale * (1 - profit - costs) - demo;
+    return { l, lotSale, demo, max, cushion: l.assessedValue ? max - l.assessedValue : null };
+  }).filter(r => r.max > 0);
+}
+function renderMaxOffer(){
+  const open = (parseFloat(document.getElementById('moOpenPct').value) || 0) / 100;
+  const sort = document.getElementById('moSort').value;
+  const key = { cushion: r => r.cushion == null ? -1e12 : r.cushion, max: r => r.max, score: r => r.l.score }[sort];
+  const all = maxOfferRows().sort((a,b) => key(b) - key(a));
+  const rows = all.slice(0, 40);
+  const money = n => '$' + Math.round(n).toLocaleString();
+  document.getElementById('mo-summary').textContent =
+    `${all.length} leads have a positive max offer under these assumptions — showing the top ${rows.length}.`;
+  const table = document.getElementById('mo-table');
+  if(!rows.length){ table.innerHTML = '<tbody><tr><td style="padding:12px;color:var(--text-faint);">No new-build values yet — they fill in on the next daily pull.</td></tr></tbody>'; return; }
+  table.innerHTML = `<thead><tr><th>Address</th><th>Type</th><th>Lot</th><th>New-build value</th><th>Builder pays</th><th>MAX OFFER</th><th>Open at</th><th>Assessed</th><th>Cushion</th><th>Score</th></tr></thead>
+    <tbody>${rows.map(r => { const l = r.l, n = l.newBuild;
+      const ex = n.examples.map(e => `${e.address} ${money(e.price)} (${e.sf.toLocaleString()} sf, ${e.sold.slice(0,7)})`).join(' · ');
+      return `<tr>
+        <td>${esc(l.address.split('  ')[0])}<div style="font-size:10.5px;color:var(--text-faint);max-width:340px;">${esc(l.ownerName)||''}</div></td>
+        <td>${l.parcelStatus === 'improved' ? 'Underused' : 'Vacant'}</td>
+        <td>${l.landSf ? Math.round(l.landSf).toLocaleString() + ' sf' : '—'}</td>
+        <td title="${esc(ex)}">${money(n.arv)}<div style="font-size:10.5px;color:var(--text-faint);">${n.n} sales · ${n.radiusMi}mi</div></td>
+        <td>${money(r.lotSale)}</td>
+        <td><b style="color:#2f6b47;">${money(r.max)}</b></td>
+        <td>${money(r.max * open)}</td>
+        <td>${l.assessedValue ? money(l.assessedValue) : '—'}</td>
+        <td>${r.cushion == null ? '—' : (r.cushion >= 0 ? '+' : '−') + money(Math.abs(r.cushion))}</td>
+        <td>${l.score}</td></tr>`; }).join('')}</tbody>`;
+}
+['moLotPct','moProfitPct','moCostPct','moOpenPct','moSort'].forEach(id =>
+  document.getElementById(id).addEventListener('input', renderMaxOffer));
+renderMaxOffer();
 
 // ── History ──────────────────────────────────────────────────────────────
 document.getElementById('hist-list').innerHTML = (D.history||[]).length

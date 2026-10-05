@@ -787,6 +787,9 @@ def main():
               + by_score([l for l in comp_targets if l["parcelStatus"] == "improved"])
     top_leads.sort(key=lambda r: r["score"], reverse=True)
 
+    from offer import attach_new_build_values  # "Max Offer" section data (sell-to-builder model)
+    attach_new_build_values(top_leads)
+
     # Unmask hidden LLC owners (not trusts -- a trust name already carries the
     # real person's name) via OpenCorporates. Scoped to top_leads only (not
     # all ~9k scanned parcels) and run at low concurrency out of courtesy to
