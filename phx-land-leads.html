@@ -854,7 +854,7 @@ function setDiscardReason(apn, text){
   const map = loadDiscarded();
   if(map[apn]){ map[apn].reason = text; try{ localStorage.setItem('discardedLeads', JSON.stringify(map)); }catch(e){} }
 }
-const xBtn = apn => `<button class="x-btn" title="Discard this lead" onclick="event.stopPropagation();discardLead('${esc(apn)}')">✕</button>`;
+function xBtn(apn){ return `<button class="x-btn" title="Discard this lead" onclick="event.stopPropagation();discardLead('${esc(apn)}')">✕</button>`; }
 function renderDiscarded(){
   const map = loadDiscarded();
   const rows = (D.leads || []).filter(l => map[l.apn]);
