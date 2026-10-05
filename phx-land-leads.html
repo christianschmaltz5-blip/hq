@@ -571,6 +571,7 @@ function saveNote(apn, idx, text){
   const map = loadNotes();
   if(text.trim()) map[apn] = text; else delete map[apn];
   try{ localStorage.setItem('leadNotes', JSON.stringify(map)); }catch(e){}
+  document.querySelectorAll('textarea[data-note-apn]').forEach(t => { if(t.dataset.noteApn === apn && t !== document.activeElement) t.value = text; });
   const b = document.getElementById(`notebadge-${idx}`);
   if(b) b.style.display = text.trim() ? '' : 'none';
 }
@@ -613,7 +614,10 @@ function leadCard(lead, idx){
         <div class="lead-addr">${newBadge} ${statusBadge} ${condBadge} <span id="notebadge-${idx}" class="reason-chip" title="You have a note on this lead" style="${loadNotes()[lead.apn] ? '' : 'display:none;'}">📝 Note</span> ${staleBadge} ${contactedBadge} ${esc(lead.address)||'(no address on file)'}</div>
         <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'}${lead.landUseClass ? ` (${lead.landUseClass === 'commercial' ? '🏢 commercial' : lead.landUseClass === 'industrial' ? '🏭 industrial' : '🏠 residential'})` : ''} · Owner: ${esc(lead.ownerName)||'—'} · ${esc(dealTypeLabel)}</div>
       </div>
-      <div class="lead-score">${isHot?'<span class="hot-flag">🔥</span>':''}<span class="score-badge ${scoreClass(lead.score)}">${lead.score}</span> ${xBtn(lead.apn)}</div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;" onclick="event.stopPropagation()">
+        <div class="lead-score">${isHot?'<span class="hot-flag">🔥</span>':''}<span class="score-badge ${scoreClass(lead.score)}">${lead.score}</span> ${xBtn(lead.apn)}</div>
+        <textarea data-note-apn="${esc(lead.apn)}" placeholder="Notes…" style="width:230px;height:62px;padding:6px 8px;border:1px solid var(--card-border);border-radius:8px;font:inherit;font-size:12.5px;resize:vertical;background:#fff;" oninput="saveNote('${esc(lead.apn)}', ${idx}, this.value)">${esc(loadNotes()[lead.apn] || '')}</textarea>
+      </div>
     </div>
     ${lead.lat!=null && lead.lng!=null ? `<div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">
       <a href="https://www.google.com/maps/@${lead.lat},${lead.lng},19z/data=!3m1!1e3" target="_blank" rel="noopener">🛰️ Satellite</a>
@@ -656,7 +660,7 @@ function leadCard(lead, idx){
       </div>
       <div class="detail-field" style="margin-top:12px;" onclick="event.stopPropagation()">
         <div class="detail-label">My Notes (saved in this browser)</div>
-        <textarea style="width:100%;min-height:80px;margin-top:6px;padding:8px;border:1px solid var(--card-border);border-radius:8px;font:inherit;font-size:13px;resize:vertical;" placeholder="Calls, owner details, what you saw on Street View…" oninput="saveNote('${esc(lead.apn)}', ${idx}, this.value)">${esc(loadNotes()[lead.apn] || '')}</textarea>
+        <textarea data-note-apn="${esc(lead.apn)}" style="width:100%;min-height:80px;margin-top:6px;padding:8px;border:1px solid var(--card-border);border-radius:8px;font:inherit;font-size:13px;resize:vertical;" placeholder="Calls, owner details, what you saw on Street View…" oninput="saveNote('${esc(lead.apn)}', ${idx}, this.value)">${esc(loadNotes()[lead.apn] || '')}</textarea>
       </div>
       ${compsSectionHtml(lead)}
       <div class="calc-toggle" onclick="toggleCalc(${idx})">
