@@ -238,6 +238,7 @@
             <input class="filter-input" id="stCostPerRecord" type="number" value="0.10" step="0.01" style="width:70px;">
           </label>
           <button class="mail-btn" onclick="copySkipTraceCsv()">📋 Copy CSV for BatchSkipTracing</button>
+          <label class="mail-btn" style="cursor:pointer;" title="Private: stays in this browser, never uploaded">📥 Import REISkip results (CSV)<input type="file" accept=".csv" style="display:none" onchange="importContacts(this)"></label>
         </div>
         <div id="skip-trace-summary" style="font-size:13px;color:var(--text-soft);margin-bottom:10px;"></div>
         <div style="overflow-x:auto;"><table class="comps-table" id="skip-trace-table"></table></div>
@@ -619,6 +620,7 @@ function leadCard(lead, idx){
       &nbsp;·&nbsp;
       <a href="https://www.google.com/maps?layer=c&cbll=${lead.lat},${lead.lng}" target="_blank" rel="noopener">🚶 Street View</a>
     </div>` : ''}
+    ${contactBlock(lead)}
     <div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">🎨 Street View render prompt:
       <button class="mail-btn" style="margin-left:6px;" onclick="copyRenderPrompt('${esc(lead.apn)}','homes',this)">Homes</button>
       <button class="mail-btn" style="margin-left:6px;" onclick="copyRenderPrompt('${esc(lead.apn)}','multi',this)">Multifamily</button>
@@ -871,6 +873,67 @@ function copyRenderPrompt(apn, kind, btn){
   else prompt('Copy this prompt:', text);
 }
 
+// ── Skip-trace contacts (imported from a REISkip export; stored ONLY in this browser, never published) ──
+function loadContacts(){
+  try{ return JSON.parse(localStorage.getItem('leadContacts') || '{}'); }catch(e){ return {}; }
+}
+function parseCsv(text){
+  const rows = []; let row = [], f = '', q = false;
+  for(let i = 0; i < text.length; i++){
+    const c = text[i];
+    if(q){ if(c === '"'){ if(text[i+1] === '"'){ f += '"'; i++; } else q = false; } else f += c; }
+    else if(c === '"') q = true;
+    else if(c === ','){ row.push(f); f = ''; }
+    else if(c === '\n'){ row.push(f); rows.push(row); row = []; f = ''; }
+    else if(c !== '\r') f += c;
+  }
+  if(f || row.length){ row.push(f); rows.push(row); }
+  return rows;
+}
+const normApn = a => String(a || '').replace(/[^A-Za-z0-9]/g, '').toUpperCase();
+const normAddr = a => String(a || '').split(/\s{2,}/)[0].toLowerCase().replace(/[^a-z0-9]/g, '');
+function importContacts(input){
+  const file = input.files[0]; if(!file) return;
+  file.text().then(text => {
+    const rows = parseCsv(text.replace(/^\uFEFF/, '')), head = rows.shift() || [];
+    const col = n => head.indexOf(n);
+    const byApn = {}, byAddr = {};
+    (D.leads || []).forEach(l => { byApn[normApn(l.apn)] = l; byAddr[normAddr(l.address)] = l; });
+    const store = loadContacts(); let matched = 0, withPhone = 0;
+    rows.forEach(r => {
+      const g = n => (r[col(n)] || '').trim();
+      const l = byApn[normApn(g('Formatted APN'))] || byAddr[normAddr(g('Street Address'))];
+      if(!l) return;
+      const phones = [1,2,3].map(i => ({ n: g('Phone ' + i), type: g('Phone ' + i + ' Type') })).filter(p => p.n);
+      const emails = [1,2,3,4,5].map(i => g('Email ' + i)).filter(Boolean);
+      store[l.apn] = { phones, emails, ownerType: g('Owner Type'), marketValue: g('Market Value Total'),
+        taxDelinquentYear: g('Tax Delinquent Year'), lastSaleDate: g('Assessor Last Sale Date').slice(0,10),
+        lastSaleAmount: g('Assessor Last Sale Amount'), importedAt: new Date().toISOString().slice(0,10) };
+      matched++; if(phones.length) withPhone++;
+    });
+    try{ localStorage.setItem('leadContacts', JSON.stringify(store)); }catch(e){}
+    input.value = '';
+    document.getElementById('skip-trace-summary').textContent = `Imported ${rows.length} rows: ${matched} matched to leads, ${withPhone} with a phone. Stored in this browser only.`;
+    refreshAll();
+  });
+}
+function fmtPhone(n){ const d = String(n).replace(/\D/g, ''); return d.length === 10 ? `(${d.slice(0,3)}) ${d.slice(3,6)}-${d.slice(6)}` : n; }
+function contactInline(apn){
+  const c = loadContacts()[apn]; if(!c) return '';
+  return c.phones.length ? c.phones.map(p => `<a href="tel:${esc(String(p.n).replace(/\D/g,''))}">${esc(fmtPhone(p.n))}</a>`).join(' · ') : '<span style="color:var(--text-faint);">traced – no phone found</span>';
+}
+function contactBlock(lead){
+  const c = loadContacts()[lead.apn]; if(!c) return '';
+  const usd = v => v ? '$' + Math.round(parseFloat(v)).toLocaleString() : '';
+  const bits = [];
+  bits.push(c.phones.length ? '📞 ' + c.phones.map(p => `<a href="tel:${esc(String(p.n).replace(/\D/g,''))}">${esc(fmtPhone(p.n))}</a>${p.type ? ` <span style="color:var(--text-faint);">${esc(p.type.toLowerCase())}</span>` : ''}`).join(' · ') : '📞 no phone found');
+  if(c.emails.length) bits.push('✉ ' + c.emails.map(e => `<a href="mailto:${esc(e)}">${esc(e.toLowerCase())}</a>`).join(' · '));
+  if(c.marketValue) bits.push('Market value ' + usd(c.marketValue));
+  if(c.lastSaleAmount && c.lastSaleAmount !== '0') bits.push(`Last sale ${usd(c.lastSaleAmount)}${c.lastSaleDate ? ' (' + c.lastSaleDate.slice(0,4) + ')' : ''}`);
+  if(c.taxDelinquentYear) bits.push(`<b style="color:#aa3f3c;">⚠ tax delinquent since ${esc(c.taxDelinquentYear)}</b>`);
+  return `<div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">🔎 Skip trace (${esc(c.importedAt)}): ${bits.join(' &nbsp;·&nbsp; ')}</div>`;
+}
+
 // ── Discarded leads (big X) ─────────────────────────────────────────────
 // Stored per-browser like notes/tags. Hidden everywhere; review the reasons in the Discarded card.
 function loadDiscarded(){
@@ -907,7 +970,7 @@ function renderContacted(){
     <tbody>${rows.map(l => { const d = map[l.apn], days = Math.floor((today - new Date(d + 'T12:00:00')) / 864e5);
       return `<tr>
       <td>${esc(l.address.split('  ')[0])}<div style="font-size:10.5px;color:var(--text-faint);">APN ${esc(l.apn)}</div></td>
-      <td>${l.score}</td><td>${esc(l.ownerName)||'—'}</td>
+      <td>${l.score}</td><td>${esc(l.ownerName)||'—'}<div style="font-size:11px;">${contactInline(l.apn)}</div></td>
       <td>${esc(d)}<div style="font-size:10.5px;font-weight:700;color:${days>=7?'#aa3f3c':'var(--text-faint)'};">${days} day${days===1?'':'s'} ago${days>=7?' · follow up':''}</div></td>
       <td><input value="${esc(notes[l.apn]||'')}" placeholder="what they said…" style="width:100%;min-width:200px;" onchange="setContactNote('${esc(l.apn)}', this.value)"></td>
       <td><button class="mail-btn" onclick="toggleContacted('${esc(l.apn)}')">Unmark</button></td></tr>`; }).join('')}</tbody>` : '';
@@ -935,7 +998,7 @@ function skipTraceCandidates(){
   const minScore = parseFloat(document.getElementById('stMinScore').value) || 0;
   const minMargin = parseFloat(document.getElementById('stMinMargin').value) || 0;
   return (D.leads || [])
-    .filter(l => !isDiscarded(l.apn) && !isContacted(l.apn))
+    .filter(l => !isDiscarded(l.apn) && !isContacted(l.apn) && !loadContacts()[l.apn])
     .filter(l => loadCondition()[l.apn] !== 'good')
     .filter(l => l.score >= minScore && l.equityMarginPct != null && l.equityMarginPct >= minMargin)
     .sort((a,b) => b.score - a.score)
