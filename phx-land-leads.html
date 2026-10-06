@@ -1252,6 +1252,40 @@ renderDiscarded();
 renderContacted();
 renderTraced();
 
+// Encrypted contact sync: contacts.enc.json is AES-GCM ciphertext; the passphrase never leaves the browser.
+const ENC_URL='phx-land-leads/contacts.enc.json';
+async function encKey(pass,salt){
+  const k=await crypto.subtle.importKey('raw',new TextEncoder().encode(pass),'PBKDF2',false,['deriveKey']);
+  return crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:200000,hash:'SHA-256'},k,{name:'AES-GCM',length:256},false,['encrypt','decrypt']);
+}
+function b64(u){ return btoa(String.fromCharCode(...u)); }
+function unb64(t){ return Uint8Array.from(atob(t),c=>c.charCodeAt(0)); }
+async function exportEncrypted(pass){
+  const salt=crypto.getRandomValues(new Uint8Array(16)), iv=crypto.getRandomValues(new Uint8Array(12));
+  const ct=new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM',iv},await encKey(pass,salt),new TextEncoder().encode(JSON.stringify(loadContacts()))));
+  const a=document.createElement('a'); a.download='contacts.enc.json';
+  a.href=URL.createObjectURL(new Blob([JSON.stringify({salt:b64(salt),iv:b64(iv),ct:b64(ct)})]));
+  a.click();
+}
+async function syncContacts(){
+  if(Object.keys(loadContacts()).length) return;
+  try{
+    const r=await fetch(ENC_URL); if(!r.ok) return;
+    const j=await r.json();
+    for(let tries=0;tries<3;tries++){
+      let pass=localStorage.getItem('contactsPass')||prompt('Passphrase to unlock synced skip-trace contacts (Cancel to skip):');
+      if(!pass) return;
+      try{
+        const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:unb64(j.iv)},await encKey(pass,unb64(j.salt)),unb64(j.ct));
+        localStorage.setItem('leadContacts',new TextDecoder().decode(pt));
+        localStorage.setItem('contactsPass',pass);
+        refreshAll(); return;
+      }catch(e){ localStorage.removeItem('contactsPass'); }
+    }
+  }catch(e){}
+}
+syncContacts();
+
 // ── History ──────────────────────────────────────────────────────────────
 document.getElementById('hist-list').innerHTML = (D.history||[]).length
   ? [...D.history].reverse().map(h=>`
