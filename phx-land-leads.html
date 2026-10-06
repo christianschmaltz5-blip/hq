@@ -273,6 +273,12 @@
         <div id="leads-list"></div>
       </div>
 
+      <div class="card" id="traced" style="border:2px solid #3f7a57;">
+        <div class="card-head"><h2>📞 Skip-Traced Contacts</h2></div>
+        <div id="traced-summary" style="font-size:13px;color:var(--text-soft);margin-bottom:10px;"></div>
+        <div style="overflow-x:auto;"><table class="comps-table" id="traced-table"></table></div>
+      </div>
+
       <div class="card" id="contacted">
         <div class="card-head"><h2>📬 Contacted Leads</h2></div>
         <div id="contacted-summary" style="font-size:13px;color:var(--text-soft);margin-bottom:10px;"></div>
@@ -1030,7 +1036,7 @@ function setCheck(apn, v){
   try{ localStorage.setItem('contactChecks', JSON.stringify(m)); }catch(e){}
   const el = document.getElementById('cb-' + apn), lead = (D.leads || []).find(l => l.apn === apn);
   if(el && lead) el.outerHTML = contactBlock(lead);
-  renderSkipTrace();
+  renderSkipTrace(); renderTraced();
 }
 const tpsPhone = n => 'https://www.truepeoplesearch.com/results?phoneno=' + encodeURIComponent(fmtPhone(n));
 const tpsName = c => 'https://www.truepeoplesearch.com/results?name=' + encodeURIComponent(((c.first || '') + ' ' + (c.last || '')).trim()) + '&citystatezip=' + encodeURIComponent(((c.mcity || '') + ' ' + (c.mstate || '')).trim());
@@ -1059,7 +1065,7 @@ function loadDiscarded(){
   try{ return JSON.parse(localStorage.getItem('discardedLeads') || '{}'); }catch(e){ return {}; }
 }
 function isDiscarded(apn){ return !!loadDiscarded()[apn]; }
-function refreshAll(){ applyFilters(); renderSkipTrace(); renderMaxOffer(); renderDiscarded(); renderContacted(); }
+function refreshAll(){ applyFilters(); renderSkipTrace(); renderMaxOffer(); renderDiscarded(); renderContacted(); renderTraced(); }
 function discardLead(apn){
   const map = loadDiscarded();
   map[apn] = { date: new Date().toISOString().slice(0,10), reason: '' };
@@ -1079,6 +1085,22 @@ function xBtn(apn){ return `<button class="x-btn" title="Discard this lead" oncl
 function setContactNote(apn, text){
   const map = loadNotes(); if(text.trim()) map[apn] = text; else delete map[apn];
   try{ localStorage.setItem('leadNotes', JSON.stringify(map)); }catch(e){}
+}
+function renderTraced(){
+  const con = loadContacts(), chk = loadChecks();
+  const rows = (D.leads || []).filter(l => con[l.apn] && !isDiscarded(l.apn)).sort((a, b) => (con[b.apn].phones.length ? 1 : 0) - (con[a.apn].phones.length ? 1 : 0) || b.score - a.score);
+  const hit = rows.filter(l => con[l.apn].phones.length).length;
+  document.getElementById('traced-summary').textContent = rows.length
+    ? `${rows.length} traced · ${hit} with a phone. Click a 🔍 number to check it on TruePeopleSearch, then mark Yes / No.` : 'Nothing imported yet — use "Import REISkip results" on the Skip-Trace Priority card.';
+  document.getElementById('traced-table').innerHTML = rows.length ? `<thead><tr><th>Address</th><th>Owner</th><th>Phones</th><th>Emails</th><th>Check</th><th>Right person?</th></tr></thead>
+    <tbody>${rows.map(l => { const c = con[l.apn], v = chk[l.apn];
+      return `<tr>
+      <td>${esc(l.address.split('  ')[0])}<div style="font-size:10.5px;color:var(--text-faint);">${l.parcelStatus === 'improved' ? 'Underused' : 'Vacant'} · score ${l.score}</div></td>
+      <td>${esc(l.ownerName)||'—'}</td>
+      <td>${contactInline(l.apn)}</td>
+      <td style="font-size:11px;">${c.emails.slice(0,2).map(e => `<a href="mailto:${esc(e)}">${esc(e.toLowerCase())}</a>`).join('<br>') || '—'}</td>
+      <td>${c.phones.length ? `<a href="${tpsPhone(c.phones[0].n)}" target="_blank" rel="noopener">🔍 phone</a><br>` : ''}${c.first || c.last ? `<a href="${tpsName(c)}" target="_blank" rel="noopener">🔍 name</a>` : ''}</td>
+      <td>${c.phones.length ? `<button class="mail-btn" style="${v==='yes'?'outline:2px solid var(--success);':''}" onclick="setCheck('${esc(l.apn)}','yes')">✓</button> <button class="mail-btn" style="${v==='no'?'outline:2px solid #aa3f3c;':''}" onclick="setCheck('${esc(l.apn)}','no')">✗</button>` : ''}</td></tr>`; }).join('')}</tbody>` : '';
 }
 function renderContacted(){
   const map = loadContacted(), notes = loadNotes(), today = Date.now();
@@ -1212,6 +1234,7 @@ function renderMaxOffer(){
 renderMaxOffer();
 renderDiscarded();
 renderContacted();
+renderTraced();
 
 // ── History ──────────────────────────────────────────────────────────────
 document.getElementById('hist-list').innerHTML = (D.history||[]).length
