@@ -127,6 +127,10 @@
         <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h4a1.5 1.5 0 0 1 0 3h-3a1.5 1.5 0 0 0 0 3h4"/></svg>
         <span class="label">Max Offer (Sell to Builder)</span>
       </a>
+      <a class="nav-item" href="phx-land-leads.html#home-calc">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+        <span class="label">Custom Home Calculator</span>
+      </a>
       <a class="nav-item active" href="phx-land-leads.html">
         <svg class="icon" viewBox="0 0 24 24"><path d="M12 2 3 8l9 6 9-6-9-6z"/><path d="M3 16l9 6 9-6"/><path d="M3 12l9 6 9-6"/></svg>
         <span class="label">North Phoenix Land Leads</span>
@@ -171,39 +175,72 @@
 
       <div class="card" id="max-offer" style="border:2px solid #3f7a57; background:#f6fbf8;">
         <div class="card-head">
-          <h2>💰 Max Offer — Sell the Lot to a Builder</h2>
-          <span class="card-sub">The most you can pay the owner and still clear your profit when you flip the lot to a builder. Built from what newly built homes nearby actually sold for (County Assessor, last 3 years).</span>
+          <h2>💰 Max Offer — Buy the Lot, Sell It to a Builder</h2>
+          <span class="card-sub">Use this if you plan to flip the land. <b>Max offer</b> = the most you can pay the owner and still keep your profit. Open lower than that. (Planning to build the homes yourself? Use the Custom Home Calculator below.)</span>
         </div>
         <div class="filter-row">
-          <label style="font-size:12.5px;color:var(--text-soft);">Builder pays for lot (% of finished home value)
+          <label style="font-size:12.5px;color:var(--text-soft);">Builder pays for the lot (% of finished home value)
             <input class="filter-input" id="moLotPct" type="number" value="25" style="width:70px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Your profit target (% of lot sale)
+          <label style="font-size:12.5px;color:var(--text-soft);">Your profit (% of what the builder pays)
             <input class="filter-input" id="moProfitPct" type="number" value="15" style="width:70px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Closing + holding (% of lot sale)
-            <input class="filter-input" id="moCostPct" type="number" value="5" style="width:70px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Open offer at (% of max)
+          <label style="font-size:12.5px;color:var(--text-soft);">Open your offer at (% of max)
             <input class="filter-input" id="moOpenPct" type="number" value="75" style="width:70px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);align-self:center;"><input type="checkbox" id="moSplit"> Count lot splits</label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Split cost per extra lot ($)
-            <input class="filter-input" id="moSplitCost" type="number" value="25000" style="width:90px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Split lots sell at (% of full-lot value)
-            <input class="filter-input" id="moSplitHaircut" type="number" value="80" style="width:70px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Min lot size if zoning unknown (sf)
-            <input class="filter-input" id="moMinLot" type="number" value="10000" style="width:80px;"></label>
-          <select class="filter-input" id="moSort" style="width:230px;">
-            <option value="cushion">Sort: biggest cushion over assessed</option>
-            <option value="max">Sort: highest max offer</option>
-            <option value="score">Sort: lead score</option>
-          </select>
         </div>
+        <details style="margin:4px 0 10px;">
+          <summary style="cursor:pointer;font-size:12.5px;color:var(--text-soft);">More settings (closing costs, lot splits, sorting)</summary>
+          <div class="filter-row" style="margin-top:8px;">
+            <label style="font-size:12.5px;color:var(--text-soft);">Closing + holding (% of lot sale)
+              <input class="filter-input" id="moCostPct" type="number" value="5" style="width:70px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);align-self:center;"><input type="checkbox" id="moSplit"> Count lot splits</label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Split cost per extra lot ($)
+              <input class="filter-input" id="moSplitCost" type="number" value="25000" style="width:90px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Split lots sell at (% of full-lot value)
+              <input class="filter-input" id="moSplitHaircut" type="number" value="80" style="width:70px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Min lot size if zoning unknown (sf)
+              <input class="filter-input" id="moMinLot" type="number" value="10000" style="width:80px;"></label>
+            <select class="filter-input" id="moSort" style="width:230px;">
+              <option value="max">Sort: highest max offer</option>
+              <option value="cushion">Sort: biggest cushion over assessed</option>
+              <option value="score">Sort: lead score</option>
+            </select>
+          </div>
+        </details>
         <div id="mo-summary" style="font-size:13px;color:var(--text-soft);margin-bottom:10px;"></div>
         <div style="overflow-x:auto;"><table class="comps-table" id="mo-table"></table></div>
         <div style="font-size:11px; color:var(--text-faint); margin-top:10px; line-height:1.55;">
-          <b>Math:</b> max offer = new-build home value × lot % × (1 − profit % − closing %) − demo cost (underused lots only).
-          The 25% lot share is a rule of thumb for infill lots — confirm with a real builder; it moves every number here.
-          Home value is a median of recent newly built single-family sales, not an appraisal; luxury areas (e.g. 85028) run far higher.
-          Assessed value lags the market, so "cushion" shows room, not a guaranteed discount. Assumes the lot is zoned and sized for a home;
-          lot splits are a rough ceiling (85% usable, minimum lot size from R1-x zoning, 4 lots max, each split lot valued at the haircut %) and need city approval — check the zoning and lot width before counting on one.
+          <b>How it works:</b> nearby new-build homes sold for about the "home value" shown. A builder pays roughly 25% of that for the lot (a rule of thumb — confirm with a real builder, it moves every number). Max offer = that lot price minus your profit and closing costs (and demolition, if the lot has an old building). Home values are medians of recent County Assessor sales, not appraisals. Lot splits need city approval.
+        </div>
+      </div>
+
+      <div class="card" id="home-calc" style="border:2px solid #3f6fb0; background:#f5f8fd;">
+        <div class="card-head">
+          <h2>🏠 Custom Home Calculator — Build It Yourself</h2>
+          <span class="card-sub">For when you buy the land and build the homes. Pick a lead (or type your own numbers) and it tells you the sale price each home needs to hit, and the most you can pay for the land. <b>The cost numbers start as placeholders — replace them with real quotes.</b></span>
+        </div>
+        <div class="filter-row">
+          <label style="font-size:12.5px;color:var(--text-soft);">Pick a lead (type an address)
+            <input class="filter-input" id="hcLead" list="hcLeads" placeholder="e.g. 25804 N 5TH AVE" style="width:230px;"></label>
+          <datalist id="hcLeads"></datalist>
+          <span id="hcAnchor" style="font-size:12px;color:var(--text-soft);align-self:center;max-width:520px;"></span>
+        </div>
+        <div class="filter-row">
+          <label style="font-size:12.5px;color:var(--text-soft);">Land price, total ($)<input class="filter-input" id="hcLand" type="number" value="596000" style="width:110px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Homes you can fit<input class="filter-input" id="hcLots" type="number" value="2" style="width:60px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Home size (sf)<input class="filter-input" id="hcSf" type="number" value="3500" style="width:80px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Expected sale price ($/sf)<input class="filter-input" id="hcPrice" type="number" value="650" style="width:80px;"></label>
+        </div>
+        <div class="filter-row">
+          <label style="font-size:12.5px;color:var(--text-soft);">Build cost ($/sf) <i>placeholder</i><input class="filter-input" id="hcHard" type="number" value="320" style="width:80px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Site work per lot ($) <i>placeholder</i><input class="filter-input" id="hcSite" type="number" value="120000" style="width:100px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Design/permits/fees (% of build)<input class="filter-input" id="hcSoft" type="number" value="12" style="width:60px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Loan interest (% of total cost)<input class="filter-input" id="hcFin" type="number" value="7" style="width:60px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Selling costs (% of sale)<input class="filter-input" id="hcSell" type="number" value="6" style="width:60px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Profit target (% of sale)<input class="filter-input" id="hcProfit" type="number" value="15" style="width:60px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Open offer at (% of max)<input class="filter-input" id="hcOpen" type="number" value="75" style="width:60px;"></label>
+        </div>
+        <div id="hcOut" style="margin-top:6px;font-size:13.5px;line-height:1.6;"></div>
+        <div style="font-size:11px; color:var(--text-faint); margin-top:10px; line-height:1.55;">
+          <b>How it works:</b> per home, cost = build + design/permit fees + site work + its share of the land, plus loan interest. Each home must sell for enough to cover that cost, the selling costs, and your profit. "Most you can pay" works that backward from your expected sale price. Build cost, site work and sale price are the three numbers that matter most — get real local quotes and recent custom-home sales before trusting the answer. Not an appraisal; check zoning, lot-split rules, water/sewer and access first.
         </div>
       </div>
 
@@ -1252,28 +1289,68 @@ function renderMaxOffer(){
   const rows = all.slice(0, 40);
   const money = n => '$' + Math.round(n).toLocaleString();
   document.getElementById('mo-summary').textContent =
-    `${all.length} leads have a positive max offer under these assumptions — showing the top ${rows.length}.`;
+    `${all.length} leads work at these numbers — showing the top ${rows.length}. Hover a home value to see the sales behind it.`;
   const table = document.getElementById('mo-table');
   if(!rows.length){ table.innerHTML = '<tbody><tr><td style="padding:12px;color:var(--text-faint);">No new-build values yet — they fill in on the next daily pull.</td></tr></tbody>'; return; }
-  table.innerHTML = `<thead><tr><th>Address</th><th>Type</th><th>Lot</th><th>Split?</th><th>New-build value</th><th>Builder pays (total)</th><th>MAX OFFER</th><th>Open at</th><th>Assessed</th><th>Cushion</th><th>Score</th><th></th></tr></thead>
+  table.innerHTML = `<thead><tr><th>Address</th><th>Lot</th><th>Nearby new-home value</th><th>MAX OFFER</th><th>Open at</th><th>Score</th><th></th></tr></thead>
     <tbody>${rows.map(r => { const l = r.l, n = l.newBuild;
       const ex = n.examples.map(e => `${e.address} ${money(e.price)} (${e.sf.toLocaleString()} sf, ${e.sold.slice(0,7)})`).join(' · ');
       return `<tr>
         <td>${esc(l.address.split('  ')[0])}<div style="font-size:10.5px;color:var(--text-faint);max-width:340px;">${esc(l.ownerName)||''}</div></td>
-        <td>${l.parcelStatus === 'improved' ? 'Underused' : 'Vacant'}</td>
-        <td>${l.landSf ? Math.round(l.landSf).toLocaleString() + ' sf' : '—'}</td>
-        <td>${r.potential > 1 ? (r.n > 1 ? `<b>${r.n} lots</b>` : `up to ${r.potential}`) : '—'}</td>
+        <td>${l.landSf ? Math.round(l.landSf).toLocaleString() + ' sf' : '—'}<div style="font-size:10.5px;color:var(--text-faint);">${l.parcelStatus === 'improved' ? 'old building (demo counted)' : 'vacant'}${r.n > 1 ? ' · ' + r.n + ' lots' : r.potential > 1 ? ' · could split into ' + r.potential : ''}</div></td>
         <td title="${esc(ex)}">${money(n.arv)}<div style="font-size:10.5px;color:var(--text-faint);">${n.n} sales · ${n.radiusMi}mi</div></td>
-        <td>${money(r.lotSale)}</td>
         <td><b style="color:#2f6b47;">${money(r.max)}</b></td>
         <td>${money(r.max * open)}</td>
-        <td>${l.assessedValue ? money(l.assessedValue) : '—'}</td>
-        <td>${r.cushion == null ? '—' : (r.cushion >= 0 ? '+' : '−') + money(Math.abs(r.cushion))}</td>
         <td>${l.score}</td><td>${xBtn(l.apn)}</td></tr>`; }).join('')}</tbody>`;
 }
 ['moLotPct','moProfitPct','moCostPct','moOpenPct','moSplit','moSplitCost','moSplitHaircut','moMinLot','moSort'].forEach(id =>
   document.getElementById(id).addEventListener('input', renderMaxOffer));
 renderMaxOffer();
+
+// ── Custom Home Calculator (buy land, build custom homes) ────────────────
+(function hcInit(){
+  const ids = ['hcLand','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen'];
+  const el = id => document.getElementById(id), num = id => parseFloat(el(id).value) || 0;
+  const money = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
+  const KEEP = ['hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen'];
+  try{ const saved = JSON.parse(localStorage.getItem('homeCalc') || '{}'); KEEP.forEach(k => { if(saved[k] != null) el(k).value = saved[k]; }); }catch(e){}
+  const addr = l => String(l.address || '').split(/\s{2,}/)[0];
+  el('hcLeads').innerHTML = (D.leads || []).slice().sort((a, b) => b.score - a.score).map(l => `<option value="${esc(addr(l))}">score ${l.score}</option>`).join('');
+  function pickLead(){
+    const l = (D.leads || []).find(x => addr(x).toLowerCase() === el('hcLead').value.trim().toLowerCase());
+    if(!l){ el('hcAnchor').textContent = ''; return; }
+    if(l.valuation && l.valuation.mostLikelyValue) el('hcLand').value = Math.round(l.valuation.mostLikelyValue);
+    el('hcLots').value = Math.max(1, Math.floor(l.byRightUnits || l.rezoneTargetUnits || 1));
+    const bits = [`${l.landAcres} acres`, l.currentZoning ? 'zoned ' + l.currentZoning : ''];
+    if(l.valuation) bits.push(`land est. ${money(l.valuation.rangeLow)}–${money(l.valuation.rangeHigh)}`);
+    if(l.salePrice) bits.push(`owner paid ${money(l.salePrice)}${l.saleDate ? ' (' + l.saleDate.slice(-4) + ')' : ''}`);
+    if(l.assessedValue) bits.push(`assessed ${money(l.assessedValue)}`);
+    el('hcAnchor').textContent = bits.filter(Boolean).join(' · ') + ' — land price and home count filled in from this; change them if you disagree.';
+  }
+  function calc(){
+    const lots = Math.max(1, num('hcLots')), sf = num('hcSf'), hard = num('hcHard') * sf, soft = hard * num('hcSoft') / 100, site = num('hcSite');
+    const fin = num('hcFin') / 100, sell = num('hcSell') / 100, profit = num('hcProfit') / 100, land = num('hcLand') / lots, P = num('hcPrice') * sf;
+    const den = 1 - sell - profit, C = hard + soft + site;
+    const out = el('hcOut');
+    if(den <= 0 || sf <= 0){ out.textContent = 'Selling costs + profit must be under 100%, and home size above 0.'; return; }
+    const total = (C + land) * (1 + fin), need = total / den;
+    const maxLand = (P * den / (1 + fin) - C) * lots, open = maxLand * num('hcOpen') / 100;
+    const gain = P * (1 - sell) - total, margin = P ? gain / P : 0;
+    const row = (k, v, b) => `<tr><td style="padding:2px 14px 2px 0;${b ? 'font-weight:700;' : ''}">${k}</td><td style="text-align:right;${b ? 'font-weight:700;' : ''}">${v}</td></tr>`;
+    out.innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:28px;">
+      <div><div style="font-weight:700;margin-bottom:4px;">Cost per home</div><table>
+        ${row('Build', money(hard))}${row('Design / permits / fees', money(soft))}${row('Site work', money(site))}${row('Land share', money(land))}${row('Loan interest', money((C + land) * fin))}${row('Total cost', money(total), 1)}</table></div>
+      <div style="max-width:430px;"><div style="margin-bottom:8px;"><b>To hit your ${num('hcProfit')}% profit, each home must sell for ${money(need)}</b> (${money(need / sf)}/sf).</div>
+        <div style="margin-bottom:8px;">At your expected ${money(P)} (${money(num('hcPrice'))}/sf), <b>the most you can pay for the land is <span style="color:#2f6b47;">${money(maxLand)}</span></b> total — open at <b>${money(open)}</b>.</div>
+        <div style="padding:8px 10px;border-radius:8px;background:${margin >= profit ? '#e6f4ea' : '#fdecec'};">At your land price of ${money(num('hcLand'))}: profit of <b>${money(gain)}</b> per home (${(margin * 100).toFixed(1)}% of sale) — ${margin >= profit ? 'meets' : 'below'} your ${num('hcProfit')}% target.</div></div></div>`;
+  }
+  ids.forEach(id => el(id).addEventListener('input', () => {
+    if(KEEP.includes(id)){ try{ const m = {}; KEEP.forEach(k => m[k] = el(k).value); localStorage.setItem('homeCalc', JSON.stringify(m)); }catch(e){} }
+    calc();
+  }));
+  el('hcLead').addEventListener('input', () => { pickLead(); calc(); });
+  calc();
+})();
 renderDiscarded();
 renderContacted();
 renderTraced();
