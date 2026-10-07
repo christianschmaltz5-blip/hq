@@ -10,9 +10,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
-#vacantMap, #teardownMap{height:420px; border-radius:var(--radius-sm); border:1px solid var(--card-border);}
+#vacantMap, #teardownMap{height:calc(100vh - 150px); min-height:520px; border-radius:var(--radius-sm); border:1px solid var(--card-border);}
+.card.collapsed > :not(.card-head){display:none !important}
+.card.collapsed .card-head{margin-bottom:0}
+.min-btn{margin-left:auto; border:1px solid var(--card-border); background:#fff; border-radius:6px; width:28px; height:28px; cursor:pointer; font-size:18px; line-height:1; color:var(--text-soft); padding:0}
+.min-btn:hover{background:#f1f3f7}
+.comps-split{display:flex; gap:22px; flex-wrap:wrap}
+.comps-split > div{flex:1; min-width:380px}
 .map-pair{display:flex; gap:16px; flex-wrap:wrap;}
-.map-pair .card{flex:1; min-width:320px;}
+.map-pair .card{flex:1; min-width:480px;}
 .score-tooltip{background:none; border:none; box-shadow:none; padding:0; font-size:9px; font-weight:800; color:#1a2233; text-shadow:0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff;}
 .score-tooltip::before{display:none;}
 .meta-row{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:22px;}
@@ -131,6 +137,10 @@
         <svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
         <span class="label">Custom Home Calculator</span>
       </a>
+      <a class="nav-item" href="phx-land-leads.html#maps">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>
+        <span class="label">Maps</span>
+      </a>
       <a class="nav-item active" href="phx-land-leads.html">
         <svg class="icon" viewBox="0 0 24 24"><path d="M12 2 3 8l9 6 9-6-9-6z"/><path d="M3 16l9 6 9-6"/><path d="M3 12l9 6 9-6"/></svg>
         <span class="label">North Phoenix Land Leads</span>
@@ -223,6 +233,7 @@
           <datalist id="hcLeads"></datalist>
           <span id="hcAnchor" style="font-size:12px;color:var(--text-soft);align-self:center;max-width:520px;"></span>
         </div>
+        <div id="hcHouse" style="font-size:12.5px;color:var(--text-soft);margin:-4px 0 10px;"></div>
         <div class="filter-row">
           <label style="font-size:12.5px;color:var(--text-soft);">Land price, total ($)<input class="filter-input" id="hcLand" type="number" value="596000" style="width:110px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Homes you can fit<input class="filter-input" id="hcLots" type="number" value="2" style="width:60px;"></label>
@@ -260,7 +271,7 @@
         </div>
       </div>
 
-      <div class="map-pair">
+      <div class="map-pair" id="maps">
         <div class="card">
           <div class="card-head"><h2>Vacant Land Map</h2>
             <span style="font-size:12px;color:var(--text-faint);"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3f7a57;margin-right:5px;"></span>Vacant land</span>
@@ -667,7 +678,7 @@ function renderAcqKpis(idx, state, lead){
 }
 
 // ── Comparable sales ────────────────────────────────────────────────────
-function compsSectionHtml(lead){
+function landCompsHtml(lead){
   if(!('comps' in lead)){
     return `<div class="comps-section"><div class="comps-title">Comparable Sales</div>
       <div class="comps-empty">Not pulled yet — the daily scan only runs comps on the top 60 scored leads to keep the job fast. This lead is ranked outside that batch; if its score climbs into the top 60 on a future run, comps will appear here automatically.</div></div>`;
@@ -703,6 +714,60 @@ function compsSectionHtml(lead){
     </table></div>
     <div class="comps-note">${esc(lead.compsNote || '')}</div>
   </div>`;
+}
+
+
+// House comps: recent HOME sales near the lead, pulled live from the Maricopa Assessor GIS (read-only, public).
+const houseCache = {};
+const hcNum = v => parseFloat(String(v == null ? '' : v).replace(/[^0-9.]/g, '')) || 0;
+const hcMedian = a => { const b = a.slice().sort((x, y) => x - y); return b.length ? (b.length % 2 ? b[(b.length - 1) / 2] : (b[b.length / 2 - 1] + b[b.length / 2]) / 2) : 0; };
+async function fetchHouseComps(lead){
+  if(houseCache[lead.apn]) return houseCache[lead.apn];
+  if(!lead.lat || !lead.lng) return (houseCache[lead.apn] = { rows: [], error: 'no coordinates for this lead' });
+  const U = 'https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query';
+  const yr = new Date().getFullYear(), years = [yr, yr - 1, yr - 2].map(y => `SALE_DATE LIKE '%/${y}'`).join(' OR ');
+  let feats = [];
+  try{
+    for(const miles of [1, 2, 3]){
+      const body = new URLSearchParams({ geometry: JSON.stringify({ x: lead.lng, y: lead.lat, spatialReference: { wkid: 4326 } }), geometryType: 'esriGeometryPoint', inSR: '4326',
+        distance: String(miles * 1609.34), units: 'esriSRUnit_Meter', spatialRel: 'esriSpatialRelIntersects',
+        where: `SALE_PRICE IS NOT NULL AND SALE_PRICE <> '0' AND PUC LIKE '01%' AND (${years})`,
+        outFields: 'APN,PHYSICAL_ADDRESS,SALE_DATE,SALE_PRICE,LAND_SIZE,LIVING_SPACE,CONST_YEAR,LATITUDE,LONGITUDE', resultRecordCount: '1000', f: 'json' });
+      const r = await (await fetch(U, { method: 'POST', body })).json();
+      feats = (r.features || []).map(f => f.attributes).filter(a => hcNum(a.LIVING_SPACE) >= 1500 && hcNum(a.SALE_PRICE) >= 150000);
+      if(feats.length >= 10) break;
+    }
+  }catch(e){ return { rows: [], error: 'could not reach the county GIS (' + e.message + ')' }; }
+  const subLot = lead.landSf || 43560, now = Date.now();
+  const rows = feats.map(a => {
+    const lat = hcNum(a.LATITUDE), lng = hcNum(a.LONGITUDE) * (String(a.LONGITUDE).includes('-') ? -1 : 1);
+    const dLat = (lat - lead.lat) * 69, dLng = (lng - lead.lng) * 69 * Math.cos(lead.lat * Math.PI / 180);
+    const dist = Math.sqrt(dLat * dLat + dLng * dLng), sf = hcNum(a.LIVING_SPACE), price = hcNum(a.SALE_PRICE), lot = hcNum(a.LAND_SIZE);
+    const sold = new Date(a.SALE_DATE), months = (now - sold) / 2.63e9, built = hcNum(a.CONST_YEAR);
+    const score = dist + Math.abs(Math.log((lot || 1) / subLot)) * 0.7 + (yr - (built || yr - 40)) / 15 + months / 18;
+    return { address: String(a.PHYSICAL_ADDRESS || '').split(/\s{2,}/)[0], dist, sold: a.SALE_DATE, price, sf, psf: price / sf, built, lot, isNew: built >= yr - 5, score };
+  }).sort((a, b) => a.score - b.score).slice(0, 5);
+  return (houseCache[lead.apn] = { rows, medianPsf: hcMedian(rows.map(r => r.psf)), medianPrice: hcMedian(rows.map(r => r.price)) });
+}
+function houseCompsHtml(lead){
+  const h = houseCache[lead.apn];
+  const title = '<div class="comps-title">House Comps — recent home sales nearby</div>';
+  if(!h) return `<div class="comps-section">${title}<div class="comps-empty">Loading from the county…</div></div>`;
+  if(!h.rows.length) return `<div class="comps-section">${title}<div class="comps-empty">${esc(h.error || 'No home sales found within 3 miles in the last 2 years.')}</div></div>`;
+  const rows = h.rows.map(r => `<tr><td>${esc(r.address)}</td><td>${r.dist.toFixed(2)} mi</td><td>${esc(r.sold)}</td><td><b>${money(r.price)}</b></td>
+    <td>${Math.round(r.sf).toLocaleString()} sf</td><td><b>${money(r.psf)}</b></td><td>${r.built || '—'}${r.isNew ? ' <span class="sim-badge">new</span>' : ''}</td><td>${r.lot ? num1(r.lot / 43560) + ' ac' : '—'}</td></tr>`).join('');
+  return `<div class="comps-section">${title}
+    <div class="valuation-box"><div class="valuation-likely">Median of these 5: <b>${money(h.medianPsf)}/sf</b> · <b>${money(h.medianPrice)}</b> per home</div></div>
+    <div style="overflow-x:auto;"><table class="comps-table"><thead><tr><th>Property</th><th>Distance</th><th>Sold</th><th>Price</th><th>Home size</th><th>$/sf</th><th>Built</th><th>Lot</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <div class="comps-note">Finished homes, not land. County Assessor data (latest recorded sale per parcel): chosen for similar lot size, closeness, newer construction and recent sale. Existing homes usually sell for less than new custom builds — treat as a floor, not an appraisal.</div></div>`;
+}
+async function loadHouseComps(lead){
+  const box = document.getElementById('house-' + lead.apn); if(!box) return;
+  await fetchHouseComps(lead);
+  box.innerHTML = houseCompsHtml(lead);
+}
+function compsSectionHtml(lead){
+  return `<div class="comps-split"><div>${landCompsHtml(lead)}</div><div id="house-${esc(lead.apn)}">${houseCompsHtml(lead)}</div></div>`;
 }
 
 // ── Lead cards ──────────────────────────────────────────────────────────
@@ -849,6 +914,7 @@ renderLeads(currentLeads);
 function toggleLead(idx){
   const el = document.getElementById(`detail-${idx}`);
   el.classList.toggle('show');
+  if(el.classList.contains('show') && currentLeads[idx]) loadHouseComps(currentLeads[idx]);
 }
 // ── Mail letter generator ───────────────────────────────────────────────
 function titleCase(s){
@@ -1326,6 +1392,14 @@ renderMaxOffer();
     if(l.salePrice) bits.push(`owner paid ${money(l.salePrice)}${l.saleDate ? ' (' + l.saleDate.slice(-4) + ')' : ''}`);
     if(l.assessedValue) bits.push(`assessed ${money(l.assessedValue)}`);
     el('hcAnchor').textContent = bits.filter(Boolean).join(' · ') + ' — land price and home count filled in from this; change them if you disagree.';
+    el('hcHouse').textContent = 'Looking up recent home sales nearby…';
+    fetchHouseComps(l).then(h => {
+      if(el('hcLead').value.trim().toLowerCase() !== addr(l).toLowerCase()) return;
+      if(!h.rows.length){ el('hcHouse').textContent = h.error || 'No recent home sales found nearby.'; return; }
+      const psf = h.rows.map(r => r.psf), lo = Math.min(...psf), hi = Math.max(...psf);
+      el('hcHouse').innerHTML = `Recent home sales nearby (5 closest matches): <b>${money(h.medianPsf)}/sf median</b> (${money(lo)}–${money(hi)}/sf), median ${money(h.medianPrice)}. Existing homes, not new custom builds. <button class="mail-btn" type="button" id="hcUse">Use ${money(h.medianPsf)}/sf as my expected sale price</button>`;
+      el('hcUse').onclick = () => { el('hcPrice').value = Math.round(h.medianPsf); calc(); };
+    });
   }
   function calc(){
     const lots = Math.max(1, num('hcLots')), sf = num('hcSf'), hard = num('hcHard') * sf, soft = hard * num('hcSoft') / 100, site = num('hcSite');
@@ -1465,6 +1539,27 @@ function renderMaps(leads){
   renderMapInstance(teardownMapInst, teardown);
 }
 renderMaps(D.leads || []);
+
+// ── Minimize (−) button on every card except the maps ───────────────────
+(function minInit(){
+  let saved = {};
+  try{ saved = JSON.parse(localStorage.getItem('collapsedCards') || '{}'); }catch(e){}
+  document.querySelectorAll('main .card').forEach(card => {
+    if(card.closest('.map-pair')) return;
+    const head = card.querySelector(':scope > .card-head'); if(!head) return;
+    const key = card.id || (head.querySelector('h2') || {}).textContent || '';
+    const btn = document.createElement('button');
+    btn.className = 'min-btn'; btn.type = 'button';
+    const set = c => { card.classList.toggle('collapsed', c); btn.textContent = c ? '+' : '−'; btn.title = c ? 'Expand' : 'Minimize'; };
+    set(!!saved[key]);
+    btn.addEventListener('click', () => {
+      const c = !card.classList.contains('collapsed'); set(c);
+      if(c) saved[key] = 1; else delete saved[key];
+      try{ localStorage.setItem('collapsedCards', JSON.stringify(saved)); }catch(e){}
+    });
+    head.appendChild(btn);
+  });
+})();
 </script>
 </body>
 </html>
