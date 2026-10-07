@@ -720,7 +720,8 @@ def main():
 
     def is_builder_inventory(p):
         owner = (p.get("OWNER_NAME") or "").upper()
-        return any(kw in owner for kw in BUILDER_OWNER_KEYWORDS)
+        # City-owned land is never for sale to us -- the Assessor lists it as "PHOENIX CITY OF".
+        return any(kw in owner for kw in BUILDER_OWNER_KEYWORDS) or bool(re.search(r"\b(PHOENIX CITY OF|CITY OF PHOENIX)\b", owner))
 
     vacant_candidates = [
         p for p in vacant_parcels

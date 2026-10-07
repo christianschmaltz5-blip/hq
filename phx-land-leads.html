@@ -385,6 +385,7 @@
 <script src="assets/js/shell.js"></script>
 <script>
 const D = window.PHX_LAND_LEADS || {leads:[], history:[], zipCodes:[]};
+D.leads = (D.leads || []).filter(l => !/\b(PHOENIX CITY OF|CITY OF PHOENIX)\b/i.test(l.ownerName || ''));  // city-owned land isn't a lead
 document.getElementById('topbarDate').textContent = new Date().toLocaleDateString('en-US',{weekday:'long', year:'numeric', month:'long', day:'numeric'});
 
 function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
