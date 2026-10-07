@@ -1539,7 +1539,7 @@ function renderMaps(leads){
   renderMapInstance(vacantMapInst, vacant);
   renderMapInstance(teardownMapInst, teardown);
 }
-renderMaps(D.leads || []);
+applyFilters();  // draws the maps with the same filters as the list (discarded / contacted / 'Good house' hidden)
 
 // ── Minimize (−) button on every card except the maps ───────────────────
 (function minInit(){
