@@ -1108,11 +1108,12 @@ function renderTraced(){
   const hit = rows.filter(l => con[l.apn].phones.length).length;
   document.getElementById('traced-summary').textContent = rows.length
     ? `${rows.length} traced · ${hit} with a phone. Click a 🔍 number to check it on TruePeopleSearch, then mark Yes / No.` : 'Nothing imported yet — use "Import REISkip results" on the Skip-Trace Priority card.';
-  document.getElementById('traced-table').innerHTML = rows.length ? `<thead><tr><th>Address</th><th>Owner</th><th>Phones</th><th>Emails</th><th>Check</th><th>Right person?</th><th>Log call</th></tr></thead>
+  document.getElementById('traced-table').innerHTML = rows.length ? `<thead><tr><th>Address</th><th>Owner</th><th>Mails to</th><th>Phones</th><th>Emails</th><th>Check</th><th>Right person?</th><th>Log call</th></tr></thead>
     <tbody>${rows.map(l => { const c = con[l.apn], v = chk[l.apn];
       return `<tr>
       <td>${esc(l.address.split('  ')[0])}<div style="font-size:10.5px;color:var(--text-faint);">${l.parcelStatus === 'improved' ? 'Underused' : 'Vacant'} · score ${l.score}</div></td>
       <td>${esc(l.ownerName)||'—'}</td>
+      <td style="font-size:11px;">${esc(l.ownerMailAddress || [c.mcity, c.mstate].filter(Boolean).join(', ')) || '—'}</td>
       <td>${contactInline(l.apn)}</td>
       <td style="font-size:11px;">${c.emails.slice(0,2).map(e => `<a href="mailto:${esc(e)}">${esc(e.toLowerCase())}</a>`).join('<br>') || '—'}</td>
       <td>${c.phones.length ? `<a href="${tpsPhone(c.phones[0].n)}" target="_blank" rel="noopener">🔍 phone</a><br>` : ''}${c.first || c.last ? `<a href="${tpsName(c)}" target="_blank" rel="noopener">🔍 name</a>` : ''}</td>
