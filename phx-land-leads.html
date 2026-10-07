@@ -1014,8 +1014,8 @@ function parseCsv(text){
   if(f || row.length){ row.push(f); rows.push(row); }
   return rows;
 }
-const normApn = a => String(a || '').replace(/[^A-Za-z0-9]/g, '').toUpperCase();
-const normAddr = a => String(a || '').split(/\s{2,}/)[0].toLowerCase().replace(/[^a-z0-9]/g, '');
+function normApn(a){ return String(a || '').replace(/[^A-Za-z0-9]/g, '').toUpperCase(); }
+function normAddr(a){ return String(a || '').split(/\s{2,}/)[0].toLowerCase().replace(/[^a-z0-9]/g, ''); }
 function importContacts(input){
   const file = input.files[0]; if(!file) return;
   file.text().then(text => {
@@ -1054,8 +1054,8 @@ function setCheck(apn, v){
   if(el && lead) el.outerHTML = contactBlock(lead);
   renderSkipTrace(); renderTraced();
 }
-const tpsPhone = n => 'https://www.truepeoplesearch.com/results?phoneno=' + encodeURIComponent(fmtPhone(n));
-const tpsName = c => 'https://www.truepeoplesearch.com/results?name=' + encodeURIComponent(((c.first || '') + ' ' + (c.last || '')).trim()) + '&citystatezip=' + encodeURIComponent(((c.mcity || '') + ' ' + (c.mstate || '')).trim());
+function tpsPhone(n){ return 'https://www.truepeoplesearch.com/results?phoneno=' + encodeURIComponent(fmtPhone(n)); }
+function tpsName(c){ return 'https://www.truepeoplesearch.com/results?name=' + encodeURIComponent(((c.first || '') + ' ' + (c.last || '')).trim()) + '&citystatezip=' + encodeURIComponent(((c.mcity || '') + ' ' + (c.mstate || '')).trim()); }
 function contactBlock(lead){
   const c = loadContacts()[lead.apn]; if(!c) return '';
   const usd = v => v ? '$' + Math.round(parseFloat(v)).toLocaleString() : '';
