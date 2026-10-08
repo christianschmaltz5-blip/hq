@@ -129,6 +129,10 @@
         <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         <span class="label">Phoenix Permit Tracker</span>
       </a>
+      <a class="nav-item" href="phx-land-leads.html#top-profit">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+        <span class="label">Top Profit Opportunities</span>
+      </a>
       <a class="nav-item" href="phx-land-leads.html#max-offer">
         <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h4a1.5 1.5 0 0 1 0 3h-3a1.5 1.5 0 0 0 0 3h4"/></svg>
         <span class="label">Max Offer (Sell to Builder)</span>
@@ -182,6 +186,15 @@
       <div class="methodology-note" id="methodology-note"></div>
 
       <div class="meta-row" id="meta-row"></div>
+
+      <div class="card" id="top-profit" style="border:2px solid #b8860b; background:#fffaf0;">
+        <div class="card-head">
+          <h2>📈 Top Profit Opportunities</h2>
+          <span class="card-sub">Ranked by <b>risk-adjusted profit</b> if you buy the lot and build custom homes: nearby new-home sale price (per sf) × home size, minus build, site work, fees, interest, selling costs and the land. Uses the numbers in the Custom Home Calculator below — <b>change them there and this re-ranks</b>. Only leads with nearby new-home sales are shown. A rough screen, not an appraisal.</span>
+        </div>
+        <div class="card-sub" id="tp-summary" style="margin:6px 0;"></div>
+        <div style="overflow-x:auto;"><table class="comps-table" id="tp-table"></table></div>
+      </div>
 
       <div class="card" id="max-offer" style="border:2px solid #3f7a57; background:#f6fbf8;">
         <div class="card-head">
@@ -238,10 +251,10 @@
           <label style="font-size:12.5px;color:var(--text-soft);">Land price, total ($)<input class="filter-input" id="hcLand" type="number" value="596000" style="width:110px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Homes you can fit<input class="filter-input" id="hcLots" type="number" value="2" style="width:60px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Home size (sf)<input class="filter-input" id="hcSf" type="number" value="3500" style="width:80px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Expected sale price ($/sf)<input class="filter-input" id="hcPrice" type="number" value="650" style="width:80px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Expected sale price ($/sf)<input class="filter-input" id="hcPrice" type="number" value="400" style="width:80px;"></label>
         </div>
         <div class="filter-row">
-          <label style="font-size:12.5px;color:var(--text-soft);">Build cost ($/sf) <i>placeholder</i><input class="filter-input" id="hcHard" type="number" value="320" style="width:80px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Build cost ($/sf) <i>placeholder</i><input class="filter-input" id="hcHard" type="number" value="250" style="width:80px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Site work per lot ($) <i>placeholder</i><input class="filter-input" id="hcSite" type="number" value="120000" style="width:100px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Design/permits/fees (% of build)<input class="filter-input" id="hcSoft" type="number" value="12" style="width:60px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Loan interest (% of total cost)<input class="filter-input" id="hcFin" type="number" value="7" style="width:60px;"></label>
@@ -846,6 +859,7 @@ function leadCard(lead, idx){
       &nbsp;·&nbsp;
       <a href="https://www.google.com/maps?layer=c&cbll=${lead.lat},${lead.lng}" target="_blank" rel="noopener">🚶 Street View</a>
     </div>` : ''}
+    ${profitLine(lead)}
     ${contactBlock(lead)}
     <div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">🎨 Street View render prompt:
       <button class="mail-btn" style="margin-left:6px;" onclick="copyRenderPrompt('${esc(lead.apn)}','homes',this)">Homes</button>
@@ -1327,6 +1341,50 @@ function copySkipTraceCsv(){
   document.getElementById(id).addEventListener('input', renderSkipTrace));
 renderSkipTrace();
 
+// ── Top Profit Opportunities (rank by realistic profit, not by cheapness) ──
+// Best of: one custom home on the whole lot, or a lot split into N homes (needs city approval). Inputs come from the
+// Custom Home Calculator. Land cost = comps value (assessed value if comps are unreliable). Risk = how shaky the inputs are.
+function profitFor(l){
+  const nb = l.newBuild; if(!nb || !nb.psf) return null;
+  const num = id => parseFloat(document.getElementById(id).value) || 0;
+  const sf = num('hcSf'), fin = num('hcFin') / 100, sell = num('hcSell') / 100;
+  const C = num('hcHard') * sf * (1 + num('hcSoft') / 100) + num('hcSite');
+  const v = l.valuation, landOK = !!(v && v.mostLikelyValue && !v.unreliable);
+  const land = landOK ? v.mostLikelyValue : (l.assessedValue || 0);
+  if(!land || sf <= 0) return null;
+  const demo = l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0;
+  const splitCost = num('moSplitCost'), haircut = (num('moSplitHaircut') || 100) / 100;
+  let best = null;
+  for(const n of new Set([1, splitLots(l)])){
+    const P = nb.psf * sf * (n > 1 ? haircut : 1), finished = n * P;
+    const cost = (n * C + land + demo + (n - 1) * splitCost) * (1 + fin);
+    const profit = finished * (1 - sell) - cost;
+    if(!best || profit > best.profit) best = { n, finished, cost, profit, land, margin: finished ? profit / finished : 0 };
+  }
+  let r = (landOK ? 0 : 2) + (nb.n < 6 ? 1 : 0) + (nb.radiusMi >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : 0) + (best.n > 1 ? 1 : 0);
+  best.risk = r <= 1 ? 'Low' : r <= 3 ? 'Medium' : 'High';
+  best.adj = best.profit > 0 ? best.profit * ({ Low: .85, Medium: .65, High: .4 }[best.risk]) : best.profit;
+  best.strategy = best.n > 1 ? `Lot split → ${best.n} custom homes` : 'Custom home';
+  return best;
+}
+function profitLine(l){
+  const p = profitFor(l); if(!p) return '';
+  const m = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
+  return `<div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%) · risk ${p.risk}</div>`;
+}
+function renderTopProfit(){
+  const m = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
+  const tags = loadCondition();
+  const all = (D.leads || []).filter(l => !l.stale && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn))
+    .map(l => ({ l, p: profitFor(l) })).filter(r => r.p).sort((a, b) => b.p.adj - a.p.adj);
+  const pos = all.filter(r => r.p.profit > 0).length, rows = all.slice(0, 25);
+  document.getElementById('tp-summary').textContent = `${pos} of ${all.length} leads with nearby new-home sales show a profit at your calculator numbers — top ${rows.length} below.`;
+  document.getElementById('tp-table').innerHTML = `<thead><tr><th>#</th><th>Address</th><th>Best strategy</th><th>Est. land cost</th><th>Est. finished value</th><th>Projected profit</th><th>Margin</th><th>Risk</th><th>Opportunity (risk-adj. profit)</th></tr></thead>
+    <tbody>${rows.map((r, i) => `<tr><td>${i + 1}</td><td>${esc(r.l.address.split('  ')[0])}<div style="font-size:10.5px;color:var(--text-faint);">${esc(r.l.ownerName) || ''}</div></td>
+      <td>${r.p.strategy}</td><td>${m(r.p.land)}</td><td>${m(r.p.finished)}</td>
+      <td><b style="color:${r.p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.p.profit)}</b></td><td>${(r.p.margin * 100).toFixed(0)}%</td><td>${r.p.risk}</td><td><b>${m(r.p.adj)}</b></td></tr>`).join('')}</tbody>`;
+}
+
 // ── Max Offer (sell the lot to a builder) ────────────────────────────────
 // How many home lots a parcel could split into: 85% usable (setbacks/access), min lot size from R1-x zoning
 // (R1-8 = 8,000 sf ...) else the fallback input. Capped at 6. Needs city lot-split approval — a rough ceiling.
@@ -1420,12 +1478,14 @@ renderMaxOffer();
         <div style="padding:8px 10px;border-radius:8px;background:${margin >= profit ? '#e6f4ea' : '#fdecec'};">At your land price of ${money(num('hcLand'))}: profit of <b>${money(gain)}</b> per home (${(margin * 100).toFixed(1)}% of sale) — ${margin >= profit ? 'meets' : 'below'} your ${num('hcProfit')}% target.</div></div></div>`;
   }
   ids.forEach(id => el(id).addEventListener('input', () => {
+    if(id !== 'hcLand' && id !== 'hcLots') renderTopProfit();
     if(KEEP.includes(id)){ try{ const m = {}; KEEP.forEach(k => m[k] = el(k).value); localStorage.setItem('homeCalc', JSON.stringify(m)); }catch(e){} }
     calc();
   }));
   el('hcLead').addEventListener('input', () => { pickLead(); calc(); });
   calc();
 })();
+renderTopProfit();
 renderDiscarded();
 renderContacted();
 renderTraced();
