@@ -1344,11 +1344,11 @@ renderSkipTrace();
 // ── Top Profit Opportunities (rank by realistic profit, not by cheapness) ──
 // Best of: one custom home on the whole lot, or a lot split into N homes (needs city approval). Inputs come from the
 // Custom Home Calculator. Land cost = comps value (assessed value if comps are unreliable). Risk = how shaky the inputs are.
-function profitFor(l){
+function profitFor(l, extraHard){
   const nb = l.newBuild; if(!nb || !nb.psf) return null;
   const num = id => parseFloat(document.getElementById(id).value) || 0;
   const sf = num('hcSf'), fin = num('hcFin') / 100, sell = num('hcSell') / 100;
-  const C = num('hcHard') * sf * (1 + num('hcSoft') / 100) + num('hcSite');
+  const C = (num('hcHard') + (extraHard || 0)) * sf * (1 + num('hcSoft') / 100) + num('hcSite');
   const v = l.valuation, landOK = !!(v && v.mostLikelyValue && !v.unreliable);
   const land = landOK ? v.mostLikelyValue : (l.assessedValue || 0);
   if(!land || sf <= 0) return null;
@@ -1376,13 +1376,13 @@ function renderTopProfit(){
   const m = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
   const tags = loadCondition();
   const all = (D.leads || []).filter(l => !l.stale && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn))
-    .map(l => ({ l, p: profitFor(l) })).filter(r => r.p).sort((a, b) => b.p.adj - a.p.adj);
+    .map(l => ({ l, p: profitFor(l), hi: profitFor(l, 50) })).filter(r => r.p).sort((a, b) => b.p.adj - a.p.adj);
   const pos = all.filter(r => r.p.profit > 0).length, rows = all.slice(0, 25);
   document.getElementById('tp-summary').textContent = `${pos} of ${all.length} leads with nearby new-home sales show a profit at your calculator numbers — top ${rows.length} below.`;
-  document.getElementById('tp-table').innerHTML = `<thead><tr><th>#</th><th>Address</th><th>Best strategy</th><th>Est. land cost</th><th>Est. finished value</th><th>Projected profit</th><th>Margin</th><th>Risk</th><th>Opportunity (risk-adj. profit)</th></tr></thead>
+  document.getElementById('tp-table').innerHTML = `<thead><tr><th>#</th><th>Address</th><th>Best strategy</th><th>Est. land cost</th><th>Est. finished value</th><th>Projected profit</th><th>Margin</th><th>Risk</th><th>Profit if build costs $50/sf more</th><th>Opportunity (risk-adj. profit)</th></tr></thead>
     <tbody>${rows.map((r, i) => `<tr><td>${i + 1}</td><td>${esc(r.l.address.split('  ')[0])}<div style="font-size:10.5px;color:var(--text-faint);">${esc(r.l.ownerName) || ''}</div></td>
       <td>${r.p.strategy}</td><td>${m(r.p.land)}</td><td>${m(r.p.finished)}</td>
-      <td><b style="color:${r.p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.p.profit)}</b></td><td>${(r.p.margin * 100).toFixed(0)}%</td><td>${r.p.risk}</td><td><b>${m(r.p.adj)}</b></td></tr>`).join('')}</tbody>`;
+      <td><b style="color:${r.p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.p.profit)}</b></td><td>${(r.p.margin * 100).toFixed(0)}%</td><td>${r.p.risk}</td><td style="color:${r.hi.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.hi.profit)}</td><td><b>${m(r.p.adj)}</b></td></tr>`).join('')}</tbody>`;
 }
 
 // ── Max Offer (sell the lot to a builder) ────────────────────────────────
