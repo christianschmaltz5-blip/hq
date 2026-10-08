@@ -1355,17 +1355,27 @@ function profitFor(l, extraHard){
   const demo = l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0;
   const splitCost = num('moSplitCost'), haircut = (num('moSplitHaircut') || 100) / 100;
   let best = null;
-  for(const n of new Set([1, splitLots(l)])){
+  const sp = splitInfo(l);
+  for(const n of new Set([1, sp.n])){
     const P = nb.psf * sf * (n > 1 ? haircut : 1), finished = n * P;
     const cost = (n * C + land + demo + (n - 1) * splitCost) * (1 + fin);
     const profit = finished * (1 - sell) - cost;
     if(!best || profit > best.profit) best = { n, finished, cost, profit, land, margin: finished ? profit / finished : 0 };
   }
-  let r = (landOK ? 0 : 2) + (nb.n < 6 ? 1 : 0) + (nb.radiusMi >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : 0) + (best.n > 1 ? 1 : 0);
+  let r = (landOK ? 0 : 2) + (nb.n < 6 ? 1 : 0) + (nb.radiusMi >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0);
   best.risk = r <= 1 ? 'Low' : r <= 3 ? 'Medium' : 'High';
   best.adj = best.profit > 0 ? best.profit * ({ Low: .85, Medium: .65, High: .4 }[best.risk]) : best.profit;
-  best.strategy = best.n > 1 ? `Lot split → ${best.n} custom homes` : 'Custom home';
+  best.strategy = best.n > 1 ? `Lot split → ${best.n} custom homes${sp.known ? '' : ' (zoning min lot unknown — assumed)'}` : 'Custom home';
   return best;
+}
+function sellerSignals(l){
+  const o = l.ownership || {}, s = [];
+  if(o.isEstateOwner) s.push('estate');
+  if(o.isOutOfStateOwner) s.push('out of state');
+  else if(o.isAbsenteeLocal) s.push('absentee');
+  if(o.isEntityOwner) s.push('trust/LLC');
+  if(o.yearsHeld >= 15) s.push('held ' + Math.round(o.yearsHeld) + 'y');
+  return s;
 }
 function profitLine(l){
   const p = profitFor(l); if(!p) return '';
@@ -1376,23 +1386,26 @@ function renderTopProfit(){
   const m = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
   const tags = loadCondition();
   const all = (D.leads || []).filter(l => !l.stale && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn))
-    .map(l => ({ l, p: profitFor(l), hi: profitFor(l, 50) })).filter(r => r.p).sort((a, b) => b.p.adj - a.p.adj);
+    .map(l => ({ l, p: profitFor(l), hi: profitFor(l, 50), sig: sellerSignals(l) })).filter(r => r.p)
+    .map(r => Object.assign(r, { call: r.hi.profit > 0 && r.sig.length >= 2 })).sort((a, b) => b.p.adj - a.p.adj);
   const pos = all.filter(r => r.p.profit > 0).length, rows = all.slice(0, 25);
-  document.getElementById('tp-summary').textContent = `${pos} of ${all.length} leads with nearby new-home sales show a profit at your calculator numbers — top ${rows.length} below.`;
-  document.getElementById('tp-table').innerHTML = `<thead><tr><th>#</th><th>Address</th><th>Best strategy</th><th>Est. land cost</th><th>Est. finished value</th><th>Projected profit</th><th>Margin</th><th>Risk</th><th>Profit if build costs $50/sf more</th><th>Opportunity (risk-adj. profit)</th></tr></thead>
-    <tbody>${rows.map((r, i) => `<tr><td>${i + 1}</td><td>${esc(r.l.address.split('  ')[0])}<div style="font-size:10.5px;color:var(--text-faint);">${esc(r.l.ownerName) || ''}</div></td>
+  document.getElementById('tp-summary').textContent = `${pos} of ${all.length} leads with nearby new-home sales show a profit at your calculator numbers; ${all.filter(r => r.call).length} are marked 📞 CALL FIRST (still profitable at +$50/sf build AND 2+ seller signals). Top ${rows.length} below.`;
+  document.getElementById('tp-table').innerHTML = `<thead><tr><th>#</th><th>Address</th><th>Best strategy</th><th>Est. land cost</th><th>Est. finished value</th><th>Projected profit</th><th>Margin</th><th>Risk</th><th>Profit if build costs $50/sf more</th><th>Seller signals</th><th>Opportunity (risk-adj. profit)</th></tr></thead>
+    <tbody>${rows.map((r, i) => `<tr><td>${i + 1}</td><td>${r.call ? '<span class="reason-chip" style="font-weight:700;">📞 CALL FIRST</span> ' : ''}${esc(r.l.address.split('  ')[0])}<div style="font-size:10.5px;color:var(--text-faint);">${esc(r.l.ownerName) || ''}</div></td>
       <td>${r.p.strategy}</td><td>${m(r.p.land)}</td><td>${m(r.p.finished)}</td>
-      <td><b style="color:${r.p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.p.profit)}</b></td><td>${(r.p.margin * 100).toFixed(0)}%</td><td>${r.p.risk}</td><td style="color:${r.hi.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.hi.profit)}</td><td><b>${m(r.p.adj)}</b></td></tr>`).join('')}</tbody>`;
+      <td><b style="color:${r.p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.p.profit)}</b></td><td>${(r.p.margin * 100).toFixed(0)}%</td><td>${r.p.risk}</td><td style="color:${r.hi.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.hi.profit)}</td><td>${r.sig.join(', ') || '—'}</td><td><b>${m(r.p.adj)}</b></td></tr>`).join('')}</tbody>`;
 }
 
 // ── Max Offer (sell the lot to a builder) ────────────────────────────────
 // How many home lots a parcel could split into: 85% usable (setbacks/access), min lot size from R1-x zoning
 // (R1-8 = 8,000 sf ...) else the fallback input. Capped at 6. Needs city lot-split approval — a rough ceiling.
-function splitLots(l){
-  const m = /^R1-(\d+)/i.exec(l.currentZoning || '');
+// known = the min lot size comes from the zoning code (R1-14 = 14,000 sf, RE-35 = 35,000 sf); otherwise it is the fallback guess.
+function splitInfo(l){
+  const m = /^(?:R1|RE)-(\d+)/i.exec(l.currentZoning || '');
   const minLot = m ? parseInt(m[1],10) * 1000 : (parseFloat(document.getElementById('moMinLot').value) || 10000);
-  return Math.max(1, Math.min(4, Math.floor((l.landSf || 0) * 0.85 / minLot)));
+  return { n: Math.max(1, Math.min(4, Math.floor((l.landSf || 0) * 0.85 / minLot))), known: !!m };
 }
+function splitLots(l){ return splitInfo(l).n; }
 function maxOfferRows(){
   const v = id => (parseFloat(document.getElementById(id).value) || 0) / 100;
   const lotPct = v('moLotPct'), profit = v('moProfitPct'), costs = v('moCostPct');
