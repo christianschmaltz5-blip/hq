@@ -40,9 +40,10 @@ def new_build_values(lead):
             break
     if len(rows) < MIN_NEWBUILD_COMPS:
         return None
-    near = sorted(rows, key=lambda t: _haversine_mi(lat, lng, t[3]["LATITUDE"], t[3]["LONGITUDE"]))[:3]
+    near = sorted(rows, key=lambda t: _haversine_mi(lat, lng, t[3]["LATITUDE"], t[3]["LONGITUDE"]))[:5]
+    psfs = [t[0] / t[2] for t in rows]
     return {"arv": round(st.median(t[0] for t in rows)), "psf": round(st.median(t[0] / t[2] for t in rows)),
-            "n": len(rows), "radiusMi": miles,
+            "n": len(rows), "radiusMi": miles, "lowPsf": round(min(psfs)), "highPsf": round(max(psfs)),
             "examples": [{"address": t[3]["PHYSICAL_ADDRESS"].split("  ")[0], "price": round(t[0]), "sf": round(t[2]),
                           "sold": t[1].isoformat()} for t in near]}
 
