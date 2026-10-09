@@ -268,6 +268,20 @@
         </div>
       </div>
 
+      <div class="card" id="bids" style="border:2px solid #6b4fa3; background:#f9f7fd;">
+        <div class="card-head">
+          <h2>🧾 Compare Builder Quotes</h2>
+          <span class="card-sub">Type in each builder's quote (build cost per sf and site work per lot). Each row shows how many leads still make a profit at that quote and the best one, using the other numbers from the Custom Home Calculator. <b>Use</b> loads a quote into the calculator so everything above re-ranks. Saved in this browser (included in the backup).</span>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:end;margin:8px 0;">
+          <label style="font-size:12.5px;color:var(--text-soft);">Builder<input class="filter-input" id="bidName" placeholder="e.g. Partner" style="width:150px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Build cost ($/sf)<input class="filter-input" id="bidHard" type="number" style="width:90px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Site work per lot ($)<input class="filter-input" id="bidSite" type="number" style="width:110px;"></label>
+          <button class="mail-btn" onclick="addBid()">Add quote</button>
+        </div>
+        <div style="overflow-x:auto;"><table class="comps-table" id="bid-table"></table></div>
+      </div>
+
       <div class="card">
         <div class="card-head">
           <h2>Mail Letter Template</h2>
@@ -899,6 +913,8 @@ function leadCard(lead, idx){
         <div class="detail-label">My Notes (saved in this browser)</div>
         <textarea data-note-apn="${esc(lead.apn)}" style="width:100%;min-height:80px;margin-top:6px;padding:8px;border:1px solid var(--card-border);border-radius:8px;font:inherit;font-size:13px;resize:vertical;" placeholder="Calls, owner details, what you saw on Street View…" oninput="saveNote('${esc(lead.apn)}', ${idx}, this.value)">${esc(loadNotes()[lead.apn] || '')}</textarea>
       </div>
+      ${intakeHtml(lead)}
+      ${engineerHtml(lead)}
       ${compsSectionHtml(lead)}
       <div class="calc-toggle" onclick="toggleCalc(${idx})">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
@@ -1258,7 +1274,7 @@ function logCall(apn, key){
 function setNext(apn, v){ const m = loadCalls(); if(!m[apn]) return; m[apn].next = v; saveCalls(m); renderContacted(); }
 const callLabel = k => (CALL_OPTS.find(x => x[0] === k) || [0, '—'])[1];
 const callSelect = apn => `<select onchange="if(this.value){logCall('${esc(apn)}',this.value);}"><option value="">Log call…</option>${CALL_OPTS.map(o => `<option value="${o[0]}">${o[1]}</option>`).join('')}</select>`;
-const BACKUP_KEYS = ['callLog','contactedLeads','leadNotes','contactChecks','leadCondition','discardedLeads'];  // not leadContacts: phone numbers stay out of files
+const BACKUP_KEYS = ['callLog','contactedLeads','leadNotes','contactChecks','leadCondition','discardedLeads','intakeChecks','bids'];  // not leadContacts: phone numbers stay out of files
 function backupLog(){
   const o = {}; BACKUP_KEYS.forEach(k => { try{ const v = localStorage.getItem(k); if(v) o[k] = JSON.parse(v); }catch(e){} });
   const a = document.createElement('a');
@@ -1369,14 +1385,15 @@ renderSkipTrace();
 // ── Top Profit Opportunities (rank by realistic profit, not by cheapness) ──
 // Best of: one custom home on the whole lot, or a lot split into N homes (needs city approval). Inputs come from the
 // Custom Home Calculator. Land cost = comps value (assessed value if comps are unreliable). Risk = how shaky the inputs are.
-function profitFor(l, extraHard, psfOverride){
+function profitFor(l, extraHard, psfOverride, o){
+  o = o || {};
   const nb = l.newBuild; if(!nb || !nb.psf) return null;
   const psf = psfOverride || nb.psf;
   const num = id => parseFloat(document.getElementById(id).value) || 0;
   const sf = num('hcSf'), fin = num('hcFin') / 100, sell = num('hcSell') / 100;
-  const C = (num('hcHard') + (extraHard || 0)) * sf * (1 + num('hcSoft') / 100) + num('hcSite');
+  const C = ((o.hard != null ? o.hard : num('hcHard')) + (extraHard || 0)) * sf * (1 + num('hcSoft') / 100) + (o.site != null ? o.site : num('hcSite'));
   const v = l.valuation, landOK = !!(v && v.mostLikelyValue && !v.unreliable);
-  const land = landOK ? v.mostLikelyValue : (l.assessedValue || 0);
+  const land = (landOK ? v.mostLikelyValue : (l.assessedValue || 0)) * (o.landMult || 1);
   if(!land || sf <= 0) return null;
   const demo = l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0;
   const splitCost = num('moSplitCost'), haircut = (num('moSplitHaircut') || 100) / 100;
@@ -1426,6 +1443,83 @@ function renderTopProfit(){
     <tbody>${rows.map((r, i) => `<tr><td>${i + 1}</td><td>${r.call ? '<span class="reason-chip" style="font-weight:700;">📞 CALL FIRST</span> ' : ''}${esc(r.l.address.split('  ')[0])}<div style="font-size:10.5px;color:var(--text-faint);">${esc(r.l.ownerName) || ''}</div></td>
       <td>${r.p.strategy}</td><td>${m(r.p.land)}</td><td>${m(r.p.finished)}</td>
       <td><b style="color:${r.p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.p.profit)}</b></td><td>${(r.p.margin * 100).toFixed(0)}%</td><td>${r.p.risk}</td><td style="color:${r.hi.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.hi.profit)}</td><td style="color:${r.lo.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.lo.profit)}</td><td>${salesCell(r.l)}</td><td>${r.sig.join(', ') || '—'}</td><td><b>${m(r.p.adj)}</b></td></tr>`).join('')}</tbody>`;
+}
+
+// ── Intake, value engineering, builder quotes ────────────────────────────
+function zoneRead(l){
+  const z = (l.currentZoning || '').toUpperCase();
+  if(/^(R1|RE)-\d+/.test(z)) return ['ok', 'Single-family zoning: a house is allowed by right.'];
+  if(/^S-\d/.test(z)) return ['ok', 'Ranch/farm residential: single-family homes allowed, large lots.'];
+  if(/^(PUD|PAD|PCD)/.test(z)) return ['warn', 'Planned development: its approved plan decides what is allowed. Get that plan from Phoenix Planning & Development.'];
+  if(/^R-/.test(z)) return ['warn', 'Multifamily zoning: houses are usually allowed but the density rules differ. Verify.'];
+  if(/^(C-|CP|PSC|A-|I-|IND)/.test(z)) return ['bad', 'Commercial/other zoning: a house probably needs a rezone.'];
+  if(z === 'COUNTY') return ['warn', 'Unincorporated Maricopa County: permits come from the county, not Phoenix.'];
+  return ['warn', 'Zoning unknown. Confirm with the city before anything else.'];
+}
+function intakeItems(){ return [
+  ['zone', 'Zoning (and the PUD plan, if any) allows your house'], ['title', 'Title is clean; the person you call is the owner'],
+  ['access', 'Legal access and easements (survey)'], ['util', 'Water and sewer available (or septic/well is allowed)'],
+  ['flood', 'Floodplain and drainage checked'], ['hill', 'Hillside/slope overlay checked'],
+  ['hoa', 'HOA or deed restrictions checked'], ['power', 'Electric service (APS/SRP) distance'],
+  ['split', 'Lot split approved by the city (only if splitting)'], ['demo', 'Demolition permit and asbestos survey (only if a building is there)'],
+  ['quote', 'Builder quote for this lot']]; }
+function loadIntake(){ try{ return JSON.parse(localStorage.getItem('intakeChecks') || '{}'); }catch(e){ return {}; } }
+function setIntake(apn, key, on){ try{ const d = loadIntake(); (d[apn] = d[apn] || {})[key] = on; localStorage.setItem('intakeChecks', JSON.stringify(d)); }catch(e){} }
+function intakeHtml(l){
+  const [lvl, note] = zoneRead(l), sp = splitInfo(l), done = loadIntake()[l.apn] || {};
+  const col = { ok: '#2f6b47', warn: '#8f6418', bad: '#b03a3a' }[lvl];
+  const flags = [];
+  if(l.landUseClass && l.landUseClass !== 'residential') flags.push(`The county codes this parcel ${l.landUseClass}, which may not match its zoning.`);
+  if(l.inFloodplain) flags.push('In a mapped floodplain (' + esc(l.floodZone || 'zone ?') + ').');
+  if(l.rezoningNearby) flags.push(l.rezoningNearby + ' rezoning(s) nearby: the area is changing.');
+  if(l.parcelStatus === 'improved') flags.push('Has a building: demolition counted at ' + money(l.defaultDemoCost || 0) + ' (placeholder).');
+  const items = intakeItems().filter(([k]) => (k !== 'split' || sp.n > 1) && (k !== 'demo' || l.parcelStatus === 'improved'));
+  return `<div class="detail-field" style="margin-top:12px;" onclick="event.stopPropagation()">
+    <div class="detail-label">📋 Build intake (${items.filter(([k]) => done[k]).length}/${items.length} checked)</div>
+    <div style="font-size:13px;margin:6px 0;color:${col};font-weight:600;">${esc(l.currentZoning || 'No zoning')}: ${note}</div>
+    <div style="font-size:12.5px;line-height:1.6;">Lot ${Math.round(l.landSf || 0).toLocaleString()} sf${sp.known ? '' : ' (min lot assumed)'} · could fit ${sp.n} home${sp.n > 1 ? 's' : ''} if the city approves a split${flags.map(f => '<br>⚠️ ' + f).join('')}</div>
+    <div style="margin-top:6px;font-size:12.5px;">${items.map(([k, t]) => `<label style="display:block;"><input type="checkbox" ${done[k] ? 'checked' : ''} onchange="setIntake('${esc(l.apn)}','${k}',this.checked)"> ${t}</label>`).join('')}</div>
+    <div style="font-size:11.5px;margin-top:6px;"><a href="https://mcassessor.maricopa.gov/mcs/?q=${esc(l.apn)}&mod=pd" target="_blank" rel="noopener">County parcel record</a> · <a href="https://www.phoenix.gov/pdd" target="_blank" rel="noopener">Phoenix Planning &amp; Development</a> <span style="color:var(--text-faint);">· typical steps, not legal advice; confirm each with the city</span></div>
+  </div>`;
+}
+function engineerHtml(l){
+  const b = profitFor(l); if(!b) return '';
+  const tgt = (parseFloat(document.getElementById('hcProfit').value) || 15) / 100, site = parseFloat(document.getElementById('hcSite').value) || 0;
+  const lo = profitFor(l, 0, lowSalePsf(l));
+  const cases = [['Pay 10% less for the land', 0, { landMult: .9 }], ['Pay 20% less for the land', 0, { landMult: .8 }], ['Build $25/sf cheaper', -25], ['Build $50/sf cheaper', -50],
+    ['Site work $30k cheaper', 0, { site: Math.max(0, site - 30000) }], ['All three: land −10%, build −$25/sf, site −$30k', -25, { landMult: .9, site: Math.max(0, site - 30000) }]]
+    .map(([t, h, o]) => { const r = profitFor(l, h, 0, o); return { t, gain: r.profit - b.profit, r }; }).sort((x, y) => y.gain - x.gain);
+  const need = b.finished * tgt - b.profit;
+  return `<div class="detail-field" style="margin-top:12px;" onclick="event.stopPropagation()">
+    <div class="detail-label">🔧 Value engineering</div>
+    <div style="font-size:12.5px;margin:6px 0;">Now: profit ${money(b.profit)} (${(b.margin * 100).toFixed(0)}%). ${need > 0 ? `Short of your ${(tgt * 100).toFixed(0)}% target by <b>${money(need)}</b>.` : `Meets your ${(tgt * 100).toFixed(0)}% target.`} If it sells at the lowest nearby sale: <b style="color:${lo.profit > 0 ? '#2f6b47' : '#b03a3a'};">${money(lo.profit)}</b>.</div>
+    <table class="comps-table"><thead><tr><th>Change</th><th>Adds</th><th>New profit</th><th>Hits target?</th></tr></thead><tbody>${cases.map(c => `<tr><td>${c.t}</td><td>+${money(c.gain)}</td><td>${money(c.r.profit)} (${(c.r.margin * 100).toFixed(0)}%)</td><td>${c.r.margin >= tgt ? '✅' : '—'}</td></tr>`).join('')}</tbody></table>
+    <div style="font-size:11px;color:var(--text-faint);margin-top:4px;">Pick what is realistic, then take it to the builder or the owner and re-check.</div>
+  </div>`;
+}
+function loadBids(){ try{ return JSON.parse(localStorage.getItem('bids') || '[]'); }catch(e){ return []; } }
+function saveBids(b){ try{ localStorage.setItem('bids', JSON.stringify(b)); }catch(e){} renderBids(); }
+function addBid(){
+  const g = id => document.getElementById(id), hard = parseFloat(g('bidHard').value), site = parseFloat(g('bidSite').value);
+  if(!(hard > 0)) return;
+  saveBids(loadBids().concat([{ name: g('bidName').value.trim() || 'Quote', hard, site: isNaN(site) ? (parseFloat(g('hcSite').value) || 0) : site }]));
+  ['bidName', 'bidHard', 'bidSite'].forEach(id => g(id).value = '');
+}
+function delBid(i){ const b = loadBids(); b.splice(i, 1); saveBids(b); }
+function useBid(i){
+  const b = loadBids()[i]; if(!b) return;
+  [['hcHard', b.hard], ['hcSite', b.site]].forEach(([id, v]) => { const e = document.getElementById(id); e.value = v; e.dispatchEvent(new Event('input')); });
+}
+function renderBids(){
+  const t = document.getElementById('bid-table'); if(!t) return;
+  const tags = loadCondition(), leads = (D.leads || []).filter(l => !l.stale && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn));
+  const model = { name: 'Calculator now (placeholder until you have a quote)', hard: parseFloat(document.getElementById('hcHard').value) || 0, site: parseFloat(document.getElementById('hcSite').value) || 0, fixed: true };
+  const rows = [model].concat(loadBids().map((b, i) => Object.assign({ i }, b)));
+  t.innerHTML = `<thead><tr><th>Builder</th><th>Build $/sf</th><th>Site work</th><th>Leads that profit</th><th>Best lead</th><th></th></tr></thead><tbody>${rows.map(b => {
+    let pos = 0, best = null;
+    leads.forEach(l => { const p = profitFor(l, 0, 0, { hard: b.hard, site: b.site }); if(!p) return; if(p.profit > 0) pos++; if(!best || p.profit > best.p.profit) best = { l, p }; });
+    return `<tr><td>${esc(b.name)}</td><td>$${b.hard}</td><td>${money(b.site)}</td><td><b>${pos}</b></td><td>${best ? esc(best.l.address.split('  ')[0]) + ' · ' + money(best.p.profit) : '—'}</td><td>${b.fixed ? '' : `<button class="mail-btn" onclick="useBid(${b.i})">Use</button> <button class="mail-btn" onclick="delBid(${b.i})">✕</button>`}</td></tr>`;
+  }).join('')}</tbody>`;
 }
 
 // ── Max Offer (sell the lot to a builder) ────────────────────────────────
@@ -1523,7 +1617,7 @@ renderMaxOffer();
         <div style="padding:8px 10px;border-radius:8px;background:${margin >= profit ? '#e6f4ea' : '#fdecec'};">At your land price of ${money(num('hcLand'))}: profit of <b>${money(gain)}</b> per home (${(margin * 100).toFixed(1)}% of sale) — ${margin >= profit ? 'meets' : 'below'} your ${num('hcProfit')}% target.</div></div></div>`;
   }
   ids.forEach(id => el(id).addEventListener('input', () => {
-    if(id !== 'hcLand' && id !== 'hcLots') renderTopProfit();
+    if(id !== 'hcLand' && id !== 'hcLots'){ renderTopProfit(); renderBids(); }
     if(KEEP.includes(id)){ try{ const m = {}; KEEP.forEach(k => m[k] = el(k).value); localStorage.setItem('homeCalc', JSON.stringify(m)); }catch(e){} }
     calc();
   }));
@@ -1531,6 +1625,7 @@ renderMaxOffer();
   calc();
 })();
 renderTopProfit();
+renderBids();
 renderDiscarded();
 renderContacted(); showBackupAge();
 renderTraced();
