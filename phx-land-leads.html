@@ -904,8 +904,16 @@ function toggleContacted(apn){
   refreshAll();
 }
 
+// Owner research from public Arizona Corporation Commission filings (Oct 2026). Shows in a lead's notes box until you type your own note there.
+const OWNER_RESEARCH = {
+  '21168001': "OWNER RESEARCH (AZ Corp Commission, Oct 2026): K C Homebuilders LLC is now named K&D LEASING AND DEVELOPMENT, LLC (ID L11797458, active). Manager: Kenneth Q Carlile PhD, 2615 E End Blvd S, Marshall TX 75672. Members: Celia Carlile (PO Box 2069, Marshall TX 75671); David Ellis (151 Carefree Hwy PMB 757, Phoenix 85085). Reg. agent = Capitol Corporate Services (skip). Next: search Kenneth Carlile, Marshall TX, on TruePeopleSearch. County mailing address 515 E Carefree Hwy is a law office / pass-through.",
+  '21431004B': "OWNER RESEARCH (AZ Corp Commission, Oct 2026): 3005 BELL ROAD SP, LLC (Delaware, ID R13712321, active). Managers: Clark W Porter, William W Hobin, Timothy B Hobin - all c/o William Warren Properties, PO Box 2034, Santa Monica CA 90406. Reg. agent = FileJet / National Registered Agents (skip). Next: search the Hobins / William Warren Properties.",
+  '20715002D': "OWNER RESEARCH (AZ Corp Commission, Oct 2026): SUNRISE 1, L.L.C. (ID L11700977, active). Managers: Catherine J Emch and Stacy Emch, 4122 W Paradise Ln, Phoenix AZ 85053. Member: Pepper Investments 2 LP (same address). Stacy Emch is also the statutory agent. Local owners - search them on TruePeopleSearch (Phoenix AZ)."
+};
 function loadNotes(){
-  try{ return JSON.parse(localStorage.getItem('leadNotes') || '{}'); }catch(e){ return {}; }
+  let m = {};
+  try{ m = JSON.parse(localStorage.getItem('leadNotes') || '{}'); }catch(e){}
+  return Object.assign({}, OWNER_RESEARCH, m);
 }
 function saveNote(apn, idx, text){
   const map = loadNotes();
