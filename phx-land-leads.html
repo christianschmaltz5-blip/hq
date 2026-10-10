@@ -829,8 +829,64 @@ async function loadHouseComps(lead){
   await fetchHouseComps(lead);
   box.innerHTML = houseCompsHtml(lead);
 }
+// Commercial comps: recent commercial/industrial-zoned land and building sales within a small radius (Maricopa Assessor GIS, live).
+const commCache = {};
+function isCommLead(l){ return l.landUseClass === 'commercial' || /^(C-?\d|CP|CMX|PCD|NC|A-[12]|IND)/i.test((l.currentZoning || '').trim()); }
+async function fetchCommComps(lead){
+  if(commCache[lead.apn]) return commCache[lead.apn];
+  if(!lead.lat || !lead.lng) return (commCache[lead.apn] = { rows: [], error: 'no coordinates for this lead' });
+  const U = 'https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query';
+  const yr = new Date().getFullYear(), years = [0,1,2,3,4].map(i => `SALE_DATE LIKE '%/${yr - i}'`).join(' OR ');
+  let feats = [], radius = 0;
+  try{
+    for(const miles of [0.5, 1, 2, 3]){
+      radius = miles;
+      const body = new URLSearchParams({ geometry: JSON.stringify({ x: lead.lng, y: lead.lat, spatialReference: { wkid: 4326 } }), geometryType: 'esriGeometryPoint', inSR: '4326',
+        distance: String(miles * 1609.34), units: 'esriSRUnit_Meter', spatialRel: 'esriSpatialRelIntersects',
+        where: `SALE_PRICE IS NOT NULL AND SALE_PRICE <> '0' AND ((PUC >= '04' AND PUC < '30') OR PUC LIKE '002%' OR PUC LIKE '003%') AND (${years})`,
+        outFields: 'APN,PHYSICAL_ADDRESS,SALE_DATE,SALE_PRICE,LAND_SIZE,LIVING_SPACE,CONST_YEAR,PUC,CITY_ZONING,LATITUDE,LONGITUDE', resultRecordCount: '1000', f: 'json' });
+      const r = await (await fetch(U, { method: 'POST', body })).json();
+      const all = (r.features || []).map(f => f.attributes).filter(a => hcNum(a.SALE_PRICE) >= 50000 && a.APN !== lead.apn);
+      // one deal price stamped on several parcels = portfolio sale, not a lot price
+      const seen = {}; all.forEach(a => { const k = a.SALE_PRICE + '|' + a.SALE_DATE; seen[k] = (seen[k] || 0) + 1; });
+      feats = all.filter(a => seen[a.SALE_PRICE + '|' + a.SALE_DATE] === 1);
+      if(feats.length >= 5) break;
+    }
+  }catch(e){ return { rows: [], error: 'could not reach the county GIS (' + e.message + ')' }; }
+  const subLot = lead.landSf || 43560, now = Date.now();
+  const rows = feats.map(a => {
+    const lat = hcNum(a.LATITUDE), lng = hcNum(a.LONGITUDE) * (String(a.LONGITUDE).includes('-') ? -1 : 1);
+    const dLat = (lat - lead.lat) * 69, dLng = (lng - lead.lng) * 69 * Math.cos(lead.lat * Math.PI / 180);
+    const dist = Math.sqrt(dLat * dLat + dLng * dLng), price = hcNum(a.SALE_PRICE), lot = hcNum(a.LAND_SIZE), bsf = hcNum(a.LIVING_SPACE);
+    const months = (now - new Date(a.SALE_DATE)) / 2.63e9;
+    const score = dist + Math.abs(Math.log((lot || 1) / subLot)) * 0.5 + months / 24;
+    return { address: String(a.PHYSICAL_ADDRESS || '').split(/\s{2,}/)[0], dist, sold: a.SALE_DATE, price, lot, bsf, vacant: String(a.PUC).startsWith('00'),
+      zoning: a.CITY_ZONING && a.CITY_ZONING !== 'CONTACT LOCAL JURISDICTION' ? a.CITY_ZONING : '', ppa: lot ? price / (lot / 43560) : 0, plsf: lot ? price / lot : 0, pbsf: bsf ? price / bsf : 0, score };
+  }).sort((a, b) => a.score - b.score).slice(0, 6);
+  const land = rows.filter(r => r.vacant && r.ppa);
+  return (commCache[lead.apn] = { rows, radius, medLandPpa: hcMedian(land.map(r => r.ppa)), nLand: land.length, medBldg: hcMedian(rows.filter(r => r.pbsf).map(r => r.pbsf)) });
+}
+function commCompsHtml(lead){
+  const h = commCache[lead.apn];
+  const title = '<div class="comps-title">Commercial Comps — recent sales nearby</div>';
+  if(!h) return `<div class="comps-section">${title}<div class="comps-empty">Loading from the county…</div></div>`;
+  if(!h.rows.length) return `<div class="comps-section">${title}<div class="comps-empty">${esc(h.error || 'No commercial or industrial sales found within 3 miles in the last 5 years.')}</div></div>`;
+  const rows = h.rows.map(r => `<tr><td>${esc(r.address)}${r.zoning ? ` <span class="sim-badge">${esc(r.zoning)}</span>` : ''}</td><td>${r.dist.toFixed(2)} mi</td><td>${esc(r.sold)}</td><td><b>${money(r.price)}</b></td>
+    <td>${r.vacant ? 'Vacant land' : 'Building'}</td><td>${r.lot ? num1(r.lot / 43560) + ' ac' : '—'}</td><td>${r.ppa ? '<b>' + money(r.ppa) + '</b>' : '—'}</td><td>${r.plsf ? money(r.plsf) : '—'}</td><td>${r.bsf ? Math.round(r.bsf).toLocaleString() + ' sf' : '—'}</td><td>${r.pbsf ? money(r.pbsf) : '—'}</td></tr>`).join('');
+  const stat = [h.nLand ? `Vacant-land median: <b>${money(h.medLandPpa)}/acre</b> (${h.nLand} sale${h.nLand > 1 ? 's' : ''})` : '', h.medBldg ? `Building median: <b>${money(h.medBldg)}/sf</b>` : ''].filter(Boolean).join(' · ');
+  return `<div class="comps-section">${title}
+    <div class="valuation-box"><div class="valuation-likely">${stat || 'No vacant-land sales to price per acre.'} <span style="color:var(--text-faint);font-weight:400;">· searched ${h.radius} mi</span></div></div>
+    <div style="overflow-x:auto;"><table class="comps-table"><thead><tr><th>Property</th><th>Distance</th><th>Sold</th><th>Price</th><th>Type</th><th>Lot</th><th>$/Acre</th><th>$/Land sf</th><th>Building</th><th>$/Bldg sf</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <div class="comps-note">Commercial and industrial parcels only, last 5 years, starting at ½ mile and widening only if fewer than 5 found. Portfolio/bulk sales are dropped. County Assessor data (latest recorded sale per parcel) — the recorded price can be a related-party or nominal sale, so confirm any comp you rely on. Lease rates and listing prices are not public.</div>
+  </div>`;
+}
+async function loadCommComps(lead){
+  const box = document.getElementById('house-' + lead.apn); if(!box) return;
+  await fetchCommComps(lead);
+  box.innerHTML = commCompsHtml(lead);
+}
 function compsSectionHtml(lead){
-  return `<div class="comps-split"><div>${landCompsHtml(lead)}</div><div id="house-${esc(lead.apn)}">${houseCompsHtml(lead)}</div></div>`;
+  return `<div class="comps-split"><div>${landCompsHtml(lead)}</div><div id="house-${esc(lead.apn)}">${isCommLead(lead) ? commCompsHtml(lead) : houseCompsHtml(lead)}</div></div>`;
 }
 
 // ── Lead cards ──────────────────────────────────────────────────────────
@@ -980,7 +1036,7 @@ renderLeads(currentLeads);
 function toggleLead(idx){
   const el = document.getElementById(`detail-${idx}`);
   el.classList.toggle('show');
-  if(el.classList.contains('show') && currentLeads[idx]) loadHouseComps(currentLeads[idx]);
+  if(el.classList.contains('show') && currentLeads[idx]) (isCommLead(currentLeads[idx]) ? loadCommComps : loadHouseComps)(currentLeads[idx]);
 }
 // ── Mail letter generator ───────────────────────────────────────────────
 function titleCase(s){
