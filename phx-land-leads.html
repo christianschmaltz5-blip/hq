@@ -269,6 +269,35 @@
         </div>
       </div>
 
+      <div class="card" id="ranked">
+        <div class="card-head">
+          <h2>Ranked Leads</h2>
+          <span class="card-sub">Click a lead to see the full analysis + run it through the underwriting calculator.</span>
+        </div>
+        <div class="filter-row">
+          <select class="filter-input" id="typeFilter" style="width:160px;">
+            <option value="all">All types</option>
+            <option value="vacant">🟢 Vacant land only</option>
+            <option value="improved">🟠 Underused lots only</option>
+          </select>
+          <select class="filter-input" id="landUseFilter" style="width:170px;">
+            <option value="all">All zoning (res + comm)</option>
+            <option value="residential">🏠 Residential only</option>
+            <option value="commercial">🏢 Commercial only</option>
+            <option value="industrial">🏭 Industrial only</option>
+          </select>
+          <input class="filter-input" id="addrSearch" type="text" placeholder="Search address or owner…" style="flex:1; min-width:200px;">
+          <input class="filter-input" id="minValue" type="number" placeholder="Min assessed value ($)" style="width:180px;">
+          <input class="filter-input" id="maxValue" type="number" placeholder="Max assessed value ($)" style="width:180px;">
+          <input type="checkbox" id="hotOnly"> <label for="hotOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">🔥 Hot deals only (score ≥ 50)</label>
+          <input type="checkbox" id="showGood"> <label for="showGood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Show leads I tagged "Good house"</label>
+          <input type="checkbox" id="estateOnly"> <label for="estateOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Estate-owned only</label>
+          <input type="checkbox" id="hideFlood"> <label for="hideFlood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Hide floodplain-constrained</label>
+        </div>
+        <div style="font-size:11px; color:var(--text-faint); margin:-10px 0 14px;">Price filter uses county assessed value — no real asking price is available in any public feed, so treat this as a rough size filter, not a real price range.</div>
+        <div id="leads-list"></div>
+      </div>
+
       <div class="card" id="saved-runs" style="border:2px solid #3f6fb0;">
         <div class="card-head">
           <h2>💾 Saved Numbers</h2>
@@ -344,35 +373,6 @@
         </div>
         <div id="skip-trace-summary" style="font-size:13px;color:var(--text-soft);margin-bottom:10px;"></div>
         <div style="overflow-x:auto;"><table class="comps-table" id="skip-trace-table"></table></div>
-      </div>
-
-      <div class="card" id="ranked">
-        <div class="card-head">
-          <h2>Ranked Leads</h2>
-          <span class="card-sub">Click a lead to see the full analysis + run it through the underwriting calculator.</span>
-        </div>
-        <div class="filter-row">
-          <select class="filter-input" id="typeFilter" style="width:160px;">
-            <option value="all">All types</option>
-            <option value="vacant">🟢 Vacant land only</option>
-            <option value="improved">🟠 Underused lots only</option>
-          </select>
-          <select class="filter-input" id="landUseFilter" style="width:170px;">
-            <option value="all">All zoning (res + comm)</option>
-            <option value="residential">🏠 Residential only</option>
-            <option value="commercial">🏢 Commercial only</option>
-            <option value="industrial">🏭 Industrial only</option>
-          </select>
-          <input class="filter-input" id="addrSearch" type="text" placeholder="Search address or owner…" style="flex:1; min-width:200px;">
-          <input class="filter-input" id="minValue" type="number" placeholder="Min assessed value ($)" style="width:180px;">
-          <input class="filter-input" id="maxValue" type="number" placeholder="Max assessed value ($)" style="width:180px;">
-          <input type="checkbox" id="hotOnly"> <label for="hotOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">🔥 Hot deals only (score ≥ 50)</label>
-          <input type="checkbox" id="showGood"> <label for="showGood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Show leads I tagged "Good house"</label>
-          <input type="checkbox" id="estateOnly"> <label for="estateOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Estate-owned only</label>
-          <input type="checkbox" id="hideFlood"> <label for="hideFlood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Hide floodplain-constrained</label>
-        </div>
-        <div style="font-size:11px; color:var(--text-faint); margin:-10px 0 14px;">Price filter uses county assessed value — no real asking price is available in any public feed, so treat this as a rough size filter, not a real price range.</div>
-        <div id="leads-list"></div>
       </div>
 
       <div class="card" id="traced" style="border:2px solid #3f7a57;">
