@@ -829,7 +829,6 @@ def main():
     prev_leads = {}
     if OUT_PATH.exists():
         try:
-            import re
             text = OUT_PATH.read_text()
             m = re.search(r'"history"\s*:\s*(\[.*?\])\s*,\s*\n\s*"methodologyNote"', text, re.S)
             if m:

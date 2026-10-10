@@ -312,13 +312,13 @@
       <div class="map-pair" id="maps">
         <div class="card">
           <div class="card-head"><h2>Underused Lot Map</h2>
-            <span style="font-size:12px;color:var(--text-faint);"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#b3831f;border:1px dashed #8f6418;margin-right:5px;"></span>Underused lot</span>
+            <span style="font-size:12px;color:var(--text-faint);"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#b3831f;border:1px dashed #8f6418;margin-right:5px;"></span>Underused lot</span><span style="font-size:11px;color:var(--text-faint);margin-left:10px;">Fill: <b style="color:#2e9e57;">green</b> = profit, <b style="color:#d64545;">red</b> = loss on numbers you ran, white = not run</span>
           </div>
           <div id="teardownMap"></div>
         </div>
         <div class="card">
           <div class="card-head"><h2>Vacant Land Map</h2>
-            <span style="font-size:12px;color:var(--text-faint);"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3f7a57;margin-right:5px;"></span>Vacant land</span>
+            <span style="font-size:12px;color:var(--text-faint);"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3f7a57;margin-right:5px;"></span>Vacant land</span><span style="font-size:11px;color:var(--text-faint);margin-left:10px;">Fill: <b style="color:#2e9e57;">green</b> = profit, <b style="color:#d64545;">red</b> = loss on numbers you ran, white = not run</span>
           </div>
           <div id="vacantMap"></div>
         </div>
@@ -671,14 +671,14 @@ function persistCalc(idx){
   const summary = calcSummary(st);
   try{ const d = loadCalcs(); d[l.apn] = { st, summary, at: new Date().toLocaleDateString() }; localStorage.setItem('leadCalcs', JSON.stringify(d)); }catch(e){}
   const b = document.getElementById('calcbadge-' + idx); if(b){ b.style.display = ''; b.textContent = '💾 ' + summary; }
-  renderRuns();
+  renderRuns(); drawMaps(true);
 }
 function resetCalc(idx){
   const l = currentLeads[idx]; if(!l) return;
   try{ const d = loadCalcs(); delete d[l.apn]; localStorage.setItem('leadCalcs', JSON.stringify(d)); }catch(e){}
   delete calcStates[idx]; initCalc(idx, l);
   const b = document.getElementById('calcbadge-' + idx); if(b) b.style.display = 'none';
-  renderRuns();
+  renderRuns(); drawMaps(true);
 }
 
 function initCalc(idx, lead){
@@ -1560,7 +1560,7 @@ function renderBids(){
 // ── Saved Numbers (Custom Home Calculator runs + per-lead calculators) ───
 const RUN_IDS = ['hcLand','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen'];
 function loadRuns(){ try{ return JSON.parse(localStorage.getItem('savedRuns') || '[]'); }catch(e){ return []; } }
-function storeRuns(r){ try{ localStorage.setItem('savedRuns', JSON.stringify(r)); }catch(e){} renderRuns(); }
+function storeRuns(r){ try{ localStorage.setItem('savedRuns', JSON.stringify(r)); }catch(e){} renderRuns(); drawMaps(true); }
 function saveRun(){
   const g = id => document.getElementById(id), L = window.hcLast; if(!L) return;
   const vals = {}; RUN_IDS.forEach(k => vals[k] = g(k).value);
@@ -1771,8 +1771,9 @@ function renderMapInstance(inst, leads){
   const bounds = [];
   withCoords.forEach(l=>{
     const c = colorFor(l.parcelStatus);
+    const rp = runProfit(l), fill = rp == null ? '#ffffff' : rp > 0 ? '#2e9e57' : '#d64545';  // white = not run yet
     const marker = L.circleMarker([l.lat,l.lng], {
-      radius: 5 + Math.min(l.score, 80)/12, color: c, fillColor: c, fillOpacity: 0.6, weight: 1.5,
+      radius: 5 + Math.min(l.score, 80)/12, color: c, fillColor: fill, fillOpacity: rp == null ? 0.9 : 0.75, weight: 1.5,
       dashArray: l.parcelStatus === 'improved' ? '3,2' : null
     }).addTo(inst.map).bindTooltip(String(l.score), {
       permanent: true, direction: 'center', className: 'score-tooltip'
@@ -1785,9 +1786,16 @@ function renderMapInstance(inst, leads){
     inst.markers.push(marker);
     bounds.push([l.lat,l.lng]);
   });
-  if(bounds.length>1) inst.map.fitBounds(bounds, {padding:[24,24]});
+  if(bounds.length>1 && !mapKeepView) inst.map.fitBounds(bounds, {padding:[24,24]});
 }
 
+// profit from the numbers you ran on this lead: its own calculator first, else a run saved under its address
+function runProfit(l){
+  const c = loadCalcs()[l.apn];
+  if(c && c.st) return c.st.mode === 'lots' ? calcSubdivision(c.st).developerProfit : calcHold(c.st).profit;
+  const a = String(l.address || '').split(/\s{2,}/)[0].toLowerCase(), r = loadRuns().find(x => x.name.toLowerCase() === a);
+  return r ? r.gain : null;
+}
 let vacantMapInst = null, teardownMapInst = null, mapData = null;
 function renderMaps(leads){
   const vacant = (leads||[]).filter(l => l.parcelStatus !== 'improved');
@@ -1805,8 +1813,10 @@ function renderMaps(leads){
   drawMaps();
 }
 // a minimized map has no size, and Leaflet throws drawing into it: skip it, redraw when expanded
-function drawMaps(){
+let mapKeepView = false;
+function drawMaps(keepView){  // keepView: recolor only, don't jump the map back to the full extent
   if(!mapData) return;
+  mapKeepView = !!keepView;
   [[vacantMapInst, 'vacantMap', mapData.vacant], [teardownMapInst, 'teardownMap', mapData.teardown]].forEach(([m, id, l]) => {
     try{ if(m && document.getElementById(id).offsetHeight) renderMapInstance(m, l); }catch(e){ console.error('map draw failed', e); }  // a map failure must not stop the rest of the page
   });
