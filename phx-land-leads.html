@@ -927,6 +927,20 @@ function setCondition(apn, c){
 }
 const CONDITIONS = [['good','🏡 Good house'],['dated','🛠️ Dated'],['teardown','🔨 True teardown']];
 
+// One-click TruePeopleSearch lookup for a lead's owner. County names are "LAST FIRST [MI]", co-owners joined by "/".
+function ownerLookupUrl(lead){
+  let n = (lead.ownerName || '').toUpperCase();
+  if(/\b(LLC|L L C|INC|CORP|CORPORATION|LP|LLP|CO|COMPANY|LIVING TRUST|FAMILY TRUST|TRUST OF|PARTNERS|PARTNERSHIP|HOLDINGS|PROPERTIES|BANK|CHURCH|ASSOCIATION|HOMEOWNERS)\b/.test(n)) return '';
+  n = n.replace(/\b(ETAL|ET AL|TR|TRS|TRUSTEE|JT|JTWROS|CP|CO-TRUSTEES|REVOCABLE|TRUST|ESTATE OF|LIFE ESTATE)\b/g, ' ');
+  const first = n.split('/')[0].trim().split(/\s+/).filter(Boolean);
+  if(first.length < 2) return '';
+  const m = (lead.ownerMailAddress || '').match(/\b([A-Z]{2})\s+(?:USA\s+)?(\d{5})/);
+  return 'https://www.truepeoplesearch.com/results?name=' + encodeURIComponent((first[1].length === 1 && first[2] ? first[2] : first[1]) + ' ' + first[0]) + (m ? '&citystatezip=' + encodeURIComponent(m[1] + ' ' + m[2]) : '');
+}
+function ownerLookupBtn(lead){
+  const u = ownerLookupUrl(lead);
+  return u ? `<a class="mail-btn" style="margin-left:8px;text-decoration:none;display:inline-block;" href="${esc(u)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Opens TruePeopleSearch with the owner's name and mailing state/zip filled in">🔍 Look up owner</a>` : '';
+}
 function leadCard(lead, idx){
   const reasons = (lead.reasons||[]).map(r=>{
     const isFlood = r.toLowerCase().includes('flood');
@@ -990,6 +1004,7 @@ function leadCard(lead, idx){
         <div class="detail-field"><div class="detail-label">Owner Mailing Address</div><div class="detail-val">${esc(lead.ownerMailAddress)||'—'}</div>
           ${lead.ownerMailAddress && !own.isHiddenOwner ? `<button class="mail-btn" onclick="event.stopPropagation(); openLetter(${idx})">✉️ Generate Mail Letter</button>` : own.isHiddenOwner && lead.registeredAgent ? `<div style="font-size:10.5px;color:var(--text-soft);margin-top:6px;">Registered agent (via <a href="${esc(lead.registeredAgent.companyUrl)}" target="_blank" rel="noopener">OpenCorporates</a>): <b>${esc(lead.registeredAgent.agentLine)}</b></div>` : own.isHiddenOwner ? `<div style="font-size:10.5px;color:var(--text-faint);margin-top:6px;">Hidden LLC/Trust — no registered agent found; find it manually before mailing</div>` : ''}
           <button class="mail-btn" style="background:${contactedDate?'#f1f3f7':'var(--success)'}; color:${contactedDate?'var(--text-soft)':'#fff'}; margin-left:8px;" onclick="event.stopPropagation(); toggleContacted('${esc(lead.apn)}')">${contactedDate ? 'Undo Contacted' : '📨 Mark Contacted'}</button>
+          ${ownerLookupBtn(lead)}
         </div>
         <div class="detail-field"><div class="detail-label">Rezone Basis</div><div class="detail-val" style="font-size:11.5px;font-weight:600;">${lead.rezoneTarget ? esc(lead.rezoneTarget.basis) : 'No adjacent upside detected'}</div></div>
         <div class="detail-field"><div class="detail-label">Owner Type</div><div class="detail-val">${own.isHiddenOwner ? 'Hidden LLC/Trust — needs manual unmasking' : own.isEntityOwner ? 'Trust at owner\'s own address — family name likely in trust name' : 'Individual'}</div></div>
