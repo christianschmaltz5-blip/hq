@@ -843,7 +843,7 @@ async function fetchCommComps(lead){
       radius = miles;
       const body = new URLSearchParams({ geometry: JSON.stringify({ x: lead.lng, y: lead.lat, spatialReference: { wkid: 4326 } }), geometryType: 'esriGeometryPoint', inSR: '4326',
         distance: String(miles * 1609.34), units: 'esriSRUnit_Meter', spatialRel: 'esriSpatialRelIntersects',
-        where: `SALE_PRICE IS NOT NULL AND SALE_PRICE <> '0' AND ((PUC >= '04' AND PUC < '30') OR PUC LIKE '002%' OR PUC LIKE '003%') AND (${years})`,
+        where: `SALE_PRICE IS NOT NULL AND SALE_PRICE <> '0' AND ((PUC >= '04' AND PUC < '07') OR (PUC >= '09' AND PUC < '30') OR PUC LIKE '002%' OR PUC LIKE '003%') AND (${years})`,
         outFields: 'APN,PHYSICAL_ADDRESS,SALE_DATE,SALE_PRICE,LAND_SIZE,LIVING_SPACE,CONST_YEAR,PUC,CITY_ZONING,LATITUDE,LONGITUDE', resultRecordCount: '1000', f: 'json' });
       const r = await (await fetch(U, { method: 'POST', body })).json();
       const all = (r.features || []).map(f => f.attributes).filter(a => hcNum(a.SALE_PRICE) >= 50000 && a.APN !== lead.apn);
