@@ -93,7 +93,9 @@
 (function(){
   const NOTES_KEY = 'hqChangelogNotes';
   function loadNotes(){
-    try{ return JSON.parse(localStorage.getItem(NOTES_KEY) || '[]'); }catch(e){ return []; }
+    try{
+      return JSON.parse(localStorage.getItem(NOTES_KEY) || '[]').map((n,i) => n.id ? n : Object.assign({id: 'legacy' + i}, n));
+    }catch(e){ return []; }
   }
   function saveNotes(notes){
     try{ localStorage.setItem(NOTES_KEY, JSON.stringify(notes)); }catch(e){}
@@ -102,6 +104,9 @@
     const d = new Date(iso + 'T00:00:00');
     return d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
   }
+  function esc(t){ return String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+  let editingId = null;
+  const btnCss = 'font-size:11px; font-weight:600; color:var(--text-faint); background:none; border:none; cursor:pointer; padding:0 8px 0 0;';
   function render(entries){
     const list = document.getElementById('changelog-list');
     const sorted = entries.slice().sort((a,b) => b.date.localeCompare(a.date)).slice(0, 10);
@@ -112,8 +117,15 @@
     list.innerHTML = sorted.map(e => `
       <div style="display:flex; gap:14px;">
         <div style="font-size:11px; color:var(--text-faint); font-weight:600; white-space:nowrap; min-width:80px; padding-top:1px;">${fmtDate(e.date)}</div>
-        <div>
-          <div style="font-size:13.5px; font-weight:700; color:var(--text);">${e.note ? '📝 ' : ''}${e.title}</div>
+        <div style="flex:1;">
+          ${e.note && e.id === editingId ? `
+          <div style="display:flex; gap:8px;">
+            <input class="note-edit-input" value="${esc(e.title)}" style="flex:1; padding:6px 10px; font-size:13px; border:1px solid var(--card-border); border-radius:var(--radius-sm); font-family:inherit;">
+            <button data-act="save" data-id="${e.id}" style="${btnCss} color:var(--accent);">Save</button>
+            <button data-act="cancel" style="${btnCss}">Cancel</button>
+          </div>` : `
+          <div style="font-size:13.5px; font-weight:700; color:var(--text);">${e.note ? '📝 ' : ''}${esc(e.title)}</div>
+          ${e.note ? `<div style="margin-top:3px;"><button data-act="edit" data-id="${e.id}" style="${btnCss}">Edit</button><button data-act="delete" data-id="${e.id}" style="${btnCss}">Delete</button></div>` : ''}`}
           ${e.detail ? `<div style="font-size:12.5px; color:var(--text-soft); margin-top:2px; line-height:1.5;">${e.detail}</div>` : ''}
         </div>
       </div>`).join('');
@@ -133,10 +145,29 @@
     const now = new Date();
     const localDate = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
     const notes = loadNotes();
-    notes.push({date: localDate, title: text, note: true});
+    notes.push({id: String(Date.now()) + Math.random().toString(36).slice(2,6), date: localDate, title: text, note: true});
     saveNotes(notes);
     input.value = '';
     refresh();
+  });
+  document.getElementById('changelog-list').addEventListener('click', function(e){
+    const b = e.target.closest('button[data-act]');
+    if(!b) return;
+    const act = b.dataset.act, id = b.dataset.id;
+    let notes = loadNotes();
+    if(act === 'edit'){ editingId = id; }
+    else if(act === 'cancel'){ editingId = null; }
+    else if(act === 'delete'){ notes = notes.filter(n => n.id !== id); saveNotes(notes); }
+    else if(act === 'save'){
+      const text = b.parentElement.querySelector('.note-edit-input').value.trim();
+      if(text){ notes.forEach(n => { if(n.id === id) n.title = text; }); saveNotes(notes); }
+      editingId = null;
+    }
+    refresh();
+  });
+  document.getElementById('changelog-list').addEventListener('keydown', function(e){
+    if(e.key === 'Enter' && e.target.classList.contains('note-edit-input')) e.target.nextElementSibling.click();
+    if(e.key === 'Escape') { editingId = null; refresh(); }
   });
   document.getElementById('noteInput').addEventListener('keydown', function(e){
     if(e.key === 'Enter') document.getElementById('noteAddBtn').click();
