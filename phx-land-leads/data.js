@@ -17,7 +17,7 @@ window.PHX_LAND_LEADS = {
     "85022"
   ],
   "parcelsScanned": 9713,
-  "newLeadsThisRun": 22,
+  "newLeadsThisRun": 12,
   "leads": [
     {
       "apn": "16766007",
@@ -79,7 +79,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1969, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+61% vs assessed, rank 177/459 (+10 pts)"
+        "comps value ~+61% vs assessed, rank 179/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -201,8 +201,8 @@ window.PHX_LAND_LEADS = {
       "lng": -111.98132905675492,
       "assessedValue": 1696000.0,
       "assessedValuePerAcre": 1624521.0,
-      "currentZoning": null,
-      "generalPlanDesignation": null,
+      "currentZoning": "RE-35",
+      "generalPlanDesignation": "GP code 24",
       "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
@@ -211,7 +211,7 @@ window.PHX_LAND_LEADS = {
         "targetDensity": 2,
         "basis": "adjacent parcels already zoned R1-18"
       },
-      "byRightUnits": null,
+      "byRightUnits": 1.0,
       "rezoneTargetUnits": 2.1,
       "dealType": "subdivision",
       "referenceCostPerLotAZ": 65000,
@@ -236,7 +236,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+12% vs assessed, rank 252/459 (+4 pts)"
+        "comps value ~+12% vs assessed, rank 252/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -403,7 +403,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+107% vs assessed, rank 131/459 (+10 pts)"
+        "comps value ~+107% vs assessed, rank 132/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -567,7 +567,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "12 homes rebuilt since 2015 in CAMPOBELLO \u2014 proven teardown neighborhood",
         "built 1957, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+36% vs assessed, rank 212/459 (+10 pts)"
+        "comps value ~+36% vs assessed, rank 213/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -743,7 +743,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "12 homes rebuilt since 2015 in CAMPOBELLO \u2014 proven teardown neighborhood",
         "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+30% vs assessed, rank 225/459 (+10 pts)"
+        "comps value ~+30% vs assessed, rank 224/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -926,7 +926,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 0% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1936, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+117% vs assessed, rank 125/459 (+10 pts)"
+        "comps value ~+117% vs assessed, rank 125/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -1100,7 +1100,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1958, no sale in 15+ years \u2014 likely dated/deferred maintenance",
         "comps margin 364% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+364% vs assessed, rank 27/459 (+20 pts)"
+        "comps value ~+364% vs assessed, rank 22/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -1273,7 +1273,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1959, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+195% vs assessed, rank 93/459 (+20 pts)"
+        "comps value ~+195% vs assessed, rank 91/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -1447,7 +1447,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1958, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+120% vs assessed, rank 123/459 (+10 pts)"
+        "comps value ~+120% vs assessed, rank 123/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -1566,6 +1566,180 @@ window.PHX_LAND_LEADS = {
       "peakScore": 111
     },
     {
+      "apn": "21409019C",
+      "address": "1851 E CAMPO BELLO DR   PHOENIX  85022",
+      "ownerName": "LINTACH MANAGEMENT LLC",
+      "ownerMailAddress": "825 MOREWOOD AVE APT L2 PITTSBURGH PA USA 15213",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 0.0
+      },
+      "landSf": 54322,
+      "landAcres": 1.247,
+      "puc": "0131",
+      "landUseClass": "residential",
+      "lat": 33.64357483821865,
+      "lng": -112.04204607570462,
+      "assessedValue": 280200.0,
+      "assessedValuePerAcre": 224699.0,
+      "currentZoning": "R1-6",
+      "generalPlanDesignation": "GP code 47",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-2",
+        "targetDensity": 12,
+        "basis": "adjacent parcels already zoned R-2"
+      },
+      "byRightUnits": 7.5,
+      "rezoneTargetUnits": 15.0,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 885.0,
+      "farRatio": 0.016291741835720335,
+      "yearBuilt": "1960",
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "ANDREW ESTATES",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": 18000,
+      "score": 98,
+      "reasons": [
+        "adjacent parcels already zoned R-2",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "existing structure occupies only 2% of the lot \u2014 under-improved for the land size",
+        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
+        "built 1960, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps value ~+115% vs assessed, rank 128/458 (+10 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "21403040A",
+          "address": "3025 E HARTFORD AVE   PHOENIX  85032",
+          "distanceMi": 1.44,
+          "soldDate": "2026-05-01",
+          "soldPrice": 205000.0,
+          "landSf": 18447,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 484079,
+          "similarity": 50
+        },
+        {
+          "apn": "21428021",
+          "address": "2626 E KELTON LN   PHOENIX  85032",
+          "distanceMi": 1.04,
+          "soldDate": "2026-04-01",
+          "soldPrice": 120000.0,
+          "landSf": 7666,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 681868,
+          "similarity": 48
+        },
+        {
+          "apn": "21323604",
+          "address": "",
+          "distanceMi": 1.78,
+          "soldDate": "2024-07-01",
+          "soldPrice": 1925000.0,
+          "landSf": 47754,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1755937,
+          "similarity": 48
+        },
+        {
+          "apn": "21411890",
+          "address": "1405 E VILLA MARIA DR   PHOENIX  85022",
+          "distanceMi": 0.78,
+          "soldDate": "2024-10-01",
+          "soldPrice": 360000.0,
+          "landSf": 18842,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 832268,
+          "similarity": 47
+        },
+        {
+          "apn": "21408054",
+          "address": "2223 E GROVERS AVE   PHOENIX  85022",
+          "distanceMi": 0.53,
+          "soldDate": "2025-01-01",
+          "soldPrice": 172800.0,
+          "landSf": 6193,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1215432,
+          "similarity": 46
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 603676,
+        "rangeLow": 603676,
+        "rangeHigh": 1037890,
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $603,676 (range $603,676-$1,037,890)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 115,
+      "compsAdj": 10,
+      "newBuild": {
+        "arv": 616750,
+        "psf": 305,
+        "n": 6,
+        "radiusMi": 1.0,
+        "lowPsf": 239,
+        "highPsf": 332,
+        "examples": [
+          {
+            "address": "16244 N 21ST ST",
+            "price": 1100000,
+            "sf": 3637,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "2138 E PARADISE LN",
+            "price": 1092796,
+            "sf": 3455,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "16875 N 12TH ST",
+            "price": 588500,
+            "sf": 1912,
+            "sold": "2025-10-01"
+          },
+          {
+            "address": "16875 N 12TH ST",
+            "price": 527364,
+            "sf": 1590,
+            "sold": "2026-05-01"
+          },
+          {
+            "address": "17219 N 10TH ST",
+            "price": 645000,
+            "sf": 2610,
+            "sold": "2025-09-01"
+          }
+        ]
+      },
+      "registeredAgent": null,
+      "isNew": true,
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10",
+      "peakScore": 98
+    },
+    {
       "apn": "16501015A",
       "address": "10342 N 38TH ST   PHOENIX  85028",
       "ownerName": "DIANE FOGELL REVOCABLE LIVING TRUST",
@@ -1621,7 +1795,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1967, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+7% vs assessed, rank 265/459 (+4 pts)"
+        "comps value ~+7% vs assessed, rank 265/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -1783,7 +1957,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1958, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+65% vs assessed, rank 173/459 (+10 pts)"
+        "comps value ~+65% vs assessed, rank 175/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -1956,7 +2130,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1956, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+60% vs assessed, rank 180/459 (+10 pts)"
+        "comps value ~+60% vs assessed, rank 182/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -2129,7 +2303,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1962, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+83% vs assessed, rank 148/459 (+10 pts)"
+        "comps value ~+83% vs assessed, rank 148/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -2291,7 +2465,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1956, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+34% vs assessed, rank 215/459 (+10 pts)"
+        "comps value ~+34% vs assessed, rank 216/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -2465,7 +2639,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "3 homes rebuilt since 2015 in SAHUARO HTS",
         "built 1958, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+258% vs assessed, rank 59/459 (+20 pts)"
+        "comps value ~+258% vs assessed, rank 54/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -2639,7 +2813,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1967, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+6% vs assessed, rank 267/459 (+4 pts)"
+        "comps value ~+6% vs assessed, rank 267/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -2812,7 +2986,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1950, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+89% vs assessed, rank 145/459 (+10 pts)"
+        "comps value ~+89% vs assessed, rank 145/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -2974,7 +3148,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+115% vs assessed, rank 129/459 (+10 pts)"
+        "comps value ~+115% vs assessed, rank 129/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -3048,9 +3222,9 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 115,
       "compsAdj": 10,
       "newBuild": {
-        "arv": 800000,
-        "psf": 379,
-        "n": 75,
+        "arv": 804000,
+        "psf": 380,
+        "n": 76,
         "radiusMi": 2.0,
         "lowPsf": 297,
         "highPsf": 771,
@@ -3147,7 +3321,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1969, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+50% vs assessed, rank 195/459 (+10 pts)"
+        "comps value ~+50% vs assessed, rank 197/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -3221,9 +3395,9 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 50,
       "compsAdj": 10,
       "newBuild": {
-        "arv": 784990,
+        "arv": 784995,
         "psf": 375,
-        "n": 75,
+        "n": 76,
         "radiusMi": 2.0,
         "lowPsf": 237,
         "highPsf": 475,
@@ -3320,7 +3494,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1962, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+35% vs assessed, rank 214/459 (+10 pts)"
+        "comps value ~+35% vs assessed, rank 215/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -3394,9 +3568,9 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 35,
       "compsAdj": 10,
       "newBuild": {
-        "arv": 784990,
+        "arv": 784995,
         "psf": 375,
-        "n": 75,
+        "n": 76,
         "radiusMi": 2.0,
         "lowPsf": 237,
         "highPsf": 475,
@@ -3493,7 +3667,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1969, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+30% vs assessed, rank 226/459 (+10 pts)"
+        "comps value ~+30% vs assessed, rank 225/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -3654,7 +3828,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+40% vs assessed, rank 204/459 (+10 pts)"
+        "comps value ~+40% vs assessed, rank 206/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -3815,7 +3989,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1966, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+40% vs assessed, rank 205/459 (+10 pts)"
+        "comps value ~+40% vs assessed, rank 207/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -3971,7 +4145,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "3 homes rebuilt since 2015 in CHATEAU THIERRY",
         "comps margin 354% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+354% vs assessed, rank 30/459 (+20 pts)"
+        "comps value ~+354% vs assessed, rank 26/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -4143,7 +4317,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1967, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+161% vs assessed, rank 106/459 (+20 pts)"
+        "comps value ~+161% vs assessed, rank 105/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -4316,7 +4490,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "12 homes rebuilt since 2015 in CAMPOBELLO \u2014 proven teardown neighborhood",
         "built 1953, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+63% vs assessed, rank 175/459 (+10 pts)"
+        "comps value ~+63% vs assessed, rank 177/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -4489,7 +4663,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "12 homes rebuilt since 2015 in CAMPOBELLO \u2014 proven teardown neighborhood",
         "built 1953, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+63% vs assessed, rank 176/459 (+10 pts)"
+        "comps value ~+63% vs assessed, rank 178/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -4662,7 +4836,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "12 homes rebuilt since 2015 in CAMPOBELLO \u2014 proven teardown neighborhood",
         "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+44% vs assessed, rank 201/459 (+10 pts)"
+        "comps value ~+44% vs assessed, rank 203/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -4835,7 +5009,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "12 homes rebuilt since 2015 in CAMPOBELLO \u2014 proven teardown neighborhood",
         "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+40% vs assessed, rank 206/459 (+10 pts)"
+        "comps value ~+40% vs assessed, rank 208/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -5007,7 +5181,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1958, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+185% vs assessed, rank 97/459 (+20 pts)"
+        "comps value ~+185% vs assessed, rank 97/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -5081,9 +5255,9 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 185,
       "compsAdj": 20,
       "newBuild": {
-        "arv": 790000,
-        "psf": 376,
-        "n": 74,
+        "arv": 795000,
+        "psf": 377,
+        "n": 75,
         "radiusMi": 2.0,
         "lowPsf": 253,
         "highPsf": 771,
@@ -5181,7 +5355,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "2 homes rebuilt since 2015 in PARADISE VALLEY PALMS UNIT 5 AMD",
         "built 1975, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+32% vs assessed, rank 220/459 (+10 pts)"
+        "comps value ~+32% vs assessed, rank 219/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -5349,7 +5523,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "12 homes rebuilt since 2015 in CAMPOBELLO \u2014 proven teardown neighborhood",
         "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+14% vs assessed, rank 250/459 (+4 pts)"
+        "comps value ~+14% vs assessed, rank 250/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -5522,7 +5696,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1969, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+25% vs assessed, rank 231/459 (+4 pts)"
+        "comps value ~+25% vs assessed, rank 230/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -5700,7 +5874,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1968, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+24% vs assessed, rank 232/459 (+4 pts)"
+        "comps value ~+24% vs assessed, rank 231/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -5774,9 +5948,9 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 24,
       "compsAdj": 4,
       "newBuild": {
-        "arv": 784995,
+        "arv": 785000,
         "psf": 375,
-        "n": 76,
+        "n": 77,
         "radiusMi": 2.0,
         "lowPsf": 237,
         "highPsf": 771,
@@ -5874,7 +6048,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1971, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+24% vs assessed, rank 233/459 (+4 pts)"
+        "comps value ~+24% vs assessed, rank 232/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -6008,11 +6182,7 @@ window.PHX_LAND_LEADS = {
       "livingSpaceSf": 2325.0,
       "farRatio": 0.05337465564738292,
       "yearBuilt": "1970",
-      "codeCases": {
-        "count": 1,
-        "severe": false,
-        "distress": false
-      },
+      "codeCases": null,
       "saleDate": null,
       "subdivision": "PARADISE FOOTHILLS",
       "rebuildsInSub": 6,
@@ -6027,7 +6197,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+6% vs assessed, rank 268/459 (+4 pts)"
+        "comps value ~+6% vs assessed, rank 268/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -6188,7 +6358,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "12 homes rebuilt since 2015 in CAMPOBELLO \u2014 proven teardown neighborhood",
         "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+32% vs assessed, rank 221/459 (+10 pts)"
+        "comps value ~+32% vs assessed, rank 220/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -6361,7 +6531,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "built 1969, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+58% vs assessed, rank 184/459 (+10 pts)"
+        "comps value ~+58% vs assessed, rank 186/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -6436,8 +6606,8 @@ window.PHX_LAND_LEADS = {
       "compsAdj": 10,
       "newBuild": {
         "arv": 795000,
-        "psf": 377,
-        "n": 73,
+        "psf": 378,
+        "n": 74,
         "radiusMi": 2.0,
         "lowPsf": 253,
         "highPsf": 631,
@@ -6539,7 +6709,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1960, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+73% vs assessed, rank 159/459 (+10 pts)"
+        "comps value ~+73% vs assessed, rank 161/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -6613,9 +6783,9 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 73,
       "compsAdj": 10,
       "newBuild": {
-        "arv": 784990,
+        "arv": 784995,
         "psf": 375,
-        "n": 75,
+        "n": 76,
         "radiusMi": 2.0,
         "lowPsf": 237,
         "highPsf": 475,
@@ -6717,7 +6887,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1963, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+32% vs assessed, rank 222/459 (+10 pts)"
+        "comps value ~+32% vs assessed, rank 221/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -6866,7 +7036,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+77% vs assessed, rank 154/459 (+10 pts)"
+        "comps value ~+77% vs assessed, rank 155/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -7028,7 +7198,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-44% vs assessed, rank 425/459 (-10 pts)"
+        "comps value ~-44% vs assessed, rank 424/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -7143,8 +7313,8 @@ window.PHX_LAND_LEADS = {
       },
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
-        "agentLine": "1734 E. Boston Street, Suite 103, GILBERT, AZ, 85295",
-        "companyUrl": "https://opencorporates.com/companies/us_az/23291387"
+        "agentLine": "1734 E. Boston St., Ste 103, GILBERT, AZ, 85295",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23652113"
       },
       "isNew": false,
       "firstSeen": "2026-10-04",
@@ -7206,7 +7376,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "built 1953, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+18% vs assessed, rank 242/459 (+4 pts)"
+        "comps value ~+18% vs assessed, rank 242/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -7280,9 +7450,9 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 18,
       "compsAdj": 4,
       "newBuild": {
-        "arv": 784990,
+        "arv": 784995,
         "psf": 375,
-        "n": 75,
+        "n": 76,
         "radiusMi": 2.0,
         "lowPsf": 237,
         "highPsf": 475,
@@ -7323,144 +7493,6 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-10",
       "peakScore": 95
-    },
-    {
-      "apn": "20707002P",
-      "address": "2710 W THUNDERBIRD RD   PHOENIX  85053",
-      "ownerName": "COWTOWN BOOT CO INC",
-      "ownerMailAddress": "PO BOX 26428 EL PASO TX USA 79926",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 34.4
-      },
-      "landSf": 87120,
-      "landAcres": 2.0,
-      "puc": "0022",
-      "landUseClass": "commercial",
-      "lat": 33.612318820581365,
-      "lng": -112.11929323824664,
-      "assessedValue": 1299300.0,
-      "assessedValuePerAcre": 649650.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 60",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-5",
-        "targetDensity": 43,
-        "basis": "adjacent parcels already zoned R-5"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 86.0,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": {
-        "count": 4,
-        "severe": true,
-        "distress": false
-      },
-      "saleDate": null,
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "score": 89,
-      "reasons": [
-        "adjacent parcels already zoned R-5",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 34+ years \u2014 likely low or no debt on the land",
-        "city issued a violation notice, ticket, or abatement here",
-        "4 code-enforcement cases at this address (2024+)",
-        "comps value ~+33% vs assessed, rank 217/459 (+10 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "14921014B",
-          "address": "12808 N BLACK CANYON HWY   PHOENIX  85029",
-          "distanceMi": 0.69,
-          "soldDate": "2026-02-01",
-          "soldPrice": 1585000.0,
-          "landSf": 79998,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 863054,
-          "similarity": 59
-        },
-        {
-          "apn": "14923021B",
-          "address": "2737 W THUNDERBIRD RD   PHOENIX  85053",
-          "distanceMi": 0.17,
-          "soldDate": "2025-08-01",
-          "soldPrice": 5290000.0,
-          "landSf": 150684,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1529243,
-          "similarity": 54
-        },
-        {
-          "apn": "14921001N",
-          "address": "2805 W LARKSPUR DR   PHOENIX  85029",
-          "distanceMi": 0.87,
-          "soldDate": "2026-03-01",
-          "soldPrice": 775000.0,
-          "landSf": 22216,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1519580,
-          "similarity": 45
-        },
-        {
-          "apn": "14921007",
-          "address": "12654 N 28TH DR   PHOENIX  85029",
-          "distanceMi": 0.71,
-          "soldDate": "2025-10-01",
-          "soldPrice": 1400000.0,
-          "landSf": 22208,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 2746037,
-          "similarity": 44
-        },
-        {
-          "apn": "14921008",
-          "address": "12644 N 28TH DR   PHOENIX  85029",
-          "distanceMi": 0.73,
-          "soldDate": "2025-10-01",
-          "soldPrice": 1400000.0,
-          "landSf": 20189,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 3020655,
-          "similarity": 43
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1726108,
-        "rangeLow": 1726108,
-        "rangeHigh": 3058485,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,726,108 (range $1,726,108-$3,058,485)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 33,
-      "compsAdj": 10,
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-10",
-      "peakScore": 94
     },
     {
       "apn": "16501009",
@@ -7517,7 +7549,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1960, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+16% vs assessed, rank 248/459 (+4 pts)"
+        "comps value ~+16% vs assessed, rank 248/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -7624,6 +7656,173 @@ window.PHX_LAND_LEADS = {
       "peakScore": 89
     },
     {
+      "apn": "16766003",
+      "address": "4713 E CHOLLA ST   PHOENIX  85028",
+      "ownerName": "EDGERTON LIVING TRUST",
+      "ownerMailAddress": "4713 E CHOLLA ST PHOENIX AZ USA 85028",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
+        "isEstateOwner": false,
+        "yearsHeld": 3.7
+      },
+      "landSf": 44855,
+      "landAcres": 1.03,
+      "puc": "0141",
+      "landUseClass": "residential",
+      "lat": 33.589395961181076,
+      "lng": -111.9792845560895,
+      "assessedValue": 1525000.0,
+      "assessedValuePerAcre": 1480583.0,
+      "currentZoning": "PCD",
+      "generalPlanDesignation": "GP code 24",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-10",
+        "targetDensity": 4,
+        "basis": "adjacent parcels already zoned R1-10"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 4.1,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 3679.0,
+      "farRatio": 0.0820198417121837,
+      "yearBuilt": "1969",
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "MORNINGSIDE  BLK 1, 2",
+      "rebuildsInSub": 5,
+      "salePrice": null,
+      "defaultDemoCost": 18000,
+      "score": 89,
+      "reasons": [
+        "adjacent parcels already zoned R1-10",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
+        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
+        "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
+        "built 1969, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps value ~+23% vs assessed, rank 233/458 (+4 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "16752084",
+          "address": "11630 N 52ND ST   SCOTTSDALE  85254",
+          "distanceMi": 0.6,
+          "soldDate": "2026-01-01",
+          "soldPrice": 1475000.0,
+          "landSf": 35260,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1822206,
+          "similarity": 64
+        },
+        {
+          "apn": "16722040",
+          "address": "5221 E LARKSPUR DR   SCOTTSDALE  85254",
+          "distanceMi": 0.99,
+          "soldDate": "2025-12-01",
+          "soldPrice": 1330000.0,
+          "landSf": 38556,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1502614,
+          "similarity": 62
+        },
+        {
+          "apn": "16763030",
+          "address": "5317 E YUCCA ST   SCOTTSDALE  85254",
+          "distanceMi": 0.72,
+          "soldDate": "2025-03-01",
+          "soldPrice": 1665225.0,
+          "landSf": 34865,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 2080516,
+          "similarity": 58
+        },
+        {
+          "apn": "16771078",
+          "address": "4344 E SHEA BLVD   PHOENIX  85028",
+          "distanceMi": 0.62,
+          "soldDate": "2026-04-01",
+          "soldPrice": 450000.0,
+          "landSf": 17951,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1091973,
+          "similarity": 57
+        },
+        {
+          "apn": "16742039",
+          "address": "5139 E SHAW BUTTE DR   SCOTTSDALE  85254",
+          "distanceMi": 0.72,
+          "soldDate": "2026-01-01",
+          "soldPrice": 750000.0,
+          "landSf": 10400,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 3141346,
+          "similarity": 52
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1876379,
+        "rangeLow": 1124436,
+        "rangeHigh": 2142368,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,876,379 (range $1,124,436-$2,142,368)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 23,
+      "compsAdj": 4,
+      "newBuild": {
+        "arv": 2780000,
+        "psf": 630,
+        "n": 4,
+        "radiusMi": 1.0,
+        "lowPsf": 624,
+        "highPsf": 699,
+        "examples": [
+          {
+            "address": "5101 E LAUREL LN",
+            "price": 2235000,
+            "sf": 3542,
+            "sold": "2026-05-01"
+          },
+          {
+            "address": "4224 E DESERT COVE AVE",
+            "price": 3325000,
+            "sf": 5332,
+            "sold": "2026-08-01"
+          },
+          {
+            "address": "11039 N 42ND ST",
+            "price": 1375000,
+            "sf": 2186,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "5239 E CORTEZ DR",
+            "price": 4750000,
+            "sf": 6793,
+            "sold": "2026-03-01"
+          }
+        ]
+      },
+      "isNew": false,
+      "firstSeen": "2026-10-05",
+      "lastSeen": "2026-10-10",
+      "peakScore": 89
+    },
+    {
       "apn": "16766024",
       "address": "4601 E SHANGRI LA RD   PHOENIX  85028",
       "ownerName": "TUNG FAMILY TRUST",
@@ -7678,7 +7877,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+5% vs assessed, rank 272/459 (+4 pts)"
+        "comps value ~+5% vs assessed, rank 273/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -7839,7 +8038,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1969, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+104% vs assessed, rank 135/459 (+10 pts)"
+        "comps value ~+104% vs assessed, rank 136/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -7913,9 +8112,9 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 104,
       "compsAdj": 10,
       "newBuild": {
-        "arv": 790000,
-        "psf": 376,
-        "n": 74,
+        "arv": 795000,
+        "psf": 377,
+        "n": 75,
         "radiusMi": 2.0,
         "lowPsf": 253,
         "highPsf": 771,
@@ -8017,7 +8216,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1973, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+43% vs assessed, rank 202/459 (+10 pts)"
+        "comps value ~+43% vs assessed, rank 204/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -8091,9 +8290,9 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 43,
       "compsAdj": 10,
       "newBuild": {
-        "arv": 784995,
+        "arv": 785000,
         "psf": 375,
-        "n": 76,
+        "n": 77,
         "radiusMi": 2.0,
         "lowPsf": 237,
         "highPsf": 771,
@@ -8190,7 +8389,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 7% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1964, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+56% vs assessed, rank 186/459 (+10 pts)"
+        "comps value ~+56% vs assessed, rank 188/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -8266,7 +8465,7 @@ window.PHX_LAND_LEADS = {
       "newBuild": {
         "arv": 795000,
         "psf": 379,
-        "n": 73,
+        "n": 74,
         "radiusMi": 2.0,
         "lowPsf": 297,
         "highPsf": 771,
@@ -8368,7 +8567,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 12% of the lot \u2014 under-improved for the land size",
         "2 homes rebuilt since 2015 in PARADISE VALLEY PALMS UNIT 5 AMD",
         "built 1975, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+7% vs assessed, rank 266/459 (+4 pts)"
+        "comps value ~+7% vs assessed, rank 266/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -8540,7 +8739,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "4 homes rebuilt since 2015 in SUN & SAND BLK 1-3",
         "built 1960, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+28% vs assessed, rank 228/459 (+10 pts)"
+        "comps value ~+28% vs assessed, rank 227/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -8712,7 +8911,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "existing structure occupies only 14% of the lot \u2014 under-improved for the land size",
         "built 1968, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+71% vs assessed, rank 162/459 (+10 pts)"
+        "comps value ~+71% vs assessed, rank 164/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -8885,7 +9084,7 @@ window.PHX_LAND_LEADS = {
         "owned by an estate \u2014 heirs are often motivated sellers",
         "existing structure occupies only 14% of the lot \u2014 under-improved for the land size",
         "built 1973, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+70% vs assessed, rank 167/459 (+10 pts)"
+        "comps value ~+70% vs assessed, rank 169/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -9058,7 +9257,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "12 homes rebuilt since 2015 in CAMPOBELLO \u2014 proven teardown neighborhood",
         "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+11% vs assessed, rank 253/459 (+4 pts)"
+        "comps value ~+11% vs assessed, rank 253/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -9231,7 +9430,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "3 homes rebuilt since 2015 in CHATEAU THIERRY",
         "built 1953, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+1% vs assessed, rank 282/459 (+4 pts)"
+        "comps value ~+1% vs assessed, rank 281/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -9410,7 +9609,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "3 homes rebuilt since 2015 in CHATEAU THIERRY",
         "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+10% vs assessed, rank 255/459 (+4 pts)"
+        "comps value ~+10% vs assessed, rank 255/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -9529,6 +9728,173 @@ window.PHX_LAND_LEADS = {
       "peakScore": 86
     },
     {
+      "apn": "16501012B",
+      "address": "10403 N 38TH ST   PHOENIX  85028",
+      "ownerName": "AUNALL LLC",
+      "ownerMailAddress": "116 E COUNTRY GABLES DR PHOENIX AZ USA 85022",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 11.7
+      },
+      "landSf": 44562,
+      "landAcres": 1.023,
+      "puc": "0131",
+      "landUseClass": "residential",
+      "lat": 33.5810076473571,
+      "lng": -111.9994504253253,
+      "assessedValue": 1015000.0,
+      "assessedValuePerAcre": 992180.0,
+      "currentZoning": "RE-43",
+      "generalPlanDesignation": "GP code 24",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-10",
+        "targetDensity": 4,
+        "basis": "adjacent parcels already zoned R1-10"
+      },
+      "byRightUnits": 1.0,
+      "rezoneTargetUnits": 4.1,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 3570.0,
+      "farRatio": 0.08011310084825636,
+      "yearBuilt": "1948",
+      "codeCases": null,
+      "saleDate": "02/01/2015",
+      "subdivision": "PARADISE FOOTHILLS",
+      "rebuildsInSub": 6,
+      "salePrice": 268000.0,
+      "defaultDemoCost": 18000,
+      "score": 86,
+      "reasons": [
+        "adjacent parcels already zoned R1-10",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 12 years",
+        "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
+        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
+        "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
+        "built 1948 \u2014 older housing stock",
+        "comps value ~+10% vs assessed, rank 256/458 (+4 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "16812005A",
+          "address": "10001 N 40TH ST   PHOENIX  85028",
+          "distanceMi": 0.33,
+          "soldDate": "2026-04-01",
+          "soldPrice": 1400000.0,
+          "landSf": 52145,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1169508,
+          "similarity": 69
+        },
+        {
+          "apn": "16771078",
+          "address": "4344 E SHEA BLVD   PHOENIX  85028",
+          "distanceMi": 0.73,
+          "soldDate": "2026-04-01",
+          "soldPrice": 450000.0,
+          "landSf": 17951,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1091973,
+          "similarity": 56
+        },
+        {
+          "apn": "16515011B",
+          "address": "3848 E CHOLLA LN   PHOENIX  85028",
+          "distanceMi": 0.78,
+          "soldDate": "2024-04-01",
+          "soldPrice": 1900000.0,
+          "landSf": 98185,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 842939,
+          "similarity": 47
+        },
+        {
+          "apn": "16831004N",
+          "address": "",
+          "distanceMi": 0.9,
+          "soldDate": "2023-04-01",
+          "soldPrice": 1515000.0,
+          "landSf": 103934,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 634955,
+          "similarity": 40
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1117091,
+        "rangeLow": 649561,
+        "rangeHigh": 1196410,
+        "explanation": "Based on 4 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,117,091 (range $649,561-$1,196,410)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 10,
+      "compsAdj": 4,
+      "newBuild": {
+        "arv": 3050000,
+        "psf": 629,
+        "n": 5,
+        "radiusMi": 1.0,
+        "lowPsf": 542,
+        "highPsf": 842,
+        "examples": [
+          {
+            "address": "10025 N 39TH ST",
+            "price": 3050000,
+            "sf": 3936,
+            "sold": "2025-06-01"
+          },
+          {
+            "address": "10022 N 36TH ST",
+            "price": 2045000,
+            "sf": 3774,
+            "sold": "2023-12-01"
+          },
+          {
+            "address": "4116 E MOUNTAIN VIEW RD",
+            "price": 6225000,
+            "sf": 7396,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "4224 E DESERT COVE AVE",
+            "price": 3325000,
+            "sf": 5332,
+            "sold": "2026-08-01"
+          },
+          {
+            "address": "11039 N 42ND ST",
+            "price": 1375000,
+            "sf": 2186,
+            "sold": "2025-11-01"
+          }
+        ]
+      },
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "116 E COUNTRY GABLES DR, PHOENIX, AZ, 85022",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L16210046"
+      },
+      "isNew": false,
+      "firstSeen": "2026-10-05",
+      "lastSeen": "2026-10-10",
+      "peakScore": 86
+    },
+    {
       "apn": "16768046",
       "address": "4233 E YUCCA ST   PHOENIX  85028",
       "ownerName": "FELKINS TRUST",
@@ -9584,7 +9950,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "2 homes rebuilt since 2015 in PARADISE VALLEY PALMS UNIT 5 AMD",
         "built 1975, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+6% vs assessed, rank 269/459 (+4 pts)"
+        "comps value ~+6% vs assessed, rank 269/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -9751,7 +10117,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 10% of the lot \u2014 under-improved for the land size",
         "2 homes rebuilt since 2015 in PARADISE VALLEY PALMS UNIT 5 AMD",
         "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+20% vs assessed, rank 238/459 (+4 pts)"
+        "comps value ~+20% vs assessed, rank 238/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -9925,7 +10291,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1969 \u2014 older housing stock",
-        "comps value ~+107% vs assessed, rank 132/459 (+10 pts)"
+        "comps value ~+107% vs assessed, rank 133/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -10086,7 +10452,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "2 homes rebuilt since 2015 in PARADISE VALLEY PALMS UNIT 5 AMD",
         "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+31% vs assessed, rank 223/459 (+10 pts)"
+        "comps value ~+31% vs assessed, rank 222/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -10251,7 +10617,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 36+ years \u2014 likely low or no debt on the land",
-        "comps value ~+231% vs assessed, rank 76/459 (+20 pts)"
+        "comps value ~+231% vs assessed, rank 69/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -10363,7 +10729,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 17+ years \u2014 likely low or no debt on the land",
-        "comps value ~+202% vs assessed, rank 90/459 (+20 pts)"
+        "comps value ~+202% vs assessed, rank 88/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -10440,146 +10806,6 @@ window.PHX_LAND_LEADS = {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "NATIONAL REGISTERED AGENTS INC 3800 N CENTRAL AVE SUITE 460, PHOENIX, AZ, 85012",
         "companyUrl": "https://opencorporates.com/companies/us_az/R13712321"
-      },
-      "isNew": false,
-      "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-10",
-      "peakScore": 90
-    },
-    {
-      "apn": "21519383",
-      "address": "4717 E BELL RD   PHOENIX  85032",
-      "ownerName": "TATUM VENTURE LLC",
-      "ownerMailAddress": "280 2ND ST STE 230 LOS ALTOS CA USA 94022",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 15.3
-      },
-      "landSf": 16879,
-      "landAcres": 0.387,
-      "puc": "0021",
-      "landUseClass": "commercial",
-      "lat": 33.64023607084797,
-      "lng": -111.9795550716899,
-      "assessedValue": 768900.0,
-      "assessedValuePerAcre": 1986822.0,
-      "currentZoning": "PSC",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-18",
-        "targetDensity": 2,
-        "basis": "adjacent parcels already zoned R1-18"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 0.8,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": {
-        "count": 1,
-        "severe": false,
-        "distress": false
-      },
-      "saleDate": "06/01/2011",
-      "subdivision": "CORNWELL DEVELOPMENT",
-      "rebuildsInSub": 0,
-      "salePrice": 30000000.0,
-      "defaultDemoCost": null,
-      "score": 85,
-      "reasons": [
-        "adjacent parcels already zoned R1-18",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 15+ years \u2014 likely low or no debt on the land",
-        "comps value ~+282% vs assessed, rank 53/459 (+20 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "21511399",
-          "address": "5328 E ANDERSON DR   SCOTTSDALE  85254",
-          "distanceMi": 0.86,
-          "soldDate": "2025-11-01",
-          "soldPrice": 1800000.0,
-          "landSf": 10335,
-          "livingSpaceSf": 4016.0,
-          "pricePerSf": 448,
-          "pricePerAcre": 7586647,
-          "similarity": 50
-        },
-        {
-          "apn": "21511977",
-          "address": "4839 E CHARLESTON AVE   SCOTTSDALE  85254",
-          "distanceMi": 0.65,
-          "soldDate": "2025-02-01",
-          "soldPrice": 1675000.0,
-          "landSf": 8454,
-          "livingSpaceSf": 3828.0,
-          "pricePerSf": 438,
-          "pricePerAcre": 8630589,
-          "similarity": 46
-        },
-        {
-          "apn": "21512628",
-          "address": "4735 E UNION HILLS DR   PHOENIX  85050",
-          "distanceMi": 1.0,
-          "soldDate": "2025-02-01",
-          "soldPrice": 3275000.0,
-          "landSf": 38376,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 3717402,
-          "similarity": 42
-        },
-        {
-          "apn": "21511448",
-          "address": "5239 E HARTFORD AVE   SCOTTSDALE  85254",
-          "distanceMi": 0.74,
-          "soldDate": "2023-07-01",
-          "soldPrice": 2350000.0,
-          "landSf": 9016,
-          "livingSpaceSf": 3882.0,
-          "pricePerSf": 605,
-          "pricePerAcre": 11353815,
-          "similarity": 38
-        },
-        {
-          "apn": "21512629C",
-          "address": "4729 E UNION HILLS DR   PHOENIX  85050",
-          "distanceMi": 1.0,
-          "soldDate": "2024-07-01",
-          "soldPrice": 2650000.0,
-          "landSf": 43718,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 2640423,
-          "similarity": 38
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 2939739,
-        "rangeLow": 1023133,
-        "rangeHigh": 4399473,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,939,739 (range $1,023,133-$4,399,473)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 282,
-      "compsAdj": 20,
-      "registeredAgent": {
-        "source": "OpenCorporates (AZ filing mirror)",
-        "agentLine": "NATIONAL REGISTERED AGENTS INC 3800 N CENTRAL AVE SUITE 460, PHOENIX, AZ, 85012",
-        "companyUrl": "https://opencorporates.com/companies/us_az/R16876777"
       },
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -10990,7 +11216,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "built 1945, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+21% vs assessed, rank 237/459 (+4 pts)"
+        "comps value ~+21% vs assessed, rank 237/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -11149,11 +11375,7 @@ window.PHX_LAND_LEADS = {
       "livingSpaceSf": 1200.0,
       "farRatio": 0.024165290587619317,
       "yearBuilt": "1950",
-      "codeCases": {
-        "count": 1,
-        "severe": false,
-        "distress": false
-      },
+      "codeCases": null,
       "saleDate": null,
       "subdivision": "",
       "rebuildsInSub": 0,
@@ -11167,7 +11389,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1950, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+59% vs assessed, rank 183/459 (+10 pts)"
+        "comps value ~+59% vs assessed, rank 185/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -11339,7 +11561,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1948, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+72% vs assessed, rank 161/459 (+10 pts)"
+        "comps value ~+72% vs assessed, rank 163/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -11511,7 +11733,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+50% vs assessed, rank 196/459 (+10 pts)"
+        "comps value ~+50% vs assessed, rank 198/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -11586,8 +11808,8 @@ window.PHX_LAND_LEADS = {
       "compsAdj": 10,
       "newBuild": {
         "arv": 795000,
-        "psf": 377,
-        "n": 73,
+        "psf": 378,
+        "n": 74,
         "radiusMi": 2.0,
         "lowPsf": 253,
         "highPsf": 771,
@@ -11683,7 +11905,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1964, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+29% vs assessed, rank 227/459 (+10 pts)"
+        "comps value ~+29% vs assessed, rank 226/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -11855,7 +12077,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1967, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+48% vs assessed, rank 198/459 (+10 pts)"
+        "comps value ~+48% vs assessed, rank 200/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -12027,7 +12249,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1963, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+50% vs assessed, rank 197/459 (+10 pts)"
+        "comps value ~+50% vs assessed, rank 199/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -12101,9 +12323,9 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 50,
       "compsAdj": 10,
       "newBuild": {
-        "arv": 784995,
+        "arv": 785000,
         "psf": 375,
-        "n": 76,
+        "n": 77,
         "radiusMi": 2.0,
         "lowPsf": 237,
         "highPsf": 771,
@@ -12199,7 +12421,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1971, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+60% vs assessed, rank 181/459 (+10 pts)"
+        "comps value ~+60% vs assessed, rank 183/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -12371,7 +12593,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1962, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+54% vs assessed, rank 187/459 (+10 pts)"
+        "comps value ~+54% vs assessed, rank 189/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -12531,7 +12753,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 7% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+73% vs assessed, rank 160/459 (+10 pts)"
+        "comps value ~+73% vs assessed, rank 162/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -12607,7 +12829,7 @@ window.PHX_LAND_LEADS = {
       "newBuild": {
         "arv": 795000,
         "psf": 379,
-        "n": 72,
+        "n": 73,
         "radiusMi": 2.0,
         "lowPsf": 297,
         "highPsf": 771,
@@ -12671,8 +12893,8 @@ window.PHX_LAND_LEADS = {
       "lng": -111.98185249331252,
       "assessedValue": 1518800.0,
       "assessedValuePerAcre": 1387032.0,
-      "currentZoning": null,
-      "generalPlanDesignation": null,
+      "currentZoning": "RE-35",
+      "generalPlanDesignation": "GP code 24",
       "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
@@ -12681,7 +12903,7 @@ window.PHX_LAND_LEADS = {
         "targetDensity": 2,
         "basis": "adjacent parcels already zoned R1-18"
       },
-      "byRightUnits": null,
+      "byRightUnits": 1.1,
       "rezoneTargetUnits": 2.2,
       "dealType": "subdivision",
       "referenceCostPerLotAZ": 65000,
@@ -12703,7 +12925,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1972, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+31% vs assessed, rank 224/459 (+10 pts)"
+        "comps value ~+31% vs assessed, rank 223/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -12863,7 +13085,7 @@ window.PHX_LAND_LEADS = {
         "held 21+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 13% of the lot \u2014 under-improved for the land size",
         "built 1971, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+52% vs assessed, rank 188/459 (+10 pts)"
+        "comps value ~+52% vs assessed, rank 190/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -13035,7 +13257,7 @@ window.PHX_LAND_LEADS = {
         "held 8 years",
         "existing structure occupies only 14% of the lot \u2014 under-improved for the land size",
         "built 1971, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+71% vs assessed, rank 163/459 (+10 pts)"
+        "comps value ~+71% vs assessed, rank 165/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -13206,7 +13428,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held 21+ years \u2014 likely low or no debt on the land",
-        "comps value ~+213% vs assessed, rank 86/459 (+20 pts)"
+        "comps value ~+213% vs assessed, rank 83/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -13380,7 +13602,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "1 home rebuilt since 2015 in SUNBURST FARMS 14",
         "built 1971, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-36% vs assessed, rank 404/459 (-10 pts)"
+        "comps value ~-36% vs assessed, rank 403/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -13554,7 +13776,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "12 homes rebuilt since 2015 in CAMPOBELLO \u2014 proven teardown neighborhood",
         "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-17% vs assessed, rank 332/459 (-10 pts)"
+        "comps value ~-17% vs assessed, rank 331/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -13673,173 +13895,6 @@ window.PHX_LAND_LEADS = {
       "peakScore": 93
     },
     {
-      "apn": "16501018",
-      "address": "10311 N 37TH ST   PHOENIX  85028",
-      "ownerName": "ADAM MATTHEW J",
-      "ownerMailAddress": "2916 HIGHWAY 1 NE IOWA CITY IA USA 522407766",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": false,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": false,
-        "isEstateOwner": false,
-        "yearsHeld": 8.5
-      },
-      "landSf": 65300,
-      "landAcres": 1.499,
-      "puc": "0141",
-      "landUseClass": "residential",
-      "lat": 33.580469007816106,
-      "lng": -112.00161516646489,
-      "assessedValue": 1521300.0,
-      "assessedValuePerAcre": 1014877.0,
-      "currentZoning": "RE-43",
-      "generalPlanDesignation": "GP code 24",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-10",
-        "targetDensity": 4,
-        "basis": "adjacent parcels already zoned R1-10"
-      },
-      "byRightUnits": 1.5,
-      "rezoneTargetUnits": 6.0,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 3299.0,
-      "farRatio": 0.050520673813169985,
-      "yearBuilt": "1959",
-      "codeCases": {
-        "count": 2,
-        "severe": false,
-        "distress": false
-      },
-      "saleDate": "03/01/2018",
-      "subdivision": "PARADISE FOOTHILLS",
-      "rebuildsInSub": 6,
-      "salePrice": 880000.0,
-      "defaultDemoCost": 18000,
-      "score": 83,
-      "reasons": [
-        "adjacent parcels already zoned R1-10",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address is out of state (absentee)",
-        "held 8 years",
-        "2 code-enforcement cases at this address (2024+)",
-        "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
-        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
-        "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
-        "built 1959 \u2014 older housing stock",
-        "comps value ~-17% vs assessed, rank 333/459 (-10 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "16812005A",
-          "address": "10001 N 40TH ST   PHOENIX  85028",
-          "distanceMi": 0.41,
-          "soldDate": "2026-04-01",
-          "soldPrice": 1400000.0,
-          "landSf": 52145,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1169508,
-          "similarity": 67
-        },
-        {
-          "apn": "16771078",
-          "address": "4344 E SHEA BLVD   PHOENIX  85028",
-          "distanceMi": 0.86,
-          "soldDate": "2026-04-01",
-          "soldPrice": 450000.0,
-          "landSf": 17951,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1091973,
-          "similarity": 53
-        },
-        {
-          "apn": "16515011B",
-          "address": "3848 E CHOLLA LN   PHOENIX  85028",
-          "distanceMi": 0.76,
-          "soldDate": "2024-04-01",
-          "soldPrice": 1900000.0,
-          "landSf": 98185,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 842939,
-          "similarity": 51
-        },
-        {
-          "apn": "16831004N",
-          "address": "",
-          "distanceMi": 0.98,
-          "soldDate": "2023-04-01",
-          "soldPrice": 1515000.0,
-          "landSf": 103934,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 634955,
-          "similarity": 44
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1263635,
-        "rangeLow": 951849,
-        "rangeHigh": 1753188,
-        "explanation": "Based on 4 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,263,635 (range $951,849-$1,753,188)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": -17,
-      "compsAdj": -10,
-      "newBuild": {
-        "arv": 3050000,
-        "psf": 629,
-        "n": 5,
-        "radiusMi": 1.0,
-        "lowPsf": 542,
-        "highPsf": 842,
-        "examples": [
-          {
-            "address": "10022 N 36TH ST",
-            "price": 2045000,
-            "sf": 3774,
-            "sold": "2023-12-01"
-          },
-          {
-            "address": "10025 N 39TH ST",
-            "price": 3050000,
-            "sf": 3936,
-            "sold": "2025-06-01"
-          },
-          {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "price": 6225000,
-            "sf": 7396,
-            "sold": "2024-12-01"
-          },
-          {
-            "address": "4224 E DESERT COVE AVE",
-            "price": 3325000,
-            "sf": 5332,
-            "sold": "2026-08-01"
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "price": 1375000,
-            "sf": 2186,
-            "sold": "2025-11-01"
-          }
-        ]
-      },
-      "isNew": false,
-      "firstSeen": "2026-10-04",
-      "lastSeen": "2026-10-10",
-      "peakScore": 93
-    },
-    {
       "apn": "21403134",
       "address": "2840 E SAINT JOHN RD   PHOENIX  85032",
       "ownerName": "KENNEDY REV LIVING TRUST",
@@ -13895,7 +13950,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "12 homes rebuilt since 2015 in CAMPOBELLO \u2014 proven teardown neighborhood",
         "built 1953, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-25% vs assessed, rank 365/459 (-10 pts)"
+        "comps value ~-25% vs assessed, rank 364/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -14245,7 +14300,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+19% vs assessed, rank 241/459 (+4 pts)"
+        "comps value ~+19% vs assessed, rank 241/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -14320,8 +14375,8 @@ window.PHX_LAND_LEADS = {
       "compsAdj": 4,
       "newBuild": {
         "arv": 795000,
-        "psf": 378,
-        "n": 74,
+        "psf": 379,
+        "n": 75,
         "radiusMi": 2.0,
         "lowPsf": 253,
         "highPsf": 771,
@@ -14415,7 +14470,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1964, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+4% vs assessed, rank 276/459 (+4 pts)"
+        "comps value ~+4% vs assessed, rank 276/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -14576,7 +14631,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1973, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+68% vs assessed, rank 169/459 (+10 pts)"
+        "comps value ~+68% vs assessed, rank 171/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -14745,7 +14800,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1973, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+68% vs assessed, rank 170/459 (+10 pts)"
+        "comps value ~+68% vs assessed, rank 172/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -14910,7 +14965,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+80% vs assessed, rank 151/459 (+10 pts)"
+        "comps value ~+80% vs assessed, rank 151/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -15082,7 +15137,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1944, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+89% vs assessed, rank 146/459 (+10 pts)"
+        "comps value ~+89% vs assessed, rank 146/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -15254,7 +15309,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1950, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+94% vs assessed, rank 140/459 (+10 pts)"
+        "comps value ~+94% vs assessed, rank 139/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -15328,9 +15383,9 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 94,
       "compsAdj": 10,
       "newBuild": {
-        "arv": 784990,
+        "arv": 784995,
         "psf": 375,
-        "n": 75,
+        "n": 76,
         "radiusMi": 2.0,
         "lowPsf": 237,
         "highPsf": 475,
@@ -15426,7 +15481,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1957, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+36% vs assessed, rank 213/459 (+10 pts)"
+        "comps value ~+36% vs assessed, rank 214/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -15598,7 +15653,7 @@ window.PHX_LAND_LEADS = {
         "held 26+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "built 1956, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+28% vs assessed, rank 229/459 (+10 pts)"
+        "comps value ~+28% vs assessed, rank 228/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -15764,7 +15819,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+51% vs assessed, rank 191/459 (+10 pts)"
+        "comps value ~+51% vs assessed, rank 193/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -15840,7 +15895,7 @@ window.PHX_LAND_LEADS = {
       "newBuild": {
         "arv": 795000,
         "psf": 379,
-        "n": 73,
+        "n": 74,
         "radiusMi": 2.0,
         "lowPsf": 297,
         "highPsf": 771,
@@ -15874,183 +15929,6 @@ window.PHX_LAND_LEADS = {
             "price": 770000,
             "sf": 2186,
             "sold": "2026-08-01"
-          }
-        ]
-      },
-      "isNew": false,
-      "firstSeen": "2026-10-06",
-      "lastSeen": "2026-10-10",
-      "peakScore": 83
-    },
-    {
-      "apn": "16771075",
-      "address": "4310 E SHEA BLVD   PHOENIX  85028",
-      "ownerName": "GARCIA GUY PHINIA M",
-      "ownerMailAddress": "4310 E SHEA BLVD PHOENIX AZ USA 85028",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": false,
-        "isOwnerOccupied": true,
-        "isHiddenOwner": false,
-        "isEstateOwner": false,
-        "yearsHeld": 14.2
-      },
-      "landSf": 17880,
-      "landAcres": 0.41,
-      "puc": "0141",
-      "landUseClass": "residential",
-      "lat": 33.583062934428774,
-      "lng": -111.98828524707314,
-      "assessedValue": 559100.0,
-      "assessedValuePerAcre": 1363659.0,
-      "currentZoning": "R1-18",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-2",
-        "targetDensity": 12,
-        "basis": "adjacent parcels already zoned R-2"
-      },
-      "byRightUnits": 0.8,
-      "rezoneTargetUnits": 4.9,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 2071.0,
-      "farRatio": 0.11582774049217003,
-      "yearBuilt": "1960",
-      "codeCases": {
-        "count": 2,
-        "severe": true,
-        "distress": false
-      },
-      "saleDate": null,
-      "subdivision": "ORINDA",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": 18000,
-      "score": 83,
-      "reasons": [
-        "adjacent parcels already zoned R-2",
-        "parcel size fits small-to-mid infill development",
-        "held 14 years",
-        "city issued a violation notice, ticket, or abatement here",
-        "2 code-enforcement cases at this address (2024+)",
-        "existing structure occupies only 12% of the lot \u2014 under-improved for the land size",
-        "built 1960, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+34% vs assessed, rank 216/459 (+10 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "16771078",
-          "address": "4344 E SHEA BLVD   PHOENIX  85028",
-          "distanceMi": 0.08,
-          "soldDate": "2026-04-01",
-          "soldPrice": 450000.0,
-          "landSf": 17951,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1091973,
-          "similarity": 74
-        },
-        {
-          "apn": "16812005A",
-          "address": "10001 N 40TH ST   PHOENIX  85028",
-          "distanceMi": 0.54,
-          "soldDate": "2026-04-01",
-          "soldPrice": 1400000.0,
-          "landSf": 52145,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1169508,
-          "similarity": 57
-        },
-        {
-          "apn": "16742039",
-          "address": "5139 E SHAW BUTTE DR   SCOTTSDALE  85254",
-          "distanceMi": 1.4,
-          "soldDate": "2026-01-01",
-          "soldPrice": 750000.0,
-          "landSf": 10400,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 3141346,
-          "similarity": 53
-        },
-        {
-          "apn": "16752084",
-          "address": "11630 N 52ND ST   SCOTTSDALE  85254",
-          "distanceMi": 1.26,
-          "soldDate": "2026-01-01",
-          "soldPrice": 1475000.0,
-          "landSf": 35260,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1822206,
-          "similarity": 53
-        },
-        {
-          "apn": "16517039",
-          "address": "3015 E PUGET AVE   PHOENIX  85028",
-          "distanceMi": 1.92,
-          "soldDate": "2025-12-01",
-          "soldPrice": 850000.0,
-          "landSf": 12961,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 2856724,
-          "similarity": 51
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 747958,
-        "rangeLow": 448220,
-        "rangeHigh": 1289423,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $747,958 (range $448,220-$1,289,423)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 34,
-      "compsAdj": 10,
-      "newBuild": {
-        "arv": 3187500,
-        "psf": 702,
-        "n": 6,
-        "radiusMi": 1.0,
-        "lowPsf": 542,
-        "highPsf": 942,
-        "examples": [
-          {
-            "address": "4224 E DESERT COVE AVE",
-            "price": 3325000,
-            "sf": 5332,
-            "sold": "2026-08-01"
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "price": 1375000,
-            "sf": 2186,
-            "sold": "2025-11-01"
-          },
-          {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "price": 6225000,
-            "sf": 7396,
-            "sold": "2024-12-01"
-          },
-          {
-            "address": "10025 N 39TH ST",
-            "price": 3050000,
-            "sf": 3936,
-            "sold": "2025-06-01"
-          },
-          {
-            "address": "9518 N 46TH ST",
-            "price": 4850000,
-            "sf": 5146,
-            "sold": "2026-02-01"
           }
         ]
       },
@@ -16114,7 +15992,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "4 homes rebuilt since 2015 in SUN & SAND BLK 1-3",
         "built 1960, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+10% vs assessed, rank 256/459 (+4 pts)"
+        "comps value ~+10% vs assessed, rank 257/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -16287,7 +16165,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "4 homes rebuilt since 2015 in SUN & SAND BLK 1-3",
         "built 1957, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+6% vs assessed, rank 270/459 (+4 pts)"
+        "comps value ~+6% vs assessed, rank 270/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -16460,7 +16338,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "2 homes rebuilt since 2015 in PARADISE VALLEY PALMS UNIT 5 AMD",
         "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+2% vs assessed, rank 278/459 (+4 pts)"
+        "comps value ~+2% vs assessed, rank 278/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -16573,178 +16451,6 @@ window.PHX_LAND_LEADS = {
       "peakScore": 82
     },
     {
-      "apn": "16768058",
-      "address": "4327 E CHOLLA ST   PHOENIX  85028",
-      "ownerName": "LAUER WILLIAM H/MCATEE ROBERT L",
-      "ownerMailAddress": "4327 E CHOLLA ST PHOENIX AZ USA 85028",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": false,
-        "isOwnerOccupied": true,
-        "isHiddenOwner": false,
-        "isEstateOwner": false,
-        "yearsHeld": 19.0
-      },
-      "landSf": 18088,
-      "landAcres": 0.415,
-      "puc": "0141",
-      "landUseClass": "residential",
-      "lat": 33.589653027332766,
-      "lng": -111.98723851134638,
-      "assessedValue": 756000.0,
-      "assessedValuePerAcre": 1821687.0,
-      "currentZoning": "R1-18",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-2",
-        "targetDensity": 12,
-        "basis": "adjacent parcels already zoned R-2"
-      },
-      "byRightUnits": 0.8,
-      "rezoneTargetUnits": 5.0,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 2146.0,
-      "farRatio": 0.1186421937195931,
-      "yearBuilt": "1975",
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "PARADISE VALLEY PALMS UNIT 5 AMD",
-      "rebuildsInSub": 2,
-      "salePrice": null,
-      "defaultDemoCost": 18000,
-      "score": 82,
-      "reasons": [
-        "adjacent parcels already zoned R-2",
-        "parcel size fits small-to-mid infill development",
-        "held 19+ years \u2014 likely low or no debt on the land",
-        "existing structure occupies only 12% of the lot \u2014 under-improved for the land size",
-        "2 homes rebuilt since 2015 in PARADISE VALLEY PALMS UNIT 5 AMD",
-        "built 1975, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+38% vs assessed, rank 208/459 (+10 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "16771078",
-          "address": "4344 E SHEA BLVD   PHOENIX  85028",
-          "distanceMi": 0.46,
-          "soldDate": "2026-04-01",
-          "soldPrice": 450000.0,
-          "landSf": 17951,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1091973,
-          "similarity": 70
-        },
-        {
-          "apn": "16705317",
-          "address": "5120 E EMILE ZOLA AVE   SCOTTSDALE  85254",
-          "distanceMi": 1.62,
-          "soldDate": "2026-04-01",
-          "soldPrice": 825000.0,
-          "landSf": 14352,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 2503972,
-          "similarity": 57
-        },
-        {
-          "apn": "16742039",
-          "address": "5139 E SHAW BUTTE DR   SCOTTSDALE  85254",
-          "distanceMi": 1.1,
-          "soldDate": "2026-01-01",
-          "soldPrice": 750000.0,
-          "landSf": 10400,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 3141346,
-          "similarity": 56
-        },
-        {
-          "apn": "16752084",
-          "address": "11630 N 52ND ST   SCOTTSDALE  85254",
-          "distanceMi": 1.03,
-          "soldDate": "2026-01-01",
-          "soldPrice": 1475000.0,
-          "landSf": 35260,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1822206,
-          "similarity": 55
-        },
-        {
-          "apn": "16707275",
-          "address": "12412 N 57TH WAY   SCOTTSDALE  85254",
-          "distanceMi": 1.83,
-          "soldDate": "2025-12-01",
-          "soldPrice": 1015000.0,
-          "landSf": 15122,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 2923780,
-          "similarity": 54
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1039758,
-        "rangeLow": 453434,
-        "rangeHigh": 1304423,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,039,758 (range $453,434-$1,304,423)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 38,
-      "compsAdj": 10,
-      "newBuild": {
-        "arv": 3050000,
-        "psf": 631,
-        "n": 5,
-        "radiusMi": 1.0,
-        "lowPsf": 624,
-        "highPsf": 842,
-        "examples": [
-          {
-            "address": "11039 N 42ND ST",
-            "price": 1375000,
-            "sf": 2186,
-            "sold": "2025-11-01"
-          },
-          {
-            "address": "4224 E DESERT COVE AVE",
-            "price": 3325000,
-            "sf": 5332,
-            "sold": "2026-08-01"
-          },
-          {
-            "address": "10025 N 39TH ST",
-            "price": 3050000,
-            "sf": 3936,
-            "sold": "2025-06-01"
-          },
-          {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "price": 6225000,
-            "sf": 7396,
-            "sold": "2024-12-01"
-          },
-          {
-            "address": "5101 E LAUREL LN",
-            "price": 2235000,
-            "sf": 3542,
-            "sold": "2026-05-01"
-          }
-        ]
-      },
-      "isNew": true,
-      "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-10",
-      "peakScore": 82
-    },
-    {
       "apn": "16773022",
       "address": "4637 E CLINTON ST   PHOENIX  85028",
       "ownerName": "FASSETT FAMILY LIVING TRUST",
@@ -16800,7 +16506,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1971, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-27% vs assessed, rank 372/459 (-10 pts)"
+        "comps value ~-27% vs assessed, rank 371/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -17150,7 +16856,7 @@ window.PHX_LAND_LEADS = {
         "held 11 years",
         "existing structure occupies only 13% of the lot \u2014 under-improved for the land size",
         "built 1972, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+23% vs assessed, rank 234/459 (+4 pts)"
+        "comps value ~+23% vs assessed, rank 234/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -17499,7 +17205,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "4 homes rebuilt since 2015 in SUN & SAND BLK 1-3",
         "built 1961, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+9% vs assessed, rank 259/459 (+4 pts)"
+        "comps value ~+9% vs assessed, rank 259/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -17677,7 +17383,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "3 homes rebuilt since 2015 in CHATEAU THIERRY",
         "built 1969, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+1% vs assessed, rank 283/459 (+4 pts)"
+        "comps value ~+1% vs assessed, rank 282/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -17796,6 +17502,89 @@ window.PHX_LAND_LEADS = {
       "peakScore": 80
     },
     {
+      "apn": "20707002P",
+      "address": "2710 W THUNDERBIRD RD   PHOENIX  85053",
+      "ownerName": "COWTOWN BOOT CO INC",
+      "ownerMailAddress": "PO BOX 26428 EL PASO TX USA 79926",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 34.4
+      },
+      "landSf": 87120,
+      "landAcres": 2.0,
+      "puc": "0022",
+      "landUseClass": "commercial",
+      "lat": 33.612318820581365,
+      "lng": -112.11929323824664,
+      "assessedValue": 1299300.0,
+      "assessedValuePerAcre": 649650.0,
+      "currentZoning": "C-2",
+      "generalPlanDesignation": "GP code 60",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-5",
+        "targetDensity": 43,
+        "basis": "adjacent parcels already zoned R-5"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 86.0,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": {
+        "count": 6,
+        "severe": true,
+        "distress": false
+      },
+      "saleDate": null,
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": null,
+      "score": 79,
+      "reasons": [
+        "adjacent parcels already zoned R-5",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 34+ years \u2014 likely low or no debt on the land",
+        "city issued a violation notice, ticket, or abatement here",
+        "6 code-enforcement cases at this address (2024+)"
+      ],
+      "comps": [
+        {
+          "apn": "14701011",
+          "address": "4491 W NORTHERN AVE   GLENDALE  85301",
+          "distanceMi": 4.61,
+          "soldDate": "2026-05-01",
+          "soldPrice": 685000.0,
+          "landSf": 16591,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1798481,
+          "similarity": 27
+        }
+      ],
+      "valuation": null,
+      "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-01",
+      "lastSeen": "2026-10-10",
+      "peakScore": 94
+    },
+    {
       "apn": "20807001W",
       "address": "2035 W COOLBROOK AVE   PHOENIX  85023",
       "ownerName": "LITHIA REAL ESTATE INC",
@@ -17836,7 +17625,7 @@ window.PHX_LAND_LEADS = {
       "farRatio": null,
       "yearBuilt": null,
       "codeCases": {
-        "count": 2,
+        "count": 4,
         "severe": false,
         "distress": false
       },
@@ -17851,9 +17640,9 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "2 code-enforcement cases at this address (2024+)",
+        "4 code-enforcement cases at this address (2024+)",
         "comps margin 308% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+308% vs assessed, rank 45/459 (+20 pts)"
+        "comps value ~+308% vs assessed, rank 41/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -17893,27 +17682,27 @@ window.PHX_LAND_LEADS = {
           "similarity": 15
         },
         {
-          "apn": "14802345",
+          "apn": "14802347",
           "address": "11851 N 51ST AVE   GLENDALE  85304",
           "distanceMi": 4.95,
           "soldDate": "2024-08-01",
           "soldPrice": 2625000.0,
-          "landSf": 1526,
+          "landSf": 1555,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 74931193,
+          "pricePerAcre": 73533762,
           "similarity": 14
         },
         {
-          "apn": "14802346",
+          "apn": "14802348",
           "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 4.95,
+          "distanceMi": 4.96,
           "soldDate": "2024-08-01",
           "soldPrice": 2625000.0,
-          "landSf": 1525,
+          "landSf": 1555,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 74980328,
+          "pricePerAcre": 73533762,
           "similarity": 14
         }
       ],
@@ -17935,6 +17724,183 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-10",
       "peakScore": 84
+    },
+    {
+      "apn": "21407024M",
+      "address": "2044 E MICHIGAN AVE   PHOENIX  85022",
+      "ownerName": "BUFFALO RIDGE II MHC LLC",
+      "ownerMailAddress": "6547 N AVONDALE AVE CHICAGO IL USA 60631",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 2.8
+      },
+      "landSf": 23578,
+      "landAcres": 0.541,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.651681949397606,
+      "lng": -112.0375865445316,
+      "assessedValue": 282300.0,
+      "assessedValuePerAcre": 521811.0,
+      "currentZoning": "R-4A",
+      "generalPlanDesignation": "GP code 41",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-2",
+        "targetDensity": 12,
+        "basis": "adjacent parcels already zoned R-2"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 6.5,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": {
+        "count": 2,
+        "severe": false,
+        "distress": false
+      },
+      "saleDate": "04/01/2023",
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": 500000.0,
+      "defaultDemoCost": null,
+      "score": 79,
+      "reasons": [
+        "adjacent parcels already zoned R-2",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "2 code-enforcement cases at this address (2024+)",
+        "comps margin 358% looks extreme \u2014 verify assessed value/comps before trusting",
+        "comps value ~+358% vs assessed, rank 25/458 (+20 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "21321094",
+          "address": "1932 E MORROW DR   PHOENIX  85024",
+          "distanceMi": 0.5,
+          "soldDate": "2026-09-01",
+          "soldPrice": 595000.0,
+          "landSf": 10848,
+          "livingSpaceSf": 2329.0,
+          "pricePerSf": 255,
+          "pricePerAcre": 2389215,
+          "similarity": 62
+        },
+        {
+          "apn": "21321213",
+          "address": "18601 N 16TH PL   PHOENIX  85024",
+          "distanceMi": 0.63,
+          "soldDate": "2026-04-01",
+          "soldPrice": 550000.0,
+          "landSf": 13355,
+          "livingSpaceSf": 2259.0,
+          "pricePerSf": 243,
+          "pricePerAcre": 1793935,
+          "similarity": 60
+        },
+        {
+          "apn": "21321032",
+          "address": "1967 E ROCKWOOD DR   PHOENIX  85024",
+          "distanceMi": 0.32,
+          "soldDate": "2026-08-01",
+          "soldPrice": 9795910.0,
+          "landSf": 6115,
+          "livingSpaceSf": 1861.0,
+          "pricePerSf": 5264,
+          "pricePerAcre": 69780840,
+          "similarity": 59
+        },
+        {
+          "apn": "21320153",
+          "address": "18644 N 21ST ST   PHOENIX  85024",
+          "distanceMi": 0.34,
+          "soldDate": "2026-05-01",
+          "soldPrice": 550000.0,
+          "landSf": 7008,
+          "livingSpaceSf": 1810.0,
+          "pricePerSf": 304,
+          "pricePerAcre": 3418664,
+          "similarity": 58
+        },
+        {
+          "apn": "21320161",
+          "address": "2123 E ROCKWOOD DR   PHOENIX  85024",
+          "distanceMi": 0.28,
+          "soldDate": "2026-07-01",
+          "soldPrice": 390000.0,
+          "landSf": 4950,
+          "livingSpaceSf": 1521.0,
+          "pricePerSf": 256,
+          "pricePerAcre": 3432000,
+          "similarity": 58
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1293225,
+        "rangeLow": 971015,
+        "rangeHigh": 1293225,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,293,225 (range $971,015-$1,293,225)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 358,
+      "compsAdj": 20,
+      "newBuild": {
+        "arv": 599500,
+        "psf": 305,
+        "n": 20,
+        "radiusMi": 2.0,
+        "lowPsf": 237,
+        "highPsf": 412,
+        "examples": [
+          {
+            "address": "17234 N 28TH ST",
+            "price": 659950,
+            "sf": 1600,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "2890 E ANGELA DR",
+            "price": 635000,
+            "sf": 2684,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "2908 E ANGELA DR",
+            "price": 627000,
+            "sf": 2134,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "16244 N 21ST ST",
+            "price": 1100000,
+            "sf": 3637,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "2773 E SEQUOIA DR",
+            "price": 625000,
+            "sf": 2033,
+            "sold": "2024-02-01"
+          }
+        ]
+      },
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10",
+      "peakScore": 79
     },
     {
       "apn": "21516036",
@@ -17977,7 +17943,7 @@ window.PHX_LAND_LEADS = {
       "farRatio": null,
       "yearBuilt": null,
       "codeCases": {
-        "count": 2,
+        "count": 4,
         "severe": false,
         "distress": false
       },
@@ -17992,8 +17958,8 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "2 code-enforcement cases at this address (2024+)",
-        "comps value ~+216% vs assessed, rank 85/459 (+20 pts)"
+        "4 code-enforcement cases at this address (2024+)",
+        "comps value ~+216% vs assessed, rank 82/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -18033,18 +17999,6 @@ window.PHX_LAND_LEADS = {
           "similarity": 60
         },
         {
-          "apn": "21401837",
-          "address": "17810 N 34TH PL   PHOENIX  85032",
-          "distanceMi": 0.88,
-          "soldDate": "2026-07-01",
-          "soldPrice": 417500.0,
-          "landSf": 7666,
-          "livingSpaceSf": 1310.0,
-          "pricePerSf": 319,
-          "pricePerAcre": 2372332,
-          "similarity": 58
-        },
-        {
           "apn": "21401183",
           "address": "17431 N 36TH ST   PHOENIX  85032",
           "distanceMi": 0.76,
@@ -18055,13 +18009,25 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 234,
           "pricePerAcre": 1940697,
           "similarity": 58
+        },
+        {
+          "apn": "21330358",
+          "address": "3618 E RENEE DR   PHOENIX  85050",
+          "distanceMi": 0.77,
+          "soldDate": "2026-06-01",
+          "soldPrice": 679000.0,
+          "landSf": 7019,
+          "livingSpaceSf": 1722.0,
+          "pricePerSf": 394,
+          "pricePerAcre": 4213882,
+          "similarity": 58
         }
       ],
       "valuation": {
         "mostLikelyValue": 713744,
         "rangeLow": 593172,
-        "rangeHigh": 1173974,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $713,744 (range $593,172-$1,173,974)."
+        "rangeHigh": 1489176,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $713,744 (range $593,172-$1,489,176)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": 216,
@@ -18165,7 +18131,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 10 years",
-        "comps value ~+152% vs assessed, rank 110/459 (+20 pts)"
+        "comps value ~+152% vs assessed, rank 109/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -18253,7 +18219,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 10 years",
-        "comps value ~+147% vs assessed, rank 112/459 (+20 pts)"
+        "comps value ~+147% vs assessed, rank 111/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -18287,6 +18253,186 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-10",
       "peakScore": 84
+    },
+    {
+      "apn": "21316019F",
+      "address": "19201 N 29TH PL   PHOENIX  85050",
+      "ownerName": "JILL PREECE BLEVINS FAMILY TRUST",
+      "ownerMailAddress": "3074 SILVER LAKE DR COTTONWOOD HEIGHTS UT USA 84121",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 11.2
+      },
+      "landSf": 17914,
+      "landAcres": 0.411,
+      "puc": "0122",
+      "landUseClass": "residential",
+      "lat": 33.660725045080014,
+      "lng": -112.01871737586478,
+      "assessedValue": 258000.0,
+      "assessedValuePerAcre": 627737.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3",
+        "targetDensity": 16,
+        "basis": "adjacent parcels already zoned R-3"
+      },
+      "byRightUnits": 2.1,
+      "rezoneTargetUnits": 6.6,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 1008.0,
+      "farRatio": 0.056268840013397346,
+      "yearBuilt": "1956",
+      "codeCases": {
+        "count": 2,
+        "severe": true,
+        "distress": false
+      },
+      "saleDate": "08/01/2015",
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": 158000.0,
+      "defaultDemoCost": 18000,
+      "score": 79,
+      "reasons": [
+        "adjacent parcels already zoned R-3",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 11 years",
+        "city issued a violation notice, ticket, or abatement here",
+        "2 code-enforcement cases at this address (2024+)",
+        "existing structure occupies only 6% of the lot \u2014 under-improved for the land size",
+        "built 1956 \u2014 older housing stock",
+        "comps value ~-18% vs assessed, rank 337/458 (-10 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "21316014G",
+          "address": "2903 E ROCKWOOD DR   PHOENIX  85050",
+          "distanceMi": 0.31,
+          "soldDate": "2024-11-01",
+          "soldPrice": 160000.0,
+          "landSf": 8069,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 863750,
+          "similarity": 54
+        },
+        {
+          "apn": "21316010M",
+          "address": "19355 N 28TH ST   PHOENIX  85050",
+          "distanceMi": 0.2,
+          "soldDate": "2023-07-01",
+          "soldPrice": 135000.0,
+          "landSf": 11410,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 515390,
+          "similarity": 52
+        },
+        {
+          "apn": "21326007C",
+          "address": "2244 E BEHREND DR   PHOENIX  85024",
+          "distanceMi": 0.93,
+          "soldDate": "2024-03-01",
+          "soldPrice": 83000.0,
+          "landSf": 11351,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 318516,
+          "similarity": 49
+        },
+        {
+          "apn": "21326007H",
+          "address": "19650 N CAVE CREEK RD   PHOENIX  85024",
+          "distanceMi": 0.93,
+          "soldDate": "2024-03-01",
+          "soldPrice": 83000.0,
+          "landSf": 9191,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 393372,
+          "similarity": 46
+        },
+        {
+          "apn": "21326215",
+          "address": "19434 N 23RD PL   PHOENIX  85024",
+          "distanceMi": 0.83,
+          "soldDate": "2023-10-01",
+          "soldPrice": 420000.0,
+          "landSf": 36746,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 497883,
+          "similarity": 45
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 211954,
+        "rangeLow": 204754,
+        "rangeHigh": 355216,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $211,954 (range $204,754-$355,216)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": -18,
+      "compsAdj": -10,
+      "newBuild": {
+        "arv": 600000,
+        "psf": 315,
+        "n": 7,
+        "radiusMi": 1.0,
+        "lowPsf": 299,
+        "highPsf": 376,
+        "examples": [
+          {
+            "address": "2773 E SEQUOIA DR",
+            "price": 625000,
+            "sf": 2033,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "2762 E FOSSIL RIDGE RD",
+            "price": 599000,
+            "sf": 1596,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2767 E TONTO LN",
+            "price": 630000,
+            "sf": 2033,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2751 E TONTO LN",
+            "price": 600000,
+            "sf": 1596,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "19676 N 27TH PL",
+            "price": 618000,
+            "sf": 1800,
+            "sold": "2025-02-01"
+          }
+        ]
+      },
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-06",
+      "lastSeen": "2026-10-10",
+      "peakScore": 79
     },
     {
       "apn": "16512130A",
@@ -18633,6 +18779,178 @@ window.PHX_LAND_LEADS = {
       "peakScore": 79
     },
     {
+      "apn": "16647008",
+      "address": "2909 E DESERT COVE AVE   PHOENIX  85028",
+      "ownerName": "GREGG GLADSTONE",
+      "ownerMailAddress": "PO BOX 9861 SCOTTSDALE AZ USA 85252",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
+        "isEstateOwner": false,
+        "yearsHeld": 15.7
+      },
+      "landSf": 22202,
+      "landAcres": 0.51,
+      "puc": "0131",
+      "landUseClass": "residential",
+      "lat": 33.586218284263715,
+      "lng": -112.01971092256555,
+      "assessedValue": 515300.0,
+      "assessedValuePerAcre": 1010392.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-4",
+        "targetDensity": 25,
+        "basis": "adjacent parcels already zoned R-4"
+      },
+      "byRightUnits": 2.5,
+      "rezoneTargetUnits": 12.8,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 1789.0,
+      "farRatio": 0.08057832627691199,
+      "yearBuilt": "1960",
+      "codeCases": null,
+      "saleDate": "12/01/2010",
+      "subdivision": "MELROSE PARADISE 2 AMD",
+      "rebuildsInSub": 0,
+      "salePrice": 170000.0,
+      "defaultDemoCost": 18000,
+      "score": 79,
+      "reasons": [
+        "adjacent parcels already zoned R-4",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "held 16+ years \u2014 likely low or no debt on the land",
+        "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
+        "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
+        "built 1960, no sale in 15+ years \u2014 likely dated/deferred maintenance"
+      ],
+      "comps": [
+        {
+          "apn": "16771078",
+          "address": "4344 E SHEA BLVD   PHOENIX  85028",
+          "distanceMi": 1.9,
+          "soldDate": "2026-04-01",
+          "soldPrice": 450000.0,
+          "landSf": 17951,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1091973,
+          "similarity": 55
+        },
+        {
+          "apn": "16508034",
+          "address": "9935 N 16TH ST   PHOENIX  85020",
+          "distanceMi": 1.71,
+          "soldDate": "2024-12-01",
+          "soldPrice": 95000.0,
+          "landSf": 22612,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 183009,
+          "similarity": 53
+        },
+        {
+          "apn": "16517039",
+          "address": "3015 E PUGET AVE   PHOENIX  85028",
+          "distanceMi": 1.36,
+          "soldDate": "2025-12-01",
+          "soldPrice": 850000.0,
+          "landSf": 12961,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 2856724,
+          "similarity": 53
+        },
+        {
+          "apn": "16507024",
+          "address": "1848 E CINNABAR AVE   PHOENIX  85020",
+          "distanceMi": 1.43,
+          "soldDate": "2025-05-01",
+          "soldPrice": 199000.0,
+          "landSf": 14551,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 595728,
+          "similarity": 51
+        },
+        {
+          "apn": "16812005A",
+          "address": "10001 N 40TH ST   PHOENIX  85028",
+          "distanceMi": 1.52,
+          "soldDate": "2026-04-01",
+          "soldPrice": 1400000.0,
+          "landSf": 52145,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1169508,
+          "similarity": 50
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 556565,
+        "rangeLow": 93277,
+        "rangeHigh": 1456037,
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $556,565 (range $93,277-$1,456,037).",
+        "unreliable": true
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "newBuild": {
+        "arv": 1287500,
+        "psf": 413,
+        "n": 14,
+        "radiusMi": 2.0,
+        "lowPsf": 154,
+        "highPsf": 842,
+        "examples": [
+          {
+            "address": "3002 E CHARTER OAK RD",
+            "price": 1185000,
+            "sf": 3478,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "3010 E CHARTER OAK RD",
+            "price": 1200000,
+            "sf": 3115,
+            "sold": "2023-11-01"
+          },
+          {
+            "address": "10022 N 36TH ST",
+            "price": 2045000,
+            "sf": 3774,
+            "sold": "2023-12-01"
+          },
+          {
+            "address": "2360 E LARKSPUR DR",
+            "price": 590000,
+            "sf": 1850,
+            "sold": "2024-08-01"
+          },
+          {
+            "address": "10025 N 39TH ST",
+            "price": 3050000,
+            "sf": 3936,
+            "sold": "2025-06-01"
+          }
+        ]
+      },
+      "isNew": true,
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10",
+      "peakScore": 79
+    },
+    {
       "apn": "20713022",
       "address": "4109 W COUNTRY GABLES DR   PHOENIX  85053",
       "ownerName": "HUDSON LARRY B/ANNETTE R",
@@ -18672,11 +18990,7 @@ window.PHX_LAND_LEADS = {
       "livingSpaceSf": 1688.0,
       "farRatio": 0.021060511540860884,
       "yearBuilt": "1968",
-      "codeCases": {
-        "count": 1,
-        "severe": false,
-        "distress": false
-      },
+      "codeCases": null,
       "saleDate": "03/01/1993",
       "subdivision": "SUNBURST FARMS  1",
       "rebuildsInSub": 0,
@@ -18690,7 +19004,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1968, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+5% vs assessed, rank 273/459 (+4 pts)"
+        "comps value ~+5% vs assessed, rank 274/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -18764,9 +19078,9 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 5,
       "compsAdj": 4,
       "newBuild": {
-        "arv": 548866,
+        "arv": 549890,
         "psf": 278,
-        "n": 76,
+        "n": 77,
         "radiusMi": 2.0,
         "lowPsf": 163,
         "highPsf": 328,
@@ -18862,7 +19176,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1962, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+18% vs assessed, rank 243/459 (+4 pts)"
+        "comps value ~+18% vs assessed, rank 243/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -19034,7 +19348,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1961, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+2% vs assessed, rank 279/459 (+4 pts)"
+        "comps value ~+2% vs assessed, rank 279/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -19200,7 +19514,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1968, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+18% vs assessed, rank 244/459 (+4 pts)"
+        "comps value ~+18% vs assessed, rank 244/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -19372,7 +19686,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1973, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+8% vs assessed, rank 261/459 (+4 pts)"
+        "comps value ~+8% vs assessed, rank 261/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -19532,7 +19846,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1969, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+20% vs assessed, rank 239/459 (+4 pts)"
+        "comps value ~+20% vs assessed, rank 239/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -19692,7 +20006,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1960, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+2% vs assessed, rank 280/459 (+4 pts)"
+        "comps value ~+2% vs assessed, rank 280/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -19864,7 +20178,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1972, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+23% vs assessed, rank 235/459 (+4 pts)"
+        "comps value ~+23% vs assessed, rank 235/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -19938,9 +20252,9 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 23,
       "compsAdj": 4,
       "newBuild": {
-        "arv": 785000,
-        "psf": 375,
-        "n": 75,
+        "arv": 790000,
+        "psf": 376,
+        "n": 76,
         "radiusMi": 2.0,
         "lowPsf": 237,
         "highPsf": 631,
@@ -20036,7 +20350,7 @@ window.PHX_LAND_LEADS = {
         "held 18+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 6% of the lot \u2014 under-improved for the land size",
         "built 1949, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+1% vs assessed, rank 284/459 (+4 pts)"
+        "comps value ~+1% vs assessed, rank 283/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -20213,7 +20527,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
         "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+8% vs assessed, rank 262/459 (+4 pts)"
+        "comps value ~+8% vs assessed, rank 262/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -20384,7 +20698,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 21+ years \u2014 likely low or no debt on the land",
-        "comps value ~+192% vs assessed, rank 95/459 (+20 pts)"
+        "comps value ~+192% vs assessed, rank 93/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -20400,35 +20714,59 @@ window.PHX_LAND_LEADS = {
           "similarity": 31
         },
         {
-          "apn": "14802330",
+          "apn": "14802334",
           "address": "11851 N 51ST AVE   GLENDALE  85304",
           "distanceMi": 3.27,
-          "soldDate": "2022-04-01",
-          "soldPrice": 525000.0,
-          "landSf": 1526,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 14986239,
-          "similarity": 3
-        },
-        {
-          "apn": "14802331",
-          "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 3.28,
-          "soldDate": "2022-04-01",
-          "soldPrice": 525000.0,
+          "soldDate": "2024-09-01",
+          "soldPrice": 925000.0,
           "landSf": 1555,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 14706752,
-          "similarity": 3
+          "pricePerAcre": 25911897,
+          "similarity": 15
+        },
+        {
+          "apn": "14802335",
+          "address": "11851 N 51ST AVE   GLENDALE  85304",
+          "distanceMi": 3.27,
+          "soldDate": "2024-09-01",
+          "soldPrice": 925000.0,
+          "landSf": 1526,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 26404325,
+          "similarity": 15
+        },
+        {
+          "apn": "14802347",
+          "address": "11851 N 51ST AVE   GLENDALE  85304",
+          "distanceMi": 3.3,
+          "soldDate": "2024-08-01",
+          "soldPrice": 2625000.0,
+          "landSf": 1555,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 73533762,
+          "similarity": 15
+        },
+        {
+          "apn": "14802348",
+          "address": "11851 N 51ST AVE   GLENDALE  85304",
+          "distanceMi": 3.31,
+          "soldDate": "2024-08-01",
+          "soldPrice": 2625000.0,
+          "landSf": 1555,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 73533762,
+          "similarity": 15
         }
       ],
       "valuation": {
         "mostLikelyValue": 2003987,
         "rangeLow": 2003987,
         "rangeHigh": 2003987,
-        "explanation": "Based on 3 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,003,987 (range $2,003,987-$2,003,987)."
+        "explanation": "Based on 5 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,003,987 (range $2,003,987-$2,003,987)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": 192,
@@ -20483,11 +20821,7 @@ window.PHX_LAND_LEADS = {
       "livingSpaceSf": null,
       "farRatio": null,
       "yearBuilt": null,
-      "codeCases": {
-        "count": 1,
-        "severe": false,
-        "distress": false
-      },
+      "codeCases": null,
       "saleDate": null,
       "subdivision": "",
       "rebuildsInSub": 0,
@@ -20500,21 +20834,9 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 15+ years \u2014 likely low or no debt on the land",
-        "comps value ~+219% vs assessed, rank 81/459 (+20 pts)"
+        "comps value ~+219% vs assessed, rank 77/458 (+20 pts)"
       ],
       "comps": [
-        {
-          "apn": "20714092",
-          "address": "4132 W MONTE CRISTO AVE   PHOENIX  85053",
-          "distanceMi": 0.37,
-          "soldDate": "2026-03-01",
-          "soldPrice": 663250.0,
-          "landSf": 37246,
-          "livingSpaceSf": 2728.0,
-          "pricePerSf": 243,
-          "pricePerAcre": 775685,
-          "similarity": 56
-        },
         {
           "apn": "20713034",
           "address": "4145 W BANFF LN   PHOENIX  85053",
@@ -20526,18 +20848,6 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 418,
           "pricePerAcre": 528185,
           "similarity": 54
-        },
-        {
-          "apn": "20714094",
-          "address": "4112 W MONTE CRISTO AVE   PHOENIX  85053",
-          "distanceMi": 0.33,
-          "soldDate": "2025-05-01",
-          "soldPrice": 855000.0,
-          "landSf": 37458,
-          "livingSpaceSf": 1997.0,
-          "pricePerSf": 428,
-          "pricePerAcre": 994282,
-          "similarity": 52
         },
         {
           "apn": "20710230",
@@ -20562,6 +20872,30 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 265,
           "pricePerAcre": 2297837,
           "similarity": 51
+        },
+        {
+          "apn": "20710569",
+          "address": "15022 N 35TH AVE   PHOENIX  85053",
+          "distanceMi": 0.74,
+          "soldDate": "2026-07-01",
+          "soldPrice": 375000.0,
+          "landSf": 8143,
+          "livingSpaceSf": 1820.0,
+          "pricePerSf": 206,
+          "pricePerAcre": 2006017,
+          "similarity": 51
+        },
+        {
+          "apn": "20710300",
+          "address": "3837 W ACAPULCO LN   PHOENIX  85053",
+          "distanceMi": 0.58,
+          "soldDate": "2026-02-01",
+          "soldPrice": 375000.0,
+          "landSf": 6428,
+          "livingSpaceSf": 1397.0,
+          "pricePerSf": 268,
+          "pricePerAcre": 2541226,
+          "similarity": 50
         }
       ],
       "valuation": {
@@ -20574,9 +20908,9 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 219,
       "compsAdj": 20,
       "newBuild": {
-        "arv": 581810,
+        "arv": 579000,
         "psf": 271,
-        "n": 110,
+        "n": 111,
         "radiusMi": 3.0,
         "lowPsf": 163,
         "highPsf": 345,
@@ -20614,182 +20948,6 @@ window.PHX_LAND_LEADS = {
         ]
       },
       "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-02",
-      "lastSeen": "2026-10-10",
-      "peakScore": 78
-    },
-    {
-      "apn": "21309001S",
-      "address": "2112 E QUAIL AVE   PHOENIX  85024",
-      "ownerName": "MIDWEST ROOTS LLC",
-      "ownerMailAddress": "27224 N 65TH PL SCOTTSDALE AZ USA 85262",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 20.4
-      },
-      "landSf": 44213,
-      "landAcres": 1.015,
-      "puc": "0012",
-      "landUseClass": "residential",
-      "lat": 33.67909761659388,
-      "lng": -112.03675359214678,
-      "assessedValue": 365100.0,
-      "assessedValuePerAcre": 359704.0,
-      "currentZoning": "S-1",
-      "generalPlanDesignation": "GP code 110",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "RE-43",
-        "targetDensity": 1,
-        "basis": "adjacent parcels already zoned RE-43"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 1.0,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "score": 78,
-      "reasons": [
-        "adjacent parcels already zoned RE-43",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 20+ years \u2014 likely low or no debt on the land",
-        "comps value ~+156% vs assessed, rank 107/459 (+20 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "21308001H",
-          "address": "2131 E ROSE GARDEN LN   PHOENIX  85024",
-          "distanceMi": 0.2,
-          "soldDate": "2025-05-01",
-          "soldPrice": 655000.0,
-          "landSf": 45564,
-          "livingSpaceSf": 1624.0,
-          "pricePerSf": 403,
-          "pricePerAcre": 626192,
-          "similarity": 68
-        },
-        {
-          "apn": "21308013G",
-          "address": "20420 N 22ND ST   PHOENIX  85024",
-          "distanceMi": 0.49,
-          "soldDate": "2025-04-01",
-          "soldPrice": 927000.0,
-          "landSf": 43782,
-          "livingSpaceSf": 2261.0,
-          "pricePerSf": 410,
-          "pricePerAcre": 922300,
-          "similarity": 65
-        },
-        {
-          "apn": "21305391",
-          "address": "1737 E SAMUEL DR   PHOENIX  85024",
-          "distanceMi": 0.66,
-          "soldDate": "2026-07-01",
-          "soldPrice": 735000.0,
-          "landSf": 9655,
-          "livingSpaceSf": 3149.0,
-          "pricePerSf": 233,
-          "pricePerAcre": 3316064,
-          "similarity": 54
-        },
-        {
-          "apn": "21305393",
-          "address": "1728 E SAMUEL DR   PHOENIX  85024",
-          "distanceMi": 0.69,
-          "soldDate": "2026-08-01",
-          "soldPrice": 650000.0,
-          "landSf": 8364,
-          "livingSpaceSf": 2382.0,
-          "pricePerSf": 273,
-          "pricePerAcre": 3385222,
-          "similarity": 54
-        },
-        {
-          "apn": "21308005A",
-          "address": "2047 E MONONA DR   PHOENIX  85024",
-          "distanceMi": 0.31,
-          "soldDate": "2022-07-01",
-          "soldPrice": 1274999.0,
-          "landSf": 44213,
-          "livingSpaceSf": 3483.0,
-          "pricePerSf": 366,
-          "pricePerAcre": 1256168,
-          "similarity": 53
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 936126,
-        "rangeLow": 635579,
-        "rangeHigh": 1274999,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $936,126 (range $635,579-$1,274,999)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 156,
-      "compsAdj": 20,
-      "newBuild": {
-        "arv": 1075000,
-        "psf": 413,
-        "n": 83,
-        "radiusMi": 2.0,
-        "lowPsf": 279,
-        "highPsf": 541,
-        "examples": [
-          {
-            "address": "2815 E TINA DR",
-            "price": 765000,
-            "sf": 2036,
-            "sold": "2024-02-01"
-          },
-          {
-            "address": "22023 N 28TH PL",
-            "price": 750000,
-            "sf": 2179,
-            "sold": "2025-08-01"
-          },
-          {
-            "address": "22034 N 28TH PL",
-            "price": 842000,
-            "sf": 2492,
-            "sold": "2024-12-01"
-          },
-          {
-            "address": "2819 E LOS GATOS DR",
-            "price": 825000,
-            "sf": 2142,
-            "sold": "2026-03-01"
-          },
-          {
-            "address": "22038 N 28TH PL",
-            "price": 790000,
-            "sf": 1883,
-            "sold": "2025-12-01"
-          }
-        ]
-      },
-      "registeredAgent": {
-        "source": "OpenCorporates (AZ filing mirror)",
-        "agentLine": "27224 N 65TH PLACE, SCOTTSDALE, AZ, 85262",
-        "companyUrl": "https://opencorporates.com/companies/us_az/L12667731"
-      },
       "isNew": false,
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-10",
@@ -20849,7 +21007,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 20+ years \u2014 likely low or no debt on the land",
         "comps margin 929% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+929% vs assessed, rank 5/459 (+20 pts)"
+        "comps value ~+929% vs assessed, rank 5/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -20933,6 +21091,185 @@ window.PHX_LAND_LEADS = {
       "peakScore": 83
     },
     {
+      "apn": "16608073",
+      "address": "2649 E EMILE ZOLA AVE   PHOENIX  85032",
+      "ownerName": "P MATHERS LLC",
+      "ownerMailAddress": "2624 E EMILE ZOLA AVE PHOENIX AZ USA 85032",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 22.6
+      },
+      "landSf": 21289,
+      "landAcres": 0.489,
+      "puc": "0131",
+      "landUseClass": "residential",
+      "lat": 33.60725562966027,
+      "lng": -112.02345879518076,
+      "assessedValue": 442700.0,
+      "assessedValuePerAcre": 905317.0,
+      "currentZoning": "R1-14",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-8",
+        "targetDensity": 5,
+        "basis": "adjacent parcels already zoned R1-8"
+      },
+      "byRightUnits": 1.5,
+      "rezoneTargetUnits": 2.4,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 1668.0,
+      "farRatio": 0.07835032176241251,
+      "yearBuilt": "1974",
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "CHATEAU THIERRY",
+      "rebuildsInSub": 3,
+      "salePrice": null,
+      "defaultDemoCost": 18000,
+      "score": 78,
+      "reasons": [
+        "adjacent parcels already zoned R1-8",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 23+ years \u2014 likely low or no debt on the land",
+        "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
+        "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
+        "3 homes rebuilt since 2015 in CHATEAU THIERRY",
+        "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps value ~-13% vs assessed, rank 318/458 (-10 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "16611005",
+          "address": "13202 N 22ND ST   PHOENIX  85022",
+          "distanceMi": 0.69,
+          "soldDate": "2024-12-01",
+          "soldPrice": 450000.0,
+          "landSf": 15238,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1286389,
+          "similarity": 56
+        },
+        {
+          "apn": "21454087",
+          "address": "14252 N 27TH PL   PHOENIX  85032",
+          "distanceMi": 0.67,
+          "soldDate": "2023-08-01",
+          "soldPrice": 285934.0,
+          "landSf": 32581,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 382287,
+          "similarity": 49
+        },
+        {
+          "apn": "21454022",
+          "address": "14211 N 27TH PL   PHOENIX  85032",
+          "distanceMi": 0.58,
+          "soldDate": "2023-10-01",
+          "soldPrice": 680000.0,
+          "landSf": 37556,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 788710,
+          "similarity": 48
+        },
+        {
+          "apn": "21454043",
+          "address": "14242 N 26TH PL   PHOENIX  85032",
+          "distanceMi": 0.67,
+          "soldDate": "2024-03-01",
+          "soldPrice": 470000.0,
+          "landSf": 50035,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 409178,
+          "similarity": 47
+        },
+        {
+          "apn": "16615052",
+          "address": "13039 N 19TH WAY   PHOENIX  85022",
+          "distanceMi": 0.95,
+          "soldDate": "2024-11-01",
+          "soldPrice": 110000.0,
+          "landSf": 5170,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 926809,
+          "similarity": 44
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 385465,
+        "rangeLow": 186834,
+        "rangeHigh": 628695,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $385,465 (range $186,834-$628,695)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": -13,
+      "compsAdj": -10,
+      "newBuild": {
+        "arv": 940000,
+        "psf": 330,
+        "n": 6,
+        "radiusMi": 1.0,
+        "lowPsf": 229,
+        "highPsf": 442,
+        "examples": [
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2360 E LARKSPUR DR",
+            "price": 590000,
+            "sf": 1850,
+            "sold": "2024-08-01"
+          },
+          {
+            "address": "3002 E CHARTER OAK RD",
+            "price": 1185000,
+            "sf": 3478,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "3010 E CHARTER OAK RD",
+            "price": 1200000,
+            "sf": 3115,
+            "sold": "2023-11-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          }
+        ]
+      },
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "2624 E EMILE ZOLA, PHOENIX, AZ, 85032",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L08368249"
+      },
+      "isNew": true,
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10",
+      "peakScore": 78
+    },
+    {
       "apn": "16608067A",
       "address": "2630 E PERSHING AVE   PHOENIX  85032",
       "ownerName": "MAVES FAMILY TRUST",
@@ -20988,7 +21325,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "3 homes rebuilt since 2015 in CHATEAU THIERRY",
         "built 1959, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-14% vs assessed, rank 323/459 (-10 pts)"
+        "comps value ~-14% vs assessed, rank 322/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -21105,6 +21442,143 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-10",
       "peakScore": 90
+    },
+    {
+      "apn": "20713057",
+      "address": "4035 W BANFF LN   PHOENIX  85053",
+      "ownerName": "ERIC J MUSE TRUST",
+      "ownerMailAddress": "4035 W BANFF LN PHOENIX AZ USA 85053",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
+        "isEstateOwner": false,
+        "yearsHeld": 3.0
+      },
+      "landSf": 33472,
+      "landAcres": 0.768,
+      "puc": "0131",
+      "landUseClass": "residential",
+      "lat": 33.619330943183904,
+      "lng": -112.14561504152411,
+      "assessedValue": 671200.0,
+      "assessedValuePerAcre": 873958.0,
+      "currentZoning": "R1-18",
+      "generalPlanDesignation": "GP code 20",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-8",
+        "targetDensity": 5,
+        "basis": "adjacent parcels already zoned R1-8"
+      },
+      "byRightUnits": 1.5,
+      "rezoneTargetUnits": 3.8,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 2662.0,
+      "farRatio": 0.0795291586998088,
+      "yearBuilt": "1973",
+      "codeCases": {
+        "count": 2,
+        "severe": false,
+        "distress": false
+      },
+      "saleDate": null,
+      "subdivision": "SUNBURST FARMS 14",
+      "rebuildsInSub": 1,
+      "salePrice": null,
+      "defaultDemoCost": 18000,
+      "score": 78,
+      "reasons": [
+        "adjacent parcels already zoned R1-8",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "2 code-enforcement cases at this address (2024+)",
+        "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
+        "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
+        "1 home rebuilt since 2015 in SUNBURST FARMS 14",
+        "built 1973, no sale in 15+ years \u2014 likely dated/deferred maintenance"
+      ],
+      "comps": [
+        {
+          "apn": "20614035",
+          "address": "3935 W WESTCOTT DR   GLENDALE  85308",
+          "distanceMi": 2.66,
+          "soldDate": "2025-07-01",
+          "soldPrice": 250000.0,
+          "landSf": 38489,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 282938,
+          "similarity": 46
+        },
+        {
+          "apn": "20816224",
+          "address": "14823 N 15TH DR   PHOENIX  85023",
+          "distanceMi": 3.0,
+          "soldDate": "2025-06-01",
+          "soldPrice": 750000.0,
+          "landSf": 32834,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 995005,
+          "similarity": 45
+        },
+        {
+          "apn": "20816425",
+          "address": "1515 W ST MORITZ LN   PHOENIX  85023",
+          "distanceMi": 2.99,
+          "soldDate": "2025-07-01",
+          "soldPrice": 350000.0,
+          "landSf": 27261,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 559260,
+          "similarity": 42
+        },
+        {
+          "apn": "20613064F",
+          "address": "",
+          "distanceMi": 2.65,
+          "soldDate": "2024-04-01",
+          "soldPrice": 370000.0,
+          "landSf": 52538,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 306772,
+          "similarity": 35
+        },
+        {
+          "apn": "20816490C",
+          "address": "1535 W MANDALAY LN   PHOENIX  85023",
+          "distanceMi": 2.98,
+          "soldDate": "2025-01-01",
+          "soldPrice": 250000.0,
+          "landSf": 57918,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 188024,
+          "similarity": 35
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 235727,
+        "rangeLow": 144480,
+        "rangeHigh": 764573,
+        "explanation": "Based on 5 comparable sales within 3 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $235,727 (range $144,480-$764,573).",
+        "unreliable": true
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "isNew": true,
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10",
+      "peakScore": 78
     },
     {
       "apn": "16632013",
@@ -21232,46 +21706,6 @@ window.PHX_LAND_LEADS = {
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": null,
-      "newBuild": {
-        "arv": 1225000,
-        "psf": 385,
-        "n": 15,
-        "radiusMi": 2.0,
-        "lowPsf": 154,
-        "highPsf": 842,
-        "examples": [
-          {
-            "address": "3010 E CHARTER OAK RD",
-            "price": 1200000,
-            "sf": 3115,
-            "sold": "2023-11-01"
-          },
-          {
-            "address": "3002 E CHARTER OAK RD",
-            "price": 1185000,
-            "sf": 3478,
-            "sold": "2024-03-01"
-          },
-          {
-            "address": "2360 E LARKSPUR DR",
-            "price": 590000,
-            "sf": 1850,
-            "sold": "2024-08-01"
-          },
-          {
-            "address": "13036 N 23RD PL",
-            "price": 1350000,
-            "sf": 3056,
-            "sold": "2026-04-01"
-          },
-          {
-            "address": "10022 N 36TH ST",
-            "price": 2045000,
-            "sf": 3774,
-            "sold": "2023-12-01"
-          }
-        ]
-      },
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "4539 N 22nd St, Ste R, Phoenix, AZ, 85016-4639",
@@ -21338,7 +21772,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1975, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-24% vs assessed, rank 359/459 (-10 pts)"
+        "comps value ~-24% vs assessed, rank 358/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -21411,51 +21845,137 @@ window.PHX_LAND_LEADS = {
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": -24,
       "compsAdj": -10,
-      "newBuild": {
-        "arv": 920000,
-        "psf": 403,
-        "n": 22,
-        "radiusMi": 1.0,
-        "lowPsf": 338,
-        "highPsf": 474,
-        "examples": [
-          {
-            "address": "2815 E TINA DR",
-            "price": 765000,
-            "sf": 2036,
-            "sold": "2024-02-01"
-          },
-          {
-            "address": "22023 N 28TH PL",
-            "price": 750000,
-            "sf": 2179,
-            "sold": "2025-08-01"
-          },
-          {
-            "address": "22206 N 28TH ST",
-            "price": 928000,
-            "sf": 2000,
-            "sold": "2024-11-01"
-          },
-          {
-            "address": "22034 N 28TH PL",
-            "price": 842000,
-            "sf": 2492,
-            "sold": "2024-12-01"
-          },
-          {
-            "address": "2819 E LOS GATOS DR",
-            "price": 825000,
-            "sf": 2142,
-            "sold": "2026-03-01"
-          }
-        ]
-      },
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-10",
       "peakScore": 87
+    },
+    {
+      "apn": "16501018",
+      "address": "10311 N 37TH ST   PHOENIX  85028",
+      "ownerName": "ADAM MATTHEW J",
+      "ownerMailAddress": "2916 HIGHWAY 1 NE IOWA CITY IA USA 522407766",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
+        "isEstateOwner": false,
+        "yearsHeld": 8.5
+      },
+      "landSf": 65300,
+      "landAcres": 1.499,
+      "puc": "0141",
+      "landUseClass": "residential",
+      "lat": 33.580469007816106,
+      "lng": -112.00161516646489,
+      "assessedValue": 1521300.0,
+      "assessedValuePerAcre": 1014877.0,
+      "currentZoning": "RE-43",
+      "generalPlanDesignation": "GP code 24",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-10",
+        "targetDensity": 4,
+        "basis": "adjacent parcels already zoned R1-10"
+      },
+      "byRightUnits": 1.5,
+      "rezoneTargetUnits": 6.0,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 3299.0,
+      "farRatio": 0.050520673813169985,
+      "yearBuilt": "1959",
+      "codeCases": {
+        "count": 1,
+        "severe": false,
+        "distress": false
+      },
+      "saleDate": "03/01/2018",
+      "subdivision": "PARADISE FOOTHILLS",
+      "rebuildsInSub": 6,
+      "salePrice": 880000.0,
+      "defaultDemoCost": 18000,
+      "score": 77,
+      "reasons": [
+        "adjacent parcels already zoned R1-10",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held 8 years",
+        "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
+        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
+        "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
+        "built 1959 \u2014 older housing stock",
+        "comps value ~-17% vs assessed, rank 332/458 (-10 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "16812005A",
+          "address": "10001 N 40TH ST   PHOENIX  85028",
+          "distanceMi": 0.41,
+          "soldDate": "2026-04-01",
+          "soldPrice": 1400000.0,
+          "landSf": 52145,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1169508,
+          "similarity": 67
+        },
+        {
+          "apn": "16771078",
+          "address": "4344 E SHEA BLVD   PHOENIX  85028",
+          "distanceMi": 0.86,
+          "soldDate": "2026-04-01",
+          "soldPrice": 450000.0,
+          "landSf": 17951,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1091973,
+          "similarity": 53
+        },
+        {
+          "apn": "16515011B",
+          "address": "3848 E CHOLLA LN   PHOENIX  85028",
+          "distanceMi": 0.76,
+          "soldDate": "2024-04-01",
+          "soldPrice": 1900000.0,
+          "landSf": 98185,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 842939,
+          "similarity": 51
+        },
+        {
+          "apn": "16831004N",
+          "address": "",
+          "distanceMi": 0.98,
+          "soldDate": "2023-04-01",
+          "soldPrice": 1515000.0,
+          "landSf": 103934,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 634955,
+          "similarity": 44
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1263635,
+        "rangeLow": 951849,
+        "rangeHigh": 1753188,
+        "explanation": "Based on 4 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,263,635 (range $951,849-$1,753,188)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": -17,
+      "compsAdj": -10,
+      "isNew": false,
+      "firstSeen": "2026-10-04",
+      "lastSeen": "2026-10-10",
+      "peakScore": 93
     },
     {
       "apn": "16501025F",
@@ -21512,7 +22032,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-24% vs assessed, rank 360/459 (-10 pts)"
+        "comps value ~-24% vs assessed, rank 359/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -21585,44 +22105,146 @@ window.PHX_LAND_LEADS = {
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": -24,
       "compsAdj": -10,
-      "newBuild": {
-        "arv": 3187500,
-        "psf": 699,
-        "n": 4,
-        "radiusMi": 1.0,
-        "lowPsf": 542,
-        "highPsf": 842,
-        "examples": [
-          {
-            "address": "10022 N 36TH ST",
-            "price": 2045000,
-            "sf": 3774,
-            "sold": "2023-12-01"
-          },
-          {
-            "address": "10025 N 39TH ST",
-            "price": 3050000,
-            "sf": 3936,
-            "sold": "2025-06-01"
-          },
-          {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "price": 6225000,
-            "sf": 7396,
-            "sold": "2024-12-01"
-          },
-          {
-            "address": "4224 E DESERT COVE AVE",
-            "price": 3325000,
-            "sf": 5332,
-            "sold": "2026-08-01"
-          }
-        ]
-      },
       "isNew": false,
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-10",
       "peakScore": 87
+    },
+    {
+      "apn": "20803019C",
+      "address": "18011 N 13TH AVE   PHOENIX  85023",
+      "ownerName": "FULTS ROBERT L/JANIS",
+      "ownerMailAddress": "18011 N 13TH AVE PHOENIX AZ USA 850231430",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
+        "isEstateOwner": false,
+        "yearsHeld": 25.3
+      },
+      "landSf": 41539,
+      "landAcres": 0.954,
+      "puc": "0131",
+      "landUseClass": "residential",
+      "lat": 33.64985530790159,
+      "lng": -112.08873422396361,
+      "assessedValue": 438000.0,
+      "assessedValuePerAcre": 459119.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3",
+        "targetDensity": 16,
+        "basis": "adjacent parcels already zoned R-3"
+      },
+      "byRightUnits": 4.8,
+      "rezoneTargetUnits": 15.3,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 2051.0,
+      "farRatio": 0.04937528587592383,
+      "yearBuilt": "1973",
+      "codeCases": {
+        "count": 2,
+        "severe": false,
+        "distress": false
+      },
+      "saleDate": null,
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": 18000,
+      "score": 77,
+      "reasons": [
+        "adjacent parcels already zoned R-3",
+        "parcel size fits small-to-mid infill development",
+        "held 25+ years \u2014 likely low or no debt on the land",
+        "2 code-enforcement cases at this address (2024+)",
+        "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
+        "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
+        "built 1973, no sale in 15+ years \u2014 likely dated/deferred maintenance"
+      ],
+      "comps": [
+        {
+          "apn": "20816224",
+          "address": "14823 N 15TH DR   PHOENIX  85023",
+          "distanceMi": 1.99,
+          "soldDate": "2025-06-01",
+          "soldPrice": 750000.0,
+          "landSf": 32834,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 995005,
+          "similarity": 50
+        },
+        {
+          "apn": "20816425",
+          "address": "1515 W ST MORITZ LN   PHOENIX  85023",
+          "distanceMi": 2.09,
+          "soldDate": "2025-07-01",
+          "soldPrice": 350000.0,
+          "landSf": 27261,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 559260,
+          "similarity": 46
+        },
+        {
+          "apn": "20801210",
+          "address": "18052 N 3RD ST   PHOENIX  85022",
+          "distanceMi": 1.05,
+          "soldDate": "2025-06-01",
+          "soldPrice": 145000.0,
+          "landSf": 6000,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1052700,
+          "similarity": 44
+        },
+        {
+          "apn": "20816490C",
+          "address": "1535 W MANDALAY LN   PHOENIX  85023",
+          "distanceMi": 2.2,
+          "soldDate": "2025-01-01",
+          "soldPrice": 250000.0,
+          "landSf": 57918,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 188024,
+          "similarity": 44
+        },
+        {
+          "apn": "20813179",
+          "address": "1533 W BECK LN   PHOENIX  85023",
+          "distanceMi": 1.59,
+          "soldDate": "2025-12-01",
+          "soldPrice": 115000.0,
+          "landSf": 5930,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 844755,
+          "similarity": 42
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 533313,
+        "rangeLow": 179301,
+        "rangeHigh": 948841,
+        "explanation": "Based on 5 comparable sales within 3 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $533,313 (range $179,301-$948,841).",
+        "unreliable": true
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "isNew": true,
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10",
+      "peakScore": 77
     },
     {
       "apn": "21453021",
@@ -21678,7 +22300,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1961, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+8% vs assessed, rank 263/459 (+4 pts)"
+        "comps value ~+8% vs assessed, rank 263/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -21807,7 +22429,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "12 homes rebuilt since 2015 in CAMPOBELLO \u2014 proven teardown neighborhood",
         "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+11% vs assessed, rank 254/459 (+4 pts)"
+        "comps value ~+11% vs assessed, rank 254/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -21944,7 +22566,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1959, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+20% vs assessed, rank 240/459 (+4 pts)"
+        "comps value ~+20% vs assessed, rank 240/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -22077,7 +22699,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 7% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "2 homes rebuilt since 2015 in CACTUS MANOR LOT  5-9, 18",
-        "comps value ~+17% vs assessed, rank 245/459 (+4 pts)"
+        "comps value ~+17% vs assessed, rank 245/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -22211,7 +22833,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 7% of the lot \u2014 under-improved for the land size",
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+23% vs assessed, rank 236/459 (+4 pts)"
+        "comps value ~+23% vs assessed, rank 236/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -22343,7 +22965,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 7% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1971, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+5% vs assessed, rank 274/459 (+4 pts)"
+        "comps value ~+5% vs assessed, rank 275/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -22607,7 +23229,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
-        "comps value ~+8% vs assessed, rank 264/459 (+4 pts)"
+        "comps value ~+8% vs assessed, rank 264/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -22716,7 +23338,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 7% of the lot \u2014 under-improved for the land size",
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "1 home rebuilt since 2015 in RANCHO ALTA VIDA",
-        "comps value ~+9% vs assessed, rank 260/459 (+4 pts)"
+        "comps value ~+9% vs assessed, rank 260/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -22837,7 +23459,7 @@ window.PHX_LAND_LEADS = {
         "held 25+ years \u2014 likely low or no debt on the land",
         "existing structure occupies only 11% of the lot \u2014 under-improved for the land size",
         "2 homes rebuilt since 2015 in PARADISE VALLEY PALMS UNIT 5 AMD",
-        "comps value ~+10% vs assessed, rank 257/459 (+4 pts)"
+        "comps value ~+10% vs assessed, rank 258/458 (+4 pts)"
       ],
       "comps": [
         {
@@ -22910,406 +23532,151 @@ window.PHX_LAND_LEADS = {
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": 10,
       "compsAdj": 4,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-10",
       "peakScore": 76
     },
     {
-      "apn": "16606069",
-      "address": "3128 E BLOOMFIELD RD   PHOENIX  85032",
-      "ownerName": "LUCAS WILLIAM WAYNE/NADINE",
-      "ownerMailAddress": "3128 E BLOOMFIELD PHOENIX AZ USA 85032",
+      "apn": "21519383",
+      "address": "4717 E BELL RD   PHOENIX  85032",
+      "ownerName": "TATUM VENTURE LLC",
+      "ownerMailAddress": "280 2ND ST STE 230 LOS ALTOS CA USA 94022",
       "ownership": {
-        "isOutOfStateOwner": false,
+        "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
-        "isEntityOwner": false,
+        "isEntityOwner": true,
         "isOwnerOccupied": false,
-        "isHiddenOwner": false,
+        "isHiddenOwner": true,
         "isEstateOwner": false,
-        "yearsHeld": 24.6
+        "yearsHeld": 15.3
       },
-      "landSf": 17085,
-      "landAcres": 0.392,
-      "puc": "0131",
-      "landUseClass": "residential",
-      "lat": 33.60038828910722,
-      "lng": -112.01389322971798,
-      "assessedValue": 418700.0,
-      "assessedValuePerAcre": 1068112.0,
-      "currentZoning": "R1-14",
-      "generalPlanDesignation": "GP code 38",
+      "landSf": 16879,
+      "landAcres": 0.387,
+      "puc": "0021",
+      "landUseClass": "commercial",
+      "lat": 33.64023607084797,
+      "lng": -111.9795550716899,
+      "assessedValue": 768900.0,
+      "assessedValuePerAcre": 1986822.0,
+      "currentZoning": "PSC",
+      "generalPlanDesignation": "GP code 70",
       "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
-        "targetZone": "R1-8",
-        "targetDensity": 5,
-        "basis": "adjacent parcels already zoned R1-8"
+        "targetZone": "R1-18",
+        "targetDensity": 2,
+        "basis": "adjacent parcels already zoned R1-18"
       },
-      "byRightUnits": 1.2,
-      "rezoneTargetUnits": 2.0,
+      "byRightUnits": null,
+      "rezoneTargetUnits": 0.8,
       "dealType": "subdivision",
       "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 1964.0,
-      "farRatio": 0.11495463857184665,
-      "yearBuilt": "1959",
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "CHARTER OAK PARK",
-      "rebuildsInSub": 2,
-      "salePrice": null,
-      "defaultDemoCost": 18000,
-      "score": 76,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": {
+        "count": 2,
+        "severe": false,
+        "distress": false
+      },
+      "saleDate": "06/01/2011",
+      "subdivision": "CORNWELL DEVELOPMENT",
+      "rebuildsInSub": 0,
+      "salePrice": 30000000.0,
+      "defaultDemoCost": null,
+      "score": 75,
       "reasons": [
-        "adjacent parcels already zoned R1-8",
+        "adjacent parcels already zoned R1-18",
         "parcel size fits small-to-mid infill development",
-        "held 25+ years \u2014 likely low or no debt on the land",
-        "existing structure occupies only 11% of the lot \u2014 under-improved for the land size",
-        "2 homes rebuilt since 2015 in CHARTER OAK PARK",
-        "built 1959, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+2% vs assessed, rank 281/459 (+4 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "16771078",
-          "address": "4344 E SHEA BLVD   PHOENIX  85028",
-          "distanceMi": 1.96,
-          "soldDate": "2026-04-01",
-          "soldPrice": 450000.0,
-          "landSf": 17951,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1091973,
-          "similarity": 57
-        },
-        {
-          "apn": "16611005",
-          "address": "13202 N 22ND ST   PHOENIX  85022",
-          "distanceMi": 1.3,
-          "soldDate": "2024-12-01",
-          "soldPrice": 450000.0,
-          "landSf": 15238,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1286389,
-          "similarity": 55
-        },
-        {
-          "apn": "16643019",
-          "address": "1701 E CALLE SANTA CRUZ    PHOENIX  85022",
-          "distanceMi": 1.92,
-          "soldDate": "2025-09-01",
-          "soldPrice": 115000.0,
-          "landSf": 9178,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 545805,
-          "similarity": 46
-        },
-        {
-          "apn": "16812005A",
-          "address": "10001 N 40TH ST   PHOENIX  85028",
-          "distanceMi": 1.89,
-          "soldDate": "2026-04-01",
-          "soldPrice": 1400000.0,
-          "landSf": 52145,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1169508,
-          "similarity": 45
-        },
-        {
-          "apn": "21447842",
-          "address": "12831 N 17TH PL   PHOENIX  85022",
-          "distanceMi": 1.75,
-          "soldDate": "2023-10-01",
-          "soldPrice": 225000.0,
-          "landSf": 14972,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 654622,
-          "similarity": 45
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 428291,
-        "rangeLow": 214074,
-        "rangeHigh": 504545,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $428,291 (range $214,074-$504,545)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 2,
-      "compsAdj": 4,
-      "isNew": true,
-      "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-10",
-      "peakScore": 76
-    },
-    {
-      "apn": "16768045",
-      "address": "4241 E YUCCA ST   PHOENIX  85028",
-      "ownerName": "YOUNG ALLEN V & HOPE D",
-      "ownerMailAddress": "4241 E YUCCA PHOENIX AZ USA 85028",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": false,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": false,
-        "isEstateOwner": false,
-        "yearsHeld": 38.3
-      },
-      "landSf": 19123,
-      "landAcres": 0.439,
-      "puc": "0141",
-      "landUseClass": "residential",
-      "lat": 33.588147018228355,
-      "lng": -111.98868352845857,
-      "assessedValue": 729100.0,
-      "assessedValuePerAcre": 1660820.0,
-      "currentZoning": "R1-18",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-2",
-        "targetDensity": 12,
-        "basis": "adjacent parcels already zoned R-2"
-      },
-      "byRightUnits": 0.9,
-      "rezoneTargetUnits": 5.3,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 2213.0,
-      "farRatio": 0.11572452021126392,
-      "yearBuilt": "1975",
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "PARADISE VALLEY PALMS UNIT 5 AMD",
-      "rebuildsInSub": 2,
-      "salePrice": null,
-      "defaultDemoCost": 18000,
-      "score": 76,
-      "reasons": [
-        "adjacent parcels already zoned R-2",
-        "parcel size fits small-to-mid infill development",
-        "held 38+ years \u2014 likely low or no debt on the land",
-        "existing structure occupies only 12% of the lot \u2014 under-improved for the land size",
-        "2 homes rebuilt since 2015 in PARADISE VALLEY PALMS UNIT 5 AMD",
-        "built 1975, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+10% vs assessed, rank 258/459 (+4 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "16771078",
-          "address": "4344 E SHEA BLVD   PHOENIX  85028",
-          "distanceMi": 0.37,
-          "soldDate": "2026-04-01",
-          "soldPrice": 450000.0,
-          "landSf": 17951,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1091973,
-          "similarity": 70
-        },
-        {
-          "apn": "16812005A",
-          "address": "10001 N 40TH ST   PHOENIX  85028",
-          "distanceMi": 0.81,
-          "soldDate": "2026-04-01",
-          "soldPrice": 1400000.0,
-          "landSf": 52145,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1169508,
-          "similarity": 55
-        },
-        {
-          "apn": "16705317",
-          "address": "5120 E EMILE ZOLA AVE   SCOTTSDALE  85254",
-          "distanceMi": 1.75,
-          "soldDate": "2026-04-01",
-          "soldPrice": 825000.0,
-          "landSf": 14352,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 2503972,
-          "similarity": 55
-        },
-        {
-          "apn": "16752084",
-          "address": "11630 N 52ND ST   SCOTTSDALE  85254",
-          "distanceMi": 1.14,
-          "soldDate": "2026-01-01",
-          "soldPrice": 1475000.0,
-          "landSf": 35260,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1822206,
-          "similarity": 54
-        },
-        {
-          "apn": "16742039",
-          "address": "5139 E SHAW BUTTE DR   SCOTTSDALE  85254",
-          "distanceMi": 1.22,
-          "soldDate": "2026-01-01",
-          "soldPrice": 750000.0,
-          "landSf": 10400,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 3141346,
-          "similarity": 54
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 799955,
-        "rangeLow": 479380,
-        "rangeHigh": 1379062,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $799,955 (range $479,380-$1,379,062)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 10,
-      "compsAdj": 4,
-      "isNew": true,
-      "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-10",
-      "peakScore": 76
-    },
-    {
-      "apn": "16768064",
-      "address": "11235 N 42ND PL   PHOENIX  85028",
-      "ownerName": "BRAUN ALVIN K & GWEN ANNE",
-      "ownerMailAddress": "11235 N 42ND PL PHOENIX AZ USA 85028",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": false,
-        "isOwnerOccupied": true,
-        "isHiddenOwner": false,
-        "isEstateOwner": false,
-        "yearsHeld": 15.1
-      },
-      "landSf": 18761,
-      "landAcres": 0.431,
-      "puc": "0141",
-      "landUseClass": "residential",
-      "lat": 33.58928709494192,
-      "lng": -111.9892753719057,
-      "assessedValue": 745000.0,
-      "assessedValuePerAcre": 1728538.0,
-      "currentZoning": "R1-18",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-2",
-        "targetDensity": 12,
-        "basis": "adjacent parcels already zoned R-2"
-      },
-      "byRightUnits": 0.9,
-      "rezoneTargetUnits": 5.2,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 2220.0,
-      "farRatio": 0.11833057939342252,
-      "yearBuilt": "1974",
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "PARADISE VALLEY PALMS UNIT 5 AMD",
-      "rebuildsInSub": 2,
-      "salePrice": null,
-      "defaultDemoCost": 18000,
-      "score": 76,
-      "reasons": [
-        "adjacent parcels already zoned R-2",
-        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 15+ years \u2014 likely low or no debt on the land",
-        "existing structure occupies only 12% of the lot \u2014 under-improved for the land size",
-        "2 homes rebuilt since 2015 in PARADISE VALLEY PALMS UNIT 5 AMD",
-        "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+5% vs assessed, rank 275/459 (+4 pts)"
+        "2 code-enforcement cases at this address (2024+)",
+        "comps value ~+5% vs assessed, rank 271/458 (+4 pts)"
       ],
       "comps": [
         {
-          "apn": "16771078",
-          "address": "4344 E SHEA BLVD   PHOENIX  85028",
-          "distanceMi": 0.45,
+          "apn": "16503001D",
+          "address": "10440 N 32ND ST   PHOENIX  85028",
+          "distanceMi": 4.5,
           "soldDate": "2026-04-01",
-          "soldPrice": 450000.0,
-          "landSf": 17951,
+          "soldPrice": 1249000.0,
+          "landSf": 34248,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 1091973,
-          "similarity": 70
+          "pricePerAcre": 1588602,
+          "similarity": 32
         },
         {
-          "apn": "16705317",
-          "address": "5120 E EMILE ZOLA AVE   SCOTTSDALE  85254",
-          "distanceMi": 1.71,
-          "soldDate": "2026-04-01",
-          "soldPrice": 825000.0,
-          "landSf": 14352,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 2503972,
-          "similarity": 55
+          "apn": "16505114",
+          "address": "10249 N 25TH ST   PHOENIX  85028",
+          "distanceMi": 4.98,
+          "soldDate": "2024-06-01",
+          "soldPrice": 630000.0,
+          "landSf": 11874,
+          "livingSpaceSf": 2059.0,
+          "pricePerSf": 306,
+          "pricePerAcre": 2311167,
+          "similarity": 27
         },
         {
-          "apn": "16812005A",
-          "address": "10001 N 40TH ST   PHOENIX  85028",
-          "distanceMi": 0.87,
-          "soldDate": "2026-04-01",
-          "soldPrice": 1400000.0,
-          "landSf": 52145,
+          "apn": "16502006J",
+          "address": "10211 N 32ND ST   PHOENIX  85028",
+          "distanceMi": 4.6,
+          "soldDate": "2025-04-01",
+          "soldPrice": 1965000.0,
+          "landSf": 41251,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 1169508,
-          "similarity": 54
+          "pricePerAcre": 2074990,
+          "similarity": 26
         },
         {
-          "apn": "16752084",
-          "address": "11630 N 52ND ST   SCOTTSDALE  85254",
-          "distanceMi": 1.15,
-          "soldDate": "2026-01-01",
-          "soldPrice": 1475000.0,
-          "landSf": 35260,
+          "apn": "16503001E",
+          "address": "3131 E SHEA BLVD   PHOENIX  85028",
+          "distanceMi": 4.5,
+          "soldDate": "2023-05-01",
+          "soldPrice": 3300000.0,
+          "landSf": 27922,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 1822206,
-          "similarity": 54
+          "pricePerAcre": 5148199,
+          "similarity": 20
         },
         {
-          "apn": "16742039",
-          "address": "5139 E SHAW BUTTE DR   SCOTTSDALE  85254",
-          "distanceMi": 1.22,
-          "soldDate": "2026-01-01",
-          "soldPrice": 750000.0,
-          "landSf": 10400,
+          "apn": "16503930B",
+          "address": "3101 E SHEA BLVD  221 PHOENIX  85028",
+          "distanceMi": 4.54,
+          "soldDate": "2023-07-01",
+          "soldPrice": 3100000.0,
+          "landSf": 7139,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 3141346,
-          "similarity": 54
+          "pricePerAcre": 18915254,
+          "similarity": 17
         }
       ],
       "valuation": {
-        "mostLikelyValue": 784812,
-        "rangeLow": 470305,
-        "rangeHigh": 1352957,
-        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $784,812 (range $470,305-$1,352,957)."
+        "mostLikelyValue": 804035,
+        "rangeLow": 615565,
+        "rangeHigh": 1994868,
+        "explanation": "Based on 5 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $804,035 (range $615,565-$1,994,868)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": 5,
       "compsAdj": 4,
-      "isNew": true,
-      "firstSeen": "2026-10-10",
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "NATIONAL REGISTERED AGENTS INC 3800 N CENTRAL AVE SUITE 460, PHOENIX, AZ, 85012",
+        "companyUrl": "https://opencorporates.com/companies/us_az/R16876777"
+      },
+      "isNew": false,
+      "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-10",
-      "peakScore": 76
+      "peakScore": 90
     },
     {
       "apn": "21433022P",
@@ -23364,7 +23731,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 25+ years \u2014 likely low or no debt on the land",
-        "comps value ~+74% vs assessed, rank 157/459 (+10 pts)"
+        "comps value ~+74% vs assessed, rank 159/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -23496,7 +23863,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 25+ years \u2014 likely low or no debt on the land",
-        "comps value ~+73% vs assessed, rank 158/459 (+10 pts)"
+        "comps value ~+73% vs assessed, rank 160/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -23631,8 +23998,8 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held 16+ years \u2014 likely low or no debt on the land",
-        "comps margin 550% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+550% vs assessed, rank 11/459 (+20 pts)"
+        "comps margin 363% looks extreme \u2014 verify assessed value/comps before trusting",
+        "comps value ~+363% vs assessed, rank 23/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -23646,6 +24013,18 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": null,
           "pricePerAcre": 844755,
           "similarity": 61
+        },
+        {
+          "apn": "15903183",
+          "address": "1636 W SHARON AVE   PHOENIX  85029",
+          "distanceMi": 0.76,
+          "soldDate": "2026-08-01",
+          "soldPrice": 370000.0,
+          "landSf": 12225,
+          "livingSpaceSf": 1641.0,
+          "pricePerSf": 225,
+          "pricePerAcre": 1318380,
+          "similarity": 58
         },
         {
           "apn": "20813412",
@@ -23682,28 +24061,16 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 293,
           "pricePerAcre": 1984571,
           "similarity": 56
-        },
-        {
-          "apn": "20813037A",
-          "address": "15639 N 17TH DR   PHOENIX  85023",
-          "distanceMi": 0.56,
-          "soldDate": "2026-08-01",
-          "soldPrice": 120000.0,
-          "landSf": 6000,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 871200,
-          "similarity": 55
         }
       ],
       "valuation": {
-        "mostLikelyValue": 1929886,
-        "rangeLow": 1375075,
+        "mostLikelyValue": 1375075,
+        "rangeLow": 913665,
         "rangeHigh": 1929886,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,929,886 (range $1,375,075-$1,929,886)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,375,075 (range $913,665-$1,929,886)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 550,
+      "equityMarginPct": 363,
       "compsAdj": 20,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -23770,7 +24137,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "built 1967, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-58% vs assessed, rank 449/459 (-10 pts)"
+        "comps value ~-58% vs assessed, rank 448/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -23903,7 +24270,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1970, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-7% vs assessed, rank 299/459 (-10 pts)"
+        "comps value ~-7% vs assessed, rank 297/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -24037,7 +24404,7 @@ window.PHX_LAND_LEADS = {
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "12 homes rebuilt since 2015 in CAMPOBELLO \u2014 proven teardown neighborhood",
         "built 1963, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-9% vs assessed, rank 304/459 (-10 pts)"
+        "comps value ~-9% vs assessed, rank 302/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -24116,127 +24483,6 @@ window.PHX_LAND_LEADS = {
       "peakScore": 87
     },
     {
-      "apn": "16501031A",
-      "address": "10011 N 38TH ST   PHOENIX  85028",
-      "ownerName": "HO FAMILY TRUST",
-      "ownerMailAddress": "10011 N 38TH ST PHOENIX AZ USA 85028",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": true,
-        "isHiddenOwner": false,
-        "isEstateOwner": false,
-        "yearsHeld": 0.3
-      },
-      "landSf": 45694,
-      "landAcres": 1.049,
-      "puc": "0141",
-      "landUseClass": "residential",
-      "lat": 33.577948613396714,
-      "lng": -111.99942028009728,
-      "assessedValue": 1286800.0,
-      "assessedValuePerAcre": 1226692.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 24",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "RE-43",
-        "targetDensity": 1,
-        "basis": "adjacent parcels already zoned RE-43"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 1.0,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 3628.0,
-      "farRatio": 0.0793977327439051,
-      "yearBuilt": "1961",
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "PARADISE FOOTHILLS",
-      "rebuildsInSub": 6,
-      "salePrice": null,
-      "defaultDemoCost": 18000,
-      "score": 75,
-      "reasons": [
-        "adjacent parcels already zoned RE-43",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
-        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
-        "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
-        "built 1961, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-11% vs assessed, rank 314/459 (-10 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "16812005A",
-          "address": "10001 N 40TH ST   PHOENIX  85028",
-          "distanceMi": 0.24,
-          "soldDate": "2026-04-01",
-          "soldPrice": 1400000.0,
-          "landSf": 52145,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1169508,
-          "similarity": 70
-        },
-        {
-          "apn": "16771078",
-          "address": "4344 E SHEA BLVD   PHOENIX  85028",
-          "distanceMi": 0.8,
-          "soldDate": "2026-04-01",
-          "soldPrice": 450000.0,
-          "landSf": 17951,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1091973,
-          "similarity": 56
-        },
-        {
-          "apn": "16515011B",
-          "address": "3848 E CHOLLA LN   PHOENIX  85028",
-          "distanceMi": 0.57,
-          "soldDate": "2024-04-01",
-          "soldPrice": 1900000.0,
-          "landSf": 98185,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 842939,
-          "similarity": 49
-        },
-        {
-          "apn": "16831004N",
-          "address": "",
-          "distanceMi": 0.78,
-          "soldDate": "2023-04-01",
-          "soldPrice": 1515000.0,
-          "landSf": 103934,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 634955,
-          "similarity": 42
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1145468,
-        "rangeLow": 666061,
-        "rangeHigh": 1226802,
-        "explanation": "Based on 4 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,145,468 (range $666,061-$1,226,802)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": -11,
-      "compsAdj": -10,
-      "isNew": true,
-      "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-10",
-      "peakScore": 75
-    },
-    {
       "apn": "16501014A",
       "address": "10240 N 39TH ST   PHOENIX  85028",
       "ownerName": "KATHLEEN M O DONNELL REVOCABLE TRUST",
@@ -24291,7 +24537,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1969, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-12% vs assessed, rank 318/459 (-10 pts)"
+        "comps value ~-12% vs assessed, rank 315/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -24412,7 +24658,7 @@ window.PHX_LAND_LEADS = {
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
         "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
         "built 1962, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-31% vs assessed, rank 382/459 (-10 pts)"
+        "comps value ~-31% vs assessed, rank 380/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -24981,6 +25227,275 @@ window.PHX_LAND_LEADS = {
       "peakScore": 75
     },
     {
+      "apn": "20604028D",
+      "address": "22427 N 30TH AVE   PHOENIX  85027",
+      "ownerName": "42ND STREET CRETA LLC",
+      "ownerMailAddress": "11026 N 42ND ST PHOENIX AZ USA 85028",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 8.3
+      },
+      "landSf": 29308,
+      "landAcres": 0.673,
+      "puc": "0112",
+      "landUseClass": "residential",
+      "lat": 33.69031981025762,
+      "lng": -112.12335934951386,
+      "assessedValue": 436500.0,
+      "assessedValuePerAcre": 648588.0,
+      "currentZoning": "R-4A",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-2",
+        "targetDensity": 12,
+        "basis": "adjacent parcels already zoned R-2"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 8.1,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 2378.0,
+      "farRatio": 0.08113825576634366,
+      "yearBuilt": "1956",
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": 18000,
+      "score": 75,
+      "reasons": [
+        "adjacent parcels already zoned R-2",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 8 years",
+        "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
+        "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
+        "built 1956, no sale in 15+ years \u2014 likely dated/deferred maintenance"
+      ],
+      "comps": [
+        {
+          "apn": "20904070C",
+          "address": "22453 N 27TH AVE   PHOENIX  85027",
+          "distanceMi": 0.49,
+          "soldDate": "2023-01-01",
+          "soldPrice": 125000.0,
+          "landSf": 25990,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 209504,
+          "similarity": 52
+        },
+        {
+          "apn": "20907019H",
+          "address": "21424 N 24TH DR   PHOENIX  85027",
+          "distanceMi": 0.97,
+          "soldDate": "2025-12-01",
+          "soldPrice": 300000.0,
+          "landSf": 9824,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1330212,
+          "similarity": 51
+        },
+        {
+          "apn": "20604006L",
+          "address": "2825 W LOUISE DR   PHOENIX  85027",
+          "distanceMi": 0.37,
+          "soldDate": "2024-07-01",
+          "soldPrice": 695000.0,
+          "landSf": 11718,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 2583564,
+          "similarity": 50
+        },
+        {
+          "apn": "20907018C",
+          "address": "21428 N 24TH AVE   PHOENIX  85027",
+          "distanceMi": 0.96,
+          "soldDate": "2025-04-01",
+          "soldPrice": 215000.0,
+          "landSf": 11661,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 803139,
+          "similarity": 49
+        },
+        {
+          "apn": "20604016G",
+          "address": "2831 W FOOTHILL DR   PHOENIX  85027",
+          "distanceMi": 0.19,
+          "soldDate": "2021-12-01",
+          "soldPrice": 76000.0,
+          "landSf": 8276,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 400019,
+          "similarity": 37
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 894992,
+        "rangeLow": 140958,
+        "rangeHigh": 1738271,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $894,992 (range $140,958-$1,738,271).",
+        "unreliable": true
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "11026 N. 42ND STREET, PHOENIX, AZ, 85032",
+        "companyUrl": "https://opencorporates.com/companies/us_az/L21493303"
+      },
+      "isNew": true,
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10",
+      "peakScore": 75
+    },
+    {
+      "apn": "16632009",
+      "address": "11812 N 31ST ST   PHOENIX  85028",
+      "ownerName": "BOOFER MAUER TRUST",
+      "ownerMailAddress": "PO BOX 54241 PHOENIX AZ USA 85078",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 25.5
+      },
+      "landSf": 16431,
+      "landAcres": 0.377,
+      "puc": "0131",
+      "landUseClass": "residential",
+      "lat": 33.59392593779681,
+      "lng": -112.01560562907936,
+      "assessedValue": 397800.0,
+      "assessedValuePerAcre": 1055172.0,
+      "currentZoning": "R1-10",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-2",
+        "targetDensity": 12,
+        "basis": "adjacent parcels already zoned R-2"
+      },
+      "byRightUnits": 1.5,
+      "rezoneTargetUnits": 4.5,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 1338.0,
+      "farRatio": 0.08143144056965491,
+      "yearBuilt": "1955",
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "PARADISE PARK",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": 18000,
+      "score": 75,
+      "reasons": [
+        "adjacent parcels already zoned R-2",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 26+ years \u2014 likely low or no debt on the land",
+        "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
+        "built 1955, no sale in 15+ years \u2014 likely dated/deferred maintenance"
+      ],
+      "comps": [
+        {
+          "apn": "16771078",
+          "address": "4344 E SHEA BLVD   PHOENIX  85028",
+          "distanceMi": 1.81,
+          "soldDate": "2026-04-01",
+          "soldPrice": 450000.0,
+          "landSf": 17951,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1091973,
+          "similarity": 58
+        },
+        {
+          "apn": "16611005",
+          "address": "13202 N 22ND ST   PHOENIX  85022",
+          "distanceMi": 1.41,
+          "soldDate": "2024-12-01",
+          "soldPrice": 450000.0,
+          "landSf": 15238,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1286389,
+          "similarity": 54
+        },
+        {
+          "apn": "16517039",
+          "address": "3015 E PUGET AVE   PHOENIX  85028",
+          "distanceMi": 1.87,
+          "soldDate": "2025-12-01",
+          "soldPrice": 850000.0,
+          "landSf": 12961,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 2856724,
+          "similarity": 53
+        },
+        {
+          "apn": "16507024",
+          "address": "1848 E CINNABAR AVE   PHOENIX  85020",
+          "distanceMi": 1.91,
+          "soldDate": "2025-05-01",
+          "soldPrice": 199000.0,
+          "landSf": 14551,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 595728,
+          "similarity": 52
+        },
+        {
+          "apn": "15921046K",
+          "address": "1518 E YUCCA ST   PHOENIX  85020",
+          "distanceMi": 1.99,
+          "soldDate": "2025-08-01",
+          "soldPrice": 100000.0,
+          "landSf": 14018,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 310743,
+          "similarity": 52
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 411896,
+        "rangeLow": 117214,
+        "rangeHigh": 1077567,
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $411,896 (range $117,214-$1,077,567).",
+        "unreliable": true
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": null,
+      "isNew": true,
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10",
+      "peakScore": 75
+    },
+    {
       "apn": "20807083",
       "address": "2098 W BELL RD   PHOENIX  85023",
       "ownerName": "LITHIA REAL ESTATE INC",
@@ -25021,7 +25536,7 @@ window.PHX_LAND_LEADS = {
       "farRatio": null,
       "yearBuilt": null,
       "codeCases": {
-        "count": 7,
+        "count": 6,
         "severe": false,
         "distress": true
       },
@@ -25037,7 +25552,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "code complaint mentions vacant/boarded/unsecured/abandoned/dilapidated",
-        "7 code-enforcement cases at this address (2024+)"
+        "6 code-enforcement cases at this address (2024+)"
       ],
       "comps": [
         {
@@ -25077,27 +25592,27 @@ window.PHX_LAND_LEADS = {
           "similarity": 17
         },
         {
-          "apn": "14802345",
-          "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 4.84,
-          "soldDate": "2024-08-01",
-          "soldPrice": 2625000.0,
-          "landSf": 1526,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 74931193,
-          "similarity": 16
-        },
-        {
-          "apn": "14802346",
+          "apn": "14802347",
           "address": "11851 N 51ST AVE   GLENDALE  85304",
           "distanceMi": 4.83,
           "soldDate": "2024-08-01",
           "soldPrice": 2625000.0,
-          "landSf": 1525,
+          "landSf": 1555,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 74980328,
+          "pricePerAcre": 73533762,
+          "similarity": 16
+        },
+        {
+          "apn": "14802348",
+          "address": "11851 N 51ST AVE   GLENDALE  85304",
+          "distanceMi": 4.84,
+          "soldDate": "2024-08-01",
+          "soldPrice": 2625000.0,
+          "landSf": 1555,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 73533762,
           "similarity": 16
         }
       ],
@@ -25113,6 +25628,142 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-10",
       "peakScore": 74
+    },
+    {
+      "apn": "20904069A",
+      "address": "22435 N 27TH AVE   PHOENIX  85027",
+      "ownerName": "22435 N 27TH AVENUE LLC",
+      "ownerMailAddress": "7443 W CREST LN GLENDALE AZ USA 85310",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 2.3
+      },
+      "landSf": 58957,
+      "landAcres": 1.353,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.69024559487788,
+      "lng": -112.11574263116937,
+      "assessedValue": 215500.0,
+      "assessedValuePerAcre": 159276.0,
+      "currentZoning": "R-4A",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "RE-43",
+        "targetDensity": 1,
+        "basis": "adjacent parcels already zoned RE-43"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 1.4,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "STATE PLAT NO 11 TOWNSITE OF ADOBE",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": null,
+      "score": 74,
+      "reasons": [
+        "adjacent parcels already zoned RE-43",
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps value ~+226% vs assessed, rank 71/458 (+20 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "20641031",
+          "address": "3031 W MELINDA LN   PHOENIX  85027",
+          "distanceMi": 0.71,
+          "soldDate": "2026-03-01",
+          "soldPrice": 415000.0,
+          "landSf": 4428,
+          "livingSpaceSf": 1395.0,
+          "pricePerSf": 297,
+          "pricePerAcre": 4082520,
+          "similarity": 50
+        },
+        {
+          "apn": "20608114",
+          "address": "3025 W IRMA LN   PHOENIX  85027",
+          "distanceMi": 1.24,
+          "soldDate": "2026-03-01",
+          "soldPrice": 269500.0,
+          "landSf": 3811,
+          "livingSpaceSf": 1056.0,
+          "pricePerSf": 255,
+          "pricePerAcre": 3080404,
+          "similarity": 45
+        },
+        {
+          "apn": "20641028",
+          "address": "3043 W MELINDA LN   PHOENIX  85027",
+          "distanceMi": 0.73,
+          "soldDate": "2025-04-01",
+          "soldPrice": 410000.0,
+          "landSf": 4428,
+          "livingSpaceSf": 1395.0,
+          "pricePerSf": 294,
+          "pricePerAcre": 4033333,
+          "similarity": 45
+        },
+        {
+          "apn": "20641026",
+          "address": "3051 W MELINDA LN   PHOENIX  85027",
+          "distanceMi": 0.74,
+          "soldDate": "2025-03-01",
+          "soldPrice": 389000.0,
+          "landSf": 4429,
+          "livingSpaceSf": 1395.0,
+          "pricePerSf": 279,
+          "pricePerAcre": 3825884,
+          "similarity": 44
+        },
+        {
+          "apn": "20506170",
+          "address": "26918 N 35TH LN   PHOENIX  85083",
+          "distanceMi": 2.87,
+          "soldDate": "2025-04-01",
+          "soldPrice": 330000.0,
+          "landSf": 27658,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 519734,
+          "similarity": 43
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 703442,
+        "rangeLow": 703442,
+        "rangeHigh": 703442,
+        "explanation": "Based on 5 comparable sales within 3 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $703,442 (range $703,442-$703,442)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 226,
+      "compsAdj": 20,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "7443 W. Crest Lane, GLENDALE, AZ, 85310",
+        "companyUrl": "https://opencorporates.com/companies/us_az/23692445"
+      },
+      "isNew": false,
+      "firstSeen": "2026-10-01",
+      "lastSeen": "2026-10-10",
+      "peakScore": 79
     },
     {
       "apn": "20714091",
@@ -25169,7 +25820,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 9% of the lot \u2014 under-improved for the land size",
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "built 1972, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-60% vs assessed, rank 450/459 (-10 pts)"
+        "comps value ~-60% vs assessed, rank 449/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -25296,7 +25947,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 11% of the lot \u2014 under-improved for the land size",
         "3 homes rebuilt since 2015 in CHATEAU THIERRY",
         "built 1961, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-44% vs assessed, rank 426/459 (-10 pts)"
+        "comps value ~-44% vs assessed, rank 425/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -25432,7 +26083,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "comps margin 1329% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+1329% vs assessed, rank 4/459 (+20 pts)"
+        "comps value ~+1329% vs assessed, rank 4/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -25531,7 +26182,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+235% vs assessed, rank 73/459 (+20 pts)"
+        "comps value ~+235% vs assessed, rank 67/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -25667,7 +26318,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "comps margin 340% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+340% vs assessed, rank 36/459 (+20 pts)"
+        "comps value ~+340% vs assessed, rank 32/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -25803,7 +26454,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "comps margin 314% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+314% vs assessed, rank 44/459 (+20 pts)"
+        "comps value ~+314% vs assessed, rank 39/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -25887,10 +26538,10 @@ window.PHX_LAND_LEADS = {
       "peakScore": 78
     },
     {
-      "apn": "21407024M",
-      "address": "2044 E MICHIGAN AVE   PHOENIX  85022",
-      "ownerName": "BUFFALO RIDGE II MHC LLC",
-      "ownerMailAddress": "6547 N AVONDALE AVE CHICAGO IL USA 60631",
+      "apn": "21524017A",
+      "address": "16039 N 40TH PL   PHOENIX  85032",
+      "ownerName": "OMAZ LLC",
+      "ownerMailAddress": "30 WOODHOLME AVE BALTIMORE MD USA 21208",
       "ownership": {
         "isOutOfStateOwner": true,
         "isAbsenteeLocal": false,
@@ -25898,123 +26549,118 @@ window.PHX_LAND_LEADS = {
         "isOwnerOccupied": false,
         "isHiddenOwner": true,
         "isEstateOwner": false,
-        "yearsHeld": 2.8
+        "yearsHeld": 3.8
       },
-      "landSf": 23578,
-      "landAcres": 0.541,
+      "landSf": 24576,
+      "landAcres": 0.564,
       "puc": "0011",
       "landUseClass": "residential",
-      "lat": 33.651681949397606,
-      "lng": -112.0375865445316,
-      "assessedValue": 282300.0,
-      "assessedValuePerAcre": 521811.0,
-      "currentZoning": "R-4A",
-      "generalPlanDesignation": "GP code 41",
+      "lat": 33.63310576096772,
+      "lng": -111.99377125702723,
+      "assessedValue": 409500.0,
+      "assessedValuePerAcre": 726064.0,
+      "currentZoning": "R1-14",
+      "generalPlanDesignation": "GP code 24",
       "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
-        "targetZone": "R-2",
-        "targetDensity": 12,
-        "basis": "adjacent parcels already zoned R-2"
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
       },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 6.5,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
+      "byRightUnits": 1.7,
+      "rezoneTargetUnits": 3.4,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
       "parcelStatus": "vacant",
       "livingSpaceSf": null,
       "farRatio": null,
       "yearBuilt": null,
-      "codeCases": {
-        "count": 1,
-        "severe": false,
-        "distress": false
-      },
-      "saleDate": "04/01/2023",
-      "subdivision": "",
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "WALTANN EST PLAT 2",
       "rebuildsInSub": 0,
-      "salePrice": 500000.0,
+      "salePrice": null,
       "defaultDemoCost": null,
       "score": 73,
       "reasons": [
-        "adjacent parcels already zoned R-2",
+        "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps margin 358% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+358% vs assessed, rank 29/459 (+20 pts)"
+        "comps value ~+192% vs assessed, rank 94/458 (+20 pts)"
       ],
       "comps": [
         {
-          "apn": "21321094",
-          "address": "1932 E MORROW DR   PHOENIX  85024",
-          "distanceMi": 0.5,
-          "soldDate": "2026-09-01",
-          "soldPrice": 595000.0,
-          "landSf": 10848,
-          "livingSpaceSf": 2329.0,
-          "pricePerSf": 255,
-          "pricePerAcre": 2389215,
+          "apn": "21434030E",
+          "address": "3720 E TIERRA BUENA LN   PHOENIX  85032",
+          "distanceMi": 0.53,
+          "soldDate": "2025-08-01",
+          "soldPrice": 1295000.0,
+          "landSf": 18399,
+          "livingSpaceSf": 2776.0,
+          "pricePerSf": 466,
+          "pricePerAcre": 3065938,
           "similarity": 62
         },
         {
-          "apn": "21321213",
-          "address": "18601 N 16TH PL   PHOENIX  85024",
-          "distanceMi": 0.63,
-          "soldDate": "2026-04-01",
-          "soldPrice": 550000.0,
-          "landSf": 13355,
-          "livingSpaceSf": 2259.0,
-          "pricePerSf": 243,
-          "pricePerAcre": 1793935,
+          "apn": "21434046A",
+          "address": "15621 N 37TH ST   PHOENIX  85032",
+          "distanceMi": 0.56,
+          "soldDate": "2026-06-01",
+          "soldPrice": 750000.0,
+          "landSf": 46427,
+          "livingSpaceSf": 2344.0,
+          "pricePerSf": 320,
+          "pricePerAcre": 703685,
+          "similarity": 61
+        },
+        {
+          "apn": "21433109",
+          "address": "16231 N 38TH WAY   PHOENIX  85032",
+          "distanceMi": 0.29,
+          "soldDate": "2026-08-01",
+          "soldPrice": 535500.0,
+          "landSf": 8108,
+          "livingSpaceSf": 1627.0,
+          "pricePerSf": 329,
+          "pricePerAcre": 2876959,
           "similarity": 60
         },
         {
-          "apn": "21321032",
-          "address": "1967 E ROCKWOOD DR   PHOENIX  85024",
-          "distanceMi": 0.32,
+          "apn": "21401026",
+          "address": "17047 N 36TH CT   PHOENIX  85032",
+          "distanceMi": 0.95,
           "soldDate": "2026-08-01",
-          "soldPrice": 9795910.0,
-          "landSf": 6115,
-          "livingSpaceSf": 1861.0,
-          "pricePerSf": 5264,
-          "pricePerAcre": 69780840,
-          "similarity": 59
+          "soldPrice": 725000.0,
+          "landSf": 14876,
+          "livingSpaceSf": 2240.0,
+          "pricePerSf": 324,
+          "pricePerAcre": 2122950,
+          "similarity": 60
         },
         {
-          "apn": "21320153",
-          "address": "18644 N 21ST ST   PHOENIX  85024",
-          "distanceMi": 0.34,
-          "soldDate": "2026-05-01",
-          "soldPrice": 550000.0,
-          "landSf": 7008,
-          "livingSpaceSf": 1810.0,
-          "pricePerSf": 304,
-          "pricePerAcre": 3418664,
-          "similarity": 58
-        },
-        {
-          "apn": "21320161",
-          "address": "2123 E ROCKWOOD DR   PHOENIX  85024",
-          "distanceMi": 0.28,
-          "soldDate": "2026-07-01",
-          "soldPrice": 390000.0,
-          "landSf": 4950,
-          "livingSpaceSf": 1521.0,
-          "pricePerSf": 256,
-          "pricePerAcre": 3432000,
-          "similarity": 58
+          "apn": "21433006J",
+          "address": "3909 E SANDRA TER   PHOENIX  85032",
+          "distanceMi": 0.23,
+          "soldDate": "2025-02-01",
+          "soldPrice": 640000.0,
+          "landSf": 38196,
+          "livingSpaceSf": 1615.0,
+          "pricePerSf": 396,
+          "pricePerAcre": 729877,
+          "similarity": 60
         }
       ],
       "valuation": {
-        "mostLikelyValue": 1293225,
-        "rangeLow": 971015,
-        "rangeHigh": 1293225,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,293,225 (range $971,015-$1,293,225)."
+        "mostLikelyValue": 1197741,
+        "rangeLow": 397010,
+        "rangeHigh": 1729764,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,197,741 (range $397,010-$1,729,764)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 358,
+      "equityMarginPct": 192,
       "compsAdj": 20,
       "registeredAgent": null,
       "isNew": true,
@@ -26078,7 +26724,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "built 1958, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-1% vs assessed, rank 288/459 (-10 pts)"
+        "comps value ~-1% vs assessed, rank 286/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -26162,145 +26808,6 @@ window.PHX_LAND_LEADS = {
       "peakScore": 83
     },
     {
-      "apn": "21316019F",
-      "address": "19201 N 29TH PL   PHOENIX  85050",
-      "ownerName": "JILL PREECE BLEVINS FAMILY TRUST",
-      "ownerMailAddress": "3074 SILVER LAKE DR COTTONWOOD HEIGHTS UT USA 84121",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 11.2
-      },
-      "landSf": 17914,
-      "landAcres": 0.411,
-      "puc": "0122",
-      "landUseClass": "residential",
-      "lat": 33.660725045080014,
-      "lng": -112.01871737586478,
-      "assessedValue": 258000.0,
-      "assessedValuePerAcre": 627737.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3",
-        "targetDensity": 16,
-        "basis": "adjacent parcels already zoned R-3"
-      },
-      "byRightUnits": 2.1,
-      "rezoneTargetUnits": 6.6,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 1008.0,
-      "farRatio": 0.056268840013397346,
-      "yearBuilt": "1956",
-      "codeCases": {
-        "count": 1,
-        "severe": true,
-        "distress": false
-      },
-      "saleDate": "08/01/2015",
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": 158000.0,
-      "defaultDemoCost": 18000,
-      "score": 73,
-      "reasons": [
-        "adjacent parcels already zoned R-3",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 11 years",
-        "city issued a violation notice, ticket, or abatement here",
-        "existing structure occupies only 6% of the lot \u2014 under-improved for the land size",
-        "built 1956 \u2014 older housing stock",
-        "comps value ~-18% vs assessed, rank 338/459 (-10 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "21316014G",
-          "address": "2903 E ROCKWOOD DR   PHOENIX  85050",
-          "distanceMi": 0.31,
-          "soldDate": "2024-11-01",
-          "soldPrice": 160000.0,
-          "landSf": 8069,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 863750,
-          "similarity": 54
-        },
-        {
-          "apn": "21316010M",
-          "address": "19355 N 28TH ST   PHOENIX  85050",
-          "distanceMi": 0.2,
-          "soldDate": "2023-07-01",
-          "soldPrice": 135000.0,
-          "landSf": 11410,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 515390,
-          "similarity": 52
-        },
-        {
-          "apn": "21326007C",
-          "address": "2244 E BEHREND DR   PHOENIX  85024",
-          "distanceMi": 0.93,
-          "soldDate": "2024-03-01",
-          "soldPrice": 83000.0,
-          "landSf": 11351,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 318516,
-          "similarity": 49
-        },
-        {
-          "apn": "21326007H",
-          "address": "19650 N CAVE CREEK RD   PHOENIX  85024",
-          "distanceMi": 0.93,
-          "soldDate": "2024-03-01",
-          "soldPrice": 83000.0,
-          "landSf": 9191,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 393372,
-          "similarity": 46
-        },
-        {
-          "apn": "21326215",
-          "address": "19434 N 23RD PL   PHOENIX  85024",
-          "distanceMi": 0.83,
-          "soldDate": "2023-10-01",
-          "soldPrice": 420000.0,
-          "landSf": 36746,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 497883,
-          "similarity": 45
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 211954,
-        "rangeLow": 204754,
-        "rangeHigh": 355216,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $211,954 (range $204,754-$355,216)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": -18,
-      "compsAdj": -10,
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-06",
-      "lastSeen": "2026-10-10",
-      "peakScore": 73
-    },
-    {
       "apn": "21521023B",
       "address": "4111 E PHELPS RD   PHOENIX  85032",
       "ownerName": "ARIZONA SW PROPERTIES LLC",
@@ -26356,7 +26863,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 10% of the lot \u2014 under-improved for the land size",
         "20k+ sf lot \u2014 redevelopment rate ~2x a 14-20k sf lot",
         "built 1961, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-24% vs assessed, rank 361/459 (-10 pts)"
+        "comps value ~-24% vs assessed, rank 360/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -26494,7 +27001,7 @@ window.PHX_LAND_LEADS = {
         "existing structure occupies only 13% of the lot \u2014 under-improved for the land size",
         "1 home rebuilt since 2015 in TOWN & COUNTRY PARADISE 2",
         "built 1962, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~-3% vs assessed, rank 292/459 (-10 pts)"
+        "comps value ~-3% vs assessed, rank 290/458 (-10 pts)"
       ],
       "comps": [
         {
@@ -26698,7 +27205,7 @@ window.PHX_LAND_LEADS = {
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-10",
       "peakScore": 73
@@ -26827,400 +27334,7 @@ window.PHX_LAND_LEADS = {
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": null,
       "registeredAgent": null,
-      "isNew": true,
-      "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-10",
-      "peakScore": 73
-    },
-    {
-      "apn": "21319006J",
-      "address": "18648 N 27TH ST   PHOENIX  85050",
-      "ownerName": "STEVE A SODELL REVOCABLE TRUST",
-      "ownerMailAddress": "18648 N 27TH ST PHOENIX AZ USA 85050",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": true,
-        "isHiddenOwner": false,
-        "isEstateOwner": false,
-        "yearsHeld": 0.2
-      },
-      "landSf": 44388,
-      "landAcres": 1.019,
-      "puc": "0132",
-      "landUseClass": "residential",
-      "lat": 33.656636667051394,
-      "lng": -112.02490709864394,
-      "assessedValue": 544200.0,
-      "assessedValuePerAcre": 534053.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 41",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-2",
-        "targetDensity": 12,
-        "basis": "adjacent parcels already zoned R-2"
-      },
-      "byRightUnits": 5.1,
-      "rezoneTargetUnits": 12.2,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 1880.0,
-      "farRatio": 0.04235378931242678,
-      "yearBuilt": "1974",
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": 18000,
-      "score": 73,
-      "reasons": [
-        "adjacent parcels already zoned R-2",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
-        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
-        "built 1974, no sale in 15+ years \u2014 likely dated/deferred maintenance"
-      ],
-      "comps": [
-        {
-          "apn": "21326215",
-          "address": "19434 N 23RD PL   PHOENIX  85024",
-          "distanceMi": 0.65,
-          "soldDate": "2023-10-01",
-          "soldPrice": 420000.0,
-          "landSf": 36746,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 497883,
-          "similarity": 53
-        },
-        {
-          "apn": "21399022D",
-          "address": "18908 N 22ND ST   PHOENIX  85024",
-          "distanceMi": 0.59,
-          "soldDate": "2022-07-01",
-          "soldPrice": 195000.0,
-          "landSf": 46905,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 181094,
-          "similarity": 50
-        },
-        {
-          "apn": "21316014G",
-          "address": "2903 E ROCKWOOD DR   PHOENIX  85050",
-          "distanceMi": 0.29,
-          "soldDate": "2024-11-01",
-          "soldPrice": 160000.0,
-          "landSf": 8069,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 863750,
-          "similarity": 49
-        },
-        {
-          "apn": "21408054",
-          "address": "2223 E GROVERS AVE   PHOENIX  85022",
-          "distanceMi": 0.83,
-          "soldDate": "2025-01-01",
-          "soldPrice": 172800.0,
-          "landSf": 6193,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1215432,
-          "similarity": 44
-        },
-        {
-          "apn": "21407024M",
-          "address": "2044 E MICHIGAN AVE   PHOENIX  85022",
-          "distanceMi": 0.81,
-          "soldDate": "2023-04-01",
-          "soldPrice": 500000.0,
-          "landSf": 23578,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 923742,
-          "similarity": 43
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 507347,
-        "rangeLow": 184536,
-        "rangeHigh": 941301,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $507,347 (range $184,536-$941,301).",
-        "unreliable": true
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": null,
-      "isNew": true,
-      "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-10",
-      "peakScore": 73
-    },
-    {
-      "apn": "20824011",
-      "address": "14017 N MOON LN   PHOENIX  85023",
-      "ownerName": "FRANK AND MARGERY SIMCHAK LIVING TRUST",
-      "ownerMailAddress": "14017 N MOON LN PHOENIX AZ USA 85023",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": true,
-        "isHiddenOwner": false,
-        "isEstateOwner": false,
-        "yearsHeld": 0.7
-      },
-      "landSf": 75778,
-      "landAcres": 1.74,
-      "puc": "0151",
-      "landUseClass": "residential",
-      "lat": 33.61363882839759,
-      "lng": -112.08816255963265,
-      "assessedValue": 690012.0,
-      "assessedValuePerAcre": 396559.0,
-      "currentZoning": "RE-35",
-      "generalPlanDesignation": "GP code 24",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-10",
-        "targetDensity": 4,
-        "basis": "adjacent parcels already zoned R1-10"
-      },
-      "byRightUnits": 1.7,
-      "rezoneTargetUnits": 7.0,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 3765.0,
-      "farRatio": 0.04968460503048378,
-      "yearBuilt": "1961",
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "MOON MOUNTAIN ESTATES",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": 18000,
-      "score": 73,
-      "reasons": [
-        "adjacent parcels already zoned R1-10",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "existing structure occupies only 5% of the lot \u2014 under-improved for the land size",
-        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
-        "built 1961, no sale in 15+ years \u2014 likely dated/deferred maintenance"
-      ],
-      "comps": [
-        {
-          "apn": "20816490C",
-          "address": "1535 W MANDALAY LN   PHOENIX  85023",
-          "distanceMi": 0.46,
-          "soldDate": "2025-01-01",
-          "soldPrice": 250000.0,
-          "landSf": 57918,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 188024,
-          "similarity": 60
-        },
-        {
-          "apn": "20816224",
-          "address": "14823 N 15TH DR   PHOENIX  85023",
-          "distanceMi": 0.62,
-          "soldDate": "2025-06-01",
-          "soldPrice": 750000.0,
-          "landSf": 32834,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 995005,
-          "similarity": 54
-        },
-        {
-          "apn": "20816425",
-          "address": "1515 W ST MORITZ LN   PHOENIX  85023",
-          "distanceMi": 0.53,
-          "soldDate": "2025-07-01",
-          "soldPrice": 350000.0,
-          "landSf": 27261,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 559260,
-          "similarity": 53
-        },
-        {
-          "apn": "20816481",
-          "address": "14210 N MOON MOUNTAIN TRL   PHOENIX  85023",
-          "distanceMi": 0.3,
-          "soldDate": "2022-03-01",
-          "soldPrice": 505000.0,
-          "landSf": 71007,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 309798,
-          "similarity": 50
-        },
-        {
-          "apn": "20813179",
-          "address": "1533 W BECK LN   PHOENIX  85023",
-          "distanceMi": 0.97,
-          "soldDate": "2025-12-01",
-          "soldPrice": 115000.0,
-          "landSf": 5930,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 844755,
-          "similarity": 46
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 538931,
-        "rangeLow": 327092,
-        "rangeHigh": 1730934,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $538,931 (range $327,092-$1,730,934).",
-        "unreliable": true
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": null,
-      "isNew": true,
-      "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-10",
-      "peakScore": 73
-    },
-    {
-      "apn": "20814018B",
-      "address": "2036 W GREENWAY RD   PHOENIX  85023",
-      "ownerName": "TERRAJO L L C",
-      "ownerMailAddress": "2036 W GREENWAY RD PHOENIX AZ USA 85023",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": true,
-        "isHiddenOwner": false,
-        "isEstateOwner": false,
-        "yearsHeld": 3.9
-      },
-      "landSf": 45947,
-      "landAcres": 1.055,
-      "puc": "0141",
-      "landUseClass": "residential",
-      "lat": 33.62601431599682,
-      "lng": -112.10337037984783,
-      "assessedValue": 580800.0,
-      "assessedValuePerAcre": 550521.0,
-      "currentZoning": "PUD",
-      "generalPlanDesignation": "GP code 60",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-2",
-        "targetDensity": 12,
-        "basis": "adjacent parcels already zoned R-2"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 12.7,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 2609.0,
-      "farRatio": 0.056782814982479814,
-      "yearBuilt": "1973",
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "SIERRA PRIETA ESTATES",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": 18000,
-      "score": 73,
-      "reasons": [
-        "adjacent parcels already zoned R-2",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "existing structure occupies only 6% of the lot \u2014 under-improved for the land size",
-        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
-        "built 1973, no sale in 15+ years \u2014 likely dated/deferred maintenance"
-      ],
-      "comps": [
-        {
-          "apn": "20816224",
-          "address": "14823 N 15TH DR   PHOENIX  85023",
-          "distanceMi": 0.65,
-          "soldDate": "2025-06-01",
-          "soldPrice": 750000.0,
-          "landSf": 32834,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 995005,
-          "similarity": 59
-        },
-        {
-          "apn": "20816490C",
-          "address": "1535 W MANDALAY LN   PHOENIX  85023",
-          "distanceMi": 0.76,
-          "soldDate": "2025-01-01",
-          "soldPrice": 250000.0,
-          "landSf": 57918,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 188024,
-          "similarity": 58
-        },
-        {
-          "apn": "20816425",
-          "address": "1515 W ST MORITZ LN   PHOENIX  85023",
-          "distanceMi": 0.71,
-          "soldDate": "2025-07-01",
-          "soldPrice": 350000.0,
-          "landSf": 27261,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 559260,
-          "similarity": 57
-        },
-        {
-          "apn": "20816430",
-          "address": "1540 W ST MORITZ LN   PHOENIX  85023",
-          "distanceMi": 0.61,
-          "soldDate": "2023-08-01",
-          "soldPrice": 198000.0,
-          "landSf": 37830,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 227990,
-          "similarity": 52
-        },
-        {
-          "apn": "20813179",
-          "address": "1533 W BECK LN   PHOENIX  85023",
-          "distanceMi": 0.62,
-          "soldDate": "2025-12-01",
-          "soldPrice": 115000.0,
-          "landSf": 5930,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 844755,
-          "similarity": 50
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 589907,
-        "rangeLow": 198328,
-        "rangeHigh": 1049529,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $589,907 (range $198,328-$1,049,529).",
-        "unreliable": true
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-10",
       "peakScore": 73
@@ -27278,7 +27392,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 11 years",
-        "comps value ~+139% vs assessed, rank 114/459 (+20 pts)"
+        "comps value ~+139% vs assessed, rank 113/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -27415,9 +27529,21 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 9 years",
         "comps margin 375% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+375% vs assessed, rank 25/459 (+20 pts)"
+        "comps value ~+375% vs assessed, rank 20/458 (+20 pts)"
       ],
       "comps": [
+        {
+          "apn": "15903183",
+          "address": "1636 W SHARON AVE   PHOENIX  85029",
+          "distanceMi": 0.53,
+          "soldDate": "2026-08-01",
+          "soldPrice": 370000.0,
+          "landSf": 12225,
+          "livingSpaceSf": 1641.0,
+          "pricePerSf": 225,
+          "pricePerAcre": 1318380,
+          "similarity": 57
+        },
         {
           "apn": "15903124",
           "address": "13418 N 17TH AVE   PHOENIX  85029",
@@ -27465,25 +27591,13 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 220,
           "pricePerAcre": 1247031,
           "similarity": 56
-        },
-        {
-          "apn": "14959047A",
-          "address": "1920 W WILLOW AVE   PHOENIX  85029",
-          "distanceMi": 0.87,
-          "soldDate": "2026-09-01",
-          "soldPrice": 452000.0,
-          "landSf": 13459,
-          "livingSpaceSf": 2133.0,
-          "pricePerSf": 212,
-          "pricePerAcre": 1462896,
-          "similarity": 55
         }
       ],
       "valuation": {
         "mostLikelyValue": 1865398,
-        "rangeLow": 1453023,
+        "rangeLow": 1865398,
         "rangeHigh": 1865398,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,865,398 (range $1,453,023-$1,865,398)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,865,398 (range $1,865,398-$1,865,398)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": 375,
@@ -27547,67 +27661,78 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 11 years",
-        "comps margin 420% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+420% vs assessed, rank 17/459 (+20 pts)"
+        "comps value ~+220% vs assessed, rank 76/458 (+20 pts)"
       ],
       "comps": [
         {
-          "apn": "21408026A",
-          "address": "2230 E BELL RD   PHOENIX  85022",
-          "distanceMi": 0.22,
-          "soldDate": "2026-02-01",
-          "soldPrice": 2800000.0,
-          "landSf": 43212,
+          "apn": "16503001D",
+          "address": "10440 N 32ND ST   PHOENIX  85028",
+          "distanceMi": 4.13,
+          "soldDate": "2026-04-01",
+          "soldPrice": 1249000.0,
+          "landSf": 34248,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 2822549,
-          "similarity": 63
+          "pricePerAcre": 1588602,
+          "similarity": 40
         },
         {
-          "apn": "21403006D",
-          "address": "2810 E BELL RD   PHOENIX  85032",
-          "distanceMi": 0.49,
-          "soldDate": "2026-07-01",
-          "soldPrice": 1275000.0,
-          "landSf": 16492,
+          "apn": "16502006J",
+          "address": "10211 N 32ND ST   PHOENIX  85028",
+          "distanceMi": 4.28,
+          "soldDate": "2025-04-01",
+          "soldPrice": 1965000.0,
+          "landSf": 41251,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 3367633,
-          "similarity": 53
+          "pricePerAcre": 2074990,
+          "similarity": 36
         },
         {
-          "apn": "21405025B",
-          "address": "2404 E BELL RD   PHOENIX  85032",
-          "distanceMi": 0.08,
-          "soldDate": "2025-12-01",
-          "soldPrice": 1700000.0,
-          "landSf": 14723,
+          "apn": "14958060B",
+          "address": "1901 W THUNDERBIRD RD   PHOENIX  85023",
+          "distanceMi": 4.5,
+          "soldDate": "2023-09-01",
+          "soldPrice": 2200000.0,
+          "landSf": 39821,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 5029681,
-          "similarity": 52
+          "pricePerAcre": 2406569,
+          "similarity": 29
         },
         {
-          "apn": "21405002A",
-          "address": "17037 N CAVE CREEK RD   PHOENIX  85032",
-          "distanceMi": 0.15,
-          "soldDate": "2025-02-01",
-          "soldPrice": 550000.0,
-          "landSf": 6042,
+          "apn": "16503001E",
+          "address": "3131 E SHEA BLVD   PHOENIX  85028",
+          "distanceMi": 4.11,
+          "soldDate": "2023-05-01",
+          "soldPrice": 3300000.0,
+          "landSf": 27922,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 3965243,
-          "similarity": 43
+          "pricePerAcre": 5148199,
+          "similarity": 22
+        },
+        {
+          "apn": "14958067",
+          "address": "1909 W THUNDERBIRD RD   PHOENIX  85023",
+          "distanceMi": 4.52,
+          "soldDate": "2023-08-01",
+          "soldPrice": 1066000.0,
+          "landSf": 18750,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 2476531,
+          "similarity": 18
         }
       ],
       "valuation": {
-        "mostLikelyValue": 3051589,
-        "rangeLow": 2557660,
-        "rangeHigh": 4557658,
-        "explanation": "Based on 4 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $3,051,589 (range $2,557,660-$4,557,658)."
+        "mostLikelyValue": 1880257,
+        "rangeLow": 1439516,
+        "rangeHigh": 4665053,
+        "explanation": "Based on 5 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,880,257 (range $1,439,516-$4,665,053)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 420,
+      "equityMarginPct": 220,
       "compsAdj": 20,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
@@ -27672,67 +27797,66 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 11 years",
-        "comps margin 400% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+400% vs assessed, rank 20/459 (+20 pts)"
+        "comps value ~+208% vs assessed, rank 84/458 (+20 pts)"
       ],
       "comps": [
         {
-          "apn": "21408026A",
-          "address": "2230 E BELL RD   PHOENIX  85022",
-          "distanceMi": 0.23,
-          "soldDate": "2026-02-01",
-          "soldPrice": 2800000.0,
-          "landSf": 43212,
+          "apn": "16503001D",
+          "address": "10440 N 32ND ST   PHOENIX  85028",
+          "distanceMi": 4.1,
+          "soldDate": "2026-04-01",
+          "soldPrice": 1249000.0,
+          "landSf": 34248,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 2822549,
-          "similarity": 58
+          "pricePerAcre": 1588602,
+          "similarity": 39
         },
         {
-          "apn": "21403006D",
-          "address": "2810 E BELL RD   PHOENIX  85032",
-          "distanceMi": 0.49,
-          "soldDate": "2026-07-01",
-          "soldPrice": 1275000.0,
-          "landSf": 16492,
+          "apn": "16502006J",
+          "address": "10211 N 32ND ST   PHOENIX  85028",
+          "distanceMi": 4.26,
+          "soldDate": "2025-04-01",
+          "soldPrice": 1965000.0,
+          "landSf": 41251,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 3367633,
-          "similarity": 56
+          "pricePerAcre": 2074990,
+          "similarity": 31
         },
         {
-          "apn": "21405025B",
-          "address": "2404 E BELL RD   PHOENIX  85032",
-          "distanceMi": 0.1,
-          "soldDate": "2025-12-01",
-          "soldPrice": 1700000.0,
-          "landSf": 14723,
+          "apn": "14958060B",
+          "address": "1901 W THUNDERBIRD RD   PHOENIX  85023",
+          "distanceMi": 4.49,
+          "soldDate": "2023-09-01",
+          "soldPrice": 2200000.0,
+          "landSf": 39821,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 5029681,
-          "similarity": 55
+          "pricePerAcre": 2406569,
+          "similarity": 24
         },
         {
-          "apn": "21405002A",
-          "address": "17037 N CAVE CREEK RD   PHOENIX  85032",
-          "distanceMi": 0.18,
-          "soldDate": "2025-02-01",
-          "soldPrice": 550000.0,
-          "landSf": 6042,
+          "apn": "14958067",
+          "address": "1909 W THUNDERBIRD RD   PHOENIX  85023",
+          "distanceMi": 4.51,
+          "soldDate": "2023-08-01",
+          "soldPrice": 1066000.0,
+          "landSf": 18750,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 3965243,
-          "similarity": 44
+          "pricePerAcre": 2476531,
+          "similarity": 22
         }
       ],
       "valuation": {
-        "mostLikelyValue": 2178138,
-        "rangeLow": 1825585,
-        "rangeHigh": 3253128,
-        "explanation": "Based on 4 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,178,138 (range $1,825,585-$3,253,128)."
+        "mostLikelyValue": 1342074,
+        "rangeLow": 1027486,
+        "rangeHigh": 1601786,
+        "explanation": "Based on 4 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,342,074 (range $1,027,486-$1,601,786)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 400,
+      "equityMarginPct": 208,
       "compsAdj": 20,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
@@ -27797,7 +27921,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+98% vs assessed, rank 138/459 (+10 pts)"
+        "comps value ~+98% vs assessed, rank 138/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -27929,7 +28053,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+32% vs assessed, rank 219/459 (+10 pts)"
+        "comps value ~+32% vs assessed, rank 218/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -28020,7 +28144,7 @@ window.PHX_LAND_LEADS = {
         "isOwnerOccupied": false,
         "isHiddenOwner": false,
         "isEstateOwner": false,
-        "yearsHeld": 5.4
+        "yearsHeld": 5.5
       },
       "landSf": 102897,
       "landAcres": 2.362,
@@ -28061,7 +28185,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address is out of state (absentee)",
         "comps margin 388% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+388% vs assessed, rank 22/459 (+20 pts)"
+        "comps value ~+388% vs assessed, rank 18/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -28140,138 +28264,6 @@ window.PHX_LAND_LEADS = {
       "peakScore": 76
     },
     {
-      "apn": "20604021E",
-      "address": "22434 N 30TH AVE   PHOENIX  85027",
-      "ownerName": "VL FAMILY LP",
-      "ownerMailAddress": "1631 E SHARON DR PHOENIX AZ USA 85022",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 23.7
-      },
-      "landSf": 40895,
-      "landAcres": 0.939,
-      "puc": "0011",
-      "landUseClass": "residential",
-      "lat": 33.69058966198765,
-      "lng": -112.1242584177837,
-      "assessedValue": 302200.0,
-      "assessedValuePerAcre": 321832.0,
-      "currentZoning": "R-4A",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-2",
-        "targetDensity": 12,
-        "basis": "adjacent parcels already zoned R-2"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 11.3,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": "12/01/2002",
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": 85000.0,
-      "defaultDemoCost": null,
-      "score": 70,
-      "reasons": [
-        "adjacent parcels already zoned R-2",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 24+ years \u2014 likely low or no debt on the land",
-        "comps margin 346% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+346% vs assessed, rank 34/459 (+20 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "20111046",
-          "address": "4933 W FALLEN LEAF LN   GLENDALE  85310",
-          "distanceMi": 2.82,
-          "soldDate": "2026-04-01",
-          "soldPrice": 1150000.0,
-          "landSf": 44165,
-          "livingSpaceSf": 3396.0,
-          "pricePerSf": 339,
-          "pricePerAcre": 1134247,
-          "similarity": 49
-        },
-        {
-          "apn": "23113709",
-          "address": "5120 W POTTER DR   GLENDALE  85308",
-          "distanceMi": 2.86,
-          "soldDate": "2026-05-01",
-          "soldPrice": 1610000.0,
-          "landSf": 48890,
-          "livingSpaceSf": 6169.0,
-          "pricePerSf": 261,
-          "pricePerAcre": 1434477,
-          "similarity": 48
-        },
-        {
-          "apn": "20111190",
-          "address": "5213 W PARK VIEW LN   GLENDALE  85310",
-          "distanceMi": 2.99,
-          "soldDate": "2026-06-01",
-          "soldPrice": 2300000.0,
-          "landSf": 35167,
-          "livingSpaceSf": 4342.0,
-          "pricePerSf": 530,
-          "pricePerAcre": 2848921,
-          "similarity": 48
-        },
-        {
-          "apn": "20111018",
-          "address": "4922 W FALLEN LEAF LN   GLENDALE  85310",
-          "distanceMi": 2.83,
-          "soldDate": "2025-07-01",
-          "soldPrice": 950000.0,
-          "landSf": 43763,
-          "livingSpaceSf": 3912.0,
-          "pricePerSf": 243,
-          "pricePerAcre": 945593,
-          "similarity": 46
-        },
-        {
-          "apn": "20111101",
-          "address": "5135 W MISTY WILLOW LN   GLENDALE  85310",
-          "distanceMi": 2.87,
-          "soldDate": "2025-12-01",
-          "soldPrice": 850000.0,
-          "landSf": 34251,
-          "livingSpaceSf": 3008.0,
-          "pricePerSf": 283,
-          "pricePerAcre": 1081020,
-          "similarity": 46
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1346716,
-        "rangeLow": 1014883,
-        "rangeHigh": 2674624,
-        "explanation": "Based on 5 comparable sales within 3 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,346,716 (range $1,014,883-$2,674,624)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 346,
-      "compsAdj": 20,
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-10",
-      "peakScore": 75
-    },
-    {
       "apn": "20604018K",
       "address": "3005 W FOOTHILL DR   PHOENIX  85027",
       "ownerName": "3005 AND ONE HALF WEST FOOTHILL DRIVE LLC",
@@ -28324,7 +28316,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 17+ years \u2014 likely low or no debt on the land",
         "comps margin 330% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+330% vs assessed, rank 39/459 (+20 pts)"
+        "comps value ~+330% vs assessed, rank 34/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -28408,6 +28400,138 @@ window.PHX_LAND_LEADS = {
       "peakScore": 75
     },
     {
+      "apn": "20604021E",
+      "address": "22434 N 30TH AVE   PHOENIX  85027",
+      "ownerName": "VL FAMILY LP",
+      "ownerMailAddress": "1631 E SHARON DR PHOENIX AZ USA 85022",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 23.7
+      },
+      "landSf": 40895,
+      "landAcres": 0.939,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.69058966198765,
+      "lng": -112.1242584177837,
+      "assessedValue": 302200.0,
+      "assessedValuePerAcre": 321832.0,
+      "currentZoning": "R-4A",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-2",
+        "targetDensity": 12,
+        "basis": "adjacent parcels already zoned R-2"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 11.3,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": "12/01/2002",
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": 85000.0,
+      "defaultDemoCost": null,
+      "score": 70,
+      "reasons": [
+        "adjacent parcels already zoned R-2",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 24+ years \u2014 likely low or no debt on the land",
+        "comps margin 346% looks extreme \u2014 verify assessed value/comps before trusting",
+        "comps value ~+346% vs assessed, rank 31/458 (+20 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "20111046",
+          "address": "4933 W FALLEN LEAF LN   GLENDALE  85310",
+          "distanceMi": 2.82,
+          "soldDate": "2026-04-01",
+          "soldPrice": 1150000.0,
+          "landSf": 44165,
+          "livingSpaceSf": 3396.0,
+          "pricePerSf": 339,
+          "pricePerAcre": 1134247,
+          "similarity": 49
+        },
+        {
+          "apn": "23113709",
+          "address": "5120 W POTTER DR   GLENDALE  85308",
+          "distanceMi": 2.86,
+          "soldDate": "2026-05-01",
+          "soldPrice": 1610000.0,
+          "landSf": 48890,
+          "livingSpaceSf": 6169.0,
+          "pricePerSf": 261,
+          "pricePerAcre": 1434477,
+          "similarity": 48
+        },
+        {
+          "apn": "20111190",
+          "address": "5213 W PARK VIEW LN   GLENDALE  85310",
+          "distanceMi": 2.99,
+          "soldDate": "2026-06-01",
+          "soldPrice": 2300000.0,
+          "landSf": 35167,
+          "livingSpaceSf": 4342.0,
+          "pricePerSf": 530,
+          "pricePerAcre": 2848921,
+          "similarity": 48
+        },
+        {
+          "apn": "20111018",
+          "address": "4922 W FALLEN LEAF LN   GLENDALE  85310",
+          "distanceMi": 2.83,
+          "soldDate": "2025-07-01",
+          "soldPrice": 950000.0,
+          "landSf": 43763,
+          "livingSpaceSf": 3912.0,
+          "pricePerSf": 243,
+          "pricePerAcre": 945593,
+          "similarity": 46
+        },
+        {
+          "apn": "20111101",
+          "address": "5135 W MISTY WILLOW LN   GLENDALE  85310",
+          "distanceMi": 2.87,
+          "soldDate": "2025-12-01",
+          "soldPrice": 850000.0,
+          "landSf": 34251,
+          "livingSpaceSf": 3008.0,
+          "pricePerSf": 283,
+          "pricePerAcre": 1081020,
+          "similarity": 46
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1346716,
+        "rangeLow": 1014883,
+        "rangeHigh": 2674624,
+        "explanation": "Based on 5 comparable sales within 3 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,346,716 (range $1,014,883-$2,674,624)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 346,
+      "compsAdj": 20,
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-01",
+      "lastSeen": "2026-10-10",
+      "peakScore": 75
+    },
+    {
       "apn": "20907045B",
       "address": "13133 N 22ND AVE   PHOENIX  85027",
       "ownerName": "CAZADOR LLC",
@@ -28459,7 +28583,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 16+ years \u2014 likely low or no debt on the land",
-        "comps value ~+218% vs assessed, rank 83/459 (+20 pts)"
+        "comps value ~+218% vs assessed, rank 79/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -28570,7 +28694,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 32+ years \u2014 likely low or no debt on the land",
-        "comps value ~+182% vs assessed, rank 99/459 (+20 pts)"
+        "comps value ~+182% vs assessed, rank 99/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -28706,7 +28830,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held 12 years",
         "comps margin 390% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+390% vs assessed, rank 21/459 (+20 pts)"
+        "comps value ~+390% vs assessed, rank 17/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -28836,7 +28960,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held 24+ years \u2014 likely low or no debt on the land",
-        "comps value ~+219% vs assessed, rank 82/459 (+20 pts)"
+        "comps value ~+219% vs assessed, rank 78/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -28850,6 +28974,18 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 251,
           "pricePerAcre": 1878074,
           "similarity": 63
+        },
+        {
+          "apn": "15903183",
+          "address": "1636 W SHARON AVE   PHOENIX  85029",
+          "distanceMi": 0.53,
+          "soldDate": "2026-08-01",
+          "soldPrice": 370000.0,
+          "landSf": 12225,
+          "livingSpaceSf": 1641.0,
+          "pricePerSf": 225,
+          "pricePerAcre": 1318380,
+          "similarity": 61
         },
         {
           "apn": "15903104",
@@ -28886,25 +29022,13 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 300,
           "pricePerAcre": 1984175,
           "similarity": 60
-        },
-        {
-          "apn": "15903239",
-          "address": "13264 N 15TH DR   PHOENIX  85029",
-          "distanceMi": 0.55,
-          "soldDate": "2024-04-01",
-          "soldPrice": 530000.0,
-          "landSf": 25568,
-          "livingSpaceSf": 2428.0,
-          "pricePerSf": 218,
-          "pricePerAcre": 902957,
-          "similarity": 59
         }
       ],
       "valuation": {
         "mostLikelyValue": 840863,
-        "rangeLow": 519014,
+        "rangeLow": 716785,
         "rangeHigh": 1140491,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $840,863 (range $519,014-$1,140,491)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $840,863 (range $716,785-$1,140,491)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": 219,
@@ -28966,7 +29090,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+161% vs assessed, rank 105/459 (+20 pts)"
+        "comps value ~+161% vs assessed, rank 104/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -29106,7 +29230,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "comps margin 349% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+349% vs assessed, rank 33/459 (+20 pts)"
+        "comps value ~+349% vs assessed, rank 30/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -29241,7 +29365,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+183% vs assessed, rank 98/459 (+20 pts)"
+        "comps value ~+183% vs assessed, rank 98/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -29281,23 +29405,35 @@ window.PHX_LAND_LEADS = {
           "similarity": 45
         },
         {
-          "apn": "21303003M",
-          "address": "21831 N 16TH ST   PHOENIX  85024",
-          "distanceMi": 0.87,
-          "soldDate": "2023-12-01",
-          "soldPrice": 1400000.0,
-          "landSf": 102758,
+          "apn": "21311205",
+          "address": "20634 N 28TH ST  180 PHOENIX  85050",
+          "distanceMi": 0.7,
+          "soldDate": "2026-03-01",
+          "soldPrice": 1820000.0,
+          "landSf": 2902,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 593472,
-          "similarity": 38
+          "pricePerAcre": 27318815,
+          "similarity": 42
+        },
+        {
+          "apn": "21311206",
+          "address": "20634 N 28TH ST  185 PHOENIX  85050",
+          "distanceMi": 0.69,
+          "soldDate": "2026-03-01",
+          "soldPrice": 1820000.0,
+          "landSf": 2527,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 31372853,
+          "similarity": 42
         }
       ],
       "valuation": {
         "mostLikelyValue": 1725878,
-        "rangeLow": 629086,
+        "rangeLow": 1725878,
         "rangeHigh": 1725878,
-        "explanation": "Based on 4 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,725,878 (range $629,086-$1,725,878)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,725,878 (range $1,725,878-$1,725,878)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": 183,
@@ -29364,7 +29500,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+226% vs assessed, rank 77/459 (+20 pts)"
+        "comps value ~+226% vs assessed, rank 72/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -29495,7 +29631,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+258% vs assessed, rank 58/459 (+20 pts)"
+        "comps value ~+258% vs assessed, rank 53/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -29626,7 +29762,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+298% vs assessed, rank 49/459 (+20 pts)"
+        "comps value ~+298% vs assessed, rank 44/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -29757,7 +29893,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+167% vs assessed, rank 103/459 (+20 pts)"
+        "comps value ~+167% vs assessed, rank 102/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -29880,7 +30016,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+280% vs assessed, rank 54/459 (+20 pts)"
+        "comps value ~+280% vs assessed, rank 48/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -30016,7 +30152,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "comps margin 351% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+351% vs assessed, rank 31/459 (+20 pts)"
+        "comps value ~+351% vs assessed, rank 28/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -30151,7 +30287,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+234% vs assessed, rank 74/459 (+20 pts)"
+        "comps value ~+189% vs assessed, rank 96/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -30165,18 +30301,6 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 339,
           "pricePerAcre": 2621225,
           "similarity": 67
-        },
-        {
-          "apn": "21404006N",
-          "address": "17419 N 27TH ST   PHOENIX  85032",
-          "distanceMi": 0.6,
-          "soldDate": "2025-05-01",
-          "soldPrice": 555000.0,
-          "landSf": 11892,
-          "livingSpaceSf": 2087.0,
-          "pricePerSf": 266,
-          "pricePerAcre": 2032947,
-          "similarity": 64
         },
         {
           "apn": "21403028C",
@@ -30213,23 +30337,35 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": null,
           "pricePerAcre": 2128677,
           "similarity": 60
+        },
+        {
+          "apn": "21403086B",
+          "address": "2823 E ANGELA DR   PHOENIX  85032",
+          "distanceMi": 0.76,
+          "soldDate": "2023-03-01",
+          "soldPrice": 599900.0,
+          "landSf": 12276,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 2128677,
+          "similarity": 60
         }
       ],
       "valuation": {
-        "mostLikelyValue": 577028,
+        "mostLikelyValue": 500444,
         "rangeLow": 290323,
         "rangeHigh": 744004,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $577,028 (range $290,323-$744,004)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $500,444 (range $290,323-$744,004)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 234,
+      "equityMarginPct": 189,
       "compsAdj": 20,
       "registeredAgent": {
         "source": "OpenCorporates (AZ filing mirror)",
         "agentLine": "34522 N Scottsdale Rd, Ste 120-408, SCOTTSDALE, AZ, 85266",
         "companyUrl": "https://opencorporates.com/companies/us_az/L17140060"
       },
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-10",
       "peakScore": 66
@@ -30287,7 +30423,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "comps margin 909% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+909% vs assessed, rank 6/459 (+20 pts)"
+        "comps value ~+909% vs assessed, rank 6/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -30564,7 +30700,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 12 years",
-        "comps value ~+194% vs assessed, rank 94/459 (+20 pts)"
+        "comps value ~+194% vs assessed, rank 92/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -30684,7 +30820,7 @@ window.PHX_LAND_LEADS = {
       "farRatio": null,
       "yearBuilt": null,
       "codeCases": {
-        "count": 4,
+        "count": 3,
         "severe": false,
         "distress": false
       },
@@ -30698,8 +30834,8 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-5",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "4 code-enforcement cases at this address (2024+)",
-        "comps value ~+166% vs assessed, rank 104/459 (+20 pts)"
+        "3 code-enforcement cases at this address (2024+)",
+        "comps value ~+166% vs assessed, rank 103/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -30795,7 +30931,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address differs from the property city",
         "comps margin 332% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+332% vs assessed, rank 38/459 (+20 pts)"
+        "comps value ~+332% vs assessed, rank 33/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -30925,7 +31061,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 8 years",
-        "comps value ~+221% vs assessed, rank 80/459 (+20 pts)"
+        "comps value ~+221% vs assessed, rank 75/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -30999,7 +31135,7 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 221,
       "compsAdj": 20,
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-10",
       "peakScore": 64
@@ -31056,7 +31192,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 12 years",
-        "comps value ~+168% vs assessed, rank 101/459 (+20 pts)"
+        "comps value ~+168% vs assessed, rank 100/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -31070,6 +31206,18 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": null,
           "pricePerAcre": 1506976,
           "similarity": 55
+        },
+        {
+          "apn": "20801046",
+          "address": "17817 N 6TH ST   PHOENIX  85022",
+          "distanceMi": 0.81,
+          "soldDate": "2026-09-01",
+          "soldPrice": 340000.0,
+          "landSf": 6591,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 2247064,
+          "similarity": 54
         },
         {
           "apn": "20912355",
@@ -31105,18 +31253,6 @@ window.PHX_LAND_LEADS = {
           "livingSpaceSf": null,
           "pricePerSf": null,
           "pricePerAcre": 1518783,
-          "similarity": 54
-        },
-        {
-          "apn": "21321032",
-          "address": "1967 E ROCKWOOD DR   PHOENIX  85024",
-          "distanceMi": 0.8,
-          "soldDate": "2026-08-01",
-          "soldPrice": 9795910.0,
-          "landSf": 6115,
-          "livingSpaceSf": 1861.0,
-          "pricePerSf": 5264,
-          "pricePerAcre": 69780840,
           "similarity": 54
         }
       ],
@@ -31188,7 +31324,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 12 years",
         "comps margin 423% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+423% vs assessed, rank 16/459 (+20 pts)"
+        "comps value ~+423% vs assessed, rank 14/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -31311,7 +31447,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 14 years",
-        "comps value ~+241% vs assessed, rank 69/459 (+20 pts)"
+        "comps value ~+241% vs assessed, rank 66/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -31446,7 +31582,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 11 years",
-        "comps value ~+269% vs assessed, rank 55/459 (+20 pts)"
+        "comps value ~+269% vs assessed, rank 50/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -31526,6 +31662,282 @@ window.PHX_LAND_LEADS = {
       "peakScore": 69
     },
     {
+      "apn": "20813003M",
+      "address": "1520 W GREENWAY PKWY   PHOENIX  85023",
+      "ownerName": "GARY J BLYTHE CONSULTING INC",
+      "ownerMailAddress": "13237 N 13TH PL PHOENIX AZ USA 85022",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 6.9
+      },
+      "landSf": 23926,
+      "landAcres": 0.549,
+      "puc": "0012",
+      "landUseClass": "residential",
+      "lat": 33.62664365072231,
+      "lng": -112.09208783876907,
+      "assessedValue": 224300.0,
+      "assessedValuePerAcre": 408561.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 40",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": 2.7,
+      "rezoneTargetUnits": 3.3,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": {
+        "count": 2,
+        "severe": false,
+        "distress": false
+      },
+      "saleDate": "11/01/2019",
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": 70000.0,
+      "defaultDemoCost": null,
+      "score": 64,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "2 code-enforcement cases at this address (2024+)",
+        "comps margin 383% looks extreme \u2014 verify assessed value/comps before trusting",
+        "comps value ~+383% vs assessed, rank 19/458 (+20 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "20813179",
+          "address": "1533 W BECK LN   PHOENIX  85023",
+          "distanceMi": 0.05,
+          "soldDate": "2025-12-01",
+          "soldPrice": 115000.0,
+          "landSf": 5930,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 844755,
+          "similarity": 65
+        },
+        {
+          "apn": "20813412",
+          "address": "1331 W BECK LN   PHOENIX  85023",
+          "distanceMi": 0.14,
+          "soldDate": "2026-06-01",
+          "soldPrice": 590000.0,
+          "landSf": 9229,
+          "livingSpaceSf": 3046.0,
+          "pricePerSf": 194,
+          "pricePerAcre": 2784744,
+          "similarity": 62
+        },
+        {
+          "apn": "20814018A",
+          "address": "2016 W GREENWAY RD   PHOENIX  85023",
+          "distanceMi": 0.62,
+          "soldDate": "2026-08-01",
+          "soldPrice": 850000.0,
+          "landSf": 46342,
+          "livingSpaceSf": 2491.0,
+          "pricePerSf": 341,
+          "pricePerAcre": 798973,
+          "similarity": 61
+        },
+        {
+          "apn": "20813299",
+          "address": "1120 W MARCONI AVE   PHOENIX  85023",
+          "distanceMi": 0.4,
+          "soldDate": "2025-11-01",
+          "soldPrice": 645000.0,
+          "landSf": 14248,
+          "livingSpaceSf": 2421.0,
+          "pricePerSf": 266,
+          "pricePerAcre": 1971940,
+          "similarity": 61
+        },
+        {
+          "apn": "20814017B",
+          "address": "2035 W WALTANN LN   PHOENIX  85023",
+          "distanceMi": 0.65,
+          "soldDate": "2026-05-01",
+          "soldPrice": 785000.0,
+          "landSf": 46504,
+          "livingSpaceSf": 2138.0,
+          "pricePerSf": 367,
+          "pricePerAcre": 735304,
+          "similarity": 60
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1083118,
+        "rangeLow": 403877,
+        "rangeHigh": 1529563,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,083,118 (range $403,877-$1,529,563)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 383,
+      "compsAdj": 20,
+      "registeredAgent": {
+        "source": "OpenCorporates (AZ filing mirror)",
+        "agentLine": "13237 N 13TH PL, PHOENIX, AZ, 85022",
+        "companyUrl": "https://opencorporates.com/companies/us_az/07663141"
+      },
+      "isNew": false,
+      "firstSeen": "2026-10-06",
+      "lastSeen": "2026-10-10",
+      "peakScore": 64
+    },
+    {
+      "apn": "20813003L",
+      "address": "1520 W GREENWAY PKWY   PHOENIX  85023",
+      "ownerName": "GARY J BLYTHE CONSULTING INC",
+      "ownerMailAddress": "13237 N 13TH PL PHOENIX AZ USA 85022",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 6.9
+      },
+      "landSf": 15080,
+      "landAcres": 0.346,
+      "puc": "0012",
+      "landUseClass": "residential",
+      "lat": 33.626822727225104,
+      "lng": -112.09157379592227,
+      "assessedValue": 167300.0,
+      "assessedValuePerAcre": 483526.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 40",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": 1.7,
+      "rezoneTargetUnits": 2.1,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": {
+        "count": 2,
+        "severe": false,
+        "distress": false
+      },
+      "saleDate": "11/01/2019",
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": 70000.0,
+      "defaultDemoCost": null,
+      "score": 64,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "2 code-enforcement cases at this address (2024+)",
+        "comps margin 308% looks extreme \u2014 verify assessed value/comps before trusting",
+        "comps value ~+308% vs assessed, rank 42/458 (+20 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "20813299",
+          "address": "1120 W MARCONI AVE   PHOENIX  85023",
+          "distanceMi": 0.37,
+          "soldDate": "2025-11-01",
+          "soldPrice": 645000.0,
+          "landSf": 14248,
+          "livingSpaceSf": 2421.0,
+          "pricePerSf": 266,
+          "pricePerAcre": 1971940,
+          "similarity": 68
+        },
+        {
+          "apn": "20813179",
+          "address": "1533 W BECK LN   PHOENIX  85023",
+          "distanceMi": 0.07,
+          "soldDate": "2025-12-01",
+          "soldPrice": 115000.0,
+          "landSf": 5930,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 844755,
+          "similarity": 68
+        },
+        {
+          "apn": "20813412",
+          "address": "1331 W BECK LN   PHOENIX  85023",
+          "distanceMi": 0.11,
+          "soldDate": "2026-06-01",
+          "soldPrice": 590000.0,
+          "landSf": 9229,
+          "livingSpaceSf": 3046.0,
+          "pricePerSf": 194,
+          "pricePerAcre": 2784744,
+          "similarity": 66
+        },
+        {
+          "apn": "20813419",
+          "address": "1330 W BECK LN   PHOENIX  85023",
+          "distanceMi": 0.1,
+          "soldDate": "2025-08-01",
+          "soldPrice": 714700.0,
+          "landSf": 11276,
+          "livingSpaceSf": 3018.0,
+          "pricePerSf": 237,
+          "pricePerAcre": 2760938,
+          "similarity": 65
+        },
+        {
+          "apn": "20813202",
+          "address": "15420 N 16TH DR   PHOENIX  85023",
+          "distanceMi": 0.21,
+          "soldDate": "2024-11-01",
+          "soldPrice": 320000.0,
+          "landSf": 15587,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 894284,
+          "similarity": 65
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 682664,
+        "rangeLow": 292445,
+        "rangeHigh": 964048,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $682,664 (range $292,445-$964,048)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 308,
+      "compsAdj": 20,
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-06",
+      "lastSeen": "2026-10-10",
+      "peakScore": 64
+    },
+    {
       "apn": "21431021E",
       "address": "16223 N 31ST ST   PHOENIX  85032",
       "ownerName": "NUVO LLC",
@@ -31578,7 +31990,7 @@ window.PHX_LAND_LEADS = {
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 14 years",
         "comps margin 317% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+317% vs assessed, rank 42/459 (+20 pts)"
+        "comps value ~+317% vs assessed, rank 37/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -31651,11 +32063,7 @@ window.PHX_LAND_LEADS = {
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": 317,
       "compsAdj": 20,
-      "registeredAgent": {
-        "source": "OpenCorporates (AZ filing mirror)",
-        "agentLine": "3312 E BROADWAY RD, PHOENIX, AZ, 85040",
-        "companyUrl": "https://opencorporates.com/companies/us_az/L08413128"
-      },
+      "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-10",
@@ -31713,10 +32121,34 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address differs from the property city",
-        "comps margin 504% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+504% vs assessed, rank 12/459 (+20 pts)"
+        "comps margin 314% looks extreme \u2014 verify assessed value/comps before trusting",
+        "comps value ~+314% vs assessed, rank 40/458 (+20 pts)"
       ],
       "comps": [
+        {
+          "apn": "20337012X",
+          "address": "",
+          "distanceMi": 0.61,
+          "soldDate": "2025-11-01",
+          "soldPrice": 150000.0,
+          "landSf": 117368,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 55671,
+          "similarity": 71
+        },
+        {
+          "apn": "20337012Y",
+          "address": "",
+          "distanceMi": 0.61,
+          "soldDate": "2025-11-01",
+          "soldPrice": 150000.0,
+          "landSf": 56810,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 115015,
+          "similarity": 63
+        },
         {
           "apn": "20325525",
           "address": "2398 W ESPARTERO WAY   PHOENIX  85086",
@@ -31752,40 +32184,16 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": null,
           "pricePerAcre": 208384,
           "similarity": 63
-        },
-        {
-          "apn": "20323017D",
-          "address": "37020 N 31ST AVE   PHOENIX  85086",
-          "distanceMi": 0.7,
-          "soldDate": "2026-02-01",
-          "soldPrice": 1175000.0,
-          "landSf": 107245,
-          "livingSpaceSf": 3800.0,
-          "pricePerSf": 309,
-          "pricePerAcre": 477253,
-          "similarity": 62
-        },
-        {
-          "apn": "20323016D",
-          "address": "37103 N 33RD AVE   PHOENIX  85086",
-          "distanceMi": 0.8,
-          "soldDate": "2026-01-01",
-          "soldPrice": 760000.0,
-          "landSf": 108900,
-          "livingSpaceSf": 2696.0,
-          "pricePerSf": 282,
-          "pricePerAcre": 304000,
-          "similarity": 62
         }
       ],
       "valuation": {
-        "mostLikelyValue": 1016313,
+        "mostLikelyValue": 696655,
         "rangeLow": 696655,
-        "rangeHigh": 1595522,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,016,313 (range $696,655-$1,595,522)."
+        "rangeHigh": 696655,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $696,655 (range $696,655-$696,655)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 504,
+      "equityMarginPct": 314,
       "compsAdj": 20,
       "isNew": false,
       "firstSeen": "2026-10-01",
@@ -31832,11 +32240,7 @@ window.PHX_LAND_LEADS = {
       "livingSpaceSf": null,
       "farRatio": null,
       "yearBuilt": null,
-      "codeCases": {
-        "count": 1,
-        "severe": false,
-        "distress": false
-      },
+      "codeCases": null,
       "saleDate": "02/01/2024",
       "subdivision": "",
       "rebuildsInSub": 0,
@@ -31848,7 +32252,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+119% vs assessed, rank 124/459 (+10 pts)"
+        "comps value ~+119% vs assessed, rank 124/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -31888,28 +32292,28 @@ window.PHX_LAND_LEADS = {
           "similarity": 15
         },
         {
-          "apn": "14802330",
+          "apn": "14802347",
           "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 3.83,
-          "soldDate": "2022-04-01",
-          "soldPrice": 525000.0,
-          "landSf": 1526,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 14986239,
-          "similarity": 3
-        },
-        {
-          "apn": "14802331",
-          "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 3.84,
-          "soldDate": "2022-04-01",
-          "soldPrice": 525000.0,
+          "distanceMi": 3.85,
+          "soldDate": "2024-08-01",
+          "soldPrice": 2625000.0,
           "landSf": 1555,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 14706752,
-          "similarity": 3
+          "pricePerAcre": 73533762,
+          "similarity": 15
+        },
+        {
+          "apn": "14802348",
+          "address": "11851 N 51ST AVE   GLENDALE  85304",
+          "distanceMi": 3.86,
+          "soldDate": "2024-08-01",
+          "soldPrice": 2625000.0,
+          "landSf": 1555,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 73533762,
+          "similarity": 15
         }
       ],
       "valuation": {
@@ -31979,9 +32383,21 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "comps margin 316% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+316% vs assessed, rank 43/459 (+20 pts)"
+        "comps value ~+316% vs assessed, rank 38/458 (+20 pts)"
       ],
       "comps": [
+        {
+          "apn": "15903183",
+          "address": "1636 W SHARON AVE   PHOENIX  85029",
+          "distanceMi": 0.36,
+          "soldDate": "2026-08-01",
+          "soldPrice": 370000.0,
+          "landSf": 12225,
+          "livingSpaceSf": 1641.0,
+          "pricePerSf": 225,
+          "pricePerAcre": 1318380,
+          "similarity": 60
+        },
         {
           "apn": "14959047A",
           "address": "1920 W WILLOW AVE   PHOENIX  85029",
@@ -32005,18 +32421,6 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 300,
           "pricePerAcre": 1984175,
           "similarity": 59
-        },
-        {
-          "apn": "15903203",
-          "address": "1645 W THUNDERBIRD RD   PHOENIX  85023",
-          "distanceMi": 0.32,
-          "soldDate": "2026-08-01",
-          "soldPrice": 375000.0,
-          "landSf": 8231,
-          "livingSpaceSf": 1280.0,
-          "pricePerSf": 293,
-          "pricePerAcre": 1984571,
-          "similarity": 58
         },
         {
           "apn": "14958091",
@@ -32108,7 +32512,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-3A",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
-        "comps value ~+139% vs assessed, rank 115/459 (+20 pts)"
+        "comps value ~+139% vs assessed, rank 114/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -32237,8 +32641,8 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-8",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
-        "comps margin 362% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+362% vs assessed, rank 28/459 (+20 pts)"
+        "comps margin 359% looks extreme \u2014 verify assessed value/comps before trusting",
+        "comps value ~+359% vs assessed, rank 24/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -32252,6 +32656,18 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": null,
           "pricePerAcre": 844755,
           "similarity": 61
+        },
+        {
+          "apn": "15903183",
+          "address": "1636 W SHARON AVE   PHOENIX  85029",
+          "distanceMi": 0.74,
+          "soldDate": "2026-08-01",
+          "soldPrice": 370000.0,
+          "landSf": 12225,
+          "livingSpaceSf": 1641.0,
+          "pricePerSf": 225,
+          "pricePerAcre": 1318380,
+          "similarity": 58
         },
         {
           "apn": "20813412",
@@ -32288,30 +32704,18 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 293,
           "pricePerAcre": 1984571,
           "similarity": 56
-        },
-        {
-          "apn": "15903672",
-          "address": "13615 N 18TH DR   PHOENIX  85029",
-          "distanceMi": 0.76,
-          "soldDate": "2026-07-01",
-          "soldPrice": 425000.0,
-          "landSf": 9273,
-          "livingSpaceSf": 1554.0,
-          "pricePerSf": 273,
-          "pricePerAcre": 1996441,
-          "similarity": 56
         }
       ],
       "valuation": {
-        "mostLikelyValue": 1346406,
-        "rangeLow": 1338134,
+        "mostLikelyValue": 1338134,
+        "rangeLow": 889120,
         "rangeHigh": 1878040,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,346,406 (range $1,338,134-$1,878,040)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,338,134 (range $889,120-$1,878,040)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 362,
+      "equityMarginPct": 359,
       "compsAdj": 20,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-10",
       "peakScore": 63
@@ -32368,7 +32772,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "comps margin 453% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+453% vs assessed, rank 13/459 (+20 pts)"
+        "comps value ~+453% vs assessed, rank 10/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -32447,142 +32851,6 @@ window.PHX_LAND_LEADS = {
       "peakScore": 68
     },
     {
-      "apn": "20413001R",
-      "address": "31200 N 22ND AVE   PHOENIX  85085",
-      "ownerName": "IRMGARD INVESTMENTS LLC",
-      "ownerMailAddress": "9089 N 82ND ST SCOTTSDALE AZ USA 85258",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 14.3
-      },
-      "landSf": 109074,
-      "landAcres": 2.504,
-      "puc": "0012",
-      "landUseClass": "residential",
-      "lat": 33.767923872855064,
-      "lng": -112.1080107166789,
-      "assessedValue": 2022200.0,
-      "assessedValuePerAcre": 807588.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 30",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3",
-        "targetDensity": 16,
-        "basis": "adjacent parcels already zoned R-3"
-      },
-      "byRightUnits": 12.5,
-      "rezoneTargetUnits": 40.1,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": "05/01/2012",
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": 43750.0,
-      "defaultDemoCost": null,
-      "score": 62,
-      "reasons": [
-        "adjacent parcels already zoned R-3",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 14 years",
-        "comps value ~+87% vs assessed, rank 147/459 (+10 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "20502001A",
-          "address": "",
-          "distanceMi": 2.4,
-          "soldDate": "2025-07-01",
-          "soldPrice": 7260000.0,
-          "landSf": 209339,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1510686,
-          "similarity": 49
-        },
-        {
-          "apn": "20401737",
-          "address": "2408 W CRIMSON TER   PHOENIX  85085",
-          "distanceMi": 1.26,
-          "soldDate": "2026-07-01",
-          "soldPrice": 555000.0,
-          "landSf": 6050,
-          "livingSpaceSf": 3252.0,
-          "pricePerSf": 171,
-          "pricePerAcre": 3996000,
-          "similarity": 46
-        },
-        {
-          "apn": "20325525",
-          "address": "2398 W ESPARTERO WAY   PHOENIX  85086",
-          "distanceMi": 2.84,
-          "soldDate": "2026-04-01",
-          "soldPrice": 340000.0,
-          "landSf": 38547,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 384217,
-          "similarity": 46
-        },
-        {
-          "apn": "20325667",
-          "address": "35605 N VIA TRAMONTO    PHOENIX  85086",
-          "distanceMi": 2.75,
-          "soldDate": "2026-08-01",
-          "soldPrice": 398600.0,
-          "landSf": 22817,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 760968,
-          "similarity": 45
-        },
-        {
-          "apn": "20325609",
-          "address": "2313 W VILLA CASANDRA DR   PHOENIX  85086",
-          "distanceMi": 2.36,
-          "soldDate": "2026-02-01",
-          "soldPrice": 300000.0,
-          "landSf": 18096,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 722149,
-          "similarity": 45
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 3782751,
-        "rangeLow": 962076,
-        "rangeHigh": 3782751,
-        "explanation": "Based on 5 comparable sales within 3 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $3,782,751 (range $962,076-$3,782,751)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 87,
-      "compsAdj": 10,
-      "registeredAgent": {
-        "source": "OpenCorporates (AZ filing mirror)",
-        "agentLine": "9089 N 82ND ST, SCOTTSDALE, AZ, 85258",
-        "companyUrl": "https://opencorporates.com/companies/us_az/L16470353"
-      },
-      "isNew": true,
-      "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-10",
-      "peakScore": 62
-    },
-    {
       "apn": "16603004E",
       "address": "13225 N 34TH ST   PHOENIX  85032",
       "ownerName": "FEDZIN ENTERPRISES LLC",
@@ -32635,7 +32903,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 10 years",
-        "comps value ~+70% vs assessed, rank 164/459 (+10 pts)"
+        "comps value ~+70% vs assessed, rank 166/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -32708,11 +32976,7 @@ window.PHX_LAND_LEADS = {
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": 70,
       "compsAdj": 10,
-      "registeredAgent": {
-        "source": "OpenCorporates (AZ filing mirror)",
-        "agentLine": "P.O. BOX 7426, SURPRISE, AZ, 85374",
-        "companyUrl": "https://opencorporates.com/companies/us_az/L13424564"
-      },
+      "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-10",
@@ -32775,7 +33039,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "2 code-enforcement cases at this address (2024+)",
         "comps margin 351% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+351% vs assessed, rank 32/459 (+20 pts)"
+        "comps value ~+351% vs assessed, rank 29/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -33025,7 +33289,7 @@ window.PHX_LAND_LEADS = {
       "farRatio": null,
       "yearBuilt": null,
       "codeCases": {
-        "count": 4,
+        "count": 2,
         "severe": true,
         "distress": false
       },
@@ -33041,7 +33305,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "city issued a violation notice, ticket, or abatement here",
-        "4 code-enforcement cases at this address (2024+)"
+        "2 code-enforcement cases at this address (2024+)"
       ],
       "comps": [
         {
@@ -33117,7 +33381,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-8",
         "parcel size fits small-to-mid infill development",
         "held 21+ years \u2014 likely low or no debt on the land",
-        "comps value ~+197% vs assessed, rank 91/459 (+20 pts)"
+        "comps value ~+197% vs assessed, rank 89/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -33130,6 +33394,18 @@ window.PHX_LAND_LEADS = {
           "livingSpaceSf": 1525.0,
           "pricePerSf": 262,
           "pricePerAcre": 1797957,
+          "similarity": 66
+        },
+        {
+          "apn": "16605032",
+          "address": "3109 E LARKSPUR DR   PHOENIX  85032",
+          "distanceMi": 0.03,
+          "soldDate": "2026-08-01",
+          "soldPrice": 535000.0,
+          "landSf": 8303,
+          "livingSpaceSf": 1416.0,
+          "pricePerSf": 378,
+          "pricePerAcre": 2806769,
           "similarity": 66
         },
         {
@@ -33157,18 +33433,6 @@ window.PHX_LAND_LEADS = {
           "similarity": 65
         },
         {
-          "apn": "16605012",
-          "address": "12637 N 31ST ST   PHOENIX  85032",
-          "distanceMi": 0.11,
-          "soldDate": "2026-08-01",
-          "soldPrice": 525000.0,
-          "landSf": 7889,
-          "livingSpaceSf": 1456.0,
-          "pricePerSf": 361,
-          "pricePerAcre": 2898846,
-          "similarity": 64
-        },
-        {
           "apn": "16601080",
           "address": "3322 E BLOOMFIELD RD   PHOENIX  85032",
           "distanceMi": 0.23,
@@ -33184,8 +33448,8 @@ window.PHX_LAND_LEADS = {
       "valuation": {
         "mostLikelyValue": 702425,
         "rangeLow": 665019,
-        "rangeHigh": 1132520,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $702,425 (range $665,019-$1,132,520)."
+        "rangeHigh": 1096547,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $702,425 (range $665,019-$1,096,547)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": 197,
@@ -33247,7 +33511,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held 17+ years \u2014 likely low or no debt on the land",
         "comps margin 411% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+411% vs assessed, rank 19/459 (+20 pts)"
+        "comps value ~+411% vs assessed, rank 16/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -33365,11 +33629,7 @@ window.PHX_LAND_LEADS = {
       "livingSpaceSf": null,
       "farRatio": null,
       "yearBuilt": null,
-      "codeCases": {
-        "count": 1,
-        "severe": false,
-        "distress": false
-      },
+      "codeCases": null,
       "saleDate": null,
       "subdivision": "",
       "rebuildsInSub": 0,
@@ -33380,32 +33640,20 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-6",
         "parcel size fits small-to-mid infill development",
         "held 20+ years \u2014 likely low or no debt on the land",
-        "comps value ~+176% vs assessed, rank 100/459 (+20 pts)"
+        "comps value ~+160% vs assessed, rank 106/458 (+20 pts)"
       ],
       "comps": [
         {
-          "apn": "20714092",
-          "address": "4132 W MONTE CRISTO AVE   PHOENIX  85053",
-          "distanceMi": 0.38,
-          "soldDate": "2026-03-01",
-          "soldPrice": 663250.0,
-          "landSf": 37246,
-          "livingSpaceSf": 2728.0,
-          "pricePerSf": 243,
-          "pricePerAcre": 775685,
-          "similarity": 69
-        },
-        {
-          "apn": "20714094",
-          "address": "4112 W MONTE CRISTO AVE   PHOENIX  85053",
-          "distanceMi": 0.33,
-          "soldDate": "2025-05-01",
-          "soldPrice": 855000.0,
-          "landSf": 37458,
-          "livingSpaceSf": 1997.0,
-          "pricePerSf": 428,
-          "pricePerAcre": 994282,
-          "similarity": 65
+          "apn": "20713088",
+          "address": "15015 N 40TH LN   PHOENIX  85053",
+          "distanceMi": 0.61,
+          "soldDate": "2024-05-01",
+          "soldPrice": 650000.0,
+          "landSf": 38817,
+          "livingSpaceSf": 1852.0,
+          "pricePerSf": 351,
+          "pricePerAcre": 729423,
+          "similarity": 57
         },
         {
           "apn": "20710230",
@@ -33442,148 +33690,30 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 265,
           "pricePerAcre": 2297837,
           "similarity": 54
+        },
+        {
+          "apn": "20710544",
+          "address": "15031 N 37TH AVE   PHOENIX  85053",
+          "distanceMi": 0.59,
+          "soldDate": "2026-03-01",
+          "soldPrice": 445000.0,
+          "landSf": 7812,
+          "livingSpaceSf": 1824.0,
+          "pricePerSf": 244,
+          "pricePerAcre": 2481336,
+          "similarity": 54
         }
       ],
       "valuation": {
-        "mostLikelyValue": 598521,
-        "rangeLow": 598521,
-        "rangeHigh": 767190,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $598,521 (range $598,521-$767,190)."
+        "mostLikelyValue": 562824,
+        "rangeLow": 562824,
+        "rangeHigh": 562824,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $562,824 (range $562,824-$562,824)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 176,
+      "equityMarginPct": 160,
       "compsAdj": 20,
-      "isNew": true,
-      "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-10",
-      "peakScore": 60
-    },
-    {
-      "apn": "20816445",
-      "address": "14834 N 15TH DR   PHOENIX  85023",
-      "ownerName": "HENDRICKSON ROY G II/DEBRA A TR",
-      "ownerMailAddress": "15002 N 15TH DR PHOENIX AZ USA 85023",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": false,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": false,
-        "isEstateOwner": false,
-        "yearsHeld": 18.0
-      },
-      "landSf": 26242,
-      "landAcres": 0.602,
-      "puc": "0011",
-      "landUseClass": "residential",
-      "lat": 33.622165919205436,
-      "lng": -112.09544420170495,
-      "assessedValue": 271700.0,
-      "assessedValuePerAcre": 451329.0,
-      "currentZoning": "PAD-3",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-8",
-        "targetDensity": 5,
-        "basis": "adjacent parcels already zoned R1-8"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 3.0,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "CORAL GABLES ESTATES WEST AMD",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "score": 60,
-      "reasons": [
-        "adjacent parcels already zoned R1-8",
-        "parcel size fits small-to-mid infill development",
-        "held 18+ years \u2014 likely low or no debt on the land",
-        "comps margin 337% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+337% vs assessed, rank 37/459 (+20 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "20813179",
-          "address": "1533 W BECK LN   PHOENIX  85023",
-          "distanceMi": 0.38,
-          "soldDate": "2025-12-01",
-          "soldPrice": 115000.0,
-          "landSf": 5930,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 844755,
-          "similarity": 62
-        },
-        {
-          "apn": "20814017B",
-          "address": "2035 W WALTANN LN   PHOENIX  85023",
-          "distanceMi": 0.56,
-          "soldDate": "2026-05-01",
-          "soldPrice": 785000.0,
-          "landSf": 46504,
-          "livingSpaceSf": 2138.0,
-          "pricePerSf": 367,
-          "pricePerAcre": 735304,
-          "similarity": 61
-        },
-        {
-          "apn": "20813412",
-          "address": "1331 W BECK LN   PHOENIX  85023",
-          "distanceMi": 0.41,
-          "soldDate": "2026-06-01",
-          "soldPrice": 590000.0,
-          "landSf": 9229,
-          "livingSpaceSf": 3046.0,
-          "pricePerSf": 194,
-          "pricePerAcre": 2784744,
-          "similarity": 59
-        },
-        {
-          "apn": "15903124",
-          "address": "13418 N 17TH AVE   PHOENIX  85029",
-          "distanceMi": 0.92,
-          "soldDate": "2026-07-01",
-          "soldPrice": 540000.0,
-          "landSf": 11855,
-          "livingSpaceSf": 1798.0,
-          "pricePerSf": 300,
-          "pricePerAcre": 1984175,
-          "similarity": 57
-        },
-        {
-          "apn": "20813299",
-          "address": "1120 W MARCONI AVE   PHOENIX  85023",
-          "distanceMi": 0.76,
-          "soldDate": "2025-11-01",
-          "soldPrice": 645000.0,
-          "landSf": 14248,
-          "livingSpaceSf": 2421.0,
-          "pricePerSf": 266,
-          "pricePerAcre": 1971940,
-          "similarity": 57
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1187963,
-        "rangeLow": 442972,
-        "rangeHigh": 1677623,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,187,963 (range $442,972-$1,677,623)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 337,
-      "compsAdj": 20,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-10",
       "peakScore": 60
@@ -33637,7 +33767,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 11 years",
-        "comps value ~+196% vs assessed, rank 92/459 (+20 pts)"
+        "comps value ~+196% vs assessed, rank 90/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -33764,7 +33894,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 11 years",
-        "comps value ~+156% vs assessed, rank 108/459 (+20 pts)"
+        "comps value ~+156% vs assessed, rank 107/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -33893,7 +34023,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-3A",
         "parcel size fits small-to-mid infill development",
         "held 21+ years \u2014 likely low or no debt on the land",
-        "comps value ~+232% vs assessed, rank 75/459 (+20 pts)"
+        "comps value ~+232% vs assessed, rank 68/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -34022,7 +34152,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-8",
         "parcel size fits small-to-mid infill development",
         "held 16+ years \u2014 likely low or no debt on the land",
-        "comps value ~+145% vs assessed, rank 113/459 (+20 pts)"
+        "comps value ~+145% vs assessed, rank 112/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -34141,7 +34271,7 @@ window.PHX_LAND_LEADS = {
       "farRatio": null,
       "yearBuilt": null,
       "codeCases": {
-        "count": 19,
+        "count": 6,
         "severe": false,
         "distress": true
       },
@@ -34156,7 +34286,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "code complaint mentions vacant/boarded/unsecured/abandoned/dilapidated",
-        "19 code-enforcement cases at this address (2024+)"
+        "6 code-enforcement cases at this address (2024+)"
       ],
       "comps": [
         {
@@ -34529,6 +34659,18 @@ window.PHX_LAND_LEADS = {
           "similarity": 38
         },
         {
+          "apn": "20337012X",
+          "address": "",
+          "distanceMi": 4.55,
+          "soldDate": "2025-11-01",
+          "soldPrice": 150000.0,
+          "landSf": 117368,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 55671,
+          "similarity": 38
+        },
+        {
           "apn": "20325609",
           "address": "2313 W VILLA CASANDRA DR   PHOENIX  85086",
           "distanceMi": 3.66,
@@ -34539,18 +34681,6 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": null,
           "pricePerAcre": 722149,
           "similarity": 37
-        },
-        {
-          "apn": "20325644",
-          "address": "35806 N 26TH AVE   PHOENIX  85086",
-          "distanceMi": 4.07,
-          "soldDate": "2025-07-01",
-          "soldPrice": 245000.0,
-          "landSf": 31991,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 333600,
-          "similarity": 34
         }
       ],
       "valuation": null,
@@ -34614,7 +34744,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held 11 years",
-        "comps value ~+106% vs assessed, rank 133/459 (+10 pts)"
+        "comps value ~+106% vs assessed, rank 134/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -34691,6 +34821,131 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-10",
       "peakScore": 59
+    },
+    {
+      "apn": "21309001S",
+      "address": "2112 E QUAIL AVE   PHOENIX  85024",
+      "ownerName": "MIDWEST ROOTS LLC",
+      "ownerMailAddress": "27224 N 65TH PL SCOTTSDALE AZ USA 85262",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 20.4
+      },
+      "landSf": 44213,
+      "landAcres": 1.015,
+      "puc": "0012",
+      "landUseClass": "residential",
+      "lat": 33.67909761659388,
+      "lng": -112.03675359214678,
+      "assessedValue": 365100.0,
+      "assessedValuePerAcre": 359704.0,
+      "currentZoning": "S-1",
+      "generalPlanDesignation": "GP code 110",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "RE-43",
+        "targetDensity": 1,
+        "basis": "adjacent parcels already zoned RE-43"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 1.0,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": null,
+      "score": 58,
+      "reasons": [
+        "adjacent parcels already zoned RE-43",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 20+ years \u2014 likely low or no debt on the land"
+      ],
+      "comps": [
+        {
+          "apn": "21215102",
+          "address": "23426 N 21ST PL   PHOENIX  85024",
+          "distanceMi": 1.42,
+          "soldDate": "2026-08-01",
+          "soldPrice": 559000.0,
+          "landSf": 5995,
+          "livingSpaceSf": 1970.0,
+          "pricePerSf": 284,
+          "pricePerAcre": 4061725,
+          "similarity": 47
+        },
+        {
+          "apn": "21215188",
+          "address": "2138 E ELECTRA LN   PHOENIX  85024",
+          "distanceMi": 1.39,
+          "soldDate": "2026-07-01",
+          "soldPrice": 735000.0,
+          "landSf": 5509,
+          "livingSpaceSf": 2558.0,
+          "pricePerSf": 287,
+          "pricePerAcre": 5811690,
+          "similarity": 46
+        },
+        {
+          "apn": "21215192",
+          "address": "23449 N 21ST PL   PHOENIX  85024",
+          "distanceMi": 1.45,
+          "soldDate": "2026-06-01",
+          "soldPrice": 719900.0,
+          "landSf": 6853,
+          "livingSpaceSf": 2436.0,
+          "pricePerSf": 296,
+          "pricePerAcre": 4575929,
+          "similarity": 46
+        },
+        {
+          "apn": "21317124",
+          "address": "2921 E ORAIBI DR   PHOENIX  85050",
+          "distanceMi": 1.44,
+          "soldDate": "2026-06-01",
+          "soldPrice": 315000.0,
+          "landSf": 6544,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 2096791,
+          "similarity": 46
+        },
+        {
+          "apn": "21319174",
+          "address": "2534 E WESCOTT DR   PHOENIX  85050",
+          "distanceMi": 1.44,
+          "soldDate": "2026-06-01",
+          "soldPrice": 483000.0,
+          "landSf": 6199,
+          "livingSpaceSf": 1544.0,
+          "pricePerSf": 313,
+          "pricePerAcre": 3394012,
+          "similarity": 46
+        }
+      ],
+      "valuation": null,
+      "compsNote": "Comparable sales below are the closest/most recent found, but none are close enough in lot size to extrapolate a dollar value from without guessing -- review them manually instead. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": null,
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-02",
+      "lastSeen": "2026-10-10",
+      "peakScore": 78
     },
     {
       "apn": "21311004C",
@@ -35014,7 +35269,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held 16+ years \u2014 likely low or no debt on the land",
-        "comps value ~+50% vs assessed, rank 192/459 (+10 pts)"
+        "comps value ~+50% vs assessed, rank 194/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -35144,7 +35399,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held 21+ years \u2014 likely low or no debt on the land",
-        "comps value ~+90% vs assessed, rank 144/459 (+10 pts)"
+        "comps value ~+90% vs assessed, rank 143/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -35274,7 +35529,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held 19+ years \u2014 likely low or no debt on the land",
-        "comps value ~+116% vs assessed, rank 126/459 (+10 pts)"
+        "comps value ~+116% vs assessed, rank 126/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -35403,7 +35658,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-5",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+192% vs assessed, rank 96/459 (+20 pts)"
+        "comps value ~+192% vs assessed, rank 95/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -35533,7 +35788,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned RE-43",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+300% vs assessed, rank 48/459 (+20 pts)"
+        "comps value ~+300% vs assessed, rank 43/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -35663,7 +35918,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-8",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+243% vs assessed, rank 67/459 (+20 pts)"
+        "comps value ~+243% vs assessed, rank 64/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -35677,6 +35932,18 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": null,
           "pricePerAcre": 844755,
           "similarity": 60
+        },
+        {
+          "apn": "15903183",
+          "address": "1636 W SHARON AVE   PHOENIX  85029",
+          "distanceMi": 0.67,
+          "soldDate": "2026-08-01",
+          "soldPrice": 370000.0,
+          "landSf": 12225,
+          "livingSpaceSf": 1641.0,
+          "pricePerSf": 225,
+          "pricePerAcre": 1318380,
+          "similarity": 58
         },
         {
           "apn": "14959047A",
@@ -35713,25 +35980,13 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 293,
           "pricePerAcre": 1984571,
           "similarity": 56
-        },
-        {
-          "apn": "15903104",
-          "address": "13250 N 11TH AVE   PHOENIX  85029",
-          "distanceMi": 0.97,
-          "soldDate": "2026-08-01",
-          "soldPrice": 354900.0,
-          "landSf": 12397,
-          "livingSpaceSf": 1610.0,
-          "pricePerSf": 220,
-          "pricePerAcre": 1247031,
-          "similarity": 56
         }
       ],
       "valuation": {
         "mostLikelyValue": 1021912,
-        "rangeLow": 871118,
+        "rangeLow": 920960,
         "rangeHigh": 1386053,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,021,912 (range $871,118-$1,386,053)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,021,912 (range $920,960-$1,386,053)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": 243,
@@ -35794,7 +36049,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "comps margin 453% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+453% vs assessed, rank 14/459 (+20 pts)"
+        "comps value ~+453% vs assessed, rank 11/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -35834,28 +36089,28 @@ window.PHX_LAND_LEADS = {
           "similarity": 15
         },
         {
-          "apn": "14802337",
+          "apn": "14802347",
           "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 4.82,
-          "soldDate": "2023-04-01",
-          "soldPrice": 1330095.0,
-          "landSf": 1526,
+          "distanceMi": 4.79,
+          "soldDate": "2024-08-01",
+          "soldPrice": 2625000.0,
+          "landSf": 1555,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 37967849,
-          "similarity": 8
+          "pricePerAcre": 73533762,
+          "similarity": 14
         },
         {
-          "apn": "14802338",
+          "apn": "14802348",
           "address": "11851 N 51ST AVE   GLENDALE  85304",
-          "distanceMi": 4.82,
-          "soldDate": "2023-04-01",
-          "soldPrice": 1330095.0,
-          "landSf": 1526,
+          "distanceMi": 4.79,
+          "soldDate": "2024-08-01",
+          "soldPrice": 2625000.0,
+          "landSf": 1555,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 37967849,
-          "similarity": 8
+          "pricePerAcre": 73533762,
+          "similarity": 14
         }
       ],
       "valuation": {
@@ -35925,7 +36180,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "comps margin 681% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+681% vs assessed, rank 8/459 (+20 pts)"
+        "comps value ~+681% vs assessed, rank 8/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -36052,7 +36307,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 16+ years \u2014 likely low or no debt on the land",
-        "comps value ~+168% vs assessed, rank 102/459 (+20 pts)"
+        "comps value ~+168% vs assessed, rank 101/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -36183,7 +36438,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "comps margin 320% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+320% vs assessed, rank 41/459 (+20 pts)"
+        "comps value ~+320% vs assessed, rank 36/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -36301,7 +36556,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-3",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+247% vs assessed, rank 60/459 (+20 pts)"
+        "comps value ~+247% vs assessed, rank 56/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -36341,171 +36596,41 @@ window.PHX_LAND_LEADS = {
           "similarity": 66
         },
         {
-          "apn": "21314347",
-          "address": "19650 N 34TH PL   PHOENIX  85050",
-          "distanceMi": 0.65,
-          "soldDate": "2025-11-01",
-          "soldPrice": 575000.0,
-          "landSf": 7662,
-          "livingSpaceSf": 1638.0,
-          "pricePerSf": 351,
-          "pricePerAcre": 3268990,
-          "similarity": 62
+          "apn": "21314445A",
+          "address": "3414 E SEQUOIA DR   PHOENIX  85050",
+          "distanceMi": 0.59,
+          "soldDate": "2026-07-01",
+          "soldPrice": 659300.0,
+          "landSf": 6951,
+          "livingSpaceSf": 2014.0,
+          "pricePerSf": 327,
+          "pricePerAcre": 4131651,
+          "similarity": 64
         },
         {
-          "apn": "21314030",
-          "address": "3601 E ROSEMONTE DR   PHOENIX  85050",
-          "distanceMi": 0.81,
-          "soldDate": "2026-08-01",
-          "soldPrice": 728000.0,
-          "landSf": 6248,
-          "livingSpaceSf": 2699.0,
-          "pricePerSf": 270,
-          "pricePerAcre": 5075493,
-          "similarity": 61
+          "apn": "21319174",
+          "address": "2534 E WESCOTT DR   PHOENIX  85050",
+          "distanceMi": 0.56,
+          "soldDate": "2026-06-01",
+          "soldPrice": 483000.0,
+          "landSf": 6199,
+          "livingSpaceSf": 1544.0,
+          "pricePerSf": 313,
+          "pricePerAcre": 3394012,
+          "similarity": 63
         }
       ],
       "valuation": {
         "mostLikelyValue": 499651,
         "rangeLow": 479005,
-        "rangeHigh": 1199662,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $499,651 (range $479,005-$1,199,662)."
+        "rangeHigh": 976572,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $499,651 (range $479,005-$976,572)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": 247,
       "compsAdj": 20,
       "isNew": false,
       "firstSeen": "2026-10-06",
-      "lastSeen": "2026-10-10",
-      "peakScore": 58
-    },
-    {
-      "apn": "21317070",
-      "address": "2923 E ESCUDA RD   PHOENIX  85050",
-      "ownerName": "JL REMODELING LLC",
-      "ownerMailAddress": "PO BOX 72413 PHOENIX AZ USA 85050",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 2.2
-      },
-      "landSf": 14649,
-      "landAcres": 0.336,
-      "puc": "0011",
-      "landUseClass": "residential",
-      "lat": 33.66857917039071,
-      "lng": -112.02031325432026,
-      "assessedValue": 205000.0,
-      "assessedValuePerAcre": 610119.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 40",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-4",
-        "targetDensity": 25,
-        "basis": "adjacent parcels already zoned R-4"
-      },
-      "byRightUnits": 1.7,
-      "rezoneTargetUnits": 8.4,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "MOBILE RANCHOS UNIT 7",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "score": 58,
-      "reasons": [
-        "adjacent parcels already zoned R-4",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+244% vs assessed, rank 61/459 (+20 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "21312074",
-          "address": "20207 N 30TH ST   PHOENIX  85050",
-          "distanceMi": 0.16,
-          "soldDate": "2026-03-01",
-          "soldPrice": 550000.0,
-          "landSf": 11822,
-          "livingSpaceSf": 2096.0,
-          "pricePerSf": 262,
-          "pricePerAcre": 2026561,
-          "similarity": 69
-        },
-        {
-          "apn": "21313027",
-          "address": "3339 E TONOPAH DR   PHOENIX  85050",
-          "distanceMi": 0.6,
-          "soldDate": "2026-04-01",
-          "soldPrice": 470000.0,
-          "landSf": 9685,
-          "livingSpaceSf": 1781.0,
-          "pricePerSf": 264,
-          "pricePerAcre": 2113908,
-          "similarity": 63
-        },
-        {
-          "apn": "21317124",
-          "address": "2921 E ORAIBI DR   PHOENIX  85050",
-          "distanceMi": 0.36,
-          "soldDate": "2026-06-01",
-          "soldPrice": 315000.0,
-          "landSf": 6544,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 2096791,
-          "similarity": 61
-        },
-        {
-          "apn": "21312114",
-          "address": "2945 E HONONEGH DR   PHOENIX  85050",
-          "distanceMi": 0.2,
-          "soldDate": "2026-06-01",
-          "soldPrice": 435000.0,
-          "landSf": 5508,
-          "livingSpaceSf": 1214.0,
-          "pricePerSf": 358,
-          "pricePerAcre": 3440196,
-          "similarity": 61
-        },
-        {
-          "apn": "21311044",
-          "address": "20404 N 28TH PL   PHOENIX  85050",
-          "distanceMi": 0.25,
-          "soldDate": "2025-10-01",
-          "soldPrice": 530000.0,
-          "landSf": 6934,
-          "livingSpaceSf": 2096.0,
-          "pricePerSf": 253,
-          "pricePerAcre": 3329507,
-          "similarity": 59
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 705140,
-        "rangeLow": 681522,
-        "rangeHigh": 1119696,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $705,140 (range $681,522-$1,119,696)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 244,
-      "compsAdj": 20,
-      "registeredAgent": null,
-      "isNew": true,
-      "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-10",
       "peakScore": 58
     },
@@ -36560,7 +36685,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+217% vs assessed, rank 84/459 (+20 pts)"
+        "comps value ~+217% vs assessed, rank 81/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -36612,16 +36737,16 @@ window.PHX_LAND_LEADS = {
           "similarity": 53
         },
         {
-          "apn": "21305391",
-          "address": "1737 E SAMUEL DR   PHOENIX  85024",
-          "distanceMi": 0.98,
-          "soldDate": "2026-07-01",
-          "soldPrice": 735000.0,
-          "landSf": 9655,
-          "livingSpaceSf": 3149.0,
-          "pricePerSf": 233,
-          "pricePerAcre": 3316064,
-          "similarity": 51
+          "apn": "21319174",
+          "address": "2534 E WESCOTT DR   PHOENIX  85050",
+          "distanceMi": 0.62,
+          "soldDate": "2026-06-01",
+          "soldPrice": 483000.0,
+          "landSf": 6199,
+          "livingSpaceSf": 1544.0,
+          "pricePerSf": 313,
+          "pricePerAcre": 3394012,
+          "similarity": 52
         }
       ],
       "valuation": {
@@ -36690,21 +36815,9 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-3A",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+237% vs assessed, rank 70/459 (+20 pts)"
+        "comps value ~+244% vs assessed, rank 61/458 (+20 pts)"
       ],
       "comps": [
-        {
-          "apn": "21404006N",
-          "address": "17419 N 27TH ST   PHOENIX  85032",
-          "distanceMi": 0.17,
-          "soldDate": "2025-05-01",
-          "soldPrice": 555000.0,
-          "landSf": 11892,
-          "livingSpaceSf": 2087.0,
-          "pricePerSf": 266,
-          "pricePerAcre": 2032947,
-          "similarity": 68
-        },
         {
           "apn": "21316460",
           "address": "18604 N 30TH PL   PHOENIX  85050",
@@ -36752,16 +36865,28 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 306,
           "pricePerAcre": 2051902,
           "similarity": 65
+        },
+        {
+          "apn": "21401369",
+          "address": "17212 N 33RD PL   PHOENIX  85032",
+          "distanceMi": 0.68,
+          "soldDate": "2025-02-01",
+          "soldPrice": 595000.0,
+          "landSf": 12366,
+          "livingSpaceSf": 1865.0,
+          "pricePerSf": 319,
+          "pricePerAcre": 2095924,
+          "similarity": 63
         }
       ],
       "valuation": {
-        "mostLikelyValue": 578263,
+        "mostLikelyValue": 590670,
         "rangeLow": 341770,
         "rangeHigh": 611486,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $578,263 (range $341,770-$611,486)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $590,670 (range $341,770-$611,486)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 237,
+      "equityMarginPct": 244,
       "compsAdj": 20,
       "registeredAgent": null,
       "isNew": false,
@@ -36820,21 +36945,9 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-3A",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+237% vs assessed, rank 71/459 (+20 pts)"
+        "comps value ~+248% vs assessed, rank 55/458 (+20 pts)"
       ],
       "comps": [
-        {
-          "apn": "21404006N",
-          "address": "17419 N 27TH ST   PHOENIX  85032",
-          "distanceMi": 0.18,
-          "soldDate": "2025-05-01",
-          "soldPrice": 555000.0,
-          "landSf": 11892,
-          "livingSpaceSf": 2087.0,
-          "pricePerSf": 266,
-          "pricePerAcre": 2032947,
-          "similarity": 68
-        },
         {
           "apn": "21316460",
           "address": "18604 N 30TH PL   PHOENIX  85050",
@@ -36882,16 +36995,28 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 238,
           "pricePerAcre": 1212734,
           "similarity": 65
+        },
+        {
+          "apn": "21401478",
+          "address": "3210 E HELENA DR   PHOENIX  85032",
+          "distanceMi": 0.47,
+          "soldDate": "2026-05-01",
+          "soldPrice": 409900.0,
+          "landSf": 7368,
+          "livingSpaceSf": 1258.0,
+          "pricePerSf": 326,
+          "pricePerAcre": 2423350,
+          "similarity": 63
         }
       ],
       "valuation": {
-        "mostLikelyValue": 577557,
+        "mostLikelyValue": 597555,
         "rangeLow": 341353,
-        "rangeHigh": 610738,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $577,557 (range $341,353-$610,738)."
+        "rangeHigh": 682110,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $597,555 (range $341,353-$682,110)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 237,
+      "equityMarginPct": 248,
       "compsAdj": 20,
       "registeredAgent": null,
       "isNew": false,
@@ -36950,21 +37075,9 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-3A",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+237% vs assessed, rank 72/459 (+20 pts)"
+        "comps value ~+244% vs assessed, rank 62/458 (+20 pts)"
       ],
       "comps": [
-        {
-          "apn": "21404006N",
-          "address": "17419 N 27TH ST   PHOENIX  85032",
-          "distanceMi": 0.16,
-          "soldDate": "2025-05-01",
-          "soldPrice": 555000.0,
-          "landSf": 11892,
-          "livingSpaceSf": 2087.0,
-          "pricePerSf": 266,
-          "pricePerAcre": 2032947,
-          "similarity": 68
-        },
         {
           "apn": "21316460",
           "address": "18604 N 30TH PL   PHOENIX  85050",
@@ -37012,16 +37125,28 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 306,
           "pricePerAcre": 2051902,
           "similarity": 65
+        },
+        {
+          "apn": "21401369",
+          "address": "17212 N 33RD PL   PHOENIX  85032",
+          "distanceMi": 0.69,
+          "soldDate": "2025-02-01",
+          "soldPrice": 595000.0,
+          "landSf": 12366,
+          "livingSpaceSf": 1865.0,
+          "pricePerSf": 319,
+          "pricePerAcre": 2095924,
+          "similarity": 63
         }
       ],
       "valuation": {
-        "mostLikelyValue": 578263,
+        "mostLikelyValue": 590670,
         "rangeLow": 341770,
         "rangeHigh": 611486,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $578,263 (range $341,770-$611,486)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $590,670 (range $341,770-$611,486)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 237,
+      "equityMarginPct": 244,
       "compsAdj": 20,
       "registeredAgent": null,
       "isNew": false,
@@ -37080,7 +37205,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-8",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+244% vs assessed, rank 62/459 (+20 pts)"
+        "comps value ~+244% vs assessed, rank 63/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -37211,7 +37336,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 19+ years \u2014 likely low or no debt on the land",
-        "comps value ~+224% vs assessed, rank 79/459 (+20 pts)"
+        "comps value ~+224% vs assessed, rank 74/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -37341,7 +37466,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-5",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+266% vs assessed, rank 56/459 (+20 pts)"
+        "comps value ~+266% vs assessed, rank 51/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -37421,276 +37546,6 @@ window.PHX_LAND_LEADS = {
       "peakScore": 58
     },
     {
-      "apn": "20813003M",
-      "address": "1520 W GREENWAY PKWY   PHOENIX  85023",
-      "ownerName": "GARY J BLYTHE CONSULTING INC",
-      "ownerMailAddress": "13237 N 13TH PL PHOENIX AZ USA 85022",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 6.9
-      },
-      "landSf": 23926,
-      "landAcres": 0.549,
-      "puc": "0012",
-      "landUseClass": "residential",
-      "lat": 33.62664365072231,
-      "lng": -112.09208783876907,
-      "assessedValue": 224300.0,
-      "assessedValuePerAcre": 408561.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 40",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": 2.7,
-      "rezoneTargetUnits": 3.3,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": {
-        "count": 1,
-        "severe": false,
-        "distress": false
-      },
-      "saleDate": "11/01/2019",
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": 70000.0,
-      "defaultDemoCost": null,
-      "score": 58,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps margin 383% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+383% vs assessed, rank 23/459 (+20 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "20813179",
-          "address": "1533 W BECK LN   PHOENIX  85023",
-          "distanceMi": 0.05,
-          "soldDate": "2025-12-01",
-          "soldPrice": 115000.0,
-          "landSf": 5930,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 844755,
-          "similarity": 65
-        },
-        {
-          "apn": "20813412",
-          "address": "1331 W BECK LN   PHOENIX  85023",
-          "distanceMi": 0.14,
-          "soldDate": "2026-06-01",
-          "soldPrice": 590000.0,
-          "landSf": 9229,
-          "livingSpaceSf": 3046.0,
-          "pricePerSf": 194,
-          "pricePerAcre": 2784744,
-          "similarity": 62
-        },
-        {
-          "apn": "20814018A",
-          "address": "2016 W GREENWAY RD   PHOENIX  85023",
-          "distanceMi": 0.62,
-          "soldDate": "2026-08-01",
-          "soldPrice": 850000.0,
-          "landSf": 46342,
-          "livingSpaceSf": 2491.0,
-          "pricePerSf": 341,
-          "pricePerAcre": 798973,
-          "similarity": 61
-        },
-        {
-          "apn": "20813299",
-          "address": "1120 W MARCONI AVE   PHOENIX  85023",
-          "distanceMi": 0.4,
-          "soldDate": "2025-11-01",
-          "soldPrice": 645000.0,
-          "landSf": 14248,
-          "livingSpaceSf": 2421.0,
-          "pricePerSf": 266,
-          "pricePerAcre": 1971940,
-          "similarity": 61
-        },
-        {
-          "apn": "20814017B",
-          "address": "2035 W WALTANN LN   PHOENIX  85023",
-          "distanceMi": 0.65,
-          "soldDate": "2026-05-01",
-          "soldPrice": 785000.0,
-          "landSf": 46504,
-          "livingSpaceSf": 2138.0,
-          "pricePerSf": 367,
-          "pricePerAcre": 735304,
-          "similarity": 60
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1083118,
-        "rangeLow": 403877,
-        "rangeHigh": 1529563,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,083,118 (range $403,877-$1,529,563)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 383,
-      "compsAdj": 20,
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-06",
-      "lastSeen": "2026-10-10",
-      "peakScore": 58
-    },
-    {
-      "apn": "20813003L",
-      "address": "1520 W GREENWAY PKWY   PHOENIX  85023",
-      "ownerName": "GARY J BLYTHE CONSULTING INC",
-      "ownerMailAddress": "13237 N 13TH PL PHOENIX AZ USA 85022",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 6.9
-      },
-      "landSf": 15080,
-      "landAcres": 0.346,
-      "puc": "0012",
-      "landUseClass": "residential",
-      "lat": 33.626822727225104,
-      "lng": -112.09157379592227,
-      "assessedValue": 167300.0,
-      "assessedValuePerAcre": 483526.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 40",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": 1.7,
-      "rezoneTargetUnits": 2.1,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": {
-        "count": 1,
-        "severe": false,
-        "distress": false
-      },
-      "saleDate": "11/01/2019",
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": 70000.0,
-      "defaultDemoCost": null,
-      "score": 58,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps margin 308% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+308% vs assessed, rank 46/459 (+20 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "20813299",
-          "address": "1120 W MARCONI AVE   PHOENIX  85023",
-          "distanceMi": 0.37,
-          "soldDate": "2025-11-01",
-          "soldPrice": 645000.0,
-          "landSf": 14248,
-          "livingSpaceSf": 2421.0,
-          "pricePerSf": 266,
-          "pricePerAcre": 1971940,
-          "similarity": 68
-        },
-        {
-          "apn": "20813179",
-          "address": "1533 W BECK LN   PHOENIX  85023",
-          "distanceMi": 0.07,
-          "soldDate": "2025-12-01",
-          "soldPrice": 115000.0,
-          "landSf": 5930,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 844755,
-          "similarity": 68
-        },
-        {
-          "apn": "20813412",
-          "address": "1331 W BECK LN   PHOENIX  85023",
-          "distanceMi": 0.11,
-          "soldDate": "2026-06-01",
-          "soldPrice": 590000.0,
-          "landSf": 9229,
-          "livingSpaceSf": 3046.0,
-          "pricePerSf": 194,
-          "pricePerAcre": 2784744,
-          "similarity": 66
-        },
-        {
-          "apn": "20813419",
-          "address": "1330 W BECK LN   PHOENIX  85023",
-          "distanceMi": 0.1,
-          "soldDate": "2025-08-01",
-          "soldPrice": 714700.0,
-          "landSf": 11276,
-          "livingSpaceSf": 3018.0,
-          "pricePerSf": 237,
-          "pricePerAcre": 2760938,
-          "similarity": 65
-        },
-        {
-          "apn": "20813202",
-          "address": "15420 N 16TH DR   PHOENIX  85023",
-          "distanceMi": 0.21,
-          "soldDate": "2024-11-01",
-          "soldPrice": 320000.0,
-          "landSf": 15587,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 894284,
-          "similarity": 65
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 682664,
-        "rangeLow": 292445,
-        "rangeHigh": 964048,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $682,664 (range $292,445-$964,048)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 308,
-      "compsAdj": 20,
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-06",
-      "lastSeen": "2026-10-10",
-      "peakScore": 58
-    },
-    {
       "apn": "21316628",
       "address": "19205 N 29TH ST   PHOENIX  85050",
       "ownerName": "DLR PROPERTIES LLC",
@@ -37741,7 +37596,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-3",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+244% vs assessed, rank 63/459 (+20 pts)"
+        "comps value ~+247% vs assessed, rank 57/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -37781,38 +37636,38 @@ window.PHX_LAND_LEADS = {
           "similarity": 62
         },
         {
-          "apn": "21314198",
-          "address": "19029 N 36TH ST   PHOENIX  85050",
-          "distanceMi": 0.87,
-          "soldDate": "2026-06-01",
-          "soldPrice": 575000.0,
-          "landSf": 7266,
-          "livingSpaceSf": 1627.0,
-          "pricePerSf": 353,
-          "pricePerAcre": 3447151,
-          "similarity": 59
+          "apn": "21314445A",
+          "address": "3414 E SEQUOIA DR   PHOENIX  85050",
+          "distanceMi": 0.67,
+          "soldDate": "2026-07-01",
+          "soldPrice": 659300.0,
+          "landSf": 6951,
+          "livingSpaceSf": 2014.0,
+          "pricePerSf": 327,
+          "pricePerAcre": 4131651,
+          "similarity": 61
         },
         {
-          "apn": "21314207",
-          "address": "3611 E KRISTAL WAY   PHOENIX  85050",
-          "distanceMi": 0.89,
-          "soldDate": "2026-05-01",
-          "soldPrice": 740000.0,
-          "landSf": 7052,
-          "livingSpaceSf": 2663.0,
-          "pricePerSf": 278,
-          "pricePerAcre": 4570959,
-          "similarity": 58
+          "apn": "21319174",
+          "address": "2534 E WESCOTT DR   PHOENIX  85050",
+          "distanceMi": 0.47,
+          "soldDate": "2026-06-01",
+          "soldPrice": 483000.0,
+          "landSf": 6199,
+          "livingSpaceSf": 1544.0,
+          "pricePerSf": 313,
+          "pricePerAcre": 3394012,
+          "similarity": 61
         }
       ],
       "valuation": {
-        "mostLikelyValue": 612767,
+        "mostLikelyValue": 617770,
         "rangeLow": 592243,
-        "rangeHigh": 1335820,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $612,767 (range $592,243-$1,335,820)."
+        "rangeHigh": 1207436,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $617,770 (range $592,243-$1,207,436)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 244,
+      "equityMarginPct": 247,
       "compsAdj": 20,
       "registeredAgent": null,
       "isNew": false,
@@ -37871,7 +37726,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-3",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+244% vs assessed, rank 64/459 (+20 pts)"
+        "comps value ~+247% vs assessed, rank 58/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -37911,38 +37766,38 @@ window.PHX_LAND_LEADS = {
           "similarity": 66
         },
         {
-          "apn": "21314198",
-          "address": "19029 N 36TH ST   PHOENIX  85050",
-          "distanceMi": 0.87,
-          "soldDate": "2026-06-01",
-          "soldPrice": 575000.0,
-          "landSf": 7266,
-          "livingSpaceSf": 1627.0,
-          "pricePerSf": 353,
-          "pricePerAcre": 3447151,
-          "similarity": 62
+          "apn": "21314445A",
+          "address": "3414 E SEQUOIA DR   PHOENIX  85050",
+          "distanceMi": 0.66,
+          "soldDate": "2026-07-01",
+          "soldPrice": 659300.0,
+          "landSf": 6951,
+          "livingSpaceSf": 2014.0,
+          "pricePerSf": 327,
+          "pricePerAcre": 4131651,
+          "similarity": 64
         },
         {
-          "apn": "21314347",
-          "address": "19650 N 34TH PL   PHOENIX  85050",
-          "distanceMi": 0.7,
-          "soldDate": "2025-11-01",
-          "soldPrice": 575000.0,
-          "landSf": 7662,
-          "livingSpaceSf": 1638.0,
-          "pricePerSf": 351,
-          "pricePerAcre": 3268990,
-          "similarity": 62
+          "apn": "21319174",
+          "address": "2534 E WESCOTT DR   PHOENIX  85050",
+          "distanceMi": 0.48,
+          "soldDate": "2026-06-01",
+          "soldPrice": 483000.0,
+          "landSf": 6199,
+          "livingSpaceSf": 1544.0,
+          "pricePerSf": 313,
+          "pricePerAcre": 3394012,
+          "similarity": 64
         }
       ],
       "valuation": {
-        "mostLikelyValue": 481935,
+        "mostLikelyValue": 485869,
         "rangeLow": 465793,
-        "rangeHigh": 751357,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $481,935 (range $465,793-$751,357)."
+        "rangeHigh": 949635,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $485,869 (range $465,793-$949,635)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 244,
+      "equityMarginPct": 247,
       "compsAdj": 20,
       "registeredAgent": null,
       "isNew": false,
@@ -38001,7 +37856,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-3",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+244% vs assessed, rank 65/459 (+20 pts)"
+        "comps value ~+247% vs assessed, rank 59/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -38041,38 +37896,38 @@ window.PHX_LAND_LEADS = {
           "similarity": 66
         },
         {
-          "apn": "21314198",
-          "address": "19029 N 36TH ST   PHOENIX  85050",
-          "distanceMi": 0.87,
-          "soldDate": "2026-06-01",
-          "soldPrice": 575000.0,
-          "landSf": 7266,
-          "livingSpaceSf": 1627.0,
-          "pricePerSf": 353,
-          "pricePerAcre": 3447151,
-          "similarity": 62
+          "apn": "21314445A",
+          "address": "3414 E SEQUOIA DR   PHOENIX  85050",
+          "distanceMi": 0.66,
+          "soldDate": "2026-07-01",
+          "soldPrice": 659300.0,
+          "landSf": 6951,
+          "livingSpaceSf": 2014.0,
+          "pricePerSf": 327,
+          "pricePerAcre": 4131651,
+          "similarity": 64
         },
         {
-          "apn": "21314347",
-          "address": "19650 N 34TH PL   PHOENIX  85050",
-          "distanceMi": 0.71,
-          "soldDate": "2025-11-01",
-          "soldPrice": 575000.0,
-          "landSf": 7662,
-          "livingSpaceSf": 1638.0,
-          "pricePerSf": 351,
-          "pricePerAcre": 3268990,
-          "similarity": 62
+          "apn": "21319174",
+          "address": "2534 E WESCOTT DR   PHOENIX  85050",
+          "distanceMi": 0.48,
+          "soldDate": "2026-06-01",
+          "soldPrice": 483000.0,
+          "landSf": 6199,
+          "livingSpaceSf": 1544.0,
+          "pricePerSf": 313,
+          "pricePerAcre": 3394012,
+          "similarity": 64
         }
       ],
       "valuation": {
-        "mostLikelyValue": 482031,
+        "mostLikelyValue": 485966,
         "rangeLow": 465886,
-        "rangeHigh": 751507,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $482,031 (range $465,886-$751,507)."
+        "rangeHigh": 949825,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $485,966 (range $465,886-$949,825)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 244,
+      "equityMarginPct": 247,
       "compsAdj": 20,
       "registeredAgent": null,
       "isNew": false,
@@ -38131,7 +37986,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-3",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+244% vs assessed, rank 66/459 (+20 pts)"
+        "comps value ~+247% vs assessed, rank 60/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -38171,38 +38026,38 @@ window.PHX_LAND_LEADS = {
           "similarity": 66
         },
         {
-          "apn": "21314198",
-          "address": "19029 N 36TH ST   PHOENIX  85050",
-          "distanceMi": 0.87,
-          "soldDate": "2026-06-01",
-          "soldPrice": 575000.0,
-          "landSf": 7266,
-          "livingSpaceSf": 1627.0,
-          "pricePerSf": 353,
-          "pricePerAcre": 3447151,
-          "similarity": 62
+          "apn": "21314445A",
+          "address": "3414 E SEQUOIA DR   PHOENIX  85050",
+          "distanceMi": 0.66,
+          "soldDate": "2026-07-01",
+          "soldPrice": 659300.0,
+          "landSf": 6951,
+          "livingSpaceSf": 2014.0,
+          "pricePerSf": 327,
+          "pricePerAcre": 4131651,
+          "similarity": 64
         },
         {
-          "apn": "21314347",
-          "address": "19650 N 34TH PL   PHOENIX  85050",
-          "distanceMi": 0.71,
-          "soldDate": "2025-11-01",
-          "soldPrice": 575000.0,
-          "landSf": 7662,
-          "livingSpaceSf": 1638.0,
-          "pricePerSf": 351,
-          "pricePerAcre": 3268990,
-          "similarity": 62
+          "apn": "21319174",
+          "address": "2534 E WESCOTT DR   PHOENIX  85050",
+          "distanceMi": 0.47,
+          "soldDate": "2026-06-01",
+          "soldPrice": 483000.0,
+          "landSf": 6199,
+          "livingSpaceSf": 1544.0,
+          "pricePerSf": 313,
+          "pricePerAcre": 3394012,
+          "similarity": 64
         }
       ],
       "valuation": {
-        "mostLikelyValue": 482079,
+        "mostLikelyValue": 486014,
         "rangeLow": 465932,
-        "rangeHigh": 751582,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $482,079 (range $465,932-$751,582)."
+        "rangeHigh": 949919,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $486,014 (range $465,932-$949,919)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 244,
+      "equityMarginPct": 247,
       "compsAdj": 20,
       "registeredAgent": null,
       "isNew": false,
@@ -38261,8 +38116,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-8",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps margin 378% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+378% vs assessed, rank 24/459 (+20 pts)"
+        "comps value ~+218% vs assessed, rank 80/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -38290,6 +38144,18 @@ window.PHX_LAND_LEADS = {
           "similarity": 58
         },
         {
+          "apn": "15903183",
+          "address": "1636 W SHARON AVE   PHOENIX  85029",
+          "distanceMi": 0.79,
+          "soldDate": "2026-08-01",
+          "soldPrice": 370000.0,
+          "landSf": 12225,
+          "livingSpaceSf": 1641.0,
+          "pricePerSf": 225,
+          "pricePerAcre": 1318380,
+          "similarity": 57
+        },
+        {
           "apn": "15903124",
           "address": "13418 N 17TH AVE   PHOENIX  85029",
           "distanceMi": 0.88,
@@ -38312,31 +38178,19 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": null,
           "pricePerAcre": 871200,
           "similarity": 55
-        },
-        {
-          "apn": "20813204",
-          "address": "15431 N 16TH DR   PHOENIX  85023",
-          "distanceMi": 0.38,
-          "soldDate": "2026-03-01",
-          "soldPrice": 245000.0,
-          "landSf": 6886,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1549840,
-          "similarity": 55
         }
       ],
       "valuation": {
-        "mostLikelyValue": 1495602,
-        "rangeLow": 1495602,
+        "mostLikelyValue": 993749,
+        "rangeLow": 993749,
         "rangeHigh": 1495602,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,495,602 (range $1,495,602-$1,495,602)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $993,749 (range $993,749-$1,495,602)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 378,
+      "equityMarginPct": 218,
       "compsAdj": 20,
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-10",
       "peakScore": 58
@@ -38393,7 +38247,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "comps margin 453% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+453% vs assessed, rank 15/459 (+20 pts)"
+        "comps value ~+453% vs assessed, rank 12/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -38523,7 +38377,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+297% vs assessed, rank 50/459 (+20 pts)"
+        "comps value ~+297% vs assessed, rank 45/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -38596,7 +38450,7 @@ window.PHX_LAND_LEADS = {
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": 297,
       "compsAdj": 20,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-10",
       "peakScore": 58
@@ -38652,7 +38506,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-3A",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+208% vs assessed, rank 87/459 (+20 pts)"
+        "comps value ~+208% vs assessed, rank 85/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -38678,7 +38532,7 @@ window.PHX_LAND_LEADS = {
       "equityMarginPct": 208,
       "compsAdj": 20,
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-10",
       "peakScore": 58
@@ -38734,8 +38588,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-10",
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps margin 304% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+304% vs assessed, rank 47/459 (+20 pts)"
+        "comps value ~+279% vs assessed, rank 49/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -38763,6 +38616,18 @@ window.PHX_LAND_LEADS = {
           "similarity": 60
         },
         {
+          "apn": "21433109",
+          "address": "16231 N 38TH WAY   PHOENIX  85032",
+          "distanceMi": 0.54,
+          "soldDate": "2026-08-01",
+          "soldPrice": 535500.0,
+          "landSf": 8108,
+          "livingSpaceSf": 1627.0,
+          "pricePerSf": 329,
+          "pricePerAcre": 2876959,
+          "similarity": 59
+        },
+        {
           "apn": "21464037",
           "address": "16401 N 37TH PL   PHOENIX  85032",
           "distanceMi": 0.69,
@@ -38785,28 +38650,16 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 320,
           "pricePerAcre": 703685,
           "similarity": 58
-        },
-        {
-          "apn": "21513216",
-          "address": "17817 N 43RD PL   PHOENIX  85032",
-          "distanceMi": 0.95,
-          "soldDate": "2026-09-01",
-          "soldPrice": 725000.0,
-          "landSf": 10057,
-          "livingSpaceSf": 1785.0,
-          "pricePerSf": 406,
-          "pricePerAcre": 3140201,
-          "similarity": 57
         }
       ],
       "valuation": {
-        "mostLikelyValue": 1604761,
+        "mostLikelyValue": 1505846,
         "rangeLow": 368320,
-        "rangeHigh": 1643631,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,604,761 (range $368,320-$1,643,631)."
+        "rangeHigh": 1604761,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,505,846 (range $368,320-$1,604,761)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 304,
+      "equityMarginPct": 279,
       "compsAdj": 20,
       "registeredAgent": null,
       "isNew": false,
@@ -38866,7 +38719,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "comps margin 416% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+416% vs assessed, rank 18/459 (+20 pts)"
+        "comps value ~+416% vs assessed, rank 15/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -39012,6 +38865,18 @@ window.PHX_LAND_LEADS = {
           "similarity": 32
         },
         {
+          "apn": "14801219",
+          "address": "4544 W ALTADENA AVE   GLENDALE  85304",
+          "distanceMi": 4.54,
+          "soldDate": "2026-09-01",
+          "soldPrice": 245000.0,
+          "landSf": 7000,
+          "livingSpaceSf": 1631.0,
+          "pricePerSf": 150,
+          "pricePerAcre": 1524600,
+          "similarity": 32
+        },
+        {
           "apn": "14801041",
           "address": "4316 W SIERRA ST   GLENDALE  85304",
           "distanceMi": 4.36,
@@ -39045,18 +38910,6 @@ window.PHX_LAND_LEADS = {
           "livingSpaceSf": 1698.0,
           "pricePerSf": 174,
           "pricePerAcre": 1518039,
-          "similarity": 31
-        },
-        {
-          "apn": "14801435",
-          "address": "4515 W SHAW BUTTE DR   GLENDALE  85304",
-          "distanceMi": 4.34,
-          "soldDate": "2026-07-01",
-          "soldPrice": 410000.0,
-          "landSf": 14822,
-          "livingSpaceSf": 1698.0,
-          "pricePerSf": 241,
-          "pricePerAcre": 1204939,
           "similarity": 31
         }
       ],
@@ -39118,7 +38971,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 9 years",
-        "comps value ~+105% vs assessed, rank 134/459 (+10 pts)"
+        "comps value ~+105% vs assessed, rank 135/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -39244,7 +39097,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 27+ years \u2014 likely low or no debt on the land",
-        "comps value ~+153% vs assessed, rank 109/459 (+20 pts)"
+        "comps value ~+153% vs assessed, rank 108/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -39391,6 +39244,18 @@ window.PHX_LAND_LEADS = {
           "similarity": 71
         },
         {
+          "apn": "20337012Y",
+          "address": "",
+          "distanceMi": 0.73,
+          "soldDate": "2025-11-01",
+          "soldPrice": 150000.0,
+          "landSf": 56810,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 115015,
+          "similarity": 71
+        },
+        {
           "apn": "20325525",
           "address": "2398 W ESPARTERO WAY   PHOENIX  85086",
           "distanceMi": 0.37,
@@ -39425,25 +39290,13 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": null,
           "pricePerAcre": 240323,
           "similarity": 68
-        },
-        {
-          "apn": "20325667",
-          "address": "35605 N VIA TRAMONTO    PHOENIX  85086",
-          "distanceMi": 0.38,
-          "soldDate": "2026-08-01",
-          "soldPrice": 398600.0,
-          "landSf": 22817,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 760968,
-          "similarity": 68
         }
       ],
       "valuation": {
-        "mostLikelyValue": 607540,
+        "mostLikelyValue": 380009,
         "rangeLow": 329506,
         "rangeHigh": 3361810,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $607,540 (range $329,506-$3,361,810).",
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $380,009 (range $329,506-$3,361,810).",
         "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
@@ -39452,6 +39305,137 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-10",
       "peakScore": 81
+    },
+    {
+      "apn": "20325619",
+      "address": "35808 N 27TH AVE   PHOENIX  85086",
+      "ownerName": "YAMAGUCHI FAMILY LIVING TRUST",
+      "ownerMailAddress": "236 EAGLE LN SEDONA AZ USA 86336",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 0.2
+      },
+      "landSf": 55496,
+      "landAcres": 1.274,
+      "puc": "0013",
+      "landUseClass": "residential",
+      "lat": 33.810433122567034,
+      "lng": -112.11827596374019,
+      "assessedValue": 258400.0,
+      "assessedValuePerAcre": 202826.0,
+      "currentZoning": "R1-18",
+      "generalPlanDesignation": "GP code 30",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-10",
+        "targetDensity": 4,
+        "basis": "adjacent parcels already zoned R1-10"
+      },
+      "byRightUnits": 2.5,
+      "rezoneTargetUnits": 5.1,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "TRAMONTO PARCEL E2",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": null,
+      "score": 56,
+      "reasons": [
+        "adjacent parcels already zoned R1-10",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps value ~+89% vs assessed, rank 144/458 (+10 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "20337012Y",
+          "address": "",
+          "distanceMi": 0.85,
+          "soldDate": "2025-11-01",
+          "soldPrice": 150000.0,
+          "landSf": 56810,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 115015,
+          "similarity": 73
+        },
+        {
+          "apn": "20325525",
+          "address": "2398 W ESPARTERO WAY   PHOENIX  85086",
+          "distanceMi": 0.43,
+          "soldDate": "2026-04-01",
+          "soldPrice": 340000.0,
+          "landSf": 38547,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 384217,
+          "similarity": 73
+        },
+        {
+          "apn": "20325698",
+          "address": "2434 W PRAIANO WAY   PHOENIX  85086",
+          "distanceMi": 0.38,
+          "soldDate": "2025-03-01",
+          "soldPrice": 250000.0,
+          "landSf": 45314,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 240323,
+          "similarity": 70
+        },
+        {
+          "apn": "20325667",
+          "address": "35605 N VIA TRAMONTO    PHOENIX  85086",
+          "distanceMi": 0.31,
+          "soldDate": "2026-08-01",
+          "soldPrice": 398600.0,
+          "landSf": 22817,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 760968,
+          "similarity": 70
+        },
+        {
+          "apn": "20325644",
+          "address": "35806 N 26TH AVE   PHOENIX  85086",
+          "distanceMi": 0.15,
+          "soldDate": "2025-07-01",
+          "soldPrice": 245000.0,
+          "landSf": 31991,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 333600,
+          "similarity": 69
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 489497,
+        "rangeLow": 306175,
+        "rangeHigh": 969484,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $489,497 (range $306,175-$969,484)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 89,
+      "compsAdj": 10,
+      "registeredAgent": null,
+      "isNew": true,
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10",
+      "peakScore": 56
     },
     {
       "apn": "21014034E",
@@ -39505,7 +39489,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+36% vs assessed, rank 211/459 (+10 pts)"
+        "comps value ~+36% vs assessed, rank 212/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -39635,7 +39619,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+42% vs assessed, rank 203/459 (+10 pts)"
+        "comps value ~+42% vs assessed, rank 205/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -39675,6 +39659,18 @@ window.PHX_LAND_LEADS = {
           "similarity": 54
         },
         {
+          "apn": "21319174",
+          "address": "2534 E WESCOTT DR   PHOENIX  85050",
+          "distanceMi": 0.49,
+          "soldDate": "2026-06-01",
+          "soldPrice": 483000.0,
+          "landSf": 6199,
+          "livingSpaceSf": 1544.0,
+          "pricePerSf": 313,
+          "pricePerAcre": 3394012,
+          "similarity": 53
+        },
+        {
           "apn": "21314445A",
           "address": "3414 E SEQUOIA DR   PHOENIX  85050",
           "distanceMi": 0.73,
@@ -39685,18 +39681,6 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 327,
           "pricePerAcre": 4131651,
           "similarity": 52
-        },
-        {
-          "apn": "21314030",
-          "address": "3601 E ROSEMONTE DR   PHOENIX  85050",
-          "distanceMi": 0.86,
-          "soldDate": "2026-08-01",
-          "soldPrice": 728000.0,
-          "landSf": 6248,
-          "livingSpaceSf": 2699.0,
-          "pricePerSf": 270,
-          "pricePerAcre": 5075493,
-          "similarity": 51
         }
       ],
       "valuation": {
@@ -39766,7 +39750,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+132% vs assessed, rank 117/459 (+10 pts)"
+        "comps value ~+132% vs assessed, rank 117/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -39897,7 +39881,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+125% vs assessed, rank 119/459 (+10 pts)"
+        "comps value ~+125% vs assessed, rank 119/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -40028,7 +40012,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+76% vs assessed, rank 155/459 (+10 pts)"
+        "comps value ~+76% vs assessed, rank 156/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -40158,7 +40142,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R-3A",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
-        "comps value ~+226% vs assessed, rank 78/459 (+20 pts)"
+        "comps value ~+226% vs assessed, rank 73/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -40237,136 +40221,6 @@ window.PHX_LAND_LEADS = {
       "peakScore": 56
     },
     {
-      "apn": "20816425",
-      "address": "1515 W ST MORITZ LN   PHOENIX  85023",
-      "ownerName": "OROBIYI MICHAEL/ROGERS  NIKE",
-      "ownerMailAddress": "4010 E MINTON CIR MESA AZ USA 85215",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": false,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": false,
-        "isEstateOwner": false,
-        "yearsHeld": 1.2
-      },
-      "landSf": 27261,
-      "landAcres": 0.626,
-      "puc": "0011",
-      "landUseClass": "residential",
-      "lat": 33.619853888826434,
-      "lng": -112.09358929894155,
-      "assessedValue": 278300.0,
-      "assessedValuePerAcre": 444569.0,
-      "currentZoning": "PAD-3",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-8",
-        "targetDensity": 5,
-        "basis": "adjacent parcels already zoned R1-8"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 3.1,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": "07/01/2025",
-      "subdivision": "CORAL GABLES ESTATES WEST",
-      "rebuildsInSub": 0,
-      "salePrice": 350000.0,
-      "defaultDemoCost": null,
-      "score": 56,
-      "reasons": [
-        "adjacent parcels already zoned R1-8",
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address differs from the property city",
-        "comps margin 346% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+346% vs assessed, rank 35/459 (+20 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "20813179",
-          "address": "1533 W BECK LN   PHOENIX  85023",
-          "distanceMi": 0.51,
-          "soldDate": "2025-12-01",
-          "soldPrice": 115000.0,
-          "landSf": 5930,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 844755,
-          "similarity": 61
-        },
-        {
-          "apn": "14959047A",
-          "address": "1920 W WILLOW AVE   PHOENIX  85029",
-          "distanceMi": 0.98,
-          "soldDate": "2026-09-01",
-          "soldPrice": 452000.0,
-          "landSf": 13459,
-          "livingSpaceSf": 2133.0,
-          "pricePerSf": 212,
-          "pricePerAcre": 1462896,
-          "similarity": 58
-        },
-        {
-          "apn": "20813412",
-          "address": "1331 W BECK LN   PHOENIX  85023",
-          "distanceMi": 0.47,
-          "soldDate": "2026-06-01",
-          "soldPrice": 590000.0,
-          "landSf": 9229,
-          "livingSpaceSf": 3046.0,
-          "pricePerSf": 194,
-          "pricePerAcre": 2784744,
-          "similarity": 58
-        },
-        {
-          "apn": "15903124",
-          "address": "13418 N 17TH AVE   PHOENIX  85029",
-          "distanceMi": 0.77,
-          "soldDate": "2026-07-01",
-          "soldPrice": 540000.0,
-          "landSf": 11855,
-          "livingSpaceSf": 1798.0,
-          "pricePerSf": 300,
-          "pricePerAcre": 1984175,
-          "similarity": 58
-        },
-        {
-          "apn": "15903104",
-          "address": "13250 N 11TH AVE   PHOENIX  85029",
-          "distanceMi": 0.96,
-          "soldDate": "2026-08-01",
-          "soldPrice": 354900.0,
-          "landSf": 12397,
-          "livingSpaceSf": 1610.0,
-          "pricePerSf": 220,
-          "pricePerAcre": 1247031,
-          "similarity": 57
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1241749,
-        "rangeLow": 780425,
-        "rangeHigh": 1742766,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,241,749 (range $780,425-$1,742,766)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 346,
-      "compsAdj": 20,
-      "isNew": false,
-      "firstSeen": "2026-10-06",
-      "lastSeen": "2026-10-10",
-      "peakScore": 56
-    },
-    {
       "apn": "20816430",
       "address": "1540 W ST MORITZ LN   PHOENIX  85023",
       "ownerName": "REYNOLDS LIANNE NOEL",
@@ -40417,8 +40271,8 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-8",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
-        "comps margin 581% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+581% vs assessed, rank 9/459 (+20 pts)"
+        "comps margin 352% looks extreme \u2014 verify assessed value/comps before trusting",
+        "comps value ~+352% vs assessed, rank 27/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -40432,6 +40286,18 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": null,
           "pricePerAcre": 844755,
           "similarity": 60
+        },
+        {
+          "apn": "15903183",
+          "address": "1636 W SHARON AVE   PHOENIX  85029",
+          "distanceMi": 0.74,
+          "soldDate": "2026-08-01",
+          "soldPrice": 370000.0,
+          "landSf": 12225,
+          "livingSpaceSf": 1641.0,
+          "pricePerSf": 225,
+          "pricePerAcre": 1318380,
+          "similarity": 56
         },
         {
           "apn": "20813412",
@@ -40468,28 +40334,145 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 293,
           "pricePerAcre": 1984571,
           "similarity": 54
-        },
-        {
-          "apn": "20813037A",
-          "address": "15639 N 17TH DR   PHOENIX  85023",
-          "distanceMi": 0.57,
-          "soldDate": "2026-08-01",
-          "soldPrice": 120000.0,
-          "landSf": 6000,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 871200,
-          "similarity": 54
         }
       ],
       "valuation": {
-        "mostLikelyValue": 1723172,
-        "rangeLow": 1723172,
+        "mostLikelyValue": 1144957,
+        "rangeLow": 1144957,
         "rangeHigh": 1723172,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,723,172 (range $1,723,172-$1,723,172)."
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,144,957 (range $1,144,957-$1,723,172)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 581,
+      "equityMarginPct": 352,
+      "compsAdj": 20,
+      "isNew": false,
+      "firstSeen": "2026-10-06",
+      "lastSeen": "2026-10-10",
+      "peakScore": 56
+    },
+    {
+      "apn": "20816425",
+      "address": "1515 W ST MORITZ LN   PHOENIX  85023",
+      "ownerName": "OROBIYI MICHAEL/ROGERS  NIKE",
+      "ownerMailAddress": "4010 E MINTON CIR MESA AZ USA 85215",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
+        "isEstateOwner": false,
+        "yearsHeld": 1.2
+      },
+      "landSf": 27261,
+      "landAcres": 0.626,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.619853888826434,
+      "lng": -112.09358929894155,
+      "assessedValue": 278300.0,
+      "assessedValuePerAcre": 444569.0,
+      "currentZoning": "PAD-3",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-8",
+        "targetDensity": 5,
+        "basis": "adjacent parcels already zoned R1-8"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 3.1,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": "07/01/2025",
+      "subdivision": "CORAL GABLES ESTATES WEST",
+      "rebuildsInSub": 0,
+      "salePrice": 350000.0,
+      "defaultDemoCost": null,
+      "score": 56,
+      "reasons": [
+        "adjacent parcels already zoned R1-8",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "comps value ~+229% vs assessed, rank 70/458 (+20 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "20813179",
+          "address": "1533 W BECK LN   PHOENIX  85023",
+          "distanceMi": 0.51,
+          "soldDate": "2025-12-01",
+          "soldPrice": 115000.0,
+          "landSf": 5930,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 844755,
+          "similarity": 61
+        },
+        {
+          "apn": "15903183",
+          "address": "1636 W SHARON AVE   PHOENIX  85029",
+          "distanceMi": 0.69,
+          "soldDate": "2026-08-01",
+          "soldPrice": 370000.0,
+          "landSf": 12225,
+          "livingSpaceSf": 1641.0,
+          "pricePerSf": 225,
+          "pricePerAcre": 1318380,
+          "similarity": 59
+        },
+        {
+          "apn": "14959047A",
+          "address": "1920 W WILLOW AVE   PHOENIX  85029",
+          "distanceMi": 0.98,
+          "soldDate": "2026-09-01",
+          "soldPrice": 452000.0,
+          "landSf": 13459,
+          "livingSpaceSf": 2133.0,
+          "pricePerSf": 212,
+          "pricePerAcre": 1462896,
+          "similarity": 58
+        },
+        {
+          "apn": "20813412",
+          "address": "1331 W BECK LN   PHOENIX  85023",
+          "distanceMi": 0.47,
+          "soldDate": "2026-06-01",
+          "soldPrice": 590000.0,
+          "landSf": 9229,
+          "livingSpaceSf": 3046.0,
+          "pricePerSf": 194,
+          "pricePerAcre": 2784744,
+          "similarity": 58
+        },
+        {
+          "apn": "15903124",
+          "address": "13418 N 17TH AVE   PHOENIX  85029",
+          "distanceMi": 0.77,
+          "soldDate": "2026-07-01",
+          "soldPrice": 540000.0,
+          "landSf": 11855,
+          "livingSpaceSf": 1798.0,
+          "pricePerSf": 300,
+          "pricePerAcre": 1984175,
+          "similarity": 58
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 915519,
+        "rangeLow": 825077,
+        "rangeHigh": 1742766,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $915,519 (range $825,077-$1,742,766)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 229,
       "compsAdj": 20,
       "isNew": false,
       "firstSeen": "2026-10-06",
@@ -40548,7 +40531,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "comps margin 323% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+323% vs assessed, rank 40/459 (+20 pts)"
+        "comps value ~+323% vs assessed, rank 35/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -40627,6 +40610,135 @@ window.PHX_LAND_LEADS = {
       "peakScore": 56
     },
     {
+      "apn": "21411890",
+      "address": "1405 E VILLA MARIA DR   PHOENIX  85022",
+      "ownerName": "MALKI NINOS/FERIAL",
+      "ownerMailAddress": "6219 E JUNIPER AVE SCOTTSDALE AZ USA 85254",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
+        "isEstateOwner": false,
+        "yearsHeld": 1.7
+      },
+      "landSf": 18842,
+      "landAcres": 0.433,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.651024531109,
+      "lng": -112.05229444135948,
+      "assessedValue": 287900.0,
+      "assessedValuePerAcre": 664896.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-2",
+        "targetDensity": 12,
+        "basis": "adjacent parcels already zoned R-2"
+      },
+      "byRightUnits": 2.2,
+      "rezoneTargetUnits": 5.2,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": "10/01/2024",
+      "subdivision": "STONE MOUNTAIN PRESERVE AMENDED",
+      "rebuildsInSub": 0,
+      "salePrice": 360000.0,
+      "defaultDemoCost": null,
+      "score": 56,
+      "reasons": [
+        "adjacent parcels already zoned R-2",
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address differs from the property city",
+        "comps value ~+137% vs assessed, rank 115/458 (+20 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "21321213",
+          "address": "18601 N 16TH PL   PHOENIX  85024",
+          "distanceMi": 0.4,
+          "soldDate": "2026-04-01",
+          "soldPrice": 550000.0,
+          "landSf": 13355,
+          "livingSpaceSf": 2259.0,
+          "pricePerSf": 243,
+          "pricePerAcre": 1793935,
+          "similarity": 65
+        },
+        {
+          "apn": "21321094",
+          "address": "1932 E MORROW DR   PHOENIX  85024",
+          "distanceMi": 0.79,
+          "soldDate": "2026-09-01",
+          "soldPrice": 595000.0,
+          "landSf": 10848,
+          "livingSpaceSf": 2329.0,
+          "pricePerSf": 255,
+          "pricePerAcre": 2389215,
+          "similarity": 61
+        },
+        {
+          "apn": "20811007",
+          "address": "17641 N 6TH PL   PHOENIX  85022",
+          "distanceMi": 0.84,
+          "soldDate": "2024-08-01",
+          "soldPrice": 720000.0,
+          "landSf": 19843,
+          "livingSpaceSf": 2578.0,
+          "pricePerSf": 279,
+          "pricePerAcre": 1580567,
+          "similarity": 58
+        },
+        {
+          "apn": "20801285",
+          "address": "322 E WAGONER RD   PHOENIX  85022",
+          "distanceMi": 0.98,
+          "soldDate": "2026-08-01",
+          "soldPrice": 319800.0,
+          "landSf": 9244,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1506976,
+          "similarity": 58
+        },
+        {
+          "apn": "20801371",
+          "address": "452 E ANNETTE DR   PHOENIX  85022",
+          "distanceMi": 0.93,
+          "soldDate": "2026-02-01",
+          "soldPrice": 325000.0,
+          "landSf": 10675,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1326183,
+          "similarity": 57
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 683679,
+        "rangeLow": 573644,
+        "rangeHigh": 1033461,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $683,679 (range $573,644-$1,033,461)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 137,
+      "compsAdj": 20,
+      "isNew": true,
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10",
+      "peakScore": 56
+    },
+    {
       "apn": "21454003",
       "address": "13804 N 28TH ST   PHOENIX  85032",
       "ownerName": "AMICI ANTHONY/SENGER BARBARA J",
@@ -40677,7 +40789,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-8",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
-        "comps value ~+204% vs assessed, rank 88/459 (+20 pts)"
+        "comps value ~+204% vs assessed, rank 86/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -40806,7 +40918,7 @@ window.PHX_LAND_LEADS = {
         "adjacent parcels already zoned R1-8",
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
-        "comps value ~+243% vs assessed, rank 68/459 (+20 pts)"
+        "comps value ~+243% vs assessed, rank 65/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -40936,21 +41048,9 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address differs from the property city",
         "comps margin 368% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+368% vs assessed, rank 26/459 (+20 pts)"
+        "comps value ~+368% vs assessed, rank 21/458 (+20 pts)"
       ],
       "comps": [
-        {
-          "apn": "20604007M",
-          "address": "2819 W LOUISE DR   PHOENIX  85027",
-          "distanceMi": 0.39,
-          "soldDate": "2026-04-01",
-          "soldPrice": 751209.0,
-          "landSf": 8320,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 3933013,
-          "similarity": 59
-        },
         {
           "apn": "20603376",
           "address": "3061 W COUNTRY CLUB TER   PHOENIX  85027",
@@ -40998,13 +41098,25 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 280,
           "pricePerAcre": 2967302,
           "similarity": 58
+        },
+        {
+          "apn": "20603440",
+          "address": "3036 W COUNTRY CLUB TER   PHOENIX  85027",
+          "distanceMi": 0.43,
+          "soldDate": "2026-04-01",
+          "soldPrice": 465000.0,
+          "landSf": 6420,
+          "livingSpaceSf": 1842.0,
+          "pricePerSf": 252,
+          "pricePerAcre": 3155047,
+          "similarity": 57
         }
       ],
       "valuation": {
         "mostLikelyValue": 1042262,
         "rangeLow": 581637,
-        "rangeHigh": 1942218,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,042,262 (range $581,637-$1,942,218)."
+        "rangeHigh": 1465327,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,042,262 (range $581,637-$1,465,327)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
       "equityMarginPct": 368,
@@ -41066,7 +41178,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "comps margin 2080% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+2080% vs assessed, rank 1/459 (+20 pts)"
+        "comps value ~+2080% vs assessed, rank 1/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -41193,7 +41305,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held 30+ years \u2014 likely low or no debt on the land",
         "comps margin 571% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+571% vs assessed, rank 10/459 (+20 pts)"
+        "comps value ~+571% vs assessed, rank 9/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -41659,6 +41771,107 @@ window.PHX_LAND_LEADS = {
       "peakScore": 80
     },
     {
+      "apn": "20907021B",
+      "address": "21436 N 23RD AVE   PHOENIX  85027",
+      "ownerName": "GHOREISHI KAMRAN/YAZDANI-BUICKY MITRA",
+      "ownerMailAddress": "PO BOX 231212 ENCINITAS CA USA 92023",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
+        "isEstateOwner": false,
+        "yearsHeld": 16.4
+      },
+      "landSf": 19490,
+      "landAcres": 0.447,
+      "puc": "0021",
+      "landUseClass": "commercial",
+      "lat": 33.680702714336086,
+      "lng": -112.10913732576829,
+      "assessedValue": 284600.0,
+      "assessedValuePerAcre": 636689.0,
+      "currentZoning": "R-5",
+      "generalPlanDesignation": "GP code 110",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": null,
+      "byRightUnits": 19.2,
+      "rezoneTargetUnits": null,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "BLACK CANYON HEIGHTS",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": null,
+      "score": 55,
+      "reasons": [
+        "parcel size fits small-to-mid infill development",
+        "owner's mailing address is out of state (absentee)",
+        "held 16+ years \u2014 likely low or no debt on the land",
+        "comps value ~+289% vs assessed, rank 46/458 (+20 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "14958067",
+          "address": "1909 W THUNDERBIRD RD   PHOENIX  85023",
+          "distanceMi": 4.86,
+          "soldDate": "2023-08-01",
+          "soldPrice": 1066000.0,
+          "landSf": 18750,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 2476531,
+          "similarity": 28
+        },
+        {
+          "apn": "14923021B",
+          "address": "2737 W THUNDERBIRD RD   PHOENIX  85053",
+          "distanceMi": 4.93,
+          "soldDate": "2025-08-01",
+          "soldPrice": 5290000.0,
+          "landSf": 150684,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1529243,
+          "similarity": 22
+        },
+        {
+          "apn": "14958060B",
+          "address": "1901 W THUNDERBIRD RD   PHOENIX  85023",
+          "distanceMi": 4.87,
+          "soldDate": "2023-09-01",
+          "soldPrice": 2200000.0,
+          "landSf": 39821,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 2406569,
+          "similarity": 19
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1108071,
+        "rangeLow": 1076769,
+        "rangeHigh": 1108071,
+        "explanation": "Based on 3 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,108,071 (range $1,076,769-$1,108,071)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 289,
+      "compsAdj": 20,
+      "isNew": false,
+      "firstSeen": "2026-10-06",
+      "lastSeen": "2026-10-10",
+      "peakScore": 55
+    },
+    {
       "apn": "20907016A",
       "address": "21440 N 23RD AVE   PHOENIX  85027",
       "ownerName": "GHOREISHI KAMRAN/YAZDANI-BUICKY MITRA",
@@ -41709,7 +41922,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "owner's mailing address is out of state (absentee)",
         "held 16+ years \u2014 likely low or no debt on the land",
-        "comps value ~+289% vs assessed, rank 51/459 (+20 pts)"
+        "comps value ~+289% vs assessed, rank 47/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -41740,107 +41953,6 @@ window.PHX_LAND_LEADS = {
           "apn": "14958060B",
           "address": "1901 W THUNDERBIRD RD   PHOENIX  85023",
           "distanceMi": 4.88,
-          "soldDate": "2023-09-01",
-          "soldPrice": 2200000.0,
-          "landSf": 39821,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 2406569,
-          "similarity": 19
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1108071,
-        "rangeLow": 1076769,
-        "rangeHigh": 1108071,
-        "explanation": "Based on 3 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,108,071 (range $1,076,769-$1,108,071)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 289,
-      "compsAdj": 20,
-      "isNew": false,
-      "firstSeen": "2026-10-06",
-      "lastSeen": "2026-10-10",
-      "peakScore": 55
-    },
-    {
-      "apn": "20907021B",
-      "address": "21436 N 23RD AVE   PHOENIX  85027",
-      "ownerName": "GHOREISHI KAMRAN/YAZDANI-BUICKY MITRA",
-      "ownerMailAddress": "PO BOX 231212 ENCINITAS CA USA 92023",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": false,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": false,
-        "isEstateOwner": false,
-        "yearsHeld": 16.4
-      },
-      "landSf": 19490,
-      "landAcres": 0.447,
-      "puc": "0021",
-      "landUseClass": "commercial",
-      "lat": 33.680702714336086,
-      "lng": -112.10913732576829,
-      "assessedValue": 284600.0,
-      "assessedValuePerAcre": 636689.0,
-      "currentZoning": "R-5",
-      "generalPlanDesignation": "GP code 110",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": 19.2,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "BLACK CANYON HEIGHTS",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "score": 55,
-      "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "owner's mailing address is out of state (absentee)",
-        "held 16+ years \u2014 likely low or no debt on the land",
-        "comps value ~+289% vs assessed, rank 52/459 (+20 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "14958067",
-          "address": "1909 W THUNDERBIRD RD   PHOENIX  85023",
-          "distanceMi": 4.86,
-          "soldDate": "2023-08-01",
-          "soldPrice": 1066000.0,
-          "landSf": 18750,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 2476531,
-          "similarity": 28
-        },
-        {
-          "apn": "14923021B",
-          "address": "2737 W THUNDERBIRD RD   PHOENIX  85053",
-          "distanceMi": 4.93,
-          "soldDate": "2025-08-01",
-          "soldPrice": 5290000.0,
-          "landSf": 150684,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1529243,
-          "similarity": 22
-        },
-        {
-          "apn": "14958060B",
-          "address": "1901 W THUNDERBIRD RD   PHOENIX  85023",
-          "distanceMi": 4.87,
           "soldDate": "2023-09-01",
           "soldPrice": 2200000.0,
           "landSf": 39821,
@@ -41932,52 +42044,52 @@ window.PHX_LAND_LEADS = {
           "similarity": 50
         },
         {
-          "apn": "16604292",
-          "address": "3047 E CAPTAIN DREYFUS AVE   PHOENIX  85032",
-          "distanceMi": 0.74,
-          "soldDate": "2025-06-01",
-          "soldPrice": 589000.0,
-          "landSf": 5252,
-          "livingSpaceSf": 2160.0,
-          "pricePerSf": 273,
-          "pricePerAcre": 4885156,
-          "similarity": 45
+          "apn": "16640010A",
+          "address": "12812 N 20TH ST   PHOENIX  85022",
+          "distanceMi": 0.89,
+          "soldDate": "2025-01-01",
+          "soldPrice": 190000.0,
+          "landSf": 8947,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 925048,
+          "similarity": 42
         },
         {
-          "apn": "16656329",
-          "address": "3901 E WINDROSE DR   PHOENIX  85032",
-          "distanceMi": 1.77,
+          "apn": "16506009E",
+          "address": "10030 N 23RD ST   PHOENIX  85028",
+          "distanceMi": 2.26,
+          "soldDate": "2026-03-01",
+          "soldPrice": 2240000.0,
+          "landSf": 43604,
+          "livingSpaceSf": 4922.0,
+          "pricePerSf": 455,
+          "pricePerAcre": 2237740,
+          "similarity": 41
+        },
+        {
+          "apn": "16504088",
+          "address": "2801 E NORTH LN   PHOENIX  85028",
+          "distanceMi": 2.06,
+          "soldDate": "2026-07-01",
+          "soldPrice": 585000.0,
+          "landSf": 11528,
+          "livingSpaceSf": 1921.0,
+          "pricePerSf": 305,
+          "pricePerAcre": 2210496,
+          "similarity": 40
+        },
+        {
+          "apn": "16505282",
+          "address": "2721 E CANNON DR   PHOENIX  85028",
+          "distanceMi": 1.99,
           "soldDate": "2026-06-01",
-          "soldPrice": 362000.0,
-          "landSf": 6830,
-          "livingSpaceSf": 1112.0,
-          "pricePerSf": 326,
-          "pricePerAcre": 2308744,
-          "similarity": 41
-        },
-        {
-          "apn": "16656328",
-          "address": "3907 E WINDROSE DR   PHOENIX  85032",
-          "distanceMi": 1.78,
-          "soldDate": "2026-06-01",
-          "soldPrice": 545400.0,
-          "landSf": 6738,
-          "livingSpaceSf": 1662.0,
-          "pricePerSf": 328,
-          "pricePerAcre": 3525916,
-          "similarity": 41
-        },
-        {
-          "apn": "16601750",
-          "address": "3908 E CAPTAIN DREYFUS AVE   PHOENIX  85032",
-          "distanceMi": 1.73,
-          "soldDate": "2026-04-01",
-          "soldPrice": 590000.0,
-          "landSf": 6597,
-          "livingSpaceSf": 1240.0,
-          "pricePerSf": 476,
-          "pricePerAcre": 3895771,
-          "similarity": 41
+          "soldPrice": 665000.0,
+          "landSf": 9635,
+          "livingSpaceSf": 1652.0,
+          "pricePerSf": 403,
+          "pricePerAcre": 3006476,
+          "similarity": 40
         }
       ],
       "valuation": null,
@@ -42069,6 +42181,18 @@ window.PHX_LAND_LEADS = {
           "similarity": 71
         },
         {
+          "apn": "20337012Y",
+          "address": "",
+          "distanceMi": 0.82,
+          "soldDate": "2025-11-01",
+          "soldPrice": 150000.0,
+          "landSf": 56810,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 115015,
+          "similarity": 70
+        },
+        {
           "apn": "20325683",
           "address": "2433 W PRAIANO WAY   PHOENIX  85086",
           "distanceMi": 0.09,
@@ -42091,25 +42215,13 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": null,
           "pricePerAcre": 240323,
           "similarity": 69
-        },
-        {
-          "apn": "20325691",
-          "address": "36133 N 24TH AVE   PHOENIX  85086",
-          "distanceMi": 0.24,
-          "soldDate": "2025-10-01",
-          "soldPrice": 2850000.0,
-          "landSf": 76524,
-          "livingSpaceSf": 5201.0,
-          "pricePerSf": 548,
-          "pricePerAcre": 1622315,
-          "similarity": 68
         }
       ],
       "valuation": {
-        "mostLikelyValue": 613036,
+        "mostLikelyValue": 383447,
         "rangeLow": 332486,
         "rangeHigh": 3392217,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $613,036 (range $332,486-$3,392,217).",
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $383,447 (range $332,486-$3,392,217).",
         "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
@@ -42176,6 +42288,18 @@ window.PHX_LAND_LEADS = {
       ],
       "comps": [
         {
+          "apn": "20337012X",
+          "address": "",
+          "distanceMi": 0.98,
+          "soldDate": "2025-11-01",
+          "soldPrice": 150000.0,
+          "landSf": 117368,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 55671,
+          "similarity": 71
+        },
+        {
           "apn": "20325689",
           "address": "36031 N 24TH AVE   PHOENIX  85086",
           "distanceMi": 0.07,
@@ -42222,25 +42346,13 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 548,
           "pricePerAcre": 1622315,
           "similarity": 63
-        },
-        {
-          "apn": "20325698",
-          "address": "2434 W PRAIANO WAY   PHOENIX  85086",
-          "distanceMi": 0.16,
-          "soldDate": "2025-03-01",
-          "soldPrice": 250000.0,
-          "landSf": 45314,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 240323,
-          "similarity": 63
         }
       ],
       "valuation": {
-        "mostLikelyValue": 684584,
-        "rangeLow": 593602,
+        "mostLikelyValue": 593602,
+        "rangeLow": 158585,
         "rangeHigh": 4621325,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $684,584 (range $593,602-$4,621,325).",
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $593,602 (range $158,585-$4,621,325).",
         "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
@@ -42331,6 +42443,18 @@ window.PHX_LAND_LEADS = {
           "similarity": 69
         },
         {
+          "apn": "20337012X",
+          "address": "",
+          "distanceMi": 0.94,
+          "soldDate": "2025-11-01",
+          "soldPrice": 150000.0,
+          "landSf": 117368,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 55671,
+          "similarity": 69
+        },
+        {
           "apn": "20325691",
           "address": "36133 N 24TH AVE   PHOENIX  85086",
           "distanceMi": 0.09,
@@ -42353,25 +42477,13 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": null,
           "pricePerAcre": 760968,
           "similarity": 66
-        },
-        {
-          "apn": "20325698",
-          "address": "2434 W PRAIANO WAY   PHOENIX  85086",
-          "distanceMi": 0.14,
-          "soldDate": "2025-03-01",
-          "soldPrice": 250000.0,
-          "landSf": 45314,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 240323,
-          "similarity": 65
         }
       ],
       "valuation": {
-        "mostLikelyValue": 522830,
+        "mostLikelyValue": 835874,
         "rangeLow": 453345,
         "rangeHigh": 3529391,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $522,830 (range $453,345-$3,529,391).",
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $835,874 (range $453,345-$3,529,391).",
         "unreliable": true
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
@@ -42508,137 +42620,6 @@ window.PHX_LAND_LEADS = {
       "peakScore": 54
     },
     {
-      "apn": "20904069A",
-      "address": "22435 N 27TH AVE   PHOENIX  85027",
-      "ownerName": "22435 N 27TH AVENUE LLC",
-      "ownerMailAddress": "7443 W CREST LN GLENDALE AZ USA 85310",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 2.3
-      },
-      "landSf": 58957,
-      "landAcres": 1.353,
-      "puc": "0011",
-      "landUseClass": "residential",
-      "lat": 33.69024559487788,
-      "lng": -112.11574263116937,
-      "assessedValue": 215500.0,
-      "assessedValuePerAcre": 159276.0,
-      "currentZoning": "R-4A",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "RE-43",
-        "targetDensity": 1,
-        "basis": "adjacent parcels already zoned RE-43"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 1.4,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "STATE PLAT NO 11 TOWNSITE OF ADOBE",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "score": 54,
-      "reasons": [
-        "adjacent parcels already zoned RE-43",
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [
-        {
-          "apn": "20003013K",
-          "address": "6308 W PARKSIDE LN   GLENDALE  85310",
-          "distanceMi": 4.64,
-          "soldDate": "2025-06-01",
-          "soldPrice": 2225000.0,
-          "landSf": 47550,
-          "livingSpaceSf": 3896.0,
-          "pricePerSf": 571,
-          "pricePerAcre": 2038297,
-          "similarity": 41
-        },
-        {
-          "apn": "20002002E",
-          "address": "0 N 61ST DR   GLENDALE  85310",
-          "distanceMi": 4.38,
-          "soldDate": "2023-01-01",
-          "soldPrice": 420000.0,
-          "landSf": 54232,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 337351,
-          "similarity": 40
-        },
-        {
-          "apn": "20005475",
-          "address": "22415 N 63RD DR   GLENDALE  85310",
-          "distanceMi": 4.66,
-          "soldDate": "2026-08-01",
-          "soldPrice": 1100000.0,
-          "landSf": 22617,
-          "livingSpaceSf": 3479.0,
-          "pricePerSf": 316,
-          "pricePerAcre": 2118583,
-          "similarity": 39
-        },
-        {
-          "apn": "20022100",
-          "address": "6337 W DEER VALLEY RD   GLENDALE  85308",
-          "distanceMi": 4.65,
-          "soldDate": "2025-08-01",
-          "soldPrice": 1250000.0,
-          "landSf": 29744,
-          "livingSpaceSf": 4875.0,
-          "pricePerSf": 256,
-          "pricePerAcre": 1830621,
-          "similarity": 36
-        },
-        {
-          "apn": "20022060",
-          "address": "6091 W ROSE GARDEN LN   GLENDALE  85308",
-          "distanceMi": 4.5,
-          "soldDate": "2026-07-01",
-          "soldPrice": 785000.0,
-          "landSf": 12000,
-          "livingSpaceSf": 4045.0,
-          "pricePerSf": 194,
-          "pricePerAcre": 2849550,
-          "similarity": 35
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 2758766,
-        "rangeLow": 456593,
-        "rangeHigh": 2867432,
-        "explanation": "Based on 5 comparable sales within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $2,758,766 (range $456,593-$2,867,432).",
-        "unreliable": true
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": null,
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-10",
-      "peakScore": 79
-    },
-    {
       "apn": "21570354",
       "address": "15010 N TATUM BLVD   PHOENIX  85032",
       "ownerName": "OPI-TATUM LLC",
@@ -42690,7 +42671,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 12 years",
-        "comps value ~+108% vs assessed, rank 130/459 (+10 pts)"
+        "comps value ~+108% vs assessed, rank 130/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -42821,7 +42802,7 @@ window.PHX_LAND_LEADS = {
         "parcel size fits small-to-mid infill development",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 9 years",
-        "comps value ~+77% vs assessed, rank 152/459 (+10 pts)"
+        "comps value ~+77% vs assessed, rank 152/458 (+10 pts)"
       ],
       "comps": [
         {
@@ -42901,89 +42882,132 @@ window.PHX_LAND_LEADS = {
       "peakScore": 54
     },
     {
-      "apn": "20712001C",
-      "address": "4250 W THUNDERBIRD RD   PHOENIX  85053",
-      "ownerName": "43 THUNDERBIRD LLC",
-      "ownerMailAddress": "2801 E CAMELBACK RD STE 450 PHOENIX AZ USA 85016",
+      "apn": "20338023",
+      "address": "36221 N 30TH DR   PHOENIX  85086",
+      "ownerName": "JUNG PETER MICHAEL IV",
+      "ownerMailAddress": "10342 E LAGUNA AZUL AVE MESA AZ USA 85209",
       "ownership": {
         "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": false,
         "isOwnerOccupied": false,
-        "isHiddenOwner": true,
+        "isHiddenOwner": false,
         "isEstateOwner": false,
-        "yearsHeld": 2.6
+        "yearsHeld": 6.7
       },
-      "landSf": 44005,
-      "landAcres": 1.01,
-      "puc": "0021",
-      "landUseClass": "commercial",
-      "lat": 33.61116778592925,
-      "lng": -112.15060675610795,
-      "assessedValue": 1067200.0,
-      "assessedValuePerAcre": 1056634.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 70",
+      "landSf": 43561,
+      "landAcres": 1.0,
+      "puc": "0014",
+      "landUseClass": "residential",
+      "lat": 33.813675876076964,
+      "lng": -112.12478163557789,
+      "assessedValue": 162600.0,
+      "assessedValuePerAcre": 162600.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 990",
       "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
-        "targetZone": "R1-8",
-        "targetDensity": 5,
-        "basis": "adjacent parcels already zoned R1-8"
+        "targetZone": "R1-10",
+        "targetDensity": 4,
+        "basis": "adjacent parcels already zoned R1-10"
       },
       "byRightUnits": null,
-      "rezoneTargetUnits": 5.0,
+      "rezoneTargetUnits": 4.0,
       "dealType": "subdivision",
       "referenceCostPerLotAZ": 65000,
       "parcelStatus": "vacant",
       "livingSpaceSf": null,
       "farRatio": null,
       "yearBuilt": null,
-      "codeCases": {
-        "count": 2,
-        "severe": false,
-        "distress": false
-      },
-      "saleDate": null,
+      "codeCases": null,
+      "saleDate": "01/01/2020",
       "subdivision": "",
       "rebuildsInSub": 0,
-      "salePrice": null,
+      "salePrice": 134000.0,
       "defaultDemoCost": null,
       "score": 54,
       "reasons": [
-        "adjacent parcels already zoned R1-8",
+        "adjacent parcels already zoned R1-10",
         "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "2 code-enforcement cases at this address (2024+)",
-        "comps value ~+70% vs assessed, rank 165/459 (+10 pts)"
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "owner's mailing address differs from the property city",
+        "comps value ~+136% vs assessed, rank 116/458 (+10 pts)"
       ],
       "comps": [
         {
-          "apn": "14701011",
-          "address": "4491 W NORTHERN AVE   GLENDALE  85301",
-          "distanceMi": 4.04,
-          "soldDate": "2026-05-01",
-          "soldPrice": 685000.0,
-          "landSf": 16591,
+          "apn": "20325525",
+          "address": "2398 W ESPARTERO WAY   PHOENIX  85086",
+          "distanceMi": 0.86,
+          "soldDate": "2026-04-01",
+          "soldPrice": 340000.0,
+          "landSf": 38547,
           "livingSpaceSf": null,
           "pricePerSf": null,
-          "pricePerAcre": 1798481,
-          "similarity": 30
+          "pricePerAcre": 384217,
+          "similarity": 73
+        },
+        {
+          "apn": "20325698",
+          "address": "2434 W PRAIANO WAY   PHOENIX  85086",
+          "distanceMi": 0.75,
+          "soldDate": "2025-03-01",
+          "soldPrice": 250000.0,
+          "landSf": 45314,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 240323,
+          "similarity": 70
+        },
+        {
+          "apn": "20337012Y",
+          "address": "",
+          "distanceMi": 0.7,
+          "soldDate": "2025-11-01",
+          "soldPrice": 150000.0,
+          "landSf": 56810,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 115015,
+          "similarity": 70
+        },
+        {
+          "apn": "20325644",
+          "address": "35806 N 26TH AVE   PHOENIX  85086",
+          "distanceMi": 0.57,
+          "soldDate": "2025-07-01",
+          "soldPrice": 245000.0,
+          "landSf": 31991,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 333600,
+          "similarity": 69
+        },
+        {
+          "apn": "20325667",
+          "address": "35605 N VIA TRAMONTO    PHOENIX  85086",
+          "distanceMi": 0.74,
+          "soldDate": "2026-08-01",
+          "soldPrice": 398600.0,
+          "landSf": 22817,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 760968,
+          "similarity": 68
         }
       ],
       "valuation": {
-        "mostLikelyValue": 1816854,
-        "rangeLow": 1816854,
-        "rangeHigh": 1816854,
-        "explanation": "Based on 1 comparable sale within 5 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,816,854 (range $1,816,854-$1,816,854)."
+        "mostLikelyValue": 384225,
+        "rangeLow": 240329,
+        "rangeHigh": 760986,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $384,225 (range $240,329-$760,986)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 70,
+      "equityMarginPct": 136,
       "compsAdj": 10,
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-05",
+      "isNew": true,
+      "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-10",
       "peakScore": 54
     },
@@ -43036,7 +43060,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "comps margin 1836% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+1836% vs assessed, rank 3/459 (+20 pts)"
+        "comps value ~+1836% vs assessed, rank 3/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -43064,18 +43088,6 @@ window.PHX_LAND_LEADS = {
           "similarity": 60
         },
         {
-          "apn": "20310878",
-          "address": "38521 N DONOVAN CT   PHOENIX  85086",
-          "distanceMi": 0.44,
-          "soldDate": "2026-06-01",
-          "soldPrice": 1125000.0,
-          "landSf": 14513,
-          "livingSpaceSf": 4911.0,
-          "pricePerSf": 229,
-          "pricePerAcre": 3376628,
-          "similarity": 59
-        },
-        {
           "apn": "20310848",
           "address": "3611 W HIDDEN MOUNTAIN LN   PHOENIX  85086",
           "distanceMi": 0.28,
@@ -43098,6 +43110,18 @@ window.PHX_LAND_LEADS = {
           "pricePerSf": 276,
           "pricePerAcre": 3605942,
           "similarity": 58
+        },
+        {
+          "apn": "20310845",
+          "address": "3551 W HIDDEN MOUNTAIN LN   PHOENIX  85086",
+          "distanceMi": 0.27,
+          "soldDate": "2026-02-01",
+          "soldPrice": 875000.0,
+          "landSf": 11882,
+          "livingSpaceSf": 3514.0,
+          "pricePerSf": 249,
+          "pricePerAcre": 3207793,
+          "similarity": 57
         }
       ],
       "valuation": {
@@ -43164,7 +43188,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "comps margin 2059% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+2059% vs assessed, rank 2/459 (+20 pts)"
+        "comps value ~+2059% vs assessed, rank 2/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -43291,7 +43315,7 @@ window.PHX_LAND_LEADS = {
         "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+150% vs assessed, rank 111/459 (+20 pts)"
+        "comps value ~+150% vs assessed, rank 110/458 (+20 pts)"
       ],
       "comps": [
         {
@@ -43371,46 +43395,50 @@ window.PHX_LAND_LEADS = {
       "peakScore": 54
     },
     {
-      "apn": "21011008E",
-      "address": "26306 N 15TH AVE   PHOENIX  85085",
-      "ownerName": "CROOKS BRADLEY DEAN",
-      "ownerMailAddress": "26306 N 15TH AVE PHOENIX AZ USA 85085",
+      "apn": "20604018H",
+      "address": "3013 W FOOTHILL DR   PHOENIX  85027",
+      "ownerName": "BORGMAN DON",
+      "ownerMailAddress": "2215 W MORNINGSIDE DR PHOENIX AZ USA 85023",
       "ownership": {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
         "isEntityOwner": false,
-        "isOwnerOccupied": true,
+        "isOwnerOccupied": false,
         "isHiddenOwner": false,
         "isEstateOwner": false,
-        "yearsHeld": 10.0
+        "yearsHeld": 0.1
       },
-      "landSf": 17485,
-      "landAcres": 0.401,
-      "puc": "0014",
+      "landSf": 27878,
+      "landAcres": 0.64,
+      "puc": "0012",
       "landUseClass": "residential",
-      "lat": 33.72547103693249,
-      "lng": -112.09266947477967,
-      "assessedValue": 130300.0,
-      "assessedValuePerAcre": 324938.0,
-      "currentZoning": "COUNTY",
-      "generalPlanDesignation": "GP code 220",
+      "lat": 33.6876904197415,
+      "lng": -112.12473058254346,
+      "assessedValue": 233700.0,
+      "assessedValuePerAcre": 365156.0,
+      "currentZoning": "R-4A",
+      "generalPlanDesignation": "GP code 38",
       "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
+        "targetZone": "R-2",
+        "targetDensity": 12,
+        "basis": "adjacent parcels already zoned R-2"
       },
       "byRightUnits": null,
-      "rezoneTargetUnits": 2.4,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
+      "rezoneTargetUnits": 7.7,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
       "parcelStatus": "vacant",
       "livingSpaceSf": null,
       "farRatio": null,
       "yearBuilt": null,
-      "codeCases": null,
+      "codeCases": {
+        "count": 2,
+        "severe": false,
+        "distress": false
+      },
       "saleDate": null,
       "subdivision": "",
       "rebuildsInSub": 0,
@@ -43418,228 +43446,228 @@ window.PHX_LAND_LEADS = {
       "defaultDemoCost": null,
       "score": 54,
       "reasons": [
-        "adjacent parcels already zoned R1-6",
+        "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
-        "held 10 years",
-        "comps margin 765% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+765% vs assessed, rank 7/459 (+20 pts)"
+        "2 code-enforcement cases at this address (2024+)",
+        "comps margin 443% looks extreme \u2014 verify assessed value/comps before trusting",
+        "comps value ~+443% vs assessed, rank 13/458 (+20 pts)"
       ],
       "comps": [
         {
-          "apn": "21010015B",
-          "address": "",
-          "distanceMi": 0.53,
-          "soldDate": "2026-06-01",
-          "soldPrice": 950000.0,
-          "landSf": 37225,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1111672,
-          "similarity": 68
+          "apn": "20603376",
+          "address": "3061 W COUNTRY CLUB TER   PHOENIX  85027",
+          "distanceMi": 0.25,
+          "soldDate": "2026-08-01",
+          "soldPrice": 322500.0,
+          "landSf": 6656,
+          "livingSpaceSf": 2082.0,
+          "pricePerSf": 155,
+          "pricePerAcre": 2110592,
+          "similarity": 59
         },
         {
-          "apn": "21002082",
-          "address": "1732 W GAMBIT TRL   PHOENIX  85085",
-          "distanceMi": 0.76,
+          "apn": "20603223",
+          "address": "22616 N 31ST DR   PHOENIX  85027",
+          "distanceMi": 0.31,
+          "soldDate": "2026-03-01",
+          "soldPrice": 458000.0,
+          "landSf": 10054,
+          "livingSpaceSf": 1465.0,
+          "pricePerSf": 313,
+          "pricePerAcre": 1984333,
+          "similarity": 58
+        },
+        {
+          "apn": "20602122",
+          "address": "3311 W WALTER WAY   PHOENIX  85027",
+          "distanceMi": 0.63,
+          "soldDate": "2026-06-01",
+          "soldPrice": 608000.0,
+          "landSf": 9363,
+          "livingSpaceSf": 2313.0,
+          "pricePerSf": 263,
+          "pricePerAcre": 2828632,
+          "similarity": 57
+        },
+        {
+          "apn": "20603391",
+          "address": "22625 N 30TH AVE   PHOENIX  85027",
+          "distanceMi": 0.34,
+          "soldDate": "2026-05-01",
+          "soldPrice": 450000.0,
+          "landSf": 6606,
+          "livingSpaceSf": 1608.0,
+          "pricePerSf": 280,
+          "pricePerAcre": 2967302,
+          "similarity": 57
+        },
+        {
+          "apn": "20603563",
+          "address": "3214 W LOUISE DR   PHOENIX  85027",
+          "distanceMi": 0.25,
           "soldDate": "2026-04-01",
-          "soldPrice": 1035000.0,
-          "landSf": 16058,
-          "livingSpaceSf": 4287.0,
-          "pricePerSf": 241,
-          "pricePerAcre": 2807610,
-          "similarity": 66
-        },
-        {
-          "apn": "21002078",
-          "address": "1708 W GAMBIT TRL   PHOENIX  85085",
-          "distanceMi": 0.74,
-          "soldDate": "2025-07-01",
-          "soldPrice": 1122500.0,
-          "landSf": 18445,
-          "livingSpaceSf": 4123.0,
-          "pricePerSf": 272,
-          "pricePerAcre": 2650914,
-          "similarity": 63
-        },
-        {
-          "apn": "21003812",
-          "address": "1656 W CAVEDALE DR   PHOENIX  85085",
-          "distanceMi": 0.24,
-          "soldDate": "2026-06-01",
-          "soldPrice": 690000.0,
-          "landSf": 6950,
-          "livingSpaceSf": 2020.0,
-          "pricePerSf": 342,
-          "pricePerAcre": 4324662,
-          "similarity": 61
-        },
-        {
-          "apn": "21002304",
-          "address": "27721 N 15TH DR   PHOENIX  85085",
-          "distanceMi": 0.77,
-          "soldDate": "2025-09-01",
-          "soldPrice": 1100000.0,
-          "landSf": 12617,
-          "livingSpaceSf": 3385.0,
-          "pricePerSf": 325,
-          "pricePerAcre": 3797733,
-          "similarity": 60
+          "soldPrice": 390000.0,
+          "landSf": 6095,
+          "livingSpaceSf": 1310.0,
+          "pricePerSf": 298,
+          "pricePerAcre": 2787268,
+          "similarity": 57
         }
       ],
       "valuation": {
-        "mostLikelyValue": 1126976,
-        "rangeLow": 446226,
-        "rangeHigh": 1735921,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,126,976 (range $446,226-$1,735,921)."
+        "mostLikelyValue": 1269955,
+        "rangeLow": 1269955,
+        "rangeHigh": 1810298,
+        "explanation": "Based on 5 comparable sales within 1 miles, valued as vacant land and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,269,955 (range $1,269,955-$1,810,298)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 765,
+      "equityMarginPct": 443,
       "compsAdj": 20,
-      "isNew": false,
-      "firstSeen": "2026-10-06",
+      "isNew": true,
+      "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-10",
       "peakScore": 54
     },
     {
-      "apn": "16766003",
-      "address": "4713 E CHOLLA ST   PHOENIX  85028",
-      "ownerName": "EDGERTON LIVING TRUST",
-      "ownerMailAddress": "4713 E CHOLLA ST PHOENIX AZ USA 85028",
+      "apn": "16771075",
+      "address": "4310 E SHEA BLVD   PHOENIX  85028",
+      "ownerName": "GARCIA GUY PHINIA M",
+      "ownerMailAddress": "4310 E SHEA BLVD PHOENIX AZ USA 85028",
       "ownership": {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": false,
-        "isEntityOwner": true,
+        "isEntityOwner": false,
         "isOwnerOccupied": true,
         "isHiddenOwner": false,
         "isEstateOwner": false,
-        "yearsHeld": 3.7
+        "yearsHeld": 14.2
       },
-      "landSf": 44855,
-      "landAcres": 1.03,
+      "landSf": 17880,
+      "landAcres": 0.41,
       "puc": "0141",
       "landUseClass": "residential",
-      "lat": 33.589395961181076,
-      "lng": -111.9792845560895,
-      "assessedValue": 1525000.0,
-      "assessedValuePerAcre": 1480583.0,
-      "currentZoning": "PCD",
-      "generalPlanDesignation": "GP code 24",
+      "lat": 33.583062934428774,
+      "lng": -111.98828524707314,
+      "assessedValue": 559100.0,
+      "assessedValuePerAcre": 1363659.0,
+      "currentZoning": "R1-18",
+      "generalPlanDesignation": "GP code 38",
       "floodZone": null,
       "inFloodplain": false,
       "rezoningNearby": 0,
       "rezoneTarget": {
-        "targetZone": "R1-10",
-        "targetDensity": 4,
-        "basis": "adjacent parcels already zoned R1-10"
+        "targetZone": "R-2",
+        "targetDensity": 12,
+        "basis": "adjacent parcels already zoned R-2"
       },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 4.1,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
+      "byRightUnits": 0.8,
+      "rezoneTargetUnits": 4.9,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
       "parcelStatus": "improved",
-      "livingSpaceSf": 3679.0,
-      "farRatio": 0.0820198417121837,
-      "yearBuilt": "1969",
-      "codeCases": null,
+      "livingSpaceSf": 2071.0,
+      "farRatio": 0.11582774049217003,
+      "yearBuilt": "1960",
+      "codeCases": {
+        "count": 2,
+        "severe": true,
+        "distress": false
+      },
       "saleDate": null,
-      "subdivision": "MORNINGSIDE  BLK 1, 2",
-      "rebuildsInSub": 5,
+      "subdivision": "ORINDA",
+      "rebuildsInSub": 0,
       "salePrice": null,
       "defaultDemoCost": 18000,
-      "score": 89,
+      "score": 83,
       "reasons": [
-        "adjacent parcels already zoned R1-10",
+        "adjacent parcels already zoned R-2",
         "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
-        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
-        "5 homes rebuilt since 2015 in MORNINGSIDE  BLK 1, 2 \u2014 proven teardown neighborhood",
-        "built 1969, no sale in 15+ years \u2014 likely dated/deferred maintenance",
-        "comps value ~+23% vs assessed, rank 227/450 (+4 pts)"
+        "held 14 years",
+        "city issued a violation notice, ticket, or abatement here",
+        "2 code-enforcement cases at this address (2024+)",
+        "existing structure occupies only 12% of the lot \u2014 under-improved for the land size",
+        "built 1960, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps value ~+34% vs assessed, rank 216/459 (+10 pts)"
       ],
       "comps": [
         {
-          "apn": "16752084",
-          "address": "11630 N 52ND ST   SCOTTSDALE  85254",
-          "distanceMi": 0.6,
-          "soldDate": "2026-01-01",
-          "soldPrice": 1475000.0,
-          "landSf": 35260,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1822206,
-          "similarity": 64
-        },
-        {
-          "apn": "16722040",
-          "address": "5221 E LARKSPUR DR   SCOTTSDALE  85254",
-          "distanceMi": 0.99,
-          "soldDate": "2025-12-01",
-          "soldPrice": 1330000.0,
-          "landSf": 38556,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1502614,
-          "similarity": 62
-        },
-        {
-          "apn": "16763030",
-          "address": "5317 E YUCCA ST   SCOTTSDALE  85254",
-          "distanceMi": 0.72,
-          "soldDate": "2025-03-01",
-          "soldPrice": 1665225.0,
-          "landSf": 34865,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 2080516,
-          "similarity": 58
-        },
-        {
           "apn": "16771078",
           "address": "4344 E SHEA BLVD   PHOENIX  85028",
-          "distanceMi": 0.62,
+          "distanceMi": 0.08,
           "soldDate": "2026-04-01",
           "soldPrice": 450000.0,
           "landSf": 17951,
           "livingSpaceSf": null,
           "pricePerSf": null,
           "pricePerAcre": 1091973,
+          "similarity": 74
+        },
+        {
+          "apn": "16812005A",
+          "address": "10001 N 40TH ST   PHOENIX  85028",
+          "distanceMi": 0.54,
+          "soldDate": "2026-04-01",
+          "soldPrice": 1400000.0,
+          "landSf": 52145,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1169508,
           "similarity": 57
         },
         {
           "apn": "16742039",
           "address": "5139 E SHAW BUTTE DR   SCOTTSDALE  85254",
-          "distanceMi": 0.72,
+          "distanceMi": 1.4,
           "soldDate": "2026-01-01",
           "soldPrice": 750000.0,
           "landSf": 10400,
           "livingSpaceSf": null,
           "pricePerSf": null,
           "pricePerAcre": 3141346,
-          "similarity": 52
+          "similarity": 53
+        },
+        {
+          "apn": "16752084",
+          "address": "11630 N 52ND ST   SCOTTSDALE  85254",
+          "distanceMi": 1.26,
+          "soldDate": "2026-01-01",
+          "soldPrice": 1475000.0,
+          "landSf": 35260,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1822206,
+          "similarity": 53
+        },
+        {
+          "apn": "16517039",
+          "address": "3015 E PUGET AVE   PHOENIX  85028",
+          "distanceMi": 1.92,
+          "soldDate": "2025-12-01",
+          "soldPrice": 850000.0,
+          "landSf": 12961,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 2856724,
+          "similarity": 51
         }
       ],
       "valuation": {
-        "mostLikelyValue": 1876379,
-        "rangeLow": 1124436,
-        "rangeHigh": 2142368,
-        "explanation": "Based on 5 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,876,379 (range $1,124,436-$2,142,368)."
+        "mostLikelyValue": 747958,
+        "rangeLow": 448220,
+        "rangeHigh": 1289423,
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $747,958 (range $448,220-$1,289,423)."
       },
       "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 23,
-      "compsAdj": 4,
+      "equityMarginPct": 34,
+      "compsAdj": 10,
       "newBuild": {
-        "arv": 2780000,
-        "psf": 630,
-        "n": 4,
+        "arv": 3187500,
+        "psf": 702,
+        "n": 6,
         "radiusMi": 1.0,
+        "lowPsf": 542,
+        "highPsf": 942,
         "examples": [
-          {
-            "address": "5101 E LAUREL LN",
-            "price": 2235000,
-            "sf": 3542,
-            "sold": "2026-05-01"
-          },
           {
             "address": "4224 E DESERT COVE AVE",
             "price": 3325000,
@@ -43651,13 +43679,204 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186,
             "sold": "2025-11-01"
+          },
+          {
+            "address": "4116 E MOUNTAIN VIEW RD",
+            "price": 6225000,
+            "sf": 7396,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "10025 N 39TH ST",
+            "price": 3050000,
+            "sf": 3936,
+            "sold": "2025-06-01"
+          },
+          {
+            "address": "9518 N 46TH ST",
+            "price": 4850000,
+            "sf": 5146,
+            "sold": "2026-02-01"
           }
         ]
       },
       "isNew": false,
-      "firstSeen": "2026-10-05",
-      "lastSeen": "2026-10-06",
-      "peakScore": 89,
+      "firstSeen": "2026-10-06",
+      "lastSeen": "2026-10-10",
+      "peakScore": 83,
+      "stale": true
+    },
+    {
+      "apn": "16768058",
+      "address": "4327 E CHOLLA ST   PHOENIX  85028",
+      "ownerName": "LAUER WILLIAM H/MCATEE ROBERT L",
+      "ownerMailAddress": "4327 E CHOLLA ST PHOENIX AZ USA 85028",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": false,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
+        "isEstateOwner": false,
+        "yearsHeld": 19.0
+      },
+      "landSf": 18088,
+      "landAcres": 0.415,
+      "puc": "0141",
+      "landUseClass": "residential",
+      "lat": 33.589653027332766,
+      "lng": -111.98723851134638,
+      "assessedValue": 756000.0,
+      "assessedValuePerAcre": 1821687.0,
+      "currentZoning": "R1-18",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-2",
+        "targetDensity": 12,
+        "basis": "adjacent parcels already zoned R-2"
+      },
+      "byRightUnits": 0.8,
+      "rezoneTargetUnits": 5.0,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 2146.0,
+      "farRatio": 0.1186421937195931,
+      "yearBuilt": "1975",
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "PARADISE VALLEY PALMS UNIT 5 AMD",
+      "rebuildsInSub": 2,
+      "salePrice": null,
+      "defaultDemoCost": 18000,
+      "score": 82,
+      "reasons": [
+        "adjacent parcels already zoned R-2",
+        "parcel size fits small-to-mid infill development",
+        "held 19+ years \u2014 likely low or no debt on the land",
+        "existing structure occupies only 12% of the lot \u2014 under-improved for the land size",
+        "2 homes rebuilt since 2015 in PARADISE VALLEY PALMS UNIT 5 AMD",
+        "built 1975, no sale in 15+ years \u2014 likely dated/deferred maintenance",
+        "comps value ~+38% vs assessed, rank 208/459 (+10 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "16771078",
+          "address": "4344 E SHEA BLVD   PHOENIX  85028",
+          "distanceMi": 0.46,
+          "soldDate": "2026-04-01",
+          "soldPrice": 450000.0,
+          "landSf": 17951,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1091973,
+          "similarity": 70
+        },
+        {
+          "apn": "16705317",
+          "address": "5120 E EMILE ZOLA AVE   SCOTTSDALE  85254",
+          "distanceMi": 1.62,
+          "soldDate": "2026-04-01",
+          "soldPrice": 825000.0,
+          "landSf": 14352,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 2503972,
+          "similarity": 57
+        },
+        {
+          "apn": "16742039",
+          "address": "5139 E SHAW BUTTE DR   SCOTTSDALE  85254",
+          "distanceMi": 1.1,
+          "soldDate": "2026-01-01",
+          "soldPrice": 750000.0,
+          "landSf": 10400,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 3141346,
+          "similarity": 56
+        },
+        {
+          "apn": "16752084",
+          "address": "11630 N 52ND ST   SCOTTSDALE  85254",
+          "distanceMi": 1.03,
+          "soldDate": "2026-01-01",
+          "soldPrice": 1475000.0,
+          "landSf": 35260,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1822206,
+          "similarity": 55
+        },
+        {
+          "apn": "16707275",
+          "address": "12412 N 57TH WAY   SCOTTSDALE  85254",
+          "distanceMi": 1.83,
+          "soldDate": "2025-12-01",
+          "soldPrice": 1015000.0,
+          "landSf": 15122,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 2923780,
+          "similarity": 54
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1039758,
+        "rangeLow": 453434,
+        "rangeHigh": 1304423,
+        "explanation": "Based on 5 comparable sales within 2 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,039,758 (range $453,434-$1,304,423)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "equityMarginPct": 38,
+      "compsAdj": 10,
+      "newBuild": {
+        "arv": 3050000,
+        "psf": 631,
+        "n": 5,
+        "radiusMi": 1.0,
+        "lowPsf": 624,
+        "highPsf": 842,
+        "examples": [
+          {
+            "address": "11039 N 42ND ST",
+            "price": 1375000,
+            "sf": 2186,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "4224 E DESERT COVE AVE",
+            "price": 3325000,
+            "sf": 5332,
+            "sold": "2026-08-01"
+          },
+          {
+            "address": "10025 N 39TH ST",
+            "price": 3050000,
+            "sf": 3936,
+            "sold": "2025-06-01"
+          },
+          {
+            "address": "4116 E MOUNTAIN VIEW RD",
+            "price": 6225000,
+            "sf": 7396,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "5101 E LAUREL LN",
+            "price": 2235000,
+            "sf": 3542,
+            "sold": "2026-05-01"
+          }
+        ]
+      },
+      "isNew": false,
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10",
+      "peakScore": 82,
       "stale": true
     },
     {
@@ -43822,160 +44041,6 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-06",
       "peakScore": 87,
-      "stale": true
-    },
-    {
-      "apn": "16501012B",
-      "address": "10403 N 38TH ST   PHOENIX  85028",
-      "ownerName": "AUNALL LLC",
-      "ownerMailAddress": "116 E COUNTRY GABLES DR PHOENIX AZ USA 85022",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 11.6
-      },
-      "landSf": 44562,
-      "landAcres": 1.023,
-      "puc": "0131",
-      "landUseClass": "residential",
-      "lat": 33.5810076473571,
-      "lng": -111.9994504253253,
-      "assessedValue": 1015000.0,
-      "assessedValuePerAcre": 992180.0,
-      "currentZoning": "RE-43",
-      "generalPlanDesignation": "GP code 24",
-      "floodZone": null,
-      "inFloodplain": false,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-10",
-        "targetDensity": 4,
-        "basis": "adjacent parcels already zoned R1-10"
-      },
-      "byRightUnits": 1.0,
-      "rezoneTargetUnits": 4.1,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "improved",
-      "livingSpaceSf": 3570.0,
-      "farRatio": 0.08011310084825636,
-      "yearBuilt": "1948",
-      "codeCases": null,
-      "saleDate": "02/01/2015",
-      "subdivision": "PARADISE FOOTHILLS",
-      "rebuildsInSub": 6,
-      "salePrice": 268000.0,
-      "defaultDemoCost": 18000,
-      "score": 86,
-      "reasons": [
-        "adjacent parcels already zoned R1-10",
-        "parcel size fits small-to-mid infill development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 12 years",
-        "existing structure occupies only 8% of the lot \u2014 under-improved for the land size",
-        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
-        "6 homes rebuilt since 2015 in PARADISE FOOTHILLS \u2014 proven teardown neighborhood",
-        "built 1948 \u2014 older housing stock",
-        "comps value ~+10% vs assessed, rank 251/450 (+4 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "16812005A",
-          "address": "10001 N 40TH ST   PHOENIX  85028",
-          "distanceMi": 0.33,
-          "soldDate": "2026-04-01",
-          "soldPrice": 1400000.0,
-          "landSf": 52145,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1169508,
-          "similarity": 69
-        },
-        {
-          "apn": "16771078",
-          "address": "4344 E SHEA BLVD   PHOENIX  85028",
-          "distanceMi": 0.73,
-          "soldDate": "2026-04-01",
-          "soldPrice": 450000.0,
-          "landSf": 17951,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1091973,
-          "similarity": 56
-        },
-        {
-          "apn": "16515011B",
-          "address": "3848 E CHOLLA LN   PHOENIX  85028",
-          "distanceMi": 0.78,
-          "soldDate": "2024-04-01",
-          "soldPrice": 1900000.0,
-          "landSf": 98185,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 842939,
-          "similarity": 47
-        },
-        {
-          "apn": "16831004N",
-          "address": "",
-          "distanceMi": 0.9,
-          "soldDate": "2023-04-01",
-          "soldPrice": 1515000.0,
-          "landSf": 103934,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 634955,
-          "similarity": 40
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1117091,
-        "rangeLow": 649561,
-        "rangeHigh": 1196410,
-        "explanation": "Based on 4 comparable sales within 1 miles, valued as a redevelopment/land play (existing structure ignored), priced off vacant-land sales and adjusted for lot size and sale date, the subject's land is estimated at approximately $1,117,091 (range $649,561-$1,196,410)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "equityMarginPct": 10,
-      "compsAdj": 4,
-      "newBuild": {
-        "arv": 3050000,
-        "psf": 629,
-        "n": 5,
-        "radiusMi": 1.0,
-        "examples": [
-          {
-            "address": "10025 N 39TH ST",
-            "price": 3050000,
-            "sf": 3936,
-            "sold": "2025-06-01"
-          },
-          {
-            "address": "10022 N 36TH ST",
-            "price": 2045000,
-            "sf": 3774,
-            "sold": "2023-12-01"
-          },
-          {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "price": 6225000,
-            "sf": 7396,
-            "sold": "2024-12-01"
-          }
-        ]
-      },
-      "registeredAgent": {
-        "source": "OpenCorporates (AZ filing mirror)",
-        "agentLine": "116 E COUNTRY GABLES DR, PHOENIX, AZ, 85022",
-        "companyUrl": "https://opencorporates.com/companies/us_az/L16210046"
-      },
-      "isNew": false,
-      "firstSeen": "2026-10-05",
-      "lastSeen": "2026-10-06",
-      "peakScore": 86,
       "stale": true
     },
     {
@@ -46218,8 +46283,8 @@ window.PHX_LAND_LEADS = {
     {
       "date": "2026-10-10",
       "parcelsScanned": 9713,
-      "leadsFound": 8951,
-      "newLeads": 22
+      "leadsFound": 8952,
+      "newLeads": 12
     }
   ],
   "methodologyNote": "Public-records only: Maricopa Assessor parcels (vacant land AND underused single-family-improved parcels \u2014 an existing house occupying a small share of an oversized lot, tagged UNDERUSED LOT \u2014 condition is not in public data, verify by eye), Phoenix zoning + General Plan + rezoning-case layers, FEMA flood zones, plus ownership tenure/entity-type/mailing-address signals as a seller-motivation proxy. No asking price or water/sewer availability is in any public feed found \u2014 confirm those manually per lead before underwriting. Rezone targets landing on single-family zoning use a subdivision/lot-sale calculator (add a demolition cost for underused-lot leads); targets on multifamily/commercial zoning use a rental pro forma."
