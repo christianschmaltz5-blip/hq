@@ -649,6 +649,24 @@ function renderCalcResults(idx, state){
 }
 
 const calcStates = {};
+function loadCalcs(){ try{ return JSON.parse(localStorage.getItem('leadCalcs') || '{}'); }catch(e){ return {}; } }
+function calcSummary(st){
+  const r = st.mode === 'lots' ? calcSubdivision(st) : calcHold(st);
+  const pr = st.mode === 'lots' ? r.developerProfit : r.profit, mg = st.mode === 'lots' ? r.profitMargin : r.profitMargin;
+  return `${pr < 0 ? '−' : ''}$${Math.abs(Math.round(pr)).toLocaleString()} profit${mg == null ? '' : ' (' + (mg * 100).toFixed(0) + '%)'} · price $${Math.round(st.askingPrice || 0).toLocaleString()}`;
+}
+function persistCalc(idx){
+  const l = currentLeads[idx], st = calcStates[idx]; if(!l || !st) return;
+  const summary = calcSummary(st);
+  try{ const d = loadCalcs(); d[l.apn] = { st, summary, at: new Date().toLocaleDateString() }; localStorage.setItem('leadCalcs', JSON.stringify(d)); }catch(e){}
+  const b = document.getElementById('calcbadge-' + idx); if(b){ b.style.display = ''; b.textContent = '💾 ' + summary; }
+}
+function resetCalc(idx){
+  const l = currentLeads[idx]; if(!l) return;
+  try{ const d = loadCalcs(); delete d[l.apn]; localStorage.setItem('leadCalcs', JSON.stringify(d)); }catch(e){}
+  delete calcStates[idx]; initCalc(idx, l);
+  const b = document.getElementById('calcbadge-' + idx); if(b) b.style.display = 'none';
+}
 
 function initCalc(idx, lead){
   const dealType = lead.dealType || 'rental';
@@ -657,7 +675,10 @@ function initCalc(idx, lead){
   calcStates[idx] = Object.assign({}, SUBDIVISION_DEFAULTS, holdDefaults(lead, units),
     { mode: dealType === 'subdivision' ? 'lots' : 'hold', demoCost, lots: units, sellingCostPct: SUBDIVISION_DEFAULTS.sellingCostPct },
     lead.referenceCostPerLotAZ ? { costPerLot: lead.referenceCostPerLotAZ } : {});
+  const saved = loadCalcs()[lead.apn];
+  if(saved) Object.assign(calcStates[idx], saved.st);
   const notes = [];
+  if(saved) notes.push(`💾 Loaded the numbers you saved on ${esc(saved.at)}. They save automatically. <button class="mail-btn" onclick="resetCalc(${idx})">Reset to defaults</button>`);
   notes.push(`Acres and lot square footage come from the county record for this parcel; building square footage defaults to ${calcStates[idx].buildingSf.toLocaleString()} sf (${units} units x 900) — change it to your plan. Every default below is a placeholder, <b>not a bid</b>.`);
   if(dealType === 'subdivision'){
     notes.push(`The rezone target here is single-family zoning, so this lead opens in the "sell lots" model. Default cost/lot ($${lead.referenceCostPerLotAZ?.toLocaleString()||'65,000'}) is a Phoenix-metro general-market estimate, <b>not a real local civil bid</b>.`);
@@ -675,9 +696,9 @@ function calcRender(idx, lead){
   renderCalcResults(idx, st);
   renderAcqKpis(idx, st, lead);
   const root = document.getElementById(`calc-fields-${idx}`);
-  root.querySelector('[data-calc-mode]').addEventListener('change', e => { st.mode = e.target.value; st.holdYears = st.mode === 'lots' ? 2 : 3; calcRender(idx, lead); });
+  root.querySelector('[data-calc-mode]').addEventListener('change', e => { st.mode = e.target.value; st.holdYears = st.mode === 'lots' ? 2 : 3; calcRender(idx, lead); persistCalc(idx); });
   const strEl = root.querySelector('[data-calc-str]');
-  if(strEl) strEl.addEventListener('change', e => { st.strMode = e.target.value === '1'; renderCalcResults(idx, st); });
+  if(strEl) strEl.addEventListener('change', e => { st.strMode = e.target.value === '1'; renderCalcResults(idx, st); persistCalc(idx); });
   root.querySelectorAll('input[data-calc-key]').forEach(inp => {
     inp.addEventListener('input', () => {
       const key = inp.dataset.calcKey, kind = inp.dataset.calcKind, v = parseFloat(inp.value);
@@ -686,7 +707,7 @@ function calcRender(idx, lead){
       // keep acres and lot square footage in sync
       const syncTo = key === 'acres' ? ['lotSf', Math.round(st.acres * 43560)] : key === 'lotSf' ? ['acres', Math.round(st.lotSf / 43560 * 1000) / 1000] : null;
       if(syncTo){ st[syncTo[0]] = syncTo[1]; const o = root.querySelector(`[data-calc-key="${syncTo[0]}"]`); if(o) o.value = syncTo[1]; }
-      renderCalcResults(idx, st);
+      renderCalcResults(idx, st); persistCalc(idx);
       if(key === 'askingPrice') renderAcqKpis(idx, st, lead);
     });
   });
@@ -861,7 +882,7 @@ function leadCard(lead, idx){
   return `<div class="lead-card ${typeClass}${isHot?' is-hot':''}" data-idx="${idx}">
     <div class="lead-head" onclick="toggleLead(${idx})">
       <div>
-        <div class="lead-addr">${newBadge} ${statusBadge} ${condBadge} <span id="notebadge-${idx}" class="reason-chip" title="You have a note on this lead" style="${loadNotes()[lead.apn] ? '' : 'display:none;'}">📝 Note</span> ${staleBadge} ${contactedBadge} ${esc(lead.address)||'(no address on file)'}</div>
+        <div class="lead-addr">${newBadge} ${statusBadge} ${condBadge} <span id="notebadge-${idx}" class="reason-chip" title="You have a note on this lead" style="${loadNotes()[lead.apn] ? '' : 'display:none;'}">📝 Note</span> ${staleBadge} ${contactedBadge} <span id="calcbadge-${idx}" class="reason-chip" style="${loadCalcs()[lead.apn] ? '' : 'display:none;'}font-weight:700;">💾 ${esc((loadCalcs()[lead.apn] || {}).summary || '')}</span> ${esc(lead.address)||'(no address on file)'}</div>
         <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'}${lead.landUseClass ? ` (${lead.landUseClass === 'commercial' ? '🏢 commercial' : lead.landUseClass === 'industrial' ? '🏭 industrial' : '🏠 residential'})` : ''} · Owner: ${esc(lead.ownerName)||'—'} · ${esc(dealTypeLabel)}</div>
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;" onclick="event.stopPropagation()">
@@ -1089,6 +1110,7 @@ function applyFilters(){
   let listFiltered = type === 'all' ? base : base.filter(l => l.parcelStatus === type);
   if(landUse !== 'all') listFiltered = listFiltered.filter(l => l.landUseClass === landUse);
   currentLeads = listFiltered;
+  Object.keys(calcStates).forEach(k => delete calcStates[k]);  // keyed by list position, which just changed
   renderLeads(listFiltered);
   renderMaps(base);
 }
@@ -1274,7 +1296,7 @@ function logCall(apn, key){
 function setNext(apn, v){ const m = loadCalls(); if(!m[apn]) return; m[apn].next = v; saveCalls(m); renderContacted(); }
 const callLabel = k => (CALL_OPTS.find(x => x[0] === k) || [0, '—'])[1];
 const callSelect = apn => `<select onchange="if(this.value){logCall('${esc(apn)}',this.value);}"><option value="">Log call…</option>${CALL_OPTS.map(o => `<option value="${o[0]}">${o[1]}</option>`).join('')}</select>`;
-const BACKUP_KEYS = ['callLog','contactedLeads','leadNotes','contactChecks','leadCondition','discardedLeads','intakeChecks','bids'];  // not leadContacts: phone numbers stay out of files
+const BACKUP_KEYS = ['callLog','contactedLeads','leadNotes','contactChecks','leadCondition','discardedLeads','intakeChecks','bids','leadCalcs'];  // not leadContacts: phone numbers stay out of files
 function backupLog(){
   const o = {}; BACKUP_KEYS.forEach(k => { try{ const v = localStorage.getItem(k); if(v) o[k] = JSON.parse(v); }catch(e){} });
   const a = document.createElement('a');
@@ -1723,7 +1745,7 @@ function renderMapInstance(inst, leads){
   if(bounds.length>1) inst.map.fitBounds(bounds, {padding:[24,24]});
 }
 
-let vacantMapInst = null, teardownMapInst = null;
+let vacantMapInst = null, teardownMapInst = null, mapData = null;
 function renderMaps(leads){
   const vacant = (leads||[]).filter(l => l.parcelStatus !== 'improved');
   const teardown = (leads||[]).filter(l => l.parcelStatus === 'improved');
@@ -1736,17 +1758,23 @@ function renderMaps(leads){
     vacantMapInst = initMap('vacantMap');
     teardownMapInst = initMap('teardownMap');
   }
-  renderMapInstance(vacantMapInst, vacant);
-  renderMapInstance(teardownMapInst, teardown);
+  mapData = { vacant, teardown };
+  drawMaps();
+}
+// a minimized map has no size, and Leaflet throws drawing into it: skip it, redraw when expanded
+function drawMaps(){
+  if(!mapData) return;
+  [[vacantMapInst, 'vacantMap', mapData.vacant], [teardownMapInst, 'teardownMap', mapData.teardown]].forEach(([m, id, l]) => {
+    try{ if(m && document.getElementById(id).offsetHeight) renderMapInstance(m, l); }catch(e){ console.error('map draw failed', e); }  // a map failure must not stop the rest of the page
+  });
 }
 applyFilters();  // draws the maps with the same filters as the list (discarded / contacted / 'Good house' hidden)
 
-// ── Minimize (−) button on every card except the maps ───────────────────
+// ── Minimize (−) button on every card, maps included ───────────────────
 (function minInit(){
   let saved = {};
   try{ saved = JSON.parse(localStorage.getItem('collapsedCards') || '{}'); }catch(e){}
   document.querySelectorAll('main .card').forEach(card => {
-    if(card.closest('.map-pair')) return;
     const head = card.querySelector(':scope > .card-head'); if(!head) return;
     const key = card.id || (head.querySelector('h2') || {}).textContent || '';
     const btn = document.createElement('button');
@@ -1757,6 +1785,7 @@ applyFilters();  // draws the maps with the same filters as the list (discarded 
       const c = !card.classList.contains('collapsed'); set(c);
       if(c) saved[key] = 1; else delete saved[key];
       try{ localStorage.setItem('collapsedCards', JSON.stringify(saved)); }catch(e){}
+      if(!c){ [vacantMapInst, teardownMapInst].forEach(m => m && m.map.invalidateSize()); drawMaps(); }
     });
     head.appendChild(btn);
   });
