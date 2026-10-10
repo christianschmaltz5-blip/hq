@@ -290,6 +290,29 @@ def buffer_count_query(url, lat, lng, miles):
     return result.get("count", 0)
 
 
+NEIGHBOR_PARCEL_RADIUS_MILES = 0.2
+
+
+def neighbor_counts(lat, lng, miles=NEIGHBOR_PARCEL_RADIUS_MILES):
+    """(homes, vacant lots) among Assessor parcels within ~`miles`. Homes = PUC 01xx,
+    vacant = PUC 00xx. None on failure so a flaky call never skews a score."""
+    deg = miles / 69.0
+    lng_deg = miles / (69.0 * max(math.cos(math.radians(lat)), 0.1))
+    params = {
+        "geometry": json.dumps({"xmin": lng - lng_deg, "ymin": lat - deg, "xmax": lng + lng_deg,
+                                "ymax": lat + deg, "spatialReference": {"wkid": 4326}}),
+        "geometryType": "esriGeometryEnvelope", "inSR": "4326", "spatialRel": "esriSpatialRelIntersects",
+        "where": "PUC LIKE '00%' OR PUC LIKE '01%'", "outFields": "PUC",
+        "returnGeometry": "false", "resultRecordCount": 2000,
+    }
+    try:
+        feats = esri_query(MARICOPA_PARCELS, params).get("features") or []
+    except Exception:
+        return None
+    pucs = [(f["attributes"].get("PUC") or "") for f in feats]
+    return sum(c.startswith("01") for c in pucs), sum(c.startswith("00") for c in pucs)
+
+
 def buffer_distinct_values(url, lat, lng, miles, field, out_fields=None):
     """Distinct field values from polygons intersecting a lat/lng buffer envelope
     (approx square buffer, not a true geodesic circle — fine at this scale)."""
@@ -568,6 +591,22 @@ def score_lead(rec):
     if rec["assessedValuePerAcre"] and rec["assessedValuePerAcre"] < 200000:
         score += 8; reasons.append("assessed value/acre below typical infill land pricing — possible mispricing")
 
+    # Target pattern: undeveloped land with houses around it (not a house on the lot itself)
+    if rec["parcelStatus"] == "vacant":
+        score += 10; reasons.append("no house on the lot — undeveloped land")
+    nh, nv = rec.get("homesNearby"), rec.get("vacantNearby")
+    if nh is not None:
+        if nh >= 10:
+            score += 15; reasons.append(f"{nh} homes within {NEIGHBOR_PARCEL_RADIUS_MILES} mi — surrounded by development")
+        elif nh >= 5:
+            score += 10; reasons.append(f"{nh} homes within {NEIGHBOR_PARCEL_RADIUS_MILES} mi")
+        elif nh >= 2:
+            score += 5; reasons.append(f"{nh} homes nearby")
+        else:
+            score -= 10; reasons.append("few or no homes nearby — remote, no neighborhood yet")
+        if nv >= 3:
+            score += 6; reasons.append(f"{nv} other vacant lots within {NEIGHBOR_PARCEL_RADIUS_MILES} mi — pocket that could assemble")
+
     # Seller motivation (pure public-records inference, not a guarantee)
     own = rec["ownership"]
     if own["isOutOfStateOwner"]:
@@ -699,6 +738,9 @@ def enrich_parcel(p):
         "salePrice": _to_float(p.get("SALE_PRICE")) or None,
         "defaultDemoCost": demo_cost,
     }
+    nc = neighbor_counts(lat, lng)
+    if nc:
+        rec["homesNearby"], rec["vacantNearby"] = nc[0], max(nc[1] - (0 if is_improved else 1), 0)
     score, reasons = score_lead(rec)
     rec["score"] = score
     rec["reasons"] = reasons
