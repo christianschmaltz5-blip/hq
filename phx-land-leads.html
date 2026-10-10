@@ -263,9 +263,20 @@
           <label style="font-size:12.5px;color:var(--text-soft);">Open offer at (% of max)<input class="filter-input" id="hcOpen" type="number" value="75" style="width:60px;"></label>
         </div>
         <div id="hcOut" style="margin-top:6px;font-size:13.5px;line-height:1.6;"></div>
+        <div style="margin-top:8px;"><button class="mail-btn" type="button" onclick="saveRun()">💾 Save these numbers</button> <span id="hcSaved" style="font-size:12px;color:var(--text-soft);"></span></div>
         <div style="font-size:11px; color:var(--text-faint); margin-top:10px; line-height:1.55;">
           <b>How it works:</b> per home, cost = build + design/permit fees + site work + its share of the land, plus loan interest. Each home must sell for enough to cover that cost, the selling costs, and your profit. "Most you can pay" works that backward from your expected sale price. Build cost, site work and sale price are the three numbers that matter most — get real local quotes and recent custom-home sales before trusting the answer. Not an appraisal; check zoning, lot-split rules, water/sewer and access first.
         </div>
+      </div>
+
+      <div class="card" id="saved-runs" style="border:2px solid #3f6fb0;">
+        <div class="card-head">
+          <h2>💾 Saved Numbers</h2>
+          <span class="card-sub">Every run you save from the Custom Home Calculator, plus the numbers you enter in each lead's own calculator (those save automatically). Saving the same address again replaces its row. <b>Load</b> puts a saved run back in the calculator. Stored in this browser and included in the backup.</span>
+        </div>
+        <div style="overflow-x:auto;"><table class="comps-table" id="runs-table"></table></div>
+        <div class="card-sub" style="margin:12px 0 4px;"><b>Per-lead calculator results</b></div>
+        <div style="overflow-x:auto;"><table class="comps-table" id="leadcalcs-table"></table></div>
       </div>
 
       <div class="card" id="bids" style="border:2px solid #6b4fa3; background:#f9f7fd;">
@@ -660,12 +671,14 @@ function persistCalc(idx){
   const summary = calcSummary(st);
   try{ const d = loadCalcs(); d[l.apn] = { st, summary, at: new Date().toLocaleDateString() }; localStorage.setItem('leadCalcs', JSON.stringify(d)); }catch(e){}
   const b = document.getElementById('calcbadge-' + idx); if(b){ b.style.display = ''; b.textContent = '💾 ' + summary; }
+  renderRuns();
 }
 function resetCalc(idx){
   const l = currentLeads[idx]; if(!l) return;
   try{ const d = loadCalcs(); delete d[l.apn]; localStorage.setItem('leadCalcs', JSON.stringify(d)); }catch(e){}
   delete calcStates[idx]; initCalc(idx, l);
   const b = document.getElementById('calcbadge-' + idx); if(b) b.style.display = 'none';
+  renderRuns();
 }
 
 function initCalc(idx, lead){
@@ -1296,7 +1309,7 @@ function logCall(apn, key){
 function setNext(apn, v){ const m = loadCalls(); if(!m[apn]) return; m[apn].next = v; saveCalls(m); renderContacted(); }
 const callLabel = k => (CALL_OPTS.find(x => x[0] === k) || [0, '—'])[1];
 const callSelect = apn => `<select onchange="if(this.value){logCall('${esc(apn)}',this.value);}"><option value="">Log call…</option>${CALL_OPTS.map(o => `<option value="${o[0]}">${o[1]}</option>`).join('')}</select>`;
-const BACKUP_KEYS = ['callLog','contactedLeads','leadNotes','contactChecks','leadCondition','discardedLeads','intakeChecks','bids','leadCalcs'];  // not leadContacts: phone numbers stay out of files
+const BACKUP_KEYS = ['callLog','contactedLeads','leadNotes','contactChecks','leadCondition','discardedLeads','intakeChecks','bids','leadCalcs','savedRuns'];  // not leadContacts: phone numbers stay out of files
 function backupLog(){
   const o = {}; BACKUP_KEYS.forEach(k => { try{ const v = localStorage.getItem(k); if(v) o[k] = JSON.parse(v); }catch(e){} });
   const a = document.createElement('a');
@@ -1544,6 +1557,34 @@ function renderBids(){
   }).join('')}</tbody>`;
 }
 
+// ── Saved Numbers (Custom Home Calculator runs + per-lead calculators) ───
+const RUN_IDS = ['hcLand','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen'];
+function loadRuns(){ try{ return JSON.parse(localStorage.getItem('savedRuns') || '[]'); }catch(e){ return []; } }
+function storeRuns(r){ try{ localStorage.setItem('savedRuns', JSON.stringify(r)); }catch(e){} renderRuns(); }
+function saveRun(){
+  const g = id => document.getElementById(id), L = window.hcLast; if(!L) return;
+  const vals = {}; RUN_IDS.forEach(k => vals[k] = g(k).value);
+  const name = g('hcLead').value.trim() || 'Unnamed (land $' + Math.round(parseFloat(vals.hcLand) || 0).toLocaleString() + ')';
+  const run = { name, vals, gain: L.gain, margin: L.margin, maxLand: L.maxLand, at: new Date().toLocaleDateString() };
+  const runs = loadRuns(), i = runs.findIndex(r => r.name.toLowerCase() === name.toLowerCase());
+  if(i >= 0) runs[i] = run; else runs.unshift(run);
+  storeRuns(runs); g('hcSaved').textContent = 'Saved ' + name + '.';
+}
+function loadRun(i){
+  const r = loadRuns()[i]; if(!r) return;
+  document.getElementById('hcLead').value = /^Unnamed/.test(r.name) ? '' : r.name;
+  RUN_IDS.forEach(k => { const e = document.getElementById(k); e.value = r.vals[k]; e.dispatchEvent(new Event('input')); });
+  document.getElementById('home-calc').scrollIntoView({ behavior: 'smooth' });
+}
+function delRun(i){ const r = loadRuns(); r.splice(i, 1); storeRuns(r); }
+function renderRuns(){
+  const t = document.getElementById('runs-table'); if(!t) return;
+  const m = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString(), runs = loadRuns();
+  t.innerHTML = runs.length ? `<thead><tr><th>Saved</th><th>Address / name</th><th>Land</th><th>Homes</th><th>Size</th><th>Sells at</th><th>Build</th><th>Site work</th><th>Profit per home</th><th>Most you can pay for land</th><th></th></tr></thead><tbody>${runs.map((r, i) => { const v = r.vals; return `<tr><td>${esc(r.at)}</td><td>${esc(r.name)}</td><td>${m(+v.hcLand)}</td><td>${v.hcLots}</td><td>${(+v.hcSf).toLocaleString()} sf</td><td>$${v.hcPrice}/sf</td><td>$${v.hcHard}/sf</td><td>${m(+v.hcSite)}</td><td><b style="color:${r.gain > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.gain)}</b> (${(r.margin * 100).toFixed(0)}%)</td><td>${m(r.maxLand)}</td><td><button class="mail-btn" onclick="loadRun(${i})">Load</button> <button class="mail-btn" onclick="delRun(${i})">✕</button></td></tr>`; }).join('')}</tbody>` : '<tbody><tr><td style="color:var(--text-faint);">Nothing saved yet. Use "Save these numbers" under the Custom Home Calculator.</td></tr></tbody>';
+  const lc = loadCalcs(), rows = Object.keys(lc).map(apn => ({ apn, l: (D.leads || []).find(x => x.apn === apn), c: lc[apn] }));
+  document.getElementById('leadcalcs-table').innerHTML = rows.length ? `<thead><tr><th>Saved</th><th>Address</th><th>Result</th></tr></thead><tbody>${rows.map(r => `<tr><td>${esc(r.c.at)}</td><td>${esc(r.l ? r.l.address.split('  ')[0] : 'APN ' + r.apn)}</td><td>${esc(r.c.summary)}</td></tr>`).join('')}</tbody>` : '<tbody><tr><td style="color:var(--text-faint);">None yet. Open "Run underwriting calculator" on a lead and enter a price.</td></tr></tbody>';
+}
+
 // ── Max Offer (sell the lot to a builder) ────────────────────────────────
 // How many home lots a parcel could split into: 85% usable (setbacks/access), min lot size from R1-x zoning
 // (R1-8 = 8,000 sf ...) else the fallback input. Capped at 6. Needs city lot-split approval — a rough ceiling.
@@ -1630,6 +1671,7 @@ renderMaxOffer();
     const total = (C + land) * (1 + fin), need = total / den;
     const maxLand = (P * den / (1 + fin) - C) * lots, open = maxLand * num('hcOpen') / 100;
     const gain = P * (1 - sell) - total, margin = P ? gain / P : 0;
+    window.hcLast = { gain, margin, maxLand };
     const row = (k, v, b) => `<tr><td style="padding:2px 14px 2px 0;${b ? 'font-weight:700;' : ''}">${k}</td><td style="text-align:right;${b ? 'font-weight:700;' : ''}">${v}</td></tr>`;
     out.innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:28px;">
       <div><div style="font-weight:700;margin-bottom:4px;">Cost per home</div><table>
@@ -1648,6 +1690,7 @@ renderMaxOffer();
 })();
 renderTopProfit();
 renderBids();
+renderRuns();
 renderDiscarded();
 renderContacted(); showBackupAge();
 renderTraced();
