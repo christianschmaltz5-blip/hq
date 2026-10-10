@@ -937,6 +937,20 @@ function ownerLookupUrl(lead){
   const m = (lead.ownerMailAddress || '').match(/\b([A-Z]{2})\s+(?:USA\s+)?(\d{5})/);
   return 'https://www.truepeoplesearch.com/results?name=' + encodeURIComponent((first[1].length === 1 && first[2] ? first[2] : first[1]) + ' ' + first[0]) + (m ? '&citystatezip=' + encodeURIComponent(m[1] + ' ' + m[2]) : '');
 }
+function copyOpen(text, url, btn){
+  try{ navigator.clipboard.writeText(text); }catch(e){}
+  window.open(url, '_blank', 'noopener');
+  if(btn){ const o = btn.textContent; btn.textContent = 'Copied — paste it in the search'; setTimeout(() => btn.textContent = o, 2500); }
+}
+function entityLookupBtns(lead){
+  if(!(lead.ownership || {}).isEntityOwner) return '';
+  const nm = String(lead.ownerName || '').replace(/\s+/g, ' ').trim().replace(/'/g, '');
+  const a = String(lead.apn || '').replace(/'/g, '');
+  return `<div style="margin-top:6px;" onclick="event.stopPropagation()">
+    <button class="mail-btn" onclick="copyOpen('${esc(nm)}','https://ecorp.azcc.gov/EntitySearch/Index',this)" title="Copies the company name and opens the Arizona Corporation Commission search — LLCs list managers/members there">🏛️ Find owner (AZ eCorp)</button>
+    <button class="mail-btn" style="margin-left:6px;" onclick="copyOpen('${esc(a)}','https://recorder.maricopa.gov/recording/document-search.html',this)" title="Copies the parcel number and opens the county Recorder — the deed shows who signed (trustee/manager)">📜 Deed (Recorder)</button>
+  </div>`;
+}
 function ownerLookupBtn(lead){
   const u = ownerLookupUrl(lead);
   return u ? `<a class="mail-btn" style="margin-left:8px;text-decoration:none;display:inline-block;" href="${esc(u)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Opens TruePeopleSearch with the owner's name and mailing state/zip filled in">🔍 Look up owner</a>` : '';
@@ -1004,7 +1018,7 @@ function leadCard(lead, idx){
         <div class="detail-field"><div class="detail-label">Owner Mailing Address</div><div class="detail-val">${esc(lead.ownerMailAddress)||'—'}</div>
           ${lead.ownerMailAddress && !own.isHiddenOwner ? `<button class="mail-btn" onclick="event.stopPropagation(); openLetter(${idx})">✉️ Generate Mail Letter</button>` : own.isHiddenOwner && lead.registeredAgent ? `<div style="font-size:10.5px;color:var(--text-soft);margin-top:6px;">Registered agent (via <a href="${esc(lead.registeredAgent.companyUrl)}" target="_blank" rel="noopener">OpenCorporates</a>): <b>${esc(lead.registeredAgent.agentLine)}</b></div>` : own.isHiddenOwner ? `<div style="font-size:10.5px;color:var(--text-faint);margin-top:6px;">Hidden LLC/Trust — no registered agent found; find it manually before mailing</div>` : ''}
           <button class="mail-btn" style="background:${contactedDate?'#f1f3f7':'var(--success)'}; color:${contactedDate?'var(--text-soft)':'#fff'}; margin-left:8px;" onclick="event.stopPropagation(); toggleContacted('${esc(lead.apn)}')">${contactedDate ? 'Undo Contacted' : '📨 Mark Contacted'}</button>
-          ${ownerLookupBtn(lead)}
+          ${ownerLookupBtn(lead)}${entityLookupBtns(lead)}
         </div>
         <div class="detail-field"><div class="detail-label">Rezone Basis</div><div class="detail-val" style="font-size:11.5px;font-weight:600;">${lead.rezoneTarget ? esc(lead.rezoneTarget.basis) : 'No adjacent upside detected'}</div></div>
         <div class="detail-field"><div class="detail-label">Owner Type</div><div class="detail-val">${own.isHiddenOwner ? 'Hidden LLC/Trust — needs manual unmasking' : own.isEntityOwner ? 'Trust at owner\'s own address — family name likely in trust name' : 'Individual'}</div></div>
