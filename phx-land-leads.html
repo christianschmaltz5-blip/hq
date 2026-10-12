@@ -244,6 +244,8 @@
           <label style="font-size:12.5px;color:var(--text-soft);">Pick a lead (type an address)
             <input class="filter-input" id="hcLead" list="hcLeads" placeholder="e.g. 25804 N 5TH AVE" style="width:230px;"></label>
           <datalist id="hcLeads"></datalist>
+          <label style="font-size:12.5px;color:var(--text-soft);">Plan
+            <select class="filter-input" id="hcMode" style="width:200px;"><option value="sale">Build &amp; sell homes</option><option value="rent">Build &amp; hold: rental (2–4 units)</option></select></label>
           <span id="hcAnchor" style="font-size:12px;color:var(--text-soft);align-self:center;max-width:520px;"></span>
         </div>
         <div id="hcHouse" style="font-size:12.5px;color:var(--text-soft);margin:-4px 0 10px;"></div>
@@ -261,6 +263,19 @@
           <label style="font-size:12.5px;color:var(--text-soft);">Selling costs (% of sale)<input class="filter-input" id="hcSell" type="number" value="6" style="width:60px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Profit target (% of sale)<input class="filter-input" id="hcProfit" type="number" value="15" style="width:60px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Open offer at (% of max)<input class="filter-input" id="hcOpen" type="number" value="75" style="width:60px;"></label>
+        </div>
+        <div id="hcRentRow" style="display:none;">
+          <div class="filter-row">
+            <label style="font-size:12.5px;color:var(--text-soft);">Units in the building<input class="filter-input" id="hcUnits" type="number" value="3" style="width:60px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Size per unit (sf)<input class="filter-input" id="hcUnitSf" type="number" value="1200" style="width:80px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Rent per unit ($/mo) <i>placeholder</i><input class="filter-input" id="hcRent" type="number" value="2600" style="width:90px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Vacancy (%)<input class="filter-input" id="hcVac" type="number" value="6" style="width:60px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Operating costs (% of rent) <i>placeholder</i><input class="filter-input" id="hcOpex" type="number" value="40" style="width:60px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Value cap rate (%) <i>placeholder</i><input class="filter-input" id="hcCap" type="number" value="5.5" step="0.1" style="width:70px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Long-term loan (% of value)<input class="filter-input" id="hcLtv" type="number" value="70" style="width:60px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Loan rate (%)<input class="filter-input" id="hcRate" type="number" value="6.75" step="0.05" style="width:70px;"></label>
+          </div>
+          <div id="hcRentHint" style="font-size:12.5px;color:var(--text-soft);margin:-4px 0 10px;"></div>
         </div>
         <div id="hcOut" style="margin-top:6px;font-size:13.5px;line-height:1.6;"></div>
         <div style="margin-top:8px;"><button class="mail-btn" type="button" onclick="saveRun()">💾 Save these numbers</button> <span id="hcSaved" style="font-size:12px;color:var(--text-soft);"></span></div>
@@ -421,6 +436,7 @@
 </div>
 
 <script src="phx-land-leads/data.js"></script>
+<script src="dev-model/rent-comps.js"></script>
 <script src="assets/js/shell.js"></script>
 <script>
 const D = window.PHX_LAND_LEADS || {leads:[], history:[], zipCodes:[]};
@@ -1653,7 +1669,7 @@ function renderBids(){
 }
 
 // ── Saved Numbers (Custom Home Calculator runs + per-lead calculators) ───
-const RUN_IDS = ['hcLand','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen'];
+const RUN_IDS = ['hcLand','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcMode','hcUnits','hcUnitSf','hcRent','hcVac','hcOpex','hcCap','hcLtv','hcRate'];
 function loadRuns(){ try{ return JSON.parse(localStorage.getItem('savedRuns') || '[]'); }catch(e){ return []; } }
 function storeRuns(r){ try{ localStorage.setItem('savedRuns', JSON.stringify(r)); }catch(e){} renderRuns(); drawMaps(true); }
 function saveRun(){
@@ -1668,7 +1684,7 @@ function saveRun(){
 function loadRun(i){
   const r = loadRuns()[i]; if(!r) return;
   document.getElementById('hcLead').value = /^Unnamed/.test(r.name) ? '' : r.name;
-  RUN_IDS.forEach(k => { const e = document.getElementById(k); e.value = r.vals[k]; e.dispatchEvent(new Event('input')); });
+  RUN_IDS.forEach(k => { const e = document.getElementById(k); if(r.vals[k] == null) return; e.value = r.vals[k]; e.dispatchEvent(new Event('input')); });
   document.getElementById('home-calc').scrollIntoView({ behavior: 'smooth' });
 }
 function delRun(i){ const r = loadRuns(); r.splice(i, 1); storeRuns(r); }
@@ -1734,7 +1750,8 @@ renderMaxOffer();
   const ids = ['hcLand','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen'];
   const el = id => document.getElementById(id), num = id => parseFloat(el(id).value) || 0;
   const money = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
-  const KEEP = ['hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen'];
+  const RIDS = ['hcUnits','hcUnitSf','hcRent','hcVac','hcOpex','hcCap','hcLtv','hcRate'];
+  const KEEP = ['hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcMode', ...RIDS];
   try{ const saved = JSON.parse(localStorage.getItem('homeCalc') || '{}'); KEEP.forEach(k => { if(saved[k] != null) el(k).value = saved[k]; }); }catch(e){}
   const addr = l => String(l.address || '').split(/\s{2,}/)[0];
   el('hcLeads').innerHTML = (D.leads || []).slice().sort((a, b) => b.score - a.score).map(l => `<option value="${esc(addr(l))}">score ${l.score}</option>`).join('');
@@ -1747,6 +1764,7 @@ renderMaxOffer();
     if(l.valuation) bits.push(`land est. ${money(l.valuation.rangeLow)}–${money(l.valuation.rangeHigh)}`);
     if(l.salePrice) bits.push(`owner paid ${money(l.salePrice)}${l.saleDate ? ' (' + l.saleDate.slice(-4) + ')' : ''}`);
     if(l.assessedValue) bits.push(`assessed ${money(l.assessedValue)}`);
+    rentHint(l);
     el('hcAnchor').textContent = bits.filter(Boolean).join(' · ') + ' — land price and home count filled in from this; change them if you disagree.';
     el('hcHouse').textContent = 'Looking up recent home sales nearby…';
     fetchHouseComps(l).then(h => {
@@ -1757,7 +1775,44 @@ renderMaxOffer();
       el('hcUse').onclick = () => { el('hcPrice').value = Math.round(h.medianPsf); calc(); };
     });
   }
+  function rentHint(l){
+    const z = (String(l.address || '').match(/\b(\d{5})\s*$/) || [])[1], cs = ((window.RENT_COMPS || {}).comps || []).filter(c => c.zip === z && c.rent);
+    if(!cs.length){ el('hcRentHint').textContent = `No rent comps scanned for ZIP ${z || '?'} yet — type the rent per unit. (The weekly rent scan now includes 85085 and 85086.)`; return; }
+    const r = cs.map(c => c.rent).sort((a, b) => a - b), med = r[Math.floor(r.length / 2)];
+    el('hcRentHint').innerHTML = `Rent comps in ${z}: ${cs.length} listings, median <b>${money(med)}/mo</b> (${money(r[0])}–${money(r[r.length - 1])}). <button class="mail-btn" type="button" id="hcUseRent">Use ${money(med)} as rent per unit</button>`;
+    el('hcUseRent').onclick = () => { el('hcRent').value = med; el('hcRent').dispatchEvent(new Event('input')); };
+  }
+  function calcRent(){
+    const u = Math.max(1, num('hcUnits')), bsf = u * num('hcUnitSf'), hard = num('hcHard') * bsf, soft = hard * num('hcSoft') / 100, site = num('hcSite'), land = num('hcLand');
+    const fin = num('hcFin') / 100, sell = num('hcSell') / 100, profit = num('hcProfit') / 100, den = 1 - sell - profit, cap = num('hcCap') / 100, opex = num('hcOpex') / 100, vac = num('hcVac') / 100;
+    const out = el('hcOut');
+    if(den <= 0 || bsf <= 0 || cap <= 0){ out.textContent = 'Selling costs + profit must be under 100%; unit size and cap rate above 0.'; return; }
+    const C = hard + soft + site, total = (C + land) * (1 + fin);
+    const egi = u * num('hcRent') * 12 * (1 - vac), noi = egi * (1 - opex), value = noi / cap;
+    const gain = value * (1 - sell) - total, margin = value ? gain / value : 0, maxLand = value * den / (1 + fin) - C;
+    const loan = num('hcLtv') / 100 * value, ds = pmt(num('hcRate') / 1200, 360, loan) * 12, cf = noi - ds, cashIn = total - loan;
+    const needRent = (total / den) * cap / (1 - opex) / (1 - vac) / 12 / u;
+    window.hcLast = { gain, margin, maxLand };
+    const row = (k, v, b) => `<tr><td style="padding:2px 14px 2px 0;${b ? 'font-weight:700;' : ''}">${k}</td><td style="text-align:right;${b ? 'font-weight:700;' : ''}">${v}</td></tr>`;
+    const good = c => c ? '#2f6b47' : '#b03a3a';
+    out.innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:28px;">
+      <div><div style="font-weight:700;margin-bottom:4px;">Cost of the ${u}-unit building (${bsf.toLocaleString()} sf)</div><table>
+        ${row('Build', money(hard))}${row('Design / permits / fees', money(soft))}${row('Site work', money(site))}${row('Land', money(land))}${row('Loan interest', money((C + land) * fin))}${row('Total cost', money(total), 1)}</table></div>
+      <div><div style="font-weight:700;margin-bottom:4px;">Income</div><table>
+        ${row('Rent after vacancy / yr', money(egi))}${row('Operating costs', '−' + money(egi * opex).replace('−',''))}${row('Net operating income (NOI)', money(noi), 1)}${row('Value at ' + num('hcCap') + '% cap', money(value))}${row('Yield on cost', total ? (noi / total * 100).toFixed(1) + '%' : '—')}</table></div>
+      <div style="max-width:440px;">
+        <div style="margin-bottom:8px;"><b>To hit your ${num('hcProfit')}% profit, rent must be ${money(needRent)}/unit/mo</b> (you entered ${money(num('hcRent'))}).</div>
+        <div style="margin-bottom:8px;"><b>The most you can pay for the land (to build and sell at that value) is <span style="color:#2f6b47;">${money(maxLand)}</span></b> — open at <b>${money(maxLand * num('hcOpen') / 100)}</b>.</div>
+        <div style="padding:8px 10px;border-radius:8px;margin-bottom:8px;background:${margin >= profit ? '#e6f4ea' : '#fdecec'};">If you sell at the cap-rate value: profit <b>${money(gain)}</b> (${(margin * 100).toFixed(1)}% of value) — ${margin >= profit ? 'meets' : 'below'} your ${num('hcProfit')}% target.</div>
+        <div style="padding:8px 10px;border-radius:8px;background:var(--card-bg-soft,#f3f5f9);">If you keep it: loan ${money(loan)}, payment ${money(ds / 12)}/mo · <b style="color:${good(cf > 0)};">cash flow ${money(cf / 12)}/mo</b> · DSCR <b style="color:${good(noi / ds >= 1.25)};">${ds ? (noi / ds).toFixed(2) + 'x' : '—'}</b> · cash left in the deal ${money(Math.max(0, cashIn))}${cashIn > 0 ? ' · cash-on-cash <b>' + (cf / cashIn * 100).toFixed(1) + '%</b>' : ' (the refinance returns all your cash)'}</div></div></div>
+      <div style="font-size:11px;color:var(--text-faint);margin-top:6px;">Rent, operating costs and cap rate are placeholders — operating costs include taxes, insurance, repairs, management and reserves. Not an appraisal; the loan is a 30-year fixed.</div>`;
+  }
+  function setMode(){ const r = el('hcMode').value === 'rent'; el('hcRentRow').style.display = r ? '' : 'none'; }
+  el('hcMode').addEventListener('input', () => { setMode(); calc(); try{ const m = JSON.parse(localStorage.getItem('homeCalc') || '{}'); m.hcMode = el('hcMode').value; localStorage.setItem('homeCalc', JSON.stringify(m)); }catch(e){} });
+  RIDS.forEach(id => el(id).addEventListener('input', () => { try{ const m = JSON.parse(localStorage.getItem('homeCalc') || '{}'); m[id] = el(id).value; localStorage.setItem('homeCalc', JSON.stringify(m)); }catch(e){} calc(); }));
+  setMode();
   function calc(){
+    if(el('hcMode').value === 'rent') return calcRent();
     const lots = Math.max(1, num('hcLots')), sf = num('hcSf'), hard = num('hcHard') * sf, soft = hard * num('hcSoft') / 100, site = num('hcSite');
     const fin = num('hcFin') / 100, sell = num('hcSell') / 100, profit = num('hcProfit') / 100, land = num('hcLand') / lots, P = num('hcPrice') * sf;
     const den = 1 - sell - profit, C = hard + soft + site;

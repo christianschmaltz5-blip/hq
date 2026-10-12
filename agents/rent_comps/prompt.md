@@ -15,6 +15,8 @@ Load the Chrome tools in ONE ToolSearch call: "select:mcp__claude-in-chrome__tab
 ## Step 1 — determine tracked zips
 Read `/Users/christianschmaltz/hq/phoenix-scan/data.js` first. Collect the distinct `zip` values from its `qualifying` and `nearMisses` arrays — these are the submarkets that actually matter this week. If that file has no entries yet, fall back to the last-used zip list already present in `rent-comps.js`'s `zips` field.
 
+**Always also scan 85085 and 85086** (the north-Phoenix land-leads market). For those two zips the comps should match NEW small multifamily (2-4 unit, duplex/townhome/fourplex) or newer 2-3 bedroom rentals, NOT old garden-style apartments — the land-leads page uses their median rent per unit as the rental estimate for a new 2-4 unit building. Tag these comps normally; skip Classic/Renovated pair hunting for them.
+
 ## Step 2 — scan (read-only browsing, user's real Chrome)
 For each tracked zip, scan BOTH sources:
 
