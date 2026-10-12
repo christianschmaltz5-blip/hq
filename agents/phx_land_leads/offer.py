@@ -50,8 +50,7 @@ def new_build_values(lead):
 
 def attach_new_build_values(leads):
     res = [l for l in leads if l.get("landUseClass") == "residential" and not l.get("stale")]
-    top = sorted(res, key=lambda l: -l["score"])[:OFFER_LEADS]
-    for l in top + [l for l in res if l.get("parcelStatus") == "vacant" and l not in top]:   # vacant lots all get comps
+    for l in sorted(res, key=lambda l: -l["score"])[:OFFER_LEADS]:
         l["newBuild"] = new_build_values(l)
 
 

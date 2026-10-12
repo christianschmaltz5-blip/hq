@@ -1585,7 +1585,7 @@ renderSkipTrace();
 // Custom Home Calculator. Land cost = comps value (assessed value if comps are unreliable). Risk = how shaky the inputs are.
 function profitFor(l, extraHard, psfOverride, o){
   o = o || {};
-  const nb = l.newBuild; if(!nb || !nb.psf) return null;
+  const nb = l.houseComps || l.newBuild; if(!nb || !nb.psf) return null;   // house sales nearby come first; new-build sales are the fallback
   const psf = psfOverride || nb.psf;
   const num = id => parseFloat(document.getElementById(id).value) || 0;
   const sf = num('hcSf'), fin = num('hcFin') / 100, sell = num('hcSell') / 100;
@@ -1603,7 +1603,7 @@ function profitFor(l, extraHard, psfOverride, o){
     const profit = finished * (1 - sell) - cost;
     if(!best || profit > best.profit) best = { n, finished, cost, profit, land, margin: finished ? profit / finished : 0 };
   }
-  let r = (landOK ? 0 : 2) + (nb.n < 6 ? 1 : 0) + (nb.radiusMi >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0);
+  let r = (landOK ? 0 : 2) + (nb.n < (l.houseComps ? 4 : 6) ? 1 : 0) + (nb.radiusMi >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0);
   best.risk = r <= 1 ? 'Low' : r <= 3 ? 'Medium' : 'High';
   best.adj = best.profit > 0 ? best.profit * ({ Low: .85, Medium: .65, High: .4 }[best.risk]) : best.profit;
   best.strategy = best.n > 1 ? `Lot split → ${best.n} custom homes${sp.known ? '' : ' (zoning min lot unknown — assumed)'}` : 'Custom home';
@@ -1620,12 +1620,19 @@ function sellerSignals(l){
 }
 function profitLine(l){
   const p = profitFor(l); if(!p) return '';
-  const m = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
-  const vd = l.verdict, vc = vd && { Good: '#2f6b47', Maybe: '#9a7a1c', Pass: '#b03a3a' }[vd.label];
-  const badge = vd ? `<span title="Auto-underwrite at placeholder build costs, buying land at the comps value" style="background:${vc};color:#fff;border-radius:4px;padding:1px 6px;margin-right:6px;font-size:11px;font-weight:700;">${vd.label.toUpperCase()}</span>` : '';
-  return `<div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${badge}📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%) · risk ${p.risk}</div>`;
+  const m = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString(), m2 = m;
+  let badge = '', runNote = '';
+  if(l.parcelStatus === 'vacant' && l.landUseClass === 'residential'){
+    const run = loadRuns().find(r => r.name.toLowerCase() === String(l.address || '').split(/\s{2,}/)[0].toLowerCase());
+    const target = (run ? +run.vals.hcProfit : parseFloat(document.getElementById('hcProfit').value)) / 100 || 0.1;
+    const m = run ? run.margin : p.margin, lab = m >= target && p.risk !== 'High' ? 'Good' : m >= target / 2 ? 'Maybe' : 'Pass';
+    const col = { Good: '#2f6b47', Maybe: '#9a7a1c', Pass: '#b03a3a' }[lab];
+    if(run) runNote = ` · <b>your saved run:</b> ${run.vals.hcLots} homes, land ${m2(+run.vals.hcLand)}, profit ${m2(run.gain)} per home (${(run.margin * 100).toFixed(0)}%)`;
+    badge = `<span title="${run ? 'From the numbers you saved for this address' : 'Calculator numbers, land at the county value, nearby house sales for the sale price'}" style="background:${col};color:#fff;border-radius:4px;padding:1px 6px;margin-right:6px;font-size:11px;font-weight:700;">${lab.toUpperCase()}${run ? ' · your saved numbers' : ''}</span>`;
+  }
+  return `<div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${badge}📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%) · risk ${p.risk}${runNote}</div>`;
 }
-function lowSalePsf(l){ const e = (l.newBuild.examples || []).map(x => x.price / x.sf); return Math.min(l.newBuild.lowPsf || Infinity, ...e); }
+function lowSalePsf(l){ if(l.houseComps) return l.houseComps.lowPsf || l.houseComps.psf; const e = (l.newBuild.examples || []).map(x => x.price / x.sf); return Math.min(l.newBuild.lowPsf || Infinity, ...e); }
 function salesCell(l){
   const nb = l.newBuild, mo = n => '$' + (n / 1e6).toFixed(2) + 'M';
   const ex = (nb.examples || []).map(e => `${esc(e.address)} · ${mo(e.price)} · ${e.sf.toLocaleString()} sf · $${Math.round(e.price / e.sf)}/sf · ${e.sold.slice(0,7)}`).join('<br>');
