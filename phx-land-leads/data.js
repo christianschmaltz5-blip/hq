@@ -179,15 +179,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 127,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1893949,
-        "finished": 2205000,
-        "profit": -1150085,
-        "marginPct": -52,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21403055",
@@ -368,15 +360,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 126,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 408811,
-        "finished": 948500,
-        "profit": -742098,
-        "marginPct": -78,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21403106",
@@ -561,15 +545,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 126,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 409367,
-        "finished": 948500,
-        "profit": -742693,
-        "marginPct": -78,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16766026",
@@ -737,15 +713,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 125,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1902608,
-        "finished": 2327500,
-        "profit": -1044201,
-        "marginPct": -45,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16766023",
@@ -916,15 +884,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 125,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1899889,
-        "finished": 2327500,
-        "profit": -1041291,
-        "marginPct": -45,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21411009G",
@@ -1102,15 +1062,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 124,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1082579,
-        "finished": 882000,
-        "profit": -1525540,
-        "marginPct": -173,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21409019C",
@@ -1289,15 +1241,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-12",
       "peakScore": 119,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 603676,
-        "finished": 1067500,
-        "profit": -838743,
-        "marginPct": -79,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "20713003B",
@@ -1479,15 +1423,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 124,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 658086,
-        "finished": 987000,
-        "profit": -972632,
-        "marginPct": -99,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21460037A",
@@ -1671,15 +1607,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 118,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 962844,
-        "finished": 1088500,
-        "profit": -1203313,
-        "marginPct": -111,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21431007",
@@ -1857,15 +1785,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 118,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1227021,
-        "finished": 948500,
-        "profit": -1617582,
-        "marginPct": -171,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21431004B",
@@ -2185,15 +2105,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 116,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1647836,
-        "finished": 2201500,
-        "profit": -890035,
-        "marginPct": -40,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21524019",
@@ -2371,15 +2283,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 116,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 908843,
-        "finished": 1312500,
-        "profit": -934972,
-        "marginPct": -71,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16608195",
@@ -2558,15 +2462,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 116,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 2826749,
-        "finished": 1116500,
-        "profit": -3171371,
-        "marginPct": -284,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21316013G",
@@ -2743,15 +2639,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 116,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1682956,
-        "finished": 1095500,
-        "profit": -1967253,
-        "marginPct": -180,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "20707002P",
@@ -3072,15 +2960,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 114,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 409367,
-        "finished": 948500,
-        "profit": -742693,
-        "marginPct": -78,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21403063",
@@ -3258,15 +3138,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 114,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 409778,
-        "finished": 948500,
-        "profit": -743132,
-        "marginPct": -78,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21403056",
@@ -3444,15 +3316,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 114,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 408811,
-        "finished": 948500,
-        "profit": -742098,
-        "marginPct": -78,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21403115",
@@ -3630,15 +3494,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 114,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 409667,
-        "finished": 948500,
-        "profit": -743014,
-        "marginPct": -78,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21403108",
@@ -3817,15 +3673,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-03",
       "lastSeen": "2026-10-12",
       "peakScore": 112,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 409367,
-        "finished": 948500,
-        "profit": -742693,
-        "marginPct": -78,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16773025",
@@ -4003,15 +3851,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 112,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1349203,
-        "finished": 2712500,
-        "profit": -90157,
-        "marginPct": -3,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16501037B",
@@ -4181,15 +4021,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 112,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1091973,
-        "finished": 2201500,
-        "profit": -295261,
-        "marginPct": -13,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16501015A",
@@ -4356,15 +4188,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 112,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1240477,
-        "finished": 2201500,
-        "profit": -454160,
-        "marginPct": -21,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21316006",
@@ -4546,15 +4370,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 112,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 551845,
-        "finished": 1102500,
-        "profit": -750384,
-        "marginPct": -68,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16501005",
@@ -4731,15 +4547,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 112,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 2432609,
-        "finished": 2201500,
-        "profit": -1729742,
-        "marginPct": -79,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16766025",
@@ -4916,15 +4724,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 112,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1293117,
-        "finished": 2327500,
-        "profit": -392045,
-        "marginPct": -17,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21403034",
@@ -5102,15 +4902,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 112,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 410044,
-        "finished": 948500,
-        "profit": -743417,
-        "marginPct": -78,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21524006",
@@ -5293,15 +5085,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 112,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 886229,
-        "finished": 1312500,
-        "profit": -910775,
-        "marginPct": -69,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16766010",
@@ -5466,15 +5250,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 112,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1905327,
-        "finished": 2208500,
-        "profit": -1158970,
-        "marginPct": -52,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16515002",
@@ -5647,15 +5423,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 112,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "3 homes",
-        "land": 3681222,
-        "finished": 6510000,
-        "profit": -1423268,
-        "marginPct": -22,
-        "risk": "Medium"
-      }
+      "verdict": null
     },
     {
       "apn": "16773023",
@@ -5839,15 +5607,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 111,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1256738,
-        "finished": 2712500,
-        "profit": 8780,
-        "marginPct": 0,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21522024",
@@ -6025,15 +5785,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 111,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 823059,
-        "finished": 1312500,
-        "profit": -843183,
-        "marginPct": -64,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "20807001W",
@@ -6367,8 +6119,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 713744,
         "finished": 1193500,
-        "profit": -818816,
-        "marginPct": -69,
+        "profit": -1238256,
+        "marginPct": -104,
+        "marginPctAt300": -86,
+        "profitAt300": -1028536,
+        "salePsf": 341,
         "risk": "Low"
       }
     },
@@ -6881,15 +6636,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 110,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1259969,
-        "finished": 2828000,
-        "profit": 113893,
-        "marginPct": 4,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16501024",
@@ -7055,15 +6802,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 110,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1910953,
-        "finished": 2201500,
-        "profit": -1171570,
-        "marginPct": -53,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21524024",
@@ -7245,15 +6984,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-12",
       "peakScore": 110,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 893710,
-        "finished": 1312500,
-        "profit": -918780,
-        "marginPct": -70,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21531002A",
@@ -7430,15 +7161,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 110,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 2520970,
-        "finished": 1330000,
-        "profit": -2643498,
-        "marginPct": -199,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21521020",
@@ -7615,15 +7338,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 110,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1204253,
-        "finished": 1312500,
-        "profit": -1251061,
-        "marginPct": -95,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16766020",
@@ -7788,15 +7503,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 110,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1884369,
-        "finished": 2208500,
-        "profit": -1136545,
-        "marginPct": -51,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16766029",
@@ -7961,15 +7668,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 110,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1898927,
-        "finished": 2208500,
-        "profit": -1152122,
-        "marginPct": -52,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16766006",
@@ -8128,15 +7827,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 110,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1865879,
-        "finished": 2205000,
-        "profit": -1120051,
-        "marginPct": -51,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "20715022C",
@@ -8323,8 +8014,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1740694,
         "finished": 948500,
-        "profit": -2147953,
-        "marginPct": -226,
+        "profit": -2567393,
+        "marginPct": -271,
+        "marginPctAt300": -249,
+        "profitAt300": -2357673,
+        "salePsf": 271,
         "risk": "Low"
       }
     },
@@ -8647,15 +8341,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 109,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 443735,
-        "finished": 1547000,
-        "profit": -216876,
-        "marginPct": -14,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21174107G",
@@ -8836,8 +8522,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 493300,
         "finished": 1403500,
-        "profit": -385541,
-        "marginPct": -27,
+        "profit": -804981,
+        "marginPct": -57,
+        "marginPctAt300": -42,
+        "profitAt300": -595261,
+        "salePsf": 401,
         "risk": "Low"
       }
     },
@@ -9017,15 +8706,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 108,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 410022,
-        "finished": 948500,
-        "profit": -743394,
-        "marginPct": -78,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16768051",
@@ -9197,15 +8878,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 107,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 978804,
-        "finished": 2457000,
-        "profit": 66000,
-        "marginPct": 3,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21433022P",
@@ -9773,8 +9446,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1375075,
         "finished": 1018500,
-        "profit": -1690940,
-        "marginPct": -166,
+        "profit": -2110380,
+        "marginPct": -207,
+        "marginPctAt300": -187,
+        "profitAt300": -1900660,
+        "salePsf": 291,
         "risk": "Low"
       }
     },
@@ -9953,15 +9629,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 106,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 754600,
-        "finished": 1099000,
-        "profit": -970622,
-        "marginPct": -88,
-        "risk": "Medium"
-      }
+      "verdict": null
     },
     {
       "apn": "20824008C",
@@ -10143,15 +9811,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 106,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 858600,
-        "finished": 1099000,
-        "profit": -1081902,
-        "marginPct": -98,
-        "risk": "Medium"
-      }
+      "verdict": null
     },
     {
       "apn": "21526026",
@@ -10334,15 +9994,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 112,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 881402,
-        "finished": 1312500,
-        "profit": -905610,
-        "marginPct": -69,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16501008B",
@@ -10495,15 +10147,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 106,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1265971,
-        "finished": 2201500,
-        "profit": -481439,
-        "marginPct": -22,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21408020F",
@@ -10680,15 +10324,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 106,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 511583,
-        "finished": 1043000,
-        "profit": -763234,
-        "marginPct": -73,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21523014B",
@@ -10870,15 +10506,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 106,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 821482,
-        "finished": 1323000,
-        "profit": -831626,
-        "marginPct": -63,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21526024",
@@ -11055,15 +10683,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 106,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 864307,
-        "finished": 1312500,
-        "profit": -887318,
-        "marginPct": -68,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21434063A",
@@ -11240,15 +10860,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 106,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 834519,
-        "finished": 1067500,
-        "profit": -1085745,
-        "marginPct": -102,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16501023B",
@@ -11401,15 +11013,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 106,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1247772,
-        "finished": 2201500,
-        "profit": -461966,
-        "marginPct": -21,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16766022",
@@ -11574,15 +11178,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 106,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1884745,
-        "finished": 2208500,
-        "profit": -1136947,
-        "marginPct": -51,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "20807083",
@@ -12014,8 +11610,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 599062,
         "finished": 1106000,
-        "profit": -778356,
-        "marginPct": -70,
+        "profit": -1197796,
+        "marginPct": -108,
+        "marginPctAt300": -89,
+        "profitAt300": -988076,
+        "salePsf": 316,
         "risk": "Low"
       }
     },
@@ -12204,8 +11803,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 870656,
         "finished": 1106000,
-        "profit": -1068962,
-        "marginPct": -97,
+        "profit": -1488402,
+        "marginPct": -135,
+        "marginPctAt300": -116,
+        "profitAt300": -1278682,
+        "salePsf": 316,
         "risk": "Low"
       }
     },
@@ -12394,8 +11996,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 732367,
         "finished": 1106000,
-        "profit": -920993,
-        "marginPct": -83,
+        "profit": -1340433,
+        "marginPct": -121,
+        "marginPctAt300": -102,
+        "profitAt300": -1130713,
+        "salePsf": 316,
         "risk": "Low"
       }
     },
@@ -12584,8 +12189,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1293225,
         "finished": 1067500,
-        "profit": -1557301,
-        "marginPct": -146,
+        "profit": -1976741,
+        "marginPct": -185,
+        "marginPctAt300": -166,
+        "profitAt300": -1767021,
+        "salePsf": 305,
         "risk": "Low"
       }
     },
@@ -12766,15 +12374,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-03",
       "lastSeen": "2026-10-12",
       "peakScore": 104,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 409367,
-        "finished": 948500,
-        "profit": -742693,
-        "marginPct": -78,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21403134",
@@ -12954,15 +12554,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 104,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 409667,
-        "finished": 948500,
-        "profit": -743014,
-        "marginPct": -78,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16501009",
@@ -13127,15 +12719,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 104,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1323411,
-        "finished": 2201500,
-        "profit": -542900,
-        "marginPct": -25,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16766003",
@@ -13306,15 +12890,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 104,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "3 homes",
-        "land": 1876379,
-        "finished": 5292000,
-        "profit": -637006,
-        "marginPct": -12,
-        "risk": "Medium"
-      }
+      "verdict": null
     },
     {
       "apn": "16766024",
@@ -13479,15 +13055,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 104,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1995099,
-        "finished": 2327500,
-        "profit": -1143166,
-        "marginPct": -49,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21526030A",
@@ -13665,15 +13233,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 104,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1218844,
-        "finished": 1319500,
-        "profit": -1260093,
-        "marginPct": -95,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16501053B",
@@ -13840,15 +13400,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 104,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1240477,
-        "finished": 2457000,
-        "profit": -213990,
-        "marginPct": -9,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21434014A",
@@ -14025,15 +13577,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 104,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 801046,
-        "finished": 1309000,
-        "profit": -822919,
-        "marginPct": -63,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21404020J",
@@ -14210,15 +13754,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 104,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 715862,
-        "finished": 948500,
-        "profit": -1070642,
-        "marginPct": -113,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21524005",
@@ -14395,15 +13931,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 104,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 895402,
-        "finished": 1312500,
-        "profit": -920590,
-        "marginPct": -70,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21434049C",
@@ -14580,15 +14108,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 104,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 803681,
-        "finished": 1064000,
-        "profit": -1056039,
-        "marginPct": -99,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21460009B",
@@ -14759,15 +14279,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 104,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 317059,
-        "finished": 1008000,
-        "profit": -587993,
-        "marginPct": -58,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21570007D",
@@ -14944,15 +14456,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 104,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1744150,
-        "finished": 1326500,
-        "profit": -1815590,
-        "marginPct": -137,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "15901284",
@@ -15139,8 +14643,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 584132,
         "finished": 1106000,
-        "profit": -762381,
-        "marginPct": -69,
+        "profit": -1181821,
+        "marginPct": -107,
+        "marginPctAt300": -88,
+        "profitAt300": -972101,
+        "salePsf": 316,
         "risk": "Low"
       }
     },
@@ -15467,8 +14974,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1865398,
         "finished": 1099000,
-        "profit": -2139916,
-        "marginPct": -195,
+        "profit": -2559356,
+        "marginPct": -233,
+        "marginPctAt300": -214,
+        "profitAt300": -2349636,
+        "salePsf": 314,
         "risk": "Low"
       }
     },
@@ -15920,15 +15430,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 103,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 320180,
-        "finished": 1547000,
-        "profit": -84673,
-        "marginPct": -5,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16610002",
@@ -16106,15 +15608,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 103,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 435533,
-        "finished": 1547000,
-        "profit": -208100,
-        "marginPct": -13,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16657073",
@@ -16291,15 +15785,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 103,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 928204,
-        "finished": 2201500,
-        "profit": -120028,
-        "marginPct": -5,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16811019A",
@@ -16475,15 +15961,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 103,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1044189,
-        "finished": 2457000,
-        "profit": -3962,
-        "marginPct": 0,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21013007",
@@ -16666,8 +16144,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 596413,
         "finished": 1029000,
-        "profit": -847902,
-        "marginPct": -82,
+        "profit": -1267342,
+        "marginPct": -123,
+        "marginPctAt300": -103,
+        "profitAt300": -1057622,
+        "salePsf": 294,
         "risk": "Low"
       }
     },
@@ -16852,8 +16333,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 390971,
         "finished": 1403500,
-        "profit": -276049,
-        "marginPct": -20,
+        "profit": -695489,
+        "marginPct": -50,
+        "marginPctAt300": -35,
+        "profitAt300": -485769,
+        "salePsf": 401,
         "risk": "Low"
       }
     },
@@ -17034,15 +16518,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 102,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1255852,
-        "finished": 2695000,
-        "profit": -6722,
-        "marginPct": 0,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21316005L",
@@ -17224,15 +16700,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 102,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 279600,
-        "finished": 1095500,
-        "profit": -465662,
-        "marginPct": -43,
-        "risk": "Medium"
-      }
+      "verdict": null
     },
     {
       "apn": "21434004L",
@@ -17409,15 +16877,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 102,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 486690,
-        "finished": 1312500,
-        "profit": -483268,
-        "marginPct": -37,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16770040",
@@ -17599,15 +17059,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 102,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1031054,
-        "finished": 2201500,
-        "profit": -230078,
-        "marginPct": -10,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "20604018K",
@@ -17794,8 +17246,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 506030,
         "finished": 1106000,
-        "profit": -678812,
-        "marginPct": -61,
+        "profit": -1098252,
+        "marginPct": -99,
+        "marginPctAt300": -80,
+        "profitAt300": -888532,
+        "salePsf": 316,
         "risk": "Low"
       }
     },
@@ -17980,8 +17435,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1346716,
         "finished": 1029000,
-        "profit": -1650726,
-        "marginPct": -160,
+        "profit": -2070166,
+        "marginPct": -201,
+        "marginPctAt300": -181,
+        "profitAt300": -1860446,
+        "salePsf": 294,
         "risk": "Low"
       }
     },
@@ -18169,8 +17627,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 857743,
         "finished": 1102500,
-        "profit": -1058435,
-        "marginPct": -96,
+        "profit": -1477875,
+        "marginPct": -134,
+        "marginPctAt300": -115,
+        "profitAt300": -1268155,
+        "salePsf": 315,
         "risk": "Low"
       }
     },
@@ -18355,15 +17816,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 101,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 327427,
-        "finished": 1547000,
-        "profit": -92427,
-        "marginPct": -6,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16608036",
@@ -18545,15 +17998,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 101,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 260561,
-        "finished": 1155000,
-        "profit": -389360,
-        "marginPct": -34,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16608204B",
@@ -18731,15 +18176,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-12",
       "peakScore": 101,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 786230,
-        "finished": 1193500,
-        "profit": -915636,
-        "marginPct": -77,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16501012B",
@@ -18910,15 +18347,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 101,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1117091,
-        "finished": 2201500,
-        "profit": -322137,
-        "marginPct": -15,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16768046",
@@ -19090,15 +18519,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 101,
-      "verdict": {
-        "label": "Maybe",
-        "strategy": "1 custom home",
-        "land": 762509,
-        "finished": 2457000,
-        "profit": 297435,
-        "marginPct": 12,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16768055",
@@ -19276,15 +18697,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 101,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 829865,
-        "finished": 2208500,
-        "profit": -8226,
-        "marginPct": 0,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16766021",
@@ -19449,15 +18862,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 101,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1884536,
-        "finished": 2208500,
-        "profit": -1136724,
-        "marginPct": -51,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16768054",
@@ -19628,15 +19033,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 101,
-      "verdict": {
-        "label": "Maybe",
-        "strategy": "1 custom home",
-        "land": 814744,
-        "finished": 2457000,
-        "profit": 241544,
-        "marginPct": 10,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21215470",
@@ -19818,8 +19215,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1014728,
         "finished": 1214500,
-        "profit": -1121129,
-        "marginPct": -92,
+        "profit": -1540569,
+        "marginPct": -127,
+        "marginPctAt300": -110,
+        "profitAt300": -1330849,
+        "salePsf": 347,
         "risk": "Low"
       }
     },
@@ -20008,8 +19408,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 703442,
         "finished": 1043000,
-        "profit": -949263,
-        "marginPct": -91,
+        "profit": -1368703,
+        "marginPct": -131,
+        "marginPctAt300": -111,
+        "profitAt300": -1158983,
+        "salePsf": 298,
         "risk": "Low"
       }
     },
@@ -20188,15 +19591,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "4 homes",
-        "land": 740300,
-        "finished": 6070400,
-        "profit": 106545,
-        "marginPct": 2,
-        "risk": "High"
-      }
+      "verdict": null
     },
     {
       "apn": "20824009",
@@ -20373,15 +19768,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 804500,
-        "finished": 1099000,
-        "profit": -1024015,
-        "marginPct": -93,
-        "risk": "Medium"
-      }
+      "verdict": null
     },
     {
       "apn": "21453031",
@@ -20558,15 +19945,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 459282,
-        "finished": 1057000,
-        "profit": -694112,
-        "marginPct": -66,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21453013",
@@ -20737,15 +20116,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 457450,
-        "finished": 1008000,
-        "profit": -738212,
-        "marginPct": -73,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21443011K",
@@ -20923,15 +20294,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 354716,
-        "finished": 1018500,
-        "profit": -618416,
-        "marginPct": -61,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21308007E",
@@ -21108,15 +20471,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 586784,
-        "finished": 1445500,
-        "profit": -465349,
-        "marginPct": -32,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16812001H",
@@ -21281,15 +20636,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1342329,
-        "finished": 2457000,
-        "profit": -322972,
-        "marginPct": -13,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21434035E",
@@ -21466,15 +20813,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 507460,
-        "finished": 1274000,
-        "profit": -541682,
-        "marginPct": -43,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21523016B",
@@ -21651,15 +20990,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 934688,
-        "finished": 1316000,
-        "profit": -959336,
-        "marginPct": -73,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16773006",
@@ -21836,15 +21167,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1890058,
-        "finished": 2695000,
-        "profit": -685322,
-        "marginPct": -25,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21316010E",
@@ -22025,15 +21348,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 377390,
-        "finished": 1102500,
-        "profit": -563717,
-        "marginPct": -51,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16603007A",
@@ -22209,15 +21524,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 908592,
-        "finished": 1288000,
-        "profit": -957733,
-        "marginPct": -74,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21527002H",
@@ -22393,15 +21700,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1378931,
-        "finished": 1323000,
-        "profit": -1428096,
-        "marginPct": -108,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21434004K",
@@ -22578,15 +21877,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 673527,
-        "finished": 1312500,
-        "profit": -683184,
-        "marginPct": -52,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21404005L",
@@ -22763,15 +22054,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 388129,
-        "finished": 948500,
-        "profit": -719968,
-        "marginPct": -76,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21520013A",
@@ -22947,15 +22230,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 908363,
-        "finished": 1298500,
-        "profit": -947618,
-        "marginPct": -73,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21434029B",
@@ -23132,15 +22407,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 504615,
-        "finished": 1298500,
-        "profit": -515608,
-        "marginPct": -40,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16766011",
@@ -23304,15 +22571,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1885749,
-        "finished": 2208500,
-        "profit": -1138021,
-        "marginPct": -52,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21529075",
@@ -23488,15 +22747,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1757354,
-        "finished": 1326500,
-        "profit": -1829719,
-        "marginPct": -138,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16766009",
@@ -23660,15 +22911,7 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 100,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1995601,
-        "finished": 2208500,
-        "profit": -1255563,
-        "marginPct": -57,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "20816269",
@@ -23849,8 +23092,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 840863,
         "finished": 1183000,
-        "profit": -964703,
-        "marginPct": -82,
+        "profit": -1384143,
+        "marginPct": -117,
+        "marginPctAt300": -99,
+        "profitAt300": -1174423,
+        "salePsf": 338,
         "risk": "Low"
       }
     },
@@ -24033,8 +23279,11 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1197741,
         "finished": 1312500,
-        "profit": -1224833,
-        "marginPct": -93,
+        "profit": -1644273,
+        "marginPct": -125,
+        "marginPctAt300": -109,
+        "profitAt300": -1434553,
+        "salePsf": 375,
         "risk": "Low"
       }
     },
@@ -25285,7 +24534,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 97,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 546276,
+        "finished": 1158500,
+        "profit": -1091965,
+        "marginPct": -94,
+        "marginPctAt300": -76,
+        "profitAt300": -882245,
+        "salePsf": 331,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 960000,
+        "psf": 331,
+        "n": 8,
+        "radiusMi": 1.0,
+        "lowPsf": 154,
+        "highPsf": 504,
+        "examples": [
+          {
+            "address": "1750 E LARKSPUR DR",
+            "price": 1225000,
+            "sf": 7956,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "12814 N 17TH PL",
+            "price": 1474000,
+            "sf": 3057,
+            "sold": "2025-10-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "13218 N 17TH PL",
+            "price": 2000000,
+            "sf": 3968,
+            "sold": "2024-05-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21309007H",
@@ -25563,7 +24863,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 97,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1169133,
+        "finished": 1193500,
+        "profit": -1725522,
+        "marginPct": -145,
+        "marginPctAt300": -127,
+        "profitAt300": -1515802,
+        "salePsf": 341,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1185000,
+        "psf": 341,
+        "n": 5,
+        "radiusMi": 1.0,
+        "lowPsf": 305,
+        "highPsf": 442,
+        "examples": [
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2914 E BLANCHE DR",
+            "price": 685000,
+            "sf": 2243,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "3002 E CHARTER OAK RD",
+            "price": 1185000,
+            "sf": 3478,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "3010 E CHARTER OAK RD",
+            "price": 1200000,
+            "sf": 3115,
+            "sold": "2023-11-01"
+          },
+          {
+            "address": "2360 E LARKSPUR DR",
+            "price": 590000,
+            "sf": 1850,
+            "sold": "2024-08-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21454022",
@@ -25700,7 +25051,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 97,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1397735,
+        "finished": 1193500,
+        "profit": -1970126,
+        "marginPct": -165,
+        "marginPctAt300": -147,
+        "profitAt300": -1760406,
+        "salePsf": 341,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1092796,
+        "psf": 341,
+        "n": 19,
+        "radiusMi": 2.0,
+        "lowPsf": 154,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "2914 E BLANCHE DR",
+            "price": 685000,
+            "sf": 2243,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "2360 E LARKSPUR DR",
+            "price": 590000,
+            "sf": 1850,
+            "sold": "2024-08-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21454043",
@@ -25837,7 +25239,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 97,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1862170,
+        "finished": 1193500,
+        "profit": -2467072,
+        "marginPct": -207,
+        "marginPctAt300": -189,
+        "profitAt300": -2257352,
+        "salePsf": 341,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 951398,
+        "psf": 341,
+        "n": 20,
+        "radiusMi": 2.0,
+        "lowPsf": 154,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "2914 E BLANCHE DR",
+            "price": 685000,
+            "sf": 2243,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "1738 E WINCHCOMB DR",
+            "price": 1550000,
+            "sf": 3426,
+            "sold": "2024-07-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21405018G",
@@ -26261,7 +25714,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-12",
       "peakScore": 97,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 500444,
+        "finished": 1043000,
+        "profit": -1151495,
+        "marginPct": -110,
+        "marginPctAt300": -90,
+        "profitAt300": -941775,
+        "salePsf": 298,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 647475,
+        "psf": 298,
+        "n": 6,
+        "radiusMi": 1.0,
+        "lowPsf": 237,
+        "highPsf": 412,
+        "examples": [
+          {
+            "address": "17234 N 28TH ST",
+            "price": 659950,
+            "sf": 1600,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "16244 N 21ST ST",
+            "price": 1100000,
+            "sf": 3637,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "2138 E PARADISE LN",
+            "price": 1092796,
+            "sf": 3455,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "2890 E ANGELA DR",
+            "price": 635000,
+            "sf": 2684,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "2908 E ANGELA DR",
+            "price": 627000,
+            "sf": 2134,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "16768052",
@@ -26759,7 +26263,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 96,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 2178647,
+        "finished": 1389500,
+        "profit": -2621462,
+        "marginPct": -189,
+        "marginPctAt300": -174,
+        "profitAt300": -2411742,
+        "salePsf": 397,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 899900,
+        "psf": 397,
+        "n": 51,
+        "radiusMi": 2.0,
+        "lowPsf": 299,
+        "highPsf": 501,
+        "examples": [
+          {
+            "address": "19676 N 27TH PL",
+            "price": 618000,
+            "sf": 1800,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "2751 E TONTO LN",
+            "price": 600000,
+            "sf": 1596,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "2762 E FOSSIL RIDGE RD",
+            "price": 599000,
+            "sf": 1596,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2767 E TONTO LN",
+            "price": 630000,
+            "sf": 2033,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "19854 N 29TH ST",
+            "price": 490000,
+            "sf": 1641,
+            "sold": "2026-05-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21403059",
@@ -28269,7 +27824,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-12",
       "lastSeen": "2026-10-12",
       "peakScore": 95,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1095695,
+        "finished": 1445500,
+        "profit": -1410064,
+        "marginPct": -98,
+        "marginPctAt300": -83,
+        "profitAt300": -1200344,
+        "salePsf": 413,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1287500,
+        "psf": 413,
+        "n": 10,
+        "radiusMi": 1.0,
+        "lowPsf": 154,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "1729 E WINCHCOMB DR",
+            "price": 1399000,
+            "sf": 2598,
+            "sold": "2026-07-01"
+          },
+          {
+            "address": "1738 E WINCHCOMB DR",
+            "price": 1550000,
+            "sf": 3426,
+            "sold": "2024-07-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20816438",
@@ -28406,7 +28012,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 95,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 999303,
+        "finished": 1018500,
+        "profit": -1708304,
+        "marginPct": -168,
+        "marginPctAt300": -147,
+        "profitAt300": -1498584,
+        "salePsf": 291,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 480000,
+        "psf": 291,
+        "n": 5,
+        "radiusMi": 2.0,
+        "lowPsf": 268,
+        "highPsf": 340,
+        "examples": [
+          {
+            "address": "14214 N MOON MOUNTAIN TRL",
+            "price": 2815000,
+            "sf": 8330,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "710 W HARTFORD AVE",
+            "price": 525000,
+            "sf": 1543,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "715 E BOCA RATON RD",
+            "price": 475000,
+            "sf": 1635,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "735 E CALAVAR RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2025-05-01"
+          },
+          {
+            "address": "741 E BOCA RATON RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21411894",
@@ -28543,7 +28200,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-12",
       "peakScore": 95,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 949385,
+        "finished": 882000,
+        "profit": -1783202,
+        "marginPct": -202,
+        "marginPctAt300": -178,
+        "profitAt300": -1573482,
+        "salePsf": 252,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 532632,
+        "psf": 252,
+        "n": 6,
+        "radiusMi": 1.0,
+        "lowPsf": 239,
+        "highPsf": 332,
+        "examples": [
+          {
+            "address": "17251 N 10TH ST",
+            "price": 525000,
+            "sf": 2196,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "17219 N 10TH ST",
+            "price": 645000,
+            "sf": 2610,
+            "sold": "2025-09-01"
+          },
+          {
+            "address": "17230 N 9TH PL",
+            "price": 515000,
+            "sf": 2100,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "946 E DANBURY DR",
+            "price": 537900,
+            "sf": 2100,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "16875 N 12TH ST",
+            "price": 588500,
+            "sf": 1912,
+            "sold": "2025-10-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21411917",
@@ -28680,7 +28388,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 95,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1027415,
+        "finished": 882000,
+        "profit": -1866694,
+        "marginPct": -212,
+        "marginPctAt300": -188,
+        "profitAt300": -1656974,
+        "salePsf": 252,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 532632,
+        "psf": 252,
+        "n": 6,
+        "radiusMi": 1.0,
+        "lowPsf": 239,
+        "highPsf": 332,
+        "examples": [
+          {
+            "address": "17251 N 10TH ST",
+            "price": 525000,
+            "sf": 2196,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "17219 N 10TH ST",
+            "price": 645000,
+            "sf": 2610,
+            "sold": "2025-09-01"
+          },
+          {
+            "address": "17230 N 9TH PL",
+            "price": 515000,
+            "sf": 2100,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "946 E DANBURY DR",
+            "price": 537900,
+            "sf": 2100,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "16875 N 12TH ST",
+            "price": 588500,
+            "sf": 1912,
+            "sold": "2025-10-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21440004G",
@@ -28947,7 +28706,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 95,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1507191,
+        "finished": 1193500,
+        "profit": -2087244,
+        "marginPct": -175,
+        "marginPctAt300": -157,
+        "profitAt300": -1877524,
+        "salePsf": 341,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 951398,
+        "psf": 341,
+        "n": 20,
+        "radiusMi": 2.0,
+        "lowPsf": 154,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "2914 E BLANCHE DR",
+            "price": 685000,
+            "sf": 2243,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "1738 E WINCHCOMB DR",
+            "price": 1550000,
+            "sf": 3426,
+            "sold": "2024-07-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20813003K",
@@ -29089,7 +28899,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 95,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1751045,
+        "finished": 1018500,
+        "profit": -2512668,
+        "marginPct": -247,
+        "marginPctAt300": -226,
+        "profitAt300": -2302948,
+        "salePsf": 291,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 480000,
+        "psf": 291,
+        "n": 5,
+        "radiusMi": 2.0,
+        "lowPsf": 268,
+        "highPsf": 340,
+        "examples": [
+          {
+            "address": "14214 N MOON MOUNTAIN TRL",
+            "price": 2815000,
+            "sf": 8330,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "710 W HARTFORD AVE",
+            "price": 525000,
+            "sf": 1543,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "715 E BOCA RATON RD",
+            "price": 475000,
+            "sf": 1635,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "735 E CALAVAR RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2025-05-01"
+          },
+          {
+            "address": "741 E BOCA RATON RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21454005",
@@ -29230,7 +29091,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 95,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1225269,
+        "finished": 1193500,
+        "profit": -1785588,
+        "marginPct": -150,
+        "marginPctAt300": -132,
+        "profitAt300": -1575868,
+        "salePsf": 341,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1185000,
+        "psf": 341,
+        "n": 5,
+        "radiusMi": 1.0,
+        "lowPsf": 305,
+        "highPsf": 442,
+        "examples": [
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2914 E BLANCHE DR",
+            "price": 685000,
+            "sf": 2243,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "3002 E CHARTER OAK RD",
+            "price": 1185000,
+            "sf": 3478,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "3010 E CHARTER OAK RD",
+            "price": 1200000,
+            "sf": 3115,
+            "sold": "2023-11-01"
+          },
+          {
+            "address": "2360 E LARKSPUR DR",
+            "price": 590000,
+            "sf": 1850,
+            "sold": "2024-08-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20813003M",
@@ -29376,7 +29288,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 95,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1083118,
+        "finished": 1018500,
+        "profit": -1797986,
+        "marginPct": -177,
+        "marginPctAt300": -156,
+        "profitAt300": -1588266,
+        "salePsf": 291,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 480000,
+        "psf": 291,
+        "n": 5,
+        "radiusMi": 2.0,
+        "lowPsf": 268,
+        "highPsf": 340,
+        "examples": [
+          {
+            "address": "14214 N MOON MOUNTAIN TRL",
+            "price": 2815000,
+            "sf": 8330,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "710 W HARTFORD AVE",
+            "price": 525000,
+            "sf": 1543,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "715 E BOCA RATON RD",
+            "price": 475000,
+            "sf": 1635,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "735 E CALAVAR RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2025-05-01"
+          },
+          {
+            "address": "741 E BOCA RATON RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20813003L",
@@ -29522,7 +29485,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 95,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 682664,
+        "finished": 1018500,
+        "profit": -1369500,
+        "marginPct": -134,
+        "marginPctAt300": -114,
+        "profitAt300": -1159780,
+        "salePsf": 291,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 480000,
+        "psf": 291,
+        "n": 5,
+        "radiusMi": 2.0,
+        "lowPsf": 268,
+        "highPsf": 340,
+        "examples": [
+          {
+            "address": "14214 N MOON MOUNTAIN TRL",
+            "price": 2815000,
+            "sf": 8330,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "710 W HARTFORD AVE",
+            "price": 525000,
+            "sf": 1543,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "715 E BOCA RATON RD",
+            "price": 475000,
+            "sf": 1635,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "735 E CALAVAR RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2025-05-01"
+          },
+          {
+            "address": "741 E BOCA RATON RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21431021E",
@@ -29801,7 +29815,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 95,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 696655,
+        "finished": 1487500,
+        "profit": -943611,
+        "marginPct": -63,
+        "marginPctAt300": -49,
+        "profitAt300": -733891,
+        "salePsf": 425,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1325000,
+        "psf": 425,
+        "n": 11,
+        "radiusMi": 1.0,
+        "lowPsf": 325,
+        "highPsf": 645,
+        "examples": [
+          {
+            "address": "2808 W HERE TO THERE DR",
+            "price": 1325000,
+            "sf": 3050,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "2819 W CREEK CANYON RD",
+            "price": 1350000,
+            "sf": 3179,
+            "sold": "2025-08-01"
+          },
+          {
+            "address": "2951 W HERE TO THERE DR",
+            "price": 1420000,
+            "sf": 3173,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "35785 N 26TH AVE",
+            "price": 1850000,
+            "sf": 3867,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2439 W DONATELLO DR",
+            "price": 3050000,
+            "sf": 4727,
+            "sold": "2026-03-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20712350",
@@ -30350,7 +30415,52 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 94,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1213942,
+        "finished": 976500,
+        "profit": -1977448,
+        "marginPct": -203,
+        "marginPctAt300": -181,
+        "profitAt300": -1767728,
+        "salePsf": 279,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 480000,
+        "psf": 279,
+        "n": 4,
+        "radiusMi": 2.0,
+        "lowPsf": 268,
+        "highPsf": 338,
+        "examples": [
+          {
+            "address": "14214 N MOON MOUNTAIN TRL",
+            "price": 2815000,
+            "sf": 8330,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "715 E BOCA RATON RD",
+            "price": 475000,
+            "sf": 1635,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "735 E CALAVAR RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2025-05-01"
+          },
+          {
+            "address": "741 E BOCA RATON RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21447850",
@@ -30485,7 +30595,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 94,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 586878,
+        "finished": 1270500,
+        "profit": -1030129,
+        "marginPct": -81,
+        "marginPctAt300": -65,
+        "profitAt300": -820409,
+        "salePsf": 363,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1017500,
+        "psf": 363,
+        "n": 12,
+        "radiusMi": 1.0,
+        "lowPsf": 154,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "13218 N 17TH PL",
+            "price": 2000000,
+            "sf": 3968,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "12814 N 17TH PL",
+            "price": 1474000,
+            "sf": 3057,
+            "sold": "2025-10-01"
+          },
+          {
+            "address": "1750 E LARKSPUR DR",
+            "price": 1225000,
+            "sf": 7956,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20816427",
@@ -30621,7 +30782,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-12",
       "peakScore": 94,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1338134,
+        "finished": 1018500,
+        "profit": -2070853,
+        "marginPct": -203,
+        "marginPctAt300": -183,
+        "profitAt300": -1861133,
+        "salePsf": 291,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 480000,
+        "psf": 291,
+        "n": 5,
+        "radiusMi": 2.0,
+        "lowPsf": 268,
+        "highPsf": 340,
+        "examples": [
+          {
+            "address": "14214 N MOON MOUNTAIN TRL",
+            "price": 2815000,
+            "sf": 8330,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "710 W HARTFORD AVE",
+            "price": 525000,
+            "sf": 1543,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "715 E BOCA RATON RD",
+            "price": 475000,
+            "sf": 1635,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "735 E CALAVAR RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2025-05-01"
+          },
+          {
+            "address": "741 E BOCA RATON RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21215879",
@@ -30757,7 +30969,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 94,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1246032,
+        "finished": 1221500,
+        "profit": -1781484,
+        "marginPct": -146,
+        "marginPctAt300": -129,
+        "profitAt300": -1571764,
+        "salePsf": 349,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 766000,
+        "psf": 349,
+        "n": 155,
+        "radiusMi": 1.0,
+        "lowPsf": 256,
+        "highPsf": 473,
+        "examples": [
+          {
+            "address": "24214 N 23RD WAY",
+            "price": 720000,
+            "sf": 1612,
+            "sold": "2026-02-01"
+          },
+          {
+            "address": "24210 N 23RD WAY",
+            "price": 725000,
+            "sf": 1916,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "24217 N 23RD WAY",
+            "price": 725000,
+            "sf": 1916,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "2124 E ALAMEDA RD",
+            "price": 795000,
+            "sf": 2291,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "24115 N 21ST ST",
+            "price": 727500,
+            "sf": 2030,
+            "sold": "2026-06-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21460013",
@@ -32958,7 +33221,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 92,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 208000,
+        "finished": 1505000,
+        "profit": -404300,
+        "marginPct": -27,
+        "marginPctAt300": -13,
+        "profitAt300": -194580,
+        "salePsf": 430,
+        "risk": "Medium"
+      },
+      "newBuild": {
+        "arv": 1385000,
+        "psf": 430,
+        "n": 8,
+        "radiusMi": 1.0,
+        "lowPsf": 263,
+        "highPsf": 645,
+        "examples": [
+          {
+            "address": "35785 N 26TH AVE",
+            "price": 1850000,
+            "sf": 3867,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2439 W DONATELLO DR",
+            "price": 3050000,
+            "sf": 4727,
+            "sold": "2026-03-01"
+          },
+          {
+            "address": "2808 W HERE TO THERE DR",
+            "price": 1325000,
+            "sf": 3050,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "2819 W CREEK CANYON RD",
+            "price": 1350000,
+            "sf": 3179,
+            "sold": "2025-08-01"
+          },
+          {
+            "address": "2951 W HERE TO THERE DR",
+            "price": 1420000,
+            "sf": 3173,
+            "sold": "2025-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21309001F",
@@ -34457,7 +34771,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 91,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1055441,
+        "finished": 1106000,
+        "profit": -1686122,
+        "marginPct": -152,
+        "marginPctAt300": -133,
+        "profitAt300": -1476402,
+        "salePsf": 316,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 550500,
+        "psf": 316,
+        "n": 5,
+        "radiusMi": 2.0,
+        "lowPsf": 283,
+        "highPsf": 345,
+        "examples": [
+          {
+            "address": "4028 W MONONA DR",
+            "price": 550500,
+            "sf": 1744,
+            "sold": "2025-09-01"
+          },
+          {
+            "address": "4050 W ROSS AVE",
+            "price": 545000,
+            "sf": 1924,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "20821 N 40TH LN",
+            "price": 515000,
+            "sf": 1778,
+            "sold": "2026-01-01"
+          },
+          {
+            "address": "3918 W BOWEN AVE",
+            "price": 1015000,
+            "sf": 2944,
+            "sold": "2025-09-01"
+          },
+          {
+            "address": "19617 N 39TH DR",
+            "price": 1187000,
+            "sf": 3556,
+            "sold": "2025-06-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20907045B",
@@ -34705,7 +35070,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 91,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 568870,
+        "finished": 948500,
+        "profit": -1313541,
+        "marginPct": -138,
+        "marginPctAt300": -116,
+        "profitAt300": -1103821,
+        "salePsf": 271,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 627000,
+        "psf": 271,
+        "n": 5,
+        "radiusMi": 1.0,
+        "lowPsf": 237,
+        "highPsf": 412,
+        "examples": [
+          {
+            "address": "2890 E ANGELA DR",
+            "price": 635000,
+            "sf": 2684,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "2908 E ANGELA DR",
+            "price": 627000,
+            "sf": 2134,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "17234 N 28TH ST",
+            "price": 659950,
+            "sf": 1600,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "2640 E BEVERLY LN",
+            "price": 410000,
+            "sf": 1513,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2901 E PARADISE LN",
+            "price": 400000,
+            "sf": 1581,
+            "sold": "2026-08-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21454021",
@@ -34840,7 +35256,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 91,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1222566,
+        "finished": 1193500,
+        "profit": -1782696,
+        "marginPct": -149,
+        "marginPctAt300": -132,
+        "profitAt300": -1572976,
+        "salePsf": 341,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1092796,
+        "psf": 341,
+        "n": 19,
+        "radiusMi": 2.0,
+        "lowPsf": 154,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "2914 E BLANCHE DR",
+            "price": 685000,
+            "sf": 2243,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "2360 E LARKSPUR DR",
+            "price": 590000,
+            "sf": 1850,
+            "sold": "2024-08-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21434036A",
@@ -34980,7 +35447,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 91,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1044563,
+        "finished": 1288000,
+        "profit": -1503402,
+        "marginPct": -117,
+        "marginPctAt300": -100,
+        "profitAt300": -1293682,
+        "salePsf": 368,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 754000,
+        "psf": 368,
+        "n": 45,
+        "radiusMi": 2.0,
+        "lowPsf": 237,
+        "highPsf": 475,
+        "examples": [
+          {
+            "address": "14426 N 39TH WAY",
+            "price": 737500,
+            "sf": 2004,
+            "sold": "2026-01-01"
+          },
+          {
+            "address": "2901 E PARADISE LN",
+            "price": 400000,
+            "sf": 1581,
+            "sold": "2026-08-01"
+          },
+          {
+            "address": "2914 E BLANCHE DR",
+            "price": 685000,
+            "sf": 2243,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2640 E BEVERLY LN",
+            "price": 410000,
+            "sf": 1513,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2908 E ANGELA DR",
+            "price": 627000,
+            "sf": 2134,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21332006",
@@ -35945,7 +36463,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-12",
       "peakScore": 90,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1003600,
+        "finished": 1382500,
+        "profit": -1370742,
+        "marginPct": -99,
+        "marginPctAt300": -84,
+        "profitAt300": -1161022,
+        "salePsf": 395,
+        "risk": "Medium"
+      },
+      "newBuild": {
+        "arv": 1651098,
+        "psf": 395,
+        "n": 8,
+        "radiusMi": 1.0,
+        "lowPsf": 282,
+        "highPsf": 509,
+        "examples": [
+          {
+            "address": "1409 E COYOTE WASH DR",
+            "price": 2750000,
+            "sf": 5469,
+            "sold": "2024-06-01"
+          },
+          {
+            "address": "1510 E RED RANGE WAY",
+            "price": 899900,
+            "sf": 3193,
+            "sold": "2025-08-01"
+          },
+          {
+            "address": "1424 E RED RANGE WAY",
+            "price": 1850000,
+            "sf": 3636,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "1244 E SMOKEHOUSE TRL",
+            "price": 1665000,
+            "sf": 4277,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "1204 E SMOKEHOUSE TRL",
+            "price": 1652197,
+            "sf": 4012,
+            "sold": "2024-09-01"
+          }
+        ]
+      }
     },
     {
       "apn": "15901318",
@@ -36081,7 +36650,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 90,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 477543,
+        "finished": 1106000,
+        "profit": -1067771,
+        "marginPct": -97,
+        "marginPctAt300": -78,
+        "profitAt300": -858051,
+        "salePsf": 316,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 802500,
+        "psf": 316,
+        "n": 12,
+        "radiusMi": 1.0,
+        "lowPsf": 154,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "13218 N 17TH PL",
+            "price": 2000000,
+            "sf": 3968,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "13803 N 12TH ST",
+            "price": 810000,
+            "sf": 2107,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "12814 N 17TH PL",
+            "price": 1474000,
+            "sf": 3057,
+            "sold": "2025-10-01"
+          },
+          {
+            "address": "14025 N 11TH PL",
+            "price": 795000,
+            "sf": 2329,
+            "sold": "2026-03-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21309001S",
@@ -36212,7 +36832,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 365100,
+        "finished": 1452500,
+        "profit": -621747,
+        "marginPct": -43,
+        "marginPctAt300": -28,
+        "profitAt300": -412027,
+        "salePsf": 415,
+        "risk": "Medium"
+      },
+      "newBuild": {
+        "arv": 1072500,
+        "psf": 415,
+        "n": 82,
+        "radiusMi": 2.0,
+        "lowPsf": 279,
+        "highPsf": 541,
+        "examples": [
+          {
+            "address": "2815 E TINA DR",
+            "price": 765000,
+            "sf": 2036,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "22023 N 28TH PL",
+            "price": 750000,
+            "sf": 2179,
+            "sold": "2025-08-01"
+          },
+          {
+            "address": "22034 N 28TH PL",
+            "price": 842000,
+            "sf": 2492,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "2819 E LOS GATOS DR",
+            "price": 825000,
+            "sf": 2142,
+            "sold": "2026-03-01"
+          },
+          {
+            "address": "22038 N 28TH PL",
+            "price": 790000,
+            "sf": 1883,
+            "sold": "2025-12-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20325536",
@@ -36348,7 +37019,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 348511,
+        "finished": 1543500,
+        "profit": -518457,
+        "marginPct": -34,
+        "marginPctAt300": -20,
+        "profitAt300": -308737,
+        "salePsf": 441,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1385000,
+        "psf": 441,
+        "n": 6,
+        "radiusMi": 1.0,
+        "lowPsf": 338,
+        "highPsf": 645,
+        "examples": [
+          {
+            "address": "35785 N 26TH AVE",
+            "price": 1850000,
+            "sf": 3867,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2439 W DONATELLO DR",
+            "price": 3050000,
+            "sf": 4727,
+            "sold": "2026-03-01"
+          },
+          {
+            "address": "2808 W HERE TO THERE DR",
+            "price": 1325000,
+            "sf": 3050,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "2819 W CREEK CANYON RD",
+            "price": 1350000,
+            "sf": 3179,
+            "sold": "2025-08-01"
+          },
+          {
+            "address": "2951 W HERE TO THERE DR",
+            "price": 1420000,
+            "sf": 3173,
+            "sold": "2025-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21454006",
@@ -36484,7 +37206,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 871535,
+        "finished": 1067500,
+        "profit": -1525532,
+        "marginPct": -143,
+        "marginPctAt300": -123,
+        "profitAt300": -1315812,
+        "salePsf": 305,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 685000,
+        "psf": 305,
+        "n": 5,
+        "radiusMi": 1.0,
+        "lowPsf": 229,
+        "highPsf": 442,
+        "examples": [
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2914 E BLANCHE DR",
+            "price": 685000,
+            "sf": 2243,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2360 E LARKSPUR DR",
+            "price": 590000,
+            "sf": 1850,
+            "sold": "2024-08-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          }
+        ]
+      }
     },
     {
       "apn": "16611005",
@@ -36620,7 +37393,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 399025,
+        "finished": 1547000,
+        "profit": -569217,
+        "marginPct": -37,
+        "marginPctAt300": -23,
+        "profitAt300": -359497,
+        "salePsf": 442,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1350000,
+        "psf": 442,
+        "n": 9,
+        "radiusMi": 1.0,
+        "lowPsf": 154,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "2360 E LARKSPUR DR",
+            "price": 590000,
+            "sf": 1850,
+            "sold": "2024-08-01"
+          },
+          {
+            "address": "12814 N 17TH PL",
+            "price": 1474000,
+            "sf": 3057,
+            "sold": "2025-10-01"
+          }
+        ]
+      }
     },
     {
       "apn": "16632020",
@@ -36756,7 +37580,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 603447,
+        "finished": 1347500,
+        "profit": -975478,
+        "marginPct": -72,
+        "marginPctAt300": -57,
+        "profitAt300": -765758,
+        "salePsf": 385,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1225000,
+        "psf": 385,
+        "n": 17,
+        "radiusMi": 2.0,
+        "lowPsf": 154,
+        "highPsf": 842,
+        "examples": [
+          {
+            "address": "3010 E CHARTER OAK RD",
+            "price": 1200000,
+            "sf": 3115,
+            "sold": "2023-11-01"
+          },
+          {
+            "address": "3002 E CHARTER OAK RD",
+            "price": 1185000,
+            "sf": 3478,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "2360 E LARKSPUR DR",
+            "price": 590000,
+            "sf": 1850,
+            "sold": "2024-08-01"
+          },
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "10022 N 36TH ST",
+            "price": 2045000,
+            "sf": 3774,
+            "sold": "2023-12-01"
+          }
+        ]
+      }
     },
     {
       "apn": "16643029",
@@ -36892,7 +37767,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 351838,
+        "finished": 1445500,
+        "profit": -614137,
+        "marginPct": -42,
+        "marginPctAt300": -28,
+        "profitAt300": -404417,
+        "salePsf": 413,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1287500,
+        "psf": 413,
+        "n": 10,
+        "radiusMi": 1.0,
+        "lowPsf": 154,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "13218 N 17TH PL",
+            "price": 2000000,
+            "sf": 3968,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "12814 N 17TH PL",
+            "price": 1474000,
+            "sf": 3057,
+            "sold": "2025-10-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "1729 E WINCHCOMB DR",
+            "price": 1399000,
+            "sf": 2598,
+            "sold": "2026-07-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20604060A",
@@ -37028,7 +37954,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 877717,
+        "finished": 1046500,
+        "profit": -1551887,
+        "marginPct": -148,
+        "marginPctAt300": -128,
+        "profitAt300": -1342167,
+        "salePsf": 299,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 583000,
+        "psf": 299,
+        "n": 27,
+        "radiusMi": 2.0,
+        "lowPsf": 205,
+        "highPsf": 401,
+        "examples": [
+          {
+            "address": "2059 W DESERT HOLLOW DR",
+            "price": 589900,
+            "sf": 1940,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "25311 N 21ST AVE",
+            "price": 610000,
+            "sf": 1909,
+            "sold": "2026-07-01"
+          },
+          {
+            "address": "2044 W TROTTER TRL",
+            "price": 557000,
+            "sf": 1940,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "2040 W TROTTER TRL",
+            "price": 628500,
+            "sf": 2470,
+            "sold": "2024-06-01"
+          },
+          {
+            "address": "2039 W DESERT HOLLOW DR",
+            "price": 562500,
+            "sf": 1799,
+            "sold": "2024-09-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20805002F",
@@ -37268,7 +38245,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 920960,
+        "finished": 1018500,
+        "profit": -1624477,
+        "marginPct": -159,
+        "marginPctAt300": -139,
+        "profitAt300": -1414757,
+        "salePsf": 291,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 480000,
+        "psf": 291,
+        "n": 5,
+        "radiusMi": 2.0,
+        "lowPsf": 268,
+        "highPsf": 340,
+        "examples": [
+          {
+            "address": "14214 N MOON MOUNTAIN TRL",
+            "price": 2815000,
+            "sf": 8330,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "710 W HARTFORD AVE",
+            "price": 525000,
+            "sf": 1543,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "715 E BOCA RATON RD",
+            "price": 475000,
+            "sf": 1635,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "735 E CALAVAR RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2025-05-01"
+          },
+          {
+            "address": "741 E BOCA RATON RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21011015N",
@@ -37405,7 +38433,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1015718,
+        "finished": 1032500,
+        "profit": -1712708,
+        "marginPct": -166,
+        "marginPctAt300": -146,
+        "profitAt300": -1502988,
+        "salePsf": 295,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 685545,
+        "psf": 295,
+        "n": 130,
+        "radiusMi": 1.0,
+        "lowPsf": 201,
+        "highPsf": 486,
+        "examples": [
+          {
+            "address": "26421 N 19TH DR",
+            "price": 875000,
+            "sf": 2391,
+            "sold": "2024-11-01"
+          },
+          {
+            "address": "26417 N 19TH DR",
+            "price": 870285,
+            "sf": 2627,
+            "sold": "2024-08-01"
+          },
+          {
+            "address": "26409 N 19TH DR",
+            "price": 955666,
+            "sf": 3593,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "26405 N 19TH DR",
+            "price": 1002369,
+            "sf": 3864,
+            "sold": "2025-05-01"
+          },
+          {
+            "address": "26349 N 19TH DR",
+            "price": 964990,
+            "sf": 3864,
+            "sold": "2024-07-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21316387C",
@@ -37540,7 +38619,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 499651,
+        "finished": 1085000,
+        "profit": -1111167,
+        "marginPct": -102,
+        "marginPctAt300": -83,
+        "profitAt300": -901447,
+        "salePsf": 310,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 618000,
+        "psf": 310,
+        "n": 9,
+        "radiusMi": 1.0,
+        "lowPsf": 237,
+        "highPsf": 376,
+        "examples": [
+          {
+            "address": "2773 E SEQUOIA DR",
+            "price": 625000,
+            "sf": 2033,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "2762 E FOSSIL RIDGE RD",
+            "price": 599000,
+            "sf": 1596,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2767 E TONTO LN",
+            "price": 630000,
+            "sf": 2033,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2751 E TONTO LN",
+            "price": 600000,
+            "sf": 1596,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "19676 N 27TH PL",
+            "price": 618000,
+            "sf": 1800,
+            "sold": "2025-02-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21326002R",
@@ -37676,7 +38806,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1047729,
+        "finished": 1102500,
+        "profit": -1681160,
+        "marginPct": -152,
+        "marginPctAt300": -133,
+        "profitAt300": -1471440,
+        "salePsf": 315,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 600000,
+        "psf": 315,
+        "n": 7,
+        "radiusMi": 1.0,
+        "lowPsf": 299,
+        "highPsf": 376,
+        "examples": [
+          {
+            "address": "19676 N 27TH PL",
+            "price": 618000,
+            "sf": 1800,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "2751 E TONTO LN",
+            "price": 600000,
+            "sf": 1596,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "2762 E FOSSIL RIDGE RD",
+            "price": 599000,
+            "sf": 1596,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2767 E TONTO LN",
+            "price": 630000,
+            "sf": 2033,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2773 E SEQUOIA DR",
+            "price": 625000,
+            "sf": 2033,
+            "sold": "2024-02-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21403086A",
@@ -37812,7 +38993,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 589948,
+        "finished": 948500,
+        "profit": -1336094,
+        "marginPct": -141,
+        "marginPctAt300": -119,
+        "profitAt300": -1126374,
+        "salePsf": 271,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 627000,
+        "psf": 271,
+        "n": 5,
+        "radiusMi": 1.0,
+        "lowPsf": 237,
+        "highPsf": 412,
+        "examples": [
+          {
+            "address": "2890 E ANGELA DR",
+            "price": 635000,
+            "sf": 2684,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "2908 E ANGELA DR",
+            "price": 627000,
+            "sf": 2134,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "17234 N 28TH ST",
+            "price": 659950,
+            "sf": 1600,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "2640 E BEVERLY LN",
+            "price": 410000,
+            "sf": 1513,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2901 E PARADISE LN",
+            "price": 400000,
+            "sf": 1581,
+            "sold": "2026-08-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21403086B",
@@ -37948,7 +39180,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 590670,
+        "finished": 948500,
+        "profit": -1336867,
+        "marginPct": -141,
+        "marginPctAt300": -119,
+        "profitAt300": -1127147,
+        "salePsf": 271,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 627000,
+        "psf": 271,
+        "n": 5,
+        "radiusMi": 1.0,
+        "lowPsf": 237,
+        "highPsf": 412,
+        "examples": [
+          {
+            "address": "2890 E ANGELA DR",
+            "price": 635000,
+            "sf": 2684,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "2908 E ANGELA DR",
+            "price": 627000,
+            "sf": 2134,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "17234 N 28TH ST",
+            "price": 659950,
+            "sf": 1600,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "2640 E BEVERLY LN",
+            "price": 410000,
+            "sf": 1513,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2901 E PARADISE LN",
+            "price": 400000,
+            "sf": 1581,
+            "sold": "2026-08-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21403086C",
@@ -38084,7 +39367,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 590670,
+        "finished": 948500,
+        "profit": -1336867,
+        "marginPct": -141,
+        "marginPctAt300": -119,
+        "profitAt300": -1127147,
+        "salePsf": 271,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 627000,
+        "psf": 271,
+        "n": 5,
+        "radiusMi": 1.0,
+        "lowPsf": 237,
+        "highPsf": 412,
+        "examples": [
+          {
+            "address": "2890 E ANGELA DR",
+            "price": 635000,
+            "sf": 2684,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "2908 E ANGELA DR",
+            "price": 627000,
+            "sf": 2134,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "17234 N 28TH ST",
+            "price": 659950,
+            "sf": 1600,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "2640 E BEVERLY LN",
+            "price": 410000,
+            "sf": 1513,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2901 E PARADISE LN",
+            "price": 400000,
+            "sf": 1581,
+            "sold": "2026-08-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21454036",
@@ -38220,7 +39554,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1233206,
+        "finished": 1155000,
+        "profit": -1830270,
+        "marginPct": -158,
+        "marginPctAt300": -140,
+        "profitAt300": -1620550,
+        "salePsf": 330,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 802500,
+        "psf": 330,
+        "n": 22,
+        "radiusMi": 2.0,
+        "lowPsf": 154,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "2914 E BLANCHE DR",
+            "price": 685000,
+            "sf": 2243,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2901 E PARADISE LN",
+            "price": 400000,
+            "sf": 1581,
+            "sold": "2026-08-01"
+          },
+          {
+            "address": "2640 E BEVERLY LN",
+            "price": 410000,
+            "sf": 1513,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21316628",
@@ -38356,7 +39741,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 617770,
+        "finished": 1102500,
+        "profit": -1221104,
+        "marginPct": -111,
+        "marginPctAt300": -92,
+        "profitAt300": -1011384,
+        "salePsf": 315,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 600000,
+        "psf": 315,
+        "n": 7,
+        "radiusMi": 1.0,
+        "lowPsf": 299,
+        "highPsf": 376,
+        "examples": [
+          {
+            "address": "2773 E SEQUOIA DR",
+            "price": 625000,
+            "sf": 2033,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "2762 E FOSSIL RIDGE RD",
+            "price": 599000,
+            "sf": 1596,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2767 E TONTO LN",
+            "price": 630000,
+            "sf": 2033,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2751 E TONTO LN",
+            "price": 600000,
+            "sf": 1596,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "19676 N 27TH PL",
+            "price": 618000,
+            "sf": 1800,
+            "sold": "2025-02-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21316625",
@@ -38492,7 +39928,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 485869,
+        "finished": 1102500,
+        "profit": -1079970,
+        "marginPct": -98,
+        "marginPctAt300": -79,
+        "profitAt300": -870250,
+        "salePsf": 315,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 600000,
+        "psf": 315,
+        "n": 7,
+        "radiusMi": 1.0,
+        "lowPsf": 299,
+        "highPsf": 376,
+        "examples": [
+          {
+            "address": "2773 E SEQUOIA DR",
+            "price": 625000,
+            "sf": 2033,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "2762 E FOSSIL RIDGE RD",
+            "price": 599000,
+            "sf": 1596,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2767 E TONTO LN",
+            "price": 630000,
+            "sf": 2033,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2751 E TONTO LN",
+            "price": 600000,
+            "sf": 1596,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "19676 N 27TH PL",
+            "price": 618000,
+            "sf": 1800,
+            "sold": "2025-02-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21316626",
@@ -38628,7 +40115,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 485966,
+        "finished": 1102500,
+        "profit": -1080074,
+        "marginPct": -98,
+        "marginPctAt300": -79,
+        "profitAt300": -870354,
+        "salePsf": 315,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 600000,
+        "psf": 315,
+        "n": 7,
+        "radiusMi": 1.0,
+        "lowPsf": 299,
+        "highPsf": 376,
+        "examples": [
+          {
+            "address": "2773 E SEQUOIA DR",
+            "price": 625000,
+            "sf": 2033,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "2762 E FOSSIL RIDGE RD",
+            "price": 599000,
+            "sf": 1596,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2767 E TONTO LN",
+            "price": 630000,
+            "sf": 2033,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2751 E TONTO LN",
+            "price": 600000,
+            "sf": 1596,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "19676 N 27TH PL",
+            "price": 618000,
+            "sf": 1800,
+            "sold": "2025-02-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21316627",
@@ -38764,7 +40302,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 486014,
+        "finished": 1102500,
+        "profit": -1080125,
+        "marginPct": -98,
+        "marginPctAt300": -79,
+        "profitAt300": -870405,
+        "salePsf": 315,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 600000,
+        "psf": 315,
+        "n": 7,
+        "radiusMi": 1.0,
+        "lowPsf": 299,
+        "highPsf": 376,
+        "examples": [
+          {
+            "address": "2773 E SEQUOIA DR",
+            "price": 625000,
+            "sf": 2033,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "2762 E FOSSIL RIDGE RD",
+            "price": 599000,
+            "sf": 1596,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2767 E TONTO LN",
+            "price": 630000,
+            "sf": 2033,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2751 E TONTO LN",
+            "price": 600000,
+            "sf": 1596,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "19676 N 27TH PL",
+            "price": 618000,
+            "sf": 1800,
+            "sold": "2025-02-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20816224",
@@ -38900,7 +40489,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 993749,
+        "finished": 1018500,
+        "profit": -1702361,
+        "marginPct": -167,
+        "marginPctAt300": -147,
+        "profitAt300": -1492641,
+        "salePsf": 291,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 480000,
+        "psf": 291,
+        "n": 5,
+        "radiusMi": 2.0,
+        "lowPsf": 268,
+        "highPsf": 340,
+        "examples": [
+          {
+            "address": "14214 N MOON MOUNTAIN TRL",
+            "price": 2815000,
+            "sf": 8330,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "710 W HARTFORD AVE",
+            "price": 525000,
+            "sf": 1543,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "715 E BOCA RATON RD",
+            "price": 475000,
+            "sf": 1635,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "735 E CALAVAR RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2025-05-01"
+          },
+          {
+            "address": "741 E BOCA RATON RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21215877",
@@ -39037,7 +40677,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1246307,
+        "finished": 1221500,
+        "profit": -1781778,
+        "marginPct": -146,
+        "marginPctAt300": -129,
+        "profitAt300": -1572058,
+        "salePsf": 349,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 766000,
+        "psf": 349,
+        "n": 155,
+        "radiusMi": 1.0,
+        "lowPsf": 256,
+        "highPsf": 473,
+        "examples": [
+          {
+            "address": "24214 N 23RD WAY",
+            "price": 720000,
+            "sf": 1612,
+            "sold": "2026-02-01"
+          },
+          {
+            "address": "24210 N 23RD WAY",
+            "price": 725000,
+            "sf": 1916,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2124 E ALAMEDA RD",
+            "price": 795000,
+            "sf": 2291,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "24217 N 23RD WAY",
+            "price": 725000,
+            "sf": 1916,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "24115 N 21ST ST",
+            "price": 727500,
+            "sf": 2030,
+            "sold": "2026-06-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20413789",
@@ -39262,7 +40953,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 89,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 2078938,
+        "finished": 1200500,
+        "profit": -2692434,
+        "marginPct": -224,
+        "marginPctAt300": -207,
+        "profitAt300": -2482714,
+        "salePsf": 343,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 618000,
+        "psf": 343,
+        "n": 5,
+        "radiusMi": 1.0,
+        "lowPsf": 307,
+        "highPsf": 376,
+        "examples": [
+          {
+            "address": "2773 E SEQUOIA DR",
+            "price": 625000,
+            "sf": 2033,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "19676 N 27TH PL",
+            "price": 618000,
+            "sf": 1800,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "2751 E TONTO LN",
+            "price": 600000,
+            "sf": 1596,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "2762 E FOSSIL RIDGE RD",
+            "price": 599000,
+            "sf": 1596,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2767 E TONTO LN",
+            "price": 630000,
+            "sf": 2033,
+            "sold": "2024-09-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20813012E",
@@ -39392,7 +41134,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-12",
       "peakScore": 88,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 4294600,
+        "finished": 1046500,
+        "profit": -5207952,
+        "marginPct": -498,
+        "marginPctAt300": -478,
+        "profitAt300": -4998232,
+        "salePsf": 299,
+        "risk": "Medium"
+      },
+      "newBuild": {
+        "arv": 543950,
+        "psf": 299,
+        "n": 18,
+        "radiusMi": 3.0,
+        "lowPsf": 163,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "14214 N MOON MOUNTAIN TRL",
+            "price": 2815000,
+            "sf": 8330,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "710 W HARTFORD AVE",
+            "price": 525000,
+            "sf": 1543,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "17230 N 9TH PL",
+            "price": 515000,
+            "sf": 2100,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "946 E DANBURY DR",
+            "price": 537900,
+            "sf": 2100,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "715 E BOCA RATON RD",
+            "price": 475000,
+            "sf": 1635,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21124072C",
@@ -39526,7 +41319,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 88,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 324777,
+        "finished": 1407000,
+        "profit": -621371,
+        "marginPct": -44,
+        "marginPctAt300": -29,
+        "profitAt300": -411651,
+        "salePsf": 402,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1500000,
+        "psf": 402,
+        "n": 23,
+        "radiusMi": 1.0,
+        "lowPsf": 247,
+        "highPsf": 562,
+        "examples": [
+          {
+            "address": "610 E WOBURN LN",
+            "price": 1650000,
+            "sf": 4124,
+            "sold": "2026-02-01"
+          },
+          {
+            "address": "530 E WOBURN LN",
+            "price": 1706505,
+            "sf": 3038,
+            "sold": "2025-10-01"
+          },
+          {
+            "address": "510 E WOBURN LN",
+            "price": 1658349,
+            "sf": 4124,
+            "sold": "2025-06-01"
+          },
+          {
+            "address": "544 E AMBER SUN DR",
+            "price": 1500000,
+            "sf": 3776,
+            "sold": "2026-03-01"
+          },
+          {
+            "address": "511 E TUMBLEWEED DR",
+            "price": 1815000,
+            "sf": 3820,
+            "sold": "2025-06-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20325678",
@@ -39662,7 +41506,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 87,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 294900,
+        "finished": 1505000,
+        "profit": -497283,
+        "marginPct": -33,
+        "marginPctAt300": -19,
+        "profitAt300": -287563,
+        "salePsf": 430,
+        "risk": "Medium"
+      },
+      "newBuild": {
+        "arv": 1337500,
+        "psf": 430,
+        "n": 8,
+        "radiusMi": 1.0,
+        "lowPsf": 338,
+        "highPsf": 645,
+        "examples": [
+          {
+            "address": "2439 W DONATELLO DR",
+            "price": 3050000,
+            "sf": 4727,
+            "sold": "2026-03-01"
+          },
+          {
+            "address": "35785 N 26TH AVE",
+            "price": 1850000,
+            "sf": 3867,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2808 W HERE TO THERE DR",
+            "price": 1325000,
+            "sf": 3050,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "2819 W CREEK CANYON RD",
+            "price": 1350000,
+            "sf": 3179,
+            "sold": "2025-08-01"
+          },
+          {
+            "address": "2951 W HERE TO THERE DR",
+            "price": 1420000,
+            "sf": 3173,
+            "sold": "2025-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20325619",
@@ -39799,7 +41694,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-12",
       "peakScore": 87,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 489497,
+        "finished": 1519000,
+        "profit": -692342,
+        "marginPct": -46,
+        "marginPctAt300": -32,
+        "profitAt300": -482622,
+        "salePsf": 434,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1420000,
+        "psf": 434,
+        "n": 7,
+        "radiusMi": 1.0,
+        "lowPsf": 338,
+        "highPsf": 645,
+        "examples": [
+          {
+            "address": "35785 N 26TH AVE",
+            "price": 1850000,
+            "sf": 3867,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2808 W HERE TO THERE DR",
+            "price": 1325000,
+            "sf": 3050,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "2439 W DONATELLO DR",
+            "price": 3050000,
+            "sf": 4727,
+            "sold": "2026-03-01"
+          },
+          {
+            "address": "2819 W CREEK CANYON RD",
+            "price": 1350000,
+            "sf": 3179,
+            "sold": "2025-08-01"
+          },
+          {
+            "address": "2951 W HERE TO THERE DR",
+            "price": 1420000,
+            "sf": 3173,
+            "sold": "2025-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21014034E",
@@ -39935,7 +41881,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 87,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 115695,
+        "finished": 1064000,
+        "profit": -720074,
+        "marginPct": -68,
+        "marginPctAt300": -48,
+        "profitAt300": -510354,
+        "salePsf": 304,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 765195,
+        "psf": 304,
+        "n": 118,
+        "radiusMi": 2.0,
+        "lowPsf": 201,
+        "highPsf": 482,
+        "examples": [
+          {
+            "address": "103 E QUARTZ ROCK RD",
+            "price": 1400000,
+            "sf": 2918,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "26112 N 7TH AVE",
+            "price": 1225000,
+            "sf": 4305,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "1724 E NORTHWOOD DR",
+            "price": 804134,
+            "sf": 2576,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "1732 E NORTHWOOD DR",
+            "price": 649090,
+            "sf": 1599,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "24516 N 17TH WAY",
+            "price": 681725,
+            "sf": 1780,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21316012C",
@@ -40072,7 +42069,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 87,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 567638,
+        "finished": 1085000,
+        "profit": -1183913,
+        "marginPct": -109,
+        "marginPctAt300": -90,
+        "profitAt300": -974193,
+        "salePsf": 310,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 618000,
+        "psf": 310,
+        "n": 9,
+        "radiusMi": 1.0,
+        "lowPsf": 237,
+        "highPsf": 376,
+        "examples": [
+          {
+            "address": "2773 E SEQUOIA DR",
+            "price": 625000,
+            "sf": 2033,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "2762 E FOSSIL RIDGE RD",
+            "price": 599000,
+            "sf": 1596,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2767 E TONTO LN",
+            "price": 630000,
+            "sf": 2033,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2751 E TONTO LN",
+            "price": 600000,
+            "sf": 1596,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "19676 N 27TH PL",
+            "price": 618000,
+            "sf": 1800,
+            "sold": "2025-02-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21454007",
@@ -40209,7 +42257,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 87,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1064523,
+        "finished": 1067500,
+        "profit": -1732030,
+        "marginPct": -162,
+        "marginPctAt300": -143,
+        "profitAt300": -1522310,
+        "salePsf": 305,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 685000,
+        "psf": 305,
+        "n": 5,
+        "radiusMi": 1.0,
+        "lowPsf": 229,
+        "highPsf": 442,
+        "examples": [
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2914 E BLANCHE DR",
+            "price": 685000,
+            "sf": 2243,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2360 E LARKSPUR DR",
+            "price": 590000,
+            "sf": 1850,
+            "sold": "2024-08-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          }
+        ]
+      }
     },
     {
       "apn": "16603004E",
@@ -40346,7 +42445,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 87,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 685226,
+        "finished": 1193500,
+        "profit": -1207742,
+        "marginPct": -101,
+        "marginPctAt300": -84,
+        "profitAt300": -998022,
+        "salePsf": 341,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 737500,
+        "psf": 341,
+        "n": 11,
+        "radiusMi": 2.0,
+        "lowPsf": 229,
+        "highPsf": 629,
+        "examples": [
+          {
+            "address": "3010 E CHARTER OAK RD",
+            "price": 1200000,
+            "sf": 3115,
+            "sold": "2023-11-01"
+          },
+          {
+            "address": "3002 E CHARTER OAK RD",
+            "price": 1185000,
+            "sf": 3478,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "14426 N 39TH WAY",
+            "price": 737500,
+            "sf": 2004,
+            "sold": "2026-01-01"
+          },
+          {
+            "address": "2914 E BLANCHE DR",
+            "price": 685000,
+            "sf": 2243,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          }
+        ]
+      }
     },
     {
       "apn": "16619010",
@@ -40482,7 +42632,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 93,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 555269,
+        "finished": 1158500,
+        "profit": -1101588,
+        "marginPct": -95,
+        "marginPctAt300": -77,
+        "profitAt300": -891868,
+        "salePsf": 331,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 960000,
+        "psf": 331,
+        "n": 8,
+        "radiusMi": 1.0,
+        "lowPsf": 154,
+        "highPsf": 504,
+        "examples": [
+          {
+            "address": "1750 E LARKSPUR DR",
+            "price": 1225000,
+            "sf": 7956,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "12814 N 17TH PL",
+            "price": 1474000,
+            "sf": 3057,
+            "sold": "2025-10-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "2360 E LARKSPUR DR",
+            "price": 590000,
+            "sf": 1850,
+            "sold": "2024-08-01"
+          }
+        ]
+      }
     },
     {
       "apn": "15901302",
@@ -40617,7 +42818,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 87,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 879505,
+        "finished": 1197000,
+        "profit": -1412330,
+        "marginPct": -118,
+        "marginPctAt300": -100,
+        "profitAt300": -1202610,
+        "salePsf": 342,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 802500,
+        "psf": 342,
+        "n": 14,
+        "radiusMi": 1.0,
+        "lowPsf": 154,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "13218 N 17TH PL",
+            "price": 2000000,
+            "sf": 3968,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "12814 N 17TH PL",
+            "price": 1474000,
+            "sf": 3057,
+            "sold": "2025-10-01"
+          },
+          {
+            "address": "1750 E LARKSPUR DR",
+            "price": 1225000,
+            "sf": 7956,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "13803 N 12TH ST",
+            "price": 810000,
+            "sf": 2107,
+            "sold": "2024-02-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20816430",
@@ -40753,7 +43005,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 87,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1144957,
+        "finished": 1018500,
+        "profit": -1864154,
+        "marginPct": -183,
+        "marginPctAt300": -162,
+        "profitAt300": -1654434,
+        "salePsf": 291,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 480000,
+        "psf": 291,
+        "n": 5,
+        "radiusMi": 2.0,
+        "lowPsf": 268,
+        "highPsf": 340,
+        "examples": [
+          {
+            "address": "14214 N MOON MOUNTAIN TRL",
+            "price": 2815000,
+            "sf": 8330,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "710 W HARTFORD AVE",
+            "price": 525000,
+            "sf": 1543,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "715 E BOCA RATON RD",
+            "price": 475000,
+            "sf": 1635,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "735 E CALAVAR RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2025-05-01"
+          },
+          {
+            "address": "741 E BOCA RATON RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20816425",
@@ -40888,7 +43191,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 87,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 915519,
+        "finished": 1018500,
+        "profit": -1618655,
+        "marginPct": -159,
+        "marginPctAt300": -138,
+        "profitAt300": -1408935,
+        "salePsf": 291,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 480000,
+        "psf": 291,
+        "n": 5,
+        "radiusMi": 2.0,
+        "lowPsf": 268,
+        "highPsf": 340,
+        "examples": [
+          {
+            "address": "14214 N MOON MOUNTAIN TRL",
+            "price": 2815000,
+            "sf": 8330,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "710 W HARTFORD AVE",
+            "price": 525000,
+            "sf": 1543,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "715 E BOCA RATON RD",
+            "price": 475000,
+            "sf": 1635,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "735 E CALAVAR RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2025-05-01"
+          },
+          {
+            "address": "741 E BOCA RATON RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20816439",
@@ -41024,7 +43378,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 87,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 974138,
+        "finished": 1018500,
+        "profit": -1681378,
+        "marginPct": -165,
+        "marginPctAt300": -144,
+        "profitAt300": -1471658,
+        "salePsf": 291,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 480000,
+        "psf": 291,
+        "n": 5,
+        "radiusMi": 2.0,
+        "lowPsf": 268,
+        "highPsf": 340,
+        "examples": [
+          {
+            "address": "14214 N MOON MOUNTAIN TRL",
+            "price": 2815000,
+            "sf": 8330,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "710 W HARTFORD AVE",
+            "price": 525000,
+            "sf": 1543,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "715 E BOCA RATON RD",
+            "price": 475000,
+            "sf": 1635,
+            "sold": "2024-01-01"
+          },
+          {
+            "address": "735 E CALAVAR RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2025-05-01"
+          },
+          {
+            "address": "741 E BOCA RATON RD",
+            "price": 480000,
+            "sf": 1789,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21411890",
@@ -41159,7 +43564,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-12",
       "peakScore": 87,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 683679,
+        "finished": 882000,
+        "profit": -1498897,
+        "marginPct": -170,
+        "marginPctAt300": -146,
+        "profitAt300": -1289177,
+        "salePsf": 252,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 532632,
+        "psf": 252,
+        "n": 6,
+        "radiusMi": 1.0,
+        "lowPsf": 239,
+        "highPsf": 332,
+        "examples": [
+          {
+            "address": "17251 N 10TH ST",
+            "price": 525000,
+            "sf": 2196,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "17219 N 10TH ST",
+            "price": 645000,
+            "sf": 2610,
+            "sold": "2025-09-01"
+          },
+          {
+            "address": "17230 N 9TH PL",
+            "price": 515000,
+            "sf": 2100,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "946 E DANBURY DR",
+            "price": 537900,
+            "sf": 2100,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "16875 N 12TH ST",
+            "price": 588500,
+            "sf": 1912,
+            "sold": "2025-10-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21454003",
@@ -41294,7 +43750,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 87,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 967957,
+        "finished": 1193500,
+        "profit": -1510264,
+        "marginPct": -127,
+        "marginPctAt300": -109,
+        "profitAt300": -1300544,
+        "salePsf": 341,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1185000,
+        "psf": 341,
+        "n": 5,
+        "radiusMi": 1.0,
+        "lowPsf": 305,
+        "highPsf": 442,
+        "examples": [
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2914 E BLANCHE DR",
+            "price": 685000,
+            "sf": 2243,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "3002 E CHARTER OAK RD",
+            "price": 1185000,
+            "sf": 3478,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "3010 E CHARTER OAK RD",
+            "price": 1200000,
+            "sf": 3115,
+            "sold": "2023-11-01"
+          },
+          {
+            "address": "2360 E LARKSPUR DR",
+            "price": 590000,
+            "sf": 1850,
+            "sold": "2024-08-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21454087",
@@ -41429,7 +43936,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 87,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1224599,
+        "finished": 1116500,
+        "profit": -1857251,
+        "marginPct": -166,
+        "marginPctAt300": -148,
+        "profitAt300": -1647531,
+        "salePsf": 319,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 810000,
+        "psf": 319,
+        "n": 21,
+        "radiusMi": 2.0,
+        "lowPsf": 154,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "2914 E BLANCHE DR",
+            "price": 685000,
+            "sf": 2243,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2901 E PARADISE LN",
+            "price": 400000,
+            "sf": 1581,
+            "sold": "2026-08-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21440502",
@@ -41698,7 +44256,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 87,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1114015,
+        "finished": 1445500,
+        "profit": -1429666,
+        "marginPct": -99,
+        "marginPctAt300": -84,
+        "profitAt300": -1219946,
+        "salePsf": 413,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1335000,
+        "psf": 413,
+        "n": 22,
+        "radiusMi": 1.0,
+        "lowPsf": 247,
+        "highPsf": 562,
+        "examples": [
+          {
+            "address": "11 E CAVALRY DR",
+            "price": 1150000,
+            "sf": 2374,
+            "sold": "2026-02-01"
+          },
+          {
+            "address": "23 E CAVALRY DR",
+            "price": 1225000,
+            "sf": 2695,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "10 E OLD PAINT TRL",
+            "price": 1350000,
+            "sf": 2956,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "34889 N 3RD ST",
+            "price": 750000,
+            "sf": 2472,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "115 E SANTA CRUZ DR",
+            "price": 865000,
+            "sf": 2997,
+            "sold": "2026-02-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21124025D",
@@ -41833,7 +44442,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 86,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 214000,
+        "finished": 1592500,
+        "profit": -328470,
+        "marginPct": -21,
+        "marginPctAt300": -7,
+        "profitAt300": -118750,
+        "salePsf": 455,
+        "risk": "Medium"
+      },
+      "newBuild": {
+        "arv": 1500000,
+        "psf": 455,
+        "n": 17,
+        "radiusMi": 1.0,
+        "lowPsf": 247,
+        "highPsf": 562,
+        "examples": [
+          {
+            "address": "34306 N 6TH DR",
+            "price": 1399900,
+            "sf": 3060,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "14 E ZENITH LN",
+            "price": 1750000,
+            "sf": 4124,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "11 W NIGHT GLOW DR",
+            "price": 1501650,
+            "sf": 3150,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "115 E SANTA CRUZ DR",
+            "price": 865000,
+            "sf": 2997,
+            "sold": "2026-02-01"
+          },
+          {
+            "address": "10 E OLD PAINT TRL",
+            "price": 1350000,
+            "sf": 2956,
+            "sold": "2025-03-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21010035",
@@ -42107,7 +44767,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 395300,
+        "finished": 1505000,
+        "profit": -604711,
+        "marginPct": -40,
+        "marginPctAt300": -26,
+        "profitAt300": -394991,
+        "salePsf": 430,
+        "risk": "Medium"
+      },
+      "newBuild": {
+        "arv": 1385000,
+        "psf": 430,
+        "n": 10,
+        "radiusMi": 1.0,
+        "lowPsf": 263,
+        "highPsf": 645,
+        "examples": [
+          {
+            "address": "2439 W DONATELLO DR",
+            "price": 3050000,
+            "sf": 4727,
+            "sold": "2026-03-01"
+          },
+          {
+            "address": "35785 N 26TH AVE",
+            "price": 1850000,
+            "sf": 3867,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2808 W HERE TO THERE DR",
+            "price": 1325000,
+            "sf": 3050,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "2819 W CREEK CANYON RD",
+            "price": 1350000,
+            "sf": 3179,
+            "sold": "2025-08-01"
+          },
+          {
+            "address": "1836 W CREEK CANYON RD",
+            "price": 938119,
+            "sf": 2446,
+            "sold": "2024-03-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20325681",
@@ -42244,7 +44955,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 297200,
+        "finished": 1487500,
+        "profit": -516194,
+        "marginPct": -35,
+        "marginPctAt300": -21,
+        "profitAt300": -306474,
+        "salePsf": 425,
+        "risk": "Medium"
+      },
+      "newBuild": {
+        "arv": 1325000,
+        "psf": 425,
+        "n": 9,
+        "radiusMi": 1.0,
+        "lowPsf": 263,
+        "highPsf": 645,
+        "examples": [
+          {
+            "address": "2439 W DONATELLO DR",
+            "price": 3050000,
+            "sf": 4727,
+            "sold": "2026-03-01"
+          },
+          {
+            "address": "35785 N 26TH AVE",
+            "price": 1850000,
+            "sf": 3867,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2808 W HERE TO THERE DR",
+            "price": 1325000,
+            "sf": 3050,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "2819 W CREEK CANYON RD",
+            "price": 1350000,
+            "sf": 3179,
+            "sold": "2025-08-01"
+          },
+          {
+            "address": "2951 W HERE TO THERE DR",
+            "price": 1420000,
+            "sf": 3173,
+            "sold": "2025-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20325688",
@@ -42381,7 +45143,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-03",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 357200,
+        "finished": 1505000,
+        "profit": -563944,
+        "marginPct": -37,
+        "marginPctAt300": -24,
+        "profitAt300": -354224,
+        "salePsf": 430,
+        "risk": "Medium"
+      },
+      "newBuild": {
+        "arv": 1385000,
+        "psf": 430,
+        "n": 10,
+        "radiusMi": 1.0,
+        "lowPsf": 263,
+        "highPsf": 645,
+        "examples": [
+          {
+            "address": "2439 W DONATELLO DR",
+            "price": 3050000,
+            "sf": 4727,
+            "sold": "2026-03-01"
+          },
+          {
+            "address": "35785 N 26TH AVE",
+            "price": 1850000,
+            "sf": 3867,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2808 W HERE TO THERE DR",
+            "price": 1325000,
+            "sf": 3050,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "2819 W CREEK CANYON RD",
+            "price": 1350000,
+            "sf": 3179,
+            "sold": "2025-08-01"
+          },
+          {
+            "address": "1836 W CREEK CANYON RD",
+            "price": 938119,
+            "sf": 2446,
+            "sold": "2024-03-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21570354",
@@ -42655,7 +45468,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 808663,
+        "finished": 1288000,
+        "profit": -1250989,
+        "marginPct": -97,
+        "marginPctAt300": -81,
+        "profitAt300": -1041269,
+        "salePsf": 368,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 754000,
+        "psf": 368,
+        "n": 45,
+        "radiusMi": 2.0,
+        "lowPsf": 237,
+        "highPsf": 475,
+        "examples": [
+          {
+            "address": "14426 N 39TH WAY",
+            "price": 737500,
+            "sf": 2004,
+            "sold": "2026-01-01"
+          },
+          {
+            "address": "2901 E PARADISE LN",
+            "price": 400000,
+            "sf": 1581,
+            "sold": "2026-08-01"
+          },
+          {
+            "address": "2914 E BLANCHE DR",
+            "price": 685000,
+            "sf": 2243,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2640 E BEVERLY LN",
+            "price": 410000,
+            "sf": 1513,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "2908 E ANGELA DR",
+            "price": 627000,
+            "sf": 2134,
+            "sold": "2024-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "16606067",
@@ -42789,7 +45653,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 702425,
+        "finished": 1347500,
+        "profit": -1081385,
+        "marginPct": -80,
+        "marginPctAt300": -65,
+        "profitAt300": -871665,
+        "salePsf": 385,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1225000,
+        "psf": 385,
+        "n": 15,
+        "radiusMi": 2.0,
+        "lowPsf": 154,
+        "highPsf": 775,
+        "examples": [
+          {
+            "address": "3010 E CHARTER OAK RD",
+            "price": 1200000,
+            "sf": 3115,
+            "sold": "2023-11-01"
+          },
+          {
+            "address": "3002 E CHARTER OAK RD",
+            "price": 1185000,
+            "sf": 3478,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "2360 E LARKSPUR DR",
+            "price": 590000,
+            "sf": 1850,
+            "sold": "2024-08-01"
+          },
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20311073",
@@ -42923,7 +45838,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 3913636,
+        "finished": 1435000,
+        "profit": -4435131,
+        "marginPct": -309,
+        "marginPctAt300": -294,
+        "profitAt300": -4225411,
+        "salePsf": 410,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1226500,
+        "psf": 410,
+        "n": 14,
+        "radiusMi": 1.0,
+        "lowPsf": 276,
+        "highPsf": 622,
+        "examples": [
+          {
+            "address": "3295 W",
+            "price": 1250000,
+            "sf": 3038,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "3283 W MESQUITE RD",
+            "price": 1270000,
+            "sf": 3038,
+            "sold": "2026-02-01"
+          },
+          {
+            "address": "3139 W DESERT HILLS DR",
+            "price": 950000,
+            "sf": 2688,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "3212 W ADAMANDA DR",
+            "price": 1100000,
+            "sf": 3176,
+            "sold": "2025-09-01"
+          },
+          {
+            "address": "39220 N 30TH DR",
+            "price": 1550000,
+            "sf": 3792,
+            "sold": "2025-08-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20311071",
@@ -43057,7 +46023,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 3230961,
+        "finished": 1435000,
+        "profit": -3704668,
+        "marginPct": -258,
+        "marginPctAt300": -244,
+        "profitAt300": -3494948,
+        "salePsf": 410,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1226500,
+        "psf": 410,
+        "n": 14,
+        "radiusMi": 1.0,
+        "lowPsf": 276,
+        "highPsf": 622,
+        "examples": [
+          {
+            "address": "3295 W",
+            "price": 1250000,
+            "sf": 3038,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "3283 W MESQUITE RD",
+            "price": 1270000,
+            "sf": 3038,
+            "sold": "2026-02-01"
+          },
+          {
+            "address": "3139 W DESERT HILLS DR",
+            "price": 950000,
+            "sf": 2688,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "3212 W ADAMANDA DR",
+            "price": 1100000,
+            "sf": 3176,
+            "sold": "2025-09-01"
+          },
+          {
+            "address": "39220 N 30TH DR",
+            "price": 1550000,
+            "sf": 3792,
+            "sold": "2025-08-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20337007G",
@@ -43190,7 +46207,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 337476,
+        "finished": 1417500,
+        "profit": -625089,
+        "marginPct": -44,
+        "marginPctAt300": -29,
+        "profitAt300": -415369,
+        "salePsf": 405,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1100000,
+        "psf": 405,
+        "n": 25,
+        "radiusMi": 1.0,
+        "lowPsf": 276,
+        "highPsf": 622,
+        "examples": [
+          {
+            "address": "2829 W JOY RANCH RD",
+            "price": 880000,
+            "sf": 2174,
+            "sold": "2025-09-01"
+          },
+          {
+            "address": "37937 N 31ST AVE",
+            "price": 1275000,
+            "sf": 2710,
+            "sold": "2025-04-01"
+          },
+          {
+            "address": "2935 W JOY RANCH RD",
+            "price": 820000,
+            "sf": 2524,
+            "sold": "2025-10-01"
+          },
+          {
+            "address": "37931 N 31ST AVE",
+            "price": 1203000,
+            "sf": 2710,
+            "sold": "2026-01-01"
+          },
+          {
+            "address": "3132 W BLUE EAGLE LN",
+            "price": 775000,
+            "sf": 2812,
+            "sold": "2024-03-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20715022D",
@@ -43324,7 +46392,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 562824,
+        "finished": 948500,
+        "profit": -1307072,
+        "marginPct": -138,
+        "marginPctAt300": -116,
+        "profitAt300": -1097352,
+        "salePsf": 271,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 584619,
+        "psf": 271,
+        "n": 111,
+        "radiusMi": 3.0,
+        "lowPsf": 163,
+        "highPsf": 345,
+        "examples": [
+          {
+            "address": "3329 W PORT AU PRINCE LN",
+            "price": 367526,
+            "sf": 2260,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "4446 W KIMBERLY WAY",
+            "price": 575000,
+            "sf": 2125,
+            "sold": "2025-06-01"
+          },
+          {
+            "address": "15005 N 55TH DR",
+            "price": 590000,
+            "sf": 2093,
+            "sold": "2024-10-01"
+          },
+          {
+            "address": "14939 N 55TH DR",
+            "price": 509890,
+            "sf": 1812,
+            "sold": "2024-10-01"
+          },
+          {
+            "address": "5514 W PORT AU PRINCE LN",
+            "price": 457000,
+            "sf": 1661,
+            "sold": "2023-12-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21011008E",
@@ -43460,7 +46579,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1126976,
+        "finished": 1029000,
+        "profit": -1835044,
+        "marginPct": -178,
+        "marginPctAt300": -158,
+        "profitAt300": -1625324,
+        "salePsf": 294,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 695000,
+        "psf": 294,
+        "n": 136,
+        "radiusMi": 1.0,
+        "lowPsf": 201,
+        "highPsf": 486,
+        "examples": [
+          {
+            "address": "26421 N 19TH DR",
+            "price": 875000,
+            "sf": 2391,
+            "sold": "2024-11-01"
+          },
+          {
+            "address": "26417 N 19TH DR",
+            "price": 870285,
+            "sf": 2627,
+            "sold": "2024-08-01"
+          },
+          {
+            "address": "26409 N 19TH DR",
+            "price": 955666,
+            "sf": 3593,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "26405 N 19TH DR",
+            "price": 1002369,
+            "sf": 3864,
+            "sold": "2025-05-01"
+          },
+          {
+            "address": "26349 N 19TH DR",
+            "price": 964990,
+            "sf": 3864,
+            "sold": "2024-07-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21149021B",
@@ -43592,7 +46762,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 609912,
+        "finished": 1323000,
+        "profit": -1005426,
+        "marginPct": -76,
+        "marginPctAt300": -60,
+        "profitAt300": -795706,
+        "salePsf": 378,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1128510,
+        "psf": 378,
+        "n": 6,
+        "radiusMi": 1.0,
+        "lowPsf": 363,
+        "highPsf": 438,
+        "examples": [
+          {
+            "address": "37723 N 12TH ST",
+            "price": 1020000,
+            "sf": 2768,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "37711 N 12TH ST",
+            "price": 1070000,
+            "sf": 2768,
+            "sold": "2024-10-01"
+          },
+          {
+            "address": "37221 N 12TH ST",
+            "price": 1395000,
+            "sf": 3183,
+            "sold": "2026-06-01"
+          },
+          {
+            "address": "1187 E DOLORES RD",
+            "price": 1117019,
+            "sf": 3038,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "1139 E DOLORES RD",
+            "price": 1140000,
+            "sf": 3143,
+            "sold": "2025-03-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21149021C",
@@ -43724,7 +46945,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 609912,
+        "finished": 1323000,
+        "profit": -1005426,
+        "marginPct": -76,
+        "marginPctAt300": -60,
+        "profitAt300": -795706,
+        "salePsf": 378,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1128510,
+        "psf": 378,
+        "n": 6,
+        "radiusMi": 1.0,
+        "lowPsf": 363,
+        "highPsf": 438,
+        "examples": [
+          {
+            "address": "37723 N 12TH ST",
+            "price": 1020000,
+            "sf": 2768,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "37711 N 12TH ST",
+            "price": 1070000,
+            "sf": 2768,
+            "sold": "2024-10-01"
+          },
+          {
+            "address": "37221 N 12TH ST",
+            "price": 1395000,
+            "sf": 3183,
+            "sold": "2026-06-01"
+          },
+          {
+            "address": "1187 E DOLORES RD",
+            "price": 1117019,
+            "sf": 3038,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "1139 E DOLORES RD",
+            "price": 1140000,
+            "sf": 3143,
+            "sold": "2025-03-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21168058",
@@ -43857,7 +47129,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1030487,
+        "finished": 1361500,
+        "profit": -1419251,
+        "marginPct": -104,
+        "marginPctAt300": -89,
+        "profitAt300": -1209531,
+        "salePsf": 389,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1230000,
+        "psf": 389,
+        "n": 18,
+        "radiusMi": 1.0,
+        "lowPsf": 309,
+        "highPsf": 470,
+        "examples": [
+          {
+            "address": "1187 E DOLORES RD",
+            "price": 1117019,
+            "sf": 3038,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "1139 E DOLORES RD",
+            "price": 1140000,
+            "sf": 3143,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "1101 E DOLORES RD",
+            "price": 1210000,
+            "sf": 3038,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "36320 N 16TH ST",
+            "price": 1375000,
+            "sf": 3155,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "37221 N 12TH ST",
+            "price": 1395000,
+            "sf": 3183,
+            "sold": "2026-06-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21447848",
@@ -43992,7 +47315,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1178933,
+        "finished": 1270500,
+        "profit": -1663628,
+        "marginPct": -131,
+        "marginPctAt300": -114,
+        "profitAt300": -1453908,
+        "salePsf": 363,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1017500,
+        "psf": 363,
+        "n": 12,
+        "radiusMi": 1.0,
+        "lowPsf": 154,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "13218 N 17TH PL",
+            "price": 2000000,
+            "sf": 3968,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "12814 N 17TH PL",
+            "price": 1474000,
+            "sf": 3057,
+            "sold": "2025-10-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "1750 E LARKSPUR DR",
+            "price": 1225000,
+            "sf": 7956,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21316622",
@@ -44128,7 +47502,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1170763,
+        "finished": 1085000,
+        "profit": -1829256,
+        "marginPct": -169,
+        "marginPctAt300": -149,
+        "profitAt300": -1619536,
+        "salePsf": 310,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 618000,
+        "psf": 310,
+        "n": 9,
+        "radiusMi": 1.0,
+        "lowPsf": 237,
+        "highPsf": 376,
+        "examples": [
+          {
+            "address": "2773 E SEQUOIA DR",
+            "price": 625000,
+            "sf": 2033,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "2762 E FOSSIL RIDGE RD",
+            "price": 599000,
+            "sf": 1596,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2767 E TONTO LN",
+            "price": 630000,
+            "sf": 2033,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2751 E TONTO LN",
+            "price": 600000,
+            "sf": 1596,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "19676 N 27TH PL",
+            "price": 618000,
+            "sf": 1800,
+            "sold": "2025-02-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21316621",
@@ -44263,7 +47688,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 728997,
+        "finished": 1085000,
+        "profit": -1356567,
+        "marginPct": -125,
+        "marginPctAt300": -106,
+        "profitAt300": -1146847,
+        "salePsf": 310,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 618000,
+        "psf": 310,
+        "n": 9,
+        "radiusMi": 1.0,
+        "lowPsf": 237,
+        "highPsf": 376,
+        "examples": [
+          {
+            "address": "2773 E SEQUOIA DR",
+            "price": 625000,
+            "sf": 2033,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "2762 E FOSSIL RIDGE RD",
+            "price": 599000,
+            "sf": 1596,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2767 E TONTO LN",
+            "price": 630000,
+            "sf": 2033,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2751 E TONTO LN",
+            "price": 600000,
+            "sf": 1596,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "19676 N 27TH PL",
+            "price": 618000,
+            "sf": 1800,
+            "sold": "2025-02-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21316619",
@@ -44398,7 +47874,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 722058,
+        "finished": 1102500,
+        "profit": -1332692,
+        "marginPct": -121,
+        "marginPctAt300": -102,
+        "profitAt300": -1122972,
+        "salePsf": 315,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 600000,
+        "psf": 315,
+        "n": 7,
+        "radiusMi": 1.0,
+        "lowPsf": 299,
+        "highPsf": 376,
+        "examples": [
+          {
+            "address": "2773 E SEQUOIA DR",
+            "price": 625000,
+            "sf": 2033,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "2762 E FOSSIL RIDGE RD",
+            "price": 599000,
+            "sf": 1596,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2767 E TONTO LN",
+            "price": 630000,
+            "sf": 2033,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "2751 E TONTO LN",
+            "price": 600000,
+            "sf": 1596,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "19676 N 27TH PL",
+            "price": 618000,
+            "sf": 1800,
+            "sold": "2025-02-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21153041E",
@@ -44531,7 +48058,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 85,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 656201,
+        "finished": 1445500,
+        "profit": -939805,
+        "marginPct": -65,
+        "marginPctAt300": -51,
+        "profitAt300": -730085,
+        "salePsf": 413,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1335000,
+        "psf": 413,
+        "n": 20,
+        "radiusMi": 1.0,
+        "lowPsf": 247,
+        "highPsf": 562,
+        "examples": [
+          {
+            "address": "34889 N 3RD ST",
+            "price": 750000,
+            "sf": 2472,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "825 E PERDIDO WAY",
+            "price": 1025000,
+            "sf": 3007,
+            "sold": "2026-06-01"
+          },
+          {
+            "address": "23 E CAVALRY DR",
+            "price": 1225000,
+            "sf": 2695,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "508 E GALVIN ST",
+            "price": 1175000,
+            "sf": 2501,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "135 E SANTA CRUZ DR",
+            "price": 936000,
+            "sf": 3790,
+            "sold": "2024-02-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20807084E",
@@ -44800,7 +48378,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 84,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 195600,
+        "finished": 1368500,
+        "profit": -519342,
+        "marginPct": -38,
+        "marginPctAt300": -23,
+        "profitAt300": -309622,
+        "salePsf": 391,
+        "risk": "Medium"
+      },
+      "newBuild": {
+        "arv": 1140968,
+        "psf": 391,
+        "n": 18,
+        "radiusMi": 1.0,
+        "lowPsf": 311,
+        "highPsf": 488,
+        "examples": [
+          {
+            "address": "1614 W LAVITT LN",
+            "price": 1796269,
+            "sf": 4124,
+            "sold": "2026-02-01"
+          },
+          {
+            "address": "38710 N 15TH AVE",
+            "price": 1015000,
+            "sf": 2522,
+            "sold": "2026-09-01"
+          },
+          {
+            "address": "38623 N 14TH AVE",
+            "price": 1100000,
+            "sf": 3537,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "38024 N 17TH AVE",
+            "price": 1350000,
+            "sf": 3060,
+            "sold": "2024-10-01"
+          },
+          {
+            "address": "37913 N 14TH AVE",
+            "price": 1725000,
+            "sf": 3790,
+            "sold": "2026-04-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21460021",
@@ -45201,7 +48830,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 84,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 372066,
+        "finished": 1284500,
+        "profit": -787121,
+        "marginPct": -61,
+        "marginPctAt300": -45,
+        "profitAt300": -577401,
+        "salePsf": 367,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1052500,
+        "psf": 367,
+        "n": 10,
+        "radiusMi": 1.0,
+        "lowPsf": 243,
+        "highPsf": 645,
+        "examples": [
+          {
+            "address": "35785 N 26TH AVE",
+            "price": 1850000,
+            "sf": 3867,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2439 W DONATELLO DR",
+            "price": 3050000,
+            "sf": 4727,
+            "sold": "2026-03-01"
+          },
+          {
+            "address": "2939 W NIGHT OWL LN",
+            "price": 735000,
+            "sf": 2421,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "3015 W TUMBLEWEED DR",
+            "price": 749000,
+            "sf": 2422,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "3019 W TUMBLEWEED DR",
+            "price": 665000,
+            "sf": 2582,
+            "sold": "2026-04-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20325645",
@@ -45336,7 +49016,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 84,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 342983,
+        "finished": 1519000,
+        "profit": -535572,
+        "marginPct": -35,
+        "marginPctAt300": -21,
+        "profitAt300": -325852,
+        "salePsf": 434,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1350000,
+        "psf": 434,
+        "n": 7,
+        "radiusMi": 1.0,
+        "lowPsf": 338,
+        "highPsf": 645,
+        "examples": [
+          {
+            "address": "35785 N 26TH AVE",
+            "price": 1850000,
+            "sf": 3867,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2439 W DONATELLO DR",
+            "price": 3050000,
+            "sf": 4727,
+            "sold": "2026-03-01"
+          },
+          {
+            "address": "2808 W HERE TO THERE DR",
+            "price": 1325000,
+            "sf": 3050,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "2819 W CREEK CANYON RD",
+            "price": 1350000,
+            "sf": 3179,
+            "sold": "2025-08-01"
+          },
+          {
+            "address": "2951 W HERE TO THERE DR",
+            "price": 1420000,
+            "sf": 3173,
+            "sold": "2025-01-01"
+          }
+        ]
+      }
     },
     {
       "apn": "16619002A",
@@ -45473,7 +49204,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 83,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 116000,
+        "finished": 1158500,
+        "profit": -631570,
+        "marginPct": -55,
+        "marginPctAt300": -36,
+        "profitAt300": -421850,
+        "salePsf": 331,
+        "risk": "Medium"
+      },
+      "newBuild": {
+        "arv": 960000,
+        "psf": 331,
+        "n": 8,
+        "radiusMi": 1.0,
+        "lowPsf": 154,
+        "highPsf": 504,
+        "examples": [
+          {
+            "address": "1750 E LARKSPUR DR",
+            "price": 1225000,
+            "sf": 7956,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "12814 N 17TH PL",
+            "price": 1474000,
+            "sf": 3057,
+            "sold": "2025-10-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "1522 E SIERRA ST",
+            "price": 565000,
+            "sf": 1651,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          }
+        ]
+      }
     },
     {
       "apn": "16643079",
@@ -45614,7 +49396,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-12",
       "peakScore": 83,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 260900,
+        "finished": 1445500,
+        "profit": -516833,
+        "marginPct": -36,
+        "marginPctAt300": -21,
+        "profitAt300": -307113,
+        "salePsf": 413,
+        "risk": "Medium"
+      },
+      "newBuild": {
+        "arv": 1287500,
+        "psf": 413,
+        "n": 10,
+        "radiusMi": 1.0,
+        "lowPsf": 154,
+        "highPsf": 538,
+        "examples": [
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "13218 N 17TH PL",
+            "price": 2000000,
+            "sf": 3968,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "1729 E WINCHCOMB DR",
+            "price": 1399000,
+            "sf": 2598,
+            "sold": "2026-07-01"
+          },
+          {
+            "address": "13215 N 20TH ST",
+            "price": 645000,
+            "sf": 2269,
+            "sold": "2024-12-01"
+          },
+          {
+            "address": "1738 E WINCHCOMB DR",
+            "price": 1550000,
+            "sf": 3426,
+            "sold": "2024-07-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21311004C",
@@ -46021,7 +49854,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-12",
       "peakScore": 83,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 738003,
+        "finished": 1445500,
+        "profit": -1027333,
+        "marginPct": -71,
+        "marginPctAt300": -57,
+        "profitAt300": -817613,
+        "salePsf": 413,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1060000,
+        "psf": 413,
+        "n": 84,
+        "radiusMi": 2.0,
+        "lowPsf": 299,
+        "highPsf": 545,
+        "examples": [
+          {
+            "address": "19676 N 27TH PL",
+            "price": 618000,
+            "sf": 1800,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "2751 E TONTO LN",
+            "price": 600000,
+            "sf": 1596,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "19854 N 29TH ST",
+            "price": 490000,
+            "sf": 1641,
+            "sold": "2026-05-01"
+          },
+          {
+            "address": "19848 N 29TH ST",
+            "price": 595000,
+            "sf": 1886,
+            "sold": "2024-07-01"
+          },
+          {
+            "address": "2767 E TONTO LN",
+            "price": 630000,
+            "sf": 2033,
+            "sold": "2024-09-01"
+          }
+        ]
+      }
     },
     {
       "apn": "20827743",
@@ -46289,7 +50173,58 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-12",
       "lastSeen": "2026-10-12",
       "peakScore": 83,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1129081,
+        "finished": 1323000,
+        "profit": -1560937,
+        "marginPct": -118,
+        "marginPctAt300": -102,
+        "profitAt300": -1351217,
+        "salePsf": 378,
+        "risk": "Low"
+      },
+      "newBuild": {
+        "arv": 1128510,
+        "psf": 378,
+        "n": 6,
+        "radiusMi": 1.0,
+        "lowPsf": 363,
+        "highPsf": 438,
+        "examples": [
+          {
+            "address": "37711 N 12TH ST",
+            "price": 1070000,
+            "sf": 2768,
+            "sold": "2024-10-01"
+          },
+          {
+            "address": "37723 N 12TH ST",
+            "price": 1020000,
+            "sf": 2768,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "1101 E DOLORES RD",
+            "price": 1210000,
+            "sf": 3038,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "1139 E DOLORES RD",
+            "price": 1140000,
+            "sf": 3143,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "37221 N 12TH ST",
+            "price": 1395000,
+            "sf": 3183,
+            "sold": "2026-06-01"
+          }
+        ]
+      }
     },
     {
       "apn": "21404009S",
@@ -46472,15 +50407,7 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-11",
       "peakScore": 108,
       "stale": true,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 679988,
-        "finished": 1043000,
-        "profit": -943427,
-        "marginPct": -90,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "20338023",
@@ -47014,15 +50941,7 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-10",
       "peakScore": 93,
       "stale": true,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1574096,
-        "finished": 1319500,
-        "profit": -1640213,
-        "marginPct": -124,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16770039",
@@ -47196,15 +51115,7 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-10",
       "peakScore": 85,
       "stale": true,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 981263,
-        "finished": 2201500,
-        "profit": -176801,
-        "marginPct": -8,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16770018",
@@ -47378,15 +51289,7 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-10",
       "peakScore": 84,
       "stale": true,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 925525,
-        "finished": 2457000,
-        "profit": 123008,
-        "marginPct": 5,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21520009B",
@@ -47560,15 +51463,7 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-10",
       "peakScore": 83,
       "stale": true,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1289211,
-        "finished": 1277500,
-        "profit": -1374866,
-        "marginPct": -108,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21570012H",
@@ -47742,15 +51637,7 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-10",
       "peakScore": 83,
       "stale": true,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1706964,
-        "finished": 1326500,
-        "profit": -1775801,
-        "marginPct": -134,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16771075",
@@ -47929,15 +51816,7 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-10",
       "peakScore": 83,
       "stale": true,
-      "verdict": {
-        "label": "Maybe",
-        "strategy": "1 custom home",
-        "land": 747958,
-        "finished": 2457000,
-        "profit": 313005,
-        "marginPct": 13,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16768058",
@@ -48111,15 +51990,7 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-10",
       "peakScore": 82,
       "stale": true,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1039758,
-        "finished": 2208500,
-        "profit": -232811,
-        "marginPct": -11,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "16608080",
@@ -48769,15 +52640,7 @@ window.PHX_LAND_LEADS = {
         ]
       },
       "stale": true,
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 279084,
-        "finished": 1274000,
-        "profit": -297320,
-        "marginPct": -23,
-        "risk": "Low"
-      }
+      "verdict": null
     },
     {
       "apn": "21460008A",
