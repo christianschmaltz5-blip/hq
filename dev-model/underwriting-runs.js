@@ -12,31 +12,8 @@
 // };
 
 window.UNDERWRITING_RUNS = {
-  "updated": "2026-10-05",
-  "runs": [
-    {
-      "name": "Clubhouse at Arcadia",
-      "address": "2620 N 40th St",
-      "zip": "85008",
-      "bucket": "nearMiss",
-      "units": 43,
-      "askingPrice": 12247000,
-      "inPlaceNOI": 704197,
-      "currentAvgRent": 1000,
-      "currentAvgRentSource": "default",
-      "rentPremium": 85,
-      "rentPremiumSource": "default",
-      "TAC": 13461262,
-      "stabilizedValue": 5459874,
-      "valueAddProfit": -8001389,
-      "profitMargin": -0.5944,
-      "cashOnCash": -0.0787,
-      "equityMultiple": -1.28,
-      "noiVarianceFlag": true,
-      "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
-      "sourceUrl": "https://www.crexi.com/properties/2370896/arizona-clubhouse-at-arcadia"
-    }
-  ],
+  "updated": "2026-10-12",
+  "runs": [],
   "history": [
     {
       "date": "2026-08-05",
@@ -109,6 +86,12 @@ window.UNDERWRITING_RUNS = {
       "dealsRun": 1,
       "pencilCount": 0,
       "topDeal": "Clubhouse at Arcadia ($-8,001,389)"
+    },
+    {
+      "date": "2026-10-12",
+      "dealsRun": 0,
+      "pencilCount": 0,
+      "topDeal": null
     }
   ]
 };
