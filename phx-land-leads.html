@@ -1551,7 +1551,9 @@ function sellerSignals(l){
 function profitLine(l){
   const p = profitFor(l); if(!p) return '';
   const m = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
-  return `<div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%) · risk ${p.risk}</div>`;
+  const vd = l.verdict, vc = vd && { Good: '#2f6b47', Maybe: '#9a7a1c', Pass: '#b03a3a' }[vd.label];
+  const badge = vd ? `<span title="Auto-underwrite at placeholder build costs, buying land at the comps value" style="background:${vc};color:#fff;border-radius:4px;padding:1px 6px;margin-right:6px;font-size:11px;font-weight:700;">${vd.label.toUpperCase()}</span>` : '';
+  return `<div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${badge}📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%) · risk ${p.risk}</div>`;
 }
 function lowSalePsf(l){ const e = (l.newBuild.examples || []).map(x => x.price / x.sf); return Math.min(l.newBuild.lowPsf || Infinity, ...e); }
 function salesCell(l){

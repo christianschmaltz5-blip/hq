@@ -13,6 +13,12 @@ top = sorted(fresh, key=lambda l: -l["score"])[:3]
 lines = [f"{len(fresh)} leads ({sum(l.get('isNew', False) for l in fresh)} new), {sum(l.get('stale', False) for l in d['leads'])} kept hot"]
 lines += [f"{l['score']} {l['address'].split('  ')[0].title()} ({l['parcelStatus']})" for l in top]
 
+good = [l for l in fresh if (l.get("verdict") or {}).get("label") == "Good"]
+if good:
+    lines.append(f"{len(good)} GOOD deals at placeholder costs: " + ", ".join(l["address"].split("  ")[0].title() for l in good[:3]))
+else:
+    lines.append("0 Good deals at current assumptions")
+
 try:  # lost-to-someone-else events from track.py
     ev = [json.loads(x) for x in (HQ / "phx-land-leads/history.jsonl").read_text().splitlines()]
     ev = [e for e in ev if e.get("event") == "changed" and e["date"] == d["updated"]]
