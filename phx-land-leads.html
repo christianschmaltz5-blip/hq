@@ -813,12 +813,12 @@ function renderAcqKpis(idx, state, lead){
 // ── Comparable sales ────────────────────────────────────────────────────
 function landCompsHtml(lead){
   if(!('comps' in lead)){
-    return `<div class="comps-section"><div class="comps-title">Comparable Sales</div>
+    return `<div class="comps-section"><div class="comps-title">Land Comps — recent land sales nearby</div>
       <div class="comps-empty">Not pulled yet — the daily scan only runs comps on the top 60 scored leads to keep the job fast. This lead is ranked outside that batch; if its score climbs into the top 60 on a future run, comps will appear here automatically.</div></div>`;
   }
   const comps = lead.comps || [];
   if(!comps.length){
-    return `<div class="comps-section"><div class="comps-title">Comparable Sales</div>
+    return `<div class="comps-section"><div class="comps-title">Land Comps — recent land sales nearby</div>
       <div class="comps-empty">${esc(lead.compsNote || 'No comparable sales found nearby.')}</div></div>`;
   }
   const rows = comps.map(c => `<tr>
@@ -839,7 +839,7 @@ function landCompsHtml(lead){
       </div>`
     : `<div class="comps-empty" style="margin-bottom:8px;">No dollar estimate — comps below aren't close enough in lot size to extrapolate from reliably.</div>`;
   return `<div class="comps-section">
-    <div class="comps-title">Comparable Sales</div>
+    <div class="comps-title">Land Comps — recent land sales nearby</div>
     ${valuationHtml}
     <div style="overflow-x:auto;"><table class="comps-table">
       <thead><tr><th>Property</th><th>Distance</th><th>Sold</th><th>Price</th><th>Lot Size</th><th>$/Acre</th><th>Similarity</th></tr></thead>
