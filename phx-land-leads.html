@@ -866,7 +866,7 @@ async function fetchHouseComps(lead){
         distance: String(miles * 1609.34), units: 'esriSRUnit_Meter', spatialRel: 'esriSpatialRelIntersects',
         where: `SALE_PRICE IS NOT NULL AND SALE_PRICE <> '0' AND PUC LIKE '01%' AND (${years})`,
         outFields: 'APN,PHYSICAL_ADDRESS,SALE_DATE,SALE_PRICE,LAND_SIZE,LIVING_SPACE,CONST_YEAR,LATITUDE,LONGITUDE', resultRecordCount: '1000', f: 'json' });
-      const r = await (await fetch(U, { method: 'POST', body })).json();
+      const r = await (await fetch(U, { method: 'POST', body, signal: AbortSignal.timeout(20000) })).json();   // the county server is sometimes very slow: fail fast, offer a retry
       feats = (r.features || []).map(f => f.attributes).filter(a => hcNum(a.LIVING_SPACE) >= 1500 && hcNum(a.SALE_PRICE) >= 150000);
       if(feats.length >= 10) break;
     }
@@ -886,13 +886,22 @@ function houseCompsHtml(lead){
   const h = houseCache[lead.apn];
   const title = '<div class="comps-title">House Comps — recent home sales nearby</div>';
   if(!h) return `<div class="comps-section">${title}<div class="comps-empty">Loading from the county…</div></div>`;
-  if(!h.rows.length) return `<div class="comps-section">${title}<div class="comps-empty">${esc(h.error || 'No home sales found within 3 miles in the last 2 years.')}</div></div>`;
+  if(!h.rows.length){
+    const sv = lead.houseComps, saved = sv ? `<div class="valuation-box"><div class="valuation-likely">From this morning's scan: <b>${money(sv.psf)}/sf</b> median · <b>${money(sv.price)}</b> per home (${sv.n} sales within ${sv.radiusMi} mi)</div></div>` : '';
+    return `<div class="comps-section">${title}${saved}<div class="comps-empty">${esc(h.error ? 'The county site is not answering right now (' + h.error + ').' : 'No home sales found within 3 miles in the last 2 years.')} ${h.error ? `<button class="mail-btn" onclick="retryHouseComps('${esc(lead.apn)}')">Try again</button>` : ''}</div></div>`;
+  }
   const rows = h.rows.map(r => `<tr><td>${esc(r.address)}</td><td>${r.dist.toFixed(2)} mi</td><td>${esc(r.sold)}</td><td><b>${money(r.price)}</b></td>
     <td>${Math.round(r.sf).toLocaleString()} sf</td><td><b>${money(r.psf)}</b></td><td>${r.built || '—'}${r.isNew ? ' <span class="sim-badge">new</span>' : ''}</td><td>${r.lot ? num1(r.lot / 43560) + ' ac' : '—'}</td></tr>`).join('');
   return `<div class="comps-section">${title}
     <div class="valuation-box"><div class="valuation-likely">Median of these 5: <b>${money(h.medianPsf)}/sf</b> · <b>${money(h.medianPrice)}</b> per home</div></div>
     <div style="overflow-x:auto;"><table class="comps-table"><thead><tr><th>Property</th><th>Distance</th><th>Sold</th><th>Price</th><th>Home size</th><th>$/sf</th><th>Built</th><th>Lot</th></tr></thead><tbody>${rows}</tbody></table></div>
     <div class="comps-note">Finished homes, not land. County Assessor data (latest recorded sale per parcel): chosen for similar lot size, closeness, newer construction and recent sale. Existing homes usually sell for less than new custom builds — treat as a floor, not an appraisal.</div></div>`;
+}
+function retryHouseComps(apn){
+  const lead = currentLeads.find(l => l.apn === apn); if(!lead) return;
+  delete houseCache[apn];
+  const box = document.getElementById('house-' + apn); if(box) box.innerHTML = houseCompsHtml(lead);
+  loadHouseComps(lead);
 }
 async function loadHouseComps(lead){
   const box = document.getElementById('house-' + lead.apn); if(!box) return;
