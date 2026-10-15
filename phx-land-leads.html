@@ -73,6 +73,12 @@
 .comps-empty{font-size:12px; color:var(--text-faint); font-style:italic;}
 .x-btn{background:none;border:2px solid #c9a0a0;color:#aa3f3c;font-size:18px;font-weight:800;line-height:1;width:30px;height:30px;border-radius:8px;cursor:pointer;padding:0;}
 .x-btn:hover{background:#aa3f3c;color:#fff;border-color:#aa3f3c;}
+.parcel-box{margin:0 16px 10px; border:1px solid var(--card-border); border-radius:10px; overflow:hidden; background:var(--card-bg,#fff);}
+.parcel-info{padding:10px 14px; font-size:12.5px; line-height:1.55; color:var(--text-soft);}
+.parcel-info b{color:var(--text);}
+.parcel-map{height:380px;}
+.pm-legend{background:rgba(255,255,255,.92); padding:5px 8px; border-radius:6px; font-size:11px; line-height:1.5; box-shadow:0 1px 4px rgba(0,0,0,.3);}
+.pm-lot{font-weight:700; font-size:11px; color:#fff7c2; text-shadow:0 0 3px #000,0 0 3px #000; background:none; border:none; box-shadow:none;}
 .comps-table{width:100%; border-collapse:collapse; font-size:12px; margin-bottom:10px;}
 .comps-table th{text-align:left; font-size:9.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--text-faint); padding:5px 8px; border-bottom:1px solid var(--card-border);}
 .comps-table td{padding:6px 8px; border-bottom:1px solid #f1f3f7; color:var(--text-soft);}
@@ -220,7 +226,7 @@
             <label style="font-size:12.5px;color:var(--text-soft);">Split lots sell at (% of full-lot value)
               <input class="filter-input" id="moSplitHaircut" type="number" value="80" style="width:70px;"></label>
             <label style="font-size:12.5px;color:var(--text-soft);">Min lot size if zoning unknown (sf)
-              <input class="filter-input" id="moMinLot" type="number" value="10000" style="width:80px;"></label>
+              <input class="filter-input" id="moMinLot" type="number" value="14375" style="width:80px;"></label>
             <select class="filter-input" id="moSort" style="width:230px;">
               <option value="max">Sort: highest max offer</option>
               <option value="cushion">Sort: biggest cushion over assessed</option>
@@ -1111,7 +1117,7 @@ function leadCard(lead, idx){
       <a href="https://www.google.com/maps/@${lead.lat},${lead.lng},19z/data=!3m1!1e3" target="_blank" rel="noopener">🛰️ Satellite</a>
       &nbsp;·&nbsp;
       <a href="https://www.google.com/maps?layer=c&cbll=${lead.lat},${lead.lng}" target="_blank" rel="noopener">🚶 Street View</a>
-    </div>` : ''}
+    </div>${parcelBoxHtml(lead, idx)}` : ''}
     ${profitLine(lead)}
     ${contactBlock(lead)}
     <div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">🎨 Street View render prompt:
@@ -1182,9 +1188,100 @@ function renderLeads(leads){
 }
 renderLeads(currentLeads);
 
+
+// ── Parcel map: real parcel boundary + zoning (county/city GIS) + a concept lot layout ──
+// Concept only: lots are packed inside the boundary at the 'acres per lot' rule of thumb. No streets, drainage, hillside or HOA limits.
+var acresPerLot = (function(){ try{ const v = parseFloat(localStorage.getItem('acresPerLot')); return v > 0 ? v : 0.33; }catch(e){ return 0.33; } })();
+const parcelCache = {}, zoneCache = {};
+const GIS_PARCELS = 'https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query';
+const GIS_COUNTY_ZONING = 'https://gis.maricopa.gov/arcgis/rest/services/PND/PlanNet/MapServer/11/query';
+function minLotFromZone(z){   // R1-18 = 18,000 sf, RE-35 = 35,000 sf, county RU-43 = 43,000 sf; anything else: unknown
+  const m = /^(?:R1|RE|RU|R)-(\d+)/i.exec(String(z || '').trim()), n = m ? parseInt(m[1], 10) : 0;
+  return n >= 6 ? n * 1000 : 0;
+}
+async function fetchParcel(lead){
+  if(parcelCache[lead.apn]) return parcelCache[lead.apn];
+  const body = new URLSearchParams({ where: `APN='${String(lead.apn).replace(/'/g, '')}'`, outFields: 'APN', returnGeometry: 'true', outSR: '4326', f: 'json' });
+  const r = await (await fetch(GIS_PARCELS, { method: 'POST', body, signal: AbortSignal.timeout(20000) })).json();
+  const rings = ((r.features || [])[0] || {}).geometry; const ring = rings && rings.rings && rings.rings.slice().sort((a, b) => b.length - a.length)[0];
+  if(!ring) throw new Error('no boundary found');
+  return (parcelCache[lead.apn] = ring);
+}
+async function fetchZone(lead){
+  if(zoneCache[lead.apn]) return zoneCache[lead.apn];
+  if(lead.currentZoning) return (zoneCache[lead.apn] = { zone: lead.currentZoning, src: 'City of Phoenix zoning map' });
+  const q = new URLSearchParams({ geometry: `${lead.lng},${lead.lat}`, geometryType: 'esriGeometryPoint', inSR: '4326', spatialRel: 'esriSpatialRelIntersects', outFields: 'ZONE,JURIS', returnGeometry: 'false', f: 'json' });
+  const r = await (await fetch(GIS_COUNTY_ZONING + '?' + q, { signal: AbortSignal.timeout(20000) })).json();
+  const a = ((r.features || [])[0] || {}).attributes;
+  if(!a || !a.ZONE) return null;
+  return (zoneCache[lead.apn] = { zone: a.ZONE, src: 'Maricopa County zoning map' + (a.JURIS ? ' (' + a.JURIS.toLowerCase() + ' jurisdiction)' : '') });
+}
+function layoutLots(ring, acres){   // pack equal rectangles inside the boundary, aligned to its longest edge; returns [[lat,lng]x4, ...]
+  const lat0 = ring.reduce((t, p) => t + p[1], 0) / ring.length, lng0 = ring.reduce((t, p) => t + p[0], 0) / ring.length;
+  const kx = 111320 * Math.cos(lat0 * Math.PI / 180), ky = 110540;
+  const pts = ring.map(p => [(p[0] - lng0) * kx, (p[1] - lat0) * ky]);
+  let longest = 0, ang = 0;
+  pts.forEach((a, i) => { const b = pts[(i + 1) % pts.length], d = Math.hypot(b[0] - a[0], b[1] - a[1]); if(d > longest){ longest = d; ang = Math.atan2(b[1] - a[1], b[0] - a[0]); } });
+  const rot = (p, t) => [p[0] * Math.cos(t) - p[1] * Math.sin(t), p[0] * Math.sin(t) + p[1] * Math.cos(t)];
+  const poly = pts.map(p => rot(p, -ang)), mx = poly.reduce((t, p) => t + p[0], 0) / poly.length, my = poly.reduce((t, p) => t + p[1], 0) / poly.length;
+  const inner = poly.map(p => [mx + (p[0] - mx) * 0.92, my + (p[1] - my) * 0.92]);   // keep off the edges (setbacks)
+  const inside = (x, y) => { let c = false; for(let i = 0, j = inner.length - 1; i < inner.length; j = i++){ const a = inner[i], b = inner[j]; if((a[1] > y) !== (b[1] > y) && x < (b[0] - a[0]) * (y - a[1]) / (b[1] - a[1]) + a[0]) c = !c; } return c; };
+  const area = acres * 4046.86, w0 = Math.sqrt(area / 1.4), h0 = w0 * 1.4;
+  const xs = inner.map(p => p[0]), ys = inner.map(p => p[1]), x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  let best = [];
+  [[w0, h0], [h0, w0]].forEach(([w, h]) => {
+    for(let ox = 0; ox < 4; ox++) for(let oy = 0; oy < 4; oy++){
+      const found = [];
+      for(let x = x0 + ox * w / 4; x + w <= x1; x += w) for(let y = y0 + oy * h / 4; y + h <= y1; y += h)
+        if(inside(x, y) && inside(x + w, y) && inside(x, y + h) && inside(x + w, y + h) && inside(x + w / 2, y + h / 2)) found.push([[x, y], [x + w, y], [x + w, y + h], [x, y + h]]);
+      if(found.length > best.length) best = found;
+    }
+  });
+  return best.slice(0, 60).map(r => r.map(p => { const q = rot(p, ang); return [q[1] / ky + lat0, q[0] / kx + lng0]; }));
+}
+function parcelBoxHtml(lead, idx){
+  return `<div class="parcel-box" onclick="event.stopPropagation()"><div class="parcel-info" id="pminfo-${idx}">Loading the parcel boundary and zoning…</div><div class="parcel-map" id="pm-${idx}"></div></div>`;
+}
+function setAcresPerLot(v){
+  v = parseFloat(v); if(!(v > 0.05)) return;
+  acresPerLot = v; try{ localStorage.setItem('acresPerLot', String(v)); }catch(e){}
+  document.querySelectorAll('.parcel-map').forEach(b => { if(b._redraw) b._redraw(); });
+}
+async function initParcelMap(lead, idx){
+  const box = document.getElementById('pm-' + idx), info = document.getElementById('pminfo-' + idx); if(!box) return;
+  if(box._map){ box._map.invalidateSize(); return; }
+  const map = L.map(box).setView([lead.lat, lead.lng], 17); box._map = map;
+  const sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Imagery &copy; Esri' }).addTo(map);
+  const flat = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' });
+  L.control.layers({ 'Satellite': sat, '2D map': flat }).addTo(map);
+  const lg = L.control({ position: 'bottomleft' });
+  lg.onAdd = () => { const d = L.DomUtil.create('div', 'pm-legend'); d.innerHTML = '<span style="color:#d93025;">▬</span> parcel boundary &nbsp; <span style="color:#d9a400;">▬</span> concept lot (estimate)<br><b style="color:#d93025;">Concept only</b>'; return d; };
+  lg.addTo(map);
+  const [ring, zn] = await Promise.all([fetchParcel(lead).catch(e => ({ err: e.message })), fetchZone(lead).catch(() => null)]);
+  const group = L.layerGroup().addTo(map);
+  box._redraw = () => {
+    group.clearLayers();
+    let k = 0, outline = null;
+    if(Array.isArray(ring)){
+      outline = L.polygon(ring.map(p => [p[1], p[0]]), { color: '#d93025', weight: 3, fillColor: '#d93025', fillOpacity: 0.18 }).addTo(group);
+      const lots = layoutLots(ring, acresPerLot); k = lots.length;
+      lots.forEach((r, i) => L.polygon(r, { color: '#ffd400', weight: 2, fillColor: '#ffd400', fillOpacity: 0.3 }).bindTooltip('Lot ' + (i + 1), { permanent: true, direction: 'center', className: 'pm-lot' }).addTo(group));
+    }
+    const minLot = zn ? minLotFromZone(zn.zone) : 0, sf = lead.landSf || (Array.isArray(ring) ? 0 : 0);
+    const byRight = minLot ? Math.max(0, Math.floor(sf * 0.8 / minLot)) : null, est = Math.floor(sf * 0.85 / (acresPerLot * 43560));
+    const zoneLine = zn ? `<b>${esc(zn.zone)}</b> <span style="color:var(--text-faint);">(${esc(zn.src)})</span> · minimum lot size ${minLot ? '<b>' + minLot.toLocaleString() + ' sf</b> (' + (minLot / 43560).toFixed(2) + ' ac)' : '<b>not set by the code — planned-development or special zoning, get the approved plan</b>'}` : '<b>not found</b> in the city or county map — ask Planning &amp; Development';
+    info.innerHTML = `<div><b>Zoning:</b> ${zoneLine}</div>
+      <div><b>Zoning allows (by right):</b> ${byRight == null ? 'unknown' : byRight + ' lot' + (byRight === 1 ? '' : 's') + ' (about 80% of the land usable ÷ minimum lot size)'}</div>
+      <div><b>Our estimate:</b> ${est} lot${est === 1 ? '' : 's'} at <input type="number" step="0.01" min="0.06" value="${acresPerLot}" class="filter-input" style="width:64px;" onchange="setAcresPerLot(this.value)"> acres each${Array.isArray(ring) ? ` · ${k} drawn on the map` : ''}${byRight != null && est > byRight ? ` — <span style="color:#b03a3a;font-weight:700;">${est - byRight} more than the zoning allows: needs a rezone or lot-split approval</span>` : ''}</div>
+      <div style="color:var(--text-faint);">${Array.isArray(ring) ? '' : 'Parcel boundary not available (' + esc(ring.err) + '). '}Subdivision / lot-split rules (street width, drainage, hillside, HOA) are not in the public map data. Confirm with Planning &amp; Development before counting on the estimate.</div>`;
+    if(outline) map.fitBounds(outline.getBounds(), { padding: [20, 20], maxZoom: 19 });
+  };
+  box._redraw();
+}
 function toggleLead(idx){
   const el = document.getElementById(`detail-${idx}`);
   el.classList.toggle('show');
+  if(el.classList.contains('show') && currentLeads[idx]){ try{ initParcelMap(currentLeads[idx], idx); }catch(e){ console.error('parcel map failed', e); } }
   if(el.classList.contains('show') && currentLeads[idx]) (isCommLead(currentLeads[idx]) ? loadCommComps : loadHouseComps)(currentLeads[idx]);
 }
 // ── Mail letter generator ───────────────────────────────────────────────
@@ -1808,7 +1905,7 @@ function renderRuns(){
 // known = the min lot size comes from the zoning code (R1-14 = 14,000 sf, RE-35 = 35,000 sf); otherwise it is the fallback guess.
 function splitInfo(l){
   const m = /^(?:R1|RE)-(\d+)/i.exec(l.currentZoning || '');
-  const minLot = m ? parseInt(m[1],10) * 1000 : (parseFloat(document.getElementById('moMinLot').value) || 10000);
+  const minLot = m ? parseInt(m[1],10) * 1000 : (parseFloat(document.getElementById('moMinLot').value) || 14375);
   return { n: Math.max(1, Math.min(4, Math.floor((l.landSf || 0) * 0.85 / minLot))), known: !!m };
 }
 function splitLots(l){ return splitInfo(l).n; }
@@ -2010,14 +2107,14 @@ function initMap(containerId){
   const map = L.map(containerId).setView([33.65, -112.05], 11);
   const streets = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19, attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
+  });
   const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     maxZoom: 19, attribution: 'Tiles &copy; Esri'
-  });
+  }).addTo(map);
   const flood = new FemaFlood('https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/export', {
     maxZoom: 19, opacity: 0.5, attribution: 'Flood zones: FEMA NFHL'
   }).addTo(map);
-  L.control.layers({ 'Street': streets, 'Satellite': satellite }, { 'FEMA flood zones': flood }).addTo(map);
+  L.control.layers({ 'Satellite': satellite, '2D map': streets }, { 'FEMA flood zones': flood }).addTo(map);
   return { map, markers: [] };
 }
 function renderMapInstance(inst, leads){

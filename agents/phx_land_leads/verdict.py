@@ -11,7 +11,7 @@ from comps import _esri_query, _haversine_mi, _parse_num as _pn
 _parse_num = lambda x: _pn(x) or 0
 
 A = dict(sf=3800, hard=(300, 350), soft=0.08, site=50_000, fin=0.07, sell=0.03,   # ponytail: mirrors the numbers typed into the Custom Home Calculator
-         split_cost=25_000, haircut=0.8, min_lot=10_000, good=0.10, maybe=0.05)
+         split_cost=25_000, haircut=0.8, min_lot=14_375, good=0.10, maybe=0.05)
 
 
 def house_comps(l):
