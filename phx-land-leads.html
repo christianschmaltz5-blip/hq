@@ -77,6 +77,14 @@
 .parcel-info{padding:10px 14px; font-size:12.5px; line-height:1.55; color:var(--text-soft);}
 .parcel-info b{color:var(--text);}
 .parcel-map{height:400px;}
+.cf{display:inline-block; font-size:9.5px; font-weight:800; letter-spacing:.03em; padding:1px 6px; border-radius:9px; margin-left:5px; vertical-align:middle; text-transform:uppercase;}
+.cf-v{background:#e3f1e8; color:#2f6b47;} .cf-e{background:#fbf1d6; color:#8a6a10;} .cf-u{background:#eceff3; color:#5b6472; border:1px dashed #98a1b0;}
+.pm-bar{display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; padding:8px 14px; border-bottom:1px solid var(--card-border); font-size:12.5px;}
+.pm-why{}
+.pm-whybox{padding:10px 14px; background:#f7f9fc; border-bottom:1px solid var(--card-border); font-size:12.5px; line-height:1.55;}
+.pm-whybox div{margin:2px 0;}
+.pp-hide{}
+@media print{ .pp-hide{display:none!important;} .no-print{display:none!important;} body.printing-lead .letter-overlay{display:none!important;} .parcel-map{height:340px!important;} }
 .parcel-info input.filter-input{width:64px; padding:3px 6px;}
 .pm-facts{display:flex; flex-wrap:wrap; gap:6px 18px; margin-bottom:6px;}
 .pm-assume{margin:6px 0 8px; padding:6px 8px; background:#f4f6fa; border-radius:6px;}
@@ -113,7 +121,7 @@
 .letter-actions button.primary{background:var(--accent); color:#fff; border:none;}
 #letterPrintArea{display:none;}
 @media print{
-  body > *:not(.letter-overlay){display:none!important;}
+  body:not(.printing-lead) > *:not(.letter-overlay){display:none!important;}
   .letter-overlay{position:static!important; background:none!important; display:block!important; padding:0!important;}
   .letter-modal{box-shadow:none!important; max-height:none!important; max-width:none!important;}
   .letter-from-row, .letter-actions, .letter-modal h3{display:none!important;}
@@ -1113,7 +1121,7 @@ function leadCard(lead, idx){
   return `<div class="lead-card ${typeClass}${isHot?' is-hot':''}" data-idx="${idx}">
     <div class="lead-head" onclick="toggleLead(${idx})">
       <div>
-        <div class="lead-addr">${newBadge} ${statusBadge} ${condBadge} <span id="notebadge-${idx}" class="reason-chip" title="You have a note on this lead" style="${loadNotes()[lead.apn] ? '' : 'display:none;'}">📝 Note</span> ${staleBadge} ${contactedBadge} <span id="calcbadge-${idx}" class="reason-chip" style="${loadCalcs()[lead.apn] ? '' : 'display:none;'}font-weight:700;">💾 ${esc((loadCalcs()[lead.apn] || {}).summary || '')}</span> ${esc(lead.address)||'(no address on file)'}</div>
+        <div class="lead-addr">${newBadge} ${statusBadge} ${condBadge} ${statusChip(lead)} <span id="notebadge-${idx}" class="reason-chip" title="You have a note on this lead" style="${loadNotes()[lead.apn] ? '' : 'display:none;'}">📝 Note</span> ${staleBadge} ${contactedBadge} <span id="calcbadge-${idx}" class="reason-chip" style="${loadCalcs()[lead.apn] ? '' : 'display:none;'}font-weight:700;">💾 ${esc((loadCalcs()[lead.apn] || {}).summary || '')}</span> ${esc(lead.address)||'(no address on file)'}</div>
         <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'}${lead.landUseClass ? ` (${lead.landUseClass === 'commercial' ? '🏢 commercial' : lead.landUseClass === 'industrial' ? '🏭 industrial' : '🏠 residential'})` : ''} · Owner: ${esc(lead.ownerName)||'—'} · ${esc(dealTypeLabel)}</div>
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;" onclick="event.stopPropagation()">
@@ -1205,6 +1213,7 @@ const parcelCache = {}, zoneCache = {};
 const GIS_PARCELS = 'https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3';
 const GIS_PHX_ZONING = 'https://maps.phoenix.gov/pub/rest/services/Public/Zoning/MapServer/0';
 const GIS_COUNTY_ZONING = 'https://gis.maricopa.gov/arcgis/rest/services/PND/PlanNet/MapServer/11';
+var CF = (k, t) => `<span class="cf cf-${k}">${t}</span>`;   // confidence label: v verified, e estimated, u unknown
 const todayStr = () => new Date().toISOString().slice(0, 10);
 function minLotFromZone(z){   // R1-18 = 18,000 sf, RE-35 = 35,000 sf, county RU-43 = 43,000 sf; anything else: not derivable
   const m = /^(?:R1|RE|RU|R)-(\d+)/i.exec(String(z || '').trim()), n = m ? parseInt(m[1], 10) : 0;
@@ -1250,7 +1259,8 @@ function layoutLots(ring, acres){   // pack equal rectangles fully inside the bo
   return best.slice(0, 60).map(r => r.map(p => { const q = rot(p, ang); return [q[1] / ky + lat0, q[0] / kx + lng0]; }));
 }
 function parcelBoxHtml(lead, idx){
-  return `<div class="parcel-box" onclick="event.stopPropagation()"><div class="parcel-info" id="pminfo-${idx}">Loading the parcel boundary and zoning…</div><div class="parcel-map" id="pm-${idx}"></div><div class="parcel-info" id="pmnote-${idx}"></div></div>`;
+  const st = loadStatus()[lead.apn] || {};
+  return `<div class="parcel-box" onclick="event.stopPropagation()"><div class="pm-bar no-print"><span><b>Status:</b> <select class="filter-input" onchange="setStatus('${esc(lead.apn)}','s',this.value)">${stageList().map(x => `<option${(st.s || 'New') === x ? ' selected' : ''}>${x}</option>`).join('')}</select></span><button class="mail-btn" type="button" data-favbtn="${esc(lead.apn)}" onclick="setStatus('${esc(lead.apn)}','fav')">${st.fav ? '★ Favorite' : '☆ Favorite'}</button><button class="mail-btn" type="button" onclick="printLead(${idx})">🖨 Save as PDF / print</button><span class="pm-why">Notes are in the box at the top of the card and print with the report.</span></div><div class="pm-whybox" id="pmwhy-${idx}">${whyHtml(lead, null)}</div><div class="parcel-info" id="pminfo-${idx}">Loading the parcel boundary and zoning…</div><div class="parcel-map" id="pm-${idx}"></div><div class="parcel-info" id="pmnote-${idx}"></div></div>`;
 }
 function setParcelAssumption(kind, v){
   v = parseFloat(v);
@@ -1265,7 +1275,7 @@ async function initParcelMap(lead, idx){
   const map = L.map(box).setView([lead.lat, lead.lng], 17); box._map = map;
   const sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Imagery &copy; Esri' }).addTo(map);
   const flat = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' });
-  L.control.layers({ 'Satellite': sat, 'Street map': flat }, null, { collapsed: false }).addTo(map);
+  L.control.layers({ 'Satellite': sat, 'Street map': flat }, overlayLayers(), { collapsed: false }).addTo(map);
   const lg = L.control({ position: 'bottomleft' });
   lg.onAdd = () => { const d = L.DomUtil.create('div', 'pm-legend'); d.innerHTML = '<span style="color:#d93025;font-weight:700;">▬</span> parcel boundary<br><span style="color:#c99700;font-weight:700;">▬</span> illustrative lot layout'; return d; };
   lg.addTo(map);
@@ -1284,8 +1294,9 @@ async function initParcelMap(lead, idx){
     const f2 = n => (Math.round(n * 100) / 100).toLocaleString();
     const estA = Math.floor(acres * u / acresPerLot), estZ = minLot ? Math.floor(acres * u / (minLot / 43560)) : null;
     const jur = par.juris ? (/NO CITY/i.test(par.juris) ? 'Unincorporated Maricopa County (no city or town)' : par.juris.replace(/\b(\w)(\w*)/g, (m, a, b) => a + b.toLowerCase())) : 'unavailable';
-    const num = (n, label, why) => `<div class="pm-row"><div class="pm-num">${n}</div><div><b>${label}</b><div class="pm-why">${why}</div></div></div>`;
-    info.innerHTML = `<div class="pm-facts"><span><b>Acreage:</b> ${f2(acres)} ac${ring ? '' : ' (from the county record; no boundary drawn)'}</span><span><b>Jurisdiction:</b> ${esc(jur)}</span><span><b>Zoning:</b> ${hasZone ? '<b>' + esc(zn.zone) + '</b>' : 'unavailable'}${minLot ? ' · minimum lot area ' + minLot.toLocaleString() + ' sf (' + f2(minLot / 43560) + ' ac)' : (hasZone ? ' · minimum lot area is not set by this zoning code' : '')}</span></div>
+    const num = (n, label, why) => `<div class="pm-row"><div class="pm-num">${n}</div><div><b>${label}</b> ${CF('e', 'estimated')}<div class="pm-why">${why}</div></div></div>`;
+    const whyEl = document.getElementById('pmwhy-' + idx); if(whyEl) whyEl.innerHTML = whyHtml(lead, hasZone ? zn : null, estA, estZ);
+    info.innerHTML = `<div class="pm-facts"><span><b>Acreage:</b> ${f2(acres)} ac ${CF('v', 'verified · county record')}${ring ? '' : ' (no boundary drawn)'}</span><span><b>Jurisdiction:</b> ${par.juris ? esc(jur) + ' ' + CF('v', 'verified · county') : 'unavailable ' + CF('u', 'unknown')}</span><span><b>Zoning:</b> ${hasZone ? '<b>' + esc(zn.zone) + '</b> ' + CF('v', 'verified · official map') : 'unavailable ' + CF('u', 'unknown')}</span><span><b>Minimum lot area:</b> ${minLot ? minLot.toLocaleString() + ' sf (' + f2(minLot / 43560) + ' ac) ' + CF('e', 'estimated · read from the zoning name') : (hasZone ? 'not set by this zoning code ' + CF('u', 'unknown') : 'unknown ' + CF('u', 'unknown'))}</span></div>
       <div class="pm-assume">Assumptions (yours to change): <label>acres per lot <input type="number" step="0.01" min="0.06" value="${acresPerLot}" class="filter-input" onchange="setParcelAssumption('apl', this.value)"></label> <label>usable land % <input type="number" step="1" min="1" max="100" value="${usablePct}" class="filter-input" onchange="setParcelAssumption('use', this.value)"></label> <span class="pm-why">${acresPerLot} ac/lot is a planning assumption, not a verified local average or a zoning requirement. The usable % is applied once, in the two estimates below, not in the drawing.</span></div>
 `;
     note.innerHTML = `      ${num(estA + ' by acreage', 'Acreage-based estimate', `${f2(acres)} ac × ${usablePct}% usable ÷ ${acresPerLot} ac per lot = ${f2(acres * u / acresPerLot)}, rounded down to ${estA}. Uses only your assumptions; ignores zoning.`)}
@@ -1294,8 +1305,9 @@ async function initParcelMap(lead, idx){
       <div class="pm-why" style="margin-top:6px;">The three numbers differ because each answers a different question: your assumed lot size, what fits the outline, and the minimum lot area in the zoning code. None of them is an approved lot count.</div>
       <div style="margin-top:8px;"><b>Illustrative lot layout.</b> A rectangle that fits inside the boundary does not establish a buildable or approvable lot.</div>
       <div><b>Sources:</b> parcel boundary &amp; jurisdiction: ${ring ? link(GIS_PARCELS, 'Maricopa County Assessor GIS') + ', retrieved ' + par.fetched : '<b>unavailable</b> (' + esc(par.err) + ')'}. Zoning: ${hasZone ? link(zn.url, zn.name) + ', retrieved ' + esc(zn.date) : '<b>unavailable</b> (' + esc(zn && zn.err || 'lookup failed') + ')'}. Lot counts are estimates.</div>
-      <div class="pm-verify"><b>Still needs verification</b> (<i>not checked</i> does not mean <i>no restriction</i>):
-        <ul><li>Access and street frontage — <i>not checked</i></li><li>Setbacks and lot-shape rules — <i>not checked</i></li><li>Drainage and washes — <i>not checked</i> (FEMA mapped floodplain: ${lead.inFloodplain ? 'inside' : 'outside'}, per the daily scan)</li><li>Terrain and slope — <i>not checked</i></li><li>Water, sewer and electric utilities — <i>not checked</i></li><li>Easements and HOA/CC&amp;Rs — <i>not checked</i></li><li>Applicable subdivision / lot-split requirements — <i>not checked</i>; not in the public map data</li></ul></div>
+      <div class="pm-verify"><b>Still needs verification</b> (<b>unknown</b> means nobody has checked it. It is not a pass, and not “no restriction”):
+        <ul><li>Access and street frontage — ${CF('u', 'unknown')}</li><li>Setbacks and lot-shape rules — ${CF('u', 'unknown')}</li><li>Drainage and washes — ${CF('u', 'unknown')}; FEMA mapped floodplain: ${CF('v', 'verified · ' + (lead.inFloodplain ? 'inside' : 'outside') + ', daily scan')}</li><li>Terrain and slope — ${CF('u', 'unknown')}; the hillshade layer shows relief only, not slope percentage</li><li>Water, sewer and electric utilities — ${CF('u', 'unknown')}</li><li>Easements and HOA/CC&amp;Rs — ${CF('u', 'unknown')}</li><li>Applicable subdivision / lot-split requirements — ${CF('u', 'unknown')}; not in the public map data</li></ul></div>
+      <div><b>Map layers</b> (toggle at the top right of the map): <b>FEMA flood zones</b> — ${link('https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer', 'FEMA National Flood Hazard Layer')}; only FEMA-mapped areas are drawn, so blank means unmapped, not safe. <b>Terrain (hillshade)</b> — ${link('https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer', 'Esri World Hillshade')}; shows relief only, not slope percentage or buildability. <b>Parcel lines</b> — ${link(GIS_PARCELS, 'Maricopa County Assessor')}. <b>Zoning</b> — ${link(GIS_PHX_ZONING, 'City of Phoenix')} (Phoenix only) and ${link(GIS_COUNTY_ZONING, 'Maricopa County')} (unincorporated only); drawn when zoomed in. <b>Easements and utilities</b> — no public layer is connected here: ${CF('u', 'unknown')}.</div>
       <div>View is flat 2D satellite. Tilted 3D imagery is not available in this map; ${link('https://www.google.com/maps/@' + lead.lat + ',' + lead.lng + ',19z/data=!3m1!1e3', 'open it in Google Maps')} for that.</div>`;
     box._fit = () => { if(outline) map.fitBounds(outline.getBounds(), { padding: [24, 24], maxZoom: 19 }); };
     box._fit();
@@ -1314,6 +1326,65 @@ async function prefetchDetails(list){
     const box = document.getElementById('house-' + l.apn);
     if(box && tok === prefetchToken) box.innerHTML = isCommLead(l) ? commCompsHtml(l) : houseCompsHtml(l);
   }
+}
+
+// ── Lead workflow: stage + favorite, saved in this browser ──
+function stageList(){ return ['New', 'Researching', 'Contacted', 'Under review', 'Passed']; }
+function loadStatus(){ try{ return JSON.parse(localStorage.getItem('leadStatus') || '{}'); }catch(e){ return {}; } }
+function statusChip(lead){
+  const st = loadStatus()[lead.apn] || {}, show = st.fav || (st.s && st.s !== 'New');
+  return `<span class="reason-chip" data-stchip="${esc(lead.apn)}" style="font-weight:700;${show ? '' : 'display:none;'}">${st.fav ? '★ ' : ''}${esc(st.s || '')}</span>`;
+}
+function setStatus(apn, field, val){
+  const all = loadStatus(), st = all[apn] = all[apn] || {};
+  if(field === 'fav') st.fav = !st.fav; else st.s = val;
+  try{ localStorage.setItem('leadStatus', JSON.stringify(all)); }catch(e){}
+  const show = st.fav || (st.s && st.s !== 'New');
+  document.querySelectorAll('[data-stchip="' + apn + '"]').forEach(c => { c.textContent = (st.fav ? '★ ' : '') + (st.s || ''); c.style.display = show ? '' : 'none'; });
+  document.querySelectorAll('[data-favbtn="' + apn + '"]').forEach(b => { b.textContent = st.fav ? '★ Favorite' : '☆ Favorite'; });
+}
+// ── Why this lead: our automated read, not verified. Picks the single biggest concern and the next research step. ──
+function whyHtml(lead, zn, estA, estZ){
+  const acres = lead.landAcres, zone = (zn && zn.zone) || lead.currentZoning, sig = sellerSignals(lead), sub = (lead.subdivision || '').trim();
+  const bits = [`${acres} ac ${lead.parcelStatus === 'vacant' ? 'vacant lot' : 'lot with a house'}`, zone ? 'zoned ' + zone : 'zoning not confirmed'];
+  if(sig.length) bits.push('owner signals: ' + sig.join(', '));
+  const why = (lead.reasons || []).slice(0, 2).map(r => esc(r)).join(' · ');
+  let concern, next;
+  if(sub){ concern = `Inside the “${esc(sub)}” subdivision: an HOA or CC&Rs may limit lot splits (not checked)`; next = `Get the recorded CC&Rs for ${esc(sub)} from the County Recorder, or call the HOA manager.`; }
+  else if(!zone){ concern = 'Zoning could not be confirmed'; next = 'Ask Planning &amp; Development which zoning applies.'; }
+  else if(lead.inFloodplain){ concern = 'Inside a FEMA-mapped floodplain'; next = 'Pull the FEMA flood map and ask the city what floodplain rules apply.'; }
+  else if(lead.ownership && lead.ownership.yearsHeld != null && lead.ownership.yearsHeld < 2 && lead.salePrice){ concern = `Bought recently (${lead.ownership.yearsHeld.toFixed(1)} years ago for ${money(lead.salePrice)}): the owner may expect a profit`; next = 'Open with the partnership pitch and ask what they plan to do with it.'; }
+  else if(estA != null && estZ != null && estA > estZ){ concern = `The acreage-based lot count (${estA}) is higher than the zoning-minimum estimate (${estZ}); the difference is not confirmed`; next = 'Ask Planning &amp; Development how many lots this parcel could be divided into.'; }
+  else { concern = 'Access, utilities and terrain have not been checked'; next = 'Check street access and utilities, then call the owner.'; }
+  return `<div><b>Why this lead:</b> ${bits.join(' · ')}${why ? ' — ' + why : ''}</div><div><b>Biggest concern:</b> ${concern}</div><div><b>Next step:</b> ${next}</div><div class="pm-why">Automated read of the data above. Not verified.</div>`;
+}
+// ── Print / save one lead as a PDF: hide everything else on the page, print, restore ──
+function printLead(idx){
+  const card = document.querySelector('.lead-card[data-idx="' + idx + '"]'); if(!card) return;
+  const hidden = []; let n = card;
+  while(n && n !== document.body){ Array.from(n.parentElement.children).forEach(c => { if(c !== n && c.tagName !== 'SCRIPT'){ c.classList.add('pp-hide'); hidden.push(c); } }); n = n.parentElement; }
+  document.body.classList.add('printing-lead');
+  const done = () => { hidden.forEach(c => c.classList.remove('pp-hide')); document.body.classList.remove('printing-lead'); window.removeEventListener('afterprint', done); };
+  window.addEventListener('afterprint', done);
+  const m = document.getElementById('pm-' + idx); if(m && m._map) m._map.invalidateSize();
+  setTimeout(() => window.print(), 400);
+}
+// Any ArcGIS MapServer drawn as transparent export tiles (params = the layers=... part of the request)
+const ArcExport = L.TileLayer.extend({
+  getTileUrl(c){
+    const R = 20037508.342789244, s = 2 * R / Math.pow(2, c.z), x0 = -R + c.x * s, y1 = R - c.y * s;
+    return `${this._url}?bbox=${x0},${y1 - s},${x0 + s},${y1}&bboxSR=3857&imageSR=3857&size=256,256&format=png32&transparent=true&${this.options.params}&f=image`;
+  }
+});
+// Overlays shared by the big maps and the lead map. Only layers that were tested and draw something are included.
+function overlayLayers(){
+  return {
+    'FEMA flood zones': new FemaFlood('https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/export', { maxZoom: 19, opacity: 0.55, attribution: 'Flood: FEMA NFHL' }),
+    'Terrain (hillshade)': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, maxNativeZoom: 15, opacity: 0.55, attribution: 'Terrain: Esri' }),
+    'Parcel lines (zoom in)': new ArcExport('https://gis.mcassessor.maricopa.gov/arcgis/rest/services/ParcelOutline/MapServer/export', { maxZoom: 19, minZoom: 15, params: 'layers=show:0', attribution: 'Parcels: Maricopa County Assessor' }),
+    'Zoning — Phoenix (zoom in)': new ArcExport('https://maps.phoenix.gov/pub/rest/services/Public/Zoning/MapServer/export', { maxZoom: 19, minZoom: 15, opacity: 0.5, params: 'layers=show:0', attribution: 'Zoning: City of Phoenix' }),
+    'Zoning — Maricopa County (zoom in)': new ArcExport('https://gis.maricopa.gov/arcgis/rest/services/PND/PlanNet/MapServer/export', { maxZoom: 19, minZoom: 15, opacity: 0.5, params: 'layers=show:11', attribution: 'Zoning: Maricopa County' })
+  };
 }
 function toggleLead(idx){
   const el = document.getElementById(`detail-${idx}`);
@@ -1466,6 +1537,7 @@ function applyFilters(){
   renderLeads(listFiltered);
   renderMaps(base);
   prefetchDetails(listFiltered);
+  listFiltered.slice(0, 5).forEach((l, i) => { const d = document.getElementById('detail-' + i); if(d && !d.classList.contains('show')) toggleLead(i); });   // the top leads open on their own
 }
 document.getElementById('typeFilter').addEventListener('change', applyFilters);
 document.getElementById('landUseFilter').addEventListener('change', applyFilters);
@@ -2152,7 +2224,7 @@ function initMap(containerId){
   const flood = new FemaFlood('https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/export', {
     maxZoom: 19, opacity: 0.5, attribution: 'Flood zones: FEMA NFHL'
   }).addTo(map);
-  L.control.layers({ 'Satellite': satellite, 'Street map': streets }, { 'FEMA flood zones': flood }).addTo(map);
+  L.control.layers({ 'Satellite': satellite, 'Street map': streets }, Object.assign(overlayLayers(), { 'FEMA flood zones': flood })).addTo(map);
   return { map, markers: [] };
 }
 function renderMapInstance(inst, leads){
