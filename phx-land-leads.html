@@ -76,7 +76,15 @@
 .parcel-box{margin:0 16px 10px; border:1px solid var(--card-border); border-radius:10px; overflow:hidden; background:var(--card-bg,#fff);}
 .parcel-info{padding:10px 14px; font-size:12.5px; line-height:1.55; color:var(--text-soft);}
 .parcel-info b{color:var(--text);}
-.parcel-map{height:380px;}
+.parcel-map{height:400px;}
+.parcel-info input.filter-input{width:64px; padding:3px 6px;}
+.pm-facts{display:flex; flex-wrap:wrap; gap:6px 18px; margin-bottom:6px;}
+.pm-assume{margin:6px 0 8px; padding:6px 8px; background:#f4f6fa; border-radius:6px;}
+.pm-row{display:flex; gap:10px; align-items:flex-start; margin:6px 0;}
+.pm-num{min-width:112px; font-weight:800; font-size:14px; color:var(--text);}
+.pm-why{font-size:11.5px; color:var(--text-faint); font-weight:400;}
+.pm-verify ul{margin:4px 0 6px 18px; padding:0;}
+@media (max-width:700px){ .parcel-map{height:300px;} .parcel-box{margin:0 8px 10px;} .pm-num{min-width:88px; font-size:13px;} }
 .pm-legend{background:rgba(255,255,255,.92); padding:5px 8px; border-radius:6px; font-size:11px; line-height:1.5; box-shadow:0 1px 4px rgba(0,0,0,.3);}
 .pm-lot{font-weight:700; font-size:11px; color:#fff7c2; text-shadow:0 0 3px #000,0 0 3px #000; background:none; border:none; box-shadow:none;}
 .comps-table{width:100%; border-collapse:collapse; font-size:12px; margin-bottom:10px;}
@@ -1189,45 +1197,47 @@ function renderLeads(leads){
 renderLeads(currentLeads);
 
 
-// ── Parcel map: real parcel boundary + zoning (county/city GIS) + a concept lot layout ──
-// Concept only: lots are packed inside the boundary at the 'acres per lot' rule of thumb. No streets, drainage, hillside or HOA limits.
-var acresPerLot = (function(){ try{ const v = parseFloat(localStorage.getItem('acresPerLot')); return v > 0 ? v : 0.33; }catch(e){ return 0.33; } })();
+// ── Parcel map: parcel boundary + zoning (county/city GIS) + an illustrative lot layout ──
+// Everything here is a PRELIMINARY screen. The yellow boxes are not lots: a rectangle that fits inside the boundary says nothing about access, frontage, setbacks or approval.
+var acresPerLot = (function(){ try{ const v = parseFloat(localStorage.getItem('acresPerLot')); return v > 0 ? v : 0.33; }catch(e){ return 0.33; } })();   // planning assumption (ours), not a verified local average or a zoning rule
+var usablePct = (function(){ try{ const v = parseFloat(localStorage.getItem('usablePct')); return v > 0 && v <= 100 ? v : 80; }catch(e){ return 80; } })();   // share of the land assumed usable for lots; applied once, in the two estimates only
 const parcelCache = {}, zoneCache = {};
-const GIS_PARCELS = 'https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query';
-const GIS_COUNTY_ZONING = 'https://gis.maricopa.gov/arcgis/rest/services/PND/PlanNet/MapServer/11/query';
-function minLotFromZone(z){   // R1-18 = 18,000 sf, RE-35 = 35,000 sf, county RU-43 = 43,000 sf; anything else: unknown
+const GIS_PARCELS = 'https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3';
+const GIS_PHX_ZONING = 'https://maps.phoenix.gov/pub/rest/services/Public/Zoning/MapServer/0';
+const GIS_COUNTY_ZONING = 'https://gis.maricopa.gov/arcgis/rest/services/PND/PlanNet/MapServer/11';
+const todayStr = () => new Date().toISOString().slice(0, 10);
+function minLotFromZone(z){   // R1-18 = 18,000 sf, RE-35 = 35,000 sf, county RU-43 = 43,000 sf; anything else: not derivable
   const m = /^(?:R1|RE|RU|R)-(\d+)/i.exec(String(z || '').trim()), n = m ? parseInt(m[1], 10) : 0;
   return n >= 6 ? n * 1000 : 0;
 }
 async function fetchParcel(lead){
   if(parcelCache[lead.apn]) return parcelCache[lead.apn];
-  const body = new URLSearchParams({ where: `APN='${String(lead.apn).replace(/'/g, '')}'`, outFields: 'APN', returnGeometry: 'true', outSR: '4326', f: 'json' });
-  const r = await (await fetch(GIS_PARCELS, { method: 'POST', body, signal: AbortSignal.timeout(20000) })).json();
-  const rings = ((r.features || [])[0] || {}).geometry; const ring = rings && rings.rings && rings.rings.slice().sort((a, b) => b.length - a.length)[0];
-  if(!ring) throw new Error('no boundary found');
-  return (parcelCache[lead.apn] = ring);
+  const body = new URLSearchParams({ where: `APN='${String(lead.apn).replace(/'/g, '')}'`, outFields: 'APN,JURISDICTION', returnGeometry: 'true', outSR: '4326', f: 'json' });
+  const r = await (await fetch(GIS_PARCELS + '/query', { method: 'POST', body, signal: AbortSignal.timeout(20000) })).json();
+  const f = (r.features || [])[0], ring = f && f.geometry && f.geometry.rings && f.geometry.rings.slice().sort((a, b) => b.length - a.length)[0];
+  if(!ring) throw new Error('the county returned no boundary for this APN');
+  return (parcelCache[lead.apn] = { ring, juris: (f.attributes || {}).JURISDICTION || '', fetched: todayStr() });
 }
 async function fetchZone(lead){
   if(zoneCache[lead.apn]) return zoneCache[lead.apn];
-  if(lead.currentZoning) return (zoneCache[lead.apn] = { zone: lead.currentZoning, src: 'City of Phoenix zoning map' });
+  if(lead.currentZoning) return (zoneCache[lead.apn] = { zone: lead.currentZoning, url: GIS_PHX_ZONING, name: 'City of Phoenix zoning map', date: (lead.lastSeen || '') + ' (daily scan)' });
   const q = new URLSearchParams({ geometry: `${lead.lng},${lead.lat}`, geometryType: 'esriGeometryPoint', inSR: '4326', spatialRel: 'esriSpatialRelIntersects', outFields: 'ZONE,JURIS', returnGeometry: 'false', f: 'json' });
-  const r = await (await fetch(GIS_COUNTY_ZONING + '?' + q, { signal: AbortSignal.timeout(20000) })).json();
+  const r = await (await fetch(GIS_COUNTY_ZONING + '/query?' + q, { signal: AbortSignal.timeout(20000) })).json();
   const a = ((r.features || [])[0] || {}).attributes;
-  if(!a || !a.ZONE) return null;
-  return (zoneCache[lead.apn] = { zone: a.ZONE, src: 'Maricopa County zoning map' + (a.JURIS ? ' (' + a.JURIS.toLowerCase() + ' jurisdiction)' : '') });
+  if(!a || !a.ZONE) throw new Error('no zoning polygon at this point');
+  return (zoneCache[lead.apn] = { zone: a.ZONE, url: GIS_COUNTY_ZONING, name: 'Maricopa County zoning map', date: todayStr() });
 }
-function layoutLots(ring, acres){   // pack equal rectangles inside the boundary, aligned to its longest edge; returns [[lat,lng]x4, ...]
+function layoutLots(ring, acres){   // pack equal rectangles fully inside the boundary, aligned to its longest edge; returns [[lat,lng]x4, ...]
   const lat0 = ring.reduce((t, p) => t + p[1], 0) / ring.length, lng0 = ring.reduce((t, p) => t + p[0], 0) / ring.length;
   const kx = 111320 * Math.cos(lat0 * Math.PI / 180), ky = 110540;
   const pts = ring.map(p => [(p[0] - lng0) * kx, (p[1] - lat0) * ky]);
   let longest = 0, ang = 0;
   pts.forEach((a, i) => { const b = pts[(i + 1) % pts.length], d = Math.hypot(b[0] - a[0], b[1] - a[1]); if(d > longest){ longest = d; ang = Math.atan2(b[1] - a[1], b[0] - a[0]); } });
   const rot = (p, t) => [p[0] * Math.cos(t) - p[1] * Math.sin(t), p[0] * Math.sin(t) + p[1] * Math.cos(t)];
-  const poly = pts.map(p => rot(p, -ang)), mx = poly.reduce((t, p) => t + p[0], 0) / poly.length, my = poly.reduce((t, p) => t + p[1], 0) / poly.length;
-  const inner = poly.map(p => [mx + (p[0] - mx) * 0.92, my + (p[1] - my) * 0.92]);   // keep off the edges (setbacks)
-  const inside = (x, y) => { let c = false; for(let i = 0, j = inner.length - 1; i < inner.length; j = i++){ const a = inner[i], b = inner[j]; if((a[1] > y) !== (b[1] > y) && x < (b[0] - a[0]) * (y - a[1]) / (b[1] - a[1]) + a[0]) c = !c; } return c; };
+  const poly = pts.map(p => rot(p, -ang));   // the whole boundary: no usable-land haircut here (that is applied once, in the estimates)
+  const inside = (x, y) => { let c = false; for(let i = 0, j = poly.length - 1; i < poly.length; j = i++){ const a = poly[i], b = poly[j]; if((a[1] > y) !== (b[1] > y) && x < (b[0] - a[0]) * (y - a[1]) / (b[1] - a[1]) + a[0]) c = !c; } return c; };
   const area = acres * 4046.86, w0 = Math.sqrt(area / 1.4), h0 = w0 * 1.4;
-  const xs = inner.map(p => p[0]), ys = inner.map(p => p[1]), x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  const xs = poly.map(p => p[0]), ys = poly.map(p => p[1]), x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
   let best = [];
   [[w0, h0], [h0, w0]].forEach(([w, h]) => {
     for(let ox = 0; ox < 4; ox++) for(let oy = 0; oy < 4; oy++){
@@ -1240,43 +1250,70 @@ function layoutLots(ring, acres){   // pack equal rectangles inside the boundary
   return best.slice(0, 60).map(r => r.map(p => { const q = rot(p, ang); return [q[1] / ky + lat0, q[0] / kx + lng0]; }));
 }
 function parcelBoxHtml(lead, idx){
-  return `<div class="parcel-box" onclick="event.stopPropagation()"><div class="parcel-info" id="pminfo-${idx}">Loading the parcel boundary and zoning…</div><div class="parcel-map" id="pm-${idx}"></div></div>`;
+  return `<div class="parcel-box" onclick="event.stopPropagation()"><div class="parcel-info" id="pminfo-${idx}">Loading the parcel boundary and zoning…</div><div class="parcel-map" id="pm-${idx}"></div><div class="parcel-info" id="pmnote-${idx}"></div></div>`;
 }
-function setAcresPerLot(v){
-  v = parseFloat(v); if(!(v > 0.05)) return;
-  acresPerLot = v; try{ localStorage.setItem('acresPerLot', String(v)); }catch(e){}
+function setParcelAssumption(kind, v){
+  v = parseFloat(v);
+  if(kind === 'apl' && v > 0.05){ acresPerLot = v; try{ localStorage.setItem('acresPerLot', String(v)); }catch(e){} }
+  else if(kind === 'use' && v > 0 && v <= 100){ usablePct = v; try{ localStorage.setItem('usablePct', String(v)); }catch(e){} }
+  else return;
   document.querySelectorAll('.parcel-map').forEach(b => { if(b._redraw) b._redraw(); });
 }
 async function initParcelMap(lead, idx){
-  const box = document.getElementById('pm-' + idx), info = document.getElementById('pminfo-' + idx); if(!box) return;
-  if(box._map){ box._map.invalidateSize(); return; }
+  const box = document.getElementById('pm-' + idx), info = document.getElementById('pminfo-' + idx), note = document.getElementById('pmnote-' + idx); if(!box) return;
+  if(box._map){ box._map.invalidateSize(); if(box._fit) box._fit(); return; }
   const map = L.map(box).setView([lead.lat, lead.lng], 17); box._map = map;
   const sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Imagery &copy; Esri' }).addTo(map);
   const flat = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' });
-  L.control.layers({ 'Satellite': sat, '2D map': flat }).addTo(map);
+  L.control.layers({ 'Satellite': sat, 'Street map': flat }, null, { collapsed: false }).addTo(map);
   const lg = L.control({ position: 'bottomleft' });
-  lg.onAdd = () => { const d = L.DomUtil.create('div', 'pm-legend'); d.innerHTML = '<span style="color:#d93025;">▬</span> parcel boundary &nbsp; <span style="color:#d9a400;">▬</span> concept lot (estimate)<br><b style="color:#d93025;">Concept only</b>'; return d; };
+  lg.onAdd = () => { const d = L.DomUtil.create('div', 'pm-legend'); d.innerHTML = '<span style="color:#d93025;font-weight:700;">▬</span> parcel boundary<br><span style="color:#c99700;font-weight:700;">▬</span> illustrative lot layout'; return d; };
   lg.addTo(map);
-  const [ring, zn] = await Promise.all([fetchParcel(lead).catch(e => ({ err: e.message })), fetchZone(lead).catch(() => null)]);
-  const group = L.layerGroup().addTo(map);
+  const [par, zn] = await Promise.all([fetchParcel(lead).catch(e => ({ err: e.message })), fetchZone(lead).catch(e => ({ err: e.message }))]);
+  const group = L.layerGroup().addTo(map), ring = par.ring, hasZone = zn && zn.zone;
+  const link = (u, t) => `<a href="${u}" target="_blank" rel="noopener">${esc(t)}</a>`;
   box._redraw = () => {
     group.clearLayers();
     let k = 0, outline = null;
-    if(Array.isArray(ring)){
-      outline = L.polygon(ring.map(p => [p[1], p[0]]), { color: '#d93025', weight: 3, fillColor: '#d93025', fillOpacity: 0.18 }).addTo(group);
+    if(ring){
+      outline = L.polygon(ring.map(p => [p[1], p[0]]), { color: '#d93025', weight: 3, fillColor: '#d93025', fillOpacity: 0.07 }).addTo(group);
       const lots = layoutLots(ring, acresPerLot); k = lots.length;
-      lots.forEach((r, i) => L.polygon(r, { color: '#ffd400', weight: 2, fillColor: '#ffd400', fillOpacity: 0.3 }).bindTooltip('Lot ' + (i + 1), { permanent: true, direction: 'center', className: 'pm-lot' }).addTo(group));
+      lots.forEach((r, i) => L.polygon(r, { color: '#ffd400', weight: 2, fillColor: '#ffd400', fillOpacity: 0.12 }).bindTooltip('Lot ' + (i + 1), { permanent: true, direction: 'center', className: 'pm-lot' }).addTo(group));
     }
-    const minLot = zn ? minLotFromZone(zn.zone) : 0, sf = lead.landSf || (Array.isArray(ring) ? 0 : 0);
-    const byRight = minLot ? Math.max(0, Math.floor(sf * 0.8 / minLot)) : null, est = Math.floor(sf * 0.85 / (acresPerLot * 43560));
-    const zoneLine = zn ? `<b>${esc(zn.zone)}</b> <span style="color:var(--text-faint);">(${esc(zn.src)})</span> · minimum lot size ${minLot ? '<b>' + minLot.toLocaleString() + ' sf</b> (' + (minLot / 43560).toFixed(2) + ' ac)' : '<b>not set by the code — planned-development or special zoning, get the approved plan</b>'}` : '<b>not found</b> in the city or county map — ask Planning &amp; Development';
-    info.innerHTML = `<div><b>Zoning:</b> ${zoneLine}</div>
-      <div><b>Zoning allows (by right):</b> ${byRight == null ? 'unknown' : byRight + ' lot' + (byRight === 1 ? '' : 's') + ' (about 80% of the land usable ÷ minimum lot size)'}</div>
-      <div><b>Our estimate:</b> ${est} lot${est === 1 ? '' : 's'} at <input type="number" step="0.01" min="0.06" value="${acresPerLot}" class="filter-input" style="width:64px;" onchange="setAcresPerLot(this.value)"> acres each${Array.isArray(ring) ? ` · ${k} drawn on the map` : ''}${byRight != null && est > byRight ? ` — <span style="color:#b03a3a;font-weight:700;">${est - byRight} more than the zoning allows: needs a rezone or lot-split approval</span>` : ''}</div>
-      <div style="color:var(--text-faint);">${Array.isArray(ring) ? '' : 'Parcel boundary not available (' + esc(ring.err) + '). '}Subdivision / lot-split rules (street width, drainage, hillside, HOA) are not in the public map data. Confirm with Planning &amp; Development before counting on the estimate.</div>`;
-    if(outline) map.fitBounds(outline.getBounds(), { padding: [20, 20], maxZoom: 19 });
+    const acres = lead.landAcres || (lead.landSf || 0) / 43560, u = usablePct / 100, minLot = hasZone ? minLotFromZone(zn.zone) : 0;
+    const f2 = n => (Math.round(n * 100) / 100).toLocaleString();
+    const estA = Math.floor(acres * u / acresPerLot), estZ = minLot ? Math.floor(acres * u / (minLot / 43560)) : null;
+    const jur = par.juris ? (/NO CITY/i.test(par.juris) ? 'Unincorporated Maricopa County (no city or town)' : par.juris.replace(/\b(\w)(\w*)/g, (m, a, b) => a + b.toLowerCase())) : 'unavailable';
+    const num = (n, label, why) => `<div class="pm-row"><div class="pm-num">${n}</div><div><b>${label}</b><div class="pm-why">${why}</div></div></div>`;
+    info.innerHTML = `<div class="pm-facts"><span><b>Acreage:</b> ${f2(acres)} ac${ring ? '' : ' (from the county record; no boundary drawn)'}</span><span><b>Jurisdiction:</b> ${esc(jur)}</span><span><b>Zoning:</b> ${hasZone ? '<b>' + esc(zn.zone) + '</b>' : 'unavailable'}${minLot ? ' · minimum lot area ' + minLot.toLocaleString() + ' sf (' + f2(minLot / 43560) + ' ac)' : (hasZone ? ' · minimum lot area is not set by this zoning code' : '')}</span></div>
+      <div class="pm-assume">Assumptions (yours to change): <label>acres per lot <input type="number" step="0.01" min="0.06" value="${acresPerLot}" class="filter-input" onchange="setParcelAssumption('apl', this.value)"></label> <label>usable land % <input type="number" step="1" min="1" max="100" value="${usablePct}" class="filter-input" onchange="setParcelAssumption('use', this.value)"></label> <span class="pm-why">${acresPerLot} ac/lot is a planning assumption, not a verified local average or a zoning requirement. The usable % is applied once, in the two estimates below, not in the drawing.</span></div>
+`;
+    note.innerHTML = `      ${num(estA + ' by acreage', 'Acreage-based estimate', `${f2(acres)} ac × ${usablePct}% usable ÷ ${acresPerLot} ac per lot = ${f2(acres * u / acresPerLot)}, rounded down to ${estA}. Uses only your assumptions; ignores zoning.`)}
+      ${num(ring ? k + ' illustrated' : '—', 'Illustrative lot layout (yellow boxes)', ring ? `Boxes of ${acresPerLot} ac that fit completely inside the red boundary, using the whole outline (no usable % applied). Often fewer than the acreage estimate because the parcel's shape wastes room.` : `Not drawn: parcel boundary unavailable (${esc(par.err)}).`)}
+      ${num(estZ == null ? 'n/a' : estZ + ' by zoning minimum', 'Estimate using the zoning minimum', estZ == null ? (hasZone ? `Not calculated: ${esc(zn.zone)} does not give a minimum lot area in this tool. Check the approved plan or ordinance.` : `Not calculated: zoning unavailable (${esc(zn && zn.err || 'lookup failed')}).`) : `${f2(acres)} ac × ${usablePct}% usable ÷ ${f2(minLot / 43560)} ac (${esc(zn.zone)} minimum) = ${f2(acres * u / (minLot / 43560))}, rounded down to ${estZ}. Preliminary estimate based on minimum lot area; other requirements may reduce the count.`)}
+      <div class="pm-why" style="margin-top:6px;">The three numbers differ because each answers a different question: your assumed lot size, what fits the outline, and the minimum lot area in the zoning code. None of them is an approved lot count.</div>
+      <div style="margin-top:8px;"><b>Illustrative lot layout.</b> A rectangle that fits inside the boundary does not establish a buildable or approvable lot.</div>
+      <div><b>Sources:</b> parcel boundary &amp; jurisdiction: ${ring ? link(GIS_PARCELS, 'Maricopa County Assessor GIS') + ', retrieved ' + par.fetched : '<b>unavailable</b> (' + esc(par.err) + ')'}. Zoning: ${hasZone ? link(zn.url, zn.name) + ', retrieved ' + esc(zn.date) : '<b>unavailable</b> (' + esc(zn && zn.err || 'lookup failed') + ')'}. Lot counts are estimates.</div>
+      <div class="pm-verify"><b>Still needs verification</b> (<i>not checked</i> does not mean <i>no restriction</i>):
+        <ul><li>Access and street frontage — <i>not checked</i></li><li>Setbacks and lot-shape rules — <i>not checked</i></li><li>Drainage and washes — <i>not checked</i> (FEMA mapped floodplain: ${lead.inFloodplain ? 'inside' : 'outside'}, per the daily scan)</li><li>Terrain and slope — <i>not checked</i></li><li>Water, sewer and electric utilities — <i>not checked</i></li><li>Easements and HOA/CC&amp;Rs — <i>not checked</i></li><li>Applicable subdivision / lot-split requirements — <i>not checked</i>; not in the public map data</li></ul></div>
+      <div>View is flat 2D satellite. Tilted 3D imagery is not available in this map; ${link('https://www.google.com/maps/@' + lead.lat + ',' + lead.lng + ',19z/data=!3m1!1e3', 'open it in Google Maps')} for that.</div>`;
+    box._fit = () => { if(outline) map.fitBounds(outline.getBounds(), { padding: [24, 24], maxZoom: 19 }); };
+    box._fit();
   };
+  map.invalidateSize();
   box._redraw();
+}
+var prefetchToken = 0;
+// load comps, parcel boundary and zoning for the top of the list in the background, so a card is already filled in when it is opened
+async function prefetchDetails(list){
+  const tok = ++prefetchToken;
+  for(const l of list.slice(0, 40)){
+    if(tok !== prefetchToken) return;
+    if(l.lat == null || l.lng == null) continue;
+    await Promise.all([fetchParcel(l).catch(() => {}), fetchZone(l).catch(() => {}), (isCommLead(l) ? fetchCommComps : fetchHouseComps)(l).catch(() => {})]);
+    const box = document.getElementById('house-' + l.apn);
+    if(box && tok === prefetchToken) box.innerHTML = isCommLead(l) ? commCompsHtml(l) : houseCompsHtml(l);
+  }
 }
 function toggleLead(idx){
   const el = document.getElementById(`detail-${idx}`);
@@ -1428,6 +1465,7 @@ function applyFilters(){
   Object.keys(calcStates).forEach(k => delete calcStates[k]);  // keyed by list position, which just changed
   renderLeads(listFiltered);
   renderMaps(base);
+  prefetchDetails(listFiltered);
 }
 document.getElementById('typeFilter').addEventListener('change', applyFilters);
 document.getElementById('landUseFilter').addEventListener('change', applyFilters);
@@ -2114,7 +2152,7 @@ function initMap(containerId){
   const flood = new FemaFlood('https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/export', {
     maxZoom: 19, opacity: 0.5, attribution: 'Flood zones: FEMA NFHL'
   }).addTo(map);
-  L.control.layers({ 'Satellite': satellite, '2D map': streets }, { 'FEMA flood zones': flood }).addTo(map);
+  L.control.layers({ 'Satellite': satellite, 'Street map': streets }, { 'FEMA flood zones': flood }).addTo(map);
   return { map, markers: [] };
 }
 function renderMapInstance(inst, leads){
