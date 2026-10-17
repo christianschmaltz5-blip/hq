@@ -1440,6 +1440,9 @@ async function initParcelMap(lead, idx){
   const lg = L.control({ position: 'bottomleft' });
   lg.onAdd = () => { const d = L.DomUtil.create('div', 'pm-legend'); d.innerHTML = '<span style="color:#d93025;font-weight:700;">▬</span> parcel boundary (county)<br><span style="color:#00bcd4;font-weight:700;">▬</span> road frontage<br><span style="color:#ffd400;font-weight:700;">▬</span> proposed lot · <span style="color:#9aa3b2;font-weight:700;">▬</span> remaining land<br><span style="color:#f57c00;font-weight:700;">▬</span> access stem · <span style="color:#4f8cff;font-weight:700;">▬</span> building envelope<br><span style="color:#c2185b;font-weight:700;">▬</span> building · ● drag a handle to move a line'; return d; };
   lg.addTo(map);
+  const ad = L.control({ position: 'topright' });
+  ad.onAdd = () => { const d = L.DomUtil.create('div', 'pm-legend'); d.style.fontWeight = '700'; d.textContent = String(lead.address || '').replace(/\s{2,}/g, ', ') || lead.apn; return d; };
+  ad.addTo(map);
   const [par, zn] = await Promise.all([fetchParcel(lead).catch(e => ({ err: e.message })), fetchZone(lead).catch(e => ({ err: e.message }))]);
   const ring = par.ring, hasZone = zn && zn.zone;
   const site = ring ? await fetchSite(lead, ring).catch(e => ({ bldgs: [], bldgErr: e.message, roads: [], roadErr: e.message })) : null;
