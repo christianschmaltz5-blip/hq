@@ -132,8 +132,9 @@ REFERENCE_COST_PER_LOT_AZ = 65000
 # Maricopa's data has no separate land-vs-improvement value split to use
 # instead. Confirmed live 2026-09-17 e.g. 12608 N 24th St: 850sf house on
 # a 16,993sf lot (FAR 0.05), held in a living trust since 1955-era build.
-MIN_IMPROVED_LAND_SIZE_SF = 14000   # ~0.32 acre — meaningfully oversized vs
+MIN_IMPROVED_LAND_SIZE_SF = 21780   # 0.5 acre — meaningfully oversized vs
                                      # a standard 6-8k sf platted lot
+MIN_COMP_PRICE = 700_000            # underused leads need >=2 nearby comps (vacant-land sales) at/above this
 MAX_UNDERUSE_FAR = 0.14             # structure occupies <14% of the lot
 MAX_IMPROVED_ENRICHED = 50000        # effectively unlimited, see MAX_PARCELS_ENRICHED
 COMPS_MAX_LEADS = 300               # comp a pool 2x the shown size (per category); comps then decide who makes the top 150
@@ -841,9 +842,10 @@ def main():
                 print(f"  comped {i+1}/{len(comp_targets)}...")
     apply_comps_adjustment(comp_targets)
     # Re-rank on comps-adjusted score and cut to the shown size per category.
+    strong_comps = lambda l: l["parcelStatus"] != "improved" or sum((c.get("soldPrice") or 0) >= MIN_COMP_PRICE for c in l.get("comps") or []) >= 2
     by_score = lambda ls: sorted(ls, key=lambda r: r["score"], reverse=True)[:LEADS_SHOWN_PER_CATEGORY]
     top_leads = by_score([l for l in comp_targets if l["parcelStatus"] == "vacant"]) \
-              + by_score([l for l in comp_targets if l["parcelStatus"] == "improved"])
+              + by_score([l for l in comp_targets if l["parcelStatus"] == "improved" and strong_comps(l)])
     top_leads.sort(key=lambda r: r["score"], reverse=True)
 
     from offer import attach_new_build_values  # "Max Offer" section data (sell-to-builder model)
@@ -894,7 +896,7 @@ def main():
         l["lastSeen"] = today
         l["peakScore"] = max(l["score"], old.get("peakScore", 0))
     kept = [dict(l, isNew=False, stale=True) for a, l in prev_leads.items()
-            if a not in seen_now and l.get("score", 0) >= HOT_SCORE]
+            if a not in seen_now and l.get("score", 0) >= HOT_SCORE and strong_comps(l)]
     top_leads = top_leads + kept
     print(f"  carried over {len(kept)} hot leads (score >= {HOT_SCORE}) not in today's pull")
 

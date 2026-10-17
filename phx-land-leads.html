@@ -1125,7 +1125,7 @@ function leadCard(lead, idx){
     <div class="lead-head" onclick="toggleLead(${idx})">
       <div>
         <div class="lead-addr">${newBadge} ${statusBadge} ${condBadge} ${statusChip(lead)} <span id="notebadge-${idx}" class="reason-chip" title="You have a note on this lead" style="${loadNotes()[lead.apn] ? '' : 'display:none;'}">📝 Note</span> ${staleBadge} ${contactedBadge} <span id="calcbadge-${idx}" class="reason-chip" style="${loadCalcs()[lead.apn] ? '' : 'display:none;'}font-weight:700;">💾 ${esc((loadCalcs()[lead.apn] || {}).summary || '')}</span> ${esc(lead.address)||'(no address on file)'}</div>
-        <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'}${lead.landUseClass ? ` (${lead.landUseClass === 'commercial' ? '🏢 commercial' : lead.landUseClass === 'industrial' ? '🏭 industrial' : '🏠 residential'})` : ''} · Owner: ${esc(lead.ownerName)||'—'} · ${esc(dealTypeLabel)}</div>
+        <div class="lead-sub">APN ${esc(lead.apn)} · ${esc(lead.landAcres)} ac · Zoned ${esc(lead.currentZoning)||'—'}${lead.landUseClass ? ` (county use: ${lead.landUseClass === 'commercial' ? '🏢 commercial' : lead.landUseClass === 'industrial' ? '🏭 industrial' : '🏠 residential'}${lead.landUseClass === 'residential' && /^(C-?\d|CP|CMX|PCD|NC|A-[12]|IND)/i.test((lead.currentZoning || '').trim()) ? ' ⚠ zoning is commercial' : ''})` : ''} · Owner: ${esc(lead.ownerName)||'—'} · ${esc(dealTypeLabel)}</div>
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;" onclick="event.stopPropagation()">
         <div class="lead-score">${isHot?'<span class="hot-flag">🔥</span>':''}<span class="score-badge ${scoreClass(lead.score)}">${lead.score}</span> ${xBtn(lead.apn)}</div>
