@@ -10,7 +10,7 @@ from comps import _esri_query, _haversine_mi, _parse_num as _pn
 
 _parse_num = lambda x: _pn(x) or 0
 
-A = dict(sf=3800, hard=(300, 350), soft=0.08, site=50_000, fin=0.07, sell=0.03,   # ponytail: mirrors the numbers typed into the Custom Home Calculator
+A = dict(sf=3800, hard=(275, 325), soft=0.08, site=10_000, fin=0.07, sell=0.03,   # ponytail: mirrors the numbers typed into the Custom Home Calculator
          split_cost=25_000, haircut=0.8, min_lot=14_375, good=0.10, maybe=0.05)
 
 
@@ -52,8 +52,8 @@ def split_n(l):
 
 def underwrite(l):
     v = l.get("valuation") or {}
-    if l.get("parcelStatus") != "vacant" or l.get("landUseClass") != "residential":
-        return None   # only vacant residential lots for now; commercial and teardowns are left alone
+    if l.get("landUseClass") != "residential":
+        return None   # residential only (vacant or teardown); commercial is left alone
     nb = l["houseComps"] = house_comps(l)   # sale price comes from nearby house sales, not new-build-only comps
     if not nb:
         return None
@@ -74,7 +74,7 @@ def underwrite(l):
             if not best or profit > best["profit"]:
                 best = dict(n=n, finished=finished, profit=profit, margin=profit / finished)
         return best
-    cheap, best = run(A["hard"][0]), run(A["hard"][1])   # best = the pricey $350/sf case (conservative)
+    cheap, best = run(A["hard"][0]), run(A["hard"][1])   # best = the pricey $325/sf case (conservative)
     risk = ((0 if land_ok else 2) + (nb["n"] < 4) + (nb.get("radiusMi", 0) >= 3) + 2 * bool(l.get("inFloodplain"))
             + ((1 if known else 2) if best["n"] > 1 else 0))
     risk = "Low" if risk <= 1 else "Medium" if risk <= 3 else "High"

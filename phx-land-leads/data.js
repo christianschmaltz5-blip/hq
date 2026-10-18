@@ -524,14 +524,14 @@ window.PHX_LAND_LEADS = {
         "radiusMi": 1
       },
       "verdict": {
-        "label": "Pass",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 208000,
         "finished": 1816400,
-        "profit": -51100,
-        "marginPct": -3,
-        "marginPctAt300": 9,
-        "profitAt300": 168464,
+        "profit": 101482,
+        "marginPct": 6,
+        "marginPctAt300": 8,
+        "profitAt300": 462088,
         "salePsf": 478,
         "risk": "Medium"
       }
@@ -617,10 +617,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 301100,
         "finished": 1200800,
-        "profit": -747849,
-        "marginPct": -62,
-        "marginPctAt300": -44,
-        "profitAt300": -528285,
+        "profit": -595267,
+        "marginPct": -50,
+        "marginPctAt300": -31,
+        "profitAt300": -375703,
         "salePsf": 316,
         "risk": "Medium"
       }
@@ -706,10 +706,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 295100,
         "finished": 1508600,
-        "profit": -442863,
-        "marginPct": -29,
-        "marginPctAt300": -15,
-        "profitAt300": -223299,
+        "profit": -290281,
+        "marginPct": -19,
+        "marginPctAt300": -5,
+        "profitAt300": -70717,
         "salePsf": 397,
         "risk": "Medium"
       }
@@ -1021,10 +1021,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 225600,
         "finished": 1349000,
-        "profit": -523310,
-        "marginPct": -39,
-        "marginPctAt300": -23,
-        "profitAt300": -303746,
+        "profit": -370728,
+        "marginPct": -27,
+        "marginPctAt300": -11,
+        "profitAt300": -151164,
         "salePsf": 355,
         "risk": "Medium"
       }
@@ -1393,10 +1393,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1003600,
         "finished": 1478200,
-        "profit": -1230446,
-        "marginPct": -83,
-        "marginPctAt300": -68,
-        "profitAt300": -1010882,
+        "profit": -1077864,
+        "marginPct": -73,
+        "marginPctAt300": -58,
+        "profitAt300": -858300,
         "salePsf": 389,
         "risk": "Medium"
       }
@@ -1486,10 +1486,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 545100,
         "finished": 839800,
-        "profit": -1359099,
-        "marginPct": -162,
-        "marginPctAt300": -136,
-        "profitAt300": -1139535,
+        "profit": -1206517,
+        "marginPct": -144,
+        "marginPctAt300": -118,
+        "profitAt300": -986953,
         "salePsf": 221,
         "risk": "Medium"
       }
@@ -1575,10 +1575,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 365100,
         "finished": 1276800,
-        "profit": -742609,
-        "marginPct": -58,
-        "marginPctAt300": -41,
-        "profitAt300": -523045,
+        "profit": -590027,
+        "marginPct": -46,
+        "marginPctAt300": -29,
+        "profitAt300": -370463,
         "salePsf": 336,
         "risk": "Medium"
       }
@@ -1732,10 +1732,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 157600,
         "finished": 1478200,
-        "profit": -325226,
-        "marginPct": -22,
-        "marginPctAt300": -7,
-        "profitAt300": -105662,
+        "profit": -172644,
+        "marginPct": -12,
+        "marginPctAt300": 3,
+        "profitAt300": 46920,
         "salePsf": 389,
         "risk": "Medium"
       }
@@ -1820,10 +1820,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 4294600,
         "finished": 1212200,
-        "profit": -5009836,
-        "marginPct": -413,
-        "marginPctAt300": -395,
-        "profitAt300": -4790272,
+        "profit": -4857254,
+        "marginPct": -401,
+        "marginPctAt300": -383,
+        "profitAt300": -4637690,
         "salePsf": 319,
         "risk": "Medium"
       }
@@ -1904,14 +1904,14 @@ window.PHX_LAND_LEADS = {
         "radiusMi": 1
       },
       "verdict": {
-        "label": "Pass",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 294900,
         "finished": 1816400,
-        "profit": -144083,
-        "marginPct": -8,
-        "marginPctAt300": 4,
-        "profitAt300": 75481,
+        "profit": 8499,
+        "marginPct": 0,
+        "marginPctAt300": 13,
+        "profitAt300": 228063,
         "salePsf": 478,
         "risk": "Medium"
       }
@@ -2065,10 +2065,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 214000,
         "finished": 1508600,
-        "profit": -356086,
-        "marginPct": -24,
-        "marginPctAt300": -9,
-        "profitAt300": -136522,
+        "profit": -203504,
+        "marginPct": -13,
+        "marginPctAt300": 1,
+        "profitAt300": 16060,
         "salePsf": 397,
         "risk": "Medium"
       }
@@ -2152,10 +2152,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 296700,
         "finished": 1155200,
-        "profit": -787373,
-        "marginPct": -68,
-        "marginPctAt300": -49,
-        "profitAt300": -567809,
+        "profit": -634791,
+        "marginPct": -55,
+        "marginPctAt300": -36,
+        "profitAt300": -415227,
         "salePsf": 304,
         "risk": "Medium"
       }
@@ -2237,14 +2237,14 @@ window.PHX_LAND_LEADS = {
         "radiusMi": 1
       },
       "verdict": {
-        "label": "Pass",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 297200,
         "finished": 1816400,
-        "profit": -146544,
-        "marginPct": -8,
-        "marginPctAt300": 4,
-        "profitAt300": 73020,
+        "profit": 6038,
+        "marginPct": 0,
+        "marginPctAt300": 12,
+        "profitAt300": 225602,
         "salePsf": 478,
         "risk": "Medium"
       }
@@ -2330,10 +2330,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 395300,
         "finished": 1816400,
-        "profit": -251511,
-        "marginPct": -14,
-        "marginPctAt300": -2,
-        "profitAt300": -31947,
+        "profit": -98929,
+        "marginPct": -5,
+        "marginPctAt300": 7,
+        "profitAt300": 120635,
         "salePsf": 478,
         "risk": "Medium"
       }
@@ -2419,10 +2419,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 357200,
         "finished": 1816400,
-        "profit": -210744,
-        "marginPct": -12,
-        "marginPctAt300": 0,
-        "profitAt300": 8820,
+        "profit": -58162,
+        "marginPct": -3,
+        "marginPctAt300": 9,
+        "profitAt300": 161402,
         "salePsf": 478,
         "risk": "Medium"
       }
@@ -2650,10 +2650,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 178700,
         "finished": 980400,
-        "profit": -830669,
-        "marginPct": -85,
-        "marginPctAt300": -62,
-        "profitAt300": -611105,
+        "profit": -678087,
+        "marginPct": -69,
+        "marginPctAt300": -47,
+        "profitAt300": -458523,
         "salePsf": 258,
         "risk": "Medium"
       }
@@ -2738,10 +2738,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 177100,
         "finished": 870200,
-        "profit": -935851,
-        "marginPct": -108,
-        "marginPctAt300": -82,
-        "profitAt300": -716287,
+        "profit": -783269,
+        "marginPct": -90,
+        "marginPctAt300": -65,
+        "profitAt300": -563705,
         "salePsf": 229,
         "risk": "Medium"
       }
@@ -2895,10 +2895,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 197700,
         "finished": 870200,
-        "profit": -957893,
-        "marginPct": -110,
-        "marginPctAt300": -85,
-        "profitAt300": -738329,
+        "profit": -805311,
+        "marginPct": -93,
+        "marginPctAt300": -67,
+        "profitAt300": -585747,
         "salePsf": 229,
         "risk": "Medium"
       }
@@ -2976,14 +2976,14 @@ window.PHX_LAND_LEADS = {
         "radiusMi": 1
       },
       "verdict": {
-        "label": "Pass",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 195600,
         "finished": 1656800,
-        "profit": -192644,
-        "marginPct": -12,
-        "marginPctAt300": 2,
-        "profitAt300": 26920,
+        "profit": -40062,
+        "marginPct": -2,
+        "marginPctAt300": 11,
+        "profitAt300": 179502,
         "salePsf": 436,
         "risk": "Medium"
       }
@@ -3072,10 +3072,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 282300,
         "finished": 1037400,
-        "profit": -886231,
-        "marginPct": -85,
-        "marginPctAt300": -64,
-        "profitAt300": -666667,
+        "profit": -733649,
+        "marginPct": -71,
+        "marginPctAt300": -50,
+        "profitAt300": -514085,
         "salePsf": 273,
         "risk": "Medium"
       }
@@ -3299,10 +3299,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 116000,
         "finished": 1238800,
-        "profit": -512932,
-        "marginPct": -41,
-        "marginPctAt300": -24,
-        "profitAt300": -293368,
+        "profit": -360350,
+        "marginPct": -29,
+        "marginPctAt300": -11,
+        "profitAt300": -140786,
         "salePsf": 326,
         "risk": "Medium"
       }
@@ -3388,10 +3388,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 260900,
         "finished": 1679600,
-        "profit": -240399,
-        "marginPct": -14,
-        "marginPctAt300": -1,
-        "profitAt300": -20835,
+        "profit": -87817,
+        "marginPct": -5,
+        "marginPctAt300": 8,
+        "profitAt300": 131747,
         "salePsf": 442,
         "risk": "Medium"
       }
@@ -3477,10 +3477,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 244600,
         "finished": 1295800,
-        "profit": -595244,
-        "marginPct": -46,
-        "marginPctAt300": -29,
-        "profitAt300": -375680,
+        "profit": -442662,
+        "marginPct": -34,
+        "marginPctAt300": -17,
+        "profitAt300": -223098,
         "salePsf": 341,
         "risk": "Medium"
       }
@@ -3635,10 +3635,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 393000,
         "finished": 1269200,
-        "profit": -779834,
-        "marginPct": -61,
-        "marginPctAt300": -44,
-        "profitAt300": -560270,
+        "profit": -627252,
+        "marginPct": -49,
+        "marginPctAt300": -32,
+        "profitAt300": -407688,
         "salePsf": 334,
         "risk": "Medium"
       }
@@ -3724,10 +3724,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 2022200,
         "finished": 1254000,
-        "profit": -2537822,
-        "marginPct": -202,
-        "marginPctAt300": -185,
-        "profitAt300": -2318258,
+        "profit": -2385240,
+        "marginPct": -190,
+        "marginPctAt300": -173,
+        "profitAt300": -2165676,
         "salePsf": 330,
         "risk": "Medium"
       }
@@ -4171,10 +4171,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 117700,
         "finished": 912000,
-        "profit": -831747,
-        "marginPct": -91,
-        "marginPctAt300": -67,
-        "profitAt300": -612183,
+        "profit": -679165,
+        "marginPct": -74,
+        "marginPctAt300": -50,
+        "profitAt300": -459601,
         "salePsf": 240,
         "risk": "Medium"
       }
@@ -4259,10 +4259,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 302200,
         "finished": 912000,
-        "profit": -1029162,
-        "marginPct": -113,
-        "marginPctAt300": -89,
-        "profitAt300": -809598,
+        "profit": -876580,
+        "marginPct": -96,
+        "marginPctAt300": -72,
+        "profitAt300": -657016,
         "salePsf": 240,
         "risk": "Medium"
       }
@@ -4347,10 +4347,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 304700,
         "finished": 1098200,
-        "profit": -851223,
-        "marginPct": -78,
-        "marginPctAt300": -58,
-        "profitAt300": -631659,
+        "profit": -698641,
+        "marginPct": -64,
+        "marginPctAt300": -44,
+        "profitAt300": -479077,
         "salePsf": 289,
         "risk": "Medium"
       }
@@ -4435,10 +4435,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1114400,
         "finished": 1231200,
-        "profit": -1588592,
-        "marginPct": -129,
-        "marginPctAt300": -111,
-        "profitAt300": -1369028,
+        "profit": -1436010,
+        "marginPct": -117,
+        "marginPctAt300": -99,
+        "profitAt300": -1216446,
         "salePsf": 324,
         "risk": "Medium"
       }
@@ -4521,10 +4521,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1218000,
         "finished": 2397800,
-        "profit": -567842,
-        "marginPct": -24,
-        "marginPctAt300": -15,
-        "profitAt300": -348278,
+        "profit": -415260,
+        "marginPct": -17,
+        "marginPctAt300": -8,
+        "profitAt300": -195696,
         "salePsf": 631,
         "risk": "Medium"
       }
@@ -4608,10 +4608,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 232000,
         "finished": 1295800,
-        "profit": -581762,
-        "marginPct": -45,
-        "marginPctAt300": -28,
-        "profitAt300": -362198,
+        "profit": -429180,
+        "marginPct": -33,
+        "marginPctAt300": -16,
+        "profitAt300": -209616,
         "salePsf": 341,
         "risk": "Medium"
       }
@@ -4694,10 +4694,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 229900,
         "finished": 1212200,
-        "profit": -660607,
-        "marginPct": -54,
-        "marginPctAt300": -36,
-        "profitAt300": -441043,
+        "profit": -508025,
+        "marginPct": -42,
+        "marginPctAt300": -24,
+        "profitAt300": -288461,
         "salePsf": 319,
         "risk": "Medium"
       }
@@ -4781,10 +4781,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 207200,
         "finished": 1333800,
-        "profit": -518366,
-        "marginPct": -39,
-        "marginPctAt300": -22,
-        "profitAt300": -298802,
+        "profit": -365784,
+        "marginPct": -27,
+        "marginPctAt300": -11,
+        "profitAt300": -146220,
         "salePsf": 351,
         "risk": "Medium"
       }
@@ -4870,10 +4870,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 119200,
         "finished": 912000,
-        "profit": -833352,
-        "marginPct": -91,
-        "marginPctAt300": -67,
-        "profitAt300": -613788,
+        "profit": -680770,
+        "marginPct": -75,
+        "marginPctAt300": -51,
+        "profitAt300": -461206,
         "salePsf": 240,
         "risk": "Medium"
       }
@@ -4959,10 +4959,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 215500,
         "finished": 912000,
-        "profit": -936393,
-        "marginPct": -103,
-        "marginPctAt300": -79,
-        "profitAt300": -716829,
+        "profit": -783811,
+        "marginPct": -86,
+        "marginPctAt300": -62,
+        "profitAt300": -564247,
         "salePsf": 240,
         "risk": "Medium"
       }
@@ -5047,10 +5047,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 309100,
         "finished": 1250200,
-        "profit": -708491,
-        "marginPct": -57,
-        "marginPctAt300": -39,
-        "profitAt300": -488927,
+        "profit": -555909,
+        "marginPct": -44,
+        "marginPctAt300": -27,
+        "profitAt300": -336345,
         "salePsf": 329,
         "risk": "Medium"
       }
@@ -5134,10 +5134,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 231800,
         "finished": 1649200,
-        "profit": -238750,
-        "marginPct": -14,
-        "marginPctAt300": -1,
-        "profitAt300": -19186,
+        "profit": -86168,
+        "marginPct": -5,
+        "marginPctAt300": 8,
+        "profitAt300": 133396,
         "salePsf": 434,
         "risk": "Medium"
       }
@@ -5221,10 +5221,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 403600,
         "finished": 1360400,
-        "profit": -702712,
-        "marginPct": -52,
-        "marginPctAt300": -36,
-        "profitAt300": -483148,
+        "profit": -550130,
+        "marginPct": -40,
+        "marginPctAt300": -24,
+        "profitAt300": -330566,
         "salePsf": 358,
         "risk": "Medium"
       }
@@ -5308,10 +5308,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 263700,
         "finished": 1212200,
-        "profit": -696773,
-        "marginPct": -57,
-        "marginPctAt300": -39,
-        "profitAt300": -477209,
+        "profit": -544191,
+        "marginPct": -45,
+        "marginPctAt300": -27,
+        "profitAt300": -324627,
         "salePsf": 319,
         "risk": "Medium"
       }
@@ -5461,10 +5461,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 158300,
         "finished": 1520000,
-        "profit": -285429,
-        "marginPct": -19,
-        "marginPctAt300": -4,
-        "profitAt300": -65865,
+        "profit": -132847,
+        "marginPct": -9,
+        "marginPctAt300": 6,
+        "profitAt300": 86717,
         "salePsf": 400,
         "risk": "Medium"
       }
@@ -5548,10 +5548,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1317200,
         "finished": 1523800,
-        "profit": -1521766,
-        "marginPct": -100,
-        "marginPctAt300": -85,
-        "profitAt300": -1302202,
+        "profit": -1369184,
+        "marginPct": -90,
+        "marginPctAt300": -75,
+        "profitAt300": -1149620,
         "salePsf": 401,
         "risk": "Medium"
       }
@@ -5635,10 +5635,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1356100,
         "finished": 1159000,
-        "profit": -1917245,
-        "marginPct": -165,
-        "marginPctAt300": -146,
-        "profitAt300": -1697681,
+        "profit": -1764663,
+        "marginPct": -152,
+        "marginPctAt300": -133,
+        "profitAt300": -1545099,
         "salePsf": 305,
         "risk": "Medium"
       }
@@ -5722,10 +5722,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 409500,
         "finished": 1554200,
-        "profit": -521039,
-        "marginPct": -34,
-        "marginPctAt300": -19,
-        "profitAt300": -301475,
+        "profit": -368457,
+        "marginPct": -24,
+        "marginPctAt300": -10,
+        "profitAt300": -148893,
         "salePsf": 409,
         "risk": "Medium"
       }
@@ -5810,10 +5810,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 411500,
         "finished": 1679600,
-        "profit": -401541,
-        "marginPct": -24,
-        "marginPctAt300": -11,
-        "profitAt300": -181977,
+        "profit": -248959,
+        "marginPct": -15,
+        "marginPctAt300": -2,
+        "profitAt300": -29395,
         "salePsf": 442,
         "risk": "Medium"
       }
@@ -5971,10 +5971,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 121800,
         "finished": 1238800,
-        "profit": -519138,
-        "marginPct": -42,
-        "marginPctAt300": -24,
-        "profitAt300": -299574,
+        "profit": -366556,
+        "marginPct": -30,
+        "marginPctAt300": -12,
+        "profitAt300": -146992,
         "salePsf": 326,
         "risk": "Medium"
       }
@@ -6056,10 +6056,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 124600,
         "finished": 1284400,
-        "profit": -477902,
-        "marginPct": -37,
-        "marginPctAt300": -20,
-        "profitAt300": -258338,
+        "profit": -325320,
+        "marginPct": -25,
+        "marginPctAt300": -8,
+        "profitAt300": -105756,
         "salePsf": 338,
         "risk": "Medium"
       }
@@ -6144,10 +6144,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 258400,
         "finished": 1615000,
-        "profit": -300386,
-        "marginPct": -19,
-        "marginPctAt300": -5,
-        "profitAt300": -80822,
+        "profit": -147804,
+        "marginPct": -9,
+        "marginPctAt300": 4,
+        "profitAt300": 71760,
         "salePsf": 425,
         "risk": "Medium"
       }
@@ -6232,10 +6232,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 237700,
         "finished": 1649200,
-        "profit": -245063,
-        "marginPct": -15,
-        "marginPctAt300": -2,
-        "profitAt300": -25499,
+        "profit": -92481,
+        "marginPct": -6,
+        "marginPctAt300": 8,
+        "profitAt300": 127083,
         "salePsf": 434,
         "risk": "Medium"
       }
@@ -6315,14 +6315,14 @@ window.PHX_LAND_LEADS = {
         "radiusMi": 1
       },
       "verdict": {
-        "label": "Pass",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 329000,
         "finished": 1816400,
-        "profit": -180570,
-        "marginPct": -10,
-        "marginPctAt300": 2,
-        "profitAt300": 38994,
+        "profit": -27988,
+        "marginPct": -2,
+        "marginPctAt300": 11,
+        "profitAt300": 191576,
         "salePsf": 478,
         "risk": "Medium"
       }
@@ -6403,14 +6403,14 @@ window.PHX_LAND_LEADS = {
         "radiusMi": 1
       },
       "verdict": {
-        "label": "Pass",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 250800,
         "finished": 1816400,
-        "profit": -96896,
-        "marginPct": -5,
-        "marginPctAt300": 7,
-        "profitAt300": 122668,
+        "profit": 55686,
+        "marginPct": 3,
+        "marginPctAt300": 15,
+        "profitAt300": 275250,
         "salePsf": 478,
         "risk": "Medium"
       }
@@ -6490,14 +6490,14 @@ window.PHX_LAND_LEADS = {
         "radiusMi": 1
       },
       "verdict": {
-        "label": "Pass",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 256600,
         "finished": 1816400,
-        "profit": -103102,
-        "marginPct": -6,
-        "marginPctAt300": 6,
-        "profitAt300": 116462,
+        "profit": 49480,
+        "marginPct": 3,
+        "marginPctAt300": 15,
+        "profitAt300": 269044,
         "salePsf": 478,
         "risk": "Medium"
       }
@@ -6582,10 +6582,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 262500,
         "finished": 1212200,
-        "profit": -695489,
-        "marginPct": -57,
-        "marginPctAt300": -39,
-        "profitAt300": -475925,
+        "profit": -542907,
+        "marginPct": -45,
+        "marginPctAt300": -27,
+        "profitAt300": -323343,
         "salePsf": 319,
         "risk": "Medium"
       }
@@ -6670,10 +6670,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 262700,
         "finished": 1200800,
-        "profit": -706761,
-        "marginPct": -59,
-        "marginPctAt300": -41,
-        "profitAt300": -487197,
+        "profit": -554179,
+        "marginPct": -46,
+        "marginPctAt300": -28,
+        "profitAt300": -334615,
         "salePsf": 316,
         "risk": "Medium"
       }
@@ -6796,10 +6796,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 85300,
         "finished": 1223600,
-        "profit": -494827,
-        "marginPct": -40,
-        "marginPctAt300": -22,
-        "profitAt300": -275263,
+        "profit": -342245,
+        "marginPct": -28,
+        "marginPctAt300": -10,
+        "profitAt300": -122681,
         "salePsf": 322,
         "risk": "Medium"
       }
@@ -6922,10 +6922,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 61600,
         "finished": 1292000,
-        "profit": -403120,
-        "marginPct": -31,
-        "marginPctAt300": -14,
-        "profitAt300": -183556,
+        "profit": -250538,
+        "marginPct": -19,
+        "marginPctAt300": -2,
+        "profitAt300": -30974,
         "salePsf": 340,
         "risk": "Medium"
       }
@@ -7048,10 +7048,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 155000,
         "finished": 1520000,
-        "profit": -281898,
-        "marginPct": -19,
-        "marginPctAt300": -4,
-        "profitAt300": -62334,
+        "profit": -129316,
+        "marginPct": -9,
+        "marginPctAt300": 6,
+        "profitAt300": 90248,
         "salePsf": 400,
         "risk": "Medium"
       }
@@ -7175,10 +7175,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 262000,
         "finished": 1508600,
-        "profit": -407446,
-        "marginPct": -27,
-        "marginPctAt300": -12,
-        "profitAt300": -187882,
+        "profit": -254864,
+        "marginPct": -17,
+        "marginPctAt300": -2,
+        "profitAt300": -35300,
         "salePsf": 397,
         "risk": "Medium"
       }
@@ -7371,10 +7371,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1553600,
         "finished": 1094400,
-        "profit": -2191232,
-        "marginPct": -200,
-        "marginPctAt300": -180,
-        "profitAt300": -1971668,
+        "profit": -2038650,
+        "marginPct": -186,
+        "marginPctAt300": -166,
+        "profitAt300": -1819086,
         "salePsf": 288,
         "risk": "Medium"
       }
@@ -7498,10 +7498,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1455300,
         "finished": 1235000,
-        "profit": -1949669,
-        "marginPct": -158,
-        "marginPctAt300": -140,
-        "profitAt300": -1730105,
+        "profit": -1797087,
+        "marginPct": -146,
+        "marginPctAt300": -128,
+        "profitAt300": -1577523,
         "salePsf": 325,
         "risk": "Medium"
       }
@@ -7625,10 +7625,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 158900,
         "finished": 1197000,
-        "profit": -599381,
-        "marginPct": -50,
-        "marginPctAt300": -32,
-        "profitAt300": -379817,
+        "profit": -446799,
+        "marginPct": -37,
+        "marginPctAt300": -19,
+        "profitAt300": -227235,
         "salePsf": 315,
         "risk": "Medium"
       }
@@ -7752,10 +7752,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 399900,
         "finished": 1136200,
-        "profit": -916227,
-        "marginPct": -81,
-        "marginPctAt300": -61,
-        "profitAt300": -696663,
+        "profit": -763645,
+        "marginPct": -67,
+        "marginPctAt300": -48,
+        "profitAt300": -544081,
         "salePsf": 299,
         "risk": "Medium"
       }
@@ -7879,10 +7879,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 358900,
         "finished": 1360400,
-        "profit": -654883,
-        "marginPct": -48,
-        "marginPctAt300": -32,
-        "profitAt300": -435319,
+        "profit": -502301,
+        "marginPct": -37,
+        "marginPctAt300": -21,
+        "profitAt300": -282737,
         "salePsf": 358,
         "risk": "Medium"
       }
@@ -8006,10 +8006,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 457900,
         "finished": 1360400,
-        "profit": -760813,
-        "marginPct": -56,
-        "marginPctAt300": -40,
-        "profitAt300": -541249,
+        "profit": -608231,
+        "marginPct": -45,
+        "marginPctAt300": -29,
+        "profitAt300": -388667,
         "salePsf": 358,
         "risk": "Medium"
       }
@@ -8133,10 +8133,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 467300,
         "finished": 1250200,
-        "profit": -877765,
-        "marginPct": -70,
-        "marginPctAt300": -53,
-        "profitAt300": -658201,
+        "profit": -725183,
+        "marginPct": -58,
+        "marginPctAt300": -40,
+        "profitAt300": -505619,
         "salePsf": 329,
         "risk": "Medium"
       }
@@ -8260,10 +8260,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 390000,
         "finished": 1360400,
-        "profit": -688160,
-        "marginPct": -51,
-        "marginPctAt300": -34,
-        "profitAt300": -468596,
+        "profit": -535578,
+        "marginPct": -39,
+        "marginPctAt300": -23,
+        "profitAt300": -316014,
         "salePsf": 358,
         "risk": "Medium"
       }
@@ -8387,10 +8387,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 2154200,
         "finished": 1254000,
-        "profit": -2679062,
-        "marginPct": -214,
-        "marginPctAt300": -196,
-        "profitAt300": -2459498,
+        "profit": -2526480,
+        "marginPct": -201,
+        "marginPctAt300": -184,
+        "profitAt300": -2306916,
         "salePsf": 330,
         "risk": "Medium"
       }
@@ -8514,10 +8514,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 403000,
         "finished": 1360400,
-        "profit": -702070,
-        "marginPct": -52,
-        "marginPctAt300": -35,
-        "profitAt300": -482506,
+        "profit": -549488,
+        "marginPct": -40,
+        "marginPctAt300": -24,
+        "profitAt300": -329924,
         "salePsf": 358,
         "risk": "Medium"
       }
@@ -8848,10 +8848,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 173000,
         "finished": 1037400,
-        "profit": -769280,
-        "marginPct": -74,
-        "marginPctAt300": -53,
-        "profitAt300": -549716,
+        "profit": -616698,
+        "marginPct": -59,
+        "marginPctAt300": -38,
+        "profitAt300": -397134,
         "salePsf": 273,
         "risk": "Medium"
       }
@@ -8973,10 +8973,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 446100,
         "finished": 972800,
-        "profit": -1124159,
-        "marginPct": -116,
-        "marginPctAt300": -93,
-        "profitAt300": -904595,
+        "profit": -971577,
+        "marginPct": -100,
+        "marginPctAt300": -77,
+        "profitAt300": -752013,
         "salePsf": 256,
         "risk": "Medium"
       }
@@ -9168,10 +9168,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 381600,
         "finished": 1679600,
-        "profit": -369548,
-        "marginPct": -22,
-        "marginPctAt300": -9,
-        "profitAt300": -149984,
+        "profit": -216966,
+        "marginPct": -13,
+        "marginPctAt300": 0,
+        "profitAt300": 2598,
         "salePsf": 442,
         "risk": "Medium"
       }
@@ -9295,10 +9295,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 287500,
         "finished": 1238800,
-        "profit": -696437,
-        "marginPct": -56,
-        "marginPctAt300": -38,
-        "profitAt300": -476873,
+        "profit": -543855,
+        "marginPct": -44,
+        "marginPctAt300": -26,
+        "profitAt300": -324291,
         "salePsf": 326,
         "risk": "Medium"
       }
@@ -9421,10 +9421,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 266500,
         "finished": 1238800,
-        "profit": -673967,
-        "marginPct": -54,
-        "marginPctAt300": -37,
-        "profitAt300": -454403,
+        "profit": -521385,
+        "marginPct": -42,
+        "marginPctAt300": -24,
+        "profitAt300": -301821,
         "salePsf": 326,
         "risk": "Medium"
       }
@@ -9543,14 +9543,14 @@ window.PHX_LAND_LEADS = {
         "radiusMi": 1
       },
       "verdict": {
-        "label": "Pass",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 277700,
         "finished": 1816400,
-        "profit": -125679,
-        "marginPct": -7,
-        "marginPctAt300": 5,
-        "profitAt300": 93885,
+        "profit": 26903,
+        "marginPct": 1,
+        "marginPctAt300": 14,
+        "profitAt300": 246467,
         "salePsf": 478,
         "risk": "Medium"
       }
@@ -9673,10 +9673,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 231400,
         "finished": 1212200,
-        "profit": -662212,
-        "marginPct": -55,
-        "marginPctAt300": -37,
-        "profitAt300": -442648,
+        "profit": -509630,
+        "marginPct": -42,
+        "marginPctAt300": -24,
+        "profitAt300": -290066,
         "salePsf": 319,
         "risk": "Medium"
       }
@@ -9799,10 +9799,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 161100,
         "finished": 1520000,
-        "profit": -288425,
-        "marginPct": -19,
-        "marginPctAt300": -5,
-        "profitAt300": -68861,
+        "profit": -135843,
+        "marginPct": -9,
+        "marginPctAt300": 6,
+        "profitAt300": 83721,
         "salePsf": 400,
         "risk": "Medium"
       }
@@ -9925,10 +9925,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 160300,
         "finished": 1508600,
-        "profit": -298627,
-        "marginPct": -20,
-        "marginPctAt300": -5,
-        "profitAt300": -79063,
+        "profit": -146045,
+        "marginPct": -10,
+        "marginPctAt300": 5,
+        "profitAt300": 73519,
         "salePsf": 397,
         "risk": "Medium"
       }
@@ -10056,10 +10056,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 362900,
         "finished": 1136200,
-        "profit": -876637,
-        "marginPct": -77,
-        "marginPctAt300": -58,
-        "profitAt300": -657073,
+        "profit": -724055,
+        "marginPct": -64,
+        "marginPctAt300": -44,
+        "profitAt300": -504491,
         "salePsf": 299,
         "risk": "Medium"
       }
@@ -10183,10 +10183,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 296100,
         "finished": 1235000,
-        "profit": -709325,
-        "marginPct": -57,
-        "marginPctAt300": -40,
-        "profitAt300": -489761,
+        "profit": -556743,
+        "marginPct": -45,
+        "marginPctAt300": -27,
+        "profitAt300": -337179,
         "salePsf": 325,
         "risk": "Medium"
       }
@@ -10310,10 +10310,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 383600,
         "finished": 1094400,
-        "profit": -939332,
-        "marginPct": -86,
-        "marginPctAt300": -66,
-        "profitAt300": -719768,
+        "profit": -786750,
+        "marginPct": -72,
+        "marginPctAt300": -52,
+        "profitAt300": -567186,
         "salePsf": 288,
         "risk": "Medium"
       }
@@ -10437,10 +10437,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 448200,
         "finished": 1235000,
-        "profit": -872072,
-        "marginPct": -71,
-        "marginPctAt300": -53,
-        "profitAt300": -652508,
+        "profit": -719490,
+        "marginPct": -58,
+        "marginPctAt300": -40,
+        "profitAt300": -499926,
         "salePsf": 325,
         "risk": "Medium"
       }
@@ -10840,10 +10840,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 358900,
         "finished": 1360400,
-        "profit": -654883,
-        "marginPct": -48,
-        "marginPctAt300": -32,
-        "profitAt300": -435319,
+        "profit": -502301,
+        "marginPct": -37,
+        "marginPctAt300": -21,
+        "profitAt300": -282737,
         "salePsf": 358,
         "risk": "Medium"
       }
@@ -11036,10 +11036,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 409000,
         "finished": 1250200,
-        "profit": -815384,
-        "marginPct": -65,
-        "marginPctAt300": -48,
-        "profitAt300": -595820,
+        "profit": -662802,
+        "marginPct": -53,
+        "marginPctAt300": -35,
+        "profitAt300": -443238,
         "salePsf": 329,
         "risk": "Medium"
       }
@@ -11167,10 +11167,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 167300,
         "finished": 1155200,
-        "profit": -648915,
-        "marginPct": -56,
-        "marginPctAt300": -37,
-        "profitAt300": -429351,
+        "profit": -496333,
+        "marginPct": -43,
+        "marginPctAt300": -24,
+        "profitAt300": -276769,
         "salePsf": 304,
         "risk": "Medium"
       }
@@ -11294,10 +11294,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 456800,
         "finished": 1554200,
-        "profit": -571650,
-        "marginPct": -37,
-        "marginPctAt300": -23,
-        "profitAt300": -352086,
+        "profit": -419068,
+        "marginPct": -27,
+        "marginPctAt300": -13,
+        "profitAt300": -199504,
         "salePsf": 409,
         "risk": "Medium"
       }
@@ -11425,10 +11425,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 224300,
         "finished": 1155200,
-        "profit": -709905,
-        "marginPct": -61,
-        "marginPctAt300": -42,
-        "profitAt300": -490341,
+        "profit": -557323,
+        "marginPct": -48,
+        "marginPctAt300": -29,
+        "profitAt300": -337759,
         "salePsf": 304,
         "risk": "Medium"
       }
@@ -11684,14 +11684,14 @@ window.PHX_LAND_LEADS = {
         "radiusMi": 1
       },
       "verdict": {
-        "label": "Pass",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 168400,
         "finished": 1615000,
-        "profit": -204086,
-        "marginPct": -13,
-        "marginPctAt300": 1,
-        "profitAt300": 15478,
+        "profit": -51504,
+        "marginPct": -3,
+        "marginPctAt300": 10,
+        "profitAt300": 168060,
         "salePsf": 425,
         "risk": "Medium"
       }
@@ -11813,10 +11813,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 209800,
         "finished": 1018400,
-        "profit": -827086,
-        "marginPct": -81,
-        "marginPctAt300": -60,
-        "profitAt300": -607522,
+        "profit": -674504,
+        "marginPct": -66,
+        "marginPctAt300": -45,
+        "profitAt300": -454940,
         "salePsf": 268,
         "risk": "Medium"
       }
@@ -11938,10 +11938,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 228800,
         "finished": 1649200,
-        "profit": -235540,
-        "marginPct": -14,
-        "marginPctAt300": -1,
-        "profitAt300": -15976,
+        "profit": -82958,
+        "marginPct": -5,
+        "marginPctAt300": 8,
+        "profitAt300": 136606,
         "salePsf": 434,
         "risk": "Medium"
       }
@@ -12057,10 +12057,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 291600,
         "finished": 1212200,
-        "profit": -726626,
-        "marginPct": -60,
-        "marginPctAt300": -42,
-        "profitAt300": -507062,
+        "profit": -574044,
+        "marginPct": -47,
+        "marginPctAt300": -29,
+        "profitAt300": -354480,
         "salePsf": 319,
         "risk": "Medium"
       }
@@ -12179,10 +12179,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 124700,
         "finished": 1527600,
-        "profit": -242105,
-        "marginPct": -16,
-        "marginPctAt300": -1,
-        "profitAt300": -22541,
+        "profit": -89523,
+        "marginPct": -6,
+        "marginPctAt300": 9,
+        "profitAt300": 130041,
         "salePsf": 402,
         "risk": "Medium"
       }
@@ -12304,10 +12304,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 245300,
         "finished": 1679600,
-        "profit": -223707,
-        "marginPct": -13,
-        "marginPctAt300": 0,
-        "profitAt300": -4143,
+        "profit": -71125,
+        "marginPct": -4,
+        "marginPctAt300": 9,
+        "profitAt300": 148439,
         "salePsf": 442,
         "risk": "Medium"
       }
@@ -12429,10 +12429,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 291700,
         "finished": 1155200,
-        "profit": -782023,
-        "marginPct": -68,
-        "marginPctAt300": -49,
-        "profitAt300": -562459,
+        "profit": -629441,
+        "marginPct": -54,
+        "marginPctAt300": -35,
+        "profitAt300": -409877,
         "salePsf": 304,
         "risk": "Medium"
       }
@@ -12554,10 +12554,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 225300,
         "finished": 1333800,
-        "profit": -537733,
-        "marginPct": -40,
-        "marginPctAt300": -24,
-        "profitAt300": -318169,
+        "profit": -385151,
+        "marginPct": -29,
+        "marginPctAt300": -12,
+        "profitAt300": -165587,
         "salePsf": 351,
         "risk": "Medium"
       }
@@ -12684,10 +12684,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 123100,
         "finished": 1238800,
-        "profit": -520529,
-        "marginPct": -42,
-        "marginPctAt300": -24,
-        "profitAt300": -300965,
+        "profit": -367947,
+        "marginPct": -30,
+        "marginPctAt300": -12,
+        "profitAt300": -148383,
         "salePsf": 326,
         "risk": "Medium"
       }
@@ -12876,14 +12876,14 @@ window.PHX_LAND_LEADS = {
         "radiusMi": 1
       },
       "verdict": {
-        "label": "Pass",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 274000,
         "finished": 1816400,
-        "profit": -121720,
-        "marginPct": -7,
-        "marginPctAt300": 5,
-        "profitAt300": 97844,
+        "profit": 30862,
+        "marginPct": 2,
+        "marginPctAt300": 14,
+        "profitAt300": 250426,
         "salePsf": 478,
         "risk": "Medium"
       }
@@ -13005,10 +13005,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 388100,
         "finished": 1276800,
-        "profit": -767219,
-        "marginPct": -60,
-        "marginPctAt300": -43,
-        "profitAt300": -547655,
+        "profit": -614637,
+        "marginPct": -48,
+        "marginPctAt300": -31,
+        "profitAt300": -395073,
         "salePsf": 336,
         "risk": "Medium"
       }
@@ -13131,10 +13131,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1938800,
         "finished": 1231200,
-        "profit": -2470700,
-        "marginPct": -201,
-        "marginPctAt300": -183,
-        "profitAt300": -2251136,
+        "profit": -2318118,
+        "marginPct": -188,
+        "marginPctAt300": -170,
+        "profitAt300": -2098554,
         "salePsf": 324,
         "risk": "Medium"
       }
@@ -13257,10 +13257,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 2375000,
         "finished": 1466800,
-        "profit": -2708902,
-        "marginPct": -185,
-        "marginPctAt300": -170,
-        "profitAt300": -2489338,
+        "profit": -2556320,
+        "marginPct": -174,
+        "marginPctAt300": -159,
+        "profitAt300": -2336756,
         "salePsf": 386,
         "risk": "Medium"
       }
@@ -13380,10 +13380,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 237000,
         "finished": 1314800,
-        "profit": -568682,
-        "marginPct": -43,
-        "marginPctAt300": -27,
-        "profitAt300": -349118,
+        "profit": -416100,
+        "marginPct": -32,
+        "marginPctAt300": -15,
+        "profitAt300": -196536,
         "salePsf": 346,
         "risk": "Medium"
       }
@@ -13499,14 +13499,14 @@ window.PHX_LAND_LEADS = {
         "radiusMi": 1
       },
       "verdict": {
-        "label": "Pass",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 83900,
         "finished": 1558000,
-        "profit": -168961,
-        "marginPct": -11,
-        "marginPctAt300": 3,
-        "profitAt300": 50603,
+        "profit": -16379,
+        "marginPct": -1,
+        "marginPctAt300": 13,
+        "profitAt300": 203185,
         "salePsf": 410,
         "risk": "Medium"
       }
@@ -13626,10 +13626,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 171600,
         "finished": 1466800,
-        "profit": -351264,
-        "marginPct": -24,
-        "marginPctAt300": -9,
-        "profitAt300": -131700,
+        "profit": -198682,
+        "marginPct": -14,
+        "marginPctAt300": 1,
+        "profitAt300": 20882,
         "salePsf": 386,
         "risk": "Medium"
       }
@@ -13753,10 +13753,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 155700,
         "finished": 912000,
-        "profit": -872407,
-        "marginPct": -96,
-        "marginPctAt300": -72,
-        "profitAt300": -652843,
+        "profit": -719825,
+        "marginPct": -79,
+        "marginPctAt300": -55,
+        "profitAt300": -500261,
         "salePsf": 240,
         "risk": "Medium"
       }
@@ -13876,10 +13876,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 157200,
         "finished": 1466800,
-        "profit": -335856,
-        "marginPct": -23,
-        "marginPctAt300": -8,
-        "profitAt300": -116292,
+        "profit": -183274,
+        "marginPct": -12,
+        "marginPctAt300": 2,
+        "profitAt300": 36290,
         "salePsf": 386,
         "risk": "Medium"
       }
@@ -13999,10 +13999,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 279000,
         "finished": 1520000,
-        "profit": -414578,
-        "marginPct": -27,
-        "marginPctAt300": -13,
-        "profitAt300": -195014,
+        "profit": -261996,
+        "marginPct": -17,
+        "marginPctAt300": -3,
+        "profitAt300": -42432,
         "salePsf": 400,
         "risk": "Medium"
       }
@@ -14122,10 +14122,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 151000,
         "finished": 1535200,
-        "profit": -262874,
-        "marginPct": -17,
-        "marginPctAt300": -3,
-        "profitAt300": -43310,
+        "profit": -110292,
+        "marginPct": -7,
+        "marginPctAt300": 7,
+        "profitAt300": 109272,
         "salePsf": 404,
         "risk": "Medium"
       }
@@ -14245,10 +14245,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 154100,
         "finished": 1535200,
-        "profit": -266191,
-        "marginPct": -17,
-        "marginPctAt300": -3,
-        "profitAt300": -46627,
+        "profit": -113609,
+        "marginPct": -7,
+        "marginPctAt300": 7,
+        "profitAt300": 105955,
         "salePsf": 404,
         "risk": "Medium"
       }
@@ -14368,10 +14368,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 153600,
         "finished": 1535200,
-        "profit": -265656,
-        "marginPct": -17,
-        "marginPctAt300": -3,
-        "profitAt300": -46092,
+        "profit": -113074,
+        "marginPct": -7,
+        "marginPctAt300": 7,
+        "profitAt300": 106490,
         "salePsf": 404,
         "risk": "Medium"
       }
@@ -14489,14 +14489,14 @@ window.PHX_LAND_LEADS = {
         "radiusMi": 1
       },
       "verdict": {
-        "label": "Pass",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 107900,
         "finished": 1679600,
-        "profit": -76689,
-        "marginPct": -5,
-        "marginPctAt300": 9,
-        "profitAt300": 142875,
+        "profit": 75893,
+        "marginPct": 5,
+        "marginPctAt300": 18,
+        "profitAt300": 295457,
         "salePsf": 442,
         "risk": "Medium"
       }
@@ -14614,14 +14614,14 @@ window.PHX_LAND_LEADS = {
         "radiusMi": 1
       },
       "verdict": {
-        "label": "Pass",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 117700,
         "finished": 1679600,
-        "profit": -87175,
-        "marginPct": -5,
-        "marginPctAt300": 8,
-        "profitAt300": 132389,
+        "profit": 65407,
+        "marginPct": 4,
+        "marginPctAt300": 17,
+        "profitAt300": 284971,
         "salePsf": 442,
         "risk": "Medium"
       }
@@ -14790,7 +14790,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 133,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1893949,
+        "finished": 2390200,
+        "profit": -1165157,
+        "marginPct": -49,
+        "marginPctAt300": -40,
+        "profitAt300": -945593,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 2235000,
+        "lowPsf": 377,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16766026",
@@ -14959,7 +14977,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 125,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1902608,
+        "finished": 2397800,
+        "profit": -1167051,
+        "marginPct": -49,
+        "marginPctAt300": -40,
+        "profitAt300": -947487,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16766023",
@@ -15127,7 +15163,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 125,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1899889,
+        "finished": 2397800,
+        "profit": -1164141,
+        "marginPct": -49,
+        "marginPctAt300": -39,
+        "profitAt300": -944577,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21411009G",
@@ -15306,7 +15360,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 124,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1082579,
+        "finished": 923400,
+        "profit": -1719788,
+        "marginPct": -186,
+        "marginPctAt300": -162,
+        "profitAt300": -1500224,
+        "salePsf": 243,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 243,
+        "price": 810000,
+        "lowPsf": 64,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21460037A",
@@ -15487,7 +15559,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 118,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 962844,
+        "finished": 1360400,
+        "profit": -1167781,
+        "marginPct": -86,
+        "marginPctAt300": -70,
+        "profitAt300": -948217,
+        "salePsf": 358,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 358,
+        "price": 737500,
+        "lowPsf": 253,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21431007",
@@ -15666,7 +15756,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 118,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1227021,
+        "finished": 1288200,
+        "profit": -1520484,
+        "marginPct": -118,
+        "marginPctAt300": -101,
+        "profitAt300": -1300920,
+        "salePsf": 339,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 339,
+        "price": 659950,
+        "lowPsf": 253,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501022B",
@@ -15845,7 +15953,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 116,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1647836,
+        "finished": 2371200,
+        "profit": -920247,
+        "marginPct": -39,
+        "marginPctAt300": -30,
+        "profitAt300": -700683,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 624,
+        "price": 3050000,
+        "lowPsf": 215,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16608195",
@@ -16025,7 +16151,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 116,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 2826749,
+        "finished": 1250200,
+        "profit": -3269053,
+        "marginPct": -261,
+        "marginPctAt300": -244,
+        "profitAt300": -3049489,
+        "salePsf": 329,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 329,
+        "price": 770000,
+        "lowPsf": 229,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16773025",
@@ -16204,7 +16348,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 118,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Good",
+        "strategy": "1 custom home",
+        "land": 1349203,
+        "finished": 3579600,
+        "profit": 571439,
+        "marginPct": 16,
+        "marginPctAt300": 22,
+        "profitAt300": 791003,
+        "salePsf": 942,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 942,
+        "price": 4850000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21526026",
@@ -16389,7 +16551,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 118,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 881402,
+        "finished": 1554200,
+        "profit": -892652,
+        "marginPct": -57,
+        "marginPctAt300": -43,
+        "profitAt300": -673088,
+        "salePsf": 409,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 409,
+        "price": 1625000,
+        "lowPsf": 357,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501037B",
@@ -16560,7 +16740,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 112,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1091973,
+        "finished": 2371200,
+        "profit": -325473,
+        "marginPct": -14,
+        "marginPctAt300": -4,
+        "profitAt300": -105909,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 624,
+        "price": 3050000,
+        "lowPsf": 215,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501015A",
@@ -16728,7 +16926,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 112,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1240477,
+        "finished": 2390200,
+        "profit": -465942,
+        "marginPct": -19,
+        "marginPctAt300": -10,
+        "profitAt300": -246378,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 3050000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501005",
@@ -16906,7 +17122,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 112,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 2432609,
+        "finished": 2371200,
+        "profit": -1759954,
+        "marginPct": -74,
+        "marginPctAt300": -65,
+        "profitAt300": -1540390,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 624,
+        "price": 3050000,
+        "lowPsf": 215,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16766025",
@@ -17084,7 +17318,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 112,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1293117,
+        "finished": 2397800,
+        "profit": -514895,
+        "marginPct": -21,
+        "marginPctAt300": -12,
+        "profitAt300": -295331,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16766010",
@@ -17250,7 +17502,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 112,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1905327,
+        "finished": 2397800,
+        "profit": -1169960,
+        "marginPct": -49,
+        "marginPctAt300": -40,
+        "profitAt300": -950396,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16515002",
@@ -17424,7 +17694,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 112,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "3 homes",
+        "land": 3681222,
+        "finished": 5690880,
+        "profit": -2805112,
+        "marginPct": -49,
+        "marginPctAt300": -38,
+        "profitAt300": -2146420,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 624,
+        "price": 3050000,
+        "lowPsf": 215,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16773023",
@@ -17605,7 +17893,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 111,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Good",
+        "strategy": "1 custom home",
+        "land": 1256738,
+        "finished": 3579600,
+        "profit": 670376,
+        "marginPct": 19,
+        "marginPctAt300": 25,
+        "profitAt300": 889940,
+        "salePsf": 942,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 942,
+        "price": 4850000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501040C",
@@ -17784,7 +18090,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 110,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1259969,
+        "finished": 942400,
+        "profit": -1891165,
+        "marginPct": -201,
+        "marginPctAt300": -177,
+        "profitAt300": -1671601,
+        "salePsf": 248,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 248,
+        "price": 1650000,
+        "lowPsf": 215,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501024",
@@ -17951,7 +18275,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 110,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1910953,
+        "finished": 2371200,
+        "profit": -1201782,
+        "marginPct": -51,
+        "marginPctAt300": -41,
+        "profitAt300": -982218,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 624,
+        "price": 3050000,
+        "lowPsf": 215,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21531002A",
@@ -18129,7 +18471,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 110,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 2520970,
+        "finished": 1356600,
+        "profit": -2838662,
+        "marginPct": -209,
+        "marginPctAt300": -193,
+        "profitAt300": -2619098,
+        "salePsf": 357,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 357,
+        "price": 1625000,
+        "lowPsf": 267,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16766020",
@@ -18295,7 +18655,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 110,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1884369,
+        "finished": 2397800,
+        "profit": -1147535,
+        "marginPct": -48,
+        "marginPctAt300": -39,
+        "profitAt300": -927971,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16766029",
@@ -18461,7 +18839,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 110,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1898927,
+        "finished": 2397800,
+        "profit": -1163112,
+        "marginPct": -49,
+        "marginPctAt300": -39,
+        "profitAt300": -943548,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16766006",
@@ -18621,7 +19017,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 110,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1865879,
+        "finished": 2390200,
+        "profit": -1135123,
+        "marginPct": -47,
+        "marginPctAt300": -38,
+        "profitAt300": -915559,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 2235000,
+        "lowPsf": 377,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21526029",
@@ -18798,7 +19212,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 108,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1574096,
+        "finished": 1554200,
+        "profit": -1633835,
+        "marginPct": -105,
+        "marginPctAt300": -91,
+        "profitAt300": -1414271,
+        "salePsf": 409,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 409,
+        "price": 1625000,
+        "lowPsf": 357,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16768051",
@@ -18971,7 +19403,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 107,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 978804,
+        "finished": 2390200,
+        "profit": -185952,
+        "marginPct": -8,
+        "marginPctAt300": 1,
+        "profitAt300": 33612,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 3050000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501008B",
@@ -19125,7 +19575,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 106,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1265971,
+        "finished": 2390200,
+        "profit": -493221,
+        "marginPct": -21,
+        "marginPctAt300": -11,
+        "profitAt300": -273657,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 3050000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21523014B",
@@ -19304,7 +19772,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 106,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 821482,
+        "finished": 1554200,
+        "profit": -828538,
+        "marginPct": -53,
+        "marginPctAt300": -39,
+        "profitAt300": -608974,
+        "salePsf": 409,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 409,
+        "price": 1625000,
+        "lowPsf": 355,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21526024",
@@ -19482,7 +19968,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 106,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 864307,
+        "finished": 1554200,
+        "profit": -874360,
+        "marginPct": -56,
+        "marginPctAt300": -42,
+        "profitAt300": -654796,
+        "salePsf": 409,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 409,
+        "price": 1625000,
+        "lowPsf": 357,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501023B",
@@ -19636,7 +20140,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 106,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1247772,
+        "finished": 2371200,
+        "profit": -492178,
+        "marginPct": -21,
+        "marginPctAt300": -11,
+        "profitAt300": -272614,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 624,
+        "price": 3050000,
+        "lowPsf": 215,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16766022",
@@ -19802,7 +20324,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 106,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1884745,
+        "finished": 2397800,
+        "profit": -1147937,
+        "marginPct": -48,
+        "marginPctAt300": -39,
+        "profitAt300": -928373,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501009",
@@ -19968,7 +20508,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 104,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1323411,
+        "finished": 2371200,
+        "profit": -573112,
+        "marginPct": -24,
+        "marginPctAt300": -15,
+        "profitAt300": -353548,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 624,
+        "price": 3050000,
+        "lowPsf": 215,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16766003",
@@ -20140,7 +20698,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 104,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1876379,
+        "finished": 2390200,
+        "profit": -1146358,
+        "marginPct": -48,
+        "marginPctAt300": -20,
+        "profitAt300": -780749,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 2235000,
+        "lowPsf": 377,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16766024",
@@ -20306,7 +20882,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 104,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1995099,
+        "finished": 2397800,
+        "profit": -1266016,
+        "marginPct": -53,
+        "marginPctAt300": -44,
+        "profitAt300": -1046452,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21526030A",
@@ -20485,7 +21079,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 104,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1218844,
+        "finished": 1554200,
+        "profit": -1253715,
+        "marginPct": -81,
+        "marginPctAt300": -67,
+        "profitAt300": -1034151,
+        "salePsf": 409,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 409,
+        "price": 1625000,
+        "lowPsf": 357,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501053B",
@@ -20649,7 +21261,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 104,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1240477,
+        "finished": 2945000,
+        "profit": 72214,
+        "marginPct": 2,
+        "marginPctAt300": 10,
+        "profitAt300": 291778,
+        "salePsf": 775,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 775,
+        "price": 3325000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21570007D",
@@ -20827,7 +21457,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 104,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1744150,
+        "finished": 1398400,
+        "profit": -1966918,
+        "marginPct": -141,
+        "marginPctAt300": -125,
+        "profitAt300": -1747354,
+        "salePsf": 368,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 368,
+        "price": 1625000,
+        "lowPsf": 273,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21309001P",
@@ -21005,7 +21653,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 103,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 667159,
+        "finished": 1276800,
+        "profit": -932490,
+        "marginPct": -73,
+        "marginPctAt300": -56,
+        "profitAt300": -712926,
+        "salePsf": 336,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 336,
+        "price": 655000,
+        "lowPsf": 256,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16773022",
@@ -21185,7 +21851,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 102,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Good",
+        "strategy": "1 custom home",
+        "land": 1255852,
+        "finished": 3579600,
+        "profit": 671324,
+        "marginPct": 19,
+        "marginPctAt300": 25,
+        "profitAt300": 890888,
+        "salePsf": 942,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 942,
+        "price": 4850000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501012B",
@@ -21353,7 +22037,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 101,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1117091,
+        "finished": 2390200,
+        "profit": -333919,
+        "marginPct": -14,
+        "marginPctAt300": -5,
+        "profitAt300": -114355,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 3050000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16766021",
@@ -21519,7 +22221,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 101,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1884536,
+        "finished": 2397800,
+        "profit": -1147714,
+        "marginPct": -48,
+        "marginPctAt300": -39,
+        "profitAt300": -928150,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16768054",
@@ -21691,7 +22411,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 101,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 814744,
+        "finished": 2371200,
+        "profit": -28838,
+        "marginPct": -1,
+        "marginPctAt300": 8,
+        "profitAt300": 190726,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 624,
+        "price": 1659000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16512130A",
@@ -21869,7 +22607,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 100,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 740300,
+        "finished": 1558000,
+        "profit": -737987,
+        "marginPct": -47,
+        "marginPctAt300": -33,
+        "profitAt300": -518423,
+        "salePsf": 410,
+        "risk": "Medium"
+      },
+      "houseComps": {
+        "psf": 410,
+        "price": 1810000,
+        "lowPsf": 340,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21308007E",
@@ -22047,7 +22803,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 100,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 586784,
+        "finished": 1254000,
+        "profit": -868605,
+        "marginPct": -69,
+        "marginPctAt300": -52,
+        "profitAt300": -649041,
+        "salePsf": 330,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 330,
+        "price": 765000,
+        "lowPsf": 256,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16812001H",
@@ -22213,7 +22987,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 100,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1342329,
+        "finished": 2945000,
+        "profit": -36768,
+        "marginPct": -1,
+        "marginPctAt300": 6,
+        "profitAt300": 182796,
+        "salePsf": 775,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 775,
+        "price": 3325000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21523016B",
@@ -22391,7 +23183,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 100,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 934688,
+        "finished": 1554200,
+        "profit": -949668,
+        "marginPct": -61,
+        "marginPctAt300": -47,
+        "profitAt300": -730104,
+        "salePsf": 409,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 409,
+        "price": 1625000,
+        "lowPsf": 355,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16773006",
@@ -22569,7 +23379,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 100,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1890058,
+        "finished": 2656200,
+        "profit": -902974,
+        "marginPct": -34,
+        "marginPctAt300": -26,
+        "profitAt300": -683410,
+        "salePsf": 699,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 699,
+        "price": 4750000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21527002H",
@@ -22746,7 +23574,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 100,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1378931,
+        "finished": 1554200,
+        "profit": -1425008,
+        "marginPct": -92,
+        "marginPctAt300": -78,
+        "profitAt300": -1205444,
+        "salePsf": 409,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 409,
+        "price": 1625000,
+        "lowPsf": 357,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21520013A",
@@ -22923,7 +23769,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 100,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 908363,
+        "finished": 1554200,
+        "profit": -921500,
+        "marginPct": -59,
+        "marginPctAt300": -45,
+        "profitAt300": -701936,
+        "salePsf": 409,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 409,
+        "price": 1625000,
+        "lowPsf": 355,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16766011",
@@ -23088,7 +23952,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 100,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1885749,
+        "finished": 2397800,
+        "profit": -1149011,
+        "marginPct": -48,
+        "marginPctAt300": -39,
+        "profitAt300": -929447,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21529075",
@@ -23265,7 +24147,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 100,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1757354,
+        "finished": 1356600,
+        "profit": -2021593,
+        "marginPct": -149,
+        "marginPctAt300": -133,
+        "profitAt300": -1802029,
+        "salePsf": 357,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 357,
+        "price": 1625000,
+        "lowPsf": 267,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16766009",
@@ -23430,7 +24330,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 100,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1995601,
+        "finished": 2397800,
+        "profit": -1266553,
+        "marginPct": -53,
+        "marginPctAt300": -44,
+        "profitAt300": -1046989,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21215002U",
@@ -23609,7 +24527,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 99,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 379068,
+        "finished": 1333800,
+        "profit": -568943,
+        "marginPct": -43,
+        "marginPctAt300": -26,
+        "profitAt300": -349379,
+        "salePsf": 351,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 351,
+        "price": 785990,
+        "lowPsf": 335,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21309007J",
@@ -23790,7 +24726,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 98,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 404740,
+        "finished": 1569400,
+        "profit": -367880,
+        "marginPct": -23,
+        "marginPctAt300": -9,
+        "profitAt300": -148316,
+        "salePsf": 413,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 413,
+        "price": 960000,
+        "lowPsf": 385,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501018",
@@ -23962,7 +24916,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 98,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1263635,
+        "finished": 2371200,
+        "profit": -509151,
+        "marginPct": -21,
+        "marginPctAt300": -12,
+        "profitAt300": -289587,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 624,
+        "price": 3050000,
+        "lowPsf": 215,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21520012B",
@@ -24140,7 +25112,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 98,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 935669,
+        "finished": 1554200,
+        "profit": -950718,
+        "marginPct": -61,
+        "marginPctAt300": -47,
+        "profitAt300": -731154,
+        "salePsf": 409,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 409,
+        "price": 1625000,
+        "lowPsf": 355,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21525002A",
@@ -24318,7 +25308,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 98,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 956957,
+        "finished": 1672000,
+        "profit": -859230,
+        "marginPct": -51,
+        "marginPctAt300": -38,
+        "profitAt300": -639666,
+        "salePsf": 440,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 440,
+        "price": 1625000,
+        "lowPsf": 357,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501015B",
@@ -24482,7 +25490,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 98,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1223054,
+        "finished": 2390200,
+        "profit": -447300,
+        "marginPct": -19,
+        "marginPctAt300": -10,
+        "profitAt300": -227736,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 3050000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21520009B",
@@ -24659,7 +25685,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 98,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1289211,
+        "finished": 1554200,
+        "profit": -1329008,
+        "marginPct": -86,
+        "marginPctAt300": -71,
+        "profitAt300": -1109444,
+        "salePsf": 409,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 409,
+        "price": 1625000,
+        "lowPsf": 355,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21570012H",
@@ -24836,7 +25880,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 98,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1706964,
+        "finished": 1554200,
+        "profit": -1776003,
+        "marginPct": -114,
+        "marginPctAt300": -100,
+        "profitAt300": -1556439,
+        "salePsf": 409,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 409,
+        "price": 1625000,
+        "lowPsf": 357,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "20813003K",
@@ -25027,10 +26089,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1751045,
         "finished": 1212200,
-        "profit": -2288232,
-        "marginPct": -189,
-        "marginPctAt300": -171,
-        "profitAt300": -2068668,
+        "profit": -2135650,
+        "marginPct": -176,
+        "marginPctAt300": -158,
+        "profitAt300": -1916086,
         "salePsf": 319,
         "risk": "Low"
       }
@@ -25214,7 +26276,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 94,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 354852,
+        "finished": 1360400,
+        "profit": -517230,
+        "marginPct": -38,
+        "marginPctAt300": -22,
+        "profitAt300": -297666,
+        "salePsf": 358,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 358,
+        "price": 737500,
+        "lowPsf": 253,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21012015K",
@@ -25391,7 +26471,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 94,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 782985,
+        "finished": 1200800,
+        "profit": -1130144,
+        "marginPct": -94,
+        "marginPctAt300": -76,
+        "profitAt300": -910580,
+        "salePsf": 316,
+        "risk": "Medium"
+      },
+      "houseComps": {
+        "psf": 316,
+        "price": 1020000,
+        "lowPsf": 285,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21168037F",
@@ -25566,7 +26664,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 94,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 327800,
+        "finished": 1512400,
+        "profit": -340844,
+        "marginPct": -23,
+        "marginPctAt300": -8,
+        "profitAt300": -121280,
+        "salePsf": 398,
+        "risk": "Medium"
+      },
+      "houseComps": {
+        "psf": 398,
+        "price": 1250000,
+        "lowPsf": 363,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16647008",
@@ -25743,7 +26859,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 94,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 515300,
+        "finished": 1102000,
+        "profit": -939557,
+        "marginPct": -85,
+        "marginPctAt300": -65,
+        "profitAt300": -719993,
+        "salePsf": 290,
+        "risk": "Medium"
+      },
+      "houseComps": {
+        "psf": 290,
+        "price": 515000,
+        "lowPsf": 278,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501014B",
@@ -25908,7 +27042,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 94,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1238296,
+        "finished": 2390200,
+        "profit": -463609,
+        "marginPct": -19,
+        "marginPctAt300": -10,
+        "profitAt300": -244045,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 3050000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21309001F",
@@ -26088,7 +27240,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 96,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 360900,
+        "finished": 1276800,
+        "profit": -604793,
+        "marginPct": -47,
+        "marginPctAt300": -30,
+        "profitAt300": -385229,
+        "salePsf": 336,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 336,
+        "price": 655000,
+        "lowPsf": 256,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501025F",
@@ -26260,7 +27430,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 92,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1237193,
+        "finished": 2371200,
+        "profit": -480859,
+        "marginPct": -20,
+        "marginPctAt300": -11,
+        "profitAt300": -261295,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 624,
+        "price": 3050000,
+        "lowPsf": 215,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16881022",
@@ -26435,7 +27623,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 92,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Good",
+        "strategy": "1 custom home",
+        "land": 1292800,
+        "finished": 4852600,
+        "profit": 1866600,
+        "marginPct": 38,
+        "marginPctAt300": 43,
+        "profitAt300": 2086164,
+        "salePsf": 1277,
+        "risk": "Medium"
+      },
+      "houseComps": {
+        "psf": 1277,
+        "price": 10900000,
+        "lowPsf": 942,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16639004B",
@@ -26614,7 +27820,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 92,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1026086,
+        "finished": 1102000,
+        "profit": -1486098,
+        "marginPct": -135,
+        "marginPctAt300": -115,
+        "profitAt300": -1266534,
+        "salePsf": 290,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 290,
+        "price": 515000,
+        "lowPsf": 278,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "20604428",
@@ -26803,10 +28027,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1055441,
         "finished": 912000,
-        "profit": -1835130,
-        "marginPct": -201,
-        "marginPctAt300": -177,
-        "profitAt300": -1615566,
+        "profit": -1682548,
+        "marginPct": -184,
+        "marginPctAt300": -160,
+        "profitAt300": -1462984,
         "salePsf": 240,
         "risk": "Low"
       }
@@ -27111,10 +28335,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 568870,
         "finished": 1288200,
-        "profit": -949585,
-        "marginPct": -74,
-        "marginPctAt300": -57,
-        "profitAt300": -730021,
+        "profit": -797003,
+        "marginPct": -62,
+        "marginPctAt300": -45,
+        "profitAt300": -577439,
         "salePsf": 339,
         "risk": "Low"
       }
@@ -27305,10 +28529,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1222566,
         "finished": 1360400,
-        "profit": -1579006,
-        "marginPct": -116,
-        "marginPctAt300": -100,
-        "profitAt300": -1359442,
+        "profit": -1426424,
+        "marginPct": -105,
+        "marginPctAt300": -89,
+        "profitAt300": -1206860,
         "salePsf": 358,
         "risk": "Low"
       }
@@ -27629,10 +28853,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 722058,
         "finished": 1303400,
-        "profit": -1098752,
-        "marginPct": -84,
-        "marginPctAt300": -67,
-        "profitAt300": -879188,
+        "profit": -946170,
+        "marginPct": -73,
+        "marginPctAt300": -56,
+        "profitAt300": -726606,
         "salePsf": 343,
         "risk": "Low"
       }
@@ -27812,7 +29036,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 91,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 564200,
+        "finished": 1200800,
+        "profit": -896044,
+        "marginPct": -75,
+        "marginPctAt300": -56,
+        "profitAt300": -676480,
+        "salePsf": 316,
+        "risk": "Medium"
+      },
+      "houseComps": {
+        "psf": 316,
+        "price": 1020000,
+        "lowPsf": 285,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501025D",
@@ -27990,7 +29232,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 90,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1238296,
+        "finished": 2371200,
+        "profit": -482039,
+        "marginPct": -20,
+        "marginPctAt300": -11,
+        "profitAt300": -262475,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 624,
+        "price": 3050000,
+        "lowPsf": 215,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501014A",
@@ -28156,7 +29416,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 90,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1233934,
+        "finished": 2390200,
+        "profit": -458941,
+        "marginPct": -19,
+        "marginPctAt300": -10,
+        "profitAt300": -239377,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 3050000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501023A",
@@ -28310,7 +29588,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 90,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1244262,
+        "finished": 2390200,
+        "profit": -469992,
+        "marginPct": -20,
+        "marginPctAt300": -10,
+        "profitAt300": -250428,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 3050000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21526016C",
@@ -28487,7 +29783,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 90,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 414100,
+        "finished": 1554200,
+        "profit": -392639,
+        "marginPct": -25,
+        "marginPctAt300": -11,
+        "profitAt300": -173075,
+        "salePsf": 409,
+        "risk": "Medium"
+      },
+      "houseComps": {
+        "psf": 409,
+        "price": 1625000,
+        "lowPsf": 357,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21571010C",
@@ -28665,7 +29979,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 90,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 688200,
+        "finished": 1653000,
+        "profit": -590090,
+        "marginPct": -36,
+        "marginPctAt300": -22,
+        "profitAt300": -370526,
+        "salePsf": 435,
+        "risk": "Medium"
+      },
+      "houseComps": {
+        "psf": 435,
+        "price": 785000,
+        "lowPsf": 324,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16611005",
@@ -28814,10 +30146,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 399025,
         "finished": 1679600,
-        "profit": -388193,
-        "marginPct": -23,
-        "marginPctAt300": -10,
-        "profitAt300": -168629,
+        "profit": -235611,
+        "marginPct": -14,
+        "marginPctAt300": -1,
+        "profitAt300": -16047,
         "salePsf": 442,
         "risk": "Low"
       }
@@ -28969,10 +30301,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 603447,
         "finished": 1102000,
-        "profit": -1167196,
-        "marginPct": -106,
-        "marginPctAt300": -86,
-        "profitAt300": -947632,
+        "profit": -1014614,
+        "marginPct": -92,
+        "marginPctAt300": -72,
+        "profitAt300": -795050,
         "salePsf": 290,
         "risk": "Low"
       }
@@ -29124,10 +30456,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 877717,
         "finished": 912000,
-        "profit": -1644965,
-        "marginPct": -180,
-        "marginPctAt300": -156,
-        "profitAt300": -1425401,
+        "profit": -1492383,
+        "marginPct": -164,
+        "marginPctAt300": -140,
+        "profitAt300": -1272819,
         "salePsf": 240,
         "risk": "Low"
       }
@@ -29384,10 +30716,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1021912,
         "finished": 1212200,
-        "profit": -1508060,
-        "marginPct": -124,
-        "marginPctAt300": -106,
-        "profitAt300": -1288496,
+        "profit": -1355478,
+        "marginPct": -112,
+        "marginPctAt300": -94,
+        "profitAt300": -1135914,
         "salePsf": 319,
         "risk": "Low"
       }
@@ -29540,10 +30872,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1015718,
         "finished": 1398400,
-        "profit": -1320818,
-        "marginPct": -94,
-        "marginPctAt300": -79,
-        "profitAt300": -1101254,
+        "profit": -1168236,
+        "marginPct": -84,
+        "marginPctAt300": -68,
+        "profitAt300": -948672,
         "salePsf": 368,
         "risk": "Low"
       }
@@ -29695,10 +31027,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 772670,
         "finished": 1197000,
-        "profit": -1256115,
-        "marginPct": -105,
-        "marginPctAt300": -87,
-        "profitAt300": -1036551,
+        "profit": -1103533,
+        "marginPct": -92,
+        "marginPctAt300": -74,
+        "profitAt300": -883969,
         "salePsf": 315,
         "risk": "Low"
       }
@@ -29850,10 +31182,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1047729,
         "finished": 1098200,
-        "profit": -1646264,
-        "marginPct": -150,
-        "marginPctAt300": -130,
-        "profitAt300": -1426700,
+        "profit": -1493682,
+        "marginPct": -136,
+        "marginPctAt300": -116,
+        "profitAt300": -1274118,
         "salePsf": 289,
         "risk": "Low"
       }
@@ -30005,10 +31337,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 770500,
         "finished": 1136200,
-        "profit": -1312769,
-        "marginPct": -116,
-        "marginPctAt300": -96,
-        "profitAt300": -1093205,
+        "profit": -1160187,
+        "marginPct": -102,
+        "marginPctAt300": -83,
+        "profitAt300": -940623,
         "salePsf": 299,
         "risk": "Low"
       }
@@ -30160,10 +31492,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 589948,
         "finished": 1037400,
-        "profit": -1215414,
-        "marginPct": -117,
-        "marginPctAt300": -96,
-        "profitAt300": -995850,
+        "profit": -1062832,
+        "marginPct": -102,
+        "marginPctAt300": -81,
+        "profitAt300": -843268,
         "salePsf": 273,
         "risk": "Low"
       }
@@ -30315,10 +31647,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 590670,
         "finished": 1037400,
-        "profit": -1216187,
-        "marginPct": -117,
-        "marginPctAt300": -96,
-        "profitAt300": -996623,
+        "profit": -1063605,
+        "marginPct": -103,
+        "marginPctAt300": -81,
+        "profitAt300": -844041,
         "salePsf": 273,
         "risk": "Low"
       }
@@ -30470,10 +31802,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 590670,
         "finished": 1037400,
-        "profit": -1216187,
-        "marginPct": -117,
-        "marginPctAt300": -96,
-        "profitAt300": -996623,
+        "profit": -1063605,
+        "marginPct": -103,
+        "marginPctAt300": -81,
+        "profitAt300": -844041,
         "salePsf": 273,
         "risk": "Low"
       }
@@ -30625,10 +31957,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1233206,
         "finished": 1250200,
-        "profit": -1697284,
-        "marginPct": -136,
-        "marginPctAt300": -118,
-        "profitAt300": -1477720,
+        "profit": -1544702,
+        "marginPct": -124,
+        "marginPctAt300": -106,
+        "profitAt300": -1325138,
         "salePsf": 329,
         "risk": "Low"
       }
@@ -30781,10 +32113,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1207436,
         "finished": 1197000,
-        "profit": -1721315,
-        "marginPct": -144,
-        "marginPctAt300": -125,
-        "profitAt300": -1501751,
+        "profit": -1568733,
+        "marginPct": -131,
+        "marginPctAt300": -113,
+        "profitAt300": -1349169,
         "salePsf": 315,
         "risk": "Low"
       }
@@ -30937,10 +32269,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 751357,
         "finished": 1303400,
-        "profit": -1130102,
-        "marginPct": -87,
-        "marginPctAt300": -70,
-        "profitAt300": -910538,
+        "profit": -977520,
+        "marginPct": -75,
+        "marginPctAt300": -58,
+        "profitAt300": -757956,
         "salePsf": 343,
         "risk": "Low"
       }
@@ -31093,10 +32425,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 751507,
         "finished": 1303400,
-        "profit": -1130262,
-        "marginPct": -87,
-        "marginPctAt300": -70,
-        "profitAt300": -910698,
+        "profit": -977680,
+        "marginPct": -75,
+        "marginPctAt300": -58,
+        "profitAt300": -758116,
         "salePsf": 343,
         "risk": "Low"
       }
@@ -31249,10 +32581,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 751582,
         "finished": 1303400,
-        "profit": -1130343,
-        "marginPct": -87,
-        "marginPctAt300": -70,
-        "profitAt300": -910779,
+        "profit": -977761,
+        "marginPct": -75,
+        "marginPctAt300": -58,
+        "profitAt300": -758197,
         "salePsf": 343,
         "risk": "Low"
       }
@@ -31405,10 +32737,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1495602,
         "finished": 1155200,
-        "profit": -2070198,
-        "marginPct": -179,
-        "marginPctAt300": -160,
-        "profitAt300": -1850634,
+        "profit": -1917616,
+        "marginPct": -166,
+        "marginPctAt300": -147,
+        "profitAt300": -1698052,
         "salePsf": 304,
         "risk": "Low"
       }
@@ -31561,10 +32893,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1246307,
         "finished": 1333800,
-        "profit": -1630210,
-        "marginPct": -122,
-        "marginPctAt300": -106,
-        "profitAt300": -1410646,
+        "profit": -1477628,
+        "marginPct": -111,
+        "marginPctAt300": -94,
+        "profitAt300": -1258064,
         "salePsf": 351,
         "risk": "Low"
       }
@@ -31806,10 +33138,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 2078938,
         "finished": 1098200,
-        "profit": -2749658,
-        "marginPct": -250,
-        "marginPctAt300": -230,
-        "profitAt300": -2530094,
+        "profit": -2597076,
+        "marginPct": -236,
+        "marginPctAt300": -216,
+        "profitAt300": -2377512,
         "salePsf": 289,
         "risk": "Low"
       }
@@ -31949,7 +33281,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 89,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 385500,
+        "finished": 1398400,
+        "profit": -513163,
+        "marginPct": -37,
+        "marginPctAt300": -21,
+        "profitAt300": -293599,
+        "salePsf": 368,
+        "risk": "Medium"
+      },
+      "houseComps": {
+        "psf": 368,
+        "price": 1225000,
+        "lowPsf": 285,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21012020L",
@@ -32086,7 +33436,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 89,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 475300,
+        "finished": 1200800,
+        "profit": -800921,
+        "marginPct": -67,
+        "marginPctAt300": -48,
+        "profitAt300": -581357,
+        "salePsf": 316,
+        "risk": "Medium"
+      },
+      "houseComps": {
+        "psf": 316,
+        "price": 1020000,
+        "lowPsf": 285,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "15901302",
@@ -32234,10 +33602,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 879505,
         "finished": 1831600,
-        "profit": -754866,
-        "marginPct": -41,
-        "marginPctAt300": -29,
-        "profitAt300": -535302,
+        "profit": -602284,
+        "marginPct": -33,
+        "marginPctAt300": -21,
+        "profitAt300": -382720,
         "salePsf": 482,
         "risk": "Low"
       }
@@ -32388,10 +33756,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 915519,
         "finished": 1212200,
-        "profit": -1394219,
-        "marginPct": -115,
-        "marginPctAt300": -97,
-        "profitAt300": -1174655,
+        "profit": -1241637,
+        "marginPct": -102,
+        "marginPctAt300": -84,
+        "profitAt300": -1022073,
         "salePsf": 319,
         "risk": "Low"
       }
@@ -32543,10 +33911,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1723172,
         "finished": 1212200,
-        "profit": -2258408,
-        "marginPct": -186,
-        "marginPctAt300": -168,
-        "profitAt300": -2038844,
+        "profit": -2105826,
+        "marginPct": -174,
+        "marginPctAt300": -156,
+        "profitAt300": -1886262,
         "salePsf": 319,
         "risk": "Low"
       }
@@ -32698,10 +34066,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 974138,
         "finished": 1212200,
-        "profit": -1456942,
-        "marginPct": -120,
-        "marginPctAt300": -102,
-        "profitAt300": -1237378,
+        "profit": -1304360,
+        "marginPct": -108,
+        "marginPctAt300": -89,
+        "profitAt300": -1084796,
         "salePsf": 319,
         "risk": "Low"
       }
@@ -32852,10 +34220,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 683679,
         "finished": 1235000,
-        "profit": -1124035,
-        "marginPct": -91,
-        "marginPctAt300": -73,
-        "profitAt300": -904471,
+        "profit": -971453,
+        "marginPct": -79,
+        "marginPctAt300": -61,
+        "profitAt300": -751889,
         "salePsf": 325,
         "risk": "Low"
       }
@@ -33006,10 +34374,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 967957,
         "finished": 1360400,
-        "profit": -1306574,
-        "marginPct": -96,
-        "marginPctAt300": -80,
-        "profitAt300": -1087010,
+        "profit": -1153992,
+        "marginPct": -85,
+        "marginPctAt300": -69,
+        "profitAt300": -934428,
         "salePsf": 358,
         "risk": "Low"
       }
@@ -33160,10 +34528,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1224599,
         "finished": 1360400,
-        "profit": -1581181,
-        "marginPct": -116,
-        "marginPctAt300": -100,
-        "profitAt300": -1361617,
+        "profit": -1428599,
+        "marginPct": -105,
+        "marginPctAt300": -89,
+        "profitAt300": -1209035,
         "salePsf": 358,
         "risk": "Low"
       }
@@ -33449,10 +34817,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1114015,
         "finished": 1295800,
-        "profit": -1525518,
-        "marginPct": -118,
-        "marginPctAt300": -101,
-        "profitAt300": -1305954,
+        "profit": -1372936,
+        "marginPct": -106,
+        "marginPctAt300": -89,
+        "profitAt300": -1153372,
         "salePsf": 341,
         "risk": "Low"
       }
@@ -33594,7 +34962,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 87,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1216654,
+        "finished": 2397800,
+        "profit": -433080,
+        "marginPct": -18,
+        "marginPctAt300": -9,
+        "profitAt300": -213516,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16848052A",
@@ -33732,7 +35118,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 87,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Good",
+        "strategy": "4 homes",
+        "land": 2533324,
+        "finished": 17072640,
+        "profit": 7998830,
+        "marginPct": 47,
+        "marginPctAt300": 52,
+        "profitAt300": 8877086,
+        "salePsf": 1404,
+        "risk": "Medium"
+      },
+      "houseComps": {
+        "psf": 1404,
+        "price": 10900000,
+        "lowPsf": 942,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21010035",
@@ -33996,7 +35400,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 86,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1319342,
+        "finished": 2390200,
+        "profit": -550328,
+        "marginPct": -23,
+        "marginPctAt300": -14,
+        "profitAt300": -330764,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 3050000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16773013",
@@ -34134,7 +35556,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 86,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1210317,
+        "finished": 2656200,
+        "profit": -175651,
+        "marginPct": -7,
+        "marginPctAt300": 2,
+        "profitAt300": 43913,
+        "salePsf": 699,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 699,
+        "price": 4750000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16772006",
@@ -34273,7 +35713,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 86,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Good",
+        "strategy": "1 custom home",
+        "land": 1025349,
+        "finished": 3579600,
+        "profit": 917963,
+        "marginPct": 26,
+        "marginPctAt300": 32,
+        "profitAt300": 1137527,
+        "salePsf": 942,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 942,
+        "price": 4850000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16606067",
@@ -34420,10 +35878,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 702425,
         "finished": 1102000,
-        "profit": -1273103,
-        "marginPct": -116,
-        "marginPctAt300": -96,
-        "profitAt300": -1053539,
+        "profit": -1120521,
+        "marginPct": -102,
+        "marginPctAt300": -82,
+        "profitAt300": -900957,
         "salePsf": 290,
         "risk": "Low"
       }
@@ -34573,10 +36031,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 3230961,
         "finished": 1508600,
-        "profit": -3584234,
-        "marginPct": -238,
-        "marginPctAt300": -223,
-        "profitAt300": -3364670,
+        "profit": -3431652,
+        "marginPct": -227,
+        "marginPctAt300": -213,
+        "profitAt300": -3212088,
         "salePsf": 397,
         "risk": "Low"
       }
@@ -34726,10 +36184,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 3913636,
         "finished": 1561800,
-        "profit": -4263093,
-        "marginPct": -273,
-        "marginPctAt300": -259,
-        "profitAt300": -4043529,
+        "profit": -4110511,
+        "marginPct": -263,
+        "marginPctAt300": -249,
+        "profitAt300": -3890947,
         "salePsf": 411,
         "risk": "Low"
       }
@@ -34878,10 +36336,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 337476,
         "finished": 1425000,
-        "profit": -569297,
-        "marginPct": -40,
-        "marginPctAt300": -25,
-        "profitAt300": -349733,
+        "profit": -416715,
+        "marginPct": -29,
+        "marginPctAt300": -14,
+        "profitAt300": -197151,
         "salePsf": 375,
         "risk": "Low"
       }
@@ -35033,10 +36491,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1126976,
         "finished": 1223600,
-        "profit": -1609420,
-        "marginPct": -132,
-        "marginPctAt300": -114,
-        "profitAt300": -1389856,
+        "profit": -1456838,
+        "marginPct": -119,
+        "marginPctAt300": -101,
+        "profitAt300": -1237274,
         "salePsf": 322,
         "risk": "Low"
       }
@@ -35184,10 +36642,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 609912,
         "finished": 1470600,
-        "profit": -816572,
-        "marginPct": -56,
-        "marginPctAt300": -41,
-        "profitAt300": -597008,
+        "profit": -663990,
+        "marginPct": -45,
+        "marginPctAt300": -30,
+        "profitAt300": -444426,
         "salePsf": 387,
         "risk": "Low"
       }
@@ -35335,10 +36793,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 609912,
         "finished": 1470600,
-        "profit": -816572,
-        "marginPct": -56,
-        "marginPctAt300": -41,
-        "profitAt300": -597008,
+        "profit": -663990,
+        "marginPct": -45,
+        "marginPctAt300": -30,
+        "profitAt300": -444426,
         "salePsf": 387,
         "risk": "Low"
       }
@@ -35487,10 +36945,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1030487,
         "finished": 1512400,
-        "profit": -1226041,
-        "marginPct": -81,
-        "marginPctAt300": -67,
-        "profitAt300": -1006477,
+        "profit": -1073459,
+        "marginPct": -71,
+        "marginPctAt300": -56,
+        "profitAt300": -853895,
         "salePsf": 398,
         "risk": "Low"
       }
@@ -35641,10 +37099,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1178933,
         "finished": 1831600,
-        "profit": -1075254,
-        "marginPct": -59,
-        "marginPctAt300": -47,
-        "profitAt300": -855690,
+        "profit": -922672,
+        "marginPct": -50,
+        "marginPctAt300": -38,
+        "profitAt300": -703108,
         "salePsf": 482,
         "risk": "Low"
       }
@@ -35799,10 +37257,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 867007,
         "finished": 1554200,
-        "profit": -1010571,
-        "marginPct": -65,
-        "marginPctAt300": -51,
-        "profitAt300": -791007,
+        "profit": -857989,
+        "marginPct": -55,
+        "marginPctAt300": -41,
+        "profitAt300": -638425,
         "salePsf": 409,
         "risk": "Low"
       }
@@ -35953,10 +37411,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 728997,
         "finished": 1197000,
-        "profit": -1209385,
-        "marginPct": -101,
-        "marginPctAt300": -83,
-        "profitAt300": -989821,
+        "profit": -1056803,
+        "marginPct": -88,
+        "marginPctAt300": -70,
+        "profitAt300": -837239,
         "salePsf": 315,
         "risk": "Low"
       }
@@ -36108,10 +37566,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 966233,
         "finished": 1197000,
-        "profit": -1463227,
-        "marginPct": -122,
-        "marginPctAt300": -104,
-        "profitAt300": -1243663,
+        "profit": -1310645,
+        "marginPct": -109,
+        "marginPctAt300": -91,
+        "profitAt300": -1091081,
         "salePsf": 315,
         "risk": "Low"
       }
@@ -36260,10 +37718,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 656201,
         "finished": 1295800,
-        "profit": -1035657,
-        "marginPct": -80,
-        "marginPctAt300": -63,
-        "profitAt300": -816093,
+        "profit": -883075,
+        "marginPct": -68,
+        "marginPctAt300": -51,
+        "profitAt300": -663511,
         "salePsf": 341,
         "risk": "Low"
       }
@@ -36412,10 +37870,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 676714,
         "finished": 1284400,
-        "profit": -1068664,
-        "marginPct": -83,
-        "marginPctAt300": -66,
-        "profitAt300": -849100,
+        "profit": -916082,
+        "marginPct": -71,
+        "marginPctAt300": -54,
+        "profitAt300": -696518,
         "salePsf": 338,
         "risk": "Low"
       }
@@ -36556,7 +38014,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 84,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 336759,
+        "finished": 1463000,
+        "profit": -398348,
+        "marginPct": -27,
+        "marginPctAt300": -12,
+        "profitAt300": -178784,
+        "salePsf": 385,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 385,
+        "price": 825000,
+        "lowPsf": 336,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21308014C",
@@ -36694,7 +38170,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 84,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 570073,
+        "finished": 1136200,
+        "profit": -964990,
+        "marginPct": -85,
+        "marginPctAt300": -66,
+        "profitAt300": -745426,
+        "salePsf": 299,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 299,
+        "price": 765000,
+        "lowPsf": 256,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21308016C",
@@ -36832,7 +38326,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 84,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 513233,
+        "finished": 1254000,
+        "profit": -789905,
+        "marginPct": -63,
+        "marginPctAt300": -45,
+        "profitAt300": -570341,
+        "salePsf": 330,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 330,
+        "price": 765000,
+        "lowPsf": 256,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "20827743",
@@ -37114,10 +38626,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1129081,
         "finished": 1512400,
-        "profit": -1331537,
-        "marginPct": -88,
-        "marginPctAt300": -74,
-        "profitAt300": -1111973,
+        "profit": -1178955,
+        "marginPct": -78,
+        "marginPctAt300": -63,
+        "profitAt300": -959391,
         "salePsf": 398,
         "risk": "Low"
       }
@@ -37384,7 +38896,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 83,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Good",
+        "strategy": "1 custom home",
+        "land": 1294111,
+        "finished": 3579600,
+        "profit": 630387,
+        "marginPct": 18,
+        "marginPctAt300": 24,
+        "profitAt300": 849951,
+        "salePsf": 942,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 942,
+        "price": 4850000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16768028",
@@ -37522,7 +39052,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 83,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 931257,
+        "finished": 2390200,
+        "profit": -135077,
+        "marginPct": -6,
+        "marginPctAt300": 4,
+        "profitAt300": 84487,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 3325000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16772008",
@@ -37660,7 +39208,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 82,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 798761,
+        "finished": 2397800,
+        "profit": 14066,
+        "marginPct": 1,
+        "marginPctAt300": 10,
+        "profitAt300": 233630,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16501034",
@@ -37784,7 +39350,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 82,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1286334,
+        "finished": 2945000,
+        "profit": 23147,
+        "marginPct": 1,
+        "marginPctAt300": 8,
+        "profitAt300": 242711,
+        "salePsf": 775,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 775,
+        "price": 3325000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16772009",
@@ -37922,7 +39506,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 82,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 841853,
+        "finished": 2397800,
+        "profit": -32043,
+        "marginPct": -1,
+        "marginPctAt300": 8,
+        "profitAt300": 187521,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16772017",
@@ -38060,7 +39662,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 82,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Maybe",
+        "strategy": "1 custom home",
+        "land": 612327,
+        "finished": 2397800,
+        "profit": 213550,
+        "marginPct": 9,
+        "marginPctAt300": 18,
+        "profitAt300": 433114,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "21308007C",
@@ -38198,7 +39818,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 81,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 539704,
+        "finished": 1254000,
+        "profit": -818229,
+        "marginPct": -65,
+        "marginPctAt300": -48,
+        "profitAt300": -598665,
+        "salePsf": 330,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 330,
+        "price": 765000,
+        "lowPsf": 256,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16773011",
@@ -38336,7 +39974,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 81,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1214049,
+        "finished": 2656200,
+        "profit": -179644,
+        "marginPct": -7,
+        "marginPctAt300": 2,
+        "profitAt300": 39920,
+        "salePsf": 699,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 699,
+        "price": 4750000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16773012",
@@ -38474,7 +40130,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 81,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1213512,
+        "finished": 2656200,
+        "profit": -179070,
+        "marginPct": -7,
+        "marginPctAt300": 2,
+        "profitAt300": 40494,
+        "salePsf": 699,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 699,
+        "price": 4750000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16515028",
@@ -38611,7 +40285,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 80,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 965318,
+        "finished": 1098200,
+        "profit": -1424762,
+        "marginPct": -130,
+        "marginPctAt300": -110,
+        "profitAt300": -1205198,
+        "salePsf": 289,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 289,
+        "price": 1571900,
+        "lowPsf": 215,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16772011",
@@ -38737,7 +40429,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 80,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Good",
+        "strategy": "1 custom home",
+        "land": 843812,
+        "finished": 3579600,
+        "profit": 1112207,
+        "marginPct": 31,
+        "marginPctAt300": 37,
+        "profitAt300": 1331771,
+        "salePsf": 942,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 942,
+        "price": 4850000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16772018",
@@ -38875,7 +40585,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 80,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Maybe",
+        "strategy": "1 custom home",
+        "land": 616865,
+        "finished": 2397800,
+        "profit": 208694,
+        "marginPct": 9,
+        "marginPctAt300": 18,
+        "profitAt300": 428258,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16772016",
@@ -39001,7 +40729,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 80,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Maybe",
+        "strategy": "1 custom home",
+        "land": 617536,
+        "finished": 2390200,
+        "profit": 200604,
+        "marginPct": 8,
+        "marginPctAt300": 18,
+        "profitAt300": 420168,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 2235000,
+        "lowPsf": 377,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16772019",
@@ -39139,7 +40885,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-16",
       "peakScore": 80,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Maybe",
+        "strategy": "1 custom home",
+        "land": 622503,
+        "finished": 2397800,
+        "profit": 202662,
+        "marginPct": 8,
+        "marginPctAt300": 18,
+        "profitAt300": 422226,
+        "salePsf": 631,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 631,
+        "price": 3325000,
+        "lowPsf": 624,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16768062",
@@ -39320,8 +41084,26 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-14",
       "peakScore": 103,
-      "verdict": null,
-      "stale": true
+      "verdict": {
+        "label": "Maybe",
+        "strategy": "1 custom home",
+        "land": 767075,
+        "finished": 2371200,
+        "profit": 22168,
+        "marginPct": 1,
+        "marginPctAt300": 10,
+        "profitAt300": 241732,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "stale": true,
+      "houseComps": {
+        "psf": 624,
+        "price": 1659000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16657073",
@@ -39498,8 +41280,26 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-14",
       "peakScore": 103,
-      "verdict": null,
-      "stale": true
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 928204,
+        "finished": 2371200,
+        "profit": -150240,
+        "marginPct": -6,
+        "marginPctAt300": 3,
+        "profitAt300": 69324,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "stale": true,
+      "houseComps": {
+        "psf": 624,
+        "price": 1659000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16811019A",
@@ -39675,8 +41475,26 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-14",
       "peakScore": 103,
-      "verdict": null,
-      "stale": true
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1044189,
+        "finished": 2390200,
+        "profit": -255914,
+        "marginPct": -11,
+        "marginPctAt300": -2,
+        "profitAt300": -36350,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "stale": true,
+      "houseComps": {
+        "psf": 629,
+        "price": 3325000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16770040",
@@ -39858,8 +41676,26 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-14",
       "peakScore": 102,
-      "verdict": null,
-      "stale": true
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1031054,
+        "finished": 2371200,
+        "profit": -260290,
+        "marginPct": -11,
+        "marginPctAt300": -2,
+        "profitAt300": -40726,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "stale": true,
+      "houseComps": {
+        "psf": 624,
+        "price": 1659000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16768046",
@@ -40031,8 +41867,26 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-14",
       "peakScore": 101,
-      "verdict": null,
-      "stale": true
+      "verdict": {
+        "label": "Maybe",
+        "strategy": "1 custom home",
+        "land": 762509,
+        "finished": 2371200,
+        "profit": 27053,
+        "marginPct": 1,
+        "marginPctAt300": 10,
+        "profitAt300": 246617,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "stale": true,
+      "houseComps": {
+        "psf": 624,
+        "price": 1659000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16768055",
@@ -40210,8 +42064,26 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-14",
       "peakScore": 101,
-      "verdict": null,
-      "stale": true
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 829865,
+        "finished": 2371200,
+        "profit": -45018,
+        "marginPct": -2,
+        "marginPctAt300": 7,
+        "profitAt300": 174546,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "stale": true,
+      "houseComps": {
+        "psf": 624,
+        "price": 1659000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16768052",
@@ -40348,8 +42220,26 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-05",
       "lastSeen": "2026-10-14",
       "peakScore": 97,
-      "verdict": null,
-      "stale": true
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 775022,
+        "finished": 2371200,
+        "profit": 13664,
+        "marginPct": 1,
+        "marginPctAt300": 10,
+        "profitAt300": 233228,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "stale": true,
+      "houseComps": {
+        "psf": 624,
+        "price": 1659000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16643029",
@@ -40497,10 +42387,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 351838,
         "finished": 1679600,
-        "profit": -337703,
-        "marginPct": -20,
-        "marginPctAt300": -7,
-        "profitAt300": -118139,
+        "profit": -185121,
+        "marginPct": -11,
+        "marginPctAt300": 2,
+        "profitAt300": 34443,
         "salePsf": 442,
         "risk": "Low"
       },
@@ -40643,10 +42533,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 562824,
         "finished": 839800,
-        "profit": -1378064,
-        "marginPct": -164,
-        "marginPctAt300": -138,
-        "profitAt300": -1158500,
+        "profit": -1225482,
+        "marginPct": -146,
+        "marginPctAt300": -120,
+        "profitAt300": -1005918,
         "salePsf": 221,
         "risk": "Low"
       },
@@ -40838,10 +42728,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 384225,
         "finished": 1508600,
-        "profit": -538227,
-        "marginPct": -36,
-        "marginPctAt300": -21,
-        "profitAt300": -318663,
+        "profit": -385645,
+        "marginPct": -26,
+        "marginPctAt300": -11,
+        "profitAt300": -166081,
         "salePsf": 397,
         "risk": "Low"
       },
@@ -40992,10 +42882,10 @@ window.PHX_LAND_LEADS = {
         "strategy": "1 custom home",
         "land": 1204575,
         "finished": 1398400,
-        "profit": -1522895,
-        "marginPct": -109,
-        "marginPctAt300": -93,
-        "profitAt300": -1303331,
+        "profit": -1370313,
+        "marginPct": -98,
+        "marginPctAt300": -82,
+        "profitAt300": -1150749,
         "salePsf": 368,
         "risk": "Low"
       },
@@ -41179,7 +43069,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-10",
       "peakScore": 85,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 981263,
+        "finished": 2371200,
+        "profit": -207013,
+        "marginPct": -9,
+        "marginPctAt300": 1,
+        "profitAt300": 12551,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 624,
+        "price": 1659000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16770018",
@@ -41353,7 +43261,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-10",
       "peakScore": 84,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 925525,
+        "finished": 2390200,
+        "profit": -128944,
+        "marginPct": -5,
+        "marginPctAt300": 4,
+        "profitAt300": 90620,
+        "salePsf": 629,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 629,
+        "price": 3325000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16771075",
@@ -41532,7 +43458,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-10",
       "peakScore": 83,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Maybe",
+        "strategy": "1 custom home",
+        "land": 747958,
+        "finished": 2371200,
+        "profit": 42623,
+        "marginPct": 2,
+        "marginPctAt300": 11,
+        "profitAt300": 262187,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 624,
+        "price": 1659000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     },
     {
       "apn": "16768058",
@@ -41706,7 +43650,25 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-10",
       "peakScore": 82,
       "stale": true,
-      "verdict": null
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1039758,
+        "finished": 2371200,
+        "profit": -269603,
+        "marginPct": -11,
+        "marginPctAt300": -2,
+        "profitAt300": -50039,
+        "salePsf": 624,
+        "risk": "Low"
+      },
+      "houseComps": {
+        "psf": 624,
+        "price": 1659000,
+        "lowPsf": 222,
+        "n": 5,
+        "radiusMi": 1
+      }
     }
   ],
   "history": [

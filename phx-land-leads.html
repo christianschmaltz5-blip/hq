@@ -13,6 +13,9 @@
 #vacantMap, #teardownMap{height:calc(100vh - 130px); min-height:560px; border-radius:var(--radius-sm); border:1px solid var(--card-border);}
 .card.collapsed > :not(.card-head){display:none !important}
 .card.collapsed .card-head{margin-bottom:0}
+.tabbar{position:sticky; top:var(--topbar-h); z-index:100; display:flex; gap:6px; flex-wrap:wrap; padding:8px 0; margin:0 0 16px; background:var(--bg,#f1f2f5); border-bottom:1px solid var(--card-border);}
+.tabbar button{border:1px solid var(--card-border); background:#fff; border-radius:8px; padding:8px 14px; font:600 13px Inter,sans-serif; cursor:pointer;}
+.tabbar button.on{background:#3f6fb0; color:#fff; border-color:#3f6fb0;}
 .min-btn{margin-left:auto; border:1px solid var(--card-border); background:#fff; border-radius:6px; width:28px; height:28px; cursor:pointer; font-size:18px; line-height:1; color:var(--text-soft); padding:0}
 .min-btn:hover{background:#f1f3f7}
 .comps-split{display:flex; gap:22px; flex-wrap:wrap}
@@ -154,29 +157,39 @@
         <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         <span class="label">Phoenix Permit Tracker</span>
       </a>
-      <a class="nav-item" href="phx-land-leads.html#top-profit">
-        <svg class="icon" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
-        <span class="label">Top Profit Opportunities</span>
+      <div class="nav-label">Land Leads</div>
+      <a class="nav-item active" href="#ranked">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <span class="label">Ranked Leads</span>
       </a>
-      <a class="nav-item" href="phx-land-leads.html#max-offer">
-        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h4a1.5 1.5 0 0 1 0 3h-3a1.5 1.5 0 0 0 0 3h4"/></svg>
-        <span class="label">Max Offer (Sell to Builder)</span>
-      </a>
-      <a class="nav-item" href="phx-land-leads.html#home-calc">
-        <svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
-        <span class="label">Custom Home Calculator</span>
-      </a>
-      <a class="nav-item" href="phx-land-leads.html#maps">
+      <a class="nav-item" href="#maps">
         <svg class="icon" viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>
         <span class="label">Maps</span>
       </a>
-      <a class="nav-item active" href="phx-land-leads.html">
-        <svg class="icon" viewBox="0 0 24 24"><path d="M12 2 3 8l9 6 9-6-9-6z"/><path d="M3 16l9 6 9-6"/><path d="M3 12l9 6 9-6"/></svg>
-        <span class="label">North Phoenix Land Leads</span>
+      <a class="nav-item" href="#home-calc">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+        <span class="label">Custom Home Calculator</span>
       </a>
-      <a class="nav-item" href="#ranked">
+      <div class="nav-label">More</div>
+      <a class="nav-item" href="#top-profit">
         <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <span class="label">Ranked Leads</span>
+        <span class="label">Top Profit Opportunities</span>
+      </a>
+      <a class="nav-item" href="#max-offer">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <span class="label">Max Offer (Sell to Builder)</span>
+      </a>
+      <a class="nav-item" href="#saved-runs">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <span class="label">Saved Numbers</span>
+      </a>
+      <a class="nav-item" href="#bids">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <span class="label">Compare Builder Quotes</span>
+      </a>
+      <a class="nav-item" href="#call-scripts">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <span class="label">Call Scripts</span>
       </a>
       <a class="nav-item" href="#traced">
         <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -206,11 +219,108 @@
 
     <main class="page">
       <h1 class="page-title">North Phoenix Land Leads</h1>
+      <details style="margin:0 0 14px;"><summary style="cursor:pointer;font-size:13px;color:var(--text-soft);">About this page</summary>
       <p class="page-sub">Vacant land and underused-lot parcels (big lot, small house — condition unverified) in North Phoenix zip codes, scored on public zoning/General-Plan/rezoning-activity/floodplain signals — built to surface land <b>before</b> it's an obvious, already-entitled development deal. Ranked, not verified: every lead here still needs a human to confirm it's actually for sale and pull the real price.</p>
 
       <div class="methodology-note" id="methodology-note"></div>
 
+      </details>
+
       <div class="meta-row" id="meta-row"></div>
+
+      <div class="card" id="ranked">
+        <div class="card-head">
+          <h2>Ranked Leads</h2>
+          <span class="card-sub">Click a lead to see the full analysis + run it through the underwriting calculator.</span>
+        </div>
+        <div class="filter-row">
+          <select class="filter-input" id="typeFilter" style="width:160px;">
+            <option value="all">All types</option>
+            <option value="vacant">🟢 Vacant land only</option>
+            <option value="improved">🟠 Underused lots only</option>
+          </select>
+          <select class="filter-input" id="landUseFilter" style="width:170px;">
+            <option value="all">All zoning (res + comm)</option>
+            <option value="residential">🏠 Residential only</option>
+            <option value="commercial">🏢 Commercial only</option>
+            <option value="industrial">🏭 Industrial only</option>
+          </select>
+          <input class="filter-input" id="addrSearch" type="text" placeholder="Search address or owner…" style="flex:1; min-width:200px;">
+          <input class="filter-input" id="minValue" type="number" placeholder="Min assessed value ($)" style="width:180px;">
+          <input class="filter-input" id="maxValue" type="number" placeholder="Max assessed value ($)" style="width:180px;">
+          <input type="checkbox" id="hotOnly"> <label for="hotOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">🔥 Hot deals only (score ≥ 50)</label>
+          <input type="checkbox" id="showGood"> <label for="showGood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Show leads I tagged "Good house"</label>
+          <input type="checkbox" id="estateOnly"> <label for="estateOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Estate-owned only</label>
+          <input type="checkbox" id="pencilOnly"> <label for="pencilOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;" title="Land at the county comps value, sale price from nearby house sales, costs from the Custom Home Calculator">💰 Only leads that hit my profit target</label>
+          <input type="checkbox" id="hideFlood"> <label for="hideFlood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Hide floodplain-constrained</label>
+        </div>
+        <div style="font-size:11px; color:var(--text-faint); margin:-10px 0 14px;">Price filter uses county assessed value — no real asking price is available in any public feed, so treat this as a rough size filter, not a real price range.</div>
+        <div id="leads-list"></div>
+      </div>
+
+      <div class="map-pair" id="maps">
+        <div class="card">
+          <div class="card-head"><h2>Vacant Land Map</h2>
+            <span style="font-size:12px;color:var(--text-faint);"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3f7a57;margin-right:5px;"></span>Vacant land</span><span style="font-size:11px;color:var(--text-faint);margin-left:10px;">Fill: <b style="color:#2e9e57;">green</b> = profit, <b style="color:#d64545;">red</b> = loss on numbers you ran, white = not run</span>
+          </div>
+          <div id="vacantMap"></div>
+          <div class="card">
+          <div class="card-head"><h2>Underused Lot Map</h2>
+            <span style="font-size:12px;color:var(--text-faint);"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#b3831f;border:1px dashed #8f6418;margin-right:5px;"></span>Underused lot</span><span style="font-size:11px;color:var(--text-faint);margin-left:10px;">Fill: <b style="color:#2e9e57;">green</b> = profit, <b style="color:#d64545;">red</b> = loss on numbers you ran, white = not run</span>
+          </div>
+          <div id="teardownMap"></div>
+        </div>
+      </div>
+      </div>
+
+      <div class="card" id="home-calc" style="border:2px solid #3f6fb0; background:#f5f8fd;">
+        <div class="card-head">
+          <h2>🏠 Custom Home Calculator — Build It Yourself</h2>
+          <span class="card-sub">For when you buy the land and build the homes. Pick a lead (or type your own numbers) and it tells you the sale price each home needs to hit, and the most you can pay for the land. <b>The cost numbers start as placeholders — replace them with real quotes.</b></span>
+        </div>
+        <div class="filter-row">
+          <label style="font-size:12.5px;color:var(--text-soft);">Pick a lead (type an address)
+            <input class="filter-input" id="hcLead" list="hcLeads" placeholder="e.g. 25804 N 5TH AVE" style="width:230px;"></label>
+          <datalist id="hcLeads"></datalist>
+          <label style="font-size:12.5px;color:var(--text-soft);">Plan
+            <select class="filter-input" id="hcMode" style="width:200px;"><option value="sale">Build &amp; sell homes</option><option value="rent">Build &amp; hold: rental (2–4 units)</option></select></label>
+          <span id="hcAnchor" style="font-size:12px;color:var(--text-soft);align-self:center;max-width:520px;"></span>
+        </div>
+        <div id="hcHouse" style="font-size:12.5px;color:var(--text-soft);margin:-4px 0 10px;"></div>
+        <div class="filter-row">
+          <label style="font-size:12.5px;color:var(--text-soft);">Land price, total ($)<input class="filter-input" id="hcLand" type="number" value="596000" style="width:110px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Homes you can fit<input class="filter-input" id="hcLots" type="number" value="2" style="width:60px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Home size (sf)<input class="filter-input" id="hcSf" type="number" value="3800" style="width:80px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Expected sale price ($/sf)<input class="filter-input" id="hcPrice" type="number" value="400" style="width:80px;"></label>
+        </div>
+        <div class="filter-row">
+          <label style="font-size:12.5px;color:var(--text-soft);">Build cost ($/sf) <i>placeholder</i><input class="filter-input" id="hcHard" type="number" value="275" style="width:80px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Site work per lot ($) <i>placeholder</i><input class="filter-input" id="hcSite" type="number" value="10000" style="width:100px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Design/permits/fees (% of build)<input class="filter-input" id="hcSoft" type="number" value="8" style="width:60px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Loan interest (% of total cost)<input class="filter-input" id="hcFin" type="number" value="7" style="width:60px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Selling costs (% of sale)<input class="filter-input" id="hcSell" type="number" value="3" style="width:60px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Profit target (% of sale)<input class="filter-input" id="hcProfit" type="number" value="10" style="width:60px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Open offer at (% of max)<input class="filter-input" id="hcOpen" type="number" value="84" style="width:60px;"></label>
+        </div>
+        <div id="hcRentRow" style="display:none;">
+          <div class="filter-row">
+            <label style="font-size:12.5px;color:var(--text-soft);">Units in the building<input class="filter-input" id="hcUnits" type="number" value="3" style="width:60px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Size per unit (sf)<input class="filter-input" id="hcUnitSf" type="number" value="1200" style="width:80px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Rent per unit ($/mo) <i>placeholder</i><input class="filter-input" id="hcRent" type="number" value="2600" style="width:90px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Vacancy (%)<input class="filter-input" id="hcVac" type="number" value="6" style="width:60px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Operating costs (% of rent) <i>placeholder</i><input class="filter-input" id="hcOpex" type="number" value="40" style="width:60px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Value cap rate (%) <i>placeholder</i><input class="filter-input" id="hcCap" type="number" value="5.5" step="0.1" style="width:70px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Long-term loan (% of value)<input class="filter-input" id="hcLtv" type="number" value="70" style="width:60px;"></label>
+            <label style="font-size:12.5px;color:var(--text-soft);">Loan rate (%)<input class="filter-input" id="hcRate" type="number" value="6.75" step="0.05" style="width:70px;"></label>
+          </div>
+          <div id="hcRentHint" style="font-size:12.5px;color:var(--text-soft);margin:-4px 0 10px;"></div>
+        </div>
+        <div id="hcOut" style="margin-top:6px;font-size:13.5px;line-height:1.6;"></div>
+        <div style="margin-top:8px;"><button class="mail-btn" type="button" onclick="saveRun()">💾 Save these numbers</button> <span id="hcSaved" style="font-size:12px;color:var(--text-soft);"></span></div>
+        <div style="font-size:11px; color:var(--text-faint); margin-top:10px; line-height:1.55;">
+          <b>How it works:</b> per home, cost = build + design/permit fees + site work + its share of the land, plus loan interest. Each home must sell for enough to cover that cost, the selling costs, and your profit. "Most you can pay" works that backward from your expected sale price. Build cost, site work and sale price are the three numbers that matter most — get real local quotes and recent custom-home sales before trusting the answer. Not an appraisal; check zoning, lot-split rules, water/sewer and access first.
+        </div>
+      </div>
 
       <div class="card" id="top-profit" style="border:2px solid #b8860b; background:#fffaf0;">
         <div class="card-head">
@@ -258,99 +368,6 @@
         <div style="font-size:11px; color:var(--text-faint); margin-top:10px; line-height:1.55;">
           <b>How it works:</b> nearby new-build homes sold for about the "home value" shown. A builder pays roughly 25% of that for the lot (a rule of thumb — confirm with a real builder, it moves every number). Max offer = that lot price minus your profit and closing costs (and demolition, if the lot has an old building). Home values are medians of recent County Assessor sales, not appraisals. Lot splits need city approval.
         </div>
-      </div>
-
-      <div class="card" id="home-calc" style="border:2px solid #3f6fb0; background:#f5f8fd;">
-        <div class="card-head">
-          <h2>🏠 Custom Home Calculator — Build It Yourself</h2>
-          <span class="card-sub">For when you buy the land and build the homes. Pick a lead (or type your own numbers) and it tells you the sale price each home needs to hit, and the most you can pay for the land. <b>The cost numbers start as placeholders — replace them with real quotes.</b></span>
-        </div>
-        <div class="filter-row">
-          <label style="font-size:12.5px;color:var(--text-soft);">Pick a lead (type an address)
-            <input class="filter-input" id="hcLead" list="hcLeads" placeholder="e.g. 25804 N 5TH AVE" style="width:230px;"></label>
-          <datalist id="hcLeads"></datalist>
-          <label style="font-size:12.5px;color:var(--text-soft);">Plan
-            <select class="filter-input" id="hcMode" style="width:200px;"><option value="sale">Build &amp; sell homes</option><option value="rent">Build &amp; hold: rental (2–4 units)</option></select></label>
-          <span id="hcAnchor" style="font-size:12px;color:var(--text-soft);align-self:center;max-width:520px;"></span>
-        </div>
-        <div id="hcHouse" style="font-size:12.5px;color:var(--text-soft);margin:-4px 0 10px;"></div>
-        <div class="filter-row">
-          <label style="font-size:12.5px;color:var(--text-soft);">Land price, total ($)<input class="filter-input" id="hcLand" type="number" value="596000" style="width:110px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Homes you can fit<input class="filter-input" id="hcLots" type="number" value="2" style="width:60px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Home size (sf)<input class="filter-input" id="hcSf" type="number" value="3500" style="width:80px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Expected sale price ($/sf)<input class="filter-input" id="hcPrice" type="number" value="400" style="width:80px;"></label>
-        </div>
-        <div class="filter-row">
-          <label style="font-size:12.5px;color:var(--text-soft);">Build cost ($/sf) <i>placeholder</i><input class="filter-input" id="hcHard" type="number" value="325" style="width:80px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Site work per lot ($) <i>placeholder</i><input class="filter-input" id="hcSite" type="number" value="120000" style="width:100px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Design/permits/fees (% of build)<input class="filter-input" id="hcSoft" type="number" value="12" style="width:60px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Loan interest (% of total cost)<input class="filter-input" id="hcFin" type="number" value="7" style="width:60px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Selling costs (% of sale)<input class="filter-input" id="hcSell" type="number" value="6" style="width:60px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Profit target (% of sale)<input class="filter-input" id="hcProfit" type="number" value="15" style="width:60px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Open offer at (% of max)<input class="filter-input" id="hcOpen" type="number" value="75" style="width:60px;"></label>
-        </div>
-        <div id="hcRentRow" style="display:none;">
-          <div class="filter-row">
-            <label style="font-size:12.5px;color:var(--text-soft);">Units in the building<input class="filter-input" id="hcUnits" type="number" value="3" style="width:60px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);">Size per unit (sf)<input class="filter-input" id="hcUnitSf" type="number" value="1200" style="width:80px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);">Rent per unit ($/mo) <i>placeholder</i><input class="filter-input" id="hcRent" type="number" value="2600" style="width:90px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);">Vacancy (%)<input class="filter-input" id="hcVac" type="number" value="6" style="width:60px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);">Operating costs (% of rent) <i>placeholder</i><input class="filter-input" id="hcOpex" type="number" value="40" style="width:60px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);">Value cap rate (%) <i>placeholder</i><input class="filter-input" id="hcCap" type="number" value="5.5" step="0.1" style="width:70px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);">Long-term loan (% of value)<input class="filter-input" id="hcLtv" type="number" value="70" style="width:60px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);">Loan rate (%)<input class="filter-input" id="hcRate" type="number" value="6.75" step="0.05" style="width:70px;"></label>
-          </div>
-          <div id="hcRentHint" style="font-size:12.5px;color:var(--text-soft);margin:-4px 0 10px;"></div>
-        </div>
-        <div id="hcOut" style="margin-top:6px;font-size:13.5px;line-height:1.6;"></div>
-        <div style="margin-top:8px;"><button class="mail-btn" type="button" onclick="saveRun()">💾 Save these numbers</button> <span id="hcSaved" style="font-size:12px;color:var(--text-soft);"></span></div>
-        <div style="font-size:11px; color:var(--text-faint); margin-top:10px; line-height:1.55;">
-          <b>How it works:</b> per home, cost = build + design/permit fees + site work + its share of the land, plus loan interest. Each home must sell for enough to cover that cost, the selling costs, and your profit. "Most you can pay" works that backward from your expected sale price. Build cost, site work and sale price are the three numbers that matter most — get real local quotes and recent custom-home sales before trusting the answer. Not an appraisal; check zoning, lot-split rules, water/sewer and access first.
-        </div>
-      </div>
-
-      <div class="card" id="ranked">
-        <div class="card-head">
-          <h2>Ranked Leads</h2>
-          <span class="card-sub">Click a lead to see the full analysis + run it through the underwriting calculator.</span>
-        </div>
-        <div class="filter-row">
-          <select class="filter-input" id="typeFilter" style="width:160px;">
-            <option value="all">All types</option>
-            <option value="vacant">🟢 Vacant land only</option>
-            <option value="improved">🟠 Underused lots only</option>
-          </select>
-          <select class="filter-input" id="landUseFilter" style="width:170px;">
-            <option value="all">All zoning (res + comm)</option>
-            <option value="residential">🏠 Residential only</option>
-            <option value="commercial">🏢 Commercial only</option>
-            <option value="industrial">🏭 Industrial only</option>
-          </select>
-          <input class="filter-input" id="addrSearch" type="text" placeholder="Search address or owner…" style="flex:1; min-width:200px;">
-          <input class="filter-input" id="minValue" type="number" placeholder="Min assessed value ($)" style="width:180px;">
-          <input class="filter-input" id="maxValue" type="number" placeholder="Max assessed value ($)" style="width:180px;">
-          <input type="checkbox" id="hotOnly"> <label for="hotOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">🔥 Hot deals only (score ≥ 50)</label>
-          <input type="checkbox" id="showGood"> <label for="showGood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Show leads I tagged "Good house"</label>
-          <input type="checkbox" id="estateOnly"> <label for="estateOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Estate-owned only</label>
-          <input type="checkbox" id="hideFlood"> <label for="hideFlood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Hide floodplain-constrained</label>
-        </div>
-        <div style="font-size:11px; color:var(--text-faint); margin:-10px 0 14px;">Price filter uses county assessed value — no real asking price is available in any public feed, so treat this as a rough size filter, not a real price range.</div>
-        <div id="leads-list"></div>
-      </div>
-
-      <div class="map-pair" id="maps">
-        <div class="card">
-          <div class="card-head"><h2>Vacant Land Map</h2>
-            <span style="font-size:12px;color:var(--text-faint);"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3f7a57;margin-right:5px;"></span>Vacant land</span><span style="font-size:11px;color:var(--text-faint);margin-left:10px;">Fill: <b style="color:#2e9e57;">green</b> = profit, <b style="color:#d64545;">red</b> = loss on numbers you ran, white = not run</span>
-          </div>
-          <div id="vacantMap"></div>
-          <div class="card">
-          <div class="card-head"><h2>Underused Lot Map</h2>
-            <span style="font-size:12px;color:var(--text-faint);"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#b3831f;border:1px dashed #8f6418;margin-right:5px;"></span>Underused lot</span><span style="font-size:11px;color:var(--text-faint);margin-left:10px;">Fill: <b style="color:#2e9e57;">green</b> = profit, <b style="color:#d64545;">red</b> = loss on numbers you ran, white = not run</span>
-          </div>
-          <div id="teardownMap"></div>
-        </div>
-      </div>
       </div>
 
       <div class="card" id="saved-runs" style="border:2px solid #3f6fb0;">
@@ -1201,8 +1218,9 @@ function leadCard(lead, idx){
 let currentLeads = D.leads || [];
 
 function renderLeads(leads){
+  const cap = window.showAllLeads ? leads.length : 25;   // 25 at a time keeps the page short
   document.getElementById('leads-list').innerHTML = leads.length
-    ? leads.map((l,i)=>leadCard(l,i)).join('')
+    ? leads.slice(0, cap).map((l,i)=>leadCard(l,i)).join('') + (leads.length > cap ? `<button class="mail-btn" style="margin:10px 0;" onclick="window.showAllLeads=true;applyFilters()">Show all ${leads.length} leads</button>` : '')
     : `<div class="empty-state">No leads match.</div>`;
 }
 renderLeads(currentLeads);
@@ -1779,6 +1797,10 @@ function applyFilters(){
   if(hideFlood) base = base.filter(l => !l.inFloodplain);
   if(!document.getElementById('showGood').checked) base = base.filter(l => loadCondition()[l.apn] !== 'good');
   if(hotOnly) base = base.filter(l => l.score >= 50);
+  if(document.getElementById('pencilOnly').checked){   // same math as the Custom Home Calculator, run on every lead
+    const tgt = (parseFloat(document.getElementById('hcProfit').value) || 10) / 100;
+    base = base.filter(l => { const p = profitFor(l); return p && p.margin >= tgt; });
+  }
   if(!isNaN(minValue)) base = base.filter(l => (l.assessedValue||0) >= minValue);
   if(!isNaN(maxValue)) base = base.filter(l => (l.assessedValue||0) <= maxValue);
 
@@ -1798,6 +1820,8 @@ document.getElementById('hideFlood').addEventListener('change', applyFilters);
 document.getElementById('showGood').addEventListener('change', applyFilters);
 document.getElementById('estateOnly').addEventListener('change', applyFilters);
 document.getElementById('hotOnly').addEventListener('change', applyFilters);
+document.getElementById('pencilOnly').addEventListener('change', applyFilters);
+['hcSf','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit'].forEach(id => document.getElementById(id).addEventListener('change', () => { if(document.getElementById('pencilOnly').checked) applyFilters(); }));
 document.getElementById('minValue').addEventListener('input', applyFilters);
 document.getElementById('maxValue').addEventListener('input', applyFilters);
 
@@ -2250,7 +2274,7 @@ function loadRun(i){
   const r = loadRuns()[i]; if(!r) return;
   document.getElementById('hcLead').value = /^Unnamed/.test(r.name) ? '' : r.name;
   RUN_IDS.forEach(k => { const e = document.getElementById(k); if(r.vals[k] == null) return; e.value = r.vals[k]; e.dispatchEvent(new Event('input')); });
-  document.getElementById('home-calc').scrollIntoView({ behavior: 'smooth' });
+  showTab('calc'); document.getElementById('home-calc').scrollIntoView({ behavior: 'smooth' });
 }
 function delRun(i){ const r = loadRuns(); r.splice(i, 1); storeRuns(r); }
 function renderRuns(){
@@ -2539,25 +2563,31 @@ function drawMaps(keepView){  // keepView: recolor only, don't jump the map back
 }
 applyFilters();  // draws the maps with the same filters as the list (discarded / contacted / 'Good house' hidden)
 
-// ── Minimize (−) button on every card, maps included ───────────────────
-(function minInit(){
-  let saved = {};
-  try{ saved = JSON.parse(localStorage.getItem('collapsedCards') || '{}'); }catch(e){}
-  document.querySelectorAll('main .card').forEach(card => {
-    const head = card.querySelector(':scope > .card-head'); if(!head) return;
-    const key = card.id || (head.querySelector('h2') || {}).textContent || '';
-    const btn = document.createElement('button');
-    btn.className = 'min-btn'; btn.type = 'button';
-    const set = c => { card.classList.toggle('collapsed', c); btn.textContent = c ? '+' : '−'; btn.title = c ? 'Expand' : 'Minimize'; };
-    set(!!saved[key]);
-    btn.addEventListener('click', () => {
-      const c = !card.classList.contains('collapsed'); set(c);
-      if(c) saved[key] = 1; else delete saved[key];
-      try{ localStorage.setItem('collapsedCards', JSON.stringify(saved)); }catch(e){}
-      if(!c){ [vacantMapInst, teardownMapInst].forEach(m => m && m.map.invalidateSize()); drawMaps(); }
-    });
-    head.appendChild(btn);
-  });
+// ── Tabs: one section at a time, no minimizing ───────────────────────────
+(function tabsInit(){
+  const TABS = [['leads','📋 Leads'],['maps','🗺 Maps'],['calc','🏠 Calculator'],['money','💰 Profit & Offers'],['outreach','✉ Outreach'],['tracking','📞 Tracking']];
+  const BY_ID = { ranked:'leads', maps:'maps', 'home-calc':'calc', 'saved-runs':'calc', bids:'calc', 'top-profit':'money', 'max-offer':'money', 'call-scripts':'outreach', traced:'tracking', contacted:'tracking', discarded:'tracking' };
+  const BY_H2 = { 'Mail Letter Template':'outreach', 'Skip-Trace Priority':'tracking', 'Scan History':'tracking' };
+  const secs = [...document.querySelectorAll('main.page > .card, main.page > .map-pair')];
+  secs.forEach(el => { el.classList.remove('collapsed'); el.dataset.tab = BY_ID[el.id] || BY_H2[(el.querySelector('h2') || {}).textContent] || 'tracking'; });
+  const bar = document.createElement('div'); bar.className = 'tabbar';
+  bar.innerHTML = TABS.map(([k, t]) => `<button type="button" data-t="${k}">${t}</button>`).join('');
+  document.getElementById('meta-row').after(bar);
+  window.showTab = function(k){
+    if(!TABS.some(t => t[0] === k)) k = 'leads';
+    secs.forEach(el => { el.style.display = el.dataset.tab === k ? '' : 'none'; });
+    bar.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.t === k));
+    try{ localStorage.setItem('phxTab', k); }catch(e){}
+    if(k === 'maps'){ [vacantMapInst, teardownMapInst].forEach(m => m && m.map.invalidateSize()); drawMaps(); }
+  };
+  bar.addEventListener('click', e => { const b = e.target.closest('button'); if(b){ showTab(b.dataset.t); window.scrollTo(0, 0); } });
+  document.querySelectorAll('.sidebar-scroll a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const t = document.getElementById(a.getAttribute('href').slice(1)); if(!t) return;
+    e.preventDefault(); showTab(t.dataset.tab); t.scrollIntoView({ behavior: 'smooth' });
+  }));
+  let start = 'leads'; try{ start = localStorage.getItem('phxTab') || 'leads'; }catch(e){}
+  const h = document.getElementById(location.hash.slice(1)); if(h && h.dataset.tab) start = h.dataset.tab;
+  showTab(start);
 })();
 </script>
 </body>
