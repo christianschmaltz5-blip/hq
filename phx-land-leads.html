@@ -962,7 +962,7 @@ function houseCompsHtml(lead){
   const title = '<div class="comps-title">House Comps — recent home sales nearby</div>';
   if(!h) return `<div class="comps-section">${title}<div class="comps-empty">Loading from the county…</div></div>`;
   if(!h.rows.length){
-    const sv = lead.houseComps, saved = sv ? `<div class="valuation-box"><div class="valuation-likely">From this morning's scan: <b>${money(sv.psf)}/sf</b> median · <b>${money(sv.price)}</b> per home (${sv.n} sales within ${sv.radiusMi} mi)</div></div>` : '';
+    const sv = lead.houseComps, saved = sv ? `<div class="valuation-box"><div class="valuation-likely">From this morning's scan: <b>${money(sv.psf)}/sf</b> (2nd-highest of ${sv.n}) · <b>${money(sv.price)}</b> median per home (${sv.n} sales within ${sv.radiusMi} mi)</div></div>` : '';
     return `<div class="comps-section">${title}${saved}<div class="comps-empty">${esc(h.error ? 'The county site is not answering right now (' + h.error + ').' : 'No home sales found within 3 miles in the last 2 years.')} ${h.error ? `<button class="mail-btn" onclick="retryHouseComps('${esc(lead.apn)}')">Try again</button>` : ''}</div></div>`;
   }
   const rows = h.rows.map(r => `<tr><td>${esc(r.address)}</td><td>${r.dist.toFixed(2)} mi</td><td>${esc(r.sold)}</td><td><b>${money(r.price)}</b></td>
@@ -2128,7 +2128,7 @@ function profitFor(l, extraHard, psfOverride, o){
     const profit = finished * (1 - sell) - cost;
     if(!best || profit > best.profit) best = { n, finished, cost, profit, land, margin: finished ? profit / finished : 0 };
   }
-  let r = (landOK ? 0 : 2) + (nb.n < (l.houseComps ? 4 : 6) ? 1 : 0) + (nb.radiusMi >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0);
+  let r = (landOK ? 0 : 2) + (nb.n < (l.houseComps ? 4 : 6) ? 1 : 0) + (nb.radiusMi >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : l.floodKnown === false ? 1 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0);
   best.risk = r <= 1 ? 'Low' : r <= 3 ? 'Medium' : 'High';
   best.adj = best.profit > 0 ? best.profit * ({ Low: .85, Medium: .65, High: .4 }[best.risk]) : best.profit;
   best.strategy = best.n > 1 ? `Lot split → ${best.n} custom homes${sp.known ? '' : ' (zoning min lot unknown — assumed)'}` : 'Custom home';
@@ -2206,6 +2206,9 @@ function intakeHtml(l){
   const flags = [];
   if(l.landUseClass && l.landUseClass !== 'residential') flags.push(`The county codes this parcel ${l.landUseClass}, which may not match its zoning.`);
   if(l.inFloodplain) flags.push('In a mapped floodplain (' + esc(l.floodZone || 'zone ?') + ').');
+  else if(l.floodKnown === false) flags.push('Flood status UNKNOWN: the FEMA lookup failed, so "not in a floodplain" is unconfirmed.');
+  const lv = l.valuation, landV = lv && lv.mostLikelyValue && !lv.unreliable ? lv.mostLikelyValue : (l.assessedValue || 0);
+  if(l.salePrice && landV && l.salePrice > landV * 1.5) flags.push('Last sold ' + money(l.salePrice) + (l.saleDate ? ' (' + esc(l.saleDate) + ')' : '') + ' vs the ' + money(landV) + ' land value the model uses: land cost may be understated.');
   if(l.rezoningNearby) flags.push(l.rezoningNearby + ' rezoning(s) nearby: the area is changing.');
   if(l.parcelStatus === 'improved') flags.push('Has a building: demolition counted at ' + money(l.defaultDemoCost || 0) + ' (placeholder).');
   const items = intakeItems().filter(([k]) => (k !== 'split' || sp.n > 1) && (k !== 'demo' || l.parcelStatus === 'improved'));

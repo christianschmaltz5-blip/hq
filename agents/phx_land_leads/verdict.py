@@ -25,7 +25,10 @@ def house_comps(l):
             "geometry": json.dumps({"x": lng, "y": lat, "spatialReference": {"wkid": 4326}}), "geometryType": "esriGeometryPoint",
             "inSR": "4326", "distance": miles * 1609.34, "units": "esriSRUnit_Meter", "spatialRel": "esriSpatialRelIntersects",
             "where": f"SALE_PRICE IS NOT NULL AND SALE_PRICE <> '0' AND PUC LIKE '01%' AND ({years})",
-            "outFields": "SALE_DATE,SALE_PRICE,LAND_SIZE,LIVING_SPACE,CONST_YEAR,LATITUDE,LONGITUDE", "resultRecordCount": 1000})
+            "outFields": "SALE_DATE,SALE_PRICE,LAND_SIZE,LIVING_SPACE,CONST_YEAR,LATITUDE,LONGITUDE,PHYSICAL_ADDRESS", "resultRecordCount": 1000})
+        if r.get("_failed"):
+            print(f"house_comps: county query failed for {l.get('apn')} ({miles} mi); no verdict, not 'no sales'")
+            return None
         rows = [f["attributes"] for f in r.get("features") or []]
         rows = [a for a in rows if _parse_num(a.get("LIVING_SPACE")) >= 1500 and _parse_num(a.get("SALE_PRICE")) >= 150_000]
         if len(rows) >= 10:
@@ -36,13 +39,14 @@ def house_comps(l):
         sold = date(*(int(x) for x in (a["SALE_DATE"].split("/")[2], *a["SALE_DATE"].split("/")[:2])))
         d = _haversine_mi(lat, lng, a["LATITUDE"], a["LONGITUDE"])
         score = d + abs(math.log((lot or 1) / sub_lot)) * 0.7 + (yr - (built or yr - 40)) / 15 + (date.today() - sold).days / 30.4 / 18
-        out.append((score, price, price / sf))
+        out.append((score, price, price / sf, (a.get("PHYSICAL_ADDRESS") or "").split("  ")[0].strip(), a["SALE_DATE"], round(sf)))
     out.sort()
     out = out[:5]
     if not out:
         return None
     return {"psf": round(sorted((t[2] for t in out), reverse=True)[min(1, len(out) - 1)]),   # 2nd-highest: one outlier sale can't set the price
-             "medPsf": round(median(t[2] for t in out)), "price": round(median(t[1] for t in out)), "lowPsf": round(min(t[2] for t in out)), "n": len(out), "radiusMi": miles}
+             "medPsf": round(median(t[2] for t in out)), "price": round(median(t[1] for t in out)), "lowPsf": round(min(t[2] for t in out)), "n": len(out), "radiusMi": miles,
+             "comps": [{"address": t[3], "sold": t[4], "price": round(t[1]), "sf": t[5]} for t in out]}
 
 
 def split_n(l):
@@ -55,8 +59,9 @@ def underwrite(l):
     v = l.get("valuation") or {}
     if l.get("landUseClass") != "residential":
         return None   # residential only (vacant or teardown); commercial is left alone
-    nb = l["houseComps"] = house_comps(l)   # sale price comes from nearby house sales, not new-build-only comps
-    if not nb:
+    hc = l["houseComps"] = house_comps(l)   # sale price comes from nearby house sales first
+    nb = hc or l.get("newBuild")            # same fallback as profitFor() on the page
+    if not nb or not nb.get("psf"):
         return None
     land_ok = bool(v.get("mostLikelyValue") and not v.get("unreliable"))
     land = v["mostLikelyValue"] if land_ok else (l.get("assessedValue") or 0)
@@ -76,14 +81,15 @@ def underwrite(l):
                 best = dict(n=n, finished=finished, profit=profit, margin=profit / finished)
         return best
     cheap, best = run(A["hard"][0]), run(A["hard"][1])   # best = the pricey $325/sf case (conservative)
-    risk = ((0 if land_ok else 2) + (nb["n"] < 4) + (nb.get("radiusMi", 0) >= 3) + 2 * bool(l.get("inFloodplain"))
+    risk = ((0 if land_ok else 2) + (nb.get("n", 0) < (4 if hc else 6)) + (nb.get("radiusMi", 0) >= 3)
+            + (2 if l.get("inFloodplain") else 1 if l.get("floodKnown") is False else 0)
             + ((1 if known else 2) if best["n"] > 1 else 0))
     risk = "Low" if risk <= 1 else "Medium" if risk <= 3 else "High"
     m = best["margin"]
     label = "Good" if m >= A["good"] and risk != "High" else "Maybe" if m >= A["maybe"] or cheap["margin"] >= A["good"] else "Pass"
     return dict(label=label, strategy=f"{best['n']} homes" if best["n"] > 1 else "1 custom home", land=round(land),
-                finished=round(best["finished"]), profit=round(best["profit"]), marginPct=round(m * 100), marginPctAt300=round(cheap["margin"] * 100),
-                profitAt300=round(cheap["profit"]), salePsf=nb["psf"], risk=risk)
+                finished=round(best["finished"]), profit=round(best["profit"]), marginPct=round(m * 100), marginPctAt275=round(cheap["margin"] * 100),
+                profitAt275=round(cheap["profit"]), salePsf=nb["psf"], risk=risk)
 
 
 if __name__ == "__main__":

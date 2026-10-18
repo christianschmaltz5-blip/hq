@@ -27,7 +27,10 @@ else
   echo "--- skip-trace: no SKIPTRACE_API_KEY set, skipping ---"
 fi
 
-python3 agents/phx_land_leads/verdict.py || echo "verdict.py failed, continuing"
+if ! python3 agents/phx_land_leads/verdict.py; then   # don't publish data.js with missing/stale verdicts
+  notify "verdict.py FAILED — nothing pushed. See $LOG"
+  exit 1
+fi
 python3 agents/phx_land_leads/track.py || echo "track.py failed, continuing"
 if ! git diff --quiet -- phx-land-leads/data.js phx-land-leads/history.jsonl || [ -n "$(git ls-files -o --exclude-standard phx-land-leads/history.jsonl)" ]; then
   git add phx-land-leads/data.js phx-land-leads/history.jsonl

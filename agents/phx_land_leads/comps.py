@@ -87,12 +87,15 @@ def _esri_query(params, retries=3):
         try:
             conn.request("POST", _MARICOPA_PATH, body=body, headers=headers)
             data = conn.getresponse().read()
-            return json.loads(data)
+            r = json.loads(data)
+            if "error" in r:
+                r["_failed"] = True
+            return r
         except Exception:
             conn.close()
             _thread_local.conn = None
             if attempt == retries - 1:
-                return {"features": []}
+                return {"features": [], "_failed": True}
             time.sleep(1.0)
 
 

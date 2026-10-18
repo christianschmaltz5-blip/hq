@@ -172,12 +172,15 @@ def esri_query(url, params, retries=3):
         try:
             conn.request("POST", parsed.path, body=body, headers=headers)
             data = conn.getresponse().read()
-            return json.loads(data)
+            r = json.loads(data)
+            if "error" in r:
+                r["_failed"] = True   # Esri reports errors as 200 + {"error": ...}; don't let it read as "no match"
+            return r
         except Exception:
             conn.close()
             _thread_local.conns.pop(parsed.netloc, None)
             if attempt == retries - 1:
-                return {"features": []}
+                return {"features": [], "_failed": True}
             time.sleep(1.5)
 
 
@@ -269,6 +272,8 @@ def point_query(url, lat, lng, out_fields="*", extra_where=None):
     if extra_where:
         params["where"] = extra_where
     result = esri_query(url, params)
+    if result.get("_failed"):
+        return {"_failed": True}   # callers use .get(), so this reads as no data; floodKnown/zoningKnown tell it apart from "no match"
     feats = result.get("features") or []
     return feats[0]["attributes"] if feats else None
 
@@ -719,6 +724,8 @@ def enrich_parcel(p):
         "generalPlanDesignation": gp_designation,
         "floodZone": (flood_rec or {}).get("FLD_ZONE"),
         "inFloodplain": bool((flood_rec or {}).get("SFHA_TF") == "T"),
+        "floodKnown": not (flood_rec or {}).get("_failed"),   # False = the FEMA lookup failed, so "not in floodplain" is unconfirmed
+        "zoningKnown": not (zoning_rec or {}).get("_failed"),
         "rezoningNearby": rezoning_nearby,
         "rezoneTarget": rezone_target,
         "byRightUnits": estimate_byright_units(current_zoning, land_acres),
