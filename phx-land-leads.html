@@ -264,13 +264,13 @@
             <span style="font-size:12px;color:var(--text-faint);"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3f7a57;margin-right:5px;"></span>Vacant land</span><span style="font-size:11px;color:var(--text-faint);margin-left:10px;">Fill: <b style="color:#2e9e57;">green</b> = profit, <b style="color:#d64545;">red</b> = loss on numbers you ran, white = not run</span>
           </div>
           <div id="vacantMap"></div>
-          <div class="card">
+        </div>
+        <div class="card">
           <div class="card-head"><h2>Underused Lot Map</h2>
             <span style="font-size:12px;color:var(--text-faint);"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#b3831f;border:1px dashed #8f6418;margin-right:5px;"></span>Underused lot</span><span style="font-size:11px;color:var(--text-faint);margin-left:10px;">Fill: <b style="color:#2e9e57;">green</b> = profit, <b style="color:#d64545;">red</b> = loss on numbers you ran, white = not run</span>
           </div>
           <div id="teardownMap"></div>
         </div>
-      </div>
       </div>
 
       <div class="card" id="home-calc" style="border:2px solid #3f6fb0; background:#f5f8fd;">
@@ -2559,9 +2559,10 @@ function renderMaps(leads){
 }
 // a minimized map has no size, and Leaflet throws drawing into it: skip it, redraw when expanded
 let mapKeepView = false;
-function drawMaps(keepView){  // keepView: recolor only, don't jump the map back to the full extent
+function drawMaps(keepView, tries = 0){  // keepView: recolor only, don't jump the map back to the full extent
   if(!mapData) return;
   mapKeepView = !!keepView;
+  if(tries < 5 && ['vacantMap', 'teardownMap'].some(id => document.getElementById(id).offsetParent && !document.getElementById(id).offsetHeight)) setTimeout(() => drawMaps(keepView, tries + 1), 150);   // visible but not laid out yet
   [[vacantMapInst, 'vacantMap', mapData.vacant], [teardownMapInst, 'teardownMap', mapData.teardown]].forEach(([m, id, l]) => {
     try{ if(m && document.getElementById(id).offsetHeight) renderMapInstance(m, l); }catch(e){ console.error('map draw failed', e); }  // a map failure must not stop the rest of the page
   });
