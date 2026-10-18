@@ -942,6 +942,7 @@ async function fetchHouseComps(lead){
         where: `SALE_PRICE IS NOT NULL AND SALE_PRICE <> '0' AND PUC LIKE '01%' AND (${years})`,
         outFields: 'APN,PHYSICAL_ADDRESS,SALE_DATE,SALE_PRICE,LAND_SIZE,LIVING_SPACE,CONST_YEAR,LATITUDE,LONGITUDE', resultRecordCount: '1000', f: 'json' });
       const r = await (await fetch(U, { method: 'POST', body, signal: AbortSignal.timeout(20000) })).json();   // the county server is sometimes very slow: fail fast, offer a retry
+      if(r.error) throw new Error(r.error.message || 'GIS error');   // Esri returns errors as 200 + {error}, not as an HTTP failure
       feats = (r.features || []).map(f => f.attributes).filter(a => hcNum(a.LIVING_SPACE) >= 1500 && hcNum(a.SALE_PRICE) >= 150000);
       if(feats.length >= 10) break;
     }
@@ -2115,8 +2116,8 @@ function profitFor(l, extraHard, psfOverride, o){
   const num = id => parseFloat(document.getElementById(id).value) || 0;
   const sf = num('hcSf'), fin = num('hcFin') / 100, sell = num('hcSell') / 100;
   const C = ((o.hard != null ? o.hard : num('hcHard')) + (extraHard || 0)) * sf * (1 + num('hcSoft') / 100) + (o.site != null ? o.site : num('hcSite'));
-  const v = l.valuation, landOK = !!(v && v.mostLikelyValue && !v.unreliable);
-  const land = (landOK ? v.mostLikelyValue : (l.assessedValue || 0)) * (o.landMult || 1);
+  const v = l.valuation, landOK = !!(l.landOverride || (v && v.mostLikelyValue && !v.unreliable));
+  const land = (l.landOverride || (landOK ? v.mostLikelyValue : (l.assessedValue || 0))) * (o.landMult || 1);
   if(!land || sf <= 0) return null;
   const demo = l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0;
   const splitCost = num('moSplitCost'), haircut = (num('moSplitHaircut') || 100) / 100;
@@ -2207,7 +2208,8 @@ function intakeHtml(l){
   if(l.landUseClass && l.landUseClass !== 'residential') flags.push(`The county codes this parcel ${l.landUseClass}, which may not match its zoning.`);
   if(l.inFloodplain) flags.push('In a mapped floodplain (' + esc(l.floodZone || 'zone ?') + ').');
   else if(l.floodKnown === false) flags.push('Flood status UNKNOWN: the FEMA lookup failed, so "not in a floodplain" is unconfirmed.');
-  const lv = l.valuation, landV = lv && lv.mostLikelyValue && !lv.unreliable ? lv.mostLikelyValue : (l.assessedValue || 0);
+  if(l.zoningKnown && !l.currentZoning) flags.push('No City of Phoenix zoning at this point: it may be unincorporated Maricopa County (mailing city is not jurisdiction). Phoenix ADU / lot-split rules and the "adjacent zoning" rezone target may not apply. Confirm jurisdiction and zoning before relying on this.');
+  const lv = l.valuation, landV = l.landOverride || (lv && lv.mostLikelyValue && !lv.unreliable ? lv.mostLikelyValue : (l.assessedValue || 0));
   if(l.salePrice && landV && l.salePrice > landV * 1.5) flags.push('Last sold ' + money(l.salePrice) + (l.saleDate ? ' (' + esc(l.saleDate) + ')' : '') + ' vs the ' + money(landV) + ' land value the model uses: land cost may be understated.');
   if(l.rezoningNearby) flags.push(l.rezoningNearby + ' rezoning(s) nearby: the area is changing.');
   if(l.parcelStatus === 'improved') flags.push('Has a building: demolition counted at ' + money(l.defaultDemoCost || 0) + ' (placeholder).');

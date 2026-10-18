@@ -14,6 +14,9 @@ A = dict(sf=3800, hard=(275, 325), soft=0.08, site=10_000, fin=0.07, sell=0.03, 
          split_cost=25_000, haircut=0.8, min_lot=14_375, good=0.10, maybe=0.05)
 
 
+OVERRIDES = json.loads((Path(__file__).with_name("overrides.json")).read_text())   # {apn: {landCost, note}}
+
+
 def house_comps(l):
     """Sale price per sf = the 2nd-HIGHEST of the 5 best-matching recent HOME sales (medPsf keeps the median) (same logic as fetchHouseComps on the page)."""
     lat, lng, yr = l.get("lat"), l.get("lng"), date.today().year
@@ -63,8 +66,10 @@ def underwrite(l):
     nb = hc or l.get("newBuild")            # same fallback as profitFor() on the page
     if not nb or not nb.get("psf"):
         return None
-    land_ok = bool(v.get("mostLikelyValue") and not v.get("unreliable"))
-    land = v["mostLikelyValue"] if land_ok else (l.get("assessedValue") or 0)
+    ov = OVERRIDES.get(l.get("apn"), {}).get("landCost")   # hand-set land price wins over the model's proxy
+    l["landOverride"] = ov                                  # the page reads this same field, so both agree
+    land_ok = bool(ov or (v.get("mostLikelyValue") and not v.get("unreliable")))
+    land = ov or (v["mostLikelyValue"] if land_ok else (l.get("assessedValue") or 0))
     if not land:
         return None
     demo = l.get("defaultDemoCost", 0) if l.get("parcelStatus") == "improved" else 0
