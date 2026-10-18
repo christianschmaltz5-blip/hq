@@ -211,10 +211,10 @@ def build_comps_for_lead(lead, today=None, vacant_only=None):
     a single lead dict (in the same shape find_leads.py's enrich_parcel
     produces). Never raises -- a lookup failure just yields no comps."""
     today = today or date.today()
-    # Underused-lot leads are valued as land: price them off vacant-land sales, not house
-    # sales scaled by lot size (that inflated margins). Falls back to all sales if none.
+    # Every lead is valued as land: price it off vacant-land sales only. House sales scaled by lot size
+    # inflated values (a $750k house on 10k sf became $3.1M/acre), so there is no fallback to all sales.
     if vacant_only is None:
-        vacant_only = lead.get("parcelStatus") == "improved"
+        vacant_only = True
     lat, lng = lead.get("lat"), lead.get("lng")
     if lat is None or lng is None:
         return {"comps": [], "valuation": None, "note": "No coordinates on file for this parcel."}
@@ -256,22 +256,30 @@ def build_comps_for_lead(lead, today=None, vacant_only=None):
         if well_sized >= MIN_COMPS or miles == RADII_MI[-1]:
             break
 
-    if not scored and vacant_only:
-        return build_comps_for_lead(lead, today, vacant_only=False)
     if not scored:
         class_note = f" of the same land-use type ({subj_class})" if subj_class else ""
         return {"comps": [], "valuation": None,
-                "note": f"No comparable sales{class_note} found within {RADII_MI[-1]:.0f} miles in the "
+                "note": f"No comparable {'vacant-land ' if vacant_only else ''}sales{class_note} found within {RADII_MI[-1]:.0f} miles in the "
                         f"last {MAX_SALE_AGE_YEARS} years -- too rural/thin a market to comp automatically."}
 
     scored.sort(key=lambda t: -t[0])
-    top = scored[:MAX_COMPS]
 
     # Bulk/portfolio sales: the Assessor stamps one deal price on every parcel in the
     # deal, so the same price+date on 2+ candidate parcels is a bulk sale, not a lot
     # price ($33.7M "per parcel" produced +70,000% margins). Excluded from VALUE only.
     from collections import Counter
     sale_counts = Counter((_parse_num(c.get("SALE_PRICE")), sold) for _, _, sold, c in scored)
+    # Eligibility is decided BEFORE picking the top 5, so ineligible sales (bulk deals, lots >~3x off in size)
+    # can't take a slot and leave one lone comp setting the value. Fewer than MIN_COMPS eligible -> show the
+    # nearest sales for reference but give no dollar value.
+    subj_sf = lead.get("landSf")
+    def eligible(t):
+        _, _, sold_, c = t
+        ls = c.get("LAND_SIZE")
+        return bool(subj_sf and ls and _implied_value(lead, c) and sale_counts[(_parse_num(c.get("SALE_PRICE")), sold_)] == 1
+                    and min(ls, subj_sf) / max(ls, subj_sf) >= MIN_SIZE_RATIO_FOR_VALUATION)
+    ok = [t for t in scored if eligible(t)]
+    top = ok[:MAX_COMPS] if len(ok) >= MIN_COMPS else scored[:MAX_COMPS]
     comps_out = []
     implied_values, weights = [], []
     for score, dist_mi, sold, cand in top:
@@ -300,7 +308,7 @@ def build_comps_for_lead(lead, today=None, vacant_only=None):
         # (shown in the table) without being a valid VALUE comp for a
         # 3.5-acre teardown lot.
         is_bulk = sale_counts[(price, sold)] > 1
-        if iv and land_sf and lead.get("landSf") and not is_bulk:
+        if len(ok) >= MIN_COMPS and iv and land_sf and lead.get("landSf") and not is_bulk:
             size_ratio = min(land_sf, lead["landSf"]) / max(land_sf, lead["landSf"])
             if size_ratio >= MIN_SIZE_RATIO_FOR_VALUATION:
                 implied_values.append(iv)
@@ -323,8 +331,8 @@ def build_comps_for_lead(lead, today=None, vacant_only=None):
             "rangeHigh": round(high),
             "explanation": (
                 f"Based on {len(top)} comparable sale{'s' if len(top) != 1 else ''} within "
-                f"{radius_used:.0f} miles, valued {land_basis} and adjusted for lot size and sale "
-                f"date, the subject's land is estimated at approximately ${round(weighted_avg):,} "
+                f"{radius_used:.0f} miles, valued {land_basis} and scaled by lot size "
+                f"(recency is a ranking factor only, not a price adjustment), the subject's land is estimated at approximately ${round(weighted_avg):,} "
                 f"(range ${round(low):,}-${round(high):,})."
             ),
         }
