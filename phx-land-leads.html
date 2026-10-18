@@ -302,6 +302,13 @@
           <label style="font-size:12.5px;color:var(--text-soft);">Profit target (% of sale)<input class="filter-input" id="hcProfit" type="number" value="10" style="width:60px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Open offer at (% of max)<input class="filter-input" id="hcOpen" type="number" value="84" style="width:60px;"></label>
         </div>
+        <div class="filter-row" title="Optional. Phoenix allows up to 2 ADUs per lot, each up to 75% of the main house (1,000 sf max on lots of 10,000 sf or less). Leave ADUs at 0 to ignore. Only applied to leads with Phoenix zoning, and only when keeping the lot whole.">
+          <label style="font-size:12.5px;color:var(--text-soft);">ADUs / casitas (0 = off)<input class="filter-input" id="hcAduN" type="number" min="0" max="2" value="0" style="width:60px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Size each (sf)<input class="filter-input" id="hcAduSf" type="number" value="800" style="width:80px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">ADU build ($/sf) <i>placeholder</i><input class="filter-input" id="hcAduHard" type="number" value="350" style="width:80px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">ADU extra site work ($ each) <i>placeholder</i><input class="filter-input" id="hcAduSite" type="number" value="15000" style="width:100px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Added resale value, all ADUs ($) <i>unverified</i><input class="filter-input" id="hcAduVal" type="number" value="0" style="width:110px;"></label>
+        </div>
         <div id="hcRentRow" style="display:none;">
           <div class="filter-row">
             <label style="font-size:12.5px;color:var(--text-soft);">Units in the building<input class="filter-input" id="hcUnits" type="number" value="3" style="width:60px;"></label>
@@ -2112,10 +2119,15 @@ renderSkipTrace();
 // One cost/profit formula for the Calculator and Top Profit (verdict.py mirrors it). n homes on one parcel; splits sell at a haircut and cost extra.
 function homeEcon(x){
   const C = x.hard * x.sf * (1 + x.soft) + x.site, n = x.n, multi = n > 1;
-  const finished = n * x.psf * x.sf * (multi ? x.haircut : 1);
-  const cost = (n * C + x.land + (x.demo || 0) + (multi ? (n - 1) * x.splitCost : 0)) * (1 + x.fin);
+  const a = !multi && x.adu && x.adu.n > 0 ? x.adu : null, aduCost = a ? a.n * (a.sf * a.hard * (1 + x.soft) + a.site) : 0;   // ADUs only with the lot kept whole
+  const finished = n * x.psf * x.sf * (multi ? x.haircut : 1) + (a ? a.value : 0);
+  const cost = (n * C + x.land + (x.demo || 0) + (multi ? (n - 1) * x.splitCost : 0) + aduCost) * (1 + x.fin);
   const profit = finished * (1 - x.sell) - cost;
-  return { C, finished, cost, profit, margin: finished ? profit / finished : 0 };
+  return { C, finished, cost, profit, aduCost, margin: finished ? profit / finished : 0 };
+}
+function aduInput(l){   // the calculator's ADU box, applied only where Phoenix zoning is confirmed
+  const g = id => parseFloat(document.getElementById(id).value) || 0;
+  return l.currentZoning ? { n: g('hcAduN'), sf: g('hcAduSf'), hard: g('hcAduHard'), site: g('hcAduSite'), value: g('hcAduVal') } : null;
 }
 function landBasis(l){   // hand-set price > comps value (if reliable) > assessed value
   const v = l.valuation, ok = !!(l.landOverride || (v && v.mostLikelyValue && !v.unreliable));
@@ -2135,7 +2147,7 @@ function profitFor(l, extraHard, psfOverride, o){
   let best = null;
   const sp = splitInfo(l);
   for(const n of new Set([1, sp.n])){
-    const e = homeEcon({ sf, hard, soft, site, fin, sell, land, demo, n, psf, haircut, splitCost });
+    const e = homeEcon({ sf, hard, soft, site, fin, sell, land, demo, n, psf, haircut, splitCost, adu: aduInput(l) });
     if(!best || e.profit > best.profit) best = { n, finished: e.finished, cost: e.cost, profit: e.profit, land, margin: e.margin };
   }
   let r = (landOK ? 0 : 2) + (nb.n < (l.houseComps ? 4 : 6) ? 1 : 0) + (nb.radiusMi >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : l.floodKnown === false ? 1 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0);
@@ -2350,11 +2362,11 @@ renderMaxOffer();
 
 // ── Custom Home Calculator (buy land, build custom homes) ────────────────
 (function hcInit(){
-  const ids = ['hcLand','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen'];
+  const ids = ['hcLand','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcAduN','hcAduSf','hcAduHard','hcAduSite','hcAduVal'];
   const el = id => document.getElementById(id), num = id => parseFloat(el(id).value) || 0;
   const money = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
   const RIDS = ['hcUnits','hcUnitSf','hcRent','hcVac','hcOpex','hcCap','hcLtv','hcRate'];
-  const KEEP = ['hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcMode', ...RIDS];
+  const KEEP = ['hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcAduN','hcAduSf','hcAduHard','hcAduSite','hcAduVal','hcMode', ...RIDS];
   try{ const saved = JSON.parse(localStorage.getItem('homeCalc') || '{}'); KEEP.forEach(k => { if(saved[k] != null) el(k).value = saved[k]; }); }catch(e){}
   const addr = l => String(l.address || '').split(/\s{2,}/)[0];
   el('hcLeads').innerHTML = (D.leads || []).slice().sort((a, b) => b.score - a.score).map(l => `<option value="${esc(addr(l))}">score ${l.score}</option>`).join('');
@@ -2421,15 +2433,15 @@ renderMaxOffer();
     const splitCost = num('moSplitCost'), haircut = (num('moSplitHaircut') || 100) / 100, den = 1 - sell - profit;
     const out = el('hcOut');
     if(den <= 0 || sf <= 0){ out.textContent = 'Selling costs + profit must be under 100%, and home size above 0.'; return; }
-    const e = homeEcon({ sf, hard: num('hcHard'), soft, site, fin, sell, land: num('hcLand'), n: lots, psf: num('hcPrice'), haircut, splitCost });
-    const hard = num('hcHard') * sf, softD = hard * soft, C = e.C, land = num('hcLand') / lots, sc = lots > 1 ? (lots - 1) * splitCost / lots : 0, Ph = e.finished / lots;
-    const total = e.cost / lots, need = total / den, gain = e.profit / lots, margin = e.margin;
-    const maxLand = e.finished * den / (1 + fin) - lots * C - (lots > 1 ? (lots - 1) * splitCost : 0), open = maxLand * num('hcOpen') / 100;
+    const e = homeEcon({ sf, hard: num('hcHard'), soft, site, fin, sell, land: num('hcLand'), n: lots, psf: num('hcPrice'), haircut, splitCost, adu: aduInput({ currentZoning: 1 }) });
+    const hard = num('hcHard') * sf, softD = hard * soft, C = e.C, land = num('hcLand') / lots, sc = lots > 1 ? (lots - 1) * splitCost / lots : 0, aduV = e.aduCost ? num('hcAduVal') : 0, Ph = e.finished / lots - aduV;   // aduV: ADU resale value, shown separately from the house price
+    const total = e.cost / lots, need = total / den - aduV, gain = e.profit / lots, margin = e.margin;
+    const maxLand = e.finished * den / (1 + fin) - lots * C - e.aduCost - (lots > 1 ? (lots - 1) * splitCost : 0), open = maxLand * num('hcOpen') / 100;
     window.hcLast = { gain, margin, maxLand };
     const row = (k, v, b) => `<tr><td style="padding:2px 14px 2px 0;${b ? 'font-weight:700;' : ''}">${k}</td><td style="text-align:right;${b ? 'font-weight:700;' : ''}">${v}</td></tr>`;
     out.innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:28px;">
       <div><div style="font-weight:700;margin-bottom:4px;">Cost per home</div><table>
-        ${row('Build', money(hard))}${row('Design / permits / fees', money(softD))}${row('Site work', money(site))}${row('Land share', money(land))}${sc ? row('Lot-split cost share', money(sc)) : ''}${row('Loan interest', money((C + land + sc) * fin))}${row('Total cost', money(total), 1)}</table></div>
+        ${row('Build', money(hard))}${row('Design / permits / fees', money(softD))}${row('Site work', money(site))}${row('Land share', money(land))}${sc ? row('Lot-split cost share', money(sc)) : ''}${e.aduCost ? row('ADUs (build + soft + site)', money(e.aduCost)) : ''}${row('Loan interest', money((C + land + sc) * fin))}${row('Total cost', money(total), 1)}</table>${e.aduCost ? `<div style="font-size:12px;color:var(--text-soft);margin-top:6px;">ADUs need about <b>${money(e.aduCost * (1 + fin))}</b> of added resale value to pay for themselves (you entered ${money(aduV)}).</div>` : ''}</div>
       <div style="max-width:430px;"><div style="margin-bottom:8px;"><b>To hit your ${num('hcProfit')}% profit, each home must sell for ${money(need)}</b> (${money(need / sf)}/sf).</div>
         <div style="margin-bottom:8px;">At your expected ${money(Ph)} per home (${money(num('hcPrice'))}/sf${lots > 1 ? ', after the split haircut' : ''}), <b>the most you can pay for the land is <span style="color:#2f6b47;">${money(maxLand)}</span></b> total — open at <b>${money(open)}</b>.</div>
         <div style="padding:8px 10px;border-radius:8px;background:${margin >= profit ? '#e6f4ea' : '#fdecec'};">At your land price of ${money(num('hcLand'))}: profit of <b>${money(gain)}</b> per home (${(margin * 100).toFixed(1)}% of sale) — ${margin >= profit ? 'meets' : 'below'} your ${num('hcProfit')}% target.</div></div></div>`;

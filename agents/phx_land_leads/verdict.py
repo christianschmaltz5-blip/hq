@@ -11,6 +11,7 @@ from comps import _esri_query, _haversine_mi, _parse_num as _pn
 _parse_num = lambda x: _pn(x) or 0
 
 A = dict(sf=3800, hard=(275, 325), soft=0.08, site=10_000, fin=0.07, sell=0.03,   # ponytail: mirrors the numbers typed into the Custom Home Calculator
+         adu=dict(n=0, sf=800, hard=350, site=15_000, value=0),   # ADU scenario: OFF (n=0) until a resale premium is verified; mirrors the calculator's ADU box
          split_cost=25_000, haircut=0.8, min_lot=14_375, good=0.10, maybe=0.05)
 
 
@@ -79,8 +80,10 @@ def underwrite(l):
         C = hard * A["sf"] * (1 + A["soft"]) + A["site"]
         best = None
         for n in {1, n_split}:
-            finished = n * nb["psf"] * A["sf"] * (A["haircut"] if n > 1 else 1)
-            cost = (n * C + land + demo + (n - 1) * A["split_cost"]) * (1 + A["fin"])
+            adu = A["adu"] if n == 1 and l.get("currentZoning") and A["adu"]["n"] > 0 else None   # Phoenix-zoned, lot kept whole
+            adu_cost = adu["n"] * (adu["sf"] * adu["hard"] * (1 + A["soft"]) + adu["site"]) if adu else 0
+            finished = n * nb["psf"] * A["sf"] * (A["haircut"] if n > 1 else 1) + (adu["value"] if adu else 0)
+            cost = (n * C + land + demo + (n - 1) * A["split_cost"] + adu_cost) * (1 + A["fin"])
             profit = finished * (1 - A["sell"]) - cost
             if not best or profit > best["profit"]:
                 best = dict(n=n, finished=finished, profit=profit, margin=profit / finished)
