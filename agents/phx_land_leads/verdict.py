@@ -15,7 +15,7 @@ A = dict(sf=3800, hard=(275, 325), soft=0.08, site=10_000, fin=0.07, sell=0.03, 
 
 
 def house_comps(l):
-    """Sale price per sf from the 5 best-matching recent HOME sales (same logic as fetchHouseComps on the page)."""
+    """Sale price per sf = the 2nd-HIGHEST of the 5 best-matching recent HOME sales (medPsf keeps the median) (same logic as fetchHouseComps on the page)."""
     lat, lng, yr = l.get("lat"), l.get("lng"), date.today().year
     if lat is None or lng is None:
         return None
@@ -41,7 +41,8 @@ def house_comps(l):
     out = out[:5]
     if not out:
         return None
-    return {"psf": round(median(t[2] for t in out)), "price": round(median(t[1] for t in out)), "lowPsf": round(min(t[2] for t in out)), "n": len(out), "radiusMi": miles}
+    return {"psf": round(sorted((t[2] for t in out), reverse=True)[min(1, len(out) - 1)]),   # 2nd-highest: one outlier sale can't set the price
+             "medPsf": round(median(t[2] for t in out)), "price": round(median(t[1] for t in out)), "lowPsf": round(min(t[2] for t in out)), "n": len(out), "radiusMi": miles}
 
 
 def split_n(l):

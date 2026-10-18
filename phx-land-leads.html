@@ -2161,7 +2161,7 @@ function lowSalePsf(l){ if(l.houseComps) return l.houseComps.lowPsf || l.houseCo
 function salesCell(l){
   const nb = l.houseComps || l.newBuild, mo = n => '$' + (n / 1e6).toFixed(2) + 'M';
   const ex = (nb.examples || []).map(e => `${esc(e.address)} · ${mo(e.price)} · ${e.sf.toLocaleString()} sf · $${Math.round(e.price / e.sf)}/sf · ${e.sold.slice(0,7)}`).join('<br>');
-  return `<div style="font-size:10.5px;line-height:1.35;min-width:230px;">Median $${nb.psf}/sf of ${nb.n} sales within ${nb.radiusMi}mi${nb.lowPsf && nb.highPsf ? ' (range $' + nb.lowPsf + '–$' + nb.highPsf + ')' : ''}${ex ? `<br><span style="color:var(--text-faint);">Closest:<br>${ex}</span>` : (nb.price ? ` · median home $${(nb.price / 1e6).toFixed(2)}M` : '')}</div>`;
+  return `<div style="font-size:10.5px;line-height:1.35;min-width:230px;">${l.houseComps ? '2nd-highest' : 'Median'} $${nb.psf}/sf of ${nb.n} sales within ${nb.radiusMi}mi${nb.lowPsf && nb.highPsf ? ' (range $' + nb.lowPsf + '–$' + nb.highPsf + ')' : ''}${ex ? `<br><span style="color:var(--text-faint);">Closest:<br>${ex}</span>` : (nb.price ? ` · median home $${(nb.price / 1e6).toFixed(2)}M` : '')}</div>`;
 }
 function renderTopProfit(){
   const m = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
@@ -2359,9 +2359,9 @@ renderMaxOffer();
     fetchHouseComps(l).then(h => {
       if(el('hcLead').value.trim().toLowerCase() !== addr(l).toLowerCase()) return;
       if(!h.rows.length){ el('hcHouse').textContent = h.error || 'No recent home sales found nearby.'; return; }
-      const psf = h.rows.map(r => r.psf), lo = Math.min(...psf), hi = Math.max(...psf);
-      el('hcHouse').innerHTML = `Recent home sales nearby (5 closest matches): <b>${money(h.medianPsf)}/sf median</b> (${money(lo)}–${money(hi)}/sf), median ${money(h.medianPrice)}. Existing homes, not new custom builds. <button class="mail-btn" type="button" id="hcUse">Use ${money(h.medianPsf)}/sf as my expected sale price</button>`;
-      el('hcUse').onclick = () => { el('hcPrice').value = Math.round(h.medianPsf); calc(); };
+      const psf = h.rows.map(r => r.psf), lo = Math.min(...psf), hi = Math.max(...psf), pick = [...psf].sort((a, b) => b - a)[Math.min(1, psf.length - 1)];
+      el('hcHouse').innerHTML = `Recent home sales nearby (5 closest matches): <b>${money(h.medianPsf)}/sf median</b> (${money(lo)}–${money(hi)}/sf), median ${money(h.medianPrice)}. Existing homes, not new custom builds. <button class="mail-btn" type="button" id="hcUse">Use ${money(pick)}/sf (2nd-highest comp) as my expected sale price</button>`;
+      el('hcUse').onclick = () => { el('hcPrice').value = Math.round(pick); calc(); };
     });
   }
   function rentHint(l){
@@ -2578,7 +2578,7 @@ applyFilters();  // draws the maps with the same filters as the list (discarded 
     secs.forEach(el => { el.style.display = el.dataset.tab === k ? '' : 'none'; });
     bar.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.t === k));
     try{ localStorage.setItem('phxTab', k); }catch(e){}
-    if(k === 'maps'){ [vacantMapInst, teardownMapInst].forEach(m => m && m.map.invalidateSize()); drawMaps(); }
+    if(k === 'maps') setTimeout(() => { [vacantMapInst, teardownMapInst].forEach(m => m && m.map.invalidateSize()); drawMaps(); }, 60);   // after the tab has laid out
   };
   bar.addEventListener('click', e => { const b = e.target.closest('button'); if(b){ showTab(b.dataset.t); window.scrollTo(0, 0); } });
   document.querySelectorAll('.sidebar-scroll a[href^="#"]').forEach(a => a.addEventListener('click', e => {

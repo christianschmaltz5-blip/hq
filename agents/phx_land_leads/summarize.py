@@ -13,6 +13,11 @@ top = sorted(fresh, key=lambda l: -l["score"])[:3]
 lines = [f"{len(fresh)} leads ({sum(l.get('isNew', False) for l in fresh)} new), {sum(l.get('stale', False) for l in d['leads'])} kept hot"]
 lines += [f"{l['score']} {l['address'].split('  ')[0].title()} ({l['parcelStatus']})" for l in top]
 
+best = sorted((l for l in fresh if (l.get("verdict") or {}).get("profit") is not None), key=lambda l: -l["verdict"]["profit"])[:3]
+if best:   # sale price = highest nearby comp $/sf, costs = verdict.py assumptions
+    lines.append("Top profit (highest comps):")
+    lines += [f"${l['verdict']['profit']/1e3:,.0f}k {l['address'].split('  ')[0].title()} ({l['verdict']['strategy']}, {l['verdict']['salePsf']}/sf)" for l in best]
+
 good = [l for l in fresh if (l.get("verdict") or {}).get("label") == "Good"]
 if good:
     lines.append(f"{len(good)} GOOD deals at placeholder costs: " + ", ".join(l["address"].split("  ")[0].title() for l in good[:3]))
