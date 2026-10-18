@@ -2109,25 +2109,34 @@ renderSkipTrace();
 // ── Top Profit Opportunities (rank by realistic profit, not by cheapness) ──
 // Best of: one custom home on the whole lot, or a lot split into N homes (needs city approval). Inputs come from the
 // Custom Home Calculator. Land cost = comps value (assessed value if comps are unreliable). Risk = how shaky the inputs are.
+// One cost/profit formula for the Calculator and Top Profit (verdict.py mirrors it). n homes on one parcel; splits sell at a haircut and cost extra.
+function homeEcon(x){
+  const C = x.hard * x.sf * (1 + x.soft) + x.site, n = x.n, multi = n > 1;
+  const finished = n * x.psf * x.sf * (multi ? x.haircut : 1);
+  const cost = (n * C + x.land + (x.demo || 0) + (multi ? (n - 1) * x.splitCost : 0)) * (1 + x.fin);
+  const profit = finished * (1 - x.sell) - cost;
+  return { C, finished, cost, profit, margin: finished ? profit / finished : 0 };
+}
+function landBasis(l){   // hand-set price > comps value (if reliable) > assessed value
+  const v = l.valuation, ok = !!(l.landOverride || (v && v.mostLikelyValue && !v.unreliable));
+  return { ok, land: l.landOverride || (ok ? v.mostLikelyValue : (l.assessedValue || 0)) };
+}
 function profitFor(l, extraHard, psfOverride, o){
   o = o || {};
   const nb = l.houseComps || l.newBuild; if(!nb || !nb.psf) return null;   // house sales nearby come first; new-build sales are the fallback
   const psf = psfOverride || nb.psf;
   const num = id => parseFloat(document.getElementById(id).value) || 0;
   const sf = num('hcSf'), fin = num('hcFin') / 100, sell = num('hcSell') / 100;
-  const C = ((o.hard != null ? o.hard : num('hcHard')) + (extraHard || 0)) * sf * (1 + num('hcSoft') / 100) + (o.site != null ? o.site : num('hcSite'));
-  const v = l.valuation, landOK = !!(l.landOverride || (v && v.mostLikelyValue && !v.unreliable));
-  const land = (l.landOverride || (landOK ? v.mostLikelyValue : (l.assessedValue || 0))) * (o.landMult || 1);
+  const hard = (o.hard != null ? o.hard : num('hcHard')) + (extraHard || 0), site = o.site != null ? o.site : num('hcSite'), soft = num('hcSoft') / 100;
+  const lb = landBasis(l), landOK = lb.ok, land = lb.land * (o.landMult || 1);
   if(!land || sf <= 0) return null;
   const demo = l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0;
   const splitCost = num('moSplitCost'), haircut = (num('moSplitHaircut') || 100) / 100;
   let best = null;
   const sp = splitInfo(l);
   for(const n of new Set([1, sp.n])){
-    const P = psf * sf * (n > 1 ? haircut : 1), finished = n * P;
-    const cost = (n * C + land + demo + (n - 1) * splitCost) * (1 + fin);
-    const profit = finished * (1 - sell) - cost;
-    if(!best || profit > best.profit) best = { n, finished, cost, profit, land, margin: finished ? profit / finished : 0 };
+    const e = homeEcon({ sf, hard, soft, site, fin, sell, land, demo, n, psf, haircut, splitCost });
+    if(!best || e.profit > best.profit) best = { n, finished: e.finished, cost: e.cost, profit: e.profit, land, margin: e.margin };
   }
   let r = (landOK ? 0 : 2) + (nb.n < (l.houseComps ? 4 : 6) ? 1 : 0) + (nb.radiusMi >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : l.floodKnown === false ? 1 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0);
   best.risk = r <= 1 ? 'Low' : r <= 3 ? 'Medium' : 'High';
@@ -2352,7 +2361,7 @@ renderMaxOffer();
   function pickLead(){
     const l = (D.leads || []).find(x => addr(x).toLowerCase() === el('hcLead').value.trim().toLowerCase());
     if(!l){ el('hcAnchor').textContent = ''; return; }
-    if(l.valuation && l.valuation.mostLikelyValue) el('hcLand').value = Math.round(l.valuation.mostLikelyValue);
+    const lb = landBasis(l); if(lb.land) el('hcLand').value = Math.round(lb.land);   // same land price Top Profit uses
     el('hcLots').value = Math.max(1, Math.floor(l.byRightUnits || l.rezoneTargetUnits || 1));
     const bits = [`${l.landAcres} acres`, l.currentZoning ? 'zoned ' + l.currentZoning : ''];
     if(l.valuation) bits.push(`land est. ${money(l.valuation.rangeLow)}–${money(l.valuation.rangeHigh)}`);
@@ -2407,21 +2416,22 @@ renderMaxOffer();
   setMode();
   function calc(){
     if(el('hcMode').value === 'rent') return calcRent();
-    const lots = Math.max(1, num('hcLots')), sf = num('hcSf'), hard = num('hcHard') * sf, soft = hard * num('hcSoft') / 100, site = num('hcSite');
-    const fin = num('hcFin') / 100, sell = num('hcSell') / 100, profit = num('hcProfit') / 100, land = num('hcLand') / lots, P = num('hcPrice') * sf;
-    const den = 1 - sell - profit, C = hard + soft + site;
+    const lots = Math.max(1, num('hcLots')), sf = num('hcSf'), soft = num('hcSoft') / 100, site = num('hcSite');
+    const fin = num('hcFin') / 100, sell = num('hcSell') / 100, profit = num('hcProfit') / 100, P = num('hcPrice') * sf;
+    const splitCost = num('moSplitCost'), haircut = (num('moSplitHaircut') || 100) / 100, den = 1 - sell - profit;
     const out = el('hcOut');
     if(den <= 0 || sf <= 0){ out.textContent = 'Selling costs + profit must be under 100%, and home size above 0.'; return; }
-    const total = (C + land) * (1 + fin), need = total / den;
-    const maxLand = (P * den / (1 + fin) - C) * lots, open = maxLand * num('hcOpen') / 100;
-    const gain = P * (1 - sell) - total, margin = P ? gain / P : 0;
+    const e = homeEcon({ sf, hard: num('hcHard'), soft, site, fin, sell, land: num('hcLand'), n: lots, psf: num('hcPrice'), haircut, splitCost });
+    const hard = num('hcHard') * sf, softD = hard * soft, C = e.C, land = num('hcLand') / lots, sc = lots > 1 ? (lots - 1) * splitCost / lots : 0, Ph = e.finished / lots;
+    const total = e.cost / lots, need = total / den, gain = e.profit / lots, margin = e.margin;
+    const maxLand = e.finished * den / (1 + fin) - lots * C - (lots > 1 ? (lots - 1) * splitCost : 0), open = maxLand * num('hcOpen') / 100;
     window.hcLast = { gain, margin, maxLand };
     const row = (k, v, b) => `<tr><td style="padding:2px 14px 2px 0;${b ? 'font-weight:700;' : ''}">${k}</td><td style="text-align:right;${b ? 'font-weight:700;' : ''}">${v}</td></tr>`;
     out.innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:28px;">
       <div><div style="font-weight:700;margin-bottom:4px;">Cost per home</div><table>
-        ${row('Build', money(hard))}${row('Design / permits / fees', money(soft))}${row('Site work', money(site))}${row('Land share', money(land))}${row('Loan interest', money((C + land) * fin))}${row('Total cost', money(total), 1)}</table></div>
+        ${row('Build', money(hard))}${row('Design / permits / fees', money(softD))}${row('Site work', money(site))}${row('Land share', money(land))}${sc ? row('Lot-split cost share', money(sc)) : ''}${row('Loan interest', money((C + land + sc) * fin))}${row('Total cost', money(total), 1)}</table></div>
       <div style="max-width:430px;"><div style="margin-bottom:8px;"><b>To hit your ${num('hcProfit')}% profit, each home must sell for ${money(need)}</b> (${money(need / sf)}/sf).</div>
-        <div style="margin-bottom:8px;">At your expected ${money(P)} (${money(num('hcPrice'))}/sf), <b>the most you can pay for the land is <span style="color:#2f6b47;">${money(maxLand)}</span></b> total — open at <b>${money(open)}</b>.</div>
+        <div style="margin-bottom:8px;">At your expected ${money(Ph)} per home (${money(num('hcPrice'))}/sf${lots > 1 ? ', after the split haircut' : ''}), <b>the most you can pay for the land is <span style="color:#2f6b47;">${money(maxLand)}</span></b> total — open at <b>${money(open)}</b>.</div>
         <div style="padding:8px 10px;border-radius:8px;background:${margin >= profit ? '#e6f4ea' : '#fdecec'};">At your land price of ${money(num('hcLand'))}: profit of <b>${money(gain)}</b> per home (${(margin * 100).toFixed(1)}% of sale) — ${margin >= profit ? 'meets' : 'below'} your ${num('hcProfit')}% target.</div></div></div>`;
   }
   ids.forEach(id => el(id).addEventListener('input', () => {
