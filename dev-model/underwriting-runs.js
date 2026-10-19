@@ -12,7 +12,7 @@
 // };
 
 window.UNDERWRITING_RUNS = {
-  "updated": "2026-10-12",
+  "updated": "2026-10-19",
   "runs": [],
   "history": [
     {
@@ -89,6 +89,12 @@ window.UNDERWRITING_RUNS = {
     },
     {
       "date": "2026-10-12",
+      "dealsRun": 0,
+      "pencilCount": 0,
+      "topDeal": null
+    },
+    {
+      "date": "2026-10-19",
       "dealsRun": 0,
       "pencilCount": 0,
       "topDeal": null
