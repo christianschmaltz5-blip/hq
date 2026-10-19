@@ -945,6 +945,7 @@ async function fetchHouseComps(lead){
   if(lead.lat == null || lead.lng == null) return (houseCache[lead.apn] = { ...meta, rows: [], error: 'no coordinates for this lead' });
   const yr = new Date().getFullYear(), years = [yr, yr - 1, yr - 2].map(y => `SALE_DATE LIKE '%/${y}'`).join(' OR ');
   let feats = [];
+  const planSf = 3800;   // same planned size verdict.py uses
   try{
     for(const miles of [1, 2, 3]){
       const body = new URLSearchParams({ geometry: JSON.stringify({ x: lead.lng, y: lead.lat, spatialReference: { wkid: 4326 } }), geometryType: 'esriGeometryPoint', inSR: '4326',
@@ -956,7 +957,7 @@ async function fetchHouseComps(lead){
       const r = await response.json();   // the county server is sometimes very slow: fail fast, offer a retry
       if(r.error) throw new Error(r.error.message || 'GIS error');   // Esri returns errors as 200 + {error}, not as an HTTP failure
       if(!Array.isArray(r.features)) throw new Error('GIS response is missing parcel features');
-      feats = (r.features || []).map(f => f.attributes).filter(a => hcNum(a.LIVING_SPACE) >= 1500 && hcNum(a.SALE_PRICE) >= 150000);
+      feats = (r.features || []).map(f => f.attributes).filter(a => hcNum(a.LIVING_SPACE) >= 0.6 * planSf && hcNum(a.LIVING_SPACE) <= 1.6 * planSf && hcNum(a.SALE_PRICE) >= 150000);   // match the planned home size
       if(feats.length >= 10) break;
     }
   }catch(e){ return (houseCache[lead.apn] = { ...meta, rows: [], error: 'could not reach the county GIS (' + e.message + ')' }); }
@@ -969,6 +970,7 @@ async function fetchHouseComps(lead){
     const score = dist + Math.abs(Math.log((lot || 1) / subLot)) * 0.7 + (yr - (built || yr - 40)) / 15 + months / 18;
     return { address: String(a.PHYSICAL_ADDRESS || '').split(/\s{2,}/)[0], dist, sold: a.SALE_DATE, price, sf, psf: price / sf, built, lot, isNew: built >= yr - 5, score };
   }).sort((a, b) => a.score - b.score).slice(0, 5);
+  if(rows.length < 3) return (houseCache[lead.apn] = { ...meta, rows: [], error: null, note: `Not enough comps: fewer than 3 home sales of ${(0.6 * planSf).toLocaleString()}–${(1.6 * planSf).toLocaleString()} sf within 3 miles.` });
   return (houseCache[lead.apn] = { ...meta, rows, medianPsf: hcMedian(rows.map(r => r.psf)), medianPrice: hcMedian(rows.map(r => r.price)), error: null });
 }
 function houseCompsHtml(lead){
@@ -977,7 +979,7 @@ function houseCompsHtml(lead){
   if(!h) return `<div class="comps-section">${title}<div class="comps-empty">Loading from the county…</div></div>`;
   if(!h.rows.length){
     const sv = selectedComps(lead), saved = sv ? `<div class="valuation-box"><div class="valuation-likely">Stored underwriting comps: <b>${money(sv.psf)}/sf</b> (${sv.fellBack ? 'new-build median · FALLBACK' : '2nd-highest'} of ${sv.n}) · ${sv.price ? money(sv.price) + ' median per home · ' : ''}${sv.n} sales within ${sv.radiusMi} mi<br>${compSourceHtml(lead)}</div></div>` : '';
-    return `<div class="comps-section">${title}${saved}<div class="comps-empty">${esc(h.error ? 'County GIS lookup failed: ' + h.error : 'No home sales found within 3 miles in the three calendar years queried.')} ${h.error ? `<button class="mail-btn" onclick="retryHouseComps('${esc(lead.apn)}')">Try again</button>` : ''}<br>Live lookup attempted ${esc(h.retrievedAt || 'unknown')}</div></div>`;
+    return `<div class="comps-section">${title}${saved}<div class="comps-empty">${esc(h.error ? 'County GIS lookup failed: ' + h.error : (h.note || 'No home sales found within 3 miles in the three calendar years queried.'))} ${h.error ? `<button class="mail-btn" onclick="retryHouseComps('${esc(lead.apn)}')">Try again</button>` : ''}<br>Live lookup attempted ${esc(h.retrievedAt || 'unknown')}</div></div>`;
   }
   const rows = h.rows.map(r => `<tr><td>${esc(r.address)}</td><td>${r.dist.toFixed(2)} mi</td><td>${esc(r.sold)}</td><td><b>${money(r.price)}</b></td>
     <td>${Math.round(r.sf).toLocaleString()} sf</td><td><b>${money(r.psf)}</b></td><td>${r.built || '—'}${r.isNew ? ' <span class="sim-badge">new</span>' : ''}</td><td>${r.lot ? num1(r.lot / 43560) + ' ac' : '—'}</td></tr>`).join('');

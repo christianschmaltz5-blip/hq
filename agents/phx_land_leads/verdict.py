@@ -102,7 +102,7 @@ def house_comps(l):
             print(f"house_comps: county query failed for {l.get('apn')} ({miles} mi); fallback will be marked")
             return _comp_metadata({"n": 0, "error": str(error), "radiusMi": miles}, retrieved_at)
         rows = [f["attributes"] for f in r.get("features") or []]
-        rows = [a for a in rows if _parse_num(a.get("LIVING_SPACE")) >= 1500 and _parse_num(a.get("SALE_PRICE")) >= 150_000]
+        rows = [a for a in rows if 0.6 * A["sf"] <= _parse_num(a.get("LIVING_SPACE")) <= 1.6 * A["sf"] and _parse_num(a.get("SALE_PRICE")) >= 150_000]   # match the planned home size
         if len(rows) >= 10:
             break
     sub_lot, out = l.get("landSf") or 43560, []
@@ -117,8 +117,8 @@ def house_comps(l):
         out.append((score, price, price / sf, (a.get("PHYSICAL_ADDRESS") or "").split("  ")[0].strip(), a["SALE_DATE"], round(sf)))
     out.sort()
     out = out[:5]
-    if not out:
-        return _comp_metadata({"n": 0, "radiusMi": miles, "fallbackReason": "No qualifying nearby home sales were found"}, retrieved_at)
+    if len(out) < 3:
+        return _comp_metadata({"n": len(out), "radiusMi": miles, "fallbackReason": f"Fewer than 3 home sales of {round(0.6 * A['sf']):,}-{round(1.6 * A['sf']):,} sf nearby"}, retrieved_at)
     return _comp_metadata({"psf": round(sorted((t[2] for t in out), reverse=True)[min(1, len(out) - 1)]),
              "medPsf": round(median(t[2] for t in out)), "price": round(median(t[1] for t in out)), "lowPsf": round(min(t[2] for t in out)), "n": len(out), "radiusMi": miles,
              "comps": [{"address": t[3], "sold": t[4], "price": round(t[1]), "sf": t[5]} for t in out]}, retrieved_at)
@@ -198,7 +198,8 @@ def underwrite(l, *, fetch_comps=True, overrides=None):
     fallback = bool(hc.get("fellBack"))
     risk = ((0 if land_ok else 2) + ((hc.get("n") or 0) < (6 if fallback else 4)) + ((hc.get("radiusMi") or 0) >= 3)
             + (2 if l.get("inFloodplain") else 1 if l.get("floodKnown") is False else 0)
-            + ((1 if known else 2) if best["n"] > 1 else 0))
+            + ((1 if known else 2) if best["n"] > 1 else 0)
+            + (2 if hc["psf"] > 800 else 0))   # unverified: sale price above $800/sf
     risk = "Low" if risk <= 1 else "Medium" if risk <= 3 else "High"
     m = best["margin"]
     offer, offer_n = max(((supportable_land(inputs(n, A["hard"][1]), A["good"]), n)

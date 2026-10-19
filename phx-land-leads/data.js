@@ -170,8 +170,8 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 137,
       "houseComps": {
-        "psf": 631,
-        "medPsf": 629,
+        "psf": 624,
+        "medPsf": 584,
         "price": 2235000,
         "lowPsf": 377,
         "n": 5,
@@ -184,33 +184,33 @@ window.PHX_LAND_LEADS = {
             "sf": 5332
           },
           {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
-          },
-          {
             "address": "5101 E LAUREL LN",
             "sold": "05/01/2026",
             "price": 2235000,
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
-          },
-          {
             "address": "10434 N 44TH ST",
             "sold": "01/01/2026",
             "price": 1659000,
             "sf": 4399
+          },
+          {
+            "address": "4602 E CHOLLA ST",
+            "sold": "04/01/2026",
+            "price": 1105000,
+            "sf": 2685
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:12Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -220,20 +220,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1893949,
-        "finished": 2397800,
-        "profit": -1157785,
-        "marginPct": -48,
-        "marginPctAt275": -39,
-        "profitAt275": -938221,
-        "salePsf": 631,
+        "finished": 2371200,
+        "profit": -1183587,
+        "marginPct": -50,
+        "marginPctAt275": -41,
+        "profitAt275": -964023,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 587813,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:12Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -396,10 +396,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 135,
       "houseComps": {
-        "psf": 699,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -408,12 +408,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -428,15 +422,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:12Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -446,20 +446,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1899889,
-        "finished": 2656200,
-        "profit": -913493,
-        "marginPct": -34,
-        "marginPctAt275": -26,
-        "profitAt275": -693929,
-        "salePsf": 699,
+        "finished": 2397800,
+        "profit": -1164141,
+        "marginPct": -49,
+        "marginPctAt275": -39,
+        "profitAt275": -944577,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 797914,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:12Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -623,10 +623,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 131,
       "houseComps": {
-        "psf": 699,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -635,12 +635,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -655,15 +649,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:13Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -673,20 +673,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1902608,
-        "finished": 2656200,
-        "profit": -916403,
-        "marginPct": -35,
-        "marginPctAt275": -26,
-        "profitAt275": -696839,
-        "salePsf": 699,
+        "finished": 2397800,
+        "profit": -1167051,
+        "marginPct": -49,
+        "marginPctAt275": -40,
+        "profitAt275": -947487,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 797914,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:13Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -872,10 +872,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 126,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 624,
-        "price": 3050000,
-        "lowPsf": 215,
+        "psf": 624,
+        "medPsf": 377,
+        "price": 1659000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -898,21 +898,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5332
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           },
           {
-            "address": "3734 E MOUNTAIN VIEW RD",
-            "sold": "01/01/2024",
-            "price": 1571900,
-            "sf": 7325
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:13Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -922,20 +922,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1333469,
-        "finished": 2945000,
-        "profit": -27288,
-        "marginPct": -1,
-        "marginPctAt275": 7,
-        "profitAt275": 192276,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -583874,
+        "marginPct": -25,
+        "marginPctAt275": -15,
+        "profitAt275": -364310,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:13Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -1108,10 +1108,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 122,
       "houseComps": {
-        "psf": 699,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -1120,12 +1120,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -1140,15 +1134,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:13Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -1158,20 +1158,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1293117,
-        "finished": 2656200,
-        "profit": -264247,
-        "marginPct": -10,
-        "marginPctAt275": -2,
-        "profitAt275": -44683,
-        "salePsf": 699,
+        "finished": 2397800,
+        "profit": -514895,
+        "marginPct": -21,
+        "marginPctAt275": -12,
+        "profitAt275": -295331,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 797914,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:13Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -1332,10 +1332,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 122,
       "houseComps": {
-        "psf": 699,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2235000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -1344,12 +1344,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -1364,15 +1358,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "4602 E CHOLLA ST",
+            "sold": "04/01/2026",
+            "price": 1105000,
+            "sf": 2685
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:13Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -1382,20 +1382,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1905327,
-        "finished": 2656200,
-        "profit": -919312,
-        "marginPct": -35,
-        "marginPctAt275": -26,
-        "profitAt275": -699748,
-        "salePsf": 699,
+        "finished": 2397800,
+        "profit": -1169960,
+        "marginPct": -49,
+        "marginPctAt275": -40,
+        "profitAt275": -950396,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 797914,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:13Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -1557,10 +1557,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 120,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 624,
-        "price": 3050000,
-        "lowPsf": 215,
+        "psf": 624,
+        "medPsf": 377,
+        "price": 1659000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -1577,27 +1577,27 @@ window.PHX_LAND_LEADS = {
             "sf": 5734
           },
           {
-            "address": "3734 E MOUNTAIN VIEW RD",
-            "sold": "01/01/2024",
-            "price": 1571900,
-            "sf": 7325
-          },
-          {
             "address": "4224 E DESERT COVE AVE",
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
+          },
+          {
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:14Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -1607,20 +1607,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1910953,
-        "finished": 2945000,
-        "profit": -645196,
-        "marginPct": -22,
-        "marginPctAt275": -14,
-        "profitAt275": -425632,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -1201782,
+        "marginPct": -51,
+        "marginPctAt275": -41,
+        "profitAt275": -982218,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:14Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -1833,7 +1833,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:14Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -1856,7 +1856,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:14Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -2042,19 +2042,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 118,
       "houseComps": {
-        "psf": 1201,
-        "medPsf": 942,
-        "price": 4850000,
-        "lowPsf": 624,
+        "psf": 775,
+        "medPsf": 631,
+        "price": 3050000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
-          },
           {
             "address": "4224 E DESERT COVE AVE",
             "sold": "08/01/2026",
@@ -2068,44 +2062,50 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
+            "address": "5101 E LAUREL LN",
+            "sold": "05/01/2026",
+            "price": 2235000,
+            "sf": 3542
           },
           {
-            "address": "4902 E BERNEIL DR",
-            "sold": "09/01/2025",
-            "price": 11900000,
-            "sf": 7589
+            "address": "10230 N 39TH ST",
+            "sold": "11/01/2024",
+            "price": 1275000,
+            "sf": 5734
+          },
+          {
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:14Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 1349203,
-        "finished": 4563800,
-        "profit": 1526113,
-        "marginPct": 33,
-        "marginPctAt275": 38,
-        "profitAt275": 1745677,
-        "salePsf": 1201,
+        "finished": 2945000,
+        "profit": -44123,
+        "marginPct": -1,
+        "marginPctAt275": 6,
+        "profitAt275": 175441,
+        "salePsf": 775,
         "risk": "Low",
-        "supportableOffer": 2348953,
+        "supportableOffer": 1032733,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:14Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -2281,10 +2281,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 118,
       "houseComps": {
-        "psf": 368,
-        "medPsf": 358,
-        "price": 737500,
-        "lowPsf": 253,
+        "psf": 358,
+        "medPsf": 292,
+        "price": 885000,
+        "lowPsf": 271,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -2295,33 +2295,33 @@ window.PHX_LAND_LEADS = {
             "sf": 2776
           },
           {
-            "address": "2901 E PARADISE LN",
-            "sold": "08/01/2026",
-            "price": 400000,
-            "sf": 1581
-          },
-          {
-            "address": "14426 N 39TH WAY",
-            "sold": "01/01/2026",
-            "price": 737500,
-            "sf": 2004
-          },
-          {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
-          },
-          {
             "address": "3001 E ACOMA DR",
             "sold": "09/01/2024",
             "price": 1075000,
             "sf": 3000
+          },
+          {
+            "address": "2723 E ACOMA DR",
+            "sold": "06/01/2026",
+            "price": 885000,
+            "sf": 3261
+          },
+          {
+            "address": "2716 E EVANS DR",
+            "sold": "05/01/2026",
+            "price": 730000,
+            "sf": 2627
+          },
+          {
+            "address": "2739 E VISTA DR",
+            "sold": "04/01/2026",
+            "price": 800000,
+            "sf": 2742
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:14Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -2331,20 +2331,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 962844,
-        "finished": 1398400,
-        "profit": -1130921,
-        "marginPct": -81,
-        "marginPctAt275": -65,
-        "profitAt275": -911357,
-        "salePsf": 368,
+        "finished": 1360400,
+        "profit": -1167781,
+        "marginPct": -86,
+        "marginPctAt275": -70,
+        "profitAt275": -948217,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -224783,
+        "supportableOffer": -255680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:14Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -2519,9 +2519,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 118,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 629,
-        "price": 3050000,
+        "psf": 624,
+        "medPsf": 377,
+        "price": 1659000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -2545,21 +2545,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:14Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -2569,20 +2569,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1240477,
-        "finished": 2945000,
-        "profit": 72214,
-        "marginPct": 2,
-        "marginPctAt275": 10,
-        "profitAt275": 291778,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -484372,
+        "marginPct": -20,
+        "marginPctAt275": -11,
+        "profitAt275": -264808,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:14Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -2767,47 +2767,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 118,
       "houseComps": {
-        "psf": 412,
-        "medPsf": 339,
-        "price": 659950,
-        "lowPsf": 253,
+        "psf": 397,
+        "medPsf": 358,
+        "price": 1100000,
+        "lowPsf": 237,
         "n": 5,
-        "radiusMi": 1,
+        "radiusMi": 2,
         "comps": [
           {
-            "address": "2901 E PARADISE LN",
-            "sold": "08/01/2026",
-            "price": 400000,
-            "sf": 1581
-          },
-          {
-            "address": "2640 E BEVERLY LN",
-            "sold": "04/01/2026",
-            "price": 410000,
-            "sf": 1513
-          },
-          {
-            "address": "17234 N 28TH ST",
+            "address": "16244 N 21ST ST",
             "sold": "07/01/2025",
-            "price": 659950,
-            "sf": 1600
-          },
-          {
-            "address": "2909 E CAMPO BELLO DR",
-            "sold": "04/01/2026",
-            "price": 715000,
-            "sf": 2111
+            "price": 1100000,
+            "sf": 3637
           },
           {
             "address": "3720 E TIERRA BUENA LN",
             "sold": "08/01/2025",
             "price": 1295000,
             "sf": 2776
+          },
+          {
+            "address": "18812 N 22ND ST",
+            "sold": "06/01/2026",
+            "price": 1900000,
+            "sf": 4785
+          },
+          {
+            "address": "2890 E ANGELA DR",
+            "sold": "01/01/2024",
+            "price": 635000,
+            "sf": 2684
+          },
+          {
+            "address": "3001 E ACOMA DR",
+            "sold": "09/01/2024",
+            "price": 1075000,
+            "sf": 3000
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:15Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -2817,20 +2817,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 911538,
-        "finished": 1565600,
-        "profit": -913840,
-        "marginPct": -58,
-        "marginPctAt275": -44,
-        "profitAt275": -694276,
-        "salePsf": 412,
+        "finished": 1508600,
+        "profit": -969130,
+        "marginPct": -64,
+        "marginPctAt275": -50,
+        "profitAt275": -749566,
+        "salePsf": 397,
         "risk": "Low",
-        "supportableOffer": -88836,
+        "supportableOffer": -135181,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:15Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -3004,10 +3004,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 116,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 248,
-        "price": 1650000,
-        "lowPsf": 215,
+        "psf": 584,
+        "medPsf": 377,
+        "price": 1659000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -3024,27 +3024,27 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           },
           {
-            "address": "3734 E MOUNTAIN VIEW RD",
-            "sold": "01/01/2024",
-            "price": 1571900,
-            "sf": 7325
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           },
           {
-            "address": "10215 N 38TH ST",
-            "sold": "12/01/2025",
-            "price": 1650000,
-            "sf": 6651
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:15Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -3054,20 +3054,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1259969,
-        "finished": 2945000,
-        "profit": 51357,
-        "marginPct": 2,
-        "marginPctAt275": 9,
-        "profitAt275": 270921,
-        "salePsf": 775,
+        "finished": 2219200,
+        "profit": -652669,
+        "marginPct": -29,
+        "marginPctAt275": -20,
+        "profitAt275": -433105,
+        "salePsf": 584,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 442596,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:15Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -3254,9 +3254,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 116,
       "houseComps": {
-        "psf": 433,
+        "psf": 358,
         "medPsf": 329,
-        "price": 770000,
+        "price": 1075000,
         "lowPsf": 229,
         "n": 5,
         "radiusMi": 1,
@@ -3266,12 +3266,6 @@ window.PHX_LAND_LEADS = {
             "sold": "04/01/2026",
             "price": 1350000,
             "sf": 3056
-          },
-          {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
           },
           {
             "address": "2732 E FRIESS DR",
@@ -3286,15 +3280,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3031
           },
           {
-            "address": "13215 N 20TH ST",
-            "sold": "12/01/2024",
-            "price": 645000,
-            "sf": 2269
+            "address": "3001 E ACOMA DR",
+            "sold": "09/01/2024",
+            "price": 1075000,
+            "sf": 3000
+          },
+          {
+            "address": "2723 E ACOMA DR",
+            "sold": "06/01/2026",
+            "price": 885000,
+            "sf": 3261
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:15Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -3304,20 +3304,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 6124670,
-        "finished": 1645400,
-        "profit": -6414485,
-        "marginPct": -390,
-        "marginPctAt275": -376,
-        "profitAt275": -6194921,
-        "salePsf": 433,
+        "finished": 1360400,
+        "profit": -6690935,
+        "marginPct": -492,
+        "marginPctAt275": -476,
+        "profitAt275": -6471371,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -23951,
+        "supportableOffer": -255680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:15Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -3502,10 +3502,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 116,
       "houseComps": {
-        "psf": 440,
-        "medPsf": 409,
+        "psf": 456,
+        "medPsf": 440,
         "price": 1625000,
-        "lowPsf": 355,
+        "lowPsf": 357,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -3528,21 +3528,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5188
           },
           {
-            "address": "4404 E HARTFORD AVE",
-            "sold": "06/01/2026",
-            "price": 720000,
-            "sf": 2028
-          },
-          {
             "address": "3720 E TIERRA BUENA LN",
             "sold": "08/01/2025",
             "price": 1295000,
             "sf": 2776
+          },
+          {
+            "address": "4335 E KATHLEEN RD",
+            "sold": "05/01/2024",
+            "price": 1390000,
+            "sf": 3050
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:15Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -3552,20 +3552,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1676678,
-        "finished": 1672000,
-        "profit": -1629331,
-        "marginPct": -97,
-        "marginPctAt275": -84,
-        "profitAt275": -1409767,
-        "salePsf": 440,
+        "finished": 1732800,
+        "profit": -1570355,
+        "marginPct": -91,
+        "marginPctAt275": -78,
+        "profitAt275": -1350791,
+        "salePsf": 456,
         "risk": "Low",
-        "supportableOffer": -2323,
+        "supportableOffer": 47112,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:15Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -3726,10 +3726,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 116,
       "houseComps": {
-        "psf": 699,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -3738,12 +3738,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -3758,15 +3752,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:16Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -3776,20 +3776,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1884745,
-        "finished": 2656200,
-        "profit": -897289,
-        "marginPct": -34,
-        "marginPctAt275": -26,
-        "profitAt275": -677725,
-        "salePsf": 699,
+        "finished": 2397800,
+        "profit": -1147937,
+        "marginPct": -48,
+        "marginPctAt275": -39,
+        "profitAt275": -928373,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 797914,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:16Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -3975,8 +3975,8 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 114,
       "houseComps": {
-        "psf": 440,
-        "medPsf": 409,
+        "psf": 456,
+        "medPsf": 440,
         "price": 1625000,
         "lowPsf": 357,
         "n": 5,
@@ -4001,21 +4001,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5188
           },
           {
-            "address": "14426 N 39TH WAY",
-            "sold": "01/01/2026",
-            "price": 737500,
-            "sf": 2004
-          },
-          {
             "address": "3720 E TIERRA BUENA LN",
             "sold": "08/01/2025",
             "price": 1295000,
             "sf": 2776
+          },
+          {
+            "address": "4335 E KATHLEEN RD",
+            "sold": "05/01/2024",
+            "price": 1390000,
+            "sf": 3050
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:16Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -4025,20 +4025,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1624895,
-        "finished": 1672000,
-        "profit": -1573924,
-        "marginPct": -94,
-        "marginPctAt275": -81,
-        "profitAt275": -1354360,
-        "salePsf": 440,
+        "finished": 1732800,
+        "profit": -1514948,
+        "marginPct": -87,
+        "marginPctAt275": -75,
+        "profitAt275": -1295384,
+        "salePsf": 456,
         "risk": "Low",
-        "supportableOffer": -2323,
+        "supportableOffer": 47112,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:16Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -4209,9 +4209,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 114,
       "houseComps": {
-        "psf": 842,
-        "medPsf": 775,
-        "price": 3325000,
+        "psf": 775,
+        "medPsf": 624,
+        "price": 3050000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -4235,44 +4235,44 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
-          },
-          {
             "address": "9518 N 46TH ST",
             "sold": "02/01/2026",
             "price": 4850000,
             "sf": 5146
+          },
+          {
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:16Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 1240477,
-        "finished": 3199600,
-        "profit": 319176,
-        "marginPct": 10,
-        "marginPctAt275": 17,
-        "profitAt275": 538740,
-        "salePsf": 842,
+        "finished": 2945000,
+        "profit": 72214,
+        "marginPct": 2,
+        "marginPctAt275": 10,
+        "profitAt275": 291778,
+        "salePsf": 775,
         "risk": "Low",
-        "supportableOffer": 1239744,
+        "supportableOffer": 1032733,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:16Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -4457,10 +4457,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 114,
       "houseComps": {
-        "psf": 440,
-        "medPsf": 409,
+        "psf": 466,
+        "medPsf": 440,
         "price": 1625000,
-        "lowPsf": 355,
+        "lowPsf": 357,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -4489,15 +4489,15 @@ window.PHX_LAND_LEADS = {
             "sf": 2735
           },
           {
-            "address": "4404 E HARTFORD AVE",
-            "sold": "06/01/2026",
-            "price": 720000,
-            "sf": 2028
+            "address": "3720 E TIERRA BUENA LN",
+            "sold": "08/01/2025",
+            "price": 1295000,
+            "sf": 2776
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:16Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -4507,20 +4507,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1678437,
-        "finished": 1672000,
-        "profit": -1631214,
-        "marginPct": -98,
-        "marginPctAt275": -84,
-        "profitAt275": -1411650,
-        "salePsf": 440,
+        "finished": 1770800,
+        "profit": -1535378,
+        "marginPct": -87,
+        "marginPctAt275": -74,
+        "profitAt275": -1315814,
+        "salePsf": 466,
         "risk": "Low",
-        "supportableOffer": -2323,
+        "supportableOffer": 78009,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:16Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -4706,9 +4706,9 @@ window.PHX_LAND_LEADS = {
       "peakScore": 114,
       "houseComps": {
         "psf": 409,
-        "medPsf": 368,
+        "medPsf": 357,
         "price": 1625000,
-        "lowPsf": 273,
+        "lowPsf": 267,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -4731,21 +4731,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5188
           },
           {
-            "address": "14426 N 39TH WAY",
-            "sold": "01/01/2026",
-            "price": 737500,
-            "sf": 2004
-          },
-          {
             "address": "4660 E TIERRA BUENA LN",
             "sold": "05/01/2026",
             "price": 730000,
             "sf": 2673
+          },
+          {
+            "address": "15614 N 47TH PL",
+            "sold": "06/01/2026",
+            "price": 620000,
+            "sf": 2322
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:16Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -4768,7 +4768,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:16Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -4953,10 +4953,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 113,
       "houseComps": {
-        "psf": 440,
-        "medPsf": 409,
+        "psf": 456,
+        "medPsf": 440,
         "price": 1625000,
-        "lowPsf": 253,
+        "lowPsf": 357,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -4979,21 +4979,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2776
           },
           {
-            "address": "2901 E PARADISE LN",
-            "sold": "08/01/2026",
-            "price": 400000,
-            "sf": 1581
-          },
-          {
             "address": "4350 E KINGS AVE",
             "sold": "05/01/2025",
             "price": 1850000,
             "sf": 5188
+          },
+          {
+            "address": "4335 E KATHLEEN RD",
+            "sold": "05/01/2024",
+            "price": 1390000,
+            "sf": 3050
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:16Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -5003,20 +5003,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 981736,
-        "finished": 1672000,
-        "profit": -885744,
-        "marginPct": -53,
-        "marginPctAt275": -40,
-        "profitAt275": -666180,
-        "salePsf": 440,
+        "finished": 1732800,
+        "profit": -826768,
+        "marginPct": -48,
+        "marginPctAt275": -35,
+        "profitAt275": -607204,
+        "salePsf": 456,
         "risk": "Low",
-        "supportableOffer": -2323,
+        "supportableOffer": 47112,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:16Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -5242,7 +5242,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:17Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -5265,7 +5265,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:17Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -5450,10 +5450,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 112,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 624,
-        "price": 3050000,
-        "lowPsf": 215,
+        "psf": 624,
+        "medPsf": 377,
+        "price": 1659000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -5476,21 +5476,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5332
           },
           {
-            "address": "3734 E MOUNTAIN VIEW RD",
-            "sold": "01/01/2024",
-            "price": 1571900,
-            "sf": 7325
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:17Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -5500,20 +5500,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1968526,
-        "finished": 2945000,
-        "profit": -706799,
-        "marginPct": -24,
-        "marginPctAt275": -17,
-        "profitAt275": -487235,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -1263385,
+        "marginPct": -53,
+        "marginPctAt275": -44,
+        "profitAt275": -1043821,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:17Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -5674,9 +5674,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 112,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 629,
-        "price": 3050000,
+        "psf": 624,
+        "medPsf": 584,
+        "price": 2600000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -5700,21 +5700,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:17Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -5724,20 +5724,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1265971,
-        "finished": 2945000,
-        "profit": 44935,
-        "marginPct": 2,
-        "marginPctAt275": 9,
-        "profitAt275": 264499,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -511651,
+        "marginPct": -22,
+        "marginPctAt275": -12,
+        "profitAt275": -292087,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:17Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -5914,10 +5914,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 112,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 624,
-        "price": 3050000,
-        "lowPsf": 215,
+        "psf": 624,
+        "medPsf": 377,
+        "price": 1659000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -5940,44 +5940,44 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           },
           {
-            "address": "3734 E MOUNTAIN VIEW RD",
-            "sold": "01/01/2024",
-            "price": 1571900,
-            "sf": 7325
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:17Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 1091973,
-        "finished": 2945000,
-        "profit": 231113,
-        "marginPct": 8,
-        "marginPctAt275": 15,
-        "profitAt275": 450677,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -325473,
+        "marginPct": -14,
+        "marginPctAt275": -4,
+        "profitAt275": -105909,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:17Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -6161,7 +6161,7 @@ window.PHX_LAND_LEADS = {
         "psf": 775,
         "medPsf": 624,
         "price": 3050000,
-        "lowPsf": 215,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -6170,18 +6170,6 @@ window.PHX_LAND_LEADS = {
             "sold": "06/01/2025",
             "price": 3050000,
             "sf": 3936
-          },
-          {
-            "address": "3734 E MOUNTAIN VIEW RD",
-            "sold": "01/01/2024",
-            "price": 1571900,
-            "sf": 7325
-          },
-          {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
           },
           {
             "address": "10230 N 39TH ST",
@@ -6194,11 +6182,23 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
+          },
+          {
+            "address": "9518 N 46TH ST",
+            "sold": "02/01/2026",
+            "price": 4850000,
+            "sf": 5146
+          },
+          {
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:17Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -6221,7 +6221,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:17Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -6409,19 +6409,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 111,
       "houseComps": {
-        "psf": 1201,
-        "medPsf": 942,
-        "price": 4850000,
-        "lowPsf": 624,
+        "psf": 775,
+        "medPsf": 631,
+        "price": 3050000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
-          },
           {
             "address": "4224 E DESERT COVE AVE",
             "sold": "08/01/2026",
@@ -6435,44 +6429,50 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
+            "address": "5101 E LAUREL LN",
+            "sold": "05/01/2026",
+            "price": 2235000,
+            "sf": 3542
           },
           {
-            "address": "4902 E BERNEIL DR",
-            "sold": "09/01/2025",
-            "price": 11900000,
-            "sf": 7589
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
+          },
+          {
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:17Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 1256738,
-        "finished": 4563800,
-        "profit": 1625050,
-        "marginPct": 36,
-        "marginPctAt275": 40,
-        "profitAt275": 1844614,
-        "salePsf": 1201,
+        "finished": 2945000,
+        "profit": 54814,
+        "marginPct": 2,
+        "marginPctAt275": 9,
+        "profitAt275": 274378,
+        "salePsf": 775,
         "risk": "Low",
-        "supportableOffer": 2348953,
+        "supportableOffer": 1032733,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:17Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -6633,10 +6633,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 111,
       "houseComps": {
-        "psf": 699,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -6645,12 +6645,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -6665,15 +6659,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:18Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -6683,20 +6683,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1884536,
-        "finished": 2656200,
-        "profit": -897066,
-        "marginPct": -34,
-        "marginPctAt275": -26,
-        "profitAt275": -677502,
-        "salePsf": 699,
+        "finished": 2397800,
+        "profit": -1147714,
+        "marginPct": -48,
+        "marginPctAt275": -39,
+        "profitAt275": -928150,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 797914,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:18Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -6857,10 +6857,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 110,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 624,
-        "price": 3050000,
-        "lowPsf": 215,
+        "psf": 624,
+        "medPsf": 584,
+        "price": 2600000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -6883,21 +6883,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5734
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           },
           {
-            "address": "3734 E MOUNTAIN VIEW RD",
-            "sold": "01/01/2024",
-            "price": 1571900,
-            "sf": 7325
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:18Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -6907,20 +6907,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1323411,
-        "finished": 2945000,
-        "profit": -16526,
-        "marginPct": -1,
-        "marginPctAt275": 7,
-        "profitAt275": 203038,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -573112,
+        "marginPct": -24,
+        "marginPctAt275": -15,
+        "profitAt275": -353548,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:18Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -7084,7 +7084,7 @@ window.PHX_LAND_LEADS = {
         "psf": 440,
         "medPsf": 409,
         "price": 1625000,
-        "lowPsf": 355,
+        "lowPsf": 303,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -7113,15 +7113,15 @@ window.PHX_LAND_LEADS = {
             "sf": 2776
           },
           {
-            "address": "4404 E HARTFORD AVE",
-            "sold": "06/01/2026",
-            "price": 720000,
-            "sf": 2028
+            "address": "4408 E ST JOHN RD",
+            "sold": "07/01/2026",
+            "price": 849000,
+            "sf": 2799
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:18Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -7144,7 +7144,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:18Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -7305,10 +7305,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 110,
       "houseComps": {
-        "psf": 699,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -7317,12 +7317,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -7337,15 +7331,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:18Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -7355,20 +7355,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1884369,
-        "finished": 2656200,
-        "profit": -896887,
-        "marginPct": -34,
-        "marginPctAt275": -25,
-        "profitAt275": -677323,
-        "salePsf": 699,
+        "finished": 2397800,
+        "profit": -1147535,
+        "marginPct": -48,
+        "marginPctAt275": -39,
+        "profitAt275": -927971,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 797914,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:18Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -7529,10 +7529,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 110,
       "houseComps": {
-        "psf": 699,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -7541,12 +7541,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -7561,15 +7555,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:18Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -7579,20 +7579,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1898927,
-        "finished": 2656200,
-        "profit": -912464,
-        "marginPct": -34,
-        "marginPctAt275": -26,
-        "profitAt275": -692900,
-        "salePsf": 699,
+        "finished": 2397800,
+        "profit": -1163112,
+        "marginPct": -49,
+        "marginPctAt275": -39,
+        "profitAt275": -943548,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 797914,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:18Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -7759,19 +7759,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 110,
       "houseComps": {
-        "psf": 631,
-        "medPsf": 629,
+        "psf": 624,
+        "medPsf": 584,
         "price": 2235000,
         "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
-          },
           {
             "address": "4224 E DESERT COVE AVE",
             "sold": "08/01/2026",
@@ -7785,21 +7779,27 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
-          },
-          {
             "address": "10434 N 44TH ST",
             "sold": "01/01/2026",
             "price": 1659000,
             "sf": 4399
+          },
+          {
+            "address": "4602 E CHOLLA ST",
+            "sold": "04/01/2026",
+            "price": 1105000,
+            "sf": 2685
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:19Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -7809,20 +7809,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1876379,
-        "finished": 2397800,
-        "profit": -1138986,
-        "marginPct": -48,
-        "marginPctAt275": -20,
-        "profitAt275": -768954,
-        "salePsf": 631,
+        "finished": 2371200,
+        "profit": -1164788,
+        "marginPct": -49,
+        "marginPctAt275": -21,
+        "profitAt275": -810237,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 587813,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:19Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -7977,8 +7977,8 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 110,
       "houseComps": {
-        "psf": 631,
-        "medPsf": 629,
+        "psf": 624,
+        "medPsf": 584,
         "price": 2235000,
         "lowPsf": 377,
         "n": 5,
@@ -7991,33 +7991,33 @@ window.PHX_LAND_LEADS = {
             "sf": 5332
           },
           {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
-          },
-          {
             "address": "5101 E LAUREL LN",
             "sold": "05/01/2026",
             "price": 2235000,
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
-          },
-          {
             "address": "10434 N 44TH ST",
             "sold": "01/01/2026",
             "price": 1659000,
             "sf": 4399
+          },
+          {
+            "address": "4602 E CHOLLA ST",
+            "sold": "04/01/2026",
+            "price": 1105000,
+            "sf": 2685
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:19Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -8027,20 +8027,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1865879,
-        "finished": 2397800,
-        "profit": -1127751,
-        "marginPct": -47,
-        "marginPctAt275": -38,
-        "profitAt275": -908187,
-        "salePsf": 631,
+        "finished": 2371200,
+        "profit": -1153553,
+        "marginPct": -49,
+        "marginPctAt275": -39,
+        "profitAt275": -933989,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 587813,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:19Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -8200,8 +8200,8 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 110,
       "houseComps": {
-        "psf": 440,
-        "medPsf": 409,
+        "psf": 456,
+        "medPsf": 440,
         "price": 1625000,
         "lowPsf": 357,
         "n": 5,
@@ -8232,15 +8232,15 @@ window.PHX_LAND_LEADS = {
             "sf": 2776
           },
           {
-            "address": "14426 N 39TH WAY",
-            "sold": "01/01/2026",
-            "price": 737500,
-            "sf": 2004
+            "address": "4335 E KATHLEEN RD",
+            "sold": "05/01/2024",
+            "price": 1390000,
+            "sf": 3050
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:19Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -8250,20 +8250,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1378931,
-        "finished": 1672000,
-        "profit": -1310742,
-        "marginPct": -78,
-        "marginPctAt275": -65,
-        "profitAt275": -1091178,
-        "salePsf": 440,
+        "finished": 1732800,
+        "profit": -1251766,
+        "marginPct": -72,
+        "marginPctAt275": -60,
+        "profitAt275": -1032202,
+        "salePsf": 456,
         "risk": "Low",
-        "supportableOffer": -2323,
+        "supportableOffer": 47112,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:19Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -8447,10 +8447,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 110,
       "houseComps": {
-        "psf": 440,
-        "medPsf": 409,
+        "psf": 466,
+        "medPsf": 440,
         "price": 1625000,
-        "lowPsf": 355,
+        "lowPsf": 357,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -8479,15 +8479,15 @@ window.PHX_LAND_LEADS = {
             "sf": 2735
           },
           {
-            "address": "4404 E HARTFORD AVE",
-            "sold": "06/01/2026",
-            "price": 720000,
-            "sf": 2028
+            "address": "3720 E TIERRA BUENA LN",
+            "sold": "08/01/2025",
+            "price": 1295000,
+            "sf": 2776
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:19Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -8497,20 +8497,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1629454,
-        "finished": 1672000,
-        "profit": -1578802,
-        "marginPct": -94,
-        "marginPctAt275": -81,
-        "profitAt275": -1359238,
-        "salePsf": 440,
+        "finished": 1770800,
+        "profit": -1482966,
+        "marginPct": -84,
+        "marginPctAt275": -71,
+        "profitAt275": -1263402,
+        "salePsf": 466,
         "risk": "Low",
-        "supportableOffer": -2323,
+        "supportableOffer": 78009,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:19Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -8670,10 +8670,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 110,
       "houseComps": {
-        "psf": 699,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2235000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -8682,12 +8682,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -8702,15 +8696,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "4602 E CHOLLA ST",
+            "sold": "04/01/2026",
+            "price": 1105000,
+            "sf": 2685
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:19Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -8720,20 +8720,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1885749,
-        "finished": 2656200,
-        "profit": -898363,
-        "marginPct": -34,
-        "marginPctAt275": -26,
-        "profitAt275": -678799,
-        "salePsf": 699,
+        "finished": 2397800,
+        "profit": -1149011,
+        "marginPct": -48,
+        "marginPctAt275": -39,
+        "profitAt275": -929447,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 797914,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:19Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -8933,7 +8933,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:19Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -8956,7 +8956,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:19Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -9180,7 +9180,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:20Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -9203,7 +9203,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:20Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -9388,10 +9388,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 108,
       "houseComps": {
-        "psf": 440,
-        "medPsf": 409,
+        "psf": 466,
+        "medPsf": 440,
         "price": 1625000,
-        "lowPsf": 355,
+        "lowPsf": 357,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -9420,15 +9420,15 @@ window.PHX_LAND_LEADS = {
             "sf": 2735
           },
           {
-            "address": "4404 E HARTFORD AVE",
-            "sold": "06/01/2026",
-            "price": 720000,
-            "sf": 2028
+            "address": "3720 E TIERRA BUENA LN",
+            "sold": "08/01/2025",
+            "price": 1295000,
+            "sf": 2776
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:20Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -9438,20 +9438,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 3274395,
-        "finished": 1672000,
-        "profit": -3338889,
-        "marginPct": -200,
-        "marginPctAt275": -187,
-        "profitAt275": -3119325,
-        "salePsf": 440,
+        "finished": 1770800,
+        "profit": -3243053,
+        "marginPct": -183,
+        "marginPctAt275": -53,
+        "profitAt275": -2979757,
+        "salePsf": 466,
         "risk": "Low",
-        "supportableOffer": -2323,
+        "supportableOffer": 78009,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:20Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -9638,7 +9638,7 @@ window.PHX_LAND_LEADS = {
         "psf": 440,
         "medPsf": 409,
         "price": 1625000,
-        "lowPsf": 357,
+        "lowPsf": 273,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -9661,21 +9661,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5188
           },
           {
-            "address": "14426 N 39TH WAY",
-            "sold": "01/01/2026",
-            "price": 737500,
-            "sf": 2004
-          },
-          {
             "address": "3720 E TIERRA BUENA LN",
             "sold": "08/01/2025",
             "price": 1295000,
             "sf": 2776
+          },
+          {
+            "address": "4660 E TIERRA BUENA LN",
+            "sold": "05/01/2026",
+            "price": 730000,
+            "sf": 2673
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:20Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -9698,7 +9698,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:20Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -9878,9 +9878,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 107,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 629,
-        "price": 3050000,
+        "psf": 624,
+        "medPsf": 428,
+        "price": 1659000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -9892,56 +9892,56 @@ window.PHX_LAND_LEADS = {
             "sf": 5332
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
-          },
-          {
             "address": "10230 N 39TH ST",
             "sold": "11/01/2024",
             "price": 1275000,
             "sf": 5734
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
-          },
-          {
             "address": "10025 N 39TH ST",
             "sold": "06/01/2025",
             "price": 3050000,
             "sf": 3936
+          },
+          {
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "11434 N 43RD ST",
+            "sold": "04/01/2026",
+            "price": 1075000,
+            "sf": 2512
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:20Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 978804,
-        "finished": 2945000,
-        "profit": 352204,
-        "marginPct": 12,
-        "marginPctAt275": 19,
-        "profitAt275": 571768,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -204382,
+        "marginPct": -9,
+        "marginPctAt275": 1,
+        "profitAt275": 15182,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:20Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -10116,9 +10116,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 107,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 629,
-        "price": 3050000,
+        "psf": 624,
+        "medPsf": 377,
+        "price": 1659000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -10142,44 +10142,44 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:20Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 1117091,
-        "finished": 2945000,
-        "profit": 204237,
-        "marginPct": 7,
-        "marginPctAt275": 14,
-        "profitAt275": 423801,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -352349,
+        "marginPct": -15,
+        "marginPctAt275": -6,
+        "profitAt275": -132785,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:20Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -10482,19 +10482,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 106,
       "houseComps": {
-        "psf": 842,
-        "medPsf": 775,
-        "price": 3325000,
+        "psf": 775,
+        "medPsf": 624,
+        "price": 3050000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
-          },
           {
             "address": "4224 E DESERT COVE AVE",
             "sold": "08/01/2026",
@@ -10518,34 +10512,40 @@ window.PHX_LAND_LEADS = {
             "sold": "06/01/2025",
             "price": 3050000,
             "sf": 3936
+          },
+          {
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:20Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 1342329,
-        "finished": 3199600,
-        "profit": 210194,
-        "marginPct": 7,
-        "marginPctAt275": 13,
-        "profitAt275": 429758,
-        "salePsf": 842,
+        "finished": 2945000,
+        "profit": -36768,
+        "marginPct": -1,
+        "marginPctAt275": 6,
+        "profitAt275": 182796,
+        "salePsf": 775,
         "risk": "Low",
-        "supportableOffer": 1239744,
+        "supportableOffer": 1032733,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:20Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -10706,10 +10706,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 106,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 624,
-        "price": 3050000,
-        "lowPsf": 215,
+        "psf": 624,
+        "medPsf": 377,
+        "price": 1659000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -10732,21 +10732,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           },
           {
-            "address": "3734 E MOUNTAIN VIEW RD",
-            "sold": "01/01/2024",
-            "price": 1571900,
-            "sf": 7325
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:21Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -10756,20 +10756,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1247772,
-        "finished": 2945000,
-        "profit": 64408,
-        "marginPct": 2,
-        "marginPctAt275": 10,
-        "profitAt275": 283972,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -492178,
+        "marginPct": -21,
+        "marginPctAt275": -11,
+        "profitAt275": -272614,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:21Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -10942,30 +10942,18 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 106,
       "houseComps": {
-        "psf": 942,
-        "medPsf": 699,
-        "price": 4750000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
-          },
           {
             "address": "4224 E DESERT COVE AVE",
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -10978,11 +10966,23 @@ window.PHX_LAND_LEADS = {
             "sold": "05/01/2026",
             "price": 2235000,
             "sf": 3542
+          },
+          {
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:21Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -10992,20 +10992,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1890058,
-        "finished": 3579600,
-        "profit": -7276,
-        "marginPct": 0,
-        "marginPctAt275": 6,
-        "profitAt275": 212288,
-        "salePsf": 942,
+        "finished": 2397800,
+        "profit": -1153622,
+        "marginPct": -48,
+        "marginPctAt275": -39,
+        "profitAt275": -934058,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 1548716,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:21Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -11696,10 +11696,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 104,
       "houseComps": {
-        "psf": 699,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -11708,12 +11708,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -11728,15 +11722,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:21Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -11746,20 +11746,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1995099,
-        "finished": 2656200,
-        "profit": -1015368,
-        "marginPct": -38,
-        "marginPctAt275": -30,
-        "profitAt275": -795804,
-        "salePsf": 699,
+        "finished": 2397800,
+        "profit": -1266016,
+        "marginPct": -53,
+        "marginPctAt275": -44,
+        "profitAt275": -1046452,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 797914,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:21Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -11972,7 +11972,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:21Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -11995,7 +11995,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:21Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -12225,7 +12225,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:21Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -12248,7 +12248,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:21Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -12474,7 +12474,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:21Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -12497,7 +12497,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:21Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -12805,19 +12805,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 102,
       "houseComps": {
-        "psf": 1201,
-        "medPsf": 942,
-        "price": 4850000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
-          },
           {
             "address": "4224 E DESERT COVE AVE",
             "sold": "08/01/2026",
@@ -12831,44 +12825,50 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
+            "address": "5101 E LAUREL LN",
+            "sold": "05/01/2026",
+            "price": 2235000,
+            "sf": 3542
           },
           {
-            "address": "4902 E BERNEIL DR",
-            "sold": "09/01/2025",
-            "price": 11900000,
-            "sf": 7589
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:22Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 1255852,
-        "finished": 4563800,
-        "profit": 1625998,
-        "marginPct": 36,
-        "marginPctAt275": 40,
-        "profitAt275": 1845562,
-        "salePsf": 1201,
+        "finished": 2397800,
+        "profit": -475022,
+        "marginPct": -20,
+        "marginPctAt275": -11,
+        "profitAt275": -255458,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 2348953,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:22Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -13058,8 +13058,8 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 118,
       "houseComps": {
-        "psf": 440,
-        "medPsf": 409,
+        "psf": 456,
+        "medPsf": 440,
         "price": 1625000,
         "lowPsf": 357,
         "n": 5,
@@ -13090,15 +13090,15 @@ window.PHX_LAND_LEADS = {
             "sf": 2776
           },
           {
-            "address": "14426 N 39TH WAY",
-            "sold": "01/01/2026",
-            "price": 737500,
-            "sf": 2004
+            "address": "4335 E KATHLEEN RD",
+            "sold": "05/01/2024",
+            "price": 1390000,
+            "sf": 3050
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:22Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -13108,20 +13108,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 711600,
-        "finished": 1672000,
-        "profit": -596698,
-        "marginPct": -36,
-        "marginPctAt275": -23,
-        "profitAt275": -377134,
-        "salePsf": 440,
+        "finished": 1732800,
+        "profit": -537722,
+        "marginPct": -31,
+        "marginPctAt275": -18,
+        "profitAt275": -318158,
+        "salePsf": 456,
         "risk": "Medium",
-        "supportableOffer": -2323,
+        "supportableOffer": 47112,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:22Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -13307,18 +13307,12 @@ window.PHX_LAND_LEADS = {
       "peakScore": 101,
       "houseComps": {
         "psf": 341,
-        "medPsf": 324,
-        "price": 525000,
-        "lowPsf": 285,
+        "medPsf": 287,
+        "price": 675000,
+        "lowPsf": 85,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "3623 E CROCUS DR",
-            "sold": "05/01/2026",
-            "price": 525000,
-            "sf": 1620
-          },
           {
             "address": "3002 E CHARTER OAK RD",
             "sold": "03/01/2024",
@@ -13332,21 +13326,27 @@ window.PHX_LAND_LEADS = {
             "sf": 2462
           },
           {
-            "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 490000,
-            "sf": 1717
+            "address": "3022 E EMILE ZOLA AVE",
+            "sold": "09/01/2026",
+            "price": 648000,
+            "sf": 2352
           },
           {
-            "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 498000,
-            "sf": 1717
+            "address": "12459 N 36TH ST",
+            "sold": "05/01/2026",
+            "price": 200000,
+            "sf": 2350
+          },
+          {
+            "address": "13411 N 30TH ST",
+            "sold": "09/01/2025",
+            "price": 675000,
+            "sf": 2352
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:22Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -13369,7 +13369,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:22Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -13548,8 +13548,8 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 101,
       "houseComps": {
-        "psf": 629,
-        "medPsf": 624,
+        "psf": 624,
+        "medPsf": 428,
         "price": 1659000,
         "lowPsf": 222,
         "n": 5,
@@ -13560,12 +13560,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "10230 N 39TH ST",
@@ -13580,15 +13574,21 @@ window.PHX_LAND_LEADS = {
             "sf": 4399
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
+          },
+          {
+            "address": "11434 N 43RD ST",
+            "sold": "04/01/2026",
+            "price": 1075000,
+            "sf": 2512
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:22Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -13598,20 +13598,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 814744,
-        "finished": 2390200,
-        "profit": -10408,
-        "marginPct": 0,
-        "marginPctAt275": 9,
-        "profitAt275": 209156,
-        "salePsf": 629,
+        "finished": 2371200,
+        "profit": -28838,
+        "marginPct": -1,
+        "marginPctAt275": 8,
+        "profitAt275": 190726,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 581634,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:22Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -13801,10 +13801,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 110,
       "houseComps": {
-        "psf": 363,
-        "medPsf": 355,
-        "price": 720000,
-        "lowPsf": 299,
+        "psf": 332,
+        "medPsf": 322,
+        "price": 820000,
+        "lowPsf": 289,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -13815,33 +13815,33 @@ window.PHX_LAND_LEADS = {
             "sf": 2735
           },
           {
-            "address": "4404 E HARTFORD AVE",
-            "sold": "06/01/2026",
-            "price": 720000,
-            "sf": 2028
-          },
-          {
-            "address": "4410 E CAMPO BELLO DR",
-            "sold": "07/01/2026",
-            "price": 564000,
-            "sf": 1889
-          },
-          {
-            "address": "4444 E ST JOHN RD",
-            "sold": "06/01/2026",
-            "price": 685000,
-            "sf": 1889
-          },
-          {
             "address": "4408 E ST JOHN RD",
             "sold": "07/01/2026",
             "price": 849000,
             "sf": 2799
+          },
+          {
+            "address": "4819 E PADDOCK PL",
+            "sold": "11/01/2025",
+            "price": 795000,
+            "sf": 2472
+          },
+          {
+            "address": "17704 N 48TH PL",
+            "sold": "12/01/2024",
+            "price": 820000,
+            "sf": 2473
+          },
+          {
+            "address": "4424 E HARTFORD AVE",
+            "sold": "01/01/2025",
+            "price": 810000,
+            "sf": 2798
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:22Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -13851,20 +13851,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 296025,
-        "finished": 1379400,
-        "profit": -416595,
-        "marginPct": -30,
-        "marginPctAt275": -14,
-        "profitAt275": -197031,
-        "salePsf": 363,
+        "finished": 1261600,
+        "profit": -530861,
+        "marginPct": -42,
+        "marginPctAt275": -25,
+        "profitAt275": -311297,
+        "salePsf": 332,
         "risk": "Low",
-        "supportableOffer": -222232,
+        "supportableOffer": -318013,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:22Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -14023,10 +14023,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 100,
       "houseComps": {
-        "psf": 699,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -14035,12 +14035,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -14055,15 +14049,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:23Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -14073,20 +14073,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1890393,
-        "finished": 2656200,
-        "profit": -884073,
-        "marginPct": -33,
-        "marginPctAt275": -25,
-        "profitAt275": -664509,
-        "salePsf": 699,
+        "finished": 2397800,
+        "profit": -1134721,
+        "marginPct": -47,
+        "marginPctAt275": -38,
+        "profitAt275": -915157,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 815914,
+        "supportableOffer": 605813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:23Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -14287,7 +14287,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:23Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -14310,7 +14310,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:23Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -14482,9 +14482,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 100,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 629,
-        "price": 3050000,
+        "psf": 624,
+        "medPsf": 377,
+        "price": 1659000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -14508,21 +14508,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:23Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -14532,20 +14532,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1238296,
-        "finished": 2945000,
-        "profit": 74547,
-        "marginPct": 3,
-        "marginPctAt275": 10,
-        "profitAt275": 294111,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -482039,
+        "marginPct": -20,
+        "marginPctAt275": -11,
+        "profitAt275": -262475,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:23Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -14705,10 +14705,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 100,
       "houseComps": {
-        "psf": 699,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -14717,12 +14717,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -14737,15 +14731,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:23Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -14755,20 +14755,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1995601,
-        "finished": 2656200,
-        "profit": -1015905,
-        "marginPct": -38,
-        "marginPctAt275": -30,
-        "profitAt275": -796341,
-        "salePsf": 699,
+        "finished": 2397800,
+        "profit": -1266553,
+        "marginPct": -53,
+        "marginPctAt275": -44,
+        "profitAt275": -1046989,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 797914,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:23Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -14930,9 +14930,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 99,
       "houseComps": {
-        "psf": 433,
-        "medPsf": 329,
-        "price": 770000,
+        "psf": 358,
+        "medPsf": 341,
+        "price": 1185000,
         "lowPsf": 229,
         "n": 5,
         "radiusMi": 1,
@@ -14942,12 +14942,6 @@ window.PHX_LAND_LEADS = {
             "sold": "04/01/2026",
             "price": 1350000,
             "sf": 3056
-          },
-          {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
           },
           {
             "address": "2732 E FRIESS DR",
@@ -14962,15 +14956,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3031
           },
           {
-            "address": "13215 N 20TH ST",
-            "sold": "12/01/2024",
-            "price": 645000,
-            "sf": 2269
+            "address": "3002 E CHARTER OAK RD",
+            "sold": "03/01/2024",
+            "price": 1185000,
+            "sf": 3478
+          },
+          {
+            "address": "3001 E ACOMA DR",
+            "sold": "09/01/2024",
+            "price": 1075000,
+            "sf": 3000
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:23Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -14980,20 +14980,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1503103,
-        "finished": 1645400,
-        "profit": -1450148,
-        "marginPct": -88,
-        "marginPctAt275": -75,
-        "profitAt275": -1230584,
-        "salePsf": 433,
+        "finished": 1360400,
+        "profit": -1726598,
+        "marginPct": -127,
+        "marginPctAt275": -111,
+        "profitAt275": -1507034,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -5951,
+        "supportableOffer": -237680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:23Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -15217,7 +15217,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:23Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -15240,7 +15240,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:23Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -15425,9 +15425,9 @@ window.PHX_LAND_LEADS = {
       "peakScore": 98,
       "houseComps": {
         "psf": 358,
-        "medPsf": 305,
-        "price": 685000,
-        "lowPsf": 253,
+        "medPsf": 320,
+        "price": 750000,
+        "lowPsf": 286,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -15438,33 +15438,33 @@ window.PHX_LAND_LEADS = {
             "sf": 2776
           },
           {
-            "address": "2901 E PARADISE LN",
-            "sold": "08/01/2026",
-            "price": 400000,
-            "sf": 1581
-          },
-          {
-            "address": "2640 E BEVERLY LN",
-            "sold": "04/01/2026",
-            "price": 410000,
-            "sf": 1513
-          },
-          {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
-          },
-          {
             "address": "3001 E ACOMA DR",
             "sold": "09/01/2024",
             "price": 1075000,
             "sf": 3000
+          },
+          {
+            "address": "15621 N 37TH ST",
+            "sold": "06/01/2026",
+            "price": 750000,
+            "sf": 2344
+          },
+          {
+            "address": "3861 E KINGS AVE",
+            "sold": "04/01/2026",
+            "price": 655000,
+            "sf": 2291
+          },
+          {
+            "address": "16406 N 39TH PL",
+            "sold": "02/01/2026",
+            "price": 655000,
+            "sf": 2291
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:24Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -15487,7 +15487,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:24Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -15654,10 +15654,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 98,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 624,
-        "price": 3050000,
-        "lowPsf": 215,
+        "psf": 624,
+        "medPsf": 377,
+        "price": 1659000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -15680,21 +15680,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5332
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           },
           {
-            "address": "3734 E MOUNTAIN VIEW RD",
-            "sold": "01/01/2024",
-            "price": 1571900,
-            "sf": 7325
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:24Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -15704,20 +15704,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1263635,
-        "finished": 2945000,
-        "profit": 47435,
-        "marginPct": 2,
-        "marginPctAt275": 9,
-        "profitAt275": 266999,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -509151,
+        "marginPct": -21,
+        "marginPctAt275": -12,
+        "profitAt275": -289587,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:24Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -15888,9 +15888,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 98,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 629,
-        "price": 3050000,
+        "psf": 624,
+        "medPsf": 377,
+        "price": 1659000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -15914,44 +15914,44 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:24Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 1223054,
-        "finished": 2945000,
-        "profit": 90856,
-        "marginPct": 3,
-        "marginPctAt275": 11,
-        "profitAt275": 310420,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -465730,
+        "marginPct": -20,
+        "marginPctAt275": -10,
+        "profitAt275": -246166,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:24Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -16137,9 +16137,9 @@ window.PHX_LAND_LEADS = {
       "peakScore": 97,
       "houseComps": {
         "psf": 442,
-        "medPsf": 326,
-        "price": 890000,
-        "lowPsf": 188,
+        "medPsf": 330,
+        "price": 1075000,
+        "lowPsf": 229,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -16162,21 +16162,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2732
           },
           {
-            "address": "13032 N 19TH ST",
-            "sold": "08/01/2026",
-            "price": 425000,
-            "sf": 2261
-          },
-          {
             "address": "13245 N 19TH WAY",
             "sold": "03/01/2025",
             "price": 695000,
             "sf": 3031
+          },
+          {
+            "address": "12646 N 17TH PL",
+            "sold": "06/01/2025",
+            "price": 1075000,
+            "sf": 3261
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:24Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -16199,7 +16199,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:24Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -16382,7 +16382,7 @@ window.PHX_LAND_LEADS = {
       "peakScore": 97,
       "houseComps": {
         "psf": 397,
-        "medPsf": 338,
+        "medPsf": 375,
         "price": 955000,
         "lowPsf": 179,
         "n": 5,
@@ -16393,12 +16393,6 @@ window.PHX_LAND_LEADS = {
             "sold": "06/01/2026",
             "price": 955000,
             "sf": 2407
-          },
-          {
-            "address": "3443 W JOY RANCH RD",
-            "sold": "05/01/2026",
-            "price": 635000,
-            "sf": 1952
           },
           {
             "address": "36430 N 34TH AVE",
@@ -16417,11 +16411,17 @@ window.PHX_LAND_LEADS = {
             "sold": "12/01/2025",
             "price": 990000,
             "sf": 2926
+          },
+          {
+            "address": "38133 N 29TH AVE",
+            "sold": "07/01/2026",
+            "price": 949900,
+            "sf": 2530
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:24Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -16444,7 +16444,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:24Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -16669,7 +16669,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:24Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -16692,7 +16692,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:24Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -16865,9 +16865,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 97,
       "houseComps": {
-        "psf": 433,
+        "psf": 358,
         "medPsf": 329,
-        "price": 885000,
+        "price": 1075000,
         "lowPsf": 271,
         "n": 5,
         "radiusMi": 1,
@@ -16877,18 +16877,6 @@ window.PHX_LAND_LEADS = {
             "sold": "04/01/2026",
             "price": 1350000,
             "sf": 3056
-          },
-          {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
-          },
-          {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
           },
           {
             "address": "2732 E FRIESS DR",
@@ -16901,11 +16889,23 @@ window.PHX_LAND_LEADS = {
             "sold": "06/01/2026",
             "price": 885000,
             "sf": 3261
+          },
+          {
+            "address": "3001 E ACOMA DR",
+            "sold": "09/01/2024",
+            "price": 1075000,
+            "sf": 3000
+          },
+          {
+            "address": "2716 E EVANS DR",
+            "sold": "05/01/2026",
+            "price": 730000,
+            "sf": 2627
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:25Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -16915,20 +16915,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 905948,
-        "finished": 1645400,
-        "profit": -811192,
-        "marginPct": -49,
-        "marginPctAt275": -36,
-        "profitAt275": -591628,
-        "salePsf": 433,
+        "finished": 1360400,
+        "profit": -1087642,
+        "marginPct": -80,
+        "marginPctAt275": -64,
+        "profitAt275": -868078,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -5951,
+        "supportableOffer": -237680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:25Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -17113,31 +17113,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 97,
       "houseComps": {
-        "psf": 368,
-        "medPsf": 358,
-        "price": 770000,
-        "lowPsf": 324,
+        "psf": 358,
+        "medPsf": 341,
+        "price": 1075000,
+        "lowPsf": 276,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "14426 N 39TH WAY",
-            "sold": "01/01/2026",
-            "price": 737500,
-            "sf": 2004
-          },
-          {
-            "address": "3623 E CROCUS DR",
-            "sold": "05/01/2026",
-            "price": 525000,
-            "sf": 1620
-          },
-          {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
-          },
           {
             "address": "3002 E CHARTER OAK RD",
             "sold": "03/01/2024",
@@ -17149,11 +17131,29 @@ window.PHX_LAND_LEADS = {
             "sold": "09/01/2024",
             "price": 1075000,
             "sf": 3000
+          },
+          {
+            "address": "2732 E FRIESS DR",
+            "sold": "02/01/2026",
+            "price": 1360000,
+            "sf": 4134
+          },
+          {
+            "address": "13036 N 36TH ST",
+            "sold": "09/01/2025",
+            "price": 950000,
+            "sf": 2462
+          },
+          {
+            "address": "3022 E EMILE ZOLA AVE",
+            "sold": "09/01/2026",
+            "price": 648000,
+            "sf": 2352
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:25Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -17163,20 +17163,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 716249,
-        "finished": 1398400,
-        "profit": -847804,
-        "marginPct": -61,
-        "marginPctAt275": -45,
-        "profitAt275": -628240,
-        "salePsf": 368,
+        "finished": 1360400,
+        "profit": -884664,
+        "marginPct": -65,
+        "marginPctAt275": -49,
+        "profitAt275": -665100,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -206783,
+        "supportableOffer": -237680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:25Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -17888,19 +17888,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 96,
       "houseComps": {
-        "psf": 442,
-        "medPsf": 326,
-        "price": 1225000,
-        "lowPsf": 154,
+        "psf": 482,
+        "medPsf": 442,
+        "price": 1350000,
+        "lowPsf": 229,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "1750 E LARKSPUR DR",
-            "sold": "02/01/2025",
-            "price": 1225000,
-            "sf": 7956
-          },
           {
             "address": "12814 N 17TH PL",
             "sold": "10/01/2025",
@@ -17920,15 +17914,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2732
           },
           {
-            "address": "13032 N 19TH ST",
-            "sold": "08/01/2026",
-            "price": 425000,
-            "sf": 2261
+            "address": "13245 N 19TH WAY",
+            "sold": "03/01/2025",
+            "price": 695000,
+            "sf": 3031
+          },
+          {
+            "address": "13218 N 17TH PL",
+            "sold": "05/01/2024",
+            "price": 2000000,
+            "sf": 3968
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:25Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -17938,20 +17938,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 901300,
-        "finished": 1679600,
-        "profit": -792305,
-        "marginPct": -47,
-        "marginPctAt275": -34,
-        "profitAt275": -572741,
-        "salePsf": 442,
+        "finished": 1831600,
+        "profit": -644865,
+        "marginPct": -35,
+        "marginPctAt275": -4,
+        "profitAt275": -251823,
+        "salePsf": 482,
         "risk": "Medium",
-        "supportableOffer": 3856,
+        "supportableOffer": 127445,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:25Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -18135,25 +18135,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 96,
       "houseComps": {
-        "psf": 338,
+        "psf": 366,
         "medPsf": 334,
-        "price": 1800000,
+        "price": 1590000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "14440 N 14TH DR",
-            "sold": "06/01/2026",
-            "price": 3650000,
-            "sf": 10129
-          },
-          {
-            "address": "14214 N MOON MOUNTAIN TRL",
-            "sold": "05/01/2024",
-            "price": 2815000,
-            "sf": 8330
-          },
           {
             "address": "557 W MOON VALLEY DR",
             "sold": "09/01/2025",
@@ -18171,11 +18159,23 @@ window.PHX_LAND_LEADS = {
             "sold": "07/01/2026",
             "price": 1800000,
             "sf": 5382
+          },
+          {
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664
+          },
+          {
+            "address": "321 W TAM OSHANTER DR",
+            "sold": "10/01/2025",
+            "price": 1590000,
+            "sf": 4347
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:26Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -18185,20 +18185,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1329700,
-        "finished": 1284400,
-        "profit": -1634037,
-        "marginPct": -127,
-        "marginPctAt275": -110,
-        "profitAt275": -1414473,
-        "salePsf": 338,
+        "finished": 1390800,
+        "profit": -1530829,
+        "marginPct": -110,
+        "marginPctAt275": -94,
+        "profitAt275": -1311265,
+        "salePsf": 366,
         "risk": "Medium",
-        "supportableOffer": -317475,
+        "supportableOffer": -230963,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:26Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -18382,8 +18382,8 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 106,
       "houseComps": {
-        "psf": 440,
-        "medPsf": 409,
+        "psf": 456,
+        "medPsf": 440,
         "price": 1625000,
         "lowPsf": 357,
         "n": 5,
@@ -18414,15 +18414,15 @@ window.PHX_LAND_LEADS = {
             "sf": 2776
           },
           {
-            "address": "14426 N 39TH WAY",
-            "sold": "01/01/2026",
-            "price": 737500,
-            "sf": 2004
+            "address": "4335 E KATHLEEN RD",
+            "sold": "05/01/2024",
+            "price": 1390000,
+            "sf": 3050
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:26Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -18432,20 +18432,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 576100,
-        "finished": 1672000,
-        "profit": -451713,
-        "marginPct": -27,
-        "marginPctAt275": -14,
-        "profitAt275": -232149,
-        "salePsf": 440,
+        "finished": 1732800,
+        "profit": -392737,
+        "marginPct": -23,
+        "marginPctAt275": -10,
+        "profitAt275": -173173,
+        "salePsf": 456,
         "risk": "Medium",
-        "supportableOffer": -2323,
+        "supportableOffer": 47112,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:26Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -18623,10 +18623,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 100,
       "houseComps": {
-        "psf": 397,
-        "medPsf": 330,
-        "price": 765000,
-        "lowPsf": 256,
+        "psf": 336,
+        "medPsf": 289,
+        "price": 850000,
+        "lowPsf": 233,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -18635,12 +18635,6 @@ window.PHX_LAND_LEADS = {
             "sold": "06/01/2026",
             "price": 1900000,
             "sf": 4785
-          },
-          {
-            "address": "2131 E ROSE GARDEN LN",
-            "sold": "05/01/2025",
-            "price": 655000,
-            "sf": 1624
           },
           {
             "address": "1805 E MARCO POLO RD",
@@ -18655,15 +18649,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2945
           },
           {
-            "address": "2236 E OTTAWA LN",
-            "sold": "04/01/2025",
-            "price": 625000,
-            "sf": 1894
+            "address": "2301 E LONE CACTUS DR",
+            "sold": "05/01/2026",
+            "price": 1995000,
+            "sf": 5944
+          },
+          {
+            "address": "1737 E SAMUEL DR",
+            "sold": "07/01/2026",
+            "price": 735000,
+            "sf": 3149
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:27Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -18673,20 +18673,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 495300,
-        "finished": 1508600,
-        "profit": -523755,
-        "marginPct": -35,
-        "marginPctAt275": -20,
-        "profitAt275": -304191,
-        "salePsf": 397,
+        "finished": 1276800,
+        "profit": -748601,
+        "marginPct": -59,
+        "marginPctAt275": -41,
+        "profitAt275": -529037,
+        "salePsf": 336,
         "risk": "Medium",
-        "supportableOffer": -135181,
+        "supportableOffer": -323654,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:27Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -18912,7 +18912,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:27Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -18935,7 +18935,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:27Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -19120,10 +19120,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 95,
       "houseComps": {
-        "psf": 442,
-        "medPsf": 326,
-        "price": 1225000,
-        "lowPsf": 154,
+        "psf": 482,
+        "medPsf": 442,
+        "price": 1350000,
+        "lowPsf": 229,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -19132,12 +19132,6 @@ window.PHX_LAND_LEADS = {
             "sold": "10/01/2025",
             "price": 1474000,
             "sf": 3057
-          },
-          {
-            "address": "1750 E LARKSPUR DR",
-            "sold": "02/01/2025",
-            "price": 1225000,
-            "sf": 7956
           },
           {
             "address": "13036 N 23RD PL",
@@ -19152,15 +19146,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2732
           },
           {
-            "address": "13032 N 19TH ST",
-            "sold": "08/01/2026",
-            "price": 425000,
-            "sf": 2261
+            "address": "13218 N 17TH PL",
+            "sold": "05/01/2024",
+            "price": 2000000,
+            "sf": 3968
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "sold": "03/01/2025",
+            "price": 695000,
+            "sf": 3031
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:27Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -19170,20 +19170,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 535802,
-        "finished": 1679600,
-        "profit": -381962,
-        "marginPct": -23,
-        "marginPctAt275": -10,
-        "profitAt275": -162398,
-        "salePsf": 442,
+        "finished": 1831600,
+        "profit": -234522,
+        "marginPct": -13,
+        "marginPctAt275": -1,
+        "profitAt275": -14958,
+        "salePsf": 482,
         "risk": "Low",
-        "supportableOffer": 21856,
+        "supportableOffer": 145445,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:27Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -19407,7 +19407,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:27Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -19430,7 +19430,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:27Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -19591,9 +19591,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 95,
       "houseComps": {
-        "psf": 332,
-        "medPsf": 325,
-        "price": 550000,
+        "psf": 325,
+        "medPsf": 305,
+        "price": 840000,
         "lowPsf": 64,
         "n": 5,
         "radiusMi": 1,
@@ -19611,27 +19611,27 @@ window.PHX_LAND_LEADS = {
             "sf": 3463
           },
           {
-            "address": "18601 N 16TH PL",
-            "sold": "04/01/2026",
-            "price": 550000,
-            "sf": 2259
-          },
-          {
             "address": "18116 N 14TH ST",
             "sold": "11/01/2025",
             "price": 1900000,
             "sf": 4705
           },
           {
-            "address": "16875 N 12TH ST",
-            "sold": "05/01/2026",
-            "price": 527364,
-            "sf": 1590
+            "address": "18037 N 14TH PL",
+            "sold": "03/01/2025",
+            "price": 840000,
+            "sf": 2752
+          },
+          {
+            "address": "18422 N 14TH ST",
+            "sold": "03/01/2026",
+            "price": 1044750,
+            "sf": 3632
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:27Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -19641,20 +19641,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 417932,
-        "finished": 1261600,
-        "profit": -661301,
-        "marginPct": -52,
-        "marginPctAt275": -35,
-        "profitAt275": -441737,
-        "salePsf": 332,
+        "finished": 1235000,
+        "profit": -687103,
+        "marginPct": -56,
+        "marginPctAt275": -38,
+        "profitAt275": -467539,
+        "salePsf": 325,
         "risk": "Low",
-        "supportableOffer": -318013,
+        "supportableOffer": -339641,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:27Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -20019,7 +20019,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:27Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -20042,7 +20042,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:27Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -20235,47 +20235,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 104,
       "houseComps": {
-        "psf": 262,
-        "medPsf": 258,
-        "price": 480000,
-        "lowPsf": 224,
+        "psf": 240,
+        "medPsf": 215,
+        "price": 650000,
+        "lowPsf": 167,
         "n": 5,
-        "radiusMi": 1,
+        "radiusMi": 2,
         "comps": [
           {
-            "address": "2302 W ANDERSON AVE",
-            "sold": "02/01/2025",
-            "price": 520000,
-            "sf": 2013
+            "address": "557 W MOON VALLEY DR",
+            "sold": "09/01/2025",
+            "price": 817500,
+            "sf": 3176
           },
           {
-            "address": "15809 N DANTE DR",
+            "address": "2046 W DAVIS RD",
+            "sold": "02/01/2026",
+            "price": 525000,
+            "sf": 2446
+          },
+          {
+            "address": "3225 W MARCONI AVE",
             "sold": "04/01/2026",
-            "price": 480000,
-            "sf": 2094
+            "price": 663500,
+            "sf": 3697
           },
           {
-            "address": "2248 W BETTY ELYSE LN",
-            "sold": "01/01/2026",
-            "price": 424000,
-            "sf": 1510
+            "address": "3145 W SANDRA TER",
+            "sold": "03/01/2026",
+            "price": 600000,
+            "sf": 3601
           },
           {
-            "address": "2236 W BEVERLY LN",
-            "sold": "12/01/2025",
-            "price": 460000,
-            "sf": 1753
-          },
-          {
-            "address": "2138 W MARCONI AVE",
-            "sold": "06/01/2026",
-            "price": 500000,
-            "sf": 2236
+            "address": "3206 W SEQUOIA WAY",
+            "sold": "10/01/2025",
+            "price": 650000,
+            "sf": 2703
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:28Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -20285,20 +20285,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 214794,
-        "finished": 995600,
-        "profit": -701964,
-        "marginPct": -71,
-        "marginPctAt275": -48,
-        "profitAt275": -482400,
-        "salePsf": 262,
+        "finished": 912000,
+        "profit": -783056,
+        "marginPct": -86,
+        "marginPctAt275": -62,
+        "profitAt275": -563492,
+        "salePsf": 240,
         "risk": "Low",
-        "supportableOffer": -534293,
+        "supportableOffer": -602267,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:28Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -20483,47 +20483,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 104,
       "houseComps": {
-        "psf": 258,
-        "medPsf": 229,
-        "price": 480000,
-        "lowPsf": 224,
+        "psf": 215,
+        "medPsf": 206,
+        "price": 487000,
+        "lowPsf": 127,
         "n": 5,
         "radiusMi": 1,
         "comps": [
           {
-            "address": "2302 W ANDERSON AVE",
-            "sold": "02/01/2025",
-            "price": 520000,
-            "sf": 2013
+            "address": "2046 W DAVIS RD",
+            "sold": "02/01/2026",
+            "price": 525000,
+            "sf": 2446
           },
           {
-            "address": "15809 N DANTE DR",
-            "sold": "04/01/2026",
-            "price": 480000,
-            "sf": 2094
+            "address": "17645 N 29TH AVE",
+            "sold": "08/01/2026",
+            "price": 320000,
+            "sf": 2528
           },
           {
-            "address": "2236 W BEVERLY LN",
-            "sold": "12/01/2025",
-            "price": 460000,
-            "sf": 1753
+            "address": "17442 N 24TH DR",
+            "sold": "07/01/2026",
+            "price": 411000,
+            "sf": 2432
           },
           {
-            "address": "2138 W MARCONI AVE",
-            "sold": "06/01/2026",
-            "price": 500000,
-            "sf": 2236
+            "address": "2044 W SCHELL DR",
+            "sold": "02/01/2026",
+            "price": 487000,
+            "sf": 2359
           },
           {
-            "address": "2130 W LE MARCHE AVE",
-            "sold": "06/01/2026",
-            "price": 422500,
-            "sf": 1871
+            "address": "17627 N 14TH AVE",
+            "sold": "11/01/2025",
+            "price": 610000,
+            "sf": 2346
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:28Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -20533,20 +20533,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 211867,
-        "finished": 980400,
-        "profit": -713576,
-        "marginPct": -73,
-        "marginPctAt275": -50,
-        "profitAt275": -494012,
-        "salePsf": 258,
+        "finished": 817000,
+        "profit": -872074,
+        "marginPct": -107,
+        "marginPctAt275": -80,
+        "profitAt275": -652510,
+        "salePsf": 215,
         "risk": "Low",
-        "supportableOffer": -546652,
+        "supportableOffer": -679510,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:28Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -20769,7 +20769,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:28Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -20792,7 +20792,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:28Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -21016,7 +21016,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:29Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -21039,7 +21039,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:29Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -21261,7 +21261,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:29Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -21284,7 +21284,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:29Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -21462,19 +21462,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 94,
       "houseComps": {
-        "psf": 397,
-        "medPsf": 299,
-        "price": 765000,
+        "psf": 336,
+        "medPsf": 312,
+        "price": 1250000,
         "lowPsf": 256,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "19854 N 29TH ST",
-            "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
-          },
           {
             "address": "18812 N 22ND ST",
             "sold": "06/01/2026",
@@ -21488,21 +21482,27 @@ window.PHX_LAND_LEADS = {
             "sf": 2945
           },
           {
-            "address": "2131 E ROSE GARDEN LN",
-            "sold": "05/01/2025",
-            "price": 655000,
-            "sf": 1624
-          },
-          {
             "address": "1805 E MARCO POLO RD",
             "sold": "08/01/2025",
             "price": 765000,
             "sf": 2986
+          },
+          {
+            "address": "2301 E LONE CACTUS DR",
+            "sold": "05/01/2026",
+            "price": 1995000,
+            "sf": 5944
+          },
+          {
+            "address": "19427 N 23RD PL",
+            "sold": "10/01/2024",
+            "price": 1250000,
+            "sf": 4010
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:29Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -21512,20 +21512,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 759800,
-        "finished": 1508600,
-        "profit": -806770,
-        "marginPct": -53,
-        "marginPctAt275": -39,
-        "profitAt275": -587206,
-        "salePsf": 397,
+        "finished": 1276800,
+        "profit": -1031616,
+        "marginPct": -81,
+        "marginPctAt275": -64,
+        "profitAt275": -812052,
+        "salePsf": 336,
         "risk": "Medium",
-        "supportableOffer": -135181,
+        "supportableOffer": -323654,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:29Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -21703,19 +21703,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 94,
       "houseComps": {
-        "psf": 336,
-        "medPsf": 330,
-        "price": 765000,
-        "lowPsf": 256,
+        "psf": 312,
+        "medPsf": 289,
+        "price": 850000,
+        "lowPsf": 233,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "2131 E ROSE GARDEN LN",
-            "sold": "05/01/2025",
-            "price": 655000,
-            "sf": 1624
-          },
           {
             "address": "19617 N 27TH ST",
             "sold": "12/01/2025",
@@ -21729,21 +21723,27 @@ window.PHX_LAND_LEADS = {
             "sf": 2986
           },
           {
-            "address": "2236 E OTTAWA LN",
-            "sold": "04/01/2025",
-            "price": 625000,
-            "sf": 1894
-          },
-          {
             "address": "2301 E LONE CACTUS DR",
             "sold": "05/01/2026",
             "price": 1995000,
             "sf": 5944
+          },
+          {
+            "address": "1737 E SAMUEL DR",
+            "sold": "07/01/2026",
+            "price": 735000,
+            "sf": 3149
+          },
+          {
+            "address": "19427 N 23RD PL",
+            "sold": "10/01/2024",
+            "price": 1250000,
+            "sf": 4010
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:29Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -21753,20 +21753,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 626600,
-        "finished": 1276800,
-        "profit": -889092,
-        "marginPct": -70,
-        "marginPctAt275": -52,
-        "profitAt275": -669528,
-        "salePsf": 336,
+        "finished": 1185600,
+        "profit": -977556,
+        "marginPct": -82,
+        "marginPctAt275": -64,
+        "profitAt275": -757992,
+        "salePsf": 312,
         "risk": "Medium",
-        "supportableOffer": -323654,
+        "supportableOffer": -397807,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:29Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -21950,10 +21950,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 94,
       "houseComps": {
-        "psf": 341,
-        "medPsf": 290,
-        "price": 515000,
-        "lowPsf": 278,
+        "psf": 361,
+        "medPsf": 341,
+        "price": 850000,
+        "lowPsf": 213,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -21964,33 +21964,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3478
           },
           {
-            "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 498000,
-            "sf": 1717
-          },
-          {
-            "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 515000,
-            "sf": 1850
-          },
-          {
-            "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 490000,
-            "sf": 1717
-          },
-          {
             "address": "10030 N 23RD ST",
             "sold": "03/01/2026",
             "price": 2240000,
             "sf": 4922
+          },
+          {
+            "address": "11416 N BANCROFT DR",
+            "sold": "05/01/2025",
+            "price": 775800,
+            "sf": 2781
+          },
+          {
+            "address": "2731 E LAUREL LN",
+            "sold": "02/01/2025",
+            "price": 850000,
+            "sf": 2354
+          },
+          {
+            "address": "11900 N 32ND ST",
+            "sold": "07/01/2024",
+            "price": 517500,
+            "sf": 2431
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:29Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -22000,20 +22000,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 515300,
-        "finished": 1295800,
-        "profit": -751571,
-        "marginPct": -58,
-        "marginPctAt275": -41,
-        "profitAt275": -532007,
-        "salePsf": 341,
+        "finished": 1371800,
+        "profit": -677851,
+        "marginPct": -49,
+        "marginPctAt275": -33,
+        "profitAt275": -458287,
+        "salePsf": 361,
         "risk": "Medium",
-        "supportableOffer": -308206,
+        "supportableOffer": -246411,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:29Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -22200,9 +22200,9 @@ window.PHX_LAND_LEADS = {
       "peakScore": 93,
       "houseComps": {
         "psf": 442,
-        "medPsf": 326,
-        "price": 890000,
-        "lowPsf": 188,
+        "medPsf": 330,
+        "price": 1075000,
+        "lowPsf": 229,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -22225,21 +22225,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2732
           },
           {
-            "address": "13032 N 19TH ST",
-            "sold": "08/01/2026",
-            "price": 425000,
-            "sf": 2261
-          },
-          {
             "address": "13245 N 19TH WAY",
             "sold": "03/01/2025",
             "price": 695000,
             "sf": 3031
+          },
+          {
+            "address": "12646 N 17TH PL",
+            "sold": "06/01/2025",
+            "price": 1075000,
+            "sf": 3261
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:30Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -22262,7 +22262,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:30Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -22488,7 +22488,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:30Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -22511,7 +22511,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:30Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -22700,10 +22700,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 109,
       "houseComps": {
-        "psf": 248,
-        "medPsf": 221,
-        "price": 530000,
-        "lowPsf": 208,
+        "psf": 221,
+        "medPsf": 212,
+        "price": 650000,
+        "lowPsf": 179,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -22720,12 +22720,6 @@ window.PHX_LAND_LEADS = {
             "sf": 2939
           },
           {
-            "address": "3904 W SANDRA TER",
-            "sold": "06/01/2026",
-            "price": 530000,
-            "sf": 2134
-          },
-          {
             "address": "3903 W GRANDVIEW RD",
             "sold": "06/01/2026",
             "price": 515000,
@@ -22736,11 +22730,17 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 485000,
             "sf": 2287
+          },
+          {
+            "address": "3225 W MARCONI AVE",
+            "sold": "04/01/2026",
+            "price": 663500,
+            "sf": 3697
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:30Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -22750,20 +22750,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 619656,
-        "finished": 942400,
-        "profit": -1186770,
-        "marginPct": -126,
-        "marginPctAt275": -103,
-        "profitAt275": -967206,
-        "salePsf": 248,
+        "finished": 839800,
+        "profit": -1286292,
+        "marginPct": -153,
+        "marginPctAt275": -127,
+        "profitAt275": -1066728,
+        "salePsf": 221,
         "risk": "Low",
-        "supportableOffer": -577550,
+        "supportableOffer": -660972,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:30Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -22952,9 +22952,9 @@ window.PHX_LAND_LEADS = {
       "peakScore": 93,
       "houseComps": {
         "psf": 442,
-        "medPsf": 326,
-        "price": 890000,
-        "lowPsf": 188,
+        "medPsf": 388,
+        "price": 1025000,
+        "lowPsf": 229,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -22977,21 +22977,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2732
           },
           {
-            "address": "13032 N 19TH ST",
-            "sold": "08/01/2026",
-            "price": 425000,
-            "sf": 2261
-          },
-          {
             "address": "13245 N 19TH WAY",
             "sold": "03/01/2025",
             "price": 695000,
             "sf": 3031
+          },
+          {
+            "address": "13630 N 18TH ST",
+            "sold": "03/01/2026",
+            "price": 1025000,
+            "sf": 2640
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:30Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -23014,7 +23014,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:30Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -23199,9 +23199,9 @@ window.PHX_LAND_LEADS = {
       "peakScore": 93,
       "houseComps": {
         "psf": 341,
-        "medPsf": 324,
-        "price": 525000,
-        "lowPsf": 285,
+        "medPsf": 276,
+        "price": 648000,
+        "lowPsf": 85,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -23212,33 +23212,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3478
           },
           {
-            "address": "3623 E CROCUS DR",
-            "sold": "05/01/2026",
-            "price": 525000,
-            "sf": 1620
-          },
-          {
             "address": "13036 N 36TH ST",
             "sold": "09/01/2025",
             "price": 950000,
             "sf": 2462
           },
           {
-            "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 490000,
-            "sf": 1717
+            "address": "12459 N 36TH ST",
+            "sold": "05/01/2026",
+            "price": 200000,
+            "sf": 2350
+          },
+          {
+            "address": "3022 E EMILE ZOLA AVE",
+            "sold": "09/01/2026",
+            "price": 648000,
+            "sf": 2352
           },
           {
             "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 498000,
-            "sf": 1717
+            "sold": "07/01/2024",
+            "price": 517500,
+            "sf": 2431
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:30Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -23261,7 +23261,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:30Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -23445,7 +23445,7 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 93,
       "houseComps": {
-        "psf": 624,
+        "psf": 428,
         "medPsf": 386,
         "price": 950000,
         "lowPsf": 85,
@@ -23459,33 +23459,33 @@ window.PHX_LAND_LEADS = {
             "sf": 5332
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
-          },
-          {
             "address": "13036 N 36TH ST",
             "sold": "09/01/2025",
             "price": 950000,
             "sf": 2462
           },
           {
-            "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 490000,
-            "sf": 1717
-          },
-          {
             "address": "12459 N 36TH ST",
             "sold": "05/01/2026",
             "price": 200000,
             "sf": 2350
+          },
+          {
+            "address": "11434 N 43RD ST",
+            "sold": "04/01/2026",
+            "price": 1075000,
+            "sf": 2512
+          },
+          {
+            "address": "12431 N 39TH WAY",
+            "sold": "02/01/2026",
+            "price": 790000,
+            "sf": 3001
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:30Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -23493,22 +23493,22 @@ window.PHX_LAND_LEADS = {
       "landOverride": null,
       "verdict": {
         "label": "Pass",
-        "strategy": "4 homes",
+        "strategy": "1 custom home",
         "land": 3365698,
-        "finished": 7587840,
-        "profit": -2072806,
-        "marginPct": -27,
-        "marginPctAt275": -16,
-        "profitAt275": -1194550,
-        "salePsf": 624,
-        "risk": "Medium",
-        "supportableOffer": 719352,
-        "offerHomes": 4,
+        "finished": 1626400,
+        "profit": -3461555,
+        "marginPct": -213,
+        "marginPctAt275": -199,
+        "profitAt275": -3241991,
+        "salePsf": 428,
+        "risk": "Low",
+        "supportableOffer": -21400,
+        "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:30Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -23733,7 +23733,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:31Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -23756,7 +23756,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:31Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -23935,10 +23935,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 92,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 624,
-        "price": 3050000,
-        "lowPsf": 215,
+        "psf": 624,
+        "medPsf": 584,
+        "price": 2600000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -23961,44 +23961,44 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           },
           {
-            "address": "3734 E MOUNTAIN VIEW RD",
-            "sold": "01/01/2024",
-            "price": 1571900,
-            "sf": 7325
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:31Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 1237193,
-        "finished": 2945000,
-        "profit": 75727,
-        "marginPct": 3,
-        "marginPctAt275": 10,
-        "profitAt275": 295291,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -480859,
+        "marginPct": -20,
+        "marginPctAt275": -11,
+        "profitAt275": -261295,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:31Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -24180,31 +24180,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 92,
       "houseComps": {
-        "psf": 1518,
-        "medPsf": 1277,
-        "price": 10900000,
-        "lowPsf": 942,
+        "psf": 1064,
+        "medPsf": 942,
+        "price": 5235000,
+        "lowPsf": 893,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
-          },
-          {
-            "address": "5225 E MOCKINGBIRD LN",
-            "sold": "06/01/2026",
-            "price": 12200000,
-            "sf": 9555
-          },
-          {
-            "address": "5102 E BUTLER DR",
-            "sold": "03/01/2026",
-            "price": 10900000,
-            "sf": 7083
-          },
           {
             "address": "9518 N 46TH ST",
             "sold": "02/01/2026",
@@ -24212,38 +24194,56 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "8631 N AVENIDA DEL SOL",
-            "sold": "07/01/2026",
-            "price": 11750000,
-            "sf": 7739
+            "address": "4845 E CAIDA DEL SOL DR",
+            "sold": "04/01/2025",
+            "price": 5235000,
+            "sf": 5863
+          },
+          {
+            "address": "4446 E MOCKINGBIRD LN",
+            "sold": "03/01/2025",
+            "price": 6500000,
+            "sf": 4258
+          },
+          {
+            "address": "9012 N 53RD ST",
+            "sold": "12/01/2024",
+            "price": 6300000,
+            "sf": 5922
+          },
+          {
+            "address": "4796 E CHARLES DR",
+            "sold": "06/01/2025",
+            "price": 4500000,
+            "sf": 4904
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:31Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 1292800,
-        "finished": 5768400,
-        "profit": 2754926,
-        "marginPct": 48,
-        "marginPctAt275": 52,
-        "profitAt275": 2974490,
-        "salePsf": 1518,
-        "risk": "Medium",
-        "supportableOffer": 3328394,
+        "finished": 4043200,
+        "profit": 1081482,
+        "marginPct": 27,
+        "marginPctAt275": 32,
+        "profitAt275": 1301046,
+        "salePsf": 1064,
+        "risk": "High",
+        "supportableOffer": 1925662,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:31Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -24429,7 +24429,7 @@ window.PHX_LAND_LEADS = {
         "psf": 482,
         "medPsf": 442,
         "price": 1350000,
-        "lowPsf": 188,
+        "lowPsf": 229,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -24458,15 +24458,15 @@ window.PHX_LAND_LEADS = {
             "sf": 3057
           },
           {
-            "address": "13032 N 19TH ST",
+            "address": "12849 N NANCY JANE LN",
             "sold": "08/01/2026",
-            "price": 425000,
-            "sf": 2261
+            "price": 890000,
+            "sf": 2732
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:31Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -24489,7 +24489,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:31Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -24675,7 +24675,7 @@ window.PHX_LAND_LEADS = {
         "psf": 482,
         "medPsf": 442,
         "price": 1350000,
-        "lowPsf": 188,
+        "lowPsf": 229,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -24704,15 +24704,15 @@ window.PHX_LAND_LEADS = {
             "sf": 3031
           },
           {
-            "address": "13032 N 19TH ST",
+            "address": "12849 N NANCY JANE LN",
             "sold": "08/01/2026",
-            "price": 425000,
-            "sf": 2261
+            "price": 890000,
+            "sf": 2732
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:31Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -24735,7 +24735,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:31Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -24921,7 +24921,7 @@ window.PHX_LAND_LEADS = {
         "psf": 482,
         "medPsf": 442,
         "price": 1350000,
-        "lowPsf": 188,
+        "lowPsf": 229,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -24950,15 +24950,15 @@ window.PHX_LAND_LEADS = {
             "sf": 3031
           },
           {
-            "address": "13032 N 19TH ST",
+            "address": "12849 N NANCY JANE LN",
             "sold": "08/01/2026",
-            "price": 425000,
-            "sf": 2261
+            "price": 890000,
+            "sf": 2732
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:31Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -24981,7 +24981,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:31Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -25204,7 +25204,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:32Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -25227,7 +25227,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:32Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -25518,7 +25518,7 @@ window.PHX_LAND_LEADS = {
         "psf": 440,
         "medPsf": 409,
         "price": 1625000,
-        "lowPsf": 260,
+        "lowPsf": 286,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -25547,15 +25547,15 @@ window.PHX_LAND_LEADS = {
             "sf": 5188
           },
           {
-            "address": "16641 N 35TH PL",
-            "sold": "05/01/2026",
-            "price": 570000,
-            "sf": 2192
+            "address": "3861 E KINGS AVE",
+            "sold": "04/01/2026",
+            "price": 655000,
+            "sf": 2291
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:32Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -25578,7 +25578,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:32Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -25942,7 +25942,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:32Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -25965,7 +25965,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:32Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -26143,10 +26143,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 91,
       "houseComps": {
-        "psf": 397,
-        "medPsf": 330,
-        "price": 765000,
-        "lowPsf": 256,
+        "psf": 336,
+        "medPsf": 289,
+        "price": 850000,
+        "lowPsf": 233,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -26155,12 +26155,6 @@ window.PHX_LAND_LEADS = {
             "sold": "06/01/2026",
             "price": 1900000,
             "sf": 4785
-          },
-          {
-            "address": "2131 E ROSE GARDEN LN",
-            "sold": "05/01/2025",
-            "price": 655000,
-            "sf": 1624
           },
           {
             "address": "19617 N 27TH ST",
@@ -26175,15 +26169,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2986
           },
           {
-            "address": "2236 E OTTAWA LN",
-            "sold": "04/01/2025",
-            "price": 625000,
-            "sf": 1894
+            "address": "2301 E LONE CACTUS DR",
+            "sold": "05/01/2026",
+            "price": 1995000,
+            "sf": 5944
+          },
+          {
+            "address": "1737 E SAMUEL DR",
+            "sold": "07/01/2026",
+            "price": 735000,
+            "sf": 3149
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:33Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -26193,20 +26193,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 591000,
-        "finished": 1508600,
-        "profit": -626154,
-        "marginPct": -42,
-        "marginPctAt275": -27,
-        "profitAt275": -406590,
-        "salePsf": 397,
+        "finished": 1276800,
+        "profit": -851000,
+        "marginPct": -67,
+        "marginPctAt275": -49,
+        "profitAt275": -631436,
+        "salePsf": 336,
         "risk": "Medium",
-        "supportableOffer": -135181,
+        "supportableOffer": -323654,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:33Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -26831,7 +26831,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:33Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -26854,7 +26854,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:33Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -27078,7 +27078,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:33Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -27101,7 +27101,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:33Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -27262,9 +27262,9 @@ window.PHX_LAND_LEADS = {
       "peakScore": 100,
       "houseComps": {
         "psf": 363,
-        "medPsf": 351,
-        "price": 785990,
-        "lowPsf": 335,
+        "medPsf": 342,
+        "price": 899990,
+        "lowPsf": 279,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -27275,33 +27275,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3509
           },
           {
-            "address": "2453 E VILLA LINDA DR",
-            "sold": "05/01/2026",
-            "price": 786730,
-            "sf": 2242
-          },
-          {
-            "address": "2314 E QUESTA DR",
-            "sold": "09/01/2026",
-            "price": 680000,
-            "sf": 2030
-          },
-          {
             "address": "24513 N 24TH WAY",
             "sold": "05/01/2026",
             "price": 785990,
             "sf": 2295
           },
           {
-            "address": "24214 N 23RD WAY",
-            "sold": "02/01/2026",
-            "price": 720000,
-            "sf": 1612
+            "address": "2209 E FALLEN LEAF LN",
+            "sold": "04/01/2026",
+            "price": 1395000,
+            "sf": 3509
+          },
+          {
+            "address": "24509 N 24TH WAY",
+            "sold": "04/01/2026",
+            "price": 785990,
+            "sf": 2295
+          },
+          {
+            "address": "2457 E VILLA LINDA DR",
+            "sold": "04/01/2026",
+            "price": 899990,
+            "sf": 3222
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:33Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -27324,7 +27324,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:33Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -27509,10 +27509,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 90,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 624,
-        "price": 3050000,
-        "lowPsf": 215,
+        "psf": 624,
+        "medPsf": 377,
+        "price": 1659000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -27535,21 +27535,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           },
           {
-            "address": "3734 E MOUNTAIN VIEW RD",
-            "sold": "01/01/2024",
-            "price": 1571900,
-            "sf": 7325
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:33Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -27559,20 +27559,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1238296,
-        "finished": 2945000,
-        "profit": 74547,
-        "marginPct": 3,
-        "marginPctAt275": 10,
-        "profitAt275": 294111,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -482039,
+        "marginPct": -20,
+        "marginPctAt275": -11,
+        "profitAt275": -262475,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:33Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -27745,9 +27745,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 90,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 629,
-        "price": 3050000,
+        "psf": 624,
+        "medPsf": 377,
+        "price": 1659000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -27771,44 +27771,44 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:34Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 1233934,
-        "finished": 2945000,
-        "profit": 79215,
-        "marginPct": 3,
-        "marginPctAt275": 10,
-        "profitAt275": 298779,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -477371,
+        "marginPct": -20,
+        "marginPctAt275": -11,
+        "profitAt275": -257807,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:34Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -27969,9 +27969,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 90,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 629,
-        "price": 3050000,
+        "psf": 624,
+        "medPsf": 377,
+        "price": 1659000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -27995,21 +27995,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:34Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -28019,20 +28019,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1244262,
-        "finished": 2945000,
-        "profit": 68164,
-        "marginPct": 2,
-        "marginPctAt275": 10,
-        "profitAt275": 287728,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -488422,
+        "marginPct": -21,
+        "marginPctAt275": -11,
+        "profitAt275": -268858,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:34Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -28216,8 +28216,8 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 90,
       "houseComps": {
-        "psf": 440,
-        "medPsf": 409,
+        "psf": 456,
+        "medPsf": 440,
         "price": 1625000,
         "lowPsf": 357,
         "n": 5,
@@ -28248,15 +28248,15 @@ window.PHX_LAND_LEADS = {
             "sf": 2776
           },
           {
-            "address": "14426 N 39TH WAY",
-            "sold": "01/01/2026",
-            "price": 737500,
-            "sf": 2004
+            "address": "4335 E KATHLEEN RD",
+            "sold": "05/01/2024",
+            "price": 1390000,
+            "sf": 3050
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:34Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -28266,20 +28266,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 414100,
-        "finished": 1672000,
-        "profit": -278373,
-        "marginPct": -17,
-        "marginPctAt275": -4,
-        "profitAt275": -58809,
-        "salePsf": 440,
+        "finished": 1732800,
+        "profit": -219397,
+        "marginPct": -13,
+        "marginPctAt275": 0,
+        "profitAt275": 167,
+        "salePsf": 456,
         "risk": "Medium",
-        "supportableOffer": -2323,
+        "supportableOffer": 47112,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:34Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -28465,18 +28465,12 @@ window.PHX_LAND_LEADS = {
       "peakScore": 90,
       "houseComps": {
         "psf": 456,
-        "medPsf": 435,
-        "price": 785000,
-        "lowPsf": 324,
+        "medPsf": 395,
+        "price": 1008000,
+        "lowPsf": 313,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "14426 N 39TH WAY",
-            "sold": "01/01/2026",
-            "price": 737500,
-            "sf": 2004
-          },
           {
             "address": "3720 E TIERRA BUENA LN",
             "sold": "08/01/2025",
@@ -28484,27 +28478,33 @@ window.PHX_LAND_LEADS = {
             "sf": 2776
           },
           {
-            "address": "3623 E CROCUS DR",
-            "sold": "05/01/2026",
-            "price": 525000,
-            "sf": 1620
-          },
-          {
-            "address": "4049 E VISTA DR",
-            "sold": "07/01/2026",
-            "price": 785000,
-            "sf": 1805
-          },
-          {
             "address": "4335 E KATHLEEN RD",
             "sold": "05/01/2024",
             "price": 1390000,
             "sf": 3050
+          },
+          {
+            "address": "4409 E JANICE WAY",
+            "sold": "01/01/2026",
+            "price": 1008000,
+            "sf": 2550
+          },
+          {
+            "address": "4162 E WHITNEY LN",
+            "sold": "05/01/2026",
+            "price": 845000,
+            "sf": 2703
+          },
+          {
+            "address": "4230 E CAROL ANN LN",
+            "sold": "01/01/2024",
+            "price": 1000000,
+            "sf": 2601
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:34Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -28527,7 +28527,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:34Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -28712,30 +28712,18 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 378,
-        "medPsf": 336,
-        "price": 655000,
-        "lowPsf": 256,
+        "psf": 273,
+        "medPsf": 272,
+        "price": 735000,
+        "lowPsf": 233,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "2131 E ROSE GARDEN LN",
-            "sold": "05/01/2025",
-            "price": 655000,
-            "sf": 1624
-          },
           {
             "address": "2301 E LONE CACTUS DR",
             "sold": "05/01/2026",
             "price": 1995000,
             "sf": 5944
-          },
-          {
-            "address": "2236 E OTTAWA LN",
-            "sold": "04/01/2025",
-            "price": 625000,
-            "sf": 1894
           },
           {
             "address": "1805 E MARCO POLO RD",
@@ -28744,15 +28732,27 @@ window.PHX_LAND_LEADS = {
             "sf": 2986
           },
           {
-            "address": "2202 E MONONA DR",
+            "address": "1737 E SAMUEL DR",
+            "sold": "07/01/2026",
+            "price": 735000,
+            "sf": 3149
+          },
+          {
+            "address": "1728 E SAMUEL DR",
             "sold": "08/01/2026",
-            "price": 575000,
-            "sf": 1522
+            "price": 650000,
+            "sf": 2382
+          },
+          {
+            "address": "1725 E QUAIL AVE",
+            "sold": "02/01/2026",
+            "price": 725000,
+            "sf": 2664
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:35Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -28762,20 +28762,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 365100,
-        "finished": 1436400,
-        "profit": -435215,
-        "marginPct": -30,
-        "marginPctAt275": -15,
-        "profitAt275": -215651,
-        "salePsf": 378,
+        "finished": 1037400,
+        "profit": -822245,
+        "marginPct": -79,
+        "marginPctAt275": -58,
+        "profitAt275": -602681,
+        "salePsf": 273,
         "risk": "Medium",
-        "supportableOffer": -175886,
+        "supportableOffer": -500307,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:35Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -29126,15 +29126,15 @@ window.PHX_LAND_LEADS = {
             "sf": 2598
           },
           {
-            "address": "13215 N 20TH ST",
-            "sold": "12/01/2024",
-            "price": 645000,
-            "sf": 2269
+            "address": "12849 N NANCY JANE LN",
+            "sold": "08/01/2026",
+            "price": 890000,
+            "sf": 2732
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:35Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -29157,7 +29157,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:35Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -29381,7 +29381,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:35Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -29404,7 +29404,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:35Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -29586,24 +29586,12 @@ window.PHX_LAND_LEADS = {
       "peakScore": 89,
       "houseComps": {
         "psf": 353,
-        "medPsf": 339,
-        "price": 800000,
-        "lowPsf": 90,
+        "medPsf": 331,
+        "price": 1100000,
+        "lowPsf": 295,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "40516 N 3RD AVE",
-            "sold": "08/01/2025",
-            "price": 170000,
-            "sf": 1888
-          },
-          {
-            "address": "40408 N 2ND DR",
-            "sold": "01/01/2026",
-            "price": 765000,
-            "sf": 2259
-          },
           {
             "address": "514 W MORSE DR",
             "sold": "04/01/2026",
@@ -29621,11 +29609,23 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 1305000,
             "sf": 3700
+          },
+          {
+            "address": "41117 N CLUB POINTE DR",
+            "sold": "05/01/2026",
+            "price": 1200000,
+            "sf": 4066
+          },
+          {
+            "address": "41318 N CLUB POINTE DR",
+            "sold": "03/01/2026",
+            "price": 1046240,
+            "sf": 3443
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:35Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -29648,7 +29648,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:35Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -29948,47 +29948,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 282,
-        "medPsf": 273,
-        "price": 495000,
-        "lowPsf": 243,
+        "psf": 272,
+        "medPsf": 256,
+        "price": 975000,
+        "lowPsf": 209,
         "n": 5,
         "radiusMi": 1,
         "comps": [
           {
-            "address": "18324 N 28TH PL",
-            "sold": "01/01/2026",
-            "price": 569900,
-            "sf": 1574
+            "address": "1805 E MARCO POLO RD",
+            "sold": "08/01/2025",
+            "price": 765000,
+            "sf": 2986
           },
           {
-            "address": "2647 E CONTENTION MINE RD",
-            "sold": "03/01/2026",
-            "price": 460000,
-            "sf": 1685
+            "address": "2105 E KERRY LN",
+            "sold": "02/01/2025",
+            "price": 975000,
+            "sf": 3589
           },
           {
-            "address": "18601 N 16TH PL",
-            "sold": "04/01/2026",
-            "price": 550000,
-            "sf": 2259
+            "address": "2110 E KERRY LN",
+            "sold": "06/01/2025",
+            "price": 1090000,
+            "sf": 4535
           },
           {
-            "address": "18411 N 20TH PL",
-            "sold": "07/01/2026",
-            "price": 425000,
-            "sf": 1615
-          },
-          {
-            "address": "2403 E ROSEMONTE DR",
+            "address": "18812 N 22ND ST",
             "sold": "06/01/2026",
-            "price": 495000,
-            "sf": 1758
+            "price": 1900000,
+            "sf": 4785
+          },
+          {
+            "address": "17629 N 24TH WAY",
+            "sold": "08/01/2025",
+            "price": 640000,
+            "sf": 3060
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:35Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -29998,20 +29998,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 293727,
-        "finished": 1071600,
-        "profit": -712702,
-        "marginPct": -67,
-        "marginPctAt275": -46,
-        "profitAt275": -493138,
-        "salePsf": 282,
+        "finished": 1033600,
+        "profit": -749562,
+        "marginPct": -73,
+        "marginPctAt275": -51,
+        "profitAt275": -529998,
+        "salePsf": 272,
         "risk": "Low",
-        "supportableOffer": -472499,
+        "supportableOffer": -503396,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:35Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -30235,7 +30235,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:35Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -30258,7 +30258,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:35Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -30479,7 +30479,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:36Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -30502,7 +30502,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:36Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -30726,7 +30726,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:36Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -30749,7 +30749,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:36Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -30927,25 +30927,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 88,
       "houseComps": {
-        "psf": 338,
-        "medPsf": 319,
-        "price": 2815000,
-        "lowPsf": 237,
+        "psf": 257,
+        "medPsf": 237,
+        "price": 820000,
+        "lowPsf": 225,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "14440 N 14TH DR",
-            "sold": "06/01/2026",
-            "price": 3650000,
-            "sf": 10129
-          },
-          {
-            "address": "14214 N MOON MOUNTAIN TRL",
-            "sold": "05/01/2024",
-            "price": 2815000,
-            "sf": 8330
-          },
           {
             "address": "557 W MOON VALLEY DR",
             "sold": "09/01/2025",
@@ -30953,21 +30941,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3176
           },
           {
-            "address": "15217 N 15TH DR",
-            "sold": "11/01/2025",
-            "price": 2900000,
-            "sf": 9094
-          },
-          {
             "address": "1642 W MANDALAY LN",
             "sold": "01/01/2026",
             "price": 874300,
             "sf": 3688
+          },
+          {
+            "address": "16303 N 2ND AVE",
+            "sold": "03/01/2026",
+            "price": 820000,
+            "sf": 3638
+          },
+          {
+            "address": "14624 N 15TH DR",
+            "sold": "07/01/2026",
+            "price": 1800000,
+            "sf": 5382
+          },
+          {
+            "address": "16332 N 2ND DR",
+            "sold": "01/01/2026",
+            "price": 655000,
+            "sf": 2764
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:36Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -30977,20 +30977,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 4294600,
-        "finished": 1284400,
-        "profit": -4787220,
-        "marginPct": -373,
-        "marginPctAt275": -356,
-        "profitAt275": -4567656,
-        "salePsf": 338,
+        "finished": 976600,
+        "profit": -5085786,
+        "marginPct": -521,
+        "marginPctAt275": -498,
+        "profitAt275": -4866222,
+        "salePsf": 257,
         "risk": "Medium",
-        "supportableOffer": -299475,
+        "supportableOffer": -549742,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:36Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -31162,10 +31162,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 98,
       "houseComps": {
-        "psf": 440,
-        "medPsf": 409,
+        "psf": 456,
+        "medPsf": 440,
         "price": 1625000,
-        "lowPsf": 355,
+        "lowPsf": 357,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -31194,15 +31194,15 @@ window.PHX_LAND_LEADS = {
             "sf": 4890
           },
           {
-            "address": "4404 E HARTFORD AVE",
-            "sold": "06/01/2026",
-            "price": 720000,
-            "sf": 2028
+            "address": "4335 E KATHLEEN RD",
+            "sold": "05/01/2024",
+            "price": 1390000,
+            "sf": 3050
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:36Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -31212,20 +31212,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 472594,
-        "finished": 1672000,
-        "profit": -321702,
-        "marginPct": -19,
-        "marginPctAt275": -6,
-        "profitAt275": -102138,
-        "salePsf": 440,
+        "finished": 1732800,
+        "profit": -262726,
+        "marginPct": -15,
+        "marginPctAt275": -2,
+        "profitAt275": -43162,
+        "salePsf": 456,
         "risk": "Low",
-        "supportableOffer": 15677,
+        "supportableOffer": 65112,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:36Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -31368,8 +31368,8 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 108,
       "houseComps": {
-        "psf": 440,
-        "medPsf": 409,
+        "psf": 456,
+        "medPsf": 440,
         "price": 1625000,
         "lowPsf": 357,
         "n": 5,
@@ -31394,21 +31394,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5188
           },
           {
-            "address": "14426 N 39TH WAY",
-            "sold": "01/01/2026",
-            "price": 737500,
-            "sf": 2004
-          },
-          {
             "address": "3720 E TIERRA BUENA LN",
             "sold": "08/01/2025",
             "price": 1295000,
             "sf": 2776
+          },
+          {
+            "address": "4335 E KATHLEEN RD",
+            "sold": "05/01/2024",
+            "price": 1390000,
+            "sf": 3050
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:36Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -31418,20 +31418,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 552100,
-        "finished": 1672000,
-        "profit": -426033,
-        "marginPct": -25,
-        "marginPctAt275": -12,
-        "profitAt275": -206469,
-        "salePsf": 440,
+        "finished": 1732800,
+        "profit": -367057,
+        "marginPct": -21,
+        "marginPctAt275": -9,
+        "profitAt275": -147493,
+        "salePsf": 456,
         "risk": "Medium",
-        "supportableOffer": -2323,
+        "supportableOffer": 47112,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:36Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -31569,19 +31569,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 88,
       "houseComps": {
-        "psf": 397,
-        "medPsf": 299,
-        "price": 850000,
+        "psf": 336,
+        "medPsf": 289,
+        "price": 1090000,
         "lowPsf": 240,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "19854 N 29TH ST",
-            "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
-          },
           {
             "address": "18812 N 22ND ST",
             "sold": "06/01/2026",
@@ -31601,15 +31595,21 @@ window.PHX_LAND_LEADS = {
             "sf": 4535
           },
           {
-            "address": "2131 E ROSE GARDEN LN",
-            "sold": "05/01/2025",
-            "price": 655000,
-            "sf": 1624
+            "address": "1805 E MARCO POLO RD",
+            "sold": "08/01/2025",
+            "price": 765000,
+            "sf": 2986
+          },
+          {
+            "address": "2301 E LONE CACTUS DR",
+            "sold": "05/01/2026",
+            "price": 1995000,
+            "sf": 5944
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:37Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -31619,20 +31619,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 636300,
-        "finished": 1508600,
-        "profit": -674625,
-        "marginPct": -45,
-        "marginPctAt275": -30,
-        "profitAt275": -455061,
-        "salePsf": 397,
+        "finished": 1276800,
+        "profit": -899471,
+        "marginPct": -70,
+        "marginPctAt275": -53,
+        "profitAt275": -679907,
+        "salePsf": 336,
         "risk": "Medium",
-        "supportableOffer": -135181,
+        "supportableOffer": -323654,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:37Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -31809,15 +31809,15 @@ window.PHX_LAND_LEADS = {
             "sf": 2598
           },
           {
-            "address": "13215 N 20TH ST",
-            "sold": "12/01/2024",
-            "price": 645000,
-            "sf": 2269
+            "address": "12849 N NANCY JANE LN",
+            "sold": "08/01/2026",
+            "price": 890000,
+            "sf": 2732
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:37Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -31840,7 +31840,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:37Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -32025,7 +32025,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:37Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -32048,7 +32048,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:37Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -32233,7 +32233,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:37Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -32256,7 +32256,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:37Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -32440,7 +32440,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:37Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -32463,7 +32463,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:37Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -32647,7 +32647,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:38Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -32670,7 +32670,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:38Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -32854,7 +32854,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:38Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -32877,7 +32877,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:38Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -33022,10 +33022,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 97,
       "houseComps": {
-        "psf": 433,
-        "medPsf": 358,
+        "psf": 358,
+        "medPsf": 329,
         "price": 1075000,
-        "lowPsf": 305,
+        "lowPsf": 229,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -33036,33 +33036,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3056
           },
           {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
-          },
-          {
             "address": "2732 E FRIESS DR",
             "sold": "02/01/2026",
             "price": 1360000,
             "sf": 4134
           },
           {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
-          },
-          {
             "address": "3001 E ACOMA DR",
             "sold": "09/01/2024",
             "price": 1075000,
             "sf": 3000
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "sold": "03/01/2025",
+            "price": 695000,
+            "sf": 3031
+          },
+          {
+            "address": "2723 E ACOMA DR",
+            "sold": "06/01/2026",
+            "price": 885000,
+            "sf": 3261
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:38Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -33072,20 +33072,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 488702,
-        "finished": 1645400,
-        "profit": -364739,
-        "marginPct": -22,
-        "marginPctAt275": -9,
-        "profitAt275": -145175,
-        "salePsf": 433,
+        "finished": 1360400,
+        "profit": -641189,
+        "marginPct": -47,
+        "marginPctAt275": -31,
+        "profitAt275": -421625,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -5951,
+        "supportableOffer": -237680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:38Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -33347,47 +33347,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 97,
       "houseComps": {
-        "psf": 362,
-        "medPsf": 273,
-        "price": 480000,
-        "lowPsf": 256,
+        "psf": 302,
+        "medPsf": 237,
+        "price": 640000,
+        "lowPsf": 209,
         "n": 5,
         "radiusMi": 1,
         "comps": [
           {
-            "address": "2106 E AIRE LIBRE AVE",
-            "sold": "04/01/2026",
-            "price": 480000,
-            "sf": 1873
+            "address": "2138 E PARADISE LN",
+            "sold": "02/01/2025",
+            "price": 1092796,
+            "sf": 3455
           },
           {
-            "address": "2640 E BEVERLY LN",
-            "sold": "04/01/2026",
-            "price": 410000,
-            "sf": 1513
+            "address": "17629 N 24TH WAY",
+            "sold": "08/01/2025",
+            "price": 640000,
+            "sf": 3060
           },
           {
-            "address": "17234 N 28TH ST",
+            "address": "2890 E ANGELA DR",
+            "sold": "01/01/2024",
+            "price": 635000,
+            "sf": 2684
+          },
+          {
+            "address": "16244 N 21ST ST",
             "sold": "07/01/2025",
-            "price": 659950,
-            "sf": 1600
+            "price": 1100000,
+            "sf": 3637
           },
           {
-            "address": "2647 E CONTENTION MINE RD",
-            "sold": "03/01/2026",
-            "price": 460000,
-            "sf": 1685
-          },
-          {
-            "address": "18324 N 28TH PL",
-            "sold": "01/01/2026",
-            "price": 569900,
-            "sf": 1574
+            "address": "17639 N 17TH ST",
+            "sold": "04/01/2026",
+            "price": 535000,
+            "sf": 2352
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:38Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -33397,20 +33397,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 212528,
-        "finished": 1375600,
-        "profit": -330939,
-        "marginPct": -24,
-        "marginPctAt275": -8,
-        "profitAt275": -111375,
-        "salePsf": 362,
+        "finished": 1147600,
+        "profit": -552099,
+        "marginPct": -48,
+        "marginPctAt275": -29,
+        "profitAt275": -332535,
+        "salePsf": 302,
         "risk": "Low",
-        "supportableOffer": -225321,
+        "supportableOffer": -410705,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:38Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -33556,7 +33556,7 @@ window.PHX_LAND_LEADS = {
         "psf": 442,
         "medPsf": 326,
         "price": 890000,
-        "lowPsf": 188,
+        "lowPsf": 229,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -33579,21 +33579,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3031
           },
           {
-            "address": "13032 N 19TH ST",
-            "sold": "08/01/2026",
-            "price": 425000,
-            "sf": 2261
-          },
-          {
             "address": "12849 N NANCY JANE LN",
             "sold": "08/01/2026",
             "price": 890000,
             "sf": 2732
+          },
+          {
+            "address": "13619 N 18TH ST",
+            "sold": "09/01/2026",
+            "price": 769900,
+            "sf": 2733
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:38Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -33616,7 +33616,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:38Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -33756,9 +33756,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 87,
       "houseComps": {
-        "psf": 323,
-        "medPsf": 323,
-        "price": 579000,
+        "psf": 319,
+        "medPsf": 280,
+        "price": 800000,
         "lowPsf": 76,
         "n": 5,
         "radiusMi": 1,
@@ -33770,33 +33770,33 @@ window.PHX_LAND_LEADS = {
             "sf": 4537
           },
           {
-            "address": "553 W CAVALRY RD",
-            "sold": "08/01/2026",
-            "price": 699000,
-            "sf": 2167
-          },
-          {
-            "address": "42711 N 6TH AVE",
-            "sold": "10/01/2024",
-            "price": 725000,
-            "sf": 1952
-          },
-          {
-            "address": "43131 N 11TH AVE",
-            "sold": "02/01/2025",
-            "price": 579000,
-            "sf": 1792
-          },
-          {
             "address": "1008 W HONDA BOW RD",
             "sold": "01/01/2024",
             "price": 178000,
             "sf": 2357
+          },
+          {
+            "address": "115 E HONDA BOW RD",
+            "sold": "05/01/2026",
+            "price": 800000,
+            "sf": 2506
+          },
+          {
+            "address": "610 W FILOREE LN",
+            "sold": "10/01/2024",
+            "price": 825000,
+            "sf": 2573
+          },
+          {
+            "address": "40927 N 3RD AVE",
+            "sold": "03/01/2026",
+            "price": 1095000,
+            "sf": 3914
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:39Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -33806,20 +33806,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 141990,
-        "finished": 1227400,
-        "profit": -399217,
-        "marginPct": -33,
-        "marginPctAt275": -15,
-        "profitAt275": -179653,
-        "salePsf": 323,
+        "finished": 1212200,
+        "profit": -413961,
+        "marginPct": -34,
+        "marginPctAt275": -16,
+        "profitAt275": -194397,
+        "salePsf": 319,
         "risk": "Low",
-        "supportableOffer": -345821,
+        "supportableOffer": -358179,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:39Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -33985,21 +33985,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2400
           },
           {
-            "address": "3443 W JOY RANCH RD",
-            "sold": "05/01/2026",
-            "price": 635000,
-            "sf": 1952
-          },
-          {
             "address": "3212 W ADAMANDA DR",
             "sold": "09/01/2025",
             "price": 1100000,
             "sf": 3176
+          },
+          {
+            "address": "2935 W JOY RANCH RD",
+            "sold": "10/01/2025",
+            "price": 820000,
+            "sf": 2524
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:39Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -34022,7 +34022,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:39Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -34168,10 +34168,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 87,
       "houseComps": {
-        "psf": 699,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -34180,12 +34180,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -34200,15 +34194,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:39Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -34218,20 +34218,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1216654,
-        "finished": 2656200,
-        "profit": -182432,
-        "marginPct": -7,
-        "marginPctAt275": 1,
-        "profitAt275": 37132,
-        "salePsf": 699,
+        "finished": 2397800,
+        "profit": -433080,
+        "marginPct": -18,
+        "marginPctAt275": -9,
+        "profitAt275": -213516,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 797914,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:39Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -34376,19 +34376,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 87,
       "houseComps": {
-        "psf": 1539,
-        "medPsf": 1404,
-        "price": 10900000,
-        "lowPsf": 942,
+        "psf": 1091,
+        "medPsf": 942,
+        "price": 5235000,
+        "lowPsf": 893,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
-          },
           {
             "address": "9518 N 46TH ST",
             "sold": "02/01/2026",
@@ -34396,50 +34390,56 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "5131 E BUTLER DR",
-            "sold": "04/01/2026",
-            "price": 11000000,
-            "sf": 7834
+            "address": "4796 E CHARLES DR",
+            "sold": "06/01/2025",
+            "price": 4500000,
+            "sf": 4904
           },
           {
-            "address": "5102 E BUTLER DR",
-            "sold": "03/01/2026",
-            "price": 10900000,
-            "sf": 7083
+            "address": "4446 E MOCKINGBIRD LN",
+            "sold": "03/01/2025",
+            "price": 6500000,
+            "sf": 4258
           },
           {
-            "address": "4902 E BERNEIL DR",
-            "sold": "09/01/2025",
-            "price": 11900000,
-            "sf": 7589
+            "address": "8920 N MARTINGALE RD",
+            "sold": "07/01/2026",
+            "price": 6500000,
+            "sf": 5959
+          },
+          {
+            "address": "4845 E CAIDA DEL SOL DR",
+            "sold": "04/01/2025",
+            "price": 5235000,
+            "sf": 5863
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:39Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Maybe",
         "strategy": "4 homes",
         "land": 2533324,
-        "finished": 18714240,
-        "profit": 9591182,
-        "marginPct": 51,
-        "marginPctAt275": 56,
-        "profitAt275": 10469438,
-        "salePsf": 1539,
-        "risk": "Medium",
-        "supportableOffer": 9748051,
+        "finished": 13266560,
+        "profit": 4306933,
+        "marginPct": 32,
+        "marginPctAt275": 39,
+        "profitAt275": 5185189,
+        "salePsf": 1091,
+        "risk": "High",
+        "supportableOffer": 5318629,
         "offerHomes": 4,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:39Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -34757,7 +34757,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:39Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -34780,7 +34780,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:39Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -34923,9 +34923,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 106,
       "houseComps": {
-        "psf": 319,
-        "medPsf": 304,
-        "price": 1800000,
+        "psf": 375,
+        "medPsf": 334,
+        "price": 1750000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
@@ -34943,27 +34943,27 @@ window.PHX_LAND_LEADS = {
             "sf": 3688
           },
           {
-            "address": "15217 N 15TH DR",
-            "sold": "11/01/2025",
-            "price": 2900000,
-            "sf": 9094
-          },
-          {
             "address": "14624 N 15TH DR",
             "sold": "07/01/2026",
             "price": 1800000,
             "sf": 5382
           },
           {
-            "address": "1465 W CARIBBEAN LN",
-            "sold": "07/01/2026",
-            "price": 1965250,
-            "sf": 6465
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664
+          },
+          {
+            "address": "14845 N 15TH DR",
+            "sold": "06/01/2026",
+            "price": 1950000,
+            "sf": 4684
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:39Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -34973,20 +34973,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 296700,
-        "finished": 1212200,
-        "profit": -579501,
-        "marginPct": -48,
-        "marginPctAt275": -30,
-        "profitAt275": -359937,
-        "salePsf": 319,
+        "finished": 1425000,
+        "profit": -373085,
+        "marginPct": -26,
+        "marginPctAt275": -11,
+        "profitAt275": -153521,
+        "salePsf": 375,
         "risk": "Medium",
-        "supportableOffer": -358179,
+        "supportableOffer": -185155,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:39Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -35119,9 +35119,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 86,
       "houseComps": {
-        "psf": 775,
-        "medPsf": 629,
-        "price": 3050000,
+        "psf": 624,
+        "medPsf": 584,
+        "price": 2600000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -35145,21 +35145,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:40Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -35169,20 +35169,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1319342,
-        "finished": 2945000,
-        "profit": -12172,
-        "marginPct": 0,
-        "marginPctAt275": 7,
-        "profitAt275": 207392,
-        "salePsf": 775,
+        "finished": 2371200,
+        "profit": -568758,
+        "marginPct": -24,
+        "marginPctAt275": -15,
+        "profitAt275": -349194,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:40Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -35327,30 +35327,18 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 86,
       "houseComps": {
-        "psf": 942,
-        "medPsf": 699,
-        "price": 4750000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
-          },
           {
             "address": "4224 E DESERT COVE AVE",
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -35363,34 +35351,46 @@ window.PHX_LAND_LEADS = {
             "sold": "05/01/2026",
             "price": 2235000,
             "sf": 3542
+          },
+          {
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:40Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 1210317,
-        "finished": 3579600,
-        "profit": 720047,
-        "marginPct": 20,
-        "marginPctAt275": 26,
-        "profitAt275": 939611,
-        "salePsf": 942,
+        "finished": 2397800,
+        "profit": -426299,
+        "marginPct": -18,
+        "marginPctAt275": -9,
+        "profitAt275": -206735,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 1548716,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:40Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -35536,10 +35536,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 86,
       "houseComps": {
-        "psf": 1201,
-        "medPsf": 942,
-        "price": 4850000,
-        "lowPsf": 624,
+        "psf": 775,
+        "medPsf": 624,
+        "price": 3050000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -35556,27 +35556,27 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
+            "address": "10230 N 39TH ST",
+            "sold": "11/01/2024",
+            "price": 1275000,
+            "sf": 5734
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           },
           {
-            "address": "4902 E BERNEIL DR",
-            "sold": "09/01/2025",
-            "price": 11900000,
-            "sf": 7589
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:40Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -35586,20 +35586,20 @@ window.PHX_LAND_LEADS = {
         "label": "Good",
         "strategy": "1 custom home",
         "land": 1025349,
-        "finished": 4563800,
-        "profit": 1872637,
-        "marginPct": 41,
-        "marginPctAt275": 46,
-        "profitAt275": 2092201,
-        "salePsf": 1201,
+        "finished": 2945000,
+        "profit": 302401,
+        "marginPct": 10,
+        "marginPctAt275": 18,
+        "profitAt275": 521965,
+        "salePsf": 775,
         "risk": "Low",
-        "supportableOffer": 2348953,
+        "supportableOffer": 1032733,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:40Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -35784,7 +35784,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:40Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -35807,7 +35807,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:40Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -36123,15 +36123,15 @@ window.PHX_LAND_LEADS = {
             "sf": 3031
           },
           {
-            "address": "13215 N 20TH ST",
-            "sold": "12/01/2024",
-            "price": 645000,
-            "sf": 2269
+            "address": "12849 N NANCY JANE LN",
+            "sold": "08/01/2026",
+            "price": 890000,
+            "sf": 2732
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:40Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -36154,7 +36154,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:40Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -36302,7 +36302,7 @@ window.PHX_LAND_LEADS = {
         "psf": 440,
         "medPsf": 409,
         "price": 1625000,
-        "lowPsf": 357,
+        "lowPsf": 320,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -36331,15 +36331,15 @@ window.PHX_LAND_LEADS = {
             "sf": 5188
           },
           {
-            "address": "14426 N 39TH WAY",
-            "sold": "01/01/2026",
-            "price": 737500,
-            "sf": 2004
+            "address": "15621 N 37TH ST",
+            "sold": "06/01/2026",
+            "price": 750000,
+            "sf": 2344
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:41Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -36362,7 +36362,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:41Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -36504,10 +36504,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 85,
       "houseComps": {
-        "psf": 341,
-        "medPsf": 290,
-        "price": 515000,
-        "lowPsf": 278,
+        "psf": 329,
+        "medPsf": 276,
+        "price": 648000,
+        "lowPsf": 79,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -36518,33 +36518,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3478
           },
           {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
+            "address": "2732 E FRIESS DR",
+            "sold": "02/01/2026",
+            "price": 1360000,
+            "sf": 4134
+          },
+          {
+            "address": "3022 E EMILE ZOLA AVE",
+            "sold": "09/01/2026",
+            "price": 648000,
+            "sf": 2352
           },
           {
             "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 490000,
-            "sf": 1717
+            "sold": "07/01/2024",
+            "price": 517500,
+            "sf": 2431
           },
           {
-            "address": "11900 N 32ND ST",
+            "address": "3028 E BLOOMFIELD RD",
             "sold": "03/01/2026",
-            "price": 498000,
-            "sf": 1717
-          },
-          {
-            "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 515000,
-            "sf": 1850
+            "price": 180000,
+            "sf": 2281
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:41Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -36554,20 +36554,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 426611,
-        "finished": 1295800,
-        "profit": -637414,
-        "marginPct": -49,
-        "marginPctAt275": -32,
-        "profitAt275": -417850,
-        "salePsf": 341,
+        "finished": 1250200,
+        "profit": -681646,
+        "marginPct": -55,
+        "marginPctAt275": -37,
+        "profitAt275": -462082,
+        "salePsf": 329,
         "risk": "Low",
-        "supportableOffer": -290206,
+        "supportableOffer": -327282,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:41Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -36750,7 +36750,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:41Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -36773,7 +36773,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:41Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -36914,9 +36914,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 85,
       "houseComps": {
-        "psf": 397,
-        "medPsf": 375,
-        "price": 949900,
+        "psf": 444,
+        "medPsf": 397,
+        "price": 955000,
         "lowPsf": 325,
         "n": 5,
         "radiusMi": 1,
@@ -36934,12 +36934,6 @@ window.PHX_LAND_LEADS = {
             "sf": 2710
           },
           {
-            "address": "3443 W JOY RANCH RD",
-            "sold": "05/01/2026",
-            "price": 635000,
-            "sf": 1952
-          },
-          {
             "address": "38133 N 29TH AVE",
             "sold": "07/01/2026",
             "price": 949900,
@@ -36950,11 +36944,17 @@ window.PHX_LAND_LEADS = {
             "sold": "10/01/2025",
             "price": 820000,
             "sf": 2524
+          },
+          {
+            "address": "37937 N 31ST AVE",
+            "sold": "04/01/2025",
+            "price": 1275000,
+            "sf": 2710
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:41Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -36964,20 +36964,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 240334,
-        "finished": 1508600,
-        "profit": -231681,
-        "marginPct": -15,
-        "marginPctAt275": -1,
-        "profitAt275": -12117,
-        "salePsf": 397,
+        "finished": 1687200,
+        "profit": -58439,
+        "marginPct": -3,
+        "marginPctAt275": 10,
+        "profitAt275": 161125,
+        "salePsf": 444,
         "risk": "Low",
-        "supportableOffer": -117181,
+        "supportableOffer": 28036,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:41Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -37145,7 +37145,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:41Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -37168,7 +37168,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:41Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -37336,7 +37336,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:41Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -37359,7 +37359,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:41Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -37540,7 +37540,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:42Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -37563,7 +37563,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:42Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -37744,7 +37744,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:42Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -37767,7 +37767,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:42Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -37950,7 +37950,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:42Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -37973,7 +37973,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:42Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -38115,9 +38115,9 @@ window.PHX_LAND_LEADS = {
       "peakScore": 85,
       "houseComps": {
         "psf": 283,
-        "medPsf": 272,
-        "price": 520000,
-        "lowPsf": 259,
+        "medPsf": 280,
+        "price": 900000,
+        "lowPsf": 279,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -38128,33 +38128,33 @@ window.PHX_LAND_LEADS = {
             "sf": 4095
           },
           {
-            "address": "40921 N 10TH ST",
-            "sold": "10/01/2024",
-            "price": 487000,
-            "sf": 1832
+            "address": "39705 N 3RD ST",
+            "sold": "05/01/2025",
+            "price": 800000,
+            "sf": 2870
           },
           {
-            "address": "40905 N 10TH ST",
-            "sold": "05/01/2024",
-            "price": 487000,
-            "sf": 1791
+            "address": "40018 N 7TH ST",
+            "sold": "02/01/2025",
+            "price": 900000,
+            "sf": 2617
           },
           {
-            "address": "40913 N 10TH ST",
-            "sold": "04/01/2024",
-            "price": 520000,
-            "sf": 2010
+            "address": "40724 N CENTRAL AVE",
+            "sold": "07/01/2026",
+            "price": 735000,
+            "sf": 2628
           },
           {
-            "address": "828 E WALDEN DR",
-            "sold": "07/01/2024",
-            "price": 575000,
-            "sf": 1639
+            "address": "40927 N 3RD AVE",
+            "sold": "03/01/2026",
+            "price": 1095000,
+            "sf": 3914
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:42Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -38177,7 +38177,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:42Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -38358,7 +38358,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:42Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -38381,7 +38381,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:42Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -38542,12 +38542,6 @@ window.PHX_LAND_LEADS = {
             "sf": 2710
           },
           {
-            "address": "3443 W JOY RANCH RD",
-            "sold": "05/01/2026",
-            "price": 635000,
-            "sf": 1952
-          },
-          {
             "address": "38133 N 29TH AVE",
             "sold": "07/01/2026",
             "price": 949900,
@@ -38558,11 +38552,17 @@ window.PHX_LAND_LEADS = {
             "sold": "04/01/2025",
             "price": 1275000,
             "sf": 2710
+          },
+          {
+            "address": "2935 W JOY RANCH RD",
+            "sold": "10/01/2025",
+            "price": 820000,
+            "sf": 2524
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:42Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -38585,7 +38585,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:42Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -38766,7 +38766,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:43Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -38789,7 +38789,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:43Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -38931,7 +38931,7 @@ window.PHX_LAND_LEADS = {
       "peakScore": 85,
       "houseComps": {
         "psf": 397,
-        "medPsf": 338,
+        "medPsf": 375,
         "price": 955000,
         "lowPsf": 179,
         "n": 5,
@@ -38942,12 +38942,6 @@ window.PHX_LAND_LEADS = {
             "sold": "06/01/2026",
             "price": 955000,
             "sf": 2407
-          },
-          {
-            "address": "3443 W JOY RANCH RD",
-            "sold": "05/01/2026",
-            "price": 635000,
-            "sf": 1952
           },
           {
             "address": "37931 N 31ST AVE",
@@ -38966,11 +38960,17 @@ window.PHX_LAND_LEADS = {
             "sold": "12/01/2025",
             "price": 990000,
             "sf": 2926
+          },
+          {
+            "address": "38133 N 29TH AVE",
+            "sold": "07/01/2026",
+            "price": 949900,
+            "sf": 2530
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:43Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -38993,7 +38993,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:43Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -39137,7 +39137,7 @@ window.PHX_LAND_LEADS = {
         "psf": 397,
         "medPsf": 375,
         "price": 949900,
-        "lowPsf": 325,
+        "lowPsf": 179,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -39146,12 +39146,6 @@ window.PHX_LAND_LEADS = {
             "sold": "06/01/2026",
             "price": 955000,
             "sf": 2407
-          },
-          {
-            "address": "3443 W JOY RANCH RD",
-            "sold": "05/01/2026",
-            "price": 635000,
-            "sf": 1952
           },
           {
             "address": "37931 N 31ST AVE",
@@ -39170,11 +39164,17 @@ window.PHX_LAND_LEADS = {
             "sold": "10/01/2025",
             "price": 820000,
             "sf": 2524
+          },
+          {
+            "address": "36430 N 34TH AVE",
+            "sold": "07/01/2026",
+            "price": 700000,
+            "sf": 3907
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:43Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -39197,7 +39197,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:43Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -39378,7 +39378,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:43Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -39401,7 +39401,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:43Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -39582,7 +39582,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:43Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -39605,7 +39605,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:43Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -40021,47 +40021,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 104,
       "houseComps": {
-        "psf": 258,
-        "medPsf": 229,
-        "price": 480000,
-        "lowPsf": 224,
+        "psf": 215,
+        "medPsf": 206,
+        "price": 487000,
+        "lowPsf": 127,
         "n": 5,
         "radiusMi": 1,
         "comps": [
           {
-            "address": "2302 W ANDERSON AVE",
-            "sold": "02/01/2025",
-            "price": 520000,
-            "sf": 2013
+            "address": "2046 W DAVIS RD",
+            "sold": "02/01/2026",
+            "price": 525000,
+            "sf": 2446
           },
           {
-            "address": "15809 N DANTE DR",
-            "sold": "04/01/2026",
-            "price": 480000,
-            "sf": 2094
+            "address": "17645 N 29TH AVE",
+            "sold": "08/01/2026",
+            "price": 320000,
+            "sf": 2528
           },
           {
-            "address": "2236 W BEVERLY LN",
-            "sold": "12/01/2025",
-            "price": 460000,
-            "sf": 1753
+            "address": "17442 N 24TH DR",
+            "sold": "07/01/2026",
+            "price": 411000,
+            "sf": 2432
           },
           {
-            "address": "2138 W MARCONI AVE",
-            "sold": "06/01/2026",
-            "price": 500000,
-            "sf": 2236
+            "address": "2044 W SCHELL DR",
+            "sold": "02/01/2026",
+            "price": 487000,
+            "sf": 2359
           },
           {
-            "address": "2130 W LE MARCHE AVE",
-            "sold": "06/01/2026",
-            "price": 422500,
-            "sf": 1871
+            "address": "17627 N 14TH AVE",
+            "sold": "11/01/2025",
+            "price": 610000,
+            "sf": 2346
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:43Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -40071,20 +40071,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 197700,
-        "finished": 980400,
-        "profit": -698417,
-        "marginPct": -71,
-        "marginPctAt275": -49,
-        "profitAt275": -478853,
-        "salePsf": 258,
+        "finished": 817000,
+        "profit": -856915,
+        "marginPct": -105,
+        "marginPctAt275": -78,
+        "profitAt275": -637351,
+        "salePsf": 215,
         "risk": "Medium",
-        "supportableOffer": -546652,
+        "supportableOffer": -679510,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:43Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -40228,7 +40228,7 @@ window.PHX_LAND_LEADS = {
         "psf": 441,
         "medPsf": 436,
         "price": 1350000,
-        "lowPsf": 344,
+        "lowPsf": 209,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -40251,21 +40251,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3790
           },
           {
-            "address": "39112 N 9TH AVE",
-            "sold": "04/01/2026",
-            "price": 650000,
-            "sf": 1890
-          },
-          {
             "address": "37233 N 11TH AVE",
             "sold": "07/01/2026",
             "price": 1350000,
             "sf": 3064
+          },
+          {
+            "address": "1632 W LAVITT LN",
+            "sold": "11/01/2024",
+            "price": 860000,
+            "sf": 4124
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:44Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -40288,7 +40288,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:44Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -40611,7 +40611,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:44Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -40634,7 +40634,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:44Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -40817,7 +40817,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:44Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -40840,7 +40840,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:44Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -41113,25 +41113,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 83,
       "houseComps": {
-        "psf": 332,
-        "medPsf": 330,
-        "price": 645000,
+        "psf": 296,
+        "medPsf": 295,
+        "price": 730000,
         "lowPsf": 195,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "30923 N 25TH DR",
-            "sold": "08/01/2026",
-            "price": 615000,
-            "sf": 2118
-          },
-          {
-            "address": "2174 W BURNSIDE TRL",
-            "sold": "04/01/2026",
-            "price": 645000,
-            "sf": 1943
-          },
           {
             "address": "2522 W BRISA DR",
             "sold": "11/01/2025",
@@ -41139,21 +41127,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3536
           },
           {
-            "address": "2132 W SIERRA SUNSET TRL",
-            "sold": "05/01/2026",
-            "price": 685000,
-            "sf": 1943
+            "address": "2034 W SLEEPY RANCH RD",
+            "sold": "02/01/2026",
+            "price": 755000,
+            "sf": 2468
           },
           {
-            "address": "2053 W LONESOME TRL",
-            "sold": "08/01/2026",
-            "price": 635000,
-            "sf": 1923
+            "address": "2605 W DESERT MARIGOLD DR",
+            "sold": "12/01/2025",
+            "price": 730000,
+            "sf": 2469
+          },
+          {
+            "address": "30909 N 27TH AVE",
+            "sold": "07/01/2025",
+            "price": 775000,
+            "sf": 3174
+          },
+          {
+            "address": "2525 W BALAO DR",
+            "sold": "09/01/2025",
+            "price": 715000,
+            "sf": 2424
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:44Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -41163,20 +41163,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 2022200,
-        "finished": 1261600,
-        "profit": -2377868,
-        "marginPct": -188,
-        "marginPctAt275": -171,
-        "profitAt275": -2158304,
-        "salePsf": 332,
+        "finished": 1124800,
+        "profit": -2510564,
+        "marginPct": -223,
+        "marginPctAt275": -204,
+        "profitAt275": -2291000,
+        "salePsf": 296,
         "risk": "Medium",
-        "supportableOffer": -318013,
+        "supportableOffer": -429243,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:44Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -41321,9 +41321,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 103,
       "houseComps": {
-        "psf": 338,
+        "psf": 364,
         "medPsf": 334,
-        "price": 1800000,
+        "price": 1150000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
@@ -41333,12 +41333,6 @@ window.PHX_LAND_LEADS = {
             "sold": "09/01/2025",
             "price": 817500,
             "sf": 3176
-          },
-          {
-            "address": "14214 N MOON MOUNTAIN TRL",
-            "sold": "05/01/2024",
-            "price": 2815000,
-            "sf": 8330
           },
           {
             "address": "1642 W MANDALAY LN",
@@ -41353,15 +41347,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5382
           },
           {
-            "address": "14440 N 14TH DR",
-            "sold": "06/01/2026",
-            "price": 3650000,
-            "sf": 10129
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664
+          },
+          {
+            "address": "722 W MOON VALLEY DR",
+            "sold": "01/01/2026",
+            "price": 1150000,
+            "sf": 3158
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:44Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -41371,20 +41371,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 393000,
-        "finished": 1284400,
-        "profit": -612508,
-        "marginPct": -48,
-        "marginPctAt275": -31,
-        "profitAt275": -392944,
-        "salePsf": 338,
+        "finished": 1383200,
+        "profit": -516672,
+        "marginPct": -37,
+        "marginPctAt275": -21,
+        "profitAt275": -297108,
+        "salePsf": 364,
         "risk": "Medium",
-        "supportableOffer": -299475,
+        "supportableOffer": -219142,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:44Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -42049,19 +42049,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 83,
       "houseComps": {
-        "psf": 358,
-        "medPsf": 329,
-        "price": 770000,
-        "lowPsf": 305,
+        "psf": 329,
+        "medPsf": 278,
+        "price": 885000,
+        "lowPsf": 234,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
-          },
           {
             "address": "3001 E ACOMA DR",
             "sold": "09/01/2024",
@@ -42069,27 +42063,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3000
           },
           {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
-          },
-          {
-            "address": "3623 E CROCUS DR",
-            "sold": "05/01/2026",
-            "price": 525000,
-            "sf": 1620
-          },
-          {
             "address": "2732 E FRIESS DR",
             "sold": "02/01/2026",
             "price": 1360000,
             "sf": 4134
+          },
+          {
+            "address": "2723 E ACOMA DR",
+            "sold": "06/01/2026",
+            "price": 885000,
+            "sf": 3261
+          },
+          {
+            "address": "2716 E EVANS DR",
+            "sold": "05/01/2026",
+            "price": 730000,
+            "sf": 2627
+          },
+          {
+            "address": "3001 E REDFIELD RD",
+            "sold": "08/01/2026",
+            "price": 545000,
+            "sf": 2327
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:45Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -42099,20 +42099,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1507631,
-        "finished": 1360400,
-        "profit": -1731443,
-        "marginPct": -127,
-        "marginPctAt275": -111,
-        "profitAt275": -1511879,
-        "salePsf": 358,
+        "finished": 1250200,
+        "profit": -1838337,
+        "marginPct": -147,
+        "marginPctAt275": -129,
+        "profitAt275": -1618773,
+        "salePsf": 329,
         "risk": "Low",
-        "supportableOffer": -237680,
+        "supportableOffer": -327282,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:45Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -42258,19 +42258,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 83,
       "houseComps": {
-        "psf": 1201,
-        "medPsf": 942,
-        "price": 4850000,
-        "lowPsf": 624,
+        "psf": 775,
+        "medPsf": 631,
+        "price": 3050000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
-          },
           {
             "address": "4224 E DESERT COVE AVE",
             "sold": "08/01/2026",
@@ -42284,44 +42278,50 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
+            "address": "5101 E LAUREL LN",
+            "sold": "05/01/2026",
+            "price": 2235000,
+            "sf": 3542
           },
           {
-            "address": "4902 E BERNEIL DR",
-            "sold": "09/01/2025",
-            "price": 11900000,
-            "sf": 7589
+            "address": "10230 N 39TH ST",
+            "sold": "11/01/2024",
+            "price": 1275000,
+            "sf": 5734
+          },
+          {
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:45Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 1294111,
-        "finished": 4563800,
-        "profit": 1585061,
-        "marginPct": 35,
-        "marginPctAt275": 40,
-        "profitAt275": 1804625,
-        "salePsf": 1201,
+        "finished": 2945000,
+        "profit": 14825,
+        "marginPct": 1,
+        "marginPctAt275": 8,
+        "profitAt275": 234389,
+        "salePsf": 775,
         "risk": "Low",
-        "supportableOffer": 2348953,
+        "supportableOffer": 1032733,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:45Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -42466,9 +42466,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 83,
       "houseComps": {
-        "psf": 842,
-        "medPsf": 629,
-        "price": 3325000,
+        "psf": 775,
+        "medPsf": 624,
+        "price": 3050000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -42478,12 +42478,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "9518 N 46TH ST",
@@ -42498,15 +42492,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5734
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:45Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -42516,20 +42516,20 @@ window.PHX_LAND_LEADS = {
         "label": "Good",
         "strategy": "1 custom home",
         "land": 931257,
-        "finished": 3199600,
-        "profit": 650041,
-        "marginPct": 20,
-        "marginPctAt275": 27,
-        "profitAt275": 869605,
-        "salePsf": 842,
+        "finished": 2945000,
+        "profit": 403079,
+        "marginPct": 14,
+        "marginPctAt275": 21,
+        "profitAt275": 622643,
+        "salePsf": 775,
         "risk": "Low",
-        "supportableOffer": 1239744,
+        "supportableOffer": 1032733,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:45Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -42662,10 +42662,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 82,
       "houseComps": {
-        "psf": 942,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2235000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -42682,50 +42682,50 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
-          },
-          {
             "address": "5101 E LAUREL LN",
             "sold": "05/01/2026",
             "price": 2235000,
             "sf": 3542
+          },
+          {
+            "address": "10230 N 39TH ST",
+            "sold": "11/01/2024",
+            "price": 1275000,
+            "sf": 5734
+          },
+          {
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:45Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 798761,
-        "finished": 3579600,
-        "profit": 1160412,
-        "marginPct": 32,
-        "marginPctAt275": 39,
-        "profitAt275": 1379976,
-        "salePsf": 942,
+        "finished": 2397800,
+        "profit": 14066,
+        "marginPct": 1,
+        "marginPctAt275": 10,
+        "profitAt275": 233630,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 1548716,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:45Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -42844,9 +42844,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 82,
       "houseComps": {
-        "psf": 842,
-        "medPsf": 775,
-        "price": 3325000,
+        "psf": 775,
+        "medPsf": 624,
+        "price": 3050000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -42864,12 +42864,6 @@ window.PHX_LAND_LEADS = {
             "sf": 5734
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
-          },
-          {
             "address": "4224 E DESERT COVE AVE",
             "sold": "08/01/2026",
             "price": 3325000,
@@ -42880,34 +42874,40 @@ window.PHX_LAND_LEADS = {
             "sold": "02/01/2026",
             "price": 4850000,
             "sf": 5146
+          },
+          {
+            "address": "3417 E DUNLAP AVE",
+            "sold": "11/01/2024",
+            "price": 975000,
+            "sf": 3369
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:46Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 1286334,
-        "finished": 3199600,
-        "profit": 270109,
-        "marginPct": 8,
-        "marginPctAt275": 15,
-        "profitAt275": 489673,
-        "salePsf": 842,
+        "finished": 2945000,
+        "profit": 23147,
+        "marginPct": 1,
+        "marginPctAt275": 8,
+        "profitAt275": 242711,
+        "salePsf": 775,
         "risk": "Low",
-        "supportableOffer": 1239744,
+        "supportableOffer": 1032733,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:46Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -43052,10 +43052,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 82,
       "houseComps": {
-        "psf": 942,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2235000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -43072,50 +43072,50 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
-          },
-          {
             "address": "5101 E LAUREL LN",
             "sold": "05/01/2026",
             "price": 2235000,
             "sf": 3542
+          },
+          {
+            "address": "10230 N 39TH ST",
+            "sold": "11/01/2024",
+            "price": 1275000,
+            "sf": 5734
+          },
+          {
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:46Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 841853,
-        "finished": 3579600,
-        "profit": 1114303,
-        "marginPct": 31,
-        "marginPctAt275": 37,
-        "profitAt275": 1333867,
-        "salePsf": 942,
+        "finished": 2397800,
+        "profit": -32043,
+        "marginPct": -1,
+        "marginPctAt275": 8,
+        "profitAt275": 187521,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 1548716,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:46Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -43248,10 +43248,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 82,
       "houseComps": {
-        "psf": 942,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2235000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -43260,12 +43260,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "9518 N 46TH ST",
@@ -43280,38 +43274,44 @@ window.PHX_LAND_LEADS = {
             "sf": 3542
           },
           {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10230 N 39TH ST",
+            "sold": "11/01/2024",
+            "price": 1275000,
+            "sf": 5734
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:47Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 612327,
-        "finished": 3579600,
-        "profit": 1359896,
-        "marginPct": 38,
-        "marginPctAt275": 44,
-        "profitAt275": 1579460,
-        "salePsf": 942,
+        "finished": 2397800,
+        "profit": 213550,
+        "marginPct": 9,
+        "marginPctAt275": 18,
+        "profitAt275": 433114,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 1548716,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:47Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -43455,19 +43455,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 101,
       "houseComps": {
-        "psf": 263,
+        "psf": 240,
         "medPsf": 240,
         "price": 608000,
-        "lowPsf": 155,
+        "lowPsf": 223,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "22215 N 31ST AVE",
-            "sold": "08/01/2024",
-            "price": 510000,
-            "sf": 1757
-          },
           {
             "address": "3311 W WALTER WAY",
             "sold": "06/01/2026",
@@ -43487,15 +43481,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2704
           },
           {
-            "address": "3061 W COUNTRY CLUB TER",
-            "sold": "08/01/2026",
-            "price": 322500,
-            "sf": 2082
+            "address": "3165 W ZACHARY DR",
+            "sold": "06/01/2026",
+            "price": 595995,
+            "sf": 2672
+          },
+          {
+            "address": "21232 N 31ST DR",
+            "sold": "03/01/2026",
+            "price": 565000,
+            "sf": 2480
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:47Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -43505,20 +43505,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 117700,
-        "finished": 999400,
-        "profit": -594387,
-        "marginPct": -59,
-        "marginPctAt275": -38,
-        "profitAt275": -374823,
-        "salePsf": 263,
+        "finished": 912000,
+        "profit": -679165,
+        "marginPct": -74,
+        "marginPctAt275": -50,
+        "profitAt275": -459601,
+        "salePsf": 240,
         "risk": "Medium",
-        "supportableOffer": -531204,
+        "supportableOffer": -602267,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:47Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -43638,9 +43638,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 101,
       "houseComps": {
-        "psf": 299,
+        "psf": 312,
         "medPsf": 289,
-        "price": 975000,
+        "price": 1090000,
         "lowPsf": 240,
         "n": 5,
         "radiusMi": 1,
@@ -43658,12 +43658,6 @@ window.PHX_LAND_LEADS = {
             "sf": 4535
           },
           {
-            "address": "19854 N 29TH ST",
-            "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
-          },
-          {
             "address": "19617 N 27TH ST",
             "sold": "12/01/2025",
             "price": 850000,
@@ -43674,11 +43668,17 @@ window.PHX_LAND_LEADS = {
             "sold": "02/01/2025",
             "price": 975000,
             "sf": 3589
+          },
+          {
+            "address": "19427 N 23RD PL",
+            "sold": "10/01/2024",
+            "price": 1250000,
+            "sf": 4010
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:47Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -43688,20 +43688,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 304700,
-        "finished": 1136200,
-        "profit": -661781,
-        "marginPct": -58,
-        "marginPctAt275": -39,
-        "profitAt275": -442217,
-        "salePsf": 299,
+        "finished": 1185600,
+        "profit": -613863,
+        "marginPct": -52,
+        "marginPctAt275": -33,
+        "profitAt275": -394299,
+        "salePsf": 312,
         "risk": "Medium",
-        "supportableOffer": -419974,
+        "supportableOffer": -379807,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:47Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -43850,9 +43850,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 81,
       "houseComps": {
-        "psf": 332,
-        "medPsf": 325,
-        "price": 550000,
+        "psf": 325,
+        "medPsf": 288,
+        "price": 810000,
         "lowPsf": 64,
         "n": 5,
         "radiusMi": 1,
@@ -43876,21 +43876,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3463
           },
           {
-            "address": "18601 N 16TH PL",
-            "sold": "04/01/2026",
-            "price": 550000,
-            "sf": 2259
+            "address": "18422 N 14TH ST",
+            "sold": "03/01/2026",
+            "price": 1044750,
+            "sf": 3632
           },
           {
-            "address": "16875 N 12TH ST",
-            "sold": "05/01/2026",
-            "price": 527364,
-            "sf": 1590
+            "address": "17219 N 10TH ST",
+            "sold": "09/01/2025",
+            "price": 645000,
+            "sf": 2610
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:48Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -43900,20 +43900,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 448200,
-        "finished": 1261600,
-        "profit": -693688,
-        "marginPct": -55,
-        "marginPctAt275": -38,
-        "profitAt275": -474124,
-        "salePsf": 332,
+        "finished": 1235000,
+        "profit": -719490,
+        "marginPct": -58,
+        "marginPctAt275": -40,
+        "profitAt275": -499926,
+        "salePsf": 325,
         "risk": "Medium",
-        "supportableOffer": -318013,
+        "supportableOffer": -339641,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:48Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -44095,7 +44095,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:48Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -44118,7 +44118,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:48Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -44261,47 +44261,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 91,
       "houseComps": {
-        "psf": 362,
-        "medPsf": 339,
-        "price": 569900,
-        "lowPsf": 253,
+        "psf": 325,
+        "medPsf": 302,
+        "price": 810000,
+        "lowPsf": 209,
         "n": 5,
-        "radiusMi": 1,
+        "radiusMi": 2,
         "comps": [
           {
-            "address": "17234 N 28TH ST",
+            "address": "2890 E ANGELA DR",
+            "sold": "01/01/2024",
+            "price": 635000,
+            "sf": 2684
+          },
+          {
+            "address": "17629 N 24TH WAY",
+            "sold": "08/01/2025",
+            "price": 640000,
+            "sf": 3060
+          },
+          {
+            "address": "18415 N 13TH PL",
+            "sold": "09/01/2026",
+            "price": 810000,
+            "sf": 2496
+          },
+          {
+            "address": "3720 E TIERRA BUENA LN",
+            "sold": "08/01/2025",
+            "price": 1295000,
+            "sf": 2776
+          },
+          {
+            "address": "16244 N 21ST ST",
             "sold": "07/01/2025",
-            "price": 659950,
-            "sf": 1600
-          },
-          {
-            "address": "2909 E CAMPO BELLO DR",
-            "sold": "04/01/2026",
-            "price": 715000,
-            "sf": 2111
-          },
-          {
-            "address": "2647 E CONTENTION MINE RD",
-            "sold": "03/01/2026",
-            "price": 460000,
-            "sf": 1685
-          },
-          {
-            "address": "2901 E PARADISE LN",
-            "sold": "08/01/2026",
-            "price": 400000,
-            "sf": 1581
-          },
-          {
-            "address": "18324 N 28TH PL",
-            "sold": "01/01/2026",
-            "price": 569900,
-            "sf": 1574
+            "price": 1100000,
+            "sf": 3637
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:48Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -44311,20 +44311,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 210603,
-        "finished": 1375600,
-        "profit": -328879,
-        "marginPct": -24,
-        "marginPctAt275": -8,
-        "profitAt275": -109315,
-        "salePsf": 362,
+        "finished": 1235000,
+        "profit": -465261,
+        "marginPct": -38,
+        "marginPctAt275": -20,
+        "profitAt275": -245697,
+        "salePsf": 325,
         "risk": "Low",
-        "supportableOffer": -225321,
+        "supportableOffer": -339641,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:48Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -44467,9 +44467,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 81,
       "houseComps": {
-        "psf": 288,
-        "medPsf": 247,
-        "price": 645000,
+        "psf": 315,
+        "medPsf": 288,
+        "price": 810000,
         "lowPsf": 64,
         "n": 5,
         "radiusMi": 1,
@@ -44487,12 +44487,6 @@ window.PHX_LAND_LEADS = {
             "sf": 3463
           },
           {
-            "address": "18601 N 16TH PL",
-            "sold": "04/01/2026",
-            "price": 550000,
-            "sf": 2259
-          },
-          {
             "address": "18422 N 14TH ST",
             "sold": "03/01/2026",
             "price": 1044750,
@@ -44503,11 +44497,17 @@ window.PHX_LAND_LEADS = {
             "sold": "09/01/2025",
             "price": 645000,
             "sf": 2610
+          },
+          {
+            "address": "18401 N 14TH ST",
+            "sold": "05/01/2025",
+            "price": 1111000,
+            "sf": 3523
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:49Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -44517,20 +44517,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 236322,
-        "finished": 1094400,
-        "profit": -629163,
-        "marginPct": -57,
-        "marginPctAt275": -37,
-        "profitAt275": -409599,
-        "salePsf": 288,
+        "finished": 1197000,
+        "profit": -529641,
+        "marginPct": -44,
+        "marginPctAt275": -26,
+        "profitAt275": -310077,
+        "salePsf": 315,
         "risk": "Low",
-        "supportableOffer": -453961,
+        "supportableOffer": -370538,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:49Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -44661,10 +44661,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 91,
       "houseComps": {
-        "psf": 433,
-        "medPsf": 358,
+        "psf": 358,
+        "medPsf": 329,
         "price": 1075000,
-        "lowPsf": 305,
+        "lowPsf": 271,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -44675,33 +44675,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3056
           },
           {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
-          },
-          {
             "address": "2732 E FRIESS DR",
             "sold": "02/01/2026",
             "price": 1360000,
             "sf": 4134
           },
           {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
-          },
-          {
             "address": "3001 E ACOMA DR",
             "sold": "09/01/2024",
             "price": 1075000,
             "sf": 3000
+          },
+          {
+            "address": "2723 E ACOMA DR",
+            "sold": "06/01/2026",
+            "price": 885000,
+            "sf": 3261
+          },
+          {
+            "address": "2716 E EVANS DR",
+            "sold": "05/01/2026",
+            "price": 730000,
+            "sf": 2627
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:49Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -44711,20 +44711,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 522528,
-        "finished": 1645400,
-        "profit": -400933,
-        "marginPct": -24,
-        "marginPctAt275": -11,
-        "profitAt275": -181369,
-        "salePsf": 433,
+        "finished": 1360400,
+        "profit": -677383,
+        "marginPct": -50,
+        "marginPctAt275": -34,
+        "profitAt275": -457819,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -5951,
+        "supportableOffer": -237680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:49Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -44869,25 +44869,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 81,
       "houseComps": {
-        "psf": 338,
+        "psf": 364,
         "medPsf": 334,
-        "price": 1800000,
+        "price": 1150000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "14440 N 14TH DR",
-            "sold": "06/01/2026",
-            "price": 3650000,
-            "sf": 10129
-          },
-          {
-            "address": "14214 N MOON MOUNTAIN TRL",
-            "sold": "05/01/2024",
-            "price": 2815000,
-            "sf": 8330
-          },
           {
             "address": "557 W MOON VALLEY DR",
             "sold": "09/01/2025",
@@ -44905,11 +44893,23 @@ window.PHX_LAND_LEADS = {
             "sold": "07/01/2026",
             "price": 1800000,
             "sf": 5382
+          },
+          {
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664
+          },
+          {
+            "address": "722 W MOON VALLEY DR",
+            "sold": "01/01/2026",
+            "price": 1150000,
+            "sf": 3158
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:49Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -44919,20 +44919,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1506416,
-        "finished": 1284400,
-        "profit": -1823123,
-        "marginPct": -142,
-        "marginPctAt275": -125,
-        "profitAt275": -1603559,
-        "salePsf": 338,
+        "finished": 1383200,
+        "profit": -1727287,
+        "marginPct": -125,
+        "marginPctAt275": -109,
+        "profitAt275": -1507723,
+        "salePsf": 364,
         "risk": "Low",
-        "supportableOffer": -317475,
+        "supportableOffer": -237142,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:49Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -45077,19 +45077,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 81,
       "houseComps": {
-        "psf": 942,
-        "medPsf": 699,
-        "price": 4750000,
-        "lowPsf": 624,
+        "psf": 775,
+        "medPsf": 631,
+        "price": 3050000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
-          },
           {
             "address": "4224 E DESERT COVE AVE",
             "sold": "08/01/2026",
@@ -45103,44 +45097,50 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
-          },
-          {
             "address": "5101 E LAUREL LN",
             "sold": "05/01/2026",
             "price": 2235000,
             "sf": 3542
+          },
+          {
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
+          },
+          {
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:49Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 1214049,
-        "finished": 3579600,
-        "profit": 716054,
-        "marginPct": 20,
-        "marginPctAt275": 26,
-        "profitAt275": 935618,
-        "salePsf": 942,
+        "finished": 2945000,
+        "profit": 100492,
+        "marginPct": 3,
+        "marginPctAt275": 11,
+        "profitAt275": 320056,
+        "salePsf": 775,
         "risk": "Low",
-        "supportableOffer": 1548716,
+        "supportableOffer": 1032733,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:49Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -45285,19 +45285,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 81,
       "houseComps": {
-        "psf": 942,
-        "medPsf": 699,
-        "price": 4750000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
-          },
           {
             "address": "4224 E DESERT COVE AVE",
             "sold": "08/01/2026",
@@ -45311,44 +45305,50 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
-          },
-          {
             "address": "5101 E LAUREL LN",
             "sold": "05/01/2026",
             "price": 2235000,
             "sf": 3542
+          },
+          {
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:49Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 1213512,
-        "finished": 3579600,
-        "profit": 716628,
-        "marginPct": 20,
-        "marginPctAt275": 26,
-        "profitAt275": 936192,
-        "salePsf": 942,
+        "finished": 2397800,
+        "profit": -429718,
+        "marginPct": -18,
+        "marginPctAt275": -9,
+        "profitAt275": -210154,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 1548716,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:49Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -45767,17 +45767,11 @@ window.PHX_LAND_LEADS = {
       "houseComps": {
         "psf": 263,
         "medPsf": 240,
-        "price": 608000,
-        "lowPsf": 155,
+        "price": 650000,
+        "lowPsf": 207,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "22215 N 31ST AVE",
-            "sold": "08/01/2024",
-            "price": 510000,
-            "sf": 1757
-          },
           {
             "address": "3311 W WALTER WAY",
             "sold": "06/01/2026",
@@ -45797,15 +45791,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2704
           },
           {
-            "address": "3061 W COUNTRY CLUB TER",
-            "sold": "08/01/2026",
-            "price": 322500,
-            "sf": 2082
+            "address": "3202 W KNUDSEN DR",
+            "sold": "10/01/2025",
+            "price": 615000,
+            "sf": 2972
+          },
+          {
+            "address": "3028 W PARKSIDE LN",
+            "sold": "07/01/2025",
+            "price": 653700,
+            "sf": 2472
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:50Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -45828,7 +45828,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:50Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -45973,19 +45973,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 100,
       "houseComps": {
-        "psf": 263,
+        "psf": 240,
         "medPsf": 240,
-        "price": 608000,
-        "lowPsf": 155,
+        "price": 615000,
+        "lowPsf": 207,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "22215 N 31ST AVE",
-            "sold": "08/01/2024",
-            "price": 510000,
-            "sf": 1757
-          },
           {
             "address": "3311 W WALTER WAY",
             "sold": "06/01/2026",
@@ -46005,15 +45999,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2704
           },
           {
-            "address": "3061 W COUNTRY CLUB TER",
-            "sold": "08/01/2026",
-            "price": 322500,
-            "sf": 2082
+            "address": "21232 N 31ST DR",
+            "sold": "03/01/2026",
+            "price": 565000,
+            "sf": 2480
+          },
+          {
+            "address": "3202 W KNUDSEN DR",
+            "sold": "10/01/2025",
+            "price": 615000,
+            "sf": 2972
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:50Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -46023,20 +46023,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 215500,
-        "finished": 999400,
-        "profit": -699033,
-        "marginPct": -70,
-        "marginPctAt275": -48,
-        "profitAt275": -479469,
-        "salePsf": 263,
+        "finished": 912000,
+        "profit": -783811,
+        "marginPct": -86,
+        "marginPctAt275": -62,
+        "profitAt275": -564247,
+        "salePsf": 240,
         "risk": "Medium",
-        "supportableOffer": -531204,
+        "supportableOffer": -602267,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:50Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -46168,10 +46168,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 80,
       "houseComps": {
-        "psf": 775,
+        "psf": 584,
         "medPsf": 289,
-        "price": 1571900,
-        "lowPsf": 215,
+        "price": 1275000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -46188,50 +46188,50 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
-          },
-          {
-            "address": "3734 E MOUNTAIN VIEW RD",
-            "sold": "01/01/2024",
-            "price": 1571900,
-            "sf": 7325
-          },
-          {
             "address": "3417 E DUNLAP AVE",
             "sold": "11/01/2024",
             "price": 975000,
             "sf": 3369
+          },
+          {
+            "address": "9610 N 35TH ST",
+            "sold": "10/01/2024",
+            "price": 735000,
+            "sf": 2581
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:50Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 965318,
-        "finished": 2945000,
-        "profit": 366634,
-        "marginPct": 12,
-        "marginPctAt275": 20,
-        "profitAt275": 586198,
-        "salePsf": 775,
+        "finished": 2219200,
+        "profit": -337392,
+        "marginPct": -15,
+        "marginPctAt275": -5,
+        "profitAt275": -117828,
+        "salePsf": 584,
         "risk": "Low",
-        "supportableOffer": 1032733,
+        "supportableOffer": 442596,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:50Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -46364,10 +46364,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 80,
       "houseComps": {
-        "psf": 1201,
-        "medPsf": 942,
-        "price": 4850000,
-        "lowPsf": 624,
+        "psf": 775,
+        "medPsf": 624,
+        "price": 3050000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -46384,27 +46384,27 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
+            "address": "10230 N 39TH ST",
+            "sold": "11/01/2024",
+            "price": 1275000,
+            "sf": 5734
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
           },
           {
-            "address": "4902 E BERNEIL DR",
-            "sold": "09/01/2025",
-            "price": 11900000,
-            "sf": 7589
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:50Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -46414,20 +46414,20 @@ window.PHX_LAND_LEADS = {
         "label": "Good",
         "strategy": "1 custom home",
         "land": 843812,
-        "finished": 4563800,
-        "profit": 2066881,
-        "marginPct": 45,
-        "marginPctAt275": 50,
-        "profitAt275": 2286445,
-        "salePsf": 1201,
+        "finished": 2945000,
+        "profit": 496645,
+        "marginPct": 17,
+        "marginPctAt275": 24,
+        "profitAt275": 716209,
+        "salePsf": 775,
         "risk": "Low",
-        "supportableOffer": 2348953,
+        "supportableOffer": 1032733,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:50Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -46560,10 +46560,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 80,
       "houseComps": {
-        "psf": 942,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2235000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -46580,50 +46580,50 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
-          },
-          {
             "address": "5101 E LAUREL LN",
             "sold": "05/01/2026",
             "price": 2235000,
             "sf": 3542
           },
           {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10230 N 39TH ST",
+            "sold": "11/01/2024",
+            "price": 1275000,
+            "sf": 5734
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:50Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 616865,
-        "finished": 3579600,
-        "profit": 1355040,
-        "marginPct": 38,
-        "marginPctAt275": 44,
-        "profitAt275": 1574604,
-        "salePsf": 942,
+        "finished": 2397800,
+        "profit": 208694,
+        "marginPct": 9,
+        "marginPctAt275": 18,
+        "profitAt275": 428258,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 1548716,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:50Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -46745,9 +46745,9 @@ window.PHX_LAND_LEADS = {
       "peakScore": 80,
       "houseComps": {
         "psf": 631,
-        "medPsf": 629,
+        "medPsf": 624,
         "price": 2235000,
-        "lowPsf": 377,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -46756,12 +46756,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "9518 N 46TH ST",
@@ -46780,11 +46774,17 @@ window.PHX_LAND_LEADS = {
             "sold": "01/01/2026",
             "price": 1659000,
             "sf": 4399
+          },
+          {
+            "address": "10230 N 39TH ST",
+            "sold": "11/01/2024",
+            "price": 1275000,
+            "sf": 5734
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:50Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -46807,7 +46807,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:50Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -46940,10 +46940,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 80,
       "houseComps": {
-        "psf": 942,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2235000,
+        "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -46960,50 +46960,50 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
-          },
-          {
             "address": "5101 E LAUREL LN",
             "sold": "05/01/2026",
             "price": 2235000,
             "sf": 3542
           },
           {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10230 N 39TH ST",
+            "sold": "11/01/2024",
+            "price": 1275000,
+            "sf": 5734
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:51Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Good",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 622503,
-        "finished": 3579600,
-        "profit": 1349008,
-        "marginPct": 38,
-        "marginPctAt275": 44,
-        "profitAt275": 1568572,
-        "salePsf": 942,
+        "finished": 2397800,
+        "profit": 202662,
+        "marginPct": 8,
+        "marginPctAt275": 18,
+        "profitAt275": 422226,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 1548716,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:51Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -47146,9 +47146,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 99,
       "houseComps": {
-        "psf": 334,
-        "medPsf": 319,
-        "price": 1750000,
+        "psf": 364,
+        "medPsf": 334,
+        "price": 1150000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
@@ -47172,21 +47172,21 @@ window.PHX_LAND_LEADS = {
             "sf": 4664
           },
           {
-            "address": "15217 N 15TH DR",
-            "sold": "11/01/2025",
-            "price": 2900000,
-            "sf": 9094
-          },
-          {
             "address": "14624 N 15TH DR",
             "sold": "07/01/2026",
             "price": 1800000,
             "sf": 5382
+          },
+          {
+            "address": "722 W MOON VALLEY DR",
+            "sold": "01/01/2026",
+            "price": 1150000,
+            "sf": 3158
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:51Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -47196,20 +47196,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 263700,
-        "finished": 1269200,
-        "profit": -488901,
-        "marginPct": -39,
-        "marginPctAt275": -21,
-        "profitAt275": -269337,
-        "salePsf": 334,
+        "finished": 1383200,
+        "profit": -378321,
+        "marginPct": -27,
+        "marginPctAt275": -11,
+        "profitAt275": -158757,
+        "salePsf": 364,
         "risk": "Medium",
-        "supportableOffer": -311834,
+        "supportableOffer": -219142,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:51Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -47393,7 +47393,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:51Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -47416,7 +47416,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:51Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -47600,7 +47600,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:51Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -47623,7 +47623,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:51Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -47767,47 +47767,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 339,
-        "medPsf": 273,
-        "price": 460000,
-        "lowPsf": 253,
+        "psf": 325,
+        "medPsf": 302,
+        "price": 810000,
+        "lowPsf": 209,
         "n": 5,
-        "radiusMi": 1,
+        "radiusMi": 2,
         "comps": [
           {
-            "address": "17234 N 28TH ST",
+            "address": "2890 E ANGELA DR",
+            "sold": "01/01/2024",
+            "price": 635000,
+            "sf": 2684
+          },
+          {
+            "address": "17629 N 24TH WAY",
+            "sold": "08/01/2025",
+            "price": 640000,
+            "sf": 3060
+          },
+          {
+            "address": "18415 N 13TH PL",
+            "sold": "09/01/2026",
+            "price": 810000,
+            "sf": 2496
+          },
+          {
+            "address": "3720 E TIERRA BUENA LN",
+            "sold": "08/01/2025",
+            "price": 1295000,
+            "sf": 2776
+          },
+          {
+            "address": "16244 N 21ST ST",
             "sold": "07/01/2025",
-            "price": 659950,
-            "sf": 1600
-          },
-          {
-            "address": "2909 E CAMPO BELLO DR",
-            "sold": "04/01/2026",
-            "price": 715000,
-            "sf": 2111
-          },
-          {
-            "address": "2901 E PARADISE LN",
-            "sold": "08/01/2026",
-            "price": 400000,
-            "sf": 1581
-          },
-          {
-            "address": "2647 E CONTENTION MINE RD",
-            "sold": "03/01/2026",
-            "price": 460000,
-            "sf": 1685
-          },
-          {
-            "address": "2640 E BEVERLY LN",
-            "sold": "04/01/2026",
-            "price": 410000,
-            "sf": 1513
+            "price": 1100000,
+            "sf": 3637
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:51Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -47817,20 +47817,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 210758,
-        "finished": 1288200,
-        "profit": -413823,
-        "marginPct": -32,
-        "marginPctAt275": -15,
-        "profitAt275": -194259,
-        "salePsf": 339,
+        "finished": 1235000,
+        "profit": -465427,
+        "marginPct": -38,
+        "marginPctAt275": -20,
+        "profitAt275": -245863,
+        "salePsf": 325,
         "risk": "Low",
-        "supportableOffer": -296385,
+        "supportableOffer": -339641,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:51Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -47974,47 +47974,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 339,
-        "medPsf": 273,
-        "price": 460000,
-        "lowPsf": 253,
+        "psf": 325,
+        "medPsf": 302,
+        "price": 810000,
+        "lowPsf": 209,
         "n": 5,
-        "radiusMi": 1,
+        "radiusMi": 2,
         "comps": [
           {
-            "address": "17234 N 28TH ST",
+            "address": "2890 E ANGELA DR",
+            "sold": "01/01/2024",
+            "price": 635000,
+            "sf": 2684
+          },
+          {
+            "address": "17629 N 24TH WAY",
+            "sold": "08/01/2025",
+            "price": 640000,
+            "sf": 3060
+          },
+          {
+            "address": "18415 N 13TH PL",
+            "sold": "09/01/2026",
+            "price": 810000,
+            "sf": 2496
+          },
+          {
+            "address": "3720 E TIERRA BUENA LN",
+            "sold": "08/01/2025",
+            "price": 1295000,
+            "sf": 2776
+          },
+          {
+            "address": "16244 N 21ST ST",
             "sold": "07/01/2025",
-            "price": 659950,
-            "sf": 1600
-          },
-          {
-            "address": "2909 E CAMPO BELLO DR",
-            "sold": "04/01/2026",
-            "price": 715000,
-            "sf": 2111
-          },
-          {
-            "address": "2901 E PARADISE LN",
-            "sold": "08/01/2026",
-            "price": 400000,
-            "sf": 1581
-          },
-          {
-            "address": "2647 E CONTENTION MINE RD",
-            "sold": "03/01/2026",
-            "price": 460000,
-            "sf": 1685
-          },
-          {
-            "address": "2640 E BEVERLY LN",
-            "sold": "04/01/2026",
-            "price": 410000,
-            "sf": 1513
+            "price": 1100000,
+            "sf": 3637
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:52Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -48024,20 +48024,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 211016,
-        "finished": 1288200,
-        "profit": -414099,
-        "marginPct": -32,
-        "marginPctAt275": -15,
-        "profitAt275": -194535,
-        "salePsf": 339,
+        "finished": 1235000,
+        "profit": -465703,
+        "marginPct": -38,
+        "marginPctAt275": -20,
+        "profitAt275": -246139,
+        "salePsf": 325,
         "risk": "Low",
-        "supportableOffer": -296385,
+        "supportableOffer": -339641,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:52Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -48181,47 +48181,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 339,
-        "medPsf": 273,
-        "price": 460000,
-        "lowPsf": 253,
+        "psf": 325,
+        "medPsf": 302,
+        "price": 810000,
+        "lowPsf": 209,
         "n": 5,
-        "radiusMi": 1,
+        "radiusMi": 2,
         "comps": [
           {
-            "address": "17234 N 28TH ST",
+            "address": "2890 E ANGELA DR",
+            "sold": "01/01/2024",
+            "price": 635000,
+            "sf": 2684
+          },
+          {
+            "address": "17629 N 24TH WAY",
+            "sold": "08/01/2025",
+            "price": 640000,
+            "sf": 3060
+          },
+          {
+            "address": "18415 N 13TH PL",
+            "sold": "09/01/2026",
+            "price": 810000,
+            "sf": 2496
+          },
+          {
+            "address": "3720 E TIERRA BUENA LN",
+            "sold": "08/01/2025",
+            "price": 1295000,
+            "sf": 2776
+          },
+          {
+            "address": "16244 N 21ST ST",
             "sold": "07/01/2025",
-            "price": 659950,
-            "sf": 1600
-          },
-          {
-            "address": "2909 E CAMPO BELLO DR",
-            "sold": "04/01/2026",
-            "price": 715000,
-            "sf": 2111
-          },
-          {
-            "address": "2901 E PARADISE LN",
-            "sold": "08/01/2026",
-            "price": 400000,
-            "sf": 1581
-          },
-          {
-            "address": "2647 E CONTENTION MINE RD",
-            "sold": "03/01/2026",
-            "price": 460000,
-            "sf": 1685
-          },
-          {
-            "address": "2640 E BEVERLY LN",
-            "sold": "04/01/2026",
-            "price": 410000,
-            "sf": 1513
+            "price": 1100000,
+            "sf": 3637
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:53Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -48231,20 +48231,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 211016,
-        "finished": 1288200,
-        "profit": -414099,
-        "marginPct": -32,
-        "marginPctAt275": -15,
-        "profitAt275": -194535,
-        "salePsf": 339,
+        "finished": 1235000,
+        "profit": -465703,
+        "marginPct": -38,
+        "marginPctAt275": -20,
+        "profitAt275": -246139,
+        "salePsf": 325,
         "risk": "Low",
-        "supportableOffer": -296385,
+        "supportableOffer": -339641,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:53Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -48388,9 +48388,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 79,
       "houseComps": {
-        "psf": 332,
-        "medPsf": 325,
-        "price": 550000,
+        "psf": 325,
+        "medPsf": 288,
+        "price": 810000,
         "lowPsf": 64,
         "n": 5,
         "radiusMi": 1,
@@ -48408,27 +48408,27 @@ window.PHX_LAND_LEADS = {
             "sf": 3463
           },
           {
-            "address": "18601 N 16TH PL",
-            "sold": "04/01/2026",
-            "price": 550000,
-            "sf": 2259
-          },
-          {
-            "address": "16875 N 12TH ST",
-            "sold": "05/01/2026",
-            "price": 527364,
-            "sf": 1590
-          },
-          {
             "address": "18116 N 14TH ST",
             "sold": "11/01/2025",
             "price": 1900000,
             "sf": 4705
+          },
+          {
+            "address": "18422 N 14TH ST",
+            "sold": "03/01/2026",
+            "price": 1044750,
+            "sf": 3632
+          },
+          {
+            "address": "17219 N 10TH ST",
+            "sold": "09/01/2025",
+            "price": 645000,
+            "sf": 2610
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:54Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -48438,20 +48438,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 380164,
-        "finished": 1261600,
-        "profit": -620889,
-        "marginPct": -49,
-        "marginPctAt275": -32,
-        "profitAt275": -401325,
-        "salePsf": 332,
+        "finished": 1235000,
+        "profit": -646691,
+        "marginPct": -52,
+        "marginPctAt275": -35,
+        "profitAt275": -427127,
+        "salePsf": 325,
         "risk": "Low",
-        "supportableOffer": -318013,
+        "supportableOffer": -339641,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:54Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -48595,10 +48595,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 79,
       "houseComps": {
-        "psf": 319,
-        "medPsf": 304,
-        "price": 1750000,
-        "lowPsf": 225,
+        "psf": 257,
+        "medPsf": 237,
+        "price": 817500,
+        "lowPsf": 112,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -48621,21 +48621,21 @@ window.PHX_LAND_LEADS = {
             "sf": 4664
           },
           {
-            "address": "1465 W CARIBBEAN LN",
-            "sold": "07/01/2026",
-            "price": 1965250,
-            "sf": 6465
+            "address": "326 W MOON VALLEY DR",
+            "sold": "05/01/2024",
+            "price": 375000,
+            "sf": 3362
           },
           {
-            "address": "15217 N 15TH DR",
-            "sold": "11/01/2025",
-            "price": 2900000,
-            "sf": 9094
+            "address": "16332 N 2ND DR",
+            "sold": "01/01/2026",
+            "price": 655000,
+            "sf": 2764
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:54Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -48645,20 +48645,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 193610,
-        "finished": 1212200,
-        "profit": -469195,
-        "marginPct": -39,
-        "marginPctAt275": -21,
-        "profitAt275": -249631,
-        "salePsf": 319,
+        "finished": 976600,
+        "profit": -697727,
+        "marginPct": -71,
+        "marginPctAt275": -49,
+        "profitAt275": -478163,
+        "salePsf": 257,
         "risk": "Low",
-        "supportableOffer": -358179,
+        "supportableOffer": -549742,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:54Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -48841,7 +48841,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:54Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -48864,7 +48864,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:54Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -49046,7 +49046,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:55Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -49069,7 +49069,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:55Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -49214,10 +49214,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 79,
       "houseComps": {
-        "psf": 629,
-        "medPsf": 624,
-        "price": 1375000,
-        "lowPsf": 222,
+        "psf": 624,
+        "medPsf": 285,
+        "price": 1275000,
+        "lowPsf": 213,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -49226,12 +49226,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "10230 N 39TH ST",
@@ -49246,15 +49240,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3936
           },
           {
+            "address": "9610 N 35TH ST",
+            "sold": "10/01/2024",
+            "price": 735000,
+            "sf": 2581
+          },
+          {
             "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 490000,
-            "sf": 1717
+            "sold": "07/01/2024",
+            "price": 517500,
+            "sf": 2431
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:55Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -49264,20 +49264,20 @@ window.PHX_LAND_LEADS = {
         "label": "Maybe",
         "strategy": "1 custom home",
         "land": 659795,
-        "finished": 2390200,
-        "profit": 155387,
-        "marginPct": 7,
-        "marginPctAt275": 14,
-        "profitAt275": 520996,
-        "salePsf": 629,
+        "finished": 2371200,
+        "profit": 136957,
+        "marginPct": 6,
+        "marginPctAt275": 13,
+        "profitAt275": 491508,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 581634,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:55Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -49425,7 +49425,7 @@ window.PHX_LAND_LEADS = {
         "psf": 624,
         "medPsf": 341,
         "price": 1275000,
-        "lowPsf": 222,
+        "lowPsf": 213,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -49434,12 +49434,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "10230 N 39TH ST",
@@ -49454,15 +49448,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3478
           },
           {
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
+          },
+          {
             "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 490000,
-            "sf": 1717
+            "sold": "07/01/2024",
+            "price": 517500,
+            "sf": 2431
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:55Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -49485,7 +49485,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:55Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -49606,10 +49606,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 79,
       "houseComps": {
-        "psf": 699,
-        "medPsf": 631,
-        "price": 3325000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2235000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -49618,12 +49618,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "5101 E LAUREL LN",
@@ -49638,15 +49632,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5146
           },
           {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "4602 E CHOLLA ST",
+            "sold": "04/01/2026",
+            "price": 1105000,
+            "sf": 2685
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:55Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -49656,20 +49656,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1890602,
-        "finished": 2656200,
-        "profit": -903556,
-        "marginPct": -34,
-        "marginPctAt275": -26,
-        "profitAt275": -683992,
-        "salePsf": 699,
+        "finished": 2397800,
+        "profit": -1154204,
+        "marginPct": -48,
+        "marginPctAt275": -39,
+        "profitAt275": -934640,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 797914,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:55Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -49790,30 +49790,18 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 79,
       "houseComps": {
-        "psf": 942,
-        "medPsf": 699,
-        "price": 4750000,
-        "lowPsf": 624,
+        "psf": 631,
+        "medPsf": 624,
+        "price": 2600000,
+        "lowPsf": 377,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "4901 E BERNEIL DR",
-            "sold": "08/01/2026",
-            "price": 8600000,
-            "sf": 7159
-          },
           {
             "address": "4224 E DESERT COVE AVE",
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "5239 E CORTEZ DR",
-            "sold": "03/01/2026",
-            "price": 4750000,
-            "sf": 6793
           },
           {
             "address": "9518 N 46TH ST",
@@ -49826,11 +49814,23 @@ window.PHX_LAND_LEADS = {
             "sold": "05/01/2026",
             "price": 2235000,
             "sf": 3542
+          },
+          {
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10214 N 44TH ST",
+            "sold": "06/01/2026",
+            "price": 2600000,
+            "sf": 4452
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:55Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -49840,20 +49840,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1950966,
-        "finished": 3579600,
-        "profit": -72448,
-        "marginPct": -2,
-        "marginPctAt275": 4,
-        "profitAt275": 147116,
-        "salePsf": 942,
+        "finished": 2397800,
+        "profit": -1218794,
+        "marginPct": -51,
+        "marginPctAt275": -42,
+        "profitAt275": -999230,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 1548716,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:55Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -50127,19 +50127,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 78,
       "houseComps": {
-        "psf": 426,
-        "medPsf": 401,
-        "price": 920000,
+        "psf": 430,
+        "medPsf": 422,
+        "price": 1300000,
         "lowPsf": 289,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "19854 N 29TH ST",
-            "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
-          },
           {
             "address": "2905 E LOS GATOS DR",
             "sold": "07/01/2026",
@@ -50159,15 +50153,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2945
           },
           {
-            "address": "2831 E LOS GATOS DR",
+            "address": "2929 E SANDS DR",
             "sold": "06/01/2026",
-            "price": 920000,
-            "sf": 2160
+            "price": 1300000,
+            "sf": 2873
+          },
+          {
+            "address": "3031 E LOS GATOS DR",
+            "sold": "02/01/2026",
+            "price": 1435000,
+            "sf": 3400
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:56Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -50177,20 +50177,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1317200,
-        "finished": 1618800,
-        "profit": -1277034,
-        "marginPct": -79,
-        "marginPctAt275": -65,
-        "profitAt275": -1057470,
-        "salePsf": 426,
+        "finished": 1634000,
+        "profit": -1262290,
+        "marginPct": -77,
+        "marginPctAt275": -64,
+        "profitAt275": -1042726,
+        "salePsf": 430,
         "risk": "Medium",
-        "supportableOffer": -27579,
+        "supportableOffer": -15221,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:56Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -50336,10 +50336,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 92,
       "houseComps": {
-        "psf": 319,
-        "medPsf": 290,
-        "price": 515000,
-        "lowPsf": 278,
+        "psf": 361,
+        "medPsf": 341,
+        "price": 850000,
+        "lowPsf": 213,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -50350,33 +50350,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3478
           },
           {
-            "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 498000,
-            "sf": 1717
+            "address": "2731 E LAUREL LN",
+            "sold": "02/01/2025",
+            "price": 850000,
+            "sf": 2354
           },
           {
-            "address": "2360 E LARKSPUR DR",
-            "sold": "08/01/2024",
-            "price": 590000,
-            "sf": 1850
-          },
-          {
-            "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 515000,
-            "sf": 1850
+            "address": "11416 N BANCROFT DR",
+            "sold": "05/01/2025",
+            "price": 775800,
+            "sf": 2781
           },
           {
             "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 490000,
-            "sf": 1717
+            "sold": "07/01/2024",
+            "price": 517500,
+            "sf": 2431
+          },
+          {
+            "address": "11851 N BANCROFT DR",
+            "sold": "08/01/2025",
+            "price": 855000,
+            "sf": 2337
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:56Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -50386,20 +50386,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 755127,
-        "finished": 1212200,
-        "profit": -1089278,
-        "marginPct": -90,
-        "marginPctAt275": -72,
-        "profitAt275": -869714,
-        "salePsf": 319,
+        "finished": 1371800,
+        "profit": -934466,
+        "marginPct": -68,
+        "marginPctAt275": -52,
+        "profitAt275": -714902,
+        "salePsf": 361,
         "risk": "Low",
-        "supportableOffer": -376179,
+        "supportableOffer": -246411,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:56Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -50584,7 +50584,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:56Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -50607,7 +50607,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:56Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -50930,7 +50930,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:56Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -50953,7 +50953,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:56Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -51099,7 +51099,7 @@ window.PHX_LAND_LEADS = {
       "houseComps": {
         "psf": 334,
         "medPsf": 319,
-        "price": 1800000,
+        "price": 1175000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
@@ -51117,27 +51117,27 @@ window.PHX_LAND_LEADS = {
             "sf": 3176
           },
           {
-            "address": "14214 N MOON MOUNTAIN TRL",
-            "sold": "05/01/2024",
-            "price": 2815000,
-            "sf": 8330
-          },
-          {
             "address": "14624 N 15TH DR",
             "sold": "07/01/2026",
             "price": 1800000,
             "sf": 5382
           },
           {
-            "address": "15217 N 15TH DR",
-            "sold": "11/01/2025",
-            "price": 2900000,
-            "sf": 9094
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664
+          },
+          {
+            "address": "1615 W MANDALAY LN",
+            "sold": "12/01/2024",
+            "price": 1175000,
+            "sf": 3684
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:56Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -51160,7 +51160,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:56Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -51344,7 +51344,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:56Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -51367,7 +51367,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:56Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -51636,7 +51636,7 @@ window.PHX_LAND_LEADS = {
         "psf": 397,
         "medPsf": 325,
         "price": 1090000,
-        "lowPsf": 240,
+        "lowPsf": 64,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -51659,21 +51659,21 @@ window.PHX_LAND_LEADS = {
             "sf": 4705
           },
           {
-            "address": "18601 N 16TH PL",
-            "sold": "04/01/2026",
-            "price": 550000,
-            "sf": 2259
-          },
-          {
             "address": "2110 E KERRY LN",
             "sold": "06/01/2025",
             "price": 1090000,
             "sf": 4535
+          },
+          {
+            "address": "1507 E VILLA MARIA DR",
+            "sold": "03/01/2024",
+            "price": 220000,
+            "sf": 3463
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:57Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -51696,7 +51696,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:57Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -51840,25 +51840,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 87,
       "houseComps": {
-        "psf": 362,
-        "medPsf": 299,
-        "price": 850000,
-        "lowPsf": 240,
+        "psf": 312,
+        "medPsf": 289,
+        "price": 1090000,
+        "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "19854 N 29TH ST",
-            "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
-          },
-          {
-            "address": "18324 N 28TH PL",
-            "sold": "01/01/2026",
-            "price": 569900,
-            "sf": 1574
-          },
           {
             "address": "18812 N 22ND ST",
             "sold": "06/01/2026",
@@ -51876,11 +51864,23 @@ window.PHX_LAND_LEADS = {
             "sold": "06/01/2025",
             "price": 1090000,
             "sf": 4535
+          },
+          {
+            "address": "2890 E ANGELA DR",
+            "sold": "01/01/2024",
+            "price": 635000,
+            "sf": 2684
+          },
+          {
+            "address": "19427 N 23RD PL",
+            "sold": "10/01/2024",
+            "price": 1250000,
+            "sf": 4010
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:57Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -51890,20 +51890,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 399900,
-        "finished": 1375600,
-        "profit": -531427,
-        "marginPct": -39,
-        "marginPctAt275": -23,
-        "profitAt275": -311863,
-        "salePsf": 362,
+        "finished": 1185600,
+        "profit": -715727,
+        "marginPct": -60,
+        "marginPctAt275": -42,
+        "profitAt275": -496163,
+        "salePsf": 312,
         "risk": "Medium",
-        "supportableOffer": -225321,
+        "supportableOffer": -379807,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:57Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -52067,12 +52067,6 @@ window.PHX_LAND_LEADS = {
             "sf": 4705
           },
           {
-            "address": "18601 N 16TH PL",
-            "sold": "04/01/2026",
-            "price": 550000,
-            "sf": 2259
-          },
-          {
             "address": "1507 E VILLA MARIA DR",
             "sold": "03/01/2024",
             "price": 220000,
@@ -52083,11 +52077,17 @@ window.PHX_LAND_LEADS = {
             "sold": "03/01/2026",
             "price": 1044750,
             "sf": 3632
+          },
+          {
+            "address": "17219 N 10TH ST",
+            "sold": "09/01/2025",
+            "price": 645000,
+            "sf": 2610
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:57Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -52110,7 +52110,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:57Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -52254,31 +52254,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 77,
       "houseComps": {
-        "psf": 332,
-        "medPsf": 330,
-        "price": 645000,
+        "psf": 306,
+        "medPsf": 296,
+        "price": 730000,
         "lowPsf": 195,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "2174 W BURNSIDE TRL",
-            "sold": "04/01/2026",
-            "price": 645000,
-            "sf": 1943
-          },
-          {
-            "address": "2132 W SIERRA SUNSET TRL",
-            "sold": "05/01/2026",
-            "price": 685000,
-            "sf": 1943
-          },
-          {
-            "address": "30923 N 25TH DR",
-            "sold": "08/01/2026",
-            "price": 615000,
-            "sf": 2118
-          },
           {
             "address": "2522 W BRISA DR",
             "sold": "11/01/2025",
@@ -52286,15 +52268,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3536
           },
           {
-            "address": "2053 W LONESOME TRL",
-            "sold": "08/01/2026",
-            "price": 635000,
-            "sf": 1923
+            "address": "2034 W SLEEPY RANCH RD",
+            "sold": "02/01/2026",
+            "price": 755000,
+            "sf": 2468
+          },
+          {
+            "address": "2605 W DESERT MARIGOLD DR",
+            "sold": "12/01/2025",
+            "price": 730000,
+            "sf": 2469
+          },
+          {
+            "address": "31821 N 19TH LN",
+            "sold": "09/01/2026",
+            "price": 1105000,
+            "sf": 3402
+          },
+          {
+            "address": "2525 W BALAO DR",
+            "sold": "09/01/2025",
+            "price": 715000,
+            "sf": 2424
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:57Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -52304,20 +52304,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 2154200,
-        "finished": 1261600,
-        "profit": -2519108,
-        "marginPct": -200,
-        "marginPctAt275": -182,
-        "profitAt275": -2299544,
-        "salePsf": 332,
+        "finished": 1162800,
+        "profit": -2614944,
+        "marginPct": -225,
+        "marginPctAt275": -206,
+        "profitAt275": -2395380,
+        "salePsf": 306,
         "risk": "Medium",
-        "supportableOffer": -318013,
+        "supportableOffer": -398346,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:57Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -52628,7 +52628,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:57Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -52651,7 +52651,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:57Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -52834,7 +52834,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:57Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -52857,7 +52857,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:57Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -53040,7 +53040,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:58Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -53063,7 +53063,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:58Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -53206,9 +53206,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 87,
       "houseComps": {
-        "psf": 332,
-        "medPsf": 325,
-        "price": 550000,
+        "psf": 325,
+        "medPsf": 288,
+        "price": 810000,
         "lowPsf": 64,
         "n": 5,
         "radiusMi": 1,
@@ -53226,27 +53226,27 @@ window.PHX_LAND_LEADS = {
             "sf": 3463
           },
           {
-            "address": "18601 N 16TH PL",
-            "sold": "04/01/2026",
-            "price": 550000,
-            "sf": 2259
-          },
-          {
             "address": "18116 N 14TH ST",
             "sold": "11/01/2025",
             "price": 1900000,
             "sf": 4705
           },
           {
-            "address": "16875 N 12TH ST",
-            "sold": "05/01/2026",
-            "price": 527364,
-            "sf": 1590
+            "address": "18422 N 14TH ST",
+            "sold": "03/01/2026",
+            "price": 1044750,
+            "sf": 3632
+          },
+          {
+            "address": "17219 N 10TH ST",
+            "sold": "09/01/2025",
+            "price": 645000,
+            "sf": 2610
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:58Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -53256,20 +53256,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 399567,
-        "finished": 1261600,
-        "profit": -641651,
-        "marginPct": -51,
-        "marginPctAt275": -33,
-        "profitAt275": -422087,
-        "salePsf": 332,
+        "finished": 1235000,
+        "profit": -667453,
+        "marginPct": -54,
+        "marginPctAt275": -36,
+        "profitAt275": -447889,
+        "salePsf": 325,
         "risk": "Low",
-        "supportableOffer": -318013,
+        "supportableOffer": -339641,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:58Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -53456,7 +53456,7 @@ window.PHX_LAND_LEADS = {
       "peakScore": 124,
       "houseComps": {
         "psf": 325,
-        "medPsf": 243,
+        "medPsf": 247,
         "price": 810000,
         "lowPsf": 64,
         "n": 5,
@@ -53487,15 +53487,15 @@ window.PHX_LAND_LEADS = {
             "sf": 4535
           },
           {
-            "address": "18601 N 16TH PL",
-            "sold": "04/01/2026",
-            "price": 550000,
-            "sf": 2259
+            "address": "17219 N 10TH ST",
+            "sold": "09/01/2025",
+            "price": 645000,
+            "sf": 2610
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:58Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -53517,7 +53517,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:58Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -53705,10 +53705,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 106,
       "houseComps": {
-        "psf": 440,
-        "medPsf": 409,
+        "psf": 456,
+        "medPsf": 440,
         "price": 1625000,
-        "lowPsf": 355,
+        "lowPsf": 357,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -53737,15 +53737,15 @@ window.PHX_LAND_LEADS = {
             "sf": 2776
           },
           {
-            "address": "4404 E HARTFORD AVE",
-            "sold": "06/01/2026",
-            "price": 720000,
-            "sf": 2028
+            "address": "4335 E KATHLEEN RD",
+            "sold": "05/01/2024",
+            "price": 1390000,
+            "sf": 3050
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:58Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -53754,20 +53754,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 821482,
-        "finished": 1672000,
-        "profit": -714272,
-        "marginPct": -43,
-        "marginPctAt275": -30,
-        "profitAt275": -494708,
-        "salePsf": 440,
+        "finished": 1732800,
+        "profit": -655296,
+        "marginPct": -38,
+        "marginPctAt275": -25,
+        "profitAt275": -435732,
+        "salePsf": 456,
         "risk": "Low",
-        "supportableOffer": -2323,
+        "supportableOffer": 47112,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:58Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -53960,9 +53960,9 @@ window.PHX_LAND_LEADS = {
       "peakScore": 110,
       "houseComps": {
         "psf": 325,
-        "medPsf": 273,
-        "price": 569900,
-        "lowPsf": 243,
+        "medPsf": 272,
+        "price": 975000,
+        "lowPsf": 64,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -53973,33 +53973,33 @@ window.PHX_LAND_LEADS = {
             "sf": 2496
           },
           {
-            "address": "18324 N 28TH PL",
-            "sold": "01/01/2026",
-            "price": 569900,
-            "sf": 1574
-          },
-          {
-            "address": "2647 E CONTENTION MINE RD",
-            "sold": "03/01/2026",
-            "price": 460000,
-            "sf": 1685
-          },
-          {
-            "address": "18601 N 16TH PL",
-            "sold": "04/01/2026",
-            "price": 550000,
-            "sf": 2259
-          },
-          {
             "address": "2105 E KERRY LN",
             "sold": "02/01/2025",
             "price": 975000,
             "sf": 3589
+          },
+          {
+            "address": "2110 E KERRY LN",
+            "sold": "06/01/2025",
+            "price": 1090000,
+            "sf": 4535
+          },
+          {
+            "address": "1507 E VILLA MARIA DR",
+            "sold": "03/01/2024",
+            "price": 220000,
+            "sf": 3463
+          },
+          {
+            "address": "18812 N 22ND ST",
+            "sold": "06/01/2026",
+            "price": 1900000,
+            "sf": 4785
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:58Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -54021,7 +54021,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:58Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -54434,30 +54434,18 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 103,
       "houseComps": {
-        "psf": 378,
-        "medPsf": 336,
-        "price": 655000,
-        "lowPsf": 256,
+        "psf": 273,
+        "medPsf": 272,
+        "price": 735000,
+        "lowPsf": 233,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "2131 E ROSE GARDEN LN",
-            "sold": "05/01/2025",
-            "price": 655000,
-            "sf": 1624
-          },
           {
             "address": "2301 E LONE CACTUS DR",
             "sold": "05/01/2026",
             "price": 1995000,
             "sf": 5944
-          },
-          {
-            "address": "2236 E OTTAWA LN",
-            "sold": "04/01/2025",
-            "price": 625000,
-            "sf": 1894
           },
           {
             "address": "1805 E MARCO POLO RD",
@@ -54466,15 +54454,27 @@ window.PHX_LAND_LEADS = {
             "sf": 2986
           },
           {
-            "address": "2202 E MONONA DR",
+            "address": "1737 E SAMUEL DR",
+            "sold": "07/01/2026",
+            "price": 735000,
+            "sf": 3149
+          },
+          {
+            "address": "1728 E SAMUEL DR",
             "sold": "08/01/2026",
-            "price": 575000,
-            "sf": 1522
+            "price": 650000,
+            "sf": 2382
+          },
+          {
+            "address": "1725 E QUAIL AVE",
+            "sold": "02/01/2026",
+            "price": 725000,
+            "sf": 2664
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:59Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -54483,20 +54483,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 667159,
-        "finished": 1436400,
-        "profit": -777678,
-        "marginPct": -54,
-        "marginPctAt275": -39,
-        "profitAt275": -558114,
-        "salePsf": 378,
+        "finished": 1037400,
+        "profit": -1164708,
+        "marginPct": -112,
+        "marginPctAt275": -91,
+        "profitAt275": -945144,
+        "salePsf": 273,
         "risk": "Low",
-        "supportableOffer": -193886,
+        "supportableOffer": -518307,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:59Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -54684,19 +54684,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 101,
       "houseComps": {
-        "psf": 263,
+        "psf": 240,
         "medPsf": 240,
-        "price": 608000,
-        "lowPsf": 155,
+        "price": 615000,
+        "lowPsf": 207,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "22215 N 31ST AVE",
-            "sold": "08/01/2024",
-            "price": 510000,
-            "sf": 1757
-          },
           {
             "address": "3311 W WALTER WAY",
             "sold": "06/01/2026",
@@ -54716,15 +54710,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2704
           },
           {
-            "address": "3061 W COUNTRY CLUB TER",
-            "sold": "08/01/2026",
-            "price": 322500,
-            "sf": 2082
+            "address": "21232 N 31ST DR",
+            "sold": "03/01/2026",
+            "price": 565000,
+            "sf": 2480
+          },
+          {
+            "address": "3202 W KNUDSEN DR",
+            "sold": "10/01/2025",
+            "price": 615000,
+            "sf": 2972
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:59Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -54733,20 +54733,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1346716,
-        "finished": 999400,
-        "profit": -1909434,
-        "marginPct": -191,
-        "marginPctAt275": -169,
-        "profitAt275": -1689870,
-        "salePsf": 263,
+        "finished": 912000,
+        "profit": -1994212,
+        "marginPct": -219,
+        "marginPctAt275": -195,
+        "profitAt275": -1774648,
+        "salePsf": 240,
         "risk": "Low",
-        "supportableOffer": -531204,
+        "supportableOffer": -602267,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:59Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -54935,29 +54935,17 @@ window.PHX_LAND_LEADS = {
       "peakScore": 99,
       "houseComps": {
         "psf": 363,
-        "medPsf": 351,
-        "price": 785990,
-        "lowPsf": 335,
+        "medPsf": 342,
+        "price": 899990,
+        "lowPsf": 279,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "24210 N 23RD WAY",
-            "sold": "04/01/2026",
-            "price": 725000,
-            "sf": 1916
-          },
           {
             "address": "1928 E VILLA LINDA DR",
             "sold": "09/01/2026",
             "price": 1275000,
             "sf": 3509
-          },
-          {
-            "address": "2453 E VILLA LINDA DR",
-            "sold": "05/01/2026",
-            "price": 786730,
-            "sf": 2242
           },
           {
             "address": "24513 N 24TH WAY",
@@ -54966,15 +54954,27 @@ window.PHX_LAND_LEADS = {
             "sf": 2295
           },
           {
-            "address": "2314 E QUESTA DR",
-            "sold": "09/01/2026",
-            "price": 680000,
-            "sf": 2030
+            "address": "2457 E VILLA LINDA DR",
+            "sold": "04/01/2026",
+            "price": 899990,
+            "sf": 3222
+          },
+          {
+            "address": "24509 N 24TH WAY",
+            "sold": "04/01/2026",
+            "price": 785990,
+            "sf": 2295
+          },
+          {
+            "address": "2209 E FALLEN LEAF LN",
+            "sold": "04/01/2026",
+            "price": 1395000,
+            "sf": 3509
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:59Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -54996,7 +54996,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:59Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -55186,10 +55186,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 98,
       "houseComps": {
-        "psf": 426,
+        "psf": 430,
         "medPsf": 413,
-        "price": 960000,
-        "lowPsf": 385,
+        "price": 1175000,
+        "lowPsf": 336,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -55198,12 +55198,6 @@ window.PHX_LAND_LEADS = {
             "sold": "09/01/2026",
             "price": 975000,
             "sf": 2380
-          },
-          {
-            "address": "2831 E LOS GATOS DR",
-            "sold": "06/01/2026",
-            "price": 920000,
-            "sf": 2160
           },
           {
             "address": "2826 E PIKE ST",
@@ -55218,15 +55212,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2731
           },
           {
-            "address": "2819 E LOS GATOS DR",
-            "sold": "03/01/2026",
-            "price": 825000,
-            "sf": 2142
+            "address": "2301 E LONE CACTUS DR",
+            "sold": "05/01/2026",
+            "price": 1995000,
+            "sf": 5944
+          },
+          {
+            "address": "2929 E SANDS DR",
+            "sold": "06/01/2026",
+            "price": 1300000,
+            "sf": 2873
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:59Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -55235,20 +55235,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 404740,
-        "finished": 1618800,
-        "profit": -319962,
-        "marginPct": -20,
-        "marginPctAt275": -6,
-        "profitAt275": -100398,
-        "salePsf": 426,
+        "finished": 1634000,
+        "profit": -305218,
+        "marginPct": -19,
+        "marginPctAt275": -5,
+        "profitAt275": -85654,
+        "salePsf": 430,
         "risk": "Low",
-        "supportableOffer": -45579,
+        "supportableOffer": -33221,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:59Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -55435,10 +55435,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 97,
       "houseComps": {
-        "psf": 433,
-        "medPsf": 358,
+        "psf": 358,
+        "medPsf": 329,
         "price": 1075000,
-        "lowPsf": 305,
+        "lowPsf": 271,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -55449,33 +55449,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3056
           },
           {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
-          },
-          {
             "address": "2732 E FRIESS DR",
             "sold": "02/01/2026",
             "price": 1360000,
             "sf": 4134
           },
           {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
-          },
-          {
             "address": "3001 E ACOMA DR",
             "sold": "09/01/2024",
             "price": 1075000,
             "sf": 3000
+          },
+          {
+            "address": "2723 E ACOMA DR",
+            "sold": "06/01/2026",
+            "price": 885000,
+            "sf": 3261
+          },
+          {
+            "address": "2716 E EVANS DR",
+            "sold": "05/01/2026",
+            "price": 730000,
+            "sf": 2627
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:59Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -55484,20 +55484,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 982953,
-        "finished": 1645400,
-        "profit": -893588,
-        "marginPct": -54,
-        "marginPctAt275": -41,
-        "profitAt275": -674024,
-        "salePsf": 433,
+        "finished": 1360400,
+        "profit": -1170038,
+        "marginPct": -86,
+        "marginPctAt275": -70,
+        "profitAt275": -950474,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -5951,
+        "supportableOffer": -237680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:59Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -55684,10 +55684,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 97,
       "houseComps": {
-        "psf": 433,
-        "medPsf": 358,
+        "psf": 358,
+        "medPsf": 329,
         "price": 1075000,
-        "lowPsf": 305,
+        "lowPsf": 271,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -55696,18 +55696,6 @@ window.PHX_LAND_LEADS = {
             "sold": "04/01/2026",
             "price": 1350000,
             "sf": 3056
-          },
-          {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
-          },
-          {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
           },
           {
             "address": "2732 E FRIESS DR",
@@ -55720,11 +55708,23 @@ window.PHX_LAND_LEADS = {
             "sold": "09/01/2024",
             "price": 1075000,
             "sf": 3000
+          },
+          {
+            "address": "2723 E ACOMA DR",
+            "sold": "06/01/2026",
+            "price": 885000,
+            "sf": 3261
+          },
+          {
+            "address": "2716 E EVANS DR",
+            "sold": "05/01/2026",
+            "price": 730000,
+            "sf": 2627
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:54:59Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -55733,20 +55733,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1397735,
-        "finished": 1645400,
-        "profit": -1337404,
-        "marginPct": -81,
-        "marginPctAt275": -68,
-        "profitAt275": -1117840,
-        "salePsf": 433,
+        "finished": 1360400,
+        "profit": -1613854,
+        "marginPct": -119,
+        "marginPctAt275": -102,
+        "profitAt275": -1394290,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -5951,
+        "supportableOffer": -237680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:54:59Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -55932,7 +55932,7 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 96,
       "houseComps": {
-        "psf": 397,
+        "psf": 273,
         "medPsf": 256,
         "price": 765000,
         "lowPsf": 233,
@@ -55958,21 +55958,21 @@ window.PHX_LAND_LEADS = {
             "sf": 4535
           },
           {
-            "address": "2131 E ROSE GARDEN LN",
-            "sold": "05/01/2025",
-            "price": 655000,
-            "sf": 1624
-          },
-          {
             "address": "1737 E SAMUEL DR",
             "sold": "07/01/2026",
             "price": 735000,
             "sf": 3149
+          },
+          {
+            "address": "1728 E SAMUEL DR",
+            "sold": "08/01/2026",
+            "price": 650000,
+            "sf": 2382
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:00Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -55981,20 +55981,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 2178647,
-        "finished": 1508600,
-        "profit": -2305676,
-        "marginPct": -153,
-        "marginPctAt275": -138,
-        "profitAt275": -2086112,
-        "salePsf": 397,
+        "finished": 1037400,
+        "profit": -2762740,
+        "marginPct": -266,
+        "marginPctAt275": -245,
+        "profitAt275": -2543176,
+        "salePsf": 273,
         "risk": "Low",
-        "supportableOffer": -117181,
+        "supportableOffer": -500307,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:00Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -56181,9 +56181,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 95,
       "houseComps": {
-        "psf": 338,
-        "medPsf": 319,
-        "price": 2815000,
+        "psf": 375,
+        "medPsf": 334,
+        "price": 1750000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
@@ -56201,27 +56201,27 @@ window.PHX_LAND_LEADS = {
             "sf": 3176
           },
           {
-            "address": "14214 N MOON MOUNTAIN TRL",
-            "sold": "05/01/2024",
-            "price": 2815000,
-            "sf": 8330
+            "address": "14624 N 15TH DR",
+            "sold": "07/01/2026",
+            "price": 1800000,
+            "sf": 5382
           },
           {
-            "address": "15217 N 15TH DR",
-            "sold": "11/01/2025",
-            "price": 2900000,
-            "sf": 9094
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664
           },
           {
-            "address": "14440 N 14TH DR",
+            "address": "14845 N 15TH DR",
             "sold": "06/01/2026",
-            "price": 3650000,
-            "sf": 10129
+            "price": 1950000,
+            "sf": 4684
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:00Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -56230,20 +56230,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 999303,
-        "finished": 1284400,
-        "profit": -1261252,
-        "marginPct": -98,
-        "marginPctAt275": -81,
-        "profitAt275": -1041688,
-        "salePsf": 338,
+        "finished": 1425000,
+        "profit": -1124870,
+        "marginPct": -79,
+        "marginPctAt275": -64,
+        "profitAt275": -905306,
+        "salePsf": 375,
         "risk": "Low",
-        "supportableOffer": -299475,
+        "supportableOffer": -185155,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:00Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -56456,21 +56456,21 @@ window.PHX_LAND_LEADS = {
             "sf": 3463
           },
           {
-            "address": "18601 N 16TH PL",
-            "sold": "04/01/2026",
-            "price": 550000,
-            "sf": 2259
-          },
-          {
             "address": "18422 N 14TH ST",
             "sold": "03/01/2026",
             "price": 1044750,
             "sf": 3632
+          },
+          {
+            "address": "17219 N 10TH ST",
+            "sold": "09/01/2025",
+            "price": 645000,
+            "sf": 2610
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:00Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -56492,7 +56492,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:00Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -56679,10 +56679,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 95,
       "houseComps": {
-        "psf": 433,
-        "medPsf": 358,
+        "psf": 358,
+        "medPsf": 329,
         "price": 1075000,
-        "lowPsf": 305,
+        "lowPsf": 271,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -56693,33 +56693,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3056
           },
           {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
-          },
-          {
             "address": "2732 E FRIESS DR",
             "sold": "02/01/2026",
             "price": 1360000,
             "sf": 4134
           },
           {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
-          },
-          {
             "address": "3001 E ACOMA DR",
             "sold": "09/01/2024",
             "price": 1075000,
             "sf": 3000
+          },
+          {
+            "address": "2723 E ACOMA DR",
+            "sold": "06/01/2026",
+            "price": 885000,
+            "sf": 3261
+          },
+          {
+            "address": "2716 E EVANS DR",
+            "sold": "05/01/2026",
+            "price": 730000,
+            "sf": 2627
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:00Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -56728,20 +56728,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1225269,
-        "finished": 1645400,
-        "profit": -1152866,
-        "marginPct": -70,
-        "marginPctAt275": -57,
-        "profitAt275": -933302,
-        "salePsf": 433,
+        "finished": 1360400,
+        "profit": -1429316,
+        "marginPct": -105,
+        "marginPctAt275": -89,
+        "profitAt275": -1209752,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -5951,
+        "supportableOffer": -237680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:00Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -56928,9 +56928,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 95,
       "houseComps": {
-        "psf": 433,
+        "psf": 358,
         "medPsf": 329,
-        "price": 885000,
+        "price": 1075000,
         "lowPsf": 271,
         "n": 5,
         "radiusMi": 1,
@@ -56940,18 +56940,6 @@ window.PHX_LAND_LEADS = {
             "sold": "04/01/2026",
             "price": 1350000,
             "sf": 3056
-          },
-          {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
-          },
-          {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
           },
           {
             "address": "2732 E FRIESS DR",
@@ -56964,11 +56952,23 @@ window.PHX_LAND_LEADS = {
             "sold": "06/01/2026",
             "price": 885000,
             "sf": 3261
+          },
+          {
+            "address": "3001 E ACOMA DR",
+            "sold": "09/01/2024",
+            "price": 1075000,
+            "sf": 3000
+          },
+          {
+            "address": "2716 E EVANS DR",
+            "sold": "05/01/2026",
+            "price": 730000,
+            "sf": 2627
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:00Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -56977,20 +56977,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1507191,
-        "finished": 1645400,
-        "profit": -1454522,
-        "marginPct": -88,
-        "marginPctAt275": -75,
-        "profitAt275": -1234958,
-        "salePsf": 433,
+        "finished": 1360400,
+        "profit": -1730972,
+        "marginPct": -127,
+        "marginPctAt275": -111,
+        "profitAt275": -1511408,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -5951,
+        "supportableOffer": -237680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:00Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -57313,9 +57313,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 94,
       "houseComps": {
-        "psf": 334,
-        "medPsf": 319,
-        "price": 1800000,
+        "psf": 366,
+        "medPsf": 334,
+        "price": 1590000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
@@ -57339,21 +57339,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5382
           },
           {
-            "address": "14214 N MOON MOUNTAIN TRL",
-            "sold": "05/01/2024",
-            "price": 2815000,
-            "sf": 8330
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664
           },
           {
-            "address": "15217 N 15TH DR",
-            "sold": "11/01/2025",
-            "price": 2900000,
-            "sf": 9094
+            "address": "321 W TAM OSHANTER DR",
+            "sold": "10/01/2025",
+            "price": 1590000,
+            "sf": 4347
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:00Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -57362,20 +57362,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1213942,
-        "finished": 1269200,
-        "profit": -1505660,
-        "marginPct": -119,
-        "marginPctAt275": -101,
-        "profitAt275": -1286096,
-        "salePsf": 334,
+        "finished": 1390800,
+        "profit": -1387708,
+        "marginPct": -100,
+        "marginPctAt275": -84,
+        "profitAt275": -1168144,
+        "salePsf": 366,
         "risk": "Low",
-        "supportableOffer": -311834,
+        "supportableOffer": -212963,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:00Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -57561,9 +57561,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 94,
       "houseComps": {
-        "psf": 319,
-        "medPsf": 304,
-        "price": 1800000,
+        "psf": 375,
+        "medPsf": 334,
+        "price": 1750000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
@@ -57581,27 +57581,27 @@ window.PHX_LAND_LEADS = {
             "sf": 3688
           },
           {
-            "address": "15217 N 15TH DR",
-            "sold": "11/01/2025",
-            "price": 2900000,
-            "sf": 9094
-          },
-          {
             "address": "14624 N 15TH DR",
             "sold": "07/01/2026",
             "price": 1800000,
             "sf": 5382
           },
           {
-            "address": "1465 W CARIBBEAN LN",
-            "sold": "07/01/2026",
-            "price": 1965250,
-            "sf": 6465
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664
+          },
+          {
+            "address": "14845 N 15TH DR",
+            "sold": "06/01/2026",
+            "price": 1950000,
+            "sf": 4684
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:01Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -57610,20 +57610,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1878040,
-        "finished": 1212200,
-        "profit": -2271535,
-        "marginPct": -187,
-        "marginPctAt275": -169,
-        "profitAt275": -2051971,
-        "salePsf": 319,
+        "finished": 1425000,
+        "profit": -2065119,
+        "marginPct": -145,
+        "marginPctAt275": -130,
+        "profitAt275": -1845555,
+        "salePsf": 375,
         "risk": "Low",
-        "supportableOffer": -358179,
+        "supportableOffer": -185155,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:01Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -57809,25 +57809,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 94,
       "houseComps": {
-        "psf": 363,
-        "medPsf": 351,
-        "price": 785990,
-        "lowPsf": 335,
+        "psf": 342,
+        "medPsf": 342,
+        "price": 869990,
+        "lowPsf": 270,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "24210 N 23RD WAY",
-            "sold": "04/01/2026",
-            "price": 725000,
-            "sf": 1916
-          },
-          {
-            "address": "2453 E VILLA LINDA DR",
-            "sold": "05/01/2026",
-            "price": 786730,
-            "sf": 2242
-          },
           {
             "address": "1928 E VILLA LINDA DR",
             "sold": "09/01/2026",
@@ -57841,15 +57829,27 @@ window.PHX_LAND_LEADS = {
             "sf": 2295
           },
           {
-            "address": "2314 E QUESTA DR",
-            "sold": "09/01/2026",
-            "price": 680000,
-            "sf": 2030
+            "address": "2457 E VILLA LINDA DR",
+            "sold": "04/01/2026",
+            "price": 899990,
+            "sf": 3222
+          },
+          {
+            "address": "24509 N 24TH WAY",
+            "sold": "04/01/2026",
+            "price": 785990,
+            "sf": 2295
+          },
+          {
+            "address": "2438 E VILLA LINDA DR",
+            "sold": "03/01/2026",
+            "price": 869990,
+            "sf": 3222
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:01Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -57858,20 +57858,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1246032,
-        "finished": 1379400,
-        "profit": -1433102,
-        "marginPct": -104,
-        "marginPctAt275": -88,
-        "profitAt275": -1213538,
-        "salePsf": 363,
+        "finished": 1299600,
+        "profit": -1510508,
+        "marginPct": -116,
+        "marginPctAt275": -99,
+        "profitAt275": -1290944,
+        "salePsf": 342,
         "risk": "Low",
-        "supportableOffer": -222232,
+        "supportableOffer": -287116,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:01Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -58061,19 +58061,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 94,
       "houseComps": {
-        "psf": 368,
-        "medPsf": 358,
-        "price": 737500,
-        "lowPsf": 253,
+        "psf": 358,
+        "medPsf": 292,
+        "price": 885000,
+        "lowPsf": 271,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "2901 E PARADISE LN",
-            "sold": "08/01/2026",
-            "price": 400000,
-            "sf": 1581
-          },
           {
             "address": "3720 E TIERRA BUENA LN",
             "sold": "08/01/2025",
@@ -58081,27 +58075,33 @@ window.PHX_LAND_LEADS = {
             "sf": 2776
           },
           {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
-          },
-          {
-            "address": "14426 N 39TH WAY",
-            "sold": "01/01/2026",
-            "price": 737500,
-            "sf": 2004
-          },
-          {
             "address": "3001 E ACOMA DR",
             "sold": "09/01/2024",
             "price": 1075000,
             "sf": 3000
+          },
+          {
+            "address": "2723 E ACOMA DR",
+            "sold": "06/01/2026",
+            "price": 885000,
+            "sf": 3261
+          },
+          {
+            "address": "2716 E EVANS DR",
+            "sold": "05/01/2026",
+            "price": 730000,
+            "sf": 2627
+          },
+          {
+            "address": "2739 E VISTA DR",
+            "sold": "04/01/2026",
+            "price": 800000,
+            "sf": 2742
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:01Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -58110,20 +58110,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 354852,
-        "finished": 1398400,
-        "profit": -480370,
-        "marginPct": -34,
-        "marginPctAt275": -19,
-        "profitAt275": -260806,
-        "salePsf": 368,
+        "finished": 1360400,
+        "profit": -517230,
+        "marginPct": -38,
+        "marginPctAt275": -22,
+        "profitAt275": -297666,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -224783,
+        "supportableOffer": -255680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:01Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -58312,30 +58312,18 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 96,
       "houseComps": {
-        "psf": 378,
-        "medPsf": 336,
-        "price": 655000,
-        "lowPsf": 256,
+        "psf": 273,
+        "medPsf": 272,
+        "price": 735000,
+        "lowPsf": 233,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "2131 E ROSE GARDEN LN",
-            "sold": "05/01/2025",
-            "price": 655000,
-            "sf": 1624
-          },
           {
             "address": "2301 E LONE CACTUS DR",
             "sold": "05/01/2026",
             "price": 1995000,
             "sf": 5944
-          },
-          {
-            "address": "2236 E OTTAWA LN",
-            "sold": "04/01/2025",
-            "price": 625000,
-            "sf": 1894
           },
           {
             "address": "1805 E MARCO POLO RD",
@@ -58344,15 +58332,27 @@ window.PHX_LAND_LEADS = {
             "sf": 2986
           },
           {
-            "address": "2202 E MONONA DR",
+            "address": "1737 E SAMUEL DR",
+            "sold": "07/01/2026",
+            "price": 735000,
+            "sf": 3149
+          },
+          {
+            "address": "1728 E SAMUEL DR",
             "sold": "08/01/2026",
-            "price": 575000,
-            "sf": 1522
+            "price": 650000,
+            "sf": 2382
+          },
+          {
+            "address": "1725 E QUAIL AVE",
+            "sold": "02/01/2026",
+            "price": 725000,
+            "sf": 2664
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:01Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -58361,20 +58361,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 360900,
-        "finished": 1436400,
-        "profit": -449981,
-        "marginPct": -31,
-        "marginPctAt275": -16,
-        "profitAt275": -230417,
-        "salePsf": 378,
+        "finished": 1037400,
+        "profit": -837011,
+        "marginPct": -81,
+        "marginPctAt275": -60,
+        "profitAt275": -617447,
+        "salePsf": 273,
         "risk": "Low",
-        "supportableOffer": -193886,
+        "supportableOffer": -518307,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:01Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -58560,19 +58560,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 91,
       "houseComps": {
-        "psf": 263,
+        "psf": 240,
         "medPsf": 240,
         "price": 608000,
-        "lowPsf": 228,
+        "lowPsf": 223,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "22215 N 31ST AVE",
-            "sold": "08/01/2024",
-            "price": 510000,
-            "sf": 1757
-          },
           {
             "address": "3311 W WALTER WAY",
             "sold": "06/01/2026",
@@ -58596,11 +58590,17 @@ window.PHX_LAND_LEADS = {
             "sold": "03/01/2026",
             "price": 565000,
             "sf": 2480
+          },
+          {
+            "address": "3165 W ZACHARY DR",
+            "sold": "06/01/2026",
+            "price": 595995,
+            "sf": 2672
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:01Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -58609,20 +58609,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1055441,
-        "finished": 999400,
-        "profit": -1597770,
-        "marginPct": -160,
-        "marginPctAt275": -138,
-        "profitAt275": -1378206,
-        "salePsf": 263,
+        "finished": 912000,
+        "profit": -1682548,
+        "marginPct": -184,
+        "marginPctAt275": -160,
+        "profitAt275": -1462984,
+        "salePsf": 240,
         "risk": "Low",
-        "supportableOffer": -531204,
+        "supportableOffer": -602267,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:01Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -58808,10 +58808,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 433,
-        "medPsf": 358,
+        "psf": 358,
+        "medPsf": 329,
         "price": 1075000,
-        "lowPsf": 305,
+        "lowPsf": 229,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -58822,33 +58822,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3056
           },
           {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
-          },
-          {
             "address": "2732 E FRIESS DR",
             "sold": "02/01/2026",
             "price": 1360000,
             "sf": 4134
           },
           {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
-          },
-          {
             "address": "3001 E ACOMA DR",
             "sold": "09/01/2024",
             "price": 1075000,
             "sf": 3000
+          },
+          {
+            "address": "2723 E ACOMA DR",
+            "sold": "06/01/2026",
+            "price": 885000,
+            "sf": 3261
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "sold": "03/01/2025",
+            "price": 695000,
+            "sf": 3031
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:01Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -58857,20 +58857,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 871535,
-        "finished": 1645400,
-        "profit": -774370,
-        "marginPct": -47,
-        "marginPctAt275": -34,
-        "profitAt275": -554806,
-        "salePsf": 433,
+        "finished": 1360400,
+        "profit": -1050820,
+        "marginPct": -77,
+        "marginPctAt275": -61,
+        "profitAt275": -831256,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -5951,
+        "supportableOffer": -237680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:01Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -59056,10 +59056,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 319,
-        "medPsf": 290,
-        "price": 515000,
-        "lowPsf": 278,
+        "psf": 341,
+        "medPsf": 287,
+        "price": 675000,
+        "lowPsf": 213,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -59070,33 +59070,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3478
           },
           {
-            "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 498000,
-            "sf": 1717
+            "address": "3022 E EMILE ZOLA AVE",
+            "sold": "09/01/2026",
+            "price": 648000,
+            "sf": 2352
           },
           {
             "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 515000,
-            "sf": 1850
+            "sold": "07/01/2024",
+            "price": 517500,
+            "sf": 2431
           },
           {
-            "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 490000,
-            "sf": 1717
+            "address": "2731 E LAUREL LN",
+            "sold": "02/01/2025",
+            "price": 850000,
+            "sf": 2354
           },
           {
-            "address": "2360 E LARKSPUR DR",
-            "sold": "08/01/2024",
-            "price": 590000,
-            "sf": 1850
+            "address": "13411 N 30TH ST",
+            "sold": "09/01/2025",
+            "price": 675000,
+            "sf": 2352
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:02Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -59105,20 +59105,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 603447,
-        "finished": 1212200,
-        "profit": -907720,
-        "marginPct": -75,
-        "marginPctAt275": -57,
-        "profitAt275": -688156,
-        "salePsf": 319,
+        "finished": 1295800,
+        "profit": -826628,
+        "marginPct": -64,
+        "marginPctAt275": -47,
+        "profitAt275": -607064,
+        "salePsf": 341,
         "risk": "Low",
-        "supportableOffer": -358179,
+        "supportableOffer": -290206,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:02Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -59264,19 +59264,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 263,
+        "psf": 240,
         "medPsf": 240,
-        "price": 608000,
-        "lowPsf": 155,
+        "price": 615000,
+        "lowPsf": 207,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "22215 N 31ST AVE",
-            "sold": "08/01/2024",
-            "price": 510000,
-            "sf": 1757
-          },
           {
             "address": "3311 W WALTER WAY",
             "sold": "06/01/2026",
@@ -59296,15 +59290,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2704
           },
           {
-            "address": "3061 W COUNTRY CLUB TER",
-            "sold": "08/01/2026",
-            "price": 322500,
-            "sf": 2082
+            "address": "21232 N 31ST DR",
+            "sold": "03/01/2026",
+            "price": 565000,
+            "sf": 2480
+          },
+          {
+            "address": "3202 W KNUDSEN DR",
+            "sold": "10/01/2025",
+            "price": 615000,
+            "sf": 2972
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:02Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -59313,20 +59313,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 877717,
-        "finished": 999400,
-        "profit": -1407605,
-        "marginPct": -141,
-        "marginPctAt275": -119,
-        "profitAt275": -1188041,
-        "salePsf": 263,
+        "finished": 912000,
+        "profit": -1492383,
+        "marginPct": -164,
+        "marginPctAt275": -140,
+        "profitAt275": -1272819,
+        "salePsf": 240,
         "risk": "Low",
-        "supportableOffer": -531204,
+        "supportableOffer": -602267,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:02Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -59581,9 +59581,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 334,
-        "medPsf": 319,
-        "price": 1800000,
+        "psf": 375,
+        "medPsf": 334,
+        "price": 1750000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
@@ -59607,21 +59607,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5382
           },
           {
-            "address": "15217 N 15TH DR",
-            "sold": "11/01/2025",
-            "price": 2900000,
-            "sf": 9094
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664
           },
           {
-            "address": "14214 N MOON MOUNTAIN TRL",
-            "sold": "05/01/2024",
-            "price": 2815000,
-            "sf": 8330
+            "address": "14845 N 15TH DR",
+            "sold": "06/01/2026",
+            "price": 1950000,
+            "sf": 4684
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:02Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -59630,20 +59630,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1021912,
-        "finished": 1269200,
-        "profit": -1300188,
-        "marginPct": -102,
-        "marginPctAt275": -85,
-        "profitAt275": -1080624,
-        "salePsf": 334,
+        "finished": 1425000,
+        "profit": -1149062,
+        "marginPct": -81,
+        "marginPctAt275": -65,
+        "profitAt275": -929498,
+        "salePsf": 375,
         "risk": "Low",
-        "supportableOffer": -311834,
+        "supportableOffer": -185155,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:02Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -59830,7 +59830,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:02Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -59852,7 +59852,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:02Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -59998,47 +59998,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 343,
-        "medPsf": 315,
-        "price": 569900,
-        "lowPsf": 268,
+        "psf": 313,
+        "medPsf": 243,
+        "price": 635000,
+        "lowPsf": 197,
         "n": 5,
         "radiusMi": 1,
         "comps": [
           {
-            "address": "19854 N 29TH ST",
+            "address": "3047 E ROSEMONTE DR",
+            "sold": "05/01/2025",
+            "price": 454000,
+            "sf": 2300
+          },
+          {
+            "address": "2890 E ANGELA DR",
+            "sold": "01/01/2024",
+            "price": 635000,
+            "sf": 2684
+          },
+          {
+            "address": "3347 E ROCKWOOD DR",
             "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
+            "price": 575000,
+            "sf": 2367
           },
           {
-            "address": "18324 N 28TH PL",
-            "sold": "01/01/2026",
-            "price": 569900,
-            "sf": 1574
+            "address": "3426 E CLARK RD",
+            "sold": "04/01/2026",
+            "price": 800000,
+            "sf": 2401
           },
           {
-            "address": "19848 N 29TH ST",
-            "sold": "07/01/2024",
-            "price": 595000,
-            "sf": 1886
-          },
-          {
-            "address": "19676 N 27TH PL",
-            "sold": "02/01/2025",
-            "price": 618000,
-            "sf": 1800
-          },
-          {
-            "address": "18604 N 30TH PL",
-            "sold": "08/01/2026",
-            "price": 502000,
-            "sf": 1876
+            "address": "19432 N 36TH WAY",
+            "sold": "07/01/2026",
+            "price": 823000,
+            "sf": 2633
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:02Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -60047,20 +60047,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 772670,
-        "finished": 1303400,
-        "profit": -1000325,
-        "marginPct": -77,
-        "marginPctAt275": -60,
-        "profitAt275": -780761,
-        "salePsf": 343,
+        "finished": 1189400,
+        "profit": -1110905,
+        "marginPct": -93,
+        "marginPctAt275": -75,
+        "profitAt275": -891341,
+        "salePsf": 313,
         "risk": "Low",
-        "supportableOffer": -284026,
+        "supportableOffer": -376718,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:02Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -60206,19 +60206,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 299,
+        "psf": 312,
         "medPsf": 289,
-        "price": 850000,
+        "price": 1090000,
         "lowPsf": 240,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "19854 N 29TH ST",
-            "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
-          },
           {
             "address": "18812 N 22ND ST",
             "sold": "06/01/2026",
@@ -60242,11 +60236,17 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2025",
             "price": 765000,
             "sf": 2986
+          },
+          {
+            "address": "19427 N 23RD PL",
+            "sold": "10/01/2024",
+            "price": 1250000,
+            "sf": 4010
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:03Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -60255,20 +60255,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1047729,
-        "finished": 1136200,
-        "profit": -1456822,
-        "marginPct": -128,
-        "marginPctAt275": -109,
-        "profitAt275": -1237258,
-        "salePsf": 299,
+        "finished": 1185600,
+        "profit": -1408904,
+        "marginPct": -119,
+        "marginPctAt275": -100,
+        "profitAt275": -1189340,
+        "salePsf": 312,
         "risk": "Low",
-        "supportableOffer": -419974,
+        "supportableOffer": -379807,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:03Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -60414,9 +60414,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 433,
+        "psf": 358,
         "medPsf": 329,
-        "price": 885000,
+        "price": 1075000,
         "lowPsf": 271,
         "n": 5,
         "radiusMi": 1,
@@ -60426,18 +60426,6 @@ window.PHX_LAND_LEADS = {
             "sold": "04/01/2026",
             "price": 1350000,
             "sf": 3056
-          },
-          {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
-          },
-          {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
           },
           {
             "address": "2723 E ACOMA DR",
@@ -60450,11 +60438,23 @@ window.PHX_LAND_LEADS = {
             "sold": "02/01/2026",
             "price": 1360000,
             "sf": 4134
+          },
+          {
+            "address": "3001 E ACOMA DR",
+            "sold": "09/01/2024",
+            "price": 1075000,
+            "sf": 3000
+          },
+          {
+            "address": "2716 E EVANS DR",
+            "sold": "05/01/2026",
+            "price": 730000,
+            "sf": 2627
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:03Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -60463,20 +60463,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1233206,
-        "finished": 1645400,
-        "profit": -1161358,
-        "marginPct": -71,
-        "marginPctAt275": -57,
-        "profitAt275": -941794,
-        "salePsf": 433,
+        "finished": 1360400,
+        "profit": -1437808,
+        "marginPct": -106,
+        "marginPctAt275": -90,
+        "profitAt275": -1218244,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -5951,
+        "supportableOffer": -237680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:03Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -60623,25 +60623,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 95,
       "houseComps": {
-        "psf": 338,
-        "medPsf": 319,
-        "price": 2815000,
+        "psf": 375,
+        "medPsf": 334,
+        "price": 1750000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "14440 N 14TH DR",
-            "sold": "06/01/2026",
-            "price": 3650000,
-            "sf": 10129
-          },
-          {
-            "address": "14214 N MOON MOUNTAIN TRL",
-            "sold": "05/01/2024",
-            "price": 2815000,
-            "sf": 8330
-          },
           {
             "address": "557 W MOON VALLEY DR",
             "sold": "09/01/2025",
@@ -60649,21 +60637,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3176
           },
           {
-            "address": "15217 N 15TH DR",
-            "sold": "11/01/2025",
-            "price": 2900000,
-            "sf": 9094
-          },
-          {
             "address": "1642 W MANDALAY LN",
             "sold": "01/01/2026",
             "price": 874300,
             "sf": 3688
+          },
+          {
+            "address": "14624 N 15TH DR",
+            "sold": "07/01/2026",
+            "price": 1800000,
+            "sf": 5382
+          },
+          {
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664
+          },
+          {
+            "address": "14845 N 15TH DR",
+            "sold": "06/01/2026",
+            "price": 1950000,
+            "sf": 4684
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:03Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -60672,20 +60672,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1751045,
-        "finished": 1284400,
-        "profit": -2065616,
-        "marginPct": -161,
-        "marginPctAt275": -144,
-        "profitAt275": -1846052,
-        "salePsf": 338,
+        "finished": 1425000,
+        "profit": -1929234,
+        "marginPct": -135,
+        "marginPctAt275": -120,
+        "profitAt275": -1709670,
+        "salePsf": 375,
         "risk": "Low",
-        "supportableOffer": -299475,
+        "supportableOffer": -185155,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:03Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -60832,47 +60832,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 343,
-        "medPsf": 315,
-        "price": 569900,
-        "lowPsf": 268,
+        "psf": 313,
+        "medPsf": 289,
+        "price": 800000,
+        "lowPsf": 197,
         "n": 5,
         "radiusMi": 1,
         "comps": [
           {
-            "address": "19854 N 29TH ST",
+            "address": "19617 N 27TH ST",
+            "sold": "12/01/2025",
+            "price": 850000,
+            "sf": 2945
+          },
+          {
+            "address": "3047 E ROSEMONTE DR",
+            "sold": "05/01/2025",
+            "price": 454000,
+            "sf": 2300
+          },
+          {
+            "address": "3347 E ROCKWOOD DR",
             "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
+            "price": 575000,
+            "sf": 2367
           },
           {
-            "address": "18324 N 28TH PL",
-            "sold": "01/01/2026",
-            "price": 569900,
-            "sf": 1574
+            "address": "3426 E CLARK RD",
+            "sold": "04/01/2026",
+            "price": 800000,
+            "sf": 2401
           },
           {
-            "address": "19848 N 29TH ST",
-            "sold": "07/01/2024",
-            "price": 595000,
-            "sf": 1886
-          },
-          {
-            "address": "19676 N 27TH PL",
-            "sold": "02/01/2025",
-            "price": 618000,
-            "sf": 1800
-          },
-          {
-            "address": "18604 N 30TH PL",
-            "sold": "08/01/2026",
-            "price": 502000,
-            "sf": 1876
+            "address": "19432 N 36TH WAY",
+            "sold": "07/01/2026",
+            "price": 823000,
+            "sf": 2633
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:03Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -60881,20 +60881,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 955332,
-        "finished": 1303400,
-        "profit": -1195773,
-        "marginPct": -92,
-        "marginPctAt275": -75,
-        "profitAt275": -976209,
-        "salePsf": 343,
+        "finished": 1189400,
+        "profit": -1306353,
+        "marginPct": -110,
+        "marginPctAt275": -91,
+        "profitAt275": -1086789,
+        "salePsf": 313,
         "risk": "Low",
-        "supportableOffer": -284026,
+        "supportableOffer": -376718,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:03Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -61041,47 +61041,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 362,
-        "medPsf": 343,
-        "price": 595000,
-        "lowPsf": 299,
+        "psf": 313,
+        "medPsf": 289,
+        "price": 800000,
+        "lowPsf": 197,
         "n": 5,
         "radiusMi": 1,
         "comps": [
           {
-            "address": "19854 N 29TH ST",
+            "address": "3047 E ROSEMONTE DR",
+            "sold": "05/01/2025",
+            "price": 454000,
+            "sf": 2300
+          },
+          {
+            "address": "19617 N 27TH ST",
+            "sold": "12/01/2025",
+            "price": 850000,
+            "sf": 2945
+          },
+          {
+            "address": "3347 E ROCKWOOD DR",
             "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
+            "price": 575000,
+            "sf": 2367
           },
           {
-            "address": "18324 N 28TH PL",
-            "sold": "01/01/2026",
-            "price": 569900,
-            "sf": 1574
+            "address": "19432 N 36TH WAY",
+            "sold": "07/01/2026",
+            "price": 823000,
+            "sf": 2633
           },
           {
-            "address": "19848 N 29TH ST",
-            "sold": "07/01/2024",
-            "price": 595000,
-            "sf": 1886
-          },
-          {
-            "address": "19676 N 27TH PL",
-            "sold": "02/01/2025",
-            "price": 618000,
-            "sf": 1800
-          },
-          {
-            "address": "2762 E FOSSIL RIDGE RD",
-            "sold": "09/01/2024",
-            "price": 599000,
-            "sf": 1596
+            "address": "3426 E CLARK RD",
+            "sold": "04/01/2026",
+            "price": 800000,
+            "sf": 2401
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:04Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -61090,20 +61090,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 751357,
-        "finished": 1375600,
-        "profit": -907486,
-        "marginPct": -66,
-        "marginPctAt275": -50,
-        "profitAt275": -687922,
-        "salePsf": 362,
+        "finished": 1189400,
+        "profit": -1088100,
+        "marginPct": -91,
+        "marginPctAt275": -73,
+        "profitAt275": -868536,
+        "salePsf": 313,
         "risk": "Low",
-        "supportableOffer": -225321,
+        "supportableOffer": -376718,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:04Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -61250,47 +61250,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 362,
-        "medPsf": 343,
-        "price": 595000,
-        "lowPsf": 299,
+        "psf": 313,
+        "medPsf": 289,
+        "price": 800000,
+        "lowPsf": 197,
         "n": 5,
         "radiusMi": 1,
         "comps": [
           {
-            "address": "19854 N 29TH ST",
+            "address": "3047 E ROSEMONTE DR",
+            "sold": "05/01/2025",
+            "price": 454000,
+            "sf": 2300
+          },
+          {
+            "address": "19617 N 27TH ST",
+            "sold": "12/01/2025",
+            "price": 850000,
+            "sf": 2945
+          },
+          {
+            "address": "3347 E ROCKWOOD DR",
             "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
+            "price": 575000,
+            "sf": 2367
           },
           {
-            "address": "18324 N 28TH PL",
-            "sold": "01/01/2026",
-            "price": 569900,
-            "sf": 1574
+            "address": "19432 N 36TH WAY",
+            "sold": "07/01/2026",
+            "price": 823000,
+            "sf": 2633
           },
           {
-            "address": "19848 N 29TH ST",
-            "sold": "07/01/2024",
-            "price": 595000,
-            "sf": 1886
-          },
-          {
-            "address": "19676 N 27TH PL",
-            "sold": "02/01/2025",
-            "price": 618000,
-            "sf": 1800
-          },
-          {
-            "address": "2762 E FOSSIL RIDGE RD",
-            "sold": "09/01/2024",
-            "price": 599000,
-            "sf": 1596
+            "address": "3426 E CLARK RD",
+            "sold": "04/01/2026",
+            "price": 800000,
+            "sf": 2401
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:04Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -61299,20 +61299,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 751507,
-        "finished": 1375600,
-        "profit": -907646,
-        "marginPct": -66,
-        "marginPctAt275": -50,
-        "profitAt275": -688082,
-        "salePsf": 362,
+        "finished": 1189400,
+        "profit": -1088260,
+        "marginPct": -91,
+        "marginPctAt275": -73,
+        "profitAt275": -868696,
+        "salePsf": 313,
         "risk": "Low",
-        "supportableOffer": -225321,
+        "supportableOffer": -376718,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:04Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -61459,47 +61459,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 362,
-        "medPsf": 343,
-        "price": 595000,
-        "lowPsf": 299,
+        "psf": 313,
+        "medPsf": 289,
+        "price": 800000,
+        "lowPsf": 197,
         "n": 5,
         "radiusMi": 1,
         "comps": [
           {
-            "address": "19854 N 29TH ST",
+            "address": "3047 E ROSEMONTE DR",
+            "sold": "05/01/2025",
+            "price": 454000,
+            "sf": 2300
+          },
+          {
+            "address": "19617 N 27TH ST",
+            "sold": "12/01/2025",
+            "price": 850000,
+            "sf": 2945
+          },
+          {
+            "address": "3347 E ROCKWOOD DR",
             "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
+            "price": 575000,
+            "sf": 2367
           },
           {
-            "address": "18324 N 28TH PL",
-            "sold": "01/01/2026",
-            "price": 569900,
-            "sf": 1574
+            "address": "19432 N 36TH WAY",
+            "sold": "07/01/2026",
+            "price": 823000,
+            "sf": 2633
           },
           {
-            "address": "19848 N 29TH ST",
-            "sold": "07/01/2024",
-            "price": 595000,
-            "sf": 1886
-          },
-          {
-            "address": "19676 N 27TH PL",
-            "sold": "02/01/2025",
-            "price": 618000,
-            "sf": 1800
-          },
-          {
-            "address": "2762 E FOSSIL RIDGE RD",
-            "sold": "09/01/2024",
-            "price": 599000,
-            "sf": 1596
+            "address": "3426 E CLARK RD",
+            "sold": "04/01/2026",
+            "price": 800000,
+            "sf": 2401
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:05Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -61508,20 +61508,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 751582,
-        "finished": 1375600,
-        "profit": -907727,
-        "marginPct": -66,
-        "marginPctAt275": -50,
-        "profitAt275": -688163,
-        "salePsf": 362,
+        "finished": 1189400,
+        "profit": -1088341,
+        "marginPct": -92,
+        "marginPctAt275": -73,
+        "profitAt275": -868777,
+        "salePsf": 313,
         "risk": "Low",
-        "supportableOffer": -225321,
+        "supportableOffer": -376718,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:05Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -61668,9 +61668,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 319,
-        "medPsf": 304,
-        "price": 1800000,
+        "psf": 375,
+        "medPsf": 334,
+        "price": 1750000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
@@ -61694,21 +61694,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5382
           },
           {
-            "address": "15217 N 15TH DR",
-            "sold": "11/01/2025",
-            "price": 2900000,
-            "sf": 9094
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664
           },
           {
-            "address": "1465 W CARIBBEAN LN",
-            "sold": "07/01/2026",
-            "price": 1965250,
-            "sf": 6465
+            "address": "14845 N 15TH DR",
+            "sold": "06/01/2026",
+            "price": 1950000,
+            "sf": 4684
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:05Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -61717,20 +61717,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1495602,
-        "finished": 1212200,
-        "profit": -1862326,
-        "marginPct": -154,
-        "marginPctAt275": -136,
-        "profitAt275": -1642762,
-        "salePsf": 319,
+        "finished": 1425000,
+        "profit": -1655910,
+        "marginPct": -116,
+        "marginPctAt275": -101,
+        "profitAt275": -1436346,
+        "salePsf": 375,
         "risk": "Low",
-        "supportableOffer": -358179,
+        "supportableOffer": -185155,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:05Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -61878,29 +61878,17 @@ window.PHX_LAND_LEADS = {
       "peakScore": 89,
       "houseComps": {
         "psf": 363,
-        "medPsf": 351,
-        "price": 785990,
-        "lowPsf": 335,
+        "medPsf": 342,
+        "price": 899990,
+        "lowPsf": 279,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "24210 N 23RD WAY",
-            "sold": "04/01/2026",
-            "price": 725000,
-            "sf": 1916
-          },
           {
             "address": "1928 E VILLA LINDA DR",
             "sold": "09/01/2026",
             "price": 1275000,
             "sf": 3509
-          },
-          {
-            "address": "2453 E VILLA LINDA DR",
-            "sold": "05/01/2026",
-            "price": 786730,
-            "sf": 2242
           },
           {
             "address": "24513 N 24TH WAY",
@@ -61909,15 +61897,27 @@ window.PHX_LAND_LEADS = {
             "sf": 2295
           },
           {
-            "address": "2314 E QUESTA DR",
-            "sold": "09/01/2026",
-            "price": 680000,
-            "sf": 2030
+            "address": "2457 E VILLA LINDA DR",
+            "sold": "04/01/2026",
+            "price": 899990,
+            "sf": 3222
+          },
+          {
+            "address": "24509 N 24TH WAY",
+            "sold": "04/01/2026",
+            "price": 785990,
+            "sf": 2295
+          },
+          {
+            "address": "2209 E FALLEN LEAF LN",
+            "sold": "04/01/2026",
+            "price": 1395000,
+            "sf": 3509
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:05Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -61939,7 +61939,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:05Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -62124,7 +62124,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:06Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -62146,7 +62146,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:06Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -62293,9 +62293,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "houseComps": {
-        "psf": 362,
+        "psf": 312,
         "medPsf": 289,
-        "price": 975000,
+        "price": 1090000,
         "lowPsf": 240,
         "n": 5,
         "radiusMi": 1,
@@ -62325,15 +62325,15 @@ window.PHX_LAND_LEADS = {
             "sf": 3589
           },
           {
-            "address": "18324 N 28TH PL",
-            "sold": "01/01/2026",
-            "price": 569900,
-            "sf": 1574
+            "address": "19427 N 23RD PL",
+            "sold": "10/01/2024",
+            "price": 1250000,
+            "sf": 4010
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:06Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -62342,20 +62342,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 2078938,
-        "finished": 1375600,
-        "profit": -2327998,
-        "marginPct": -169,
-        "marginPctAt275": -153,
-        "profitAt275": -2108434,
-        "salePsf": 362,
+        "finished": 1185600,
+        "profit": -2512298,
+        "marginPct": -212,
+        "marginPctAt275": -193,
+        "profitAt275": -2292734,
+        "salePsf": 312,
         "risk": "Low",
-        "supportableOffer": -225321,
+        "supportableOffer": -379807,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:06Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -62500,8 +62500,8 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 87,
       "houseComps": {
-        "psf": 334,
-        "medPsf": 319,
+        "psf": 375,
+        "medPsf": 334,
         "price": 1750000,
         "lowPsf": 237,
         "n": 5,
@@ -62520,12 +62520,6 @@ window.PHX_LAND_LEADS = {
             "sf": 3688
           },
           {
-            "address": "15217 N 15TH DR",
-            "sold": "11/01/2025",
-            "price": 2900000,
-            "sf": 9094
-          },
-          {
             "address": "14624 N 15TH DR",
             "sold": "07/01/2026",
             "price": 1800000,
@@ -62536,11 +62530,17 @@ window.PHX_LAND_LEADS = {
             "sold": "06/01/2025",
             "price": 1750000,
             "sf": 4664
+          },
+          {
+            "address": "14845 N 15TH DR",
+            "sold": "06/01/2026",
+            "price": 1950000,
+            "sf": 4684
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:06Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -62549,20 +62549,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 915519,
-        "finished": 1269200,
-        "profit": -1186347,
-        "marginPct": -93,
-        "marginPctAt275": -76,
-        "profitAt275": -966783,
-        "salePsf": 334,
+        "finished": 1425000,
+        "profit": -1035221,
+        "marginPct": -73,
+        "marginPctAt275": -57,
+        "profitAt275": -815657,
+        "salePsf": 375,
         "risk": "Low",
-        "supportableOffer": -311834,
+        "supportableOffer": -185155,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:06Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -62708,9 +62708,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 87,
       "houseComps": {
-        "psf": 334,
-        "medPsf": 319,
-        "price": 1800000,
+        "psf": 375,
+        "medPsf": 334,
+        "price": 1750000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
@@ -62734,21 +62734,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5382
           },
           {
-            "address": "15217 N 15TH DR",
-            "sold": "11/01/2025",
-            "price": 2900000,
-            "sf": 9094
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664
           },
           {
-            "address": "14214 N MOON MOUNTAIN TRL",
-            "sold": "05/01/2024",
-            "price": 2815000,
-            "sf": 8330
+            "address": "14845 N 15TH DR",
+            "sold": "06/01/2026",
+            "price": 1950000,
+            "sf": 4684
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:06Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -62757,20 +62757,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1723172,
-        "finished": 1269200,
-        "profit": -2050536,
-        "marginPct": -162,
-        "marginPctAt275": -144,
-        "profitAt275": -1830972,
-        "salePsf": 334,
+        "finished": 1425000,
+        "profit": -1899410,
+        "marginPct": -133,
+        "marginPctAt275": -118,
+        "profitAt275": -1679846,
+        "salePsf": 375,
         "risk": "Low",
-        "supportableOffer": -311834,
+        "supportableOffer": -185155,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:06Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -62916,9 +62916,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 87,
       "houseComps": {
-        "psf": 334,
-        "medPsf": 319,
-        "price": 1800000,
+        "psf": 375,
+        "medPsf": 334,
+        "price": 1750000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
@@ -62936,27 +62936,27 @@ window.PHX_LAND_LEADS = {
             "sf": 3176
           },
           {
-            "address": "15217 N 15TH DR",
-            "sold": "11/01/2025",
-            "price": 2900000,
-            "sf": 9094
-          },
-          {
-            "address": "14214 N MOON MOUNTAIN TRL",
-            "sold": "05/01/2024",
-            "price": 2815000,
-            "sf": 8330
-          },
-          {
             "address": "14624 N 15TH DR",
             "sold": "07/01/2026",
             "price": 1800000,
             "sf": 5382
+          },
+          {
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664
+          },
+          {
+            "address": "14845 N 15TH DR",
+            "sold": "06/01/2026",
+            "price": 1950000,
+            "sf": 4684
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:07Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -62965,20 +62965,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 974138,
-        "finished": 1269200,
-        "profit": -1249070,
-        "marginPct": -98,
-        "marginPctAt275": -81,
-        "profitAt275": -1029506,
-        "salePsf": 334,
+        "finished": 1425000,
+        "profit": -1097944,
+        "marginPct": -77,
+        "marginPctAt275": -62,
+        "profitAt275": -878380,
+        "salePsf": 375,
         "risk": "Low",
-        "supportableOffer": -311834,
+        "supportableOffer": -185155,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:07Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -63123,10 +63123,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 87,
       "houseComps": {
-        "psf": 433,
-        "medPsf": 358,
-        "price": 1075000,
-        "lowPsf": 305,
+        "psf": 358,
+        "medPsf": 341,
+        "price": 1185000,
+        "lowPsf": 271,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -63137,33 +63137,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3056
           },
           {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
-          },
-          {
             "address": "2732 E FRIESS DR",
             "sold": "02/01/2026",
             "price": 1360000,
             "sf": 4134
           },
           {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
-          },
-          {
             "address": "3001 E ACOMA DR",
             "sold": "09/01/2024",
             "price": 1075000,
             "sf": 3000
+          },
+          {
+            "address": "2723 E ACOMA DR",
+            "sold": "06/01/2026",
+            "price": 885000,
+            "sf": 3261
+          },
+          {
+            "address": "3002 E CHARTER OAK RD",
+            "sold": "03/01/2024",
+            "price": 1185000,
+            "sf": 3478
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:07Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -63172,20 +63172,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 967957,
-        "finished": 1645400,
-        "profit": -877542,
-        "marginPct": -53,
-        "marginPctAt275": -40,
-        "profitAt275": -657978,
-        "salePsf": 433,
+        "finished": 1360400,
+        "profit": -1153992,
+        "marginPct": -85,
+        "marginPctAt275": -69,
+        "profitAt275": -934428,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -5951,
+        "supportableOffer": -237680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:07Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -63330,10 +63330,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 87,
       "houseComps": {
-        "psf": 433,
-        "medPsf": 358,
+        "psf": 358,
+        "medPsf": 329,
         "price": 1075000,
-        "lowPsf": 305,
+        "lowPsf": 271,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -63342,18 +63342,6 @@ window.PHX_LAND_LEADS = {
             "sold": "04/01/2026",
             "price": 1350000,
             "sf": 3056
-          },
-          {
-            "address": "2701 E VOLTAIRE AVE",
-            "sold": "02/01/2025",
-            "price": 770000,
-            "sf": 1777
-          },
-          {
-            "address": "2914 E BLANCHE DR",
-            "sold": "12/01/2025",
-            "price": 685000,
-            "sf": 2243
           },
           {
             "address": "2732 E FRIESS DR",
@@ -63366,11 +63354,23 @@ window.PHX_LAND_LEADS = {
             "sold": "09/01/2024",
             "price": 1075000,
             "sf": 3000
+          },
+          {
+            "address": "2723 E ACOMA DR",
+            "sold": "06/01/2026",
+            "price": 885000,
+            "sf": 3261
+          },
+          {
+            "address": "2716 E EVANS DR",
+            "sold": "05/01/2026",
+            "price": 730000,
+            "sf": 2627
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:07Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -63379,20 +63379,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1224599,
-        "finished": 1645400,
-        "profit": -1152149,
-        "marginPct": -70,
-        "marginPctAt275": -57,
-        "profitAt275": -932585,
-        "salePsf": 433,
+        "finished": 1360400,
+        "profit": -1428599,
+        "marginPct": -105,
+        "marginPctAt275": -89,
+        "profitAt275": -1209035,
+        "salePsf": 358,
         "risk": "Low",
-        "supportableOffer": -5951,
+        "supportableOffer": -237680,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:07Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -63716,7 +63716,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:07Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -63738,7 +63738,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:07Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -64029,8 +64029,8 @@ window.PHX_LAND_LEADS = {
       "houseComps": {
         "psf": 548,
         "medPsf": 478,
-        "price": 2850000,
-        "lowPsf": 421,
+        "price": 1850000,
+        "lowPsf": 338,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -64059,15 +64059,15 @@ window.PHX_LAND_LEADS = {
             "sf": 3867
           },
           {
-            "address": "2433 W PRAIANO WAY",
+            "address": "3227 W LONG RIFLE RD",
             "sold": "12/01/2025",
-            "price": 3000000,
-            "sf": 7131
+            "price": 990000,
+            "sf": 2926
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:07Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -64089,7 +64089,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:07Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -64378,7 +64378,7 @@ window.PHX_LAND_LEADS = {
         "psf": 418,
         "medPsf": 411,
         "price": 1203000,
-        "lowPsf": 325,
+        "lowPsf": 375,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -64395,12 +64395,6 @@ window.PHX_LAND_LEADS = {
             "sf": 2407
           },
           {
-            "address": "3443 W JOY RANCH RD",
-            "sold": "05/01/2026",
-            "price": 635000,
-            "sf": 1952
-          },
-          {
             "address": "3295 W",
             "sold": "07/01/2025",
             "price": 1250000,
@@ -64411,11 +64405,17 @@ window.PHX_LAND_LEADS = {
             "sold": "01/01/2026",
             "price": 1203000,
             "sf": 2710
+          },
+          {
+            "address": "38133 N 29TH AVE",
+            "sold": "07/01/2026",
+            "price": 949900,
+            "sf": 2530
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:08Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -64437,7 +64437,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:08Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -64582,9 +64582,9 @@ window.PHX_LAND_LEADS = {
       "peakScore": 85,
       "houseComps": {
         "psf": 411,
-        "medPsf": 397,
-        "price": 955000,
-        "lowPsf": 325,
+        "medPsf": 409,
+        "price": 1250000,
+        "lowPsf": 375,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -64607,21 +64607,21 @@ window.PHX_LAND_LEADS = {
             "sf": 2407
           },
           {
-            "address": "3443 W JOY RANCH RD",
-            "sold": "05/01/2026",
-            "price": 635000,
-            "sf": 1952
-          },
-          {
             "address": "38133 N 29TH AVE",
             "sold": "07/01/2026",
             "price": 949900,
             "sf": 2530
+          },
+          {
+            "address": "39220 N 30TH DR",
+            "sold": "08/01/2025",
+            "price": 1550000,
+            "sf": 3792
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:08Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -64643,7 +64643,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:08Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -64829,7 +64829,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:08Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -64851,7 +64851,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:08Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -65034,7 +65034,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:08Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -65056,7 +65056,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:08Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -65205,8 +65205,8 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 91,
       "houseComps": {
-        "psf": 440,
-        "medPsf": 409,
+        "psf": 456,
+        "medPsf": 440,
         "price": 1625000,
         "lowPsf": 357,
         "n": 5,
@@ -65225,12 +65225,6 @@ window.PHX_LAND_LEADS = {
             "sf": 3695
           },
           {
-            "address": "14426 N 39TH WAY",
-            "sold": "01/01/2026",
-            "price": 737500,
-            "sf": 2004
-          },
-          {
             "address": "4350 E KINGS AVE",
             "sold": "05/01/2025",
             "price": 1850000,
@@ -65241,11 +65235,17 @@ window.PHX_LAND_LEADS = {
             "sold": "12/01/2025",
             "price": 2000000,
             "sf": 4890
+          },
+          {
+            "address": "4335 E KATHLEEN RD",
+            "sold": "05/01/2024",
+            "price": 1390000,
+            "sf": 3050
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:08Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -65254,20 +65254,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 867007,
-        "finished": 1672000,
-        "profit": -743723,
-        "marginPct": -44,
-        "marginPctAt275": -31,
-        "profitAt275": -524159,
-        "salePsf": 440,
+        "finished": 1732800,
+        "profit": -684747,
+        "marginPct": -40,
+        "marginPctAt275": -27,
+        "profitAt275": -465183,
+        "salePsf": 456,
         "risk": "Low",
-        "supportableOffer": 15677,
+        "supportableOffer": 65112,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:08Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -65413,47 +65413,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 85,
       "houseComps": {
-        "psf": 343,
-        "medPsf": 315,
-        "price": 569900,
-        "lowPsf": 273,
+        "psf": 289,
+        "medPsf": 243,
+        "price": 635000,
+        "lowPsf": 197,
         "n": 5,
         "radiusMi": 1,
         "comps": [
           {
-            "address": "19854 N 29TH ST",
+            "address": "19617 N 27TH ST",
+            "sold": "12/01/2025",
+            "price": 850000,
+            "sf": 2945
+          },
+          {
+            "address": "2890 E ANGELA DR",
+            "sold": "01/01/2024",
+            "price": 635000,
+            "sf": 2684
+          },
+          {
+            "address": "3047 E ROSEMONTE DR",
+            "sold": "05/01/2025",
+            "price": 454000,
+            "sf": 2300
+          },
+          {
+            "address": "19427 N 23RD PL",
+            "sold": "10/01/2024",
+            "price": 1250000,
+            "sf": 4010
+          },
+          {
+            "address": "3347 E ROCKWOOD DR",
             "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
-          },
-          {
-            "address": "18324 N 28TH PL",
-            "sold": "01/01/2026",
-            "price": 569900,
-            "sf": 1574
-          },
-          {
-            "address": "19848 N 29TH ST",
-            "sold": "07/01/2024",
-            "price": 595000,
-            "sf": 1886
-          },
-          {
-            "address": "19676 N 27TH PL",
-            "sold": "02/01/2025",
-            "price": 618000,
-            "sf": 1800
-          },
-          {
-            "address": "2647 E CONTENTION MINE RD",
-            "sold": "03/01/2026",
-            "price": 460000,
-            "sf": 1685
+            "price": 575000,
+            "sf": 2367
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:09Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -65462,20 +65462,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 966233,
-        "finished": 1303400,
-        "profit": -1207437,
-        "marginPct": -93,
-        "marginPctAt275": -76,
-        "profitAt275": -987873,
-        "salePsf": 343,
+        "finished": 1098200,
+        "profit": -1406481,
+        "marginPct": -128,
+        "marginPctAt275": -108,
+        "profitAt275": -1186917,
+        "salePsf": 289,
         "risk": "Low",
-        "supportableOffer": -284026,
+        "supportableOffer": -450871,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:09Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -65620,47 +65620,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 85,
       "houseComps": {
-        "psf": 343,
-        "medPsf": 315,
-        "price": 569900,
-        "lowPsf": 268,
+        "psf": 289,
+        "medPsf": 243,
+        "price": 635000,
+        "lowPsf": 197,
         "n": 5,
         "radiusMi": 1,
         "comps": [
           {
-            "address": "19854 N 29TH ST",
+            "address": "19617 N 27TH ST",
+            "sold": "12/01/2025",
+            "price": 850000,
+            "sf": 2945
+          },
+          {
+            "address": "2890 E ANGELA DR",
+            "sold": "01/01/2024",
+            "price": 635000,
+            "sf": 2684
+          },
+          {
+            "address": "3047 E ROSEMONTE DR",
+            "sold": "05/01/2025",
+            "price": 454000,
+            "sf": 2300
+          },
+          {
+            "address": "19427 N 23RD PL",
+            "sold": "10/01/2024",
+            "price": 1250000,
+            "sf": 4010
+          },
+          {
+            "address": "3347 E ROCKWOOD DR",
             "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
-          },
-          {
-            "address": "18324 N 28TH PL",
-            "sold": "01/01/2026",
-            "price": 569900,
-            "sf": 1574
-          },
-          {
-            "address": "19848 N 29TH ST",
-            "sold": "07/01/2024",
-            "price": 595000,
-            "sf": 1886
-          },
-          {
-            "address": "19676 N 27TH PL",
-            "sold": "02/01/2025",
-            "price": 618000,
-            "sf": 1800
-          },
-          {
-            "address": "18604 N 30TH PL",
-            "sold": "08/01/2026",
-            "price": 502000,
-            "sf": 1876
+            "price": 575000,
+            "sf": 2367
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:09Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -65669,20 +65669,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 728997,
-        "finished": 1303400,
-        "profit": -953595,
-        "marginPct": -73,
-        "marginPctAt275": -56,
-        "profitAt275": -734031,
-        "salePsf": 343,
+        "finished": 1098200,
+        "profit": -1152639,
+        "marginPct": -105,
+        "marginPctAt275": -85,
+        "profitAt275": -933075,
+        "salePsf": 289,
         "risk": "Low",
-        "supportableOffer": -284026,
+        "supportableOffer": -450871,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:09Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -65831,47 +65831,47 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 91,
       "houseComps": {
-        "psf": 362,
-        "medPsf": 343,
-        "price": 595000,
-        "lowPsf": 299,
+        "psf": 312,
+        "medPsf": 289,
+        "price": 823000,
+        "lowPsf": 197,
         "n": 5,
         "radiusMi": 1,
         "comps": [
           {
-            "address": "19854 N 29TH ST",
+            "address": "19617 N 27TH ST",
+            "sold": "12/01/2025",
+            "price": 850000,
+            "sf": 2945
+          },
+          {
+            "address": "3047 E ROSEMONTE DR",
+            "sold": "05/01/2025",
+            "price": 454000,
+            "sf": 2300
+          },
+          {
+            "address": "19427 N 23RD PL",
+            "sold": "10/01/2024",
+            "price": 1250000,
+            "sf": 4010
+          },
+          {
+            "address": "3347 E ROCKWOOD DR",
             "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
+            "price": 575000,
+            "sf": 2367
           },
           {
-            "address": "18324 N 28TH PL",
-            "sold": "01/01/2026",
-            "price": 569900,
-            "sf": 1574
-          },
-          {
-            "address": "19848 N 29TH ST",
-            "sold": "07/01/2024",
-            "price": 595000,
-            "sf": 1886
-          },
-          {
-            "address": "19676 N 27TH PL",
-            "sold": "02/01/2025",
-            "price": 618000,
-            "sf": 1800
-          },
-          {
-            "address": "2762 E FOSSIL RIDGE RD",
-            "sold": "09/01/2024",
-            "price": 599000,
-            "sf": 1596
+            "address": "19432 N 36TH WAY",
+            "sold": "07/01/2026",
+            "price": 823000,
+            "sf": 2633
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:09Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -65880,20 +65880,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 722058,
-        "finished": 1375600,
-        "profit": -876136,
-        "marginPct": -64,
-        "marginPctAt275": -48,
-        "profitAt275": -656572,
-        "salePsf": 362,
+        "finished": 1185600,
+        "profit": -1060436,
+        "marginPct": -89,
+        "marginPctAt275": -71,
+        "profitAt275": -840872,
+        "salePsf": 312,
         "risk": "Low",
-        "supportableOffer": -225321,
+        "supportableOffer": -379807,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:09Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -66181,25 +66181,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 84,
       "houseComps": {
-        "psf": 403,
-        "medPsf": 385,
-        "price": 825000,
-        "lowPsf": 336,
+        "psf": 336,
+        "medPsf": 273,
+        "price": 765000,
+        "lowPsf": 233,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "2819 E LOS GATOS DR",
-            "sold": "03/01/2026",
-            "price": 825000,
-            "sf": 2142
-          },
-          {
-            "address": "2131 E ROSE GARDEN LN",
-            "sold": "05/01/2025",
-            "price": 655000,
-            "sf": 1624
-          },
           {
             "address": "22218 N 28TH ST",
             "sold": "03/01/2026",
@@ -66213,15 +66201,27 @@ window.PHX_LAND_LEADS = {
             "sf": 5944
           },
           {
-            "address": "22038 N 28TH PL",
-            "sold": "12/01/2025",
-            "price": 790000,
-            "sf": 1883
+            "address": "1805 E MARCO POLO RD",
+            "sold": "08/01/2025",
+            "price": 765000,
+            "sf": 2986
+          },
+          {
+            "address": "1737 E SAMUEL DR",
+            "sold": "07/01/2026",
+            "price": 735000,
+            "sf": 3149
+          },
+          {
+            "address": "1728 E SAMUEL DR",
+            "sold": "08/01/2026",
+            "price": 650000,
+            "sf": 2382
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:09Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -66230,20 +66230,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 336759,
-        "finished": 1531400,
-        "profit": -332000,
-        "marginPct": -22,
-        "marginPctAt275": -7,
-        "profitAt275": -112436,
-        "salePsf": 403,
+        "finished": 1276800,
+        "profit": -578962,
+        "marginPct": -45,
+        "marginPctAt275": -28,
+        "profitAt275": -359398,
+        "salePsf": 336,
         "risk": "Low",
-        "supportableOffer": -116643,
+        "supportableOffer": -323654,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:09Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -66388,10 +66388,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 83,
       "houseComps": {
-        "psf": 397,
-        "medPsf": 336,
+        "psf": 336,
+        "medPsf": 273,
         "price": 765000,
-        "lowPsf": 256,
+        "lowPsf": 233,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -66402,33 +66402,33 @@ window.PHX_LAND_LEADS = {
             "sf": 4785
           },
           {
-            "address": "2131 E ROSE GARDEN LN",
-            "sold": "05/01/2025",
-            "price": 655000,
-            "sf": 1624
-          },
-          {
             "address": "1805 E MARCO POLO RD",
             "sold": "08/01/2025",
             "price": 765000,
             "sf": 2986
           },
           {
-            "address": "2236 E OTTAWA LN",
-            "sold": "04/01/2025",
-            "price": 625000,
-            "sf": 1894
-          },
-          {
             "address": "2301 E LONE CACTUS DR",
             "sold": "05/01/2026",
             "price": 1995000,
             "sf": 5944
+          },
+          {
+            "address": "1737 E SAMUEL DR",
+            "sold": "07/01/2026",
+            "price": 735000,
+            "sf": 3149
+          },
+          {
+            "address": "1728 E SAMUEL DR",
+            "sold": "08/01/2026",
+            "price": 650000,
+            "sf": 2382
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:10Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -66437,20 +66437,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 738003,
-        "finished": 1508600,
-        "profit": -764187,
-        "marginPct": -51,
-        "marginPctAt275": -36,
-        "profitAt275": -544623,
-        "salePsf": 397,
+        "finished": 1276800,
+        "profit": -989033,
+        "marginPct": -77,
+        "marginPctAt275": -60,
+        "profitAt275": -769469,
+        "salePsf": 336,
         "risk": "Low",
-        "supportableOffer": -117181,
+        "supportableOffer": -305654,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:10Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -66597,19 +66597,13 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 83,
       "houseComps": {
-        "psf": 338,
-        "medPsf": 334,
-        "price": 1800000,
+        "psf": 334,
+        "medPsf": 319,
+        "price": 1175000,
         "lowPsf": 237,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "14214 N MOON MOUNTAIN TRL",
-            "sold": "05/01/2024",
-            "price": 2815000,
-            "sf": 8330
-          },
           {
             "address": "557 W MOON VALLEY DR",
             "sold": "09/01/2025",
@@ -66623,21 +66617,27 @@ window.PHX_LAND_LEADS = {
             "sf": 3688
           },
           {
-            "address": "14440 N 14TH DR",
-            "sold": "06/01/2026",
-            "price": 3650000,
-            "sf": 10129
-          },
-          {
             "address": "14624 N 15TH DR",
             "sold": "07/01/2026",
             "price": 1800000,
             "sf": 5382
+          },
+          {
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664
+          },
+          {
+            "address": "1615 W MANDALAY LN",
+            "sold": "12/01/2024",
+            "price": 1175000,
+            "sf": 3684
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:10Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -66646,20 +66646,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 582026,
-        "finished": 1284400,
-        "profit": -814766,
-        "marginPct": -63,
-        "marginPctAt275": -46,
-        "profitAt275": -595202,
-        "salePsf": 338,
+        "finished": 1269200,
+        "profit": -829510,
+        "marginPct": -65,
+        "marginPctAt275": -48,
+        "profitAt275": -609946,
+        "salePsf": 334,
         "risk": "Low",
-        "supportableOffer": -299475,
+        "supportableOffer": -311834,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:10Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -66801,8 +66801,8 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 83,
       "houseComps": {
-        "psf": 438,
-        "medPsf": 398,
+        "psf": 398,
+        "medPsf": 370,
         "price": 1140000,
         "lowPsf": 363,
         "n": 5,
@@ -66821,12 +66821,6 @@ window.PHX_LAND_LEADS = {
             "sf": 3038
           },
           {
-            "address": "501 E CLOUD RD",
-            "sold": "07/01/2026",
-            "price": 815000,
-            "sf": 1846
-          },
-          {
             "address": "1139 E DOLORES RD",
             "sold": "03/01/2025",
             "price": 1140000,
@@ -66837,11 +66831,17 @@ window.PHX_LAND_LEADS = {
             "sold": "01/01/2025",
             "price": 1020000,
             "sf": 2768
+          },
+          {
+            "address": "37903 N 6TH AVE",
+            "sold": "01/01/2026",
+            "price": 1135000,
+            "sf": 3071
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:11Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -66850,20 +66850,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1129081,
-        "finished": 1664400,
-        "profit": -1031515,
-        "marginPct": -62,
-        "marginPctAt275": -49,
-        "profitAt275": -811951,
-        "salePsf": 438,
+        "finished": 1512400,
+        "profit": -1178955,
+        "marginPct": -78,
+        "marginPctAt275": -63,
+        "profitAt275": -959391,
+        "salePsf": 398,
         "risk": "Low",
-        "supportableOffer": 9497,
+        "supportableOffer": -114092,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:11Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -67046,7 +67046,7 @@ window.PHX_LAND_LEADS = {
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:11Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -67068,7 +67068,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:11Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -67144,10 +67144,10 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-17",
       "peakScore": 80,
       "houseComps": {
-        "psf": 341,
-        "medPsf": 319,
-        "price": 590000,
-        "lowPsf": 278,
+        "psf": 442,
+        "medPsf": 361,
+        "price": 1185000,
+        "lowPsf": 279,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -67158,33 +67158,33 @@ window.PHX_LAND_LEADS = {
             "sf": 3056
           },
           {
-            "address": "2360 E LARKSPUR DR",
-            "sold": "08/01/2024",
-            "price": 590000,
-            "sf": 1850
-          },
-          {
             "address": "3002 E CHARTER OAK RD",
             "sold": "03/01/2024",
             "price": 1185000,
             "sf": 3478
           },
           {
-            "address": "11900 N 32ND ST",
-            "sold": "03/01/2026",
-            "price": 515000,
-            "sf": 1850
+            "address": "11416 N BANCROFT DR",
+            "sold": "05/01/2025",
+            "price": 775800,
+            "sf": 2781
           },
           {
-            "address": "11900 N 32ND ST",
+            "address": "10030 N 23RD ST",
             "sold": "03/01/2026",
-            "price": 498000,
-            "sf": 1717
+            "price": 2240000,
+            "sf": 4922
+          },
+          {
+            "address": "2731 E LAUREL LN",
+            "sold": "02/01/2025",
+            "price": 850000,
+            "sf": 2354
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:11Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -67193,20 +67193,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 229900,
-        "finished": 1295800,
-        "profit": -426933,
-        "marginPct": -33,
-        "marginPctAt275": -16,
-        "profitAt275": -207369,
-        "salePsf": 341,
+        "finished": 1679600,
+        "profit": -54647,
+        "marginPct": -3,
+        "marginPctAt275": 10,
+        "profitAt275": 164917,
+        "salePsf": 442,
         "risk": "Medium",
-        "supportableOffer": -290206,
+        "supportableOffer": 21856,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:11Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -67352,18 +67352,12 @@ window.PHX_LAND_LEADS = {
       "stale": true,
       "houseComps": {
         "psf": 312,
-        "medPsf": 299,
+        "medPsf": 289,
         "price": 1090000,
         "lowPsf": 240,
         "n": 5,
         "radiusMi": 1,
         "comps": [
-          {
-            "address": "19854 N 29TH ST",
-            "sold": "05/01/2026",
-            "price": 490000,
-            "sf": 1641
-          },
           {
             "address": "19617 N 27TH ST",
             "sold": "12/01/2025",
@@ -67387,11 +67381,17 @@ window.PHX_LAND_LEADS = {
             "sold": "10/01/2024",
             "price": 1250000,
             "sf": 4010
+          },
+          {
+            "address": "2105 E KERRY LN",
+            "sold": "02/01/2025",
+            "price": 975000,
+            "sf": 3589
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:11Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -67413,7 +67413,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:11Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -67604,28 +67604,28 @@ window.PHX_LAND_LEADS = {
         "label": "Maybe",
         "strategy": "1 custom home",
         "land": 767075,
-        "finished": 2390200,
-        "profit": 40598,
-        "marginPct": 2,
-        "marginPctAt275": 11,
-        "profitAt275": 260162,
-        "salePsf": 629,
+        "finished": 2371200,
+        "profit": 22168,
+        "marginPct": 1,
+        "marginPctAt275": 10,
+        "profitAt275": 241732,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 581634,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:11Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
       },
       "stale": true,
       "houseComps": {
-        "psf": 629,
-        "medPsf": 624,
+        "psf": 624,
+        "medPsf": 428,
         "price": 1659000,
         "lowPsf": 222,
         "n": 5,
@@ -67636,12 +67636,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "10434 N 44TH ST",
@@ -67656,15 +67650,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5734
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
+          },
+          {
+            "address": "11434 N 43RD ST",
+            "sold": "04/01/2026",
+            "price": 1075000,
+            "sf": 2512
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:11Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -67851,28 +67851,28 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 928204,
-        "finished": 2390200,
-        "profit": -131810,
+        "finished": 2371200,
+        "profit": -150240,
         "marginPct": -6,
-        "marginPctAt275": 4,
-        "profitAt275": 87754,
-        "salePsf": 629,
+        "marginPctAt275": 3,
+        "profitAt275": 69324,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 581634,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:12Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
       },
       "stale": true,
       "houseComps": {
-        "psf": 629,
-        "medPsf": 624,
+        "psf": 624,
+        "medPsf": 428,
         "price": 1659000,
         "lowPsf": 222,
         "n": 5,
@@ -67883,12 +67883,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "10230 N 39TH ST",
@@ -67907,11 +67901,17 @@ window.PHX_LAND_LEADS = {
             "sold": "06/01/2025",
             "price": 3050000,
             "sf": 3936
+          },
+          {
+            "address": "11434 N 43RD ST",
+            "sold": "04/01/2026",
+            "price": 1075000,
+            "sf": 2512
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:12Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -68094,32 +68094,32 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-14",
       "peakScore": 103,
       "verdict": {
-        "label": "Good",
+        "label": "Maybe",
         "strategy": "1 custom home",
         "land": 1044189,
-        "finished": 3199600,
-        "profit": 529204,
-        "marginPct": 17,
-        "marginPctAt275": 23,
-        "profitAt275": 748768,
-        "salePsf": 842,
+        "finished": 2945000,
+        "profit": 282242,
+        "marginPct": 10,
+        "marginPctAt275": 17,
+        "profitAt275": 501806,
+        "salePsf": 775,
         "risk": "Low",
-        "supportableOffer": 1239744,
+        "supportableOffer": 1032733,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:12Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
       },
       "stale": true,
       "houseComps": {
-        "psf": 842,
-        "medPsf": 629,
-        "price": 3325000,
+        "psf": 775,
+        "medPsf": 624,
+        "price": 3050000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -68129,12 +68129,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "9518 N 46TH ST",
@@ -68149,15 +68143,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5734
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:12Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -68349,28 +68349,28 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1031054,
-        "finished": 2390200,
-        "profit": -241860,
-        "marginPct": -10,
-        "marginPctAt275": -1,
-        "profitAt275": -22296,
-        "salePsf": 629,
+        "finished": 2371200,
+        "profit": -260290,
+        "marginPct": -11,
+        "marginPctAt275": -2,
+        "profitAt275": -40726,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 581634,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:12Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
       },
       "stale": true,
       "houseComps": {
-        "psf": 629,
-        "medPsf": 624,
+        "psf": 624,
+        "medPsf": 428,
         "price": 1659000,
         "lowPsf": 222,
         "n": 5,
@@ -68381,12 +68381,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "10230 N 39TH ST",
@@ -68401,15 +68395,21 @@ window.PHX_LAND_LEADS = {
             "sf": 4399
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
+          },
+          {
+            "address": "11434 N 43RD ST",
+            "sold": "04/01/2026",
+            "price": 1075000,
+            "sf": 2512
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:12Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -68591,28 +68591,28 @@ window.PHX_LAND_LEADS = {
         "label": "Maybe",
         "strategy": "1 custom home",
         "land": 762509,
-        "finished": 2390200,
-        "profit": 45483,
-        "marginPct": 2,
-        "marginPctAt275": 11,
-        "profitAt275": 265047,
-        "salePsf": 629,
+        "finished": 2371200,
+        "profit": 27053,
+        "marginPct": 1,
+        "marginPctAt275": 10,
+        "profitAt275": 246617,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 581634,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:13Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
       },
       "stale": true,
       "houseComps": {
-        "psf": 629,
-        "medPsf": 624,
+        "psf": 624,
+        "medPsf": 428,
         "price": 1659000,
         "lowPsf": 222,
         "n": 5,
@@ -68623,12 +68623,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "10434 N 44TH ST",
@@ -68643,15 +68637,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5734
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
+          },
+          {
+            "address": "11434 N 43RD ST",
+            "sold": "04/01/2026",
+            "price": 1075000,
+            "sf": 2512
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:13Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -68839,29 +68839,29 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 829865,
-        "finished": 2390200,
-        "profit": -26588,
+        "finished": 2397800,
+        "profit": -19216,
         "marginPct": -1,
         "marginPctAt275": 8,
-        "profitAt275": 192976,
-        "salePsf": 629,
+        "profitAt275": 200348,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 581634,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:13Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
       },
       "stale": true,
       "houseComps": {
-        "psf": 629,
+        "psf": 631,
         "medPsf": 624,
-        "price": 1659000,
+        "price": 2235000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -68871,12 +68871,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "5101 E LAUREL LN",
@@ -68895,11 +68889,17 @@ window.PHX_LAND_LEADS = {
             "sold": "11/01/2024",
             "price": 1275000,
             "sf": 5734
+          },
+          {
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:13Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -69043,31 +69043,31 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-14",
       "peakScore": 97,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 775022,
-        "finished": 2390200,
-        "profit": 32094,
+        "finished": 2371200,
+        "profit": 13664,
         "marginPct": 1,
-        "marginPctAt275": 11,
-        "profitAt275": 251658,
-        "salePsf": 629,
+        "marginPctAt275": 10,
+        "profitAt275": 233228,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 581634,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:13Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
       },
       "stale": true,
       "houseComps": {
-        "psf": 629,
-        "medPsf": 624,
+        "psf": 624,
+        "medPsf": 428,
         "price": 1659000,
         "lowPsf": 222,
         "n": 5,
@@ -69078,12 +69078,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "10434 N 44TH ST",
@@ -69098,15 +69092,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5734
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
+          },
+          {
+            "address": "11434 N 43RD ST",
+            "sold": "04/01/2026",
+            "price": 1075000,
+            "sf": 2512
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:13Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -69250,20 +69250,20 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 562824,
-        "finished": 942400,
-        "profit": -1125960,
-        "marginPct": -119,
-        "marginPctAt275": -96,
-        "profitAt275": -906396,
-        "salePsf": 248,
+        "finished": 839800,
+        "profit": -1225482,
+        "marginPct": -146,
+        "marginPctAt275": -120,
+        "profitAt275": -1005918,
+        "salePsf": 221,
         "risk": "Low",
-        "supportableOffer": -577550,
+        "supportableOffer": -660972,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:13Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -69309,10 +69309,10 @@ window.PHX_LAND_LEADS = {
         ]
       },
       "houseComps": {
-        "psf": 248,
-        "medPsf": 221,
-        "price": 530000,
-        "lowPsf": 208,
+        "psf": 221,
+        "medPsf": 212,
+        "price": 650000,
+        "lowPsf": 179,
         "n": 5,
         "radiusMi": 1,
         "comps": [
@@ -69329,12 +69329,6 @@ window.PHX_LAND_LEADS = {
             "sf": 2939
           },
           {
-            "address": "3904 W SANDRA TER",
-            "sold": "06/01/2026",
-            "price": 530000,
-            "sf": 2134
-          },
-          {
             "address": "3903 W GRANDVIEW RD",
             "sold": "06/01/2026",
             "price": 515000,
@@ -69345,11 +69339,17 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 485000,
             "sf": 2287
+          },
+          {
+            "address": "3225 W MARCONI AVE",
+            "sold": "04/01/2026",
+            "price": 663500,
+            "sf": 3697
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:13Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -69534,27 +69534,27 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 981263,
-        "finished": 2390200,
-        "profit": -188583,
-        "marginPct": -8,
+        "finished": 2371200,
+        "profit": -207013,
+        "marginPct": -9,
         "marginPctAt275": 1,
-        "profitAt275": 30981,
-        "salePsf": 629,
+        "profitAt275": 12551,
+        "salePsf": 624,
         "risk": "Low",
-        "supportableOffer": 581634,
+        "supportableOffer": 566185,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:14Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
       },
       "houseComps": {
-        "psf": 629,
-        "medPsf": 624,
+        "psf": 624,
+        "medPsf": 428,
         "price": 1659000,
         "lowPsf": 222,
         "n": 5,
@@ -69565,12 +69565,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "10230 N 39TH ST",
@@ -69585,15 +69579,21 @@ window.PHX_LAND_LEADS = {
             "sf": 4399
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
+          },
+          {
+            "address": "11434 N 43RD ST",
+            "sold": "04/01/2026",
+            "price": 1075000,
+            "sf": 2512
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:14Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -69777,28 +69777,28 @@ window.PHX_LAND_LEADS = {
         "label": "Good",
         "strategy": "1 custom home",
         "land": 925525,
-        "finished": 3199600,
-        "profit": 656174,
-        "marginPct": 21,
-        "marginPctAt275": 27,
-        "profitAt275": 875738,
-        "salePsf": 842,
+        "finished": 2945000,
+        "profit": 409212,
+        "marginPct": 14,
+        "marginPctAt275": 21,
+        "profitAt275": 628776,
+        "salePsf": 775,
         "risk": "Low",
-        "supportableOffer": 1239744,
+        "supportableOffer": 1032733,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:14Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
       },
       "houseComps": {
-        "psf": 842,
-        "medPsf": 629,
-        "price": 3325000,
+        "psf": 775,
+        "medPsf": 624,
+        "price": 3050000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -69808,12 +69808,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "9518 N 46TH ST",
@@ -69828,15 +69822,21 @@ window.PHX_LAND_LEADS = {
             "sf": 5734
           },
           {
-            "address": "4116 E MOUNTAIN VIEW RD",
-            "sold": "12/01/2024",
-            "price": 6225000,
-            "sf": 7396
+            "address": "10434 N 44TH ST",
+            "sold": "01/01/2026",
+            "price": 1659000,
+            "sf": 4399
+          },
+          {
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:14Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -70022,31 +70022,31 @@ window.PHX_LAND_LEADS = {
       "peakScore": 83,
       "stale": true,
       "verdict": {
-        "label": "Maybe",
+        "label": "Good",
         "strategy": "1 custom home",
         "land": 747958,
-        "finished": 2390200,
-        "profit": 61053,
-        "marginPct": 3,
-        "marginPctAt275": 12,
-        "profitAt275": 280617,
-        "salePsf": 629,
+        "finished": 2945000,
+        "profit": 599209,
+        "marginPct": 20,
+        "marginPctAt275": 28,
+        "profitAt275": 818773,
+        "salePsf": 775,
         "risk": "Low",
-        "supportableOffer": 581634,
+        "supportableOffer": 1032733,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:14Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
       },
       "houseComps": {
-        "psf": 629,
+        "psf": 775,
         "medPsf": 624,
-        "price": 1659000,
+        "price": 3050000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -70056,12 +70056,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "9518 N 46TH ST",
@@ -70080,11 +70074,17 @@ window.PHX_LAND_LEADS = {
             "sold": "11/01/2024",
             "price": 1275000,
             "sf": 5734
+          },
+          {
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:14Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -70268,28 +70268,28 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 1039758,
-        "finished": 2390200,
-        "profit": -251173,
-        "marginPct": -11,
+        "finished": 2397800,
+        "profit": -243801,
+        "marginPct": -10,
         "marginPctAt275": -1,
-        "profitAt275": -31609,
-        "salePsf": 629,
+        "profitAt275": -24237,
+        "salePsf": 631,
         "risk": "Low",
-        "supportableOffer": 581634,
+        "supportableOffer": 587813,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": null,
+        "compRetrievedAt": "2026-10-19T04:55:14Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
       },
       "houseComps": {
-        "psf": 629,
+        "psf": 631,
         "medPsf": 624,
-        "price": 1659000,
+        "price": 2235000,
         "lowPsf": 222,
         "n": 5,
         "radiusMi": 1,
@@ -70299,12 +70299,6 @@ window.PHX_LAND_LEADS = {
             "sold": "08/01/2026",
             "price": 3325000,
             "sf": 5332
-          },
-          {
-            "address": "11039 N 42ND ST",
-            "sold": "11/01/2025",
-            "price": 1375000,
-            "sf": 2186
           },
           {
             "address": "5101 E LAUREL LN",
@@ -70323,11 +70317,17 @@ window.PHX_LAND_LEADS = {
             "sold": "11/01/2024",
             "price": 1275000,
             "sf": 5734
+          },
+          {
+            "address": "10025 N 39TH ST",
+            "sold": "06/01/2025",
+            "price": 3050000,
+            "sf": 3936
           }
         ],
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": null,
+        "retrievedAt": "2026-10-19T04:55:14Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
