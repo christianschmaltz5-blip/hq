@@ -86,16 +86,23 @@ def _esri_query(params, retries=3):
         conn = _get_conn()
         try:
             conn.request("POST", _MARICOPA_PATH, body=body, headers=headers)
-            data = conn.getresponse().read()
+            response = conn.getresponse()
+            data = response.read()
+            if not 200 <= response.status < 300:
+                return {"features": [], "_failed": True, "_error": f"County GIS HTTP {response.status} {response.reason}"}
             r = json.loads(data)
+            if not isinstance(r, dict):
+                return {"features": [], "_failed": True, "_error": "County GIS returned a JSON value instead of a result object"}
             if "error" in r:
                 r["_failed"] = True
+                error = r["error"]
+                r["_error"] = (error.get("message") or str(error)) if isinstance(error, dict) else str(error)
             return r
-        except Exception:
+        except Exception as exc:
             conn.close()
             _thread_local.conn = None
             if attempt == retries - 1:
-                return {"features": [], "_failed": True}
+                return {"features": [], "_failed": True, "_error": f"County GIS request failed: {type(exc).__name__}: {exc}"}
             time.sleep(1.0)
 
 

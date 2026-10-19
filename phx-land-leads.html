@@ -289,10 +289,12 @@
         <div id="hcHouse" style="font-size:12.5px;color:var(--text-soft);margin:-4px 0 10px;"></div>
         <div class="filter-row">
           <label style="font-size:12.5px;color:var(--text-soft);">Land price, total ($)<input class="filter-input" id="hcLand" type="number" value="596000" style="width:110px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Demolition, total ($) <i>placeholder</i><input class="filter-input" id="hcDemo" type="number" min="0" value="0" style="width:100px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Homes you can fit<input class="filter-input" id="hcLots" type="number" value="2" style="width:60px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Home size (sf)<input class="filter-input" id="hcSf" type="number" value="3800" style="width:80px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Expected sale price ($/sf)<input class="filter-input" id="hcPrice" type="number" value="400" style="width:80px;"></label>
         </div>
+        <div id="hcPriceBasis" class="dm-note" style="margin:0 0 10px;"></div>
         <div class="filter-row">
           <label style="font-size:12.5px;color:var(--text-soft);">Build cost ($/sf) <i>placeholder</i><input class="filter-input" id="hcHard" type="number" value="275" style="width:80px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Site work per lot ($) <i>placeholder</i><input class="filter-input" id="hcSite" type="number" value="10000" style="width:100px;"></label>
@@ -938,8 +940,9 @@ const hcNum = v => parseFloat(String(v == null ? '' : v).replace(/[^0-9.]/g, '')
 const hcMedian = a => { const b = a.slice().sort((x, y) => x - y); return b.length ? (b.length % 2 ? b[(b.length - 1) / 2] : (b[b.length / 2 - 1] + b[b.length / 2]) / 2) : 0; };
 async function fetchHouseComps(lead){
   if(houseCache[lead.apn]) return houseCache[lead.apn];
-  if(!lead.lat || !lead.lng) return (houseCache[lead.apn] = { rows: [], error: 'no coordinates for this lead' });
   const U = 'https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query';
+  const meta = { source: 'Maricopa County Assessor live home sales', sourceUrl: U, retrievedAt: new Date().toISOString(), fellBack: false };
+  if(lead.lat == null || lead.lng == null) return (houseCache[lead.apn] = { ...meta, rows: [], error: 'no coordinates for this lead' });
   const yr = new Date().getFullYear(), years = [yr, yr - 1, yr - 2].map(y => `SALE_DATE LIKE '%/${y}'`).join(' OR ');
   let feats = [];
   try{
@@ -948,12 +951,15 @@ async function fetchHouseComps(lead){
         distance: String(miles * 1609.34), units: 'esriSRUnit_Meter', spatialRel: 'esriSpatialRelIntersects',
         where: `SALE_PRICE IS NOT NULL AND SALE_PRICE <> '0' AND PUC LIKE '01%' AND (${years})`,
         outFields: 'APN,PHYSICAL_ADDRESS,SALE_DATE,SALE_PRICE,LAND_SIZE,LIVING_SPACE,CONST_YEAR,LATITUDE,LONGITUDE', resultRecordCount: '1000', f: 'json' });
-      const r = await (await fetch(U, { method: 'POST', body, signal: AbortSignal.timeout(20000) })).json();   // the county server is sometimes very slow: fail fast, offer a retry
+      const response = await fetch(U, { method: 'POST', body, signal: AbortSignal.timeout(20000) });
+      if(!response.ok) throw new Error('HTTP ' + response.status + (response.statusText ? ' ' + response.statusText : ''));
+      const r = await response.json();   // the county server is sometimes very slow: fail fast, offer a retry
       if(r.error) throw new Error(r.error.message || 'GIS error');   // Esri returns errors as 200 + {error}, not as an HTTP failure
+      if(!Array.isArray(r.features)) throw new Error('GIS response is missing parcel features');
       feats = (r.features || []).map(f => f.attributes).filter(a => hcNum(a.LIVING_SPACE) >= 1500 && hcNum(a.SALE_PRICE) >= 150000);
       if(feats.length >= 10) break;
     }
-  }catch(e){ return { rows: [], error: 'could not reach the county GIS (' + e.message + ')' }; }
+  }catch(e){ return (houseCache[lead.apn] = { ...meta, rows: [], error: 'could not reach the county GIS (' + e.message + ')' }); }
   const subLot = lead.landSf || 43560, now = Date.now();
   const rows = feats.map(a => {
     const lat = hcNum(a.LATITUDE), lng = hcNum(a.LONGITUDE) * (String(a.LONGITUDE).includes('-') ? -1 : 1);
@@ -963,20 +969,20 @@ async function fetchHouseComps(lead){
     const score = dist + Math.abs(Math.log((lot || 1) / subLot)) * 0.7 + (yr - (built || yr - 40)) / 15 + months / 18;
     return { address: String(a.PHYSICAL_ADDRESS || '').split(/\s{2,}/)[0], dist, sold: a.SALE_DATE, price, sf, psf: price / sf, built, lot, isNew: built >= yr - 5, score };
   }).sort((a, b) => a.score - b.score).slice(0, 5);
-  return (houseCache[lead.apn] = { rows, medianPsf: hcMedian(rows.map(r => r.psf)), medianPrice: hcMedian(rows.map(r => r.price)) });
+  return (houseCache[lead.apn] = { ...meta, rows, medianPsf: hcMedian(rows.map(r => r.psf)), medianPrice: hcMedian(rows.map(r => r.price)), error: null });
 }
 function houseCompsHtml(lead){
   const h = houseCache[lead.apn];
   const title = '<div class="comps-title">House Comps — recent home sales nearby</div>';
   if(!h) return `<div class="comps-section">${title}<div class="comps-empty">Loading from the county…</div></div>`;
   if(!h.rows.length){
-    const sv = lead.houseComps, saved = sv ? `<div class="valuation-box"><div class="valuation-likely">From this morning's scan: <b>${money(sv.psf)}/sf</b> (2nd-highest of ${sv.n}) · <b>${money(sv.price)}</b> median per home (${sv.n} sales within ${sv.radiusMi} mi)</div></div>` : '';
-    return `<div class="comps-section">${title}${saved}<div class="comps-empty">${esc(h.error ? 'The county site is not answering right now (' + h.error + ').' : 'No home sales found within 3 miles in the last 2 years.')} ${h.error ? `<button class="mail-btn" onclick="retryHouseComps('${esc(lead.apn)}')">Try again</button>` : ''}</div></div>`;
+    const sv = selectedComps(lead), saved = sv ? `<div class="valuation-box"><div class="valuation-likely">Stored underwriting comps: <b>${money(sv.psf)}/sf</b> (${sv.fellBack ? 'new-build median · FALLBACK' : '2nd-highest'} of ${sv.n}) · ${sv.price ? money(sv.price) + ' median per home · ' : ''}${sv.n} sales within ${sv.radiusMi} mi<br>${compSourceHtml(lead)}</div></div>` : '';
+    return `<div class="comps-section">${title}${saved}<div class="comps-empty">${esc(h.error ? 'County GIS lookup failed: ' + h.error : 'No home sales found within 3 miles in the three calendar years queried.')} ${h.error ? `<button class="mail-btn" onclick="retryHouseComps('${esc(lead.apn)}')">Try again</button>` : ''}<br>Live lookup attempted ${esc(h.retrievedAt || 'unknown')}</div></div>`;
   }
   const rows = h.rows.map(r => `<tr><td>${esc(r.address)}</td><td>${r.dist.toFixed(2)} mi</td><td>${esc(r.sold)}</td><td><b>${money(r.price)}</b></td>
     <td>${Math.round(r.sf).toLocaleString()} sf</td><td><b>${money(r.psf)}</b></td><td>${r.built || '—'}${r.isNew ? ' <span class="sim-badge">new</span>' : ''}</td><td>${r.lot ? num1(r.lot / 43560) + ' ac' : '—'}</td></tr>`).join('');
   return `<div class="comps-section">${title}
-    <div class="valuation-box"><div class="valuation-likely">Median of these 5: <b>${money(h.medianPsf)}/sf</b> · <b>${money(h.medianPrice)}</b> per home</div></div>
+    <div class="valuation-box"><div class="valuation-likely">Median of these ${h.rows.length}: <b>${money(h.medianPsf)}/sf</b> · <b>${money(h.medianPrice)}</b> per home<br>${esc(h.source)} · retrieved ${esc(h.retrievedAt)}<br>Underwriting: ${compSourceHtml(lead)}</div></div>
     <div style="overflow-x:auto;"><table class="comps-table"><thead><tr><th>Property</th><th>Distance</th><th>Sold</th><th>Price</th><th>Home size</th><th>$/sf</th><th>Built</th><th>Lot</th></tr></thead><tbody>${rows}</tbody></table></div>
     <div class="comps-note">Finished homes, not land. County Assessor data (latest recorded sale per parcel): chosen for similar lot size, closeness, newer construction and recent sale. Existing homes usually sell for less than new custom builds — treat as a floor, not an appraisal.</div></div>`;
 }
@@ -1237,7 +1243,7 @@ renderLeads(currentLeads);
 // ── Parcel map: parcel boundary + zoning (county/city GIS) + an illustrative lot layout ──
 // Everything here is a PRELIMINARY screen. The yellow boxes are not lots: a rectangle that fits inside the boundary says nothing about access, frontage, setbacks or approval.
 var acresPerLot = (function(){ try{ const v = parseFloat(localStorage.getItem('acresPerLot')); return v > 0 ? v : 0.33; }catch(e){ return 0.33; } })();   // planning assumption (ours), not a verified local average or a zoning rule
-var usablePct = (function(){ try{ const v = parseFloat(localStorage.getItem('usablePct')); return v > 0 && v <= 100 ? v : 80; }catch(e){ return 80; } })();   // share of the land assumed usable for lots; applied once, in the two estimates only
+var usablePct = (function(){ try{ const v = parseFloat(localStorage.getItem('usablePct')); return v > 0 && v <= 100 ? v : 85; }catch(e){ return 85; } })();   // shared usable-area estimate for parcel capacity and underwriting
 const parcelCache = {}, zoneCache = {};
 const GIS_PARCELS = 'https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3';
 const GIS_PHX_ZONING = 'https://maps.phoenix.gov/pub/rest/services/Public/Zoning/MapServer/0';
@@ -1437,6 +1443,7 @@ function setParcelAssumption(kind, v){
   else return;
   Object.values(layoutState).forEach(x => { x.cuts = null; x.rear = null; });
   document.querySelectorAll('.parcel-map').forEach(b => { if(b._redraw) b._redraw(); });
+  if(kind === 'use'){ document.getElementById('moMinLot').dispatchEvent(new Event('input')); }
 }
 function setLayoutOpt(idx, key, val){
   const box = document.getElementById('pm-' + idx), st = box && box._st; if(!st) return;
@@ -2125,17 +2132,53 @@ function homeEcon(x){
   const profit = finished * (1 - x.sell) - cost;
   return { C, finished, cost, profit, aduCost, margin: finished ? profit / finished : 0 };
 }
+function supportableLand(x, target){
+  const e = homeEcon(x);
+  return e.finished * (1 - x.sell - target) / (1 + x.fin) - x.n * e.C - (x.demo || 0) - Math.max(0, x.n - 1) * x.splitCost - e.aduCost;
+}
+function selectedComps(l){
+  if(l.houseComps && l.houseComps.psf > 0) return l.houseComps;
+  if(l.newBuild && l.newBuild.psf > 0) return Object.assign({}, l.newBuild, { fellBack: true,
+    source: l.newBuild.source || 'Maricopa County Assessor stored new-build sales',
+    fallbackReason: (l.houseComps || {}).error || (l.houseComps || {}).fallbackReason || 'Nearby home-sales comps unavailable' });
+  return null;
+}
+function compSourceHtml(l){
+  const c = selectedComps(l); if(!c) return 'No usable sale-price comps.';
+  const source = c.source || 'Maricopa County Assessor nearby home sales';
+  const url = /^https?:\/\//i.test(c.sourceUrl || '') ? c.sourceUrl : 'https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3';
+  return `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(source)}</a> · retrieved ${esc(c.retrievedAt || 'unknown (stored scan)')}${c.fellBack ? `<br><b>FALLBACK: stored new-build sales</b> · ${esc(c.fallbackReason || 'Nearby home-sales comps unavailable')}` : ''}${c.error ? `<br>GIS error: ${esc(c.error)}` : ''}`;
+}
 function aduInput(l){   // the calculator's ADU box, applied only where Phoenix zoning is confirmed
   const g = id => parseFloat(document.getElementById(id).value) || 0;
   return l.currentZoning ? { n: g('hcAduN'), sf: g('hcAduSf'), hard: g('hcAduHard'), site: g('hcAduSite'), value: g('hcAduVal') } : null;
 }
 function landBasis(l){   // hand-set price > comps value (if reliable) > assessed value
-  const v = l.valuation, ok = !!(l.landOverride || (v && v.mostLikelyValue && !v.unreliable));
-  return { ok, land: l.landOverride || (ok ? v.mostLikelyValue : (l.assessedValue || 0)) };
+  const v = l.valuation, ov = l.landPriceOverride;
+  const validDate = s => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s) && Number.isFinite(Date.parse(s)) && new Date(s).toISOString().slice(0, 10) === s;
+  const valid = ov && Number.isFinite(ov.landCost) && ov.landCost > 0 && typeof ov.source === 'string' && ov.source.trim() && /^https?:\/\/[^/\s]+/i.test(ov.sourceUrl || '') && validDate(ov.priceDate) && validDate(ov.observedAt) && typeof ov.priceType === 'string' && ov.priceType.trim();
+  const reliable = !!(v && v.mostLikelyValue > 0 && !v.unreliable);
+  return { ok: !!(valid || reliable), land: valid ? ov.landCost : reliable ? v.mostLikelyValue : (l.assessedValue || 0), override: valid ? ov : null };
+}
+function leadAutofill(l){
+  const lb = landBasis(l), p = profitFor(l), c = selectedComps(l);
+  return { land: lb.override || (lb.ok && l.valuation && !l.valuation.unreliable) ? lb.land : '',
+    lots: p ? p.n : splitInfo(l).n, demo: l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0, psf: c ? c.psf : '' };
+}
+function priceBasisHtml(l){
+  const lb = landBasis(l), ov = lb.override, p = profitFor(l, 0, 0, { hard: 325 });
+  const basis = ov ? `<b>APN ${esc(l.apn)} price override: ${money(ov.landCost)}</b> · ${esc(ov.priceType)} dated ${esc(ov.priceDate)}<br><a href="${esc(ov.sourceUrl)}" target="_blank" rel="noopener">${esc(ov.source)}</a> · observed ${esc(ov.observedAt)}${ov.note ? '<br>' + esc(ov.note) : ''}`
+    : `APN ${esc(l.apn)} · ${lb.ok ? 'Reliable land comps proxy' : 'Assessed-value fallback'}: ${money(lb.land)}. No sourced price override.${l.landPriceOverrideError ? '<br>Override rejected: ' + esc(l.landPriceOverrideError) : ''}`;
+  const offer = p ? p.maxLand >= 0 ? `<b>Supportable offer: up to ${money(p.maxLand)}</b> total (${p.offerN} home${p.offerN > 1 ? 's' : ''})` : `<b>No nonnegative land offer meets the target</b> (land budget ${money(p.maxLand)}).` : 'Supportable offer unavailable: land or home-sale inputs missing.';
+  const proxy = l.valuation && !l.valuation.unreliable ? l.valuation.mostLikelyValue : l.assessedValue;
+  const reference = ov ? ov.landCost : l.salePrice;
+  const gap = reference > 0 && proxy > 0 && Math.max(reference, proxy) / Math.min(reference, proxy) > 1.5
+    ? `<br>⚠ Price gap: ${money(reference)} ${ov ? 'override' : 'recorded sale'} vs ${money(proxy)} county proxy (${(Math.max(reference, proxy) / Math.min(reference, proxy)).toFixed(1)}×). Check both inputs.` : '';
+  return `<div style="display:flex;flex-wrap:wrap;gap:20px;"><div>${basis}</div><div>${offer}<br>Screen at $325/sf build, ${document.getElementById('hcProfit').value}% target, stored sale comps and parcel demolition; other calculator assumptions apply. Split capacity is estimated.</div></div>${gap}<div style="margin-top:5px;">${compSourceHtml(l)}</div>`;
 }
 function profitFor(l, extraHard, psfOverride, o){
   o = o || {};
-  const nb = l.houseComps || l.newBuild; if(!nb || !nb.psf) return null;   // house sales nearby come first; new-build sales are the fallback
+  const nb = selectedComps(l); if(!nb) return null;
   const psf = psfOverride || nb.psf;
   const num = id => parseFloat(document.getElementById(id).value) || 0;
   const sf = num('hcSf'), fin = num('hcFin') / 100, sell = num('hcSell') / 100;
@@ -2143,14 +2186,17 @@ function profitFor(l, extraHard, psfOverride, o){
   const lb = landBasis(l), landOK = lb.ok, land = lb.land * (o.landMult || 1);
   if(!land || sf <= 0) return null;
   const demo = l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0;
-  const splitCost = num('moSplitCost'), haircut = (num('moSplitHaircut') || 100) / 100;
-  let best = null;
+  const splitCost = num('moSplitCost'), haircut = num('moSplitHaircut') / 100;
+  let best = null, maxLand = -Infinity, offerN = 1;
   const sp = splitInfo(l);
   for(const n of new Set([1, sp.n])){
-    const e = homeEcon({ sf, hard, soft, site, fin, sell, land, demo, n, psf, haircut, splitCost, adu: aduInput(l) });
+    const x = { sf, hard, soft, site, fin, sell, land, demo, n, psf, haircut, splitCost, adu: aduInput(l) }, e = homeEcon(x);
+    const offer = supportableLand(x, num('hcProfit') / 100);
+    if(offer > maxLand){ maxLand = offer; offerN = n; }
     if(!best || e.profit > best.profit) best = { n, finished: e.finished, cost: e.cost, profit: e.profit, land, margin: e.margin };
   }
-  let r = (landOK ? 0 : 2) + (nb.n < (l.houseComps ? 4 : 6) ? 1 : 0) + (nb.radiusMi >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : l.floodKnown === false ? 1 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0);
+  best.maxLand = maxLand; best.offerN = offerN;
+  let r = (landOK ? 0 : 2) + ((nb.n || 0) < (nb.fellBack ? 6 : 4) ? 1 : 0) + ((nb.radiusMi || 0) >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : l.floodKnown === false ? 1 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0);
   best.risk = r <= 1 ? 'Low' : r <= 3 ? 'Medium' : 'High';
   best.adj = best.profit > 0 ? best.profit * ({ Low: .85, Medium: .65, High: .4 }[best.risk]) : best.profit;
   best.strategy = best.n > 1 ? `Lot split → ${best.n} custom homes${sp.known ? '' : ' (zoning min lot unknown — assumed)'}` : 'Custom home';
@@ -2171,19 +2217,24 @@ function profitLine(l){
   let badge = '', runNote = '';
   if(l.parcelStatus === 'vacant' && l.landUseClass === 'residential'){
     const run = loadRuns().find(r => r.name.toLowerCase() === String(l.address || '').split(/\s{2,}/)[0].toLowerCase());
-    const target = (run ? +run.vals.hcProfit : parseFloat(document.getElementById('hcProfit').value)) / 100 || 0.1;
-    const m = run ? run.margin : p.margin, lab = m >= target && p.risk !== 'High' ? 'Good' : m >= target / 2 ? 'Maybe' : 'Pass';
+    const target = parseFloat(document.getElementById('hcProfit').value) / 100 || 0.1;
+    const high = profitFor(l, 0, 0, { hard: 325 }), cheap = profitFor(l, 0, 0, { hard: 275 });
+    const lab = high.margin >= target && high.risk !== 'High' ? 'Good' : high.profit >= 0 && (high.margin >= target / 2 || cheap.margin >= target) ? 'Maybe' : 'Pass';
     const col = { Good: '#2f6b47', Maybe: '#9a7a1c', Pass: '#b03a3a' }[lab];
     if(run) runNote = ` · <b>your saved run:</b> ${run.vals.hcLots} homes, land ${m2(+run.vals.hcLand)}, profit ${m2(run.gain)} per home (${(run.margin * 100).toFixed(0)}%)`;
-    badge = `<span title="${run ? 'From the numbers you saved for this address' : 'Calculator numbers, land at the county value, nearby house sales for the sale price'}" style="background:${col};color:#fff;border-radius:4px;padding:1px 6px;margin-right:6px;font-size:11px;font-weight:700;">${lab.toUpperCase()}${run ? ' · your saved numbers' : ''}</span>`;
+    badge = `<span title="Screen at $325/sf build; Maybe requires break-even. Other current calculator inputs apply." style="background:${col};color:#fff;border-radius:4px;padding:1px 6px;margin-right:6px;font-size:11px;font-weight:700;">${lab.toUpperCase()} · $325/sf</span>`;
   }
-  return `<div class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${badge}📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%) · risk ${p.risk}${runNote}</div>`;
+  return `<div class="lead-sub" data-profit-apn="${esc(l.apn)}" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${badge}📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%) · risk ${p.risk}${selectedComps(l).fellBack ? ' · ⚠ FALLBACK comps' : ''}${runNote}${landBasis(l).override ? '<div style="margin-top:6px;">' + priceBasisHtml(l) + '</div>' : ''}</div>`;
 }
-function lowSalePsf(l){ if(l.houseComps) return l.houseComps.lowPsf || l.houseComps.psf; const e = (l.newBuild.examples || []).map(x => x.price / x.sf); return Math.min(l.newBuild.lowPsf || Infinity, ...e); }
+function refreshProfitLines(){
+  const byApn = new Map((D.leads || []).map(l => [l.apn, l]));
+  document.querySelectorAll('[data-profit-apn]').forEach(el => { const lead = byApn.get(el.dataset.profitApn); if(!lead) return; const html = profitLine(lead); if(html) el.outerHTML = html; else el.textContent = 'Profit screen unavailable — check the home size and price inputs.'; });
+}
+function lowSalePsf(l){ const c = selectedComps(l); if(!c) return 0; const e = (c.examples || []).filter(x => x.sf > 0).map(x => x.price / x.sf); return Math.min(c.lowPsf || c.psf, ...e); }
 function salesCell(l){
-  const nb = l.houseComps || l.newBuild, mo = n => '$' + (n / 1e6).toFixed(2) + 'M';
+  const nb = selectedComps(l); if(!nb) return 'No sale-price comps'; const mo = n => '$' + (n / 1e6).toFixed(2) + 'M';
   const ex = (nb.examples || []).map(e => `${esc(e.address)} · ${mo(e.price)} · ${e.sf.toLocaleString()} sf · $${Math.round(e.price / e.sf)}/sf · ${e.sold.slice(0,7)}`).join('<br>');
-  return `<div style="font-size:10.5px;line-height:1.35;min-width:230px;">${l.houseComps ? '2nd-highest' : 'Median'} $${nb.psf}/sf of ${nb.n} sales within ${nb.radiusMi}mi${nb.lowPsf && nb.highPsf ? ' (range $' + nb.lowPsf + '–$' + nb.highPsf + ')' : ''}${ex ? `<br><span style="color:var(--text-faint);">Closest:<br>${ex}</span>` : (nb.price ? ` · median home $${(nb.price / 1e6).toFixed(2)}M` : '')}</div>`;
+  return `<div style="font-size:10.5px;line-height:1.35;min-width:230px;">${nb.fellBack ? 'Median (FALLBACK)' : '2nd-highest'} $${nb.psf}/sf of ${nb.n} sales within ${nb.radiusMi}mi${nb.lowPsf && nb.highPsf ? ' (range $' + nb.lowPsf + '–$' + nb.highPsf + ')' : ''}${ex ? `<br><span style="color:var(--text-faint);">Closest:<br>${ex}</span>` : (nb.price ? ` · median home $${(nb.price / 1e6).toFixed(2)}M` : '')}<br>${compSourceHtml(l)}</div>`;
 }
 function renderTopProfit(){
   const m = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
@@ -2230,8 +2281,8 @@ function intakeHtml(l){
   if(l.inFloodplain) flags.push('In a mapped floodplain (' + esc(l.floodZone || 'zone ?') + ').');
   else if(l.floodKnown === false) flags.push('Flood status UNKNOWN: the FEMA lookup failed, so "not in a floodplain" is unconfirmed.');
   if(l.zoningKnown && !l.currentZoning) flags.push('No City of Phoenix zoning at this point: it may be unincorporated Maricopa County (mailing city is not jurisdiction). Phoenix ADU / lot-split rules and the "adjacent zoning" rezone target may not apply. Confirm jurisdiction and zoning before relying on this.');
-  const lv = l.valuation, landV = l.landOverride || (lv && lv.mostLikelyValue && !lv.unreliable ? lv.mostLikelyValue : (l.assessedValue || 0));
-  if(l.salePrice && landV && l.salePrice > landV * 1.5) flags.push('Last sold ' + money(l.salePrice) + (l.saleDate ? ' (' + esc(l.saleDate) + ')' : '') + ' vs the ' + money(landV) + ' land value the model uses: land cost may be understated.');
+  const lv = l.valuation, landV = lv && lv.mostLikelyValue && !lv.unreliable ? lv.mostLikelyValue : (l.assessedValue || 0), price = landBasis(l).override ? landBasis(l).land : l.salePrice;
+  if(price > 0 && landV > 0 && Math.max(price, landV) / Math.min(price, landV) > 1.5) flags.push('Price ' + money(price) + ' vs county proxy ' + money(landV) + ': a gap over 1.5× in either direction. Verify both before relying on the land cost.');
   if(l.rezoningNearby) flags.push(l.rezoningNearby + ' rezoning(s) nearby: the area is changing.');
   if(l.parcelStatus === 'improved') flags.push('Has a building: demolition counted at ' + money(l.defaultDemoCost || 0) + ' (placeholder).');
   const items = intakeItems().filter(([k]) => (k !== 'split' || sp.n > 1) && (k !== 'demo' || l.parcelStatus === 'improved'));
@@ -2284,7 +2335,7 @@ function renderBids(){
 }
 
 // ── Saved Numbers (Custom Home Calculator runs + per-lead calculators) ───
-const RUN_IDS = ['hcLand','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcMode','hcUnits','hcUnitSf','hcRent','hcVac','hcOpex','hcCap','hcLtv','hcRate'];
+const RUN_IDS = ['hcLand','hcDemo','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcMode','hcUnits','hcUnitSf','hcRent','hcVac','hcOpex','hcCap','hcLtv','hcRate'];
 function loadRuns(){ try{ return JSON.parse(localStorage.getItem('savedRuns') || '[]'); }catch(e){ return []; } }
 function storeRuns(r){ try{ localStorage.setItem('savedRuns', JSON.stringify(r)); }catch(e){} renderRuns(); drawMaps(true); }
 function saveRun(){
@@ -2299,6 +2350,8 @@ function saveRun(){
 function loadRun(i){
   const r = loadRuns()[i]; if(!r) return;
   document.getElementById('hcLead').value = /^Unnamed/.test(r.name) ? '' : r.name;
+  document.getElementById('hcDemo').value = 0;
+  document.getElementById('hcLead').dispatchEvent(new Event('input'));
   RUN_IDS.forEach(k => { const e = document.getElementById(k); if(r.vals[k] == null) return; e.value = r.vals[k]; e.dispatchEvent(new Event('input')); });
   showTab('calc'); document.getElementById('home-calc').scrollIntoView({ behavior: 'smooth' });
 }
@@ -2313,12 +2366,13 @@ function renderRuns(){
 
 // ── Max Offer (sell the lot to a builder) ────────────────────────────────
 // How many home lots a parcel could split into: 85% usable (setbacks/access), min lot size from R1-x zoning
-// (R1-8 = 8,000 sf ...) else the fallback input. Capped at 6. Needs city lot-split approval — a rough ceiling.
+// (R1-8 = 8,000 sf ...) else the fallback input. Capped at 4. Needs city lot-split approval — a rough ceiling.
 // known = the min lot size comes from the zoning code (R1-14 = 14,000 sf, RE-35 = 35,000 sf); otherwise it is the fallback guess.
 function splitInfo(l){
   const m = /^(?:R1|RE)-(\d+)/i.exec(l.currentZoning || '');
   const minLot = m ? parseInt(m[1],10) * 1000 : (parseFloat(document.getElementById('moMinLot').value) || 14375);
-  return { n: Math.max(1, Math.min(4, Math.floor((l.landSf || 0) * 0.85 / minLot))), known: !!m };
+  const usable = (typeof usablePct === 'number' ? usablePct : 85) / 100;
+  return { n: Math.max(1, Math.min(4, Math.floor((l.landSf || 0) * usable / minLot))), known: !!m };
 }
 function splitLots(l){ return splitInfo(l).n; }
 function maxOfferRows(){
@@ -2362,31 +2416,37 @@ renderMaxOffer();
 
 // ── Custom Home Calculator (buy land, build custom homes) ────────────────
 (function hcInit(){
-  const ids = ['hcLand','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcAduN','hcAduSf','hcAduHard','hcAduSite','hcAduVal'];
+  const ids = ['hcLand','hcDemo','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcAduN','hcAduSf','hcAduHard','hcAduSite','hcAduVal'];
   const el = id => document.getElementById(id), num = id => parseFloat(el(id).value) || 0;
   const money = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
   const RIDS = ['hcUnits','hcUnitSf','hcRent','hcVac','hcOpex','hcCap','hcLtv','hcRate'];
   const KEEP = ['hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcAduN','hcAduSf','hcAduHard','hcAduSite','hcAduVal','hcMode', ...RIDS];
   try{ const saved = JSON.parse(localStorage.getItem('homeCalc') || '{}'); KEEP.forEach(k => { if(saved[k] != null) el(k).value = saved[k]; }); }catch(e){}
   const addr = l => String(l.address || '').split(/\s{2,}/)[0];
+  let picked = null;
   el('hcLeads').innerHTML = (D.leads || []).slice().sort((a, b) => b.score - a.score).map(l => `<option value="${esc(addr(l))}">score ${l.score}</option>`).join('');
   function pickLead(){
     const l = (D.leads || []).find(x => addr(x).toLowerCase() === el('hcLead').value.trim().toLowerCase());
-    if(!l){ el('hcAnchor').textContent = ''; return; }
-    const lb = landBasis(l); if(lb.land) el('hcLand').value = Math.round(lb.land);   // same land price Top Profit uses
-    el('hcLots').value = Math.max(1, Math.floor(l.byRightUnits || l.rezoneTargetUnits || 1));
+    picked = l || null;
+    if(!l){ el('hcAnchor').textContent = ''; el('hcPriceBasis').innerHTML = ''; el('hcHouse').textContent = ''; return; }
+    const fill = leadAutofill(l);
+    el('hcLand').value = fill.land === '' ? '' : Math.round(fill.land);
+    el('hcLots').value = fill.lots;
+    el('hcDemo').value = fill.demo;
+    el('hcPrice').value = fill.psf;
+    el('hcPriceBasis').innerHTML = priceBasisHtml(l);
     const bits = [`${l.landAcres} acres`, l.currentZoning ? 'zoned ' + l.currentZoning : ''];
     if(l.valuation) bits.push(`land est. ${money(l.valuation.rangeLow)}–${money(l.valuation.rangeHigh)}`);
     if(l.salePrice) bits.push(`owner paid ${money(l.salePrice)}${l.saleDate ? ' (' + l.saleDate.slice(-4) + ')' : ''}`);
     if(l.assessedValue) bits.push(`assessed ${money(l.assessedValue)}`);
     rentHint(l);
-    el('hcAnchor').textContent = bits.filter(Boolean).join(' · ') + ' — land price and home count filled in from this; change them if you disagree.';
+    el('hcAnchor').textContent = bits.filter(Boolean).join(' · ') + ` — ${fill.lots} homes in the ranking's best scenario; estimated split capacity ${splitInfo(l).n}.` + (fill.land === '' ? ' Enter a supported land price: reliable valuation unavailable.' : ' Price, demolition and sale comps filled in; adjust to your plan.');
     el('hcHouse').textContent = 'Looking up recent home sales nearby…';
     fetchHouseComps(l).then(h => {
       if(el('hcLead').value.trim().toLowerCase() !== addr(l).toLowerCase()) return;
-      if(!h.rows.length){ el('hcHouse').textContent = h.error || 'No recent home sales found nearby.'; return; }
+      if(!h.rows.length){ el('hcHouse').innerHTML = `${esc(h.error || 'No recent home sales found nearby.')}${h.error ? ' <button class="mail-btn" type="button" id="hcRetry">Retry county GIS</button>' : ''}<br>${compSourceHtml(l)}`; if(h.error) el('hcRetry').onclick = () => { delete houseCache[l.apn]; pickLead(); calc(); }; return; }
       const psf = h.rows.map(r => r.psf), lo = Math.min(...psf), hi = Math.max(...psf), pick = [...psf].sort((a, b) => b - a)[Math.min(1, psf.length - 1)];
-      el('hcHouse').innerHTML = `Recent home sales nearby (5 closest matches): <b>${money(h.medianPsf)}/sf median</b> (${money(lo)}–${money(hi)}/sf), median ${money(h.medianPrice)}. Existing homes, not new custom builds. <button class="mail-btn" type="button" id="hcUse">Use ${money(pick)}/sf (2nd-highest comp) as my expected sale price</button>`;
+      el('hcHouse').innerHTML = `Recent home sales nearby (${h.rows.length} closest matches): <b>${money(h.medianPsf)}/sf median</b> (${money(lo)}–${money(hi)}/sf), median ${money(h.medianPrice)}. Existing homes, not new custom builds. <button class="mail-btn" type="button" id="hcUse">Use ${money(pick)}/sf (2nd-highest comp) as my expected sale price</button><br>${esc(h.source)} · retrieved ${esc(h.retrievedAt)}`;
       el('hcUse').onclick = () => { el('hcPrice').value = Math.round(pick); calc(); };
     });
   }
@@ -2401,7 +2461,7 @@ renderMaxOffer();
     const u = Math.max(1, num('hcUnits')), bsf = u * num('hcUnitSf'), hard = num('hcHard') * bsf, soft = hard * num('hcSoft') / 100, site = num('hcSite'), land = num('hcLand');
     const fin = num('hcFin') / 100, sell = num('hcSell') / 100, profit = num('hcProfit') / 100, den = 1 - sell - profit, cap = num('hcCap') / 100, opex = num('hcOpex') / 100, vac = num('hcVac') / 100;
     const out = el('hcOut');
-    if(den <= 0 || bsf <= 0 || cap <= 0){ out.textContent = 'Selling costs + profit must be under 100%; unit size and cap rate above 0.'; return; }
+    if(den <= 0 || bsf <= 0 || cap <= 0){ out.textContent = 'Selling costs + profit must be under 100%; unit size and cap rate above 0.'; window.hcLast = null; return; }
     const C = hard + soft + site, total = (C + land) * (1 + fin);
     const egi = u * num('hcRent') * 12 * (1 - vac), noi = egi * (1 - opex), value = noi / cap;
     const gain = value * (1 - sell) - total, margin = value ? gain / value : 0, maxLand = value * den / (1 + fin) - C;
@@ -2428,30 +2488,33 @@ renderMaxOffer();
   setMode();
   function calc(){
     if(el('hcMode').value === 'rent') return calcRent();
-    const lots = Math.max(1, num('hcLots')), sf = num('hcSf'), soft = num('hcSoft') / 100, site = num('hcSite');
+    const lots = Math.max(1, Math.floor(num('hcLots'))), sf = num('hcSf'), soft = num('hcSoft') / 100, site = num('hcSite'), demo = num('hcDemo');
     const fin = num('hcFin') / 100, sell = num('hcSell') / 100, profit = num('hcProfit') / 100, P = num('hcPrice') * sf;
-    const splitCost = num('moSplitCost'), haircut = (num('moSplitHaircut') || 100) / 100, den = 1 - sell - profit;
+    const splitCost = num('moSplitCost'), haircut = num('moSplitHaircut') / 100, den = 1 - sell - profit;
     const out = el('hcOut');
-    if(den <= 0 || sf <= 0){ out.textContent = 'Selling costs + profit must be under 100%, and home size above 0.'; return; }
-    const e = homeEcon({ sf, hard: num('hcHard'), soft, site, fin, sell, land: num('hcLand'), n: lots, psf: num('hcPrice'), haircut, splitCost, adu: aduInput({ currentZoning: 1 }) });
+    if(den <= 0 || sf <= 0){ out.textContent = 'Selling costs + profit must be under 100%, and home size above 0.'; if(picked) el('hcPriceBasis').textContent = 'Supportable offer unavailable until the calculator inputs are valid.'; window.hcLast = null; return; }
+    if(el('hcLand').value === '' || el('hcPrice').value === ''){ out.textContent = 'Enter a supported land price and expected sale price before relying on profit or offers.'; window.hcLast = null; return; }
+    const x = { sf, hard: num('hcHard'), soft, site, fin, sell, land: num('hcLand'), demo, n: lots, psf: num('hcPrice'), haircut, splitCost, adu: aduInput(picked || { currentZoning: 1 }) }, e = homeEcon(x);
     const hard = num('hcHard') * sf, softD = hard * soft, C = e.C, land = num('hcLand') / lots, sc = lots > 1 ? (lots - 1) * splitCost / lots : 0, aduV = e.aduCost ? num('hcAduVal') : 0, Ph = e.finished / lots - aduV;   // aduV: ADU resale value, shown separately from the house price
     const total = e.cost / lots, need = total / den - aduV, gain = e.profit / lots, margin = e.margin;
-    const maxLand = e.finished * den / (1 + fin) - lots * C - e.aduCost - (lots > 1 ? (lots - 1) * splitCost : 0), open = maxLand * num('hcOpen') / 100;
-    window.hcLast = { gain, margin, maxLand };
+    const maxLand = supportableLand(x, profit), open = maxLand * num('hcOpen') / 100;
+    window.hcLast = { gain, margin, maxLand, totalProfit: e.profit, cost: e.cost, finished: e.finished };
+    if(picked) el('hcPriceBasis').innerHTML = priceBasisHtml(picked);
     const row = (k, v, b) => `<tr><td style="padding:2px 14px 2px 0;${b ? 'font-weight:700;' : ''}">${k}</td><td style="text-align:right;${b ? 'font-weight:700;' : ''}">${v}</td></tr>`;
     out.innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:28px;">
       <div><div style="font-weight:700;margin-bottom:4px;">Cost per home</div><table>
-        ${row('Build', money(hard))}${row('Design / permits / fees', money(softD))}${row('Site work', money(site))}${row('Land share', money(land))}${sc ? row('Lot-split cost share', money(sc)) : ''}${e.aduCost ? row('ADUs (build + soft + site)', money(e.aduCost)) : ''}${row('Loan interest', money((C + land + sc) * fin))}${row('Total cost', money(total), 1)}</table>${e.aduCost ? `<div style="font-size:12px;color:var(--text-soft);margin-top:6px;">ADUs need about <b>${money(e.aduCost * (1 + fin))}</b> of added resale value to pay for themselves (you entered ${money(aduV)}).</div>` : ''}</div>
+        ${row('Build', money(hard))}${row('Design / permits / fees', money(softD))}${row('Site work', money(site))}${row('Land share', money(land))}${demo ? row('Demolition share', money(demo / lots)) : ''}${sc ? row('Lot-split cost share', money(sc)) : ''}${e.aduCost ? row('ADUs (build + soft + site)', money(e.aduCost)) : ''}${row('Loan interest', money((C + land + demo / lots + sc + e.aduCost / lots) * fin))}${row('Total cost', money(total), 1)}</table>${e.aduCost ? `<div style="font-size:12px;color:var(--text-soft);margin-top:6px;">ADUs need about <b>${money(e.aduCost * (1 + fin) / (1 - sell))}</b> of added resale value to pay for themselves (you entered ${money(aduV)}).</div>` : ''}</div>
       <div style="max-width:430px;"><div style="margin-bottom:8px;"><b>To hit your ${num('hcProfit')}% profit, each home must sell for ${money(need)}</b> (${money(need / sf)}/sf).</div>
-        <div style="margin-bottom:8px;">At your expected ${money(Ph)} per home (${money(num('hcPrice'))}/sf${lots > 1 ? ', after the split haircut' : ''}), <b>the most you can pay for the land is <span style="color:#2f6b47;">${money(maxLand)}</span></b> total — open at <b>${money(open)}</b>.</div>
+        <div style="margin-bottom:8px;">At your expected ${money(Ph)} per home (${money(Ph / sf)}/sf${lots > 1 ? ', after the ' + Math.round(haircut * 100) + '% split factor' : ''}), ${maxLand >= 0 ? `<b>the most you can pay for the land is <span style="color:#2f6b47;">${money(maxLand)}</span></b> total — open at <b>${money(open)}</b>.` : `<b>No nonnegative land offer meets your target</b> (land budget ${money(maxLand)}).`}</div>
         <div style="padding:8px 10px;border-radius:8px;background:${margin >= profit ? '#e6f4ea' : '#fdecec'};">At your land price of ${money(num('hcLand'))}: profit of <b>${money(gain)}</b> per home (${(margin * 100).toFixed(1)}% of sale) — ${margin >= profit ? 'meets' : 'below'} your ${num('hcProfit')}% target.</div></div></div>`;
   }
   ids.forEach(id => el(id).addEventListener('input', () => {
-    if(id !== 'hcLand' && id !== 'hcLots'){ renderTopProfit(); renderBids(); }
+    if(id !== 'hcLand' && id !== 'hcLots' && id !== 'hcDemo'){ renderTopProfit(); renderBids(); if(typeof refreshProfitLines === 'function') refreshProfitLines(); }
     if(KEEP.includes(id)){ try{ const m = {}; KEEP.forEach(k => m[k] = el(k).value); localStorage.setItem('homeCalc', JSON.stringify(m)); }catch(e){} }
     calc();
   }));
   el('hcLead').addEventListener('input', () => { pickLead(); calc(); });
+  ['moSplitCost','moSplitHaircut','moMinLot'].forEach(id => el(id).addEventListener('input', () => { calc(); renderTopProfit(); renderBids(); if(typeof refreshProfitLines === 'function') refreshProfitLines(); }));
   calc();
 })();
 renderTopProfit();

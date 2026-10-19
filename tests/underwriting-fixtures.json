@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "description": "USD amounts; fractional rates; maxLand is signed and meets profit / finished target. Independently evaluated with decimal arithmetic.",
+  "cases": [
+    {
+      "name": "single_home_275",
+      "input": {
+        "sf": 3800,
+        "hard": 275,
+        "soft": 0.08,
+        "site": 10000,
+        "fin": 0.07,
+        "sell": 0.03,
+        "land": 250000,
+        "demo": 0,
+        "n": 1,
+        "psf": 450,
+        "haircut": 0.8,
+        "splitCost": 25000,
+        "adu": null
+      },
+      "target": 0.1,
+      "expected": {
+        "C": 1138600.0,
+        "finished": 1710000.0,
+        "cost": 1485802.0,
+        "profit": 172898.0,
+        "aduCost": 0.0,
+        "margin": 0.10110994152046783,
+        "maxLand": 251773.83177570094
+      }
+    },
+    {
+      "name": "teardown_home_325",
+      "input": {
+        "sf": 3800,
+        "hard": 325,
+        "soft": 0.08,
+        "site": 10000,
+        "fin": 0.07,
+        "sell": 0.03,
+        "land": 535000,
+        "demo": 40000,
+        "n": 1,
+        "psf": 500,
+        "haircut": 0.8,
+        "splitCost": 25000,
+        "adu": null
+      },
+      "target": 0.1,
+      "expected": {
+        "C": 1343800.0,
+        "finished": 1900000.0,
+        "cost": 2053116.0,
+        "profit": -210116.0,
+        "aduCost": 0.0,
+        "margin": -0.11058736842105263,
+        "maxLand": 161059.81308411216
+      }
+    },
+    {
+      "name": "four_home_split_325",
+      "input": {
+        "sf": 3800,
+        "hard": 325,
+        "soft": 0.08,
+        "site": 10000,
+        "fin": 0.07,
+        "sell": 0.03,
+        "land": 535000,
+        "demo": 45000,
+        "n": 4,
+        "psf": 600,
+        "haircut": 0.8,
+        "splitCost": 25000,
+        "adu": null
+      },
+      "target": 0.1,
+      "expected": {
+        "C": 1343800.0,
+        "finished": 7296000.0,
+        "cost": 6452314.0,
+        "profit": 624806.0,
+        "aduCost": 0.0,
+        "margin": 0.08563678728070176,
+        "maxLand": 437061.68224299065
+      }
+    },
+    {
+      "name": "negative_supportable_land",
+      "input": {
+        "sf": 3800,
+        "hard": 325,
+        "soft": 0.08,
+        "site": 10000,
+        "fin": 0.07,
+        "sell": 0.03,
+        "land": 0,
+        "demo": 0,
+        "n": 1,
+        "psf": 350,
+        "haircut": 0.8,
+        "splitCost": 25000,
+        "adu": null
+      },
+      "target": 0.1,
+      "expected": {
+        "C": 1343800.0,
+        "finished": 1330000.0,
+        "cost": 1437866.0,
+        "profit": -147766.0,
+        "aduCost": 0.0,
+        "margin": -0.11110225563909774,
+        "maxLand": -262398.1308411215
+      }
+    },
+    {
+      "name": "zero_supportable_land_boundary",
+      "input": {
+        "sf": 1070,
+        "hard": 0,
+        "soft": 0.08,
+        "site": 870000,
+        "fin": 0.07,
+        "sell": 0.03,
+        "land": 0,
+        "demo": 0,
+        "n": 1,
+        "psf": 1000,
+        "haircut": 0.8,
+        "splitCost": 25000,
+        "adu": null
+      },
+      "target": 0.1,
+      "expected": {
+        "C": 870000.0,
+        "finished": 1070000.0,
+        "cost": 930900.0,
+        "profit": 107000.0,
+        "aduCost": 0.0,
+        "margin": 0.1,
+        "maxLand": 0.0
+      }
+    },
+    {
+      "name": "whole_lot_with_two_adus",
+      "input": {
+        "sf": 3800,
+        "hard": 275,
+        "soft": 0.08,
+        "site": 10000,
+        "fin": 0.07,
+        "sell": 0.03,
+        "land": 200000,
+        "demo": 0,
+        "n": 1,
+        "psf": 500,
+        "haircut": 0.8,
+        "splitCost": 25000,
+        "adu": {
+          "n": 2,
+          "sf": 600,
+          "hard": 200,
+          "site": 15000,
+          "value": 350000
+        }
+      },
+      "target": 0.1,
+      "expected": {
+        "C": 1138600.0,
+        "finished": 2250000.0,
+        "cost": 1741746.0,
+        "profit": 440754.0,
+        "aduCost": 289200.0,
+        "margin": 0.19589066666666666,
+        "maxLand": 401639.2523364486
+      }
+    },
+    {
+      "name": "split_ignores_adus",
+      "input": {
+        "sf": 3800,
+        "hard": 325,
+        "soft": 0.08,
+        "site": 10000,
+        "fin": 0.07,
+        "sell": 0.03,
+        "land": 535000,
+        "demo": 45000,
+        "n": 4,
+        "psf": 600,
+        "haircut": 0.8,
+        "splitCost": 25000,
+        "adu": {
+          "n": 2,
+          "sf": 600,
+          "hard": 200,
+          "site": 15000,
+          "value": 350000
+        }
+      },
+      "target": 0.1,
+      "expected": {
+        "C": 1343800.0,
+        "finished": 7296000.0,
+        "cost": 6452314.0,
+        "profit": 624806.0,
+        "aduCost": 0.0,
+        "margin": 0.08563678728070176,
+        "maxLand": 437061.68224299065
+      }
+    }
+  ]
+}

@@ -1,1 +1,11 @@
-{"20338004C": {"landCost": 535000, "note": "April 2026 sale price; replace with the real offer/contract price"}}
+{
+  "20338004C": {
+    "landCost": 535000,
+    "source": "Maricopa County Assessor recorded parcel sale, from the stored county data",
+    "sourceUrl": "https://mcassessor.maricopa.gov/mcs/?q=20338004C",
+    "observedAt": "2026-10-18",
+    "priceDate": "2026-04-01",
+    "priceType": "recorded historical sale",
+    "note": "2812 W Cloud Rd: stored county SALE_PRICE / SALE_DATE. This is the owner's recorded April 2026 purchase, not a current asking price or agreed offer. Replace with a sourced current price when available."
+  }
+}

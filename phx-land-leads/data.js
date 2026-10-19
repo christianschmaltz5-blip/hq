@@ -207,7 +207,13 @@ window.PHX_LAND_LEADS = {
             "price": 1659000,
             "sf": 4399
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -220,8 +226,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -39,
         "profitAt275": -938221,
         "salePsf": 631,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 587813,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16766023",
@@ -416,7 +433,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -429,8 +452,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -26,
         "profitAt275": -693929,
         "salePsf": 699,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 797914,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16766026",
@@ -626,7 +660,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -639,8 +679,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -26,
         "profitAt275": -696839,
         "salePsf": 699,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 797914,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501022B",
@@ -858,7 +909,13 @@ window.PHX_LAND_LEADS = {
             "price": 1571900,
             "sf": 7325
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -871,8 +928,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 7,
         "profitAt275": 192276,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16766025",
@@ -1077,7 +1145,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -1090,8 +1164,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -2,
         "profitAt275": -44683,
         "salePsf": 699,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 797914,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16766010",
@@ -1284,7 +1369,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -1297,8 +1388,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -26,
         "profitAt275": -699748,
         "salePsf": 699,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 797914,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501024",
@@ -1492,7 +1594,13 @@ window.PHX_LAND_LEADS = {
             "price": 6225000,
             "sf": 7396
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -1505,8 +1613,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -14,
         "profitAt275": -425632,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21531002A",
@@ -1711,7 +1830,13 @@ window.PHX_LAND_LEADS = {
             "price": 620000,
             "sf": 2322
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -1724,8 +1849,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -156,
         "profitAt275": -2427426,
         "salePsf": 409,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -98105,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16773025",
@@ -1943,7 +2079,13 @@ window.PHX_LAND_LEADS = {
             "price": 11900000,
             "sf": 7589
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -1956,8 +2098,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 38,
         "profitAt275": 1745677,
         "salePsf": 1201,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 2348953,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21460037A",
@@ -2165,7 +2318,13 @@ window.PHX_LAND_LEADS = {
             "price": 1075000,
             "sf": 3000
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -2178,8 +2337,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -65,
         "profitAt275": -911357,
         "salePsf": 368,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -224783,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501015A",
@@ -2386,7 +2556,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -2399,8 +2575,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 10,
         "profitAt275": 291778,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21431007",
@@ -2617,7 +2804,13 @@ window.PHX_LAND_LEADS = {
             "price": 1295000,
             "sf": 2776
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -2630,8 +2823,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -44,
         "profitAt275": -694276,
         "salePsf": 412,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -88836,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501040C",
@@ -2837,7 +3041,13 @@ window.PHX_LAND_LEADS = {
             "price": 1650000,
             "sf": 6651
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -2850,8 +3060,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 9,
         "profitAt275": 270921,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16608195",
@@ -3070,7 +3291,13 @@ window.PHX_LAND_LEADS = {
             "price": 645000,
             "sf": 2269
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -3083,8 +3310,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -376,
         "profitAt275": -6194921,
         "salePsf": 433,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -23951,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21523016B",
@@ -3301,7 +3539,13 @@ window.PHX_LAND_LEADS = {
             "price": 1295000,
             "sf": 2776
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -3314,8 +3558,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -84,
         "profitAt275": -1409767,
         "salePsf": 440,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -2323,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16766022",
@@ -3508,7 +3763,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -3521,8 +3782,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -26,
         "profitAt275": -677725,
         "salePsf": 699,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 797914,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21526030A",
@@ -3740,7 +4012,13 @@ window.PHX_LAND_LEADS = {
             "price": 1295000,
             "sf": 2776
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -3753,8 +4031,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -81,
         "profitAt275": -1354360,
         "salePsf": 440,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -2323,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501053B",
@@ -3957,7 +4246,13 @@ window.PHX_LAND_LEADS = {
             "price": 4850000,
             "sf": 5146
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -3970,8 +4265,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 17,
         "profitAt275": 538740,
         "salePsf": 842,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1239744,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21520012B",
@@ -4188,7 +4494,13 @@ window.PHX_LAND_LEADS = {
             "price": 720000,
             "sf": 2028
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -4201,8 +4513,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -84,
         "profitAt275": -1411650,
         "salePsf": 440,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -2323,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21570007D",
@@ -4419,7 +4742,13 @@ window.PHX_LAND_LEADS = {
             "price": 730000,
             "sf": 2673
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -4432,8 +4761,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -103,
         "profitAt275": -1596228,
         "salePsf": 409,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -98105,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21434015A",
@@ -4650,7 +4990,13 @@ window.PHX_LAND_LEADS = {
             "price": 1850000,
             "sf": 5188
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -4663,8 +5009,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -40,
         "profitAt275": -666180,
         "salePsf": 440,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -2323,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325527",
@@ -4882,7 +5239,13 @@ window.PHX_LAND_LEADS = {
             "price": 1350000,
             "sf": 3179
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -4895,8 +5258,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 14,
         "profitAt275": 930598,
         "salePsf": 548,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": 349366,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501005",
@@ -5113,7 +5487,13 @@ window.PHX_LAND_LEADS = {
             "price": 6225000,
             "sf": 7396
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -5126,8 +5506,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -17,
         "profitAt275": -487235,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501008B",
@@ -5320,7 +5711,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -5333,8 +5730,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 9,
         "profitAt275": 264499,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501037B",
@@ -5543,7 +5951,13 @@ window.PHX_LAND_LEADS = {
             "price": 1571900,
             "sf": 7325
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -5556,8 +5970,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 15,
         "profitAt275": 450677,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16515002",
@@ -5770,7 +6195,13 @@ window.PHX_LAND_LEADS = {
             "price": 3325000,
             "sf": 5332
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -5783,8 +6214,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -11,
         "profitAt275": -810614,
         "salePsf": 775,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": 1647479,
+        "offerHomes": 3,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16773023",
@@ -6004,7 +6446,13 @@ window.PHX_LAND_LEADS = {
             "price": 11900000,
             "sf": 7589
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -6017,8 +6465,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 40,
         "profitAt275": 1844614,
         "salePsf": 1201,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 2348953,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16766021",
@@ -6211,7 +6670,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -6224,8 +6689,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -26,
         "profitAt275": -677502,
         "salePsf": 699,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 797914,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501009",
@@ -6418,7 +6894,13 @@ window.PHX_LAND_LEADS = {
             "price": 1571900,
             "sf": 7325
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -6431,8 +6913,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 7,
         "profitAt275": 203038,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21521020",
@@ -6625,7 +7118,13 @@ window.PHX_LAND_LEADS = {
             "price": 720000,
             "sf": 2028
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -6638,8 +7137,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -31,
         "profitAt275": -525797,
         "salePsf": 440,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -2323,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16766020",
@@ -6832,7 +7342,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -6845,8 +7361,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -25,
         "profitAt275": -677323,
         "salePsf": 699,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 797914,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16766029",
@@ -7039,7 +7566,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -7052,8 +7585,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -26,
         "profitAt275": -692900,
         "salePsf": 699,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 797914,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16766003",
@@ -7252,7 +7796,13 @@ window.PHX_LAND_LEADS = {
             "price": 1659000,
             "sf": 4399
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -7265,8 +7815,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -20,
         "profitAt275": -768954,
         "salePsf": 631,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 587813,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16766006",
@@ -7453,7 +8014,13 @@ window.PHX_LAND_LEADS = {
             "price": 1659000,
             "sf": 4399
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -7466,8 +8033,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -38,
         "profitAt275": -908187,
         "salePsf": 631,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 587813,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21527002H",
@@ -7659,7 +8237,13 @@ window.PHX_LAND_LEADS = {
             "price": 737500,
             "sf": 2004
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -7672,8 +8256,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -65,
         "profitAt275": -1091178,
         "salePsf": 440,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -2323,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21520013A",
@@ -7889,7 +8484,13 @@ window.PHX_LAND_LEADS = {
             "price": 720000,
             "sf": 2028
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -7902,8 +8503,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -81,
         "profitAt275": -1359238,
         "salePsf": 440,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -2323,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16766011",
@@ -8095,7 +8707,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -8108,8 +8726,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -26,
         "profitAt275": -678799,
         "salePsf": 699,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 797914,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21529075",
@@ -8301,7 +8930,13 @@ window.PHX_LAND_LEADS = {
             "price": 620000,
             "sf": 2322
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -8314,8 +8949,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -104,
         "profitAt275": -1610357,
         "salePsf": 409,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -98105,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21174107G",
@@ -8531,7 +9177,13 @@ window.PHX_LAND_LEADS = {
             "price": 1652197,
             "sf": 4012
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -8544,8 +9196,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -15,
         "profitAt275": -227501,
         "salePsf": 412,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -70836,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21520009B",
@@ -8762,7 +9425,13 @@ window.PHX_LAND_LEADS = {
             "price": 720000,
             "sf": 2028
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -8775,8 +9444,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -187,
         "profitAt275": -3119325,
         "salePsf": 440,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -2323,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21570012H",
@@ -8992,7 +9672,13 @@ window.PHX_LAND_LEADS = {
             "price": 1295000,
             "sf": 2776
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -9005,8 +9691,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -86,
         "profitAt275": -1442173,
         "salePsf": 440,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -2323,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16768051",
@@ -9218,7 +9915,13 @@ window.PHX_LAND_LEADS = {
             "price": 3050000,
             "sf": 3936
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -9231,8 +9934,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 19,
         "profitAt275": 571768,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501012B",
@@ -9439,7 +10153,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -9452,8 +10172,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 14,
         "profitAt275": 423801,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21451002U",
@@ -9581,7 +10312,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 106,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16812001H",
@@ -9786,7 +10519,13 @@ window.PHX_LAND_LEADS = {
             "price": 3050000,
             "sf": 3936
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -9799,8 +10538,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 13,
         "profitAt275": 429758,
         "salePsf": 842,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1239744,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501023B",
@@ -9993,7 +10743,13 @@ window.PHX_LAND_LEADS = {
             "price": 1571900,
             "sf": 7325
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -10006,8 +10762,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 10,
         "profitAt275": 283972,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16773006",
@@ -10212,7 +10979,13 @@ window.PHX_LAND_LEADS = {
             "price": 2235000,
             "sf": 3542
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -10225,8 +10998,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 6,
         "profitAt275": 212288,
         "salePsf": 942,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1548716,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20807083",
@@ -10358,7 +11142,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 105,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20707002P",
@@ -10502,7 +11288,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 114,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20604015A",
@@ -10617,7 +11405,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 104,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20807001W",
@@ -10748,7 +11538,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 110,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16766024",
@@ -10941,7 +11733,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -10954,8 +11752,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -30,
         "profitAt275": -795804,
         "salePsf": 699,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 797914,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21525002A",
@@ -11160,7 +11969,13 @@ window.PHX_LAND_LEADS = {
             "price": 1390000,
             "sf": 3050
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -11173,8 +11988,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -34,
         "profitAt275": -580690,
         "salePsf": 456,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 47112,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16643079",
@@ -11396,7 +12222,13 @@ window.PHX_LAND_LEADS = {
             "price": 695000,
             "sf": 3031
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -11409,8 +12241,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 0,
         "profitAt275": -374,
         "salePsf": 482,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 145445,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21174107N",
@@ -11628,7 +12471,13 @@ window.PHX_LAND_LEADS = {
             "price": 1706505,
             "sf": 3038
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -11641,8 +12490,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -11,
         "profitAt275": -162241,
         "salePsf": 400,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -107912,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20413615",
@@ -11761,7 +12621,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-14",
       "lastSeen": "2026-10-18",
       "peakScore": 102,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16773022",
@@ -11980,7 +12842,13 @@ window.PHX_LAND_LEADS = {
             "price": 11900000,
             "sf": 7589
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -11993,8 +12861,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 40,
         "profitAt275": 1845562,
         "salePsf": 1201,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 2348953,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21526026",
@@ -12216,7 +13095,13 @@ window.PHX_LAND_LEADS = {
             "price": 737500,
             "sf": 2004
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -12229,8 +13114,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -23,
         "profitAt275": -377134,
         "salePsf": 440,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -2323,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16601957A",
@@ -12447,7 +13343,13 @@ window.PHX_LAND_LEADS = {
             "price": 498000,
             "sf": 1717
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -12460,8 +13362,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -335,
         "profitAt275": -4337984,
         "salePsf": 341,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -290206,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16768054",
@@ -12672,7 +13585,13 @@ window.PHX_LAND_LEADS = {
             "price": 6225000,
             "sf": 7396
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -12685,8 +13604,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 9,
         "profitAt275": 209156,
         "salePsf": 629,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 581634,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21516036",
@@ -12908,7 +13838,13 @@ window.PHX_LAND_LEADS = {
             "price": 849000,
             "sf": 2799
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -12921,8 +13857,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -14,
         "profitAt275": -197031,
         "salePsf": 363,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -222232,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16766028",
@@ -13113,7 +14060,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -13126,8 +14079,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -25,
         "profitAt275": -664509,
         "salePsf": 699,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 815914,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16512130A",
@@ -13320,7 +14284,13 @@ window.PHX_LAND_LEADS = {
             "price": 1747000,
             "sf": 4258
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -13333,8 +14303,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -20,
         "profitAt275": -352553,
         "salePsf": 455,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": 44022,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501014B",
@@ -13538,7 +14519,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -13551,8 +14538,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 10,
         "profitAt275": 294111,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16766009",
@@ -13744,7 +14742,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -13757,8 +14761,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -30,
         "profitAt275": -796341,
         "salePsf": 699,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 797914,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16608196",
@@ -13952,7 +14967,13 @@ window.PHX_LAND_LEADS = {
             "price": 645000,
             "sf": 2269
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -13965,8 +14986,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -75,
         "profitAt275": -1230584,
         "salePsf": 433,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -5951,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325536",
@@ -14182,7 +15214,13 @@ window.PHX_LAND_LEADS = {
             "price": 1325000,
             "sf": 3050
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -14195,8 +15233,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 9,
         "profitAt275": 170699,
         "salePsf": 478,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 133086,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21435011C",
@@ -14412,7 +15461,13 @@ window.PHX_LAND_LEADS = {
             "price": 1075000,
             "sf": 3000
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -14425,8 +15480,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -344,
         "profitAt275": -4679013,
         "salePsf": 358,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -237680,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501018",
@@ -14625,7 +15691,13 @@ window.PHX_LAND_LEADS = {
             "price": 1571900,
             "sf": 7325
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -14638,8 +15710,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 9,
         "profitAt275": 266999,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501015B",
@@ -14842,7 +15925,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -14855,8 +15944,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 11,
         "profitAt275": 310420,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16619007",
@@ -15073,7 +16173,13 @@ window.PHX_LAND_LEADS = {
             "price": 695000,
             "sf": 3031
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -15086,8 +16192,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 13,
         "profitAt275": 220031,
         "salePsf": 442,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 21856,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20323019P",
@@ -15301,7 +16418,13 @@ window.PHX_LAND_LEADS = {
             "price": 990000,
             "sf": 2926
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -15314,8 +16437,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 3,
         "profitAt275": 39981,
         "salePsf": 397,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -117181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325699",
@@ -15532,7 +16666,13 @@ window.PHX_LAND_LEADS = {
             "price": 2850000,
             "sf": 5201
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -15545,8 +16685,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 20,
         "profitAt275": 414919,
         "salePsf": 548,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 349366,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21454043",
@@ -15751,7 +16902,13 @@ window.PHX_LAND_LEADS = {
             "price": 885000,
             "sf": 3261
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -15764,8 +16921,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -36,
         "profitAt275": -591628,
         "salePsf": 433,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -5951,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16603004E",
@@ -15982,7 +17150,13 @@ window.PHX_LAND_LEADS = {
             "price": 1075000,
             "sf": 3000
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -15995,8 +17169,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -45,
         "profitAt275": -628240,
         "salePsf": 368,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -206783,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20504010K",
@@ -16111,7 +17296,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-18",
       "lastSeen": "2026-10-18",
       "peakScore": 97,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21431004B",
@@ -16238,7 +17425,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 116,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21433022P",
@@ -16377,7 +17566,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 106,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21433141",
@@ -16516,7 +17707,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 106,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16640298J",
@@ -16732,7 +17925,13 @@ window.PHX_LAND_LEADS = {
             "price": 425000,
             "sf": 2261
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -16745,8 +17944,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -34,
         "profitAt275": -572741,
         "salePsf": 442,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": 3856,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20824016A",
@@ -16962,7 +18172,13 @@ window.PHX_LAND_LEADS = {
             "price": 1800000,
             "sf": 5382
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -16975,8 +18191,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -110,
         "profitAt275": -1414473,
         "salePsf": 338,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -317475,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21526024",
@@ -17192,7 +18419,13 @@ window.PHX_LAND_LEADS = {
             "price": 737500,
             "sf": 2004
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -17205,8 +18438,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -14,
         "profitAt275": -232149,
         "salePsf": 440,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -2323,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21308007E",
@@ -17416,7 +18660,13 @@ window.PHX_LAND_LEADS = {
             "price": 625000,
             "sf": 1894
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -17429,8 +18679,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -20,
         "profitAt275": -304191,
         "salePsf": 397,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -135181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325688",
@@ -17648,7 +18909,13 @@ window.PHX_LAND_LEADS = {
             "price": 1350000,
             "sf": 3179
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -17661,8 +18928,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 15,
         "profitAt275": 316547,
         "salePsf": 548,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 349366,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16617002X",
@@ -17879,7 +19157,13 @@ window.PHX_LAND_LEADS = {
             "price": 425000,
             "sf": 2261
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -17892,8 +19176,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -10,
         "profitAt275": -162398,
         "salePsf": 442,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 21856,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21124013K",
@@ -18109,7 +19404,13 @@ window.PHX_LAND_LEADS = {
             "price": 1658349,
             "sf": 4124
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -18122,8 +19423,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 0,
         "profitAt275": -2935,
         "salePsf": 402,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -101733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21411894",
@@ -18316,7 +19628,13 @@ window.PHX_LAND_LEADS = {
             "price": 527364,
             "sf": 1590
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -18329,8 +19647,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -35,
         "profitAt275": -441737,
         "salePsf": 332,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -318013,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21440004G",
@@ -18469,7 +19798,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 95,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20338004C",
@@ -18685,7 +20016,13 @@ window.PHX_LAND_LEADS = {
             "price": 1325000,
             "sf": 3050
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": 535000,
       "verdict": {
@@ -18698,7 +20035,26 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -12,
         "profitAt275": -191028,
         "salePsf": 434,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -2862,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": {
+        "landCost": 535000,
+        "source": "Maricopa County Assessor recorded parcel sale, from the stored county data",
+        "sourceUrl": "https://mcassessor.maricopa.gov/mcs/?q=20338004C",
+        "observedAt": "2026-10-18",
+        "priceDate": "2026-04-01",
+        "priceType": "recorded historical sale",
+        "note": "2812 W Cloud Rd: stored county SALE_PRICE / SALE_DATE. This is the owner's recorded April 2026 purchase, not a current asking price or agreed offer. Replace with a sourced current price when available."
       }
     },
     {
@@ -18916,7 +20272,13 @@ window.PHX_LAND_LEADS = {
             "price": 500000,
             "sf": 2236
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -18929,8 +20291,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -48,
         "profitAt275": -482400,
         "salePsf": 262,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -534293,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20807084H",
@@ -19147,7 +20520,13 @@ window.PHX_LAND_LEADS = {
             "price": 422500,
             "sf": 1871
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -19160,8 +20539,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -50,
         "profitAt275": -494012,
         "salePsf": 258,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -546652,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325645",
@@ -19376,7 +20766,13 @@ window.PHX_LAND_LEADS = {
             "price": 1325000,
             "sf": 3050
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -19389,8 +20785,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 10,
         "profitAt275": 176614,
         "salePsf": 478,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 133086,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21012015K",
@@ -19606,7 +21013,13 @@ window.PHX_LAND_LEADS = {
             "price": 930000,
             "sf": 2733
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -19619,8 +21032,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -73,
         "profitAt275": -888464,
         "salePsf": 322,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -366910,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21168037F",
@@ -19834,7 +21258,13 @@ window.PHX_LAND_LEADS = {
             "price": 1140000,
             "sf": 3143
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -19847,8 +21277,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -5,
         "profitAt275": -73362,
         "salePsf": 411,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -91925,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21308014C",
@@ -20058,7 +21499,13 @@ window.PHX_LAND_LEADS = {
             "price": 765000,
             "sf": 2986
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -20071,8 +21518,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -39,
         "profitAt275": -587206,
         "salePsf": 397,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -135181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21308016C",
@@ -20282,7 +21740,13 @@ window.PHX_LAND_LEADS = {
             "price": 1995000,
             "sf": 5944
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -20295,8 +21759,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -52,
         "profitAt275": -669528,
         "salePsf": 336,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -323654,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16647008",
@@ -20512,7 +21987,13 @@ window.PHX_LAND_LEADS = {
             "price": 2240000,
             "sf": 4922
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -20525,8 +22006,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -41,
         "profitAt275": -532007,
         "salePsf": 341,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -308206,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16619002A",
@@ -20744,7 +22236,13 @@ window.PHX_LAND_LEADS = {
             "price": 695000,
             "sf": 3031
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -20757,8 +22255,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 15,
         "profitAt275": 245545,
         "salePsf": 442,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 21856,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "15901284",
@@ -20976,7 +22485,13 @@ window.PHX_LAND_LEADS = {
             "price": 695000,
             "sf": 3031
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -20989,8 +22504,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 13,
         "profitAt275": 237493,
         "salePsf": 482,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 145445,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20715022C",
@@ -21211,7 +22737,13 @@ window.PHX_LAND_LEADS = {
             "price": 485000,
             "sf": 2287
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -21224,8 +22756,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -103,
         "profitAt275": -967206,
         "salePsf": 248,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -577550,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16619010",
@@ -21445,11 +22988,17 @@ window.PHX_LAND_LEADS = {
             "price": 695000,
             "sf": 3031
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 181329,
         "finished": 1679600,
@@ -21458,8 +23007,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 13,
         "profitAt275": 216888,
         "salePsf": 442,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 21856,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16601003H",
@@ -21675,7 +23235,13 @@ window.PHX_LAND_LEADS = {
             "price": 498000,
             "sf": 1717
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -21688,8 +23254,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -349,
         "profitAt275": -4528063,
         "salePsf": 341,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -290206,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16656226",
@@ -21905,7 +23482,13 @@ window.PHX_LAND_LEADS = {
             "price": 200000,
             "sf": 2350
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -21918,8 +23501,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -16,
         "profitAt275": -1194550,
         "salePsf": 624,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": 719352,
+        "offerHomes": 4,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21013007",
@@ -22136,7 +23730,13 @@ window.PHX_LAND_LEADS = {
             "price": 1325000,
             "sf": 4198
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -22149,8 +23749,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -29,
         "profitAt275": -353587,
         "salePsf": 322,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -348910,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501025F",
@@ -22361,7 +23972,13 @@ window.PHX_LAND_LEADS = {
             "price": 1571900,
             "sf": 7325
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -22374,8 +23991,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 10,
         "profitAt275": 295291,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16881022",
@@ -22589,7 +24217,13 @@ window.PHX_LAND_LEADS = {
             "price": 11750000,
             "sf": 7739
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -22602,8 +24236,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 52,
         "profitAt275": 2974490,
         "salePsf": 1518,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": 3328394,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16610029",
@@ -22818,7 +24463,13 @@ window.PHX_LAND_LEADS = {
             "price": 425000,
             "sf": 2261
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -22831,8 +24482,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 21,
         "profitAt275": 388574,
         "salePsf": 482,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 145445,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16643010",
@@ -23047,7 +24709,13 @@ window.PHX_LAND_LEADS = {
             "price": 425000,
             "sf": 2261
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -23060,8 +24728,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 21,
         "profitAt275": 389983,
         "salePsf": 482,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 145445,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16641032",
@@ -23276,7 +24955,13 @@ window.PHX_LAND_LEADS = {
             "price": 425000,
             "sf": 2261
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -23289,8 +24974,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 20,
         "profitAt275": 363502,
         "salePsf": 482,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 145445,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325608",
@@ -23505,7 +25201,13 @@ window.PHX_LAND_LEADS = {
             "price": 750000,
             "sf": 3232
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -23518,8 +25220,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 16,
         "profitAt275": 293762,
         "salePsf": 478,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 133086,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20907045B",
@@ -23646,7 +25359,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 91,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21433017",
@@ -23837,7 +25552,13 @@ window.PHX_LAND_LEADS = {
             "price": 570000,
             "sf": 2192
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -23850,8 +25571,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -22,
         "profitAt275": -360530,
         "salePsf": 440,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 15677,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21332006",
@@ -23989,7 +25721,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 91,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21012015L",
@@ -24205,7 +25939,13 @@ window.PHX_LAND_LEADS = {
             "price": 880000,
             "sf": 2391
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -24218,8 +25958,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -53,
         "profitAt275": -654364,
         "salePsf": 322,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -366910,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21308007C",
@@ -24429,7 +26180,13 @@ window.PHX_LAND_LEADS = {
             "price": 625000,
             "sf": 1894
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -24442,8 +26199,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -27,
         "profitAt275": -406590,
         "salePsf": 397,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -135181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21409030B",
@@ -24580,7 +26348,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 110,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21519383",
@@ -24722,7 +26492,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 110,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20424981",
@@ -24837,7 +26609,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-18",
       "peakScore": 90,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21174092P",
@@ -25054,7 +26828,13 @@ window.PHX_LAND_LEADS = {
             "price": 1065000,
             "sf": 2737
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -25067,8 +26847,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -58,
         "profitAt275": -858300,
         "salePsf": 389,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -141899,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "15901318",
@@ -25284,7 +27075,13 @@ window.PHX_LAND_LEADS = {
             "price": 695000,
             "sf": 3031
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -25297,8 +27094,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 14,
         "profitAt275": 250018,
         "salePsf": 482,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 145445,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21215470",
@@ -25490,7 +27298,13 @@ window.PHX_LAND_LEADS = {
             "price": 720000,
             "sf": 1612
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -25503,8 +27317,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -9,
         "profitAt275": -120571,
         "salePsf": 363,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -222232,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501025D",
@@ -25721,7 +27546,13 @@ window.PHX_LAND_LEADS = {
             "price": 1571900,
             "sf": 7325
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -25734,8 +27565,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 10,
         "profitAt275": 294111,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501014A",
@@ -25940,7 +27782,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -25953,8 +27801,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 10,
         "profitAt275": 298779,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501023A",
@@ -26147,7 +28006,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -26160,8 +28025,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 10,
         "profitAt275": 287728,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21526016C",
@@ -26377,7 +28253,13 @@ window.PHX_LAND_LEADS = {
             "price": 737500,
             "sf": 2004
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -26390,8 +28272,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -4,
         "profitAt275": -58809,
         "salePsf": 440,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -2323,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21571010C",
@@ -26608,7 +28501,13 @@ window.PHX_LAND_LEADS = {
             "price": 1390000,
             "sf": 3050
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -26621,8 +28520,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -17,
         "profitAt275": -293120,
         "salePsf": 456,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": 47112,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21309001S",
@@ -26839,7 +28749,13 @@ window.PHX_LAND_LEADS = {
             "price": 575000,
             "sf": 1522
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -26852,8 +28768,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -15,
         "profitAt275": -215651,
         "salePsf": 378,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -175886,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21318002H",
@@ -26986,7 +28913,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 109,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16611005",
@@ -27202,7 +29131,13 @@ window.PHX_LAND_LEADS = {
             "price": 645000,
             "sf": 2269
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -27215,8 +29150,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 17,
         "profitAt275": 313323,
         "salePsf": 482,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 145445,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16643029",
@@ -27432,7 +29378,13 @@ window.PHX_LAND_LEADS = {
             "price": 695000,
             "sf": 3031
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -27445,8 +29397,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 20,
         "profitAt275": 365381,
         "salePsf": 482,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 145445,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21173092",
@@ -27659,7 +29622,13 @@ window.PHX_LAND_LEADS = {
             "price": 1305000,
             "sf": 3700
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -27672,8 +29641,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 0,
         "profitAt275": 664,
         "salePsf": 353,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -253129,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20413789",
@@ -27787,7 +29767,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-10",
       "lastSeen": "2026-10-18",
       "peakScore": 89,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21399083",
@@ -28003,7 +29985,13 @@ window.PHX_LAND_LEADS = {
             "price": 495000,
             "sf": 1758
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -28016,8 +30004,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -46,
         "profitAt275": -493138,
         "salePsf": 282,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -472499,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21010026D",
@@ -28233,7 +30232,13 @@ window.PHX_LAND_LEADS = {
             "price": 1450000,
             "sf": 2983
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -28246,8 +30251,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -12,
         "profitAt275": -179333,
         "salePsf": 399,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -129002,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21168079",
@@ -28460,7 +30476,13 @@ window.PHX_LAND_LEADS = {
             "price": 1025000,
             "sf": 3007
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -28473,8 +30495,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -23,
         "profitAt275": -346194,
         "salePsf": 398,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -132092,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21012020L",
@@ -28690,7 +30723,13 @@ window.PHX_LAND_LEADS = {
             "price": 930000,
             "sf": 2733
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -28703,8 +30742,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -46,
         "profitAt275": -559241,
         "salePsf": 322,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -366910,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20813012E",
@@ -28914,7 +30964,13 @@ window.PHX_LAND_LEADS = {
             "price": 874300,
             "sf": 3688
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -28927,8 +30983,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -356,
         "profitAt275": -4567656,
         "salePsf": 338,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -299475,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21524017A",
@@ -29132,7 +31199,13 @@ window.PHX_LAND_LEADS = {
             "price": 720000,
             "sf": 2028
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -29145,8 +31218,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -6,
         "profitAt275": -102138,
         "salePsf": 440,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 15677,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21526029",
@@ -29321,7 +31405,13 @@ window.PHX_LAND_LEADS = {
             "price": 1295000,
             "sf": 2776
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -29334,8 +31424,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -12,
         "profitAt275": -206469,
         "salePsf": 440,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -2323,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21308014F",
@@ -29505,7 +31606,13 @@ window.PHX_LAND_LEADS = {
             "price": 655000,
             "sf": 1624
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -29518,8 +31625,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -30,
         "profitAt275": -455061,
         "salePsf": 397,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -135181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16610050",
@@ -29696,7 +31814,13 @@ window.PHX_LAND_LEADS = {
             "price": 645000,
             "sf": 2269
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -29709,8 +31833,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 2,
         "profitAt275": 32441,
         "salePsf": 482,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 145445,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325619",
@@ -29887,11 +32022,17 @@ window.PHX_LAND_LEADS = {
             "price": 700000,
             "sf": 3907
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 306175,
         "finished": 1816400,
@@ -29900,8 +32041,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 12,
         "profitAt275": 215999,
         "salePsf": 478,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 133086,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325646",
@@ -30078,11 +32230,17 @@ window.PHX_LAND_LEADS = {
             "price": 1325000,
             "sf": 3050
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 321109,
         "finished": 1816400,
@@ -30091,8 +32249,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 11,
         "profitAt275": 200019,
         "salePsf": 478,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 133086,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21014034E",
@@ -30268,7 +32437,13 @@ window.PHX_LAND_LEADS = {
             "price": 930000,
             "sf": 2733
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -30281,8 +32456,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -7,
         "profitAt275": -88856,
         "salePsf": 340,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -293295,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21014036E",
@@ -30458,7 +32644,13 @@ window.PHX_LAND_LEADS = {
             "price": 935000,
             "sf": 4034
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -30471,8 +32663,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 3,
         "profitAt275": 40014,
         "salePsf": 363,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -222232,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21174095G",
@@ -30648,7 +32851,13 @@ window.PHX_LAND_LEADS = {
             "price": 1658349,
             "sf": 4124
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -30661,8 +32870,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 6,
         "profitAt275": 89390,
         "salePsf": 402,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -101733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21454007",
@@ -30839,7 +33059,13 @@ window.PHX_LAND_LEADS = {
             "price": 1075000,
             "sf": 3000
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -30852,8 +33078,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -9,
         "profitAt275": -145175,
         "salePsf": 433,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -5951,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21405018G",
@@ -30968,7 +33205,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 97,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21408031C",
@@ -31145,7 +33384,13 @@ window.PHX_LAND_LEADS = {
             "price": 569900,
             "sf": 1574
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -31158,8 +33403,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -8,
         "profitAt275": -111375,
         "salePsf": 362,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -225321,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16640019",
@@ -31334,7 +33590,13 @@ window.PHX_LAND_LEADS = {
             "price": 890000,
             "sf": 2732
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -31347,8 +33609,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 15,
         "profitAt275": 248520,
         "salePsf": 442,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 21856,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21122002F",
@@ -31520,7 +33793,13 @@ window.PHX_LAND_LEADS = {
             "price": 178000,
             "sf": 2357
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -31533,8 +33812,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -15,
         "profitAt275": -179653,
         "salePsf": 323,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -345821,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20337005F",
@@ -31706,7 +33996,13 @@ window.PHX_LAND_LEADS = {
             "price": 1100000,
             "sf": 3176
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -31719,8 +34015,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -7,
         "profitAt275": -109872,
         "salePsf": 397,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -117181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16773008",
@@ -31898,7 +34205,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -31911,8 +34224,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 1,
         "profitAt275": 37132,
         "salePsf": 699,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 797914,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16848052A",
@@ -32089,7 +34413,13 @@ window.PHX_LAND_LEADS = {
             "price": 11900000,
             "sf": 7589
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -32102,8 +34432,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 56,
         "profitAt275": 10469438,
         "salePsf": 1539,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": 9748051,
+        "offerHomes": 4,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20907045E",
@@ -32236,7 +34577,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 106,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21124025D",
@@ -32411,7 +34754,13 @@ window.PHX_LAND_LEADS = {
             "price": 1150000,
             "sf": 2374
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -32424,8 +34773,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 14,
         "profitAt275": 237220,
         "salePsf": 457,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": 68202,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20816428",
@@ -32600,7 +34960,13 @@ window.PHX_LAND_LEADS = {
             "price": 1965250,
             "sf": 6465
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -32613,8 +34979,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -30,
         "profitAt275": -359937,
         "salePsf": 319,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -358179,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501008A",
@@ -32779,7 +35156,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -32792,8 +35175,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 7,
         "profitAt275": 207392,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16773013",
@@ -32970,7 +35364,13 @@ window.PHX_LAND_LEADS = {
             "price": 2235000,
             "sf": 3542
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -32983,8 +35383,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 26,
         "profitAt275": 939611,
         "salePsf": 942,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1548716,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16772006",
@@ -33162,7 +35573,13 @@ window.PHX_LAND_LEADS = {
             "price": 11900000,
             "sf": 7589
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -33175,8 +35592,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 46,
         "profitAt275": 2092201,
         "salePsf": 1201,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 2348953,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325687",
@@ -33353,7 +35781,13 @@ window.PHX_LAND_LEADS = {
             "price": 1350000,
             "sf": 3179
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -33366,8 +35800,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 14,
         "profitAt275": 716450,
         "salePsf": 548,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": 349366,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21325001P",
@@ -33504,7 +35949,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-18",
       "peakScore": 85,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16610001",
@@ -33681,7 +36128,13 @@ window.PHX_LAND_LEADS = {
             "price": 645000,
             "sf": 2269
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -33694,8 +36147,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 5,
         "profitAt275": 91795,
         "salePsf": 482,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 145445,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21434036C",
@@ -33872,7 +36336,13 @@ window.PHX_LAND_LEADS = {
             "price": 737500,
             "sf": 2004
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -33885,8 +36355,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -10,
         "profitAt275": -170337,
         "salePsf": 440,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 15677,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16606067",
@@ -34060,7 +36541,13 @@ window.PHX_LAND_LEADS = {
             "price": 515000,
             "sf": 1850
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -34073,8 +36560,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -32,
         "profitAt275": -417850,
         "salePsf": 341,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -290206,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325647",
@@ -34249,11 +36747,17 @@ window.PHX_LAND_LEADS = {
             "price": 1325000,
             "sf": 3050
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 315051,
         "finished": 1816400,
@@ -34262,8 +36766,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 11,
         "profitAt275": 206501,
         "salePsf": 478,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 133086,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20337007G",
@@ -34436,7 +36951,13 @@ window.PHX_LAND_LEADS = {
             "price": 820000,
             "sf": 2524
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -34449,8 +36970,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -1,
         "profitAt275": -12117,
         "salePsf": 397,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -117181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21149021C",
@@ -34610,7 +37142,13 @@ window.PHX_LAND_LEADS = {
             "price": 1140000,
             "sf": 3143
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -34623,8 +37161,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -13,
         "profitAt275": -195957,
         "salePsf": 398,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -114092,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21149021B",
@@ -34784,7 +37333,13 @@ window.PHX_LAND_LEADS = {
             "price": 1140000,
             "sf": 3143
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -34797,8 +37352,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -13,
         "profitAt275": -195957,
         "salePsf": 398,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -114092,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21153042F",
@@ -34971,7 +37537,13 @@ window.PHX_LAND_LEADS = {
             "price": 1150000,
             "sf": 2374
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -34984,8 +37556,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 13,
         "profitAt275": 223861,
         "salePsf": 470,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 108368,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21153063F",
@@ -35158,7 +37741,13 @@ window.PHX_LAND_LEADS = {
             "price": 1150000,
             "sf": 2374
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -35171,8 +37760,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 14,
         "profitAt275": 242985,
         "salePsf": 470,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 108368,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21447848",
@@ -35347,7 +37947,13 @@ window.PHX_LAND_LEADS = {
             "price": 2000000,
             "sf": 3968
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -35360,8 +37966,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 6,
         "profitAt275": 114841,
         "salePsf": 504,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 213419,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21171005C",
@@ -35534,7 +38151,13 @@ window.PHX_LAND_LEADS = {
             "price": 575000,
             "sf": 1639
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -35547,8 +38170,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -42,
         "profitAt275": -448462,
         "salePsf": 283,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -469409,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20338049B",
@@ -35721,7 +38355,13 @@ window.PHX_LAND_LEADS = {
             "price": 955000,
             "sf": 2407
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -35734,8 +38374,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 8,
         "profitAt275": 130726,
         "salePsf": 434,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -2862,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20336012J",
@@ -35908,11 +38559,17 @@ window.PHX_LAND_LEADS = {
             "price": 1275000,
             "sf": 2710
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 208342,
         "finished": 1687200,
@@ -35921,8 +38578,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 12,
         "profitAt275": 195356,
         "salePsf": 444,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 28036,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21153041E",
@@ -36095,7 +38763,13 @@ window.PHX_LAND_LEADS = {
             "price": 865000,
             "sf": 2997
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -36108,8 +38782,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -6,
         "profitAt275": -95649,
         "salePsf": 397,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -117181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20337002B",
@@ -36282,7 +38967,13 @@ window.PHX_LAND_LEADS = {
             "price": 990000,
             "sf": 2926
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -36295,8 +38986,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -4,
         "profitAt275": -60550,
         "salePsf": 397,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -117181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20337002C",
@@ -36469,7 +39171,13 @@ window.PHX_LAND_LEADS = {
             "price": 820000,
             "sf": 2524
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -36482,8 +39190,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -4,
         "profitAt275": -60292,
         "salePsf": 397,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -117181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21174007K",
@@ -36656,7 +39375,13 @@ window.PHX_LAND_LEADS = {
             "price": 1025000,
             "sf": 3007
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -36669,8 +39394,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -9,
         "profitAt275": -138137,
         "salePsf": 397,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -117181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21153038R",
@@ -36843,7 +39579,13 @@ window.PHX_LAND_LEADS = {
             "price": 865000,
             "sf": 2997
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -36856,8 +39598,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 1,
         "profitAt275": 13108,
         "salePsf": 397,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -117181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20401924",
@@ -36987,7 +39740,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-18",
       "peakScore": 90,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20807084E",
@@ -37125,7 +39880,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-11",
       "lastSeen": "2026-10-18",
       "peakScore": 84,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20807084G",
@@ -37301,7 +40058,13 @@ window.PHX_LAND_LEADS = {
             "price": 422500,
             "sf": 1871
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -37314,8 +40077,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -49,
         "profitAt275": -478853,
         "salePsf": 258,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -546652,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21150014F",
@@ -37488,11 +40262,17 @@ window.PHX_LAND_LEADS = {
             "price": 1350000,
             "sf": 3064
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 195600,
         "finished": 1675800,
@@ -37501,8 +40281,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 12,
         "profitAt275": 197932,
         "salePsf": 441,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": 18766,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21526037",
@@ -37640,7 +40431,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 84,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20325350",
@@ -37815,7 +40608,13 @@ window.PHX_LAND_LEADS = {
             "price": 650000,
             "sf": 2422
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -37828,8 +40627,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 14,
         "profitAt275": 246595,
         "salePsf": 478,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 133086,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21447850",
@@ -38004,7 +40814,13 @@ window.PHX_LAND_LEADS = {
             "price": 795000,
             "sf": 2329
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -38017,8 +40833,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 13,
         "profitAt275": 235985,
         "salePsf": 482,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 145445,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20715002D",
@@ -38144,7 +40971,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 103,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20413001R",
@@ -38321,7 +41150,13 @@ window.PHX_LAND_LEADS = {
             "price": 635000,
             "sf": 1923
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -38334,8 +41169,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -171,
         "profitAt275": -2158304,
         "salePsf": 332,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -318013,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20816005S",
@@ -38512,7 +41358,13 @@ window.PHX_LAND_LEADS = {
             "price": 3650000,
             "sf": 10129
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -38525,8 +41377,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -31,
         "profitAt275": -392944,
         "salePsf": 338,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -299475,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21311004C",
@@ -38658,7 +41521,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 89,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21311004D",
@@ -38790,7 +41655,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 89,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20827743",
@@ -38927,7 +41794,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-12",
       "lastSeen": "2026-10-18",
       "peakScore": 83,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21305964",
@@ -39064,7 +41933,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-14",
       "lastSeen": "2026-10-18",
       "peakScore": 83,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21455015B",
@@ -39215,7 +42086,13 @@ window.PHX_LAND_LEADS = {
             "price": 1360000,
             "sf": 4134
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -39228,8 +42105,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -111,
         "profitAt275": -1511879,
         "salePsf": 358,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -237680,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16773010",
@@ -39407,7 +42295,13 @@ window.PHX_LAND_LEADS = {
             "price": 11900000,
             "sf": 7589
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -39420,8 +42314,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 40,
         "profitAt275": 1804625,
         "salePsf": 1201,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 2348953,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16768028",
@@ -39598,7 +42503,13 @@ window.PHX_LAND_LEADS = {
             "price": 6225000,
             "sf": 7396
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -39611,8 +42522,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 27,
         "profitAt275": 869605,
         "salePsf": 842,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1239744,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16772008",
@@ -39777,7 +42699,13 @@ window.PHX_LAND_LEADS = {
             "price": 2235000,
             "sf": 3542
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -39790,8 +42718,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 39,
         "profitAt275": 1379976,
         "salePsf": 942,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1548716,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16501034",
@@ -39942,7 +42881,13 @@ window.PHX_LAND_LEADS = {
             "price": 4850000,
             "sf": 5146
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -39955,8 +42900,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 15,
         "profitAt275": 489673,
         "salePsf": 842,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1239744,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16772009",
@@ -40133,7 +43089,13 @@ window.PHX_LAND_LEADS = {
             "price": 2235000,
             "sf": 3542
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -40146,8 +43108,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 37,
         "profitAt275": 1333867,
         "salePsf": 942,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1548716,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16772017",
@@ -40312,7 +43285,13 @@ window.PHX_LAND_LEADS = {
             "price": 8600000,
             "sf": 7159
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -40325,8 +43304,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 44,
         "profitAt275": 1579460,
         "salePsf": 942,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1548716,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20604018K",
@@ -40502,7 +43492,13 @@ window.PHX_LAND_LEADS = {
             "price": 322500,
             "sf": 2082
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -40515,8 +43511,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -38,
         "profitAt275": -374823,
         "salePsf": 263,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -531204,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21320004",
@@ -40668,7 +43675,13 @@ window.PHX_LAND_LEADS = {
             "price": 975000,
             "sf": 3589
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -40681,8 +43694,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -39,
         "profitAt275": -442217,
         "salePsf": 299,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -419974,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21411918",
@@ -40863,7 +43887,13 @@ window.PHX_LAND_LEADS = {
             "price": 527364,
             "sf": 1590
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -40876,8 +43906,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -38,
         "profitAt275": -474124,
         "salePsf": 332,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -318013,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21124072D",
@@ -41051,7 +44092,13 @@ window.PHX_LAND_LEADS = {
             "price": 1665000,
             "sf": 4277
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -41064,8 +44111,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -9,
         "profitAt275": -138604,
         "salePsf": 402,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -101733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21403133C",
@@ -41240,7 +44298,13 @@ window.PHX_LAND_LEADS = {
             "price": 569900,
             "sf": 1574
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -41253,8 +44317,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -8,
         "profitAt275": -109315,
         "salePsf": 362,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -225321,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21411829",
@@ -41429,7 +44504,13 @@ window.PHX_LAND_LEADS = {
             "price": 645000,
             "sf": 2610
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -41442,8 +44523,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -37,
         "profitAt275": -409599,
         "salePsf": 288,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -453961,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21454021",
@@ -41606,7 +44698,13 @@ window.PHX_LAND_LEADS = {
             "price": 1075000,
             "sf": 3000
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -41619,8 +44717,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -11,
         "profitAt275": -181369,
         "salePsf": 433,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -5951,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20816478",
@@ -41797,7 +44906,13 @@ window.PHX_LAND_LEADS = {
             "price": 1800000,
             "sf": 5382
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -41810,8 +44925,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -125,
         "profitAt275": -1603559,
         "salePsf": 338,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -317475,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16773011",
@@ -41988,7 +45114,13 @@ window.PHX_LAND_LEADS = {
             "price": 2235000,
             "sf": 3542
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -42001,8 +45133,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 26,
         "profitAt275": 935618,
         "salePsf": 942,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1548716,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16773012",
@@ -42179,7 +45322,13 @@ window.PHX_LAND_LEADS = {
             "price": 2235000,
             "sf": 3542
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -42192,8 +45341,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 26,
         "profitAt275": 936192,
         "salePsf": 942,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1548716,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20424983",
@@ -42333,7 +45493,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 110,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20424982",
@@ -42473,7 +45635,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 110,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20904070C",
@@ -42638,7 +45802,13 @@ window.PHX_LAND_LEADS = {
             "price": 322500,
             "sf": 2082
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -42651,8 +45821,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -38,
         "profitAt275": -376428,
         "salePsf": 263,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -531204,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20904069A",
@@ -42829,7 +46010,13 @@ window.PHX_LAND_LEADS = {
             "price": 322500,
             "sf": 2082
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -42842,8 +46029,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -48,
         "profitAt275": -479469,
         "salePsf": 263,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -531204,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16515028",
@@ -43007,7 +46205,13 @@ window.PHX_LAND_LEADS = {
             "price": 975000,
             "sf": 3369
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -43020,8 +46224,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 20,
         "profitAt275": 586198,
         "salePsf": 775,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1032733,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16772011",
@@ -43186,7 +46401,13 @@ window.PHX_LAND_LEADS = {
             "price": 11900000,
             "sf": 7589
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -43199,8 +46420,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 50,
         "profitAt275": 2286445,
         "salePsf": 1201,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 2348953,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16772018",
@@ -43365,7 +46597,13 @@ window.PHX_LAND_LEADS = {
             "price": 8600000,
             "sf": 7159
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -43378,8 +46616,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 44,
         "profitAt275": 1574604,
         "salePsf": 942,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1548716,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16772016",
@@ -43532,7 +46781,13 @@ window.PHX_LAND_LEADS = {
             "price": 1659000,
             "sf": 4399
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -43545,8 +46800,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 18,
         "profitAt275": 427540,
         "salePsf": 631,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 587813,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16772019",
@@ -43711,7 +46977,13 @@ window.PHX_LAND_LEADS = {
             "price": 8600000,
             "sf": 7159
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -43724,8 +46996,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 44,
         "profitAt275": 1568572,
         "salePsf": 942,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1548716,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20816269",
@@ -43900,7 +47183,13 @@ window.PHX_LAND_LEADS = {
             "price": 1800000,
             "sf": 5382
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -43913,8 +47202,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -21,
         "profitAt275": -269337,
         "salePsf": 334,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -311834,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325590",
@@ -44090,7 +47390,13 @@ window.PHX_LAND_LEADS = {
             "price": 920000,
             "sf": 4014
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -44103,8 +47409,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 14,
         "profitAt275": 260716,
         "salePsf": 478,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 133086,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325644",
@@ -44280,7 +47597,13 @@ window.PHX_LAND_LEADS = {
             "price": 1325000,
             "sf": 3050
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -44293,8 +47616,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 13,
         "profitAt275": 241681,
         "salePsf": 478,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 133086,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21403086A",
@@ -44470,7 +47804,13 @@ window.PHX_LAND_LEADS = {
             "price": 410000,
             "sf": 1513
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -44483,8 +47823,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -15,
         "profitAt275": -194259,
         "salePsf": 339,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -296385,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21403086B",
@@ -44660,7 +48011,13 @@ window.PHX_LAND_LEADS = {
             "price": 410000,
             "sf": 1513
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -44673,8 +48030,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -15,
         "profitAt275": -194535,
         "salePsf": 339,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -296385,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21403086C",
@@ -44850,7 +48218,13 @@ window.PHX_LAND_LEADS = {
             "price": 410000,
             "sf": 1513
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -44863,8 +48237,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -15,
         "profitAt275": -194535,
         "salePsf": 339,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -296385,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21411909",
@@ -45040,7 +48425,13 @@ window.PHX_LAND_LEADS = {
             "price": 1900000,
             "sf": 4705
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -45053,8 +48444,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -32,
         "profitAt275": -401325,
         "salePsf": 332,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -318013,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20813003L",
@@ -45230,7 +48632,13 @@ window.PHX_LAND_LEADS = {
             "price": 2900000,
             "sf": 9094
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -45243,8 +48651,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -21,
         "profitAt275": -249631,
         "salePsf": 319,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -358179,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20338023",
@@ -45419,7 +48838,13 @@ window.PHX_LAND_LEADS = {
             "price": 955000,
             "sf": 2407
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -45432,8 +48857,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 7,
         "profitAt275": 113257,
         "salePsf": 425,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -30669,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21120115",
@@ -45607,7 +49043,13 @@ window.PHX_LAND_LEADS = {
             "price": 1251727,
             "sf": 2808
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -45620,8 +49062,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -22,
         "profitAt275": -378977,
         "salePsf": 446,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 16215,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16637007A",
@@ -45798,7 +49251,13 @@ window.PHX_LAND_LEADS = {
             "price": 490000,
             "sf": 1717
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -45811,8 +49270,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 14,
         "profitAt275": 520996,
         "salePsf": 629,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 581634,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16637017B",
@@ -45989,7 +49459,13 @@ window.PHX_LAND_LEADS = {
             "price": 490000,
             "sf": 1717
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -46002,8 +49478,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 18,
         "profitAt275": 435407,
         "salePsf": 624,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 566185,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16766013",
@@ -46156,7 +49643,13 @@ window.PHX_LAND_LEADS = {
             "price": 1375000,
             "sf": 2186
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -46169,8 +49662,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -26,
         "profitAt275": -683992,
         "salePsf": 699,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 797914,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16773005A",
@@ -46323,7 +49827,13 @@ window.PHX_LAND_LEADS = {
             "price": 2235000,
             "sf": 3542
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -46336,8 +49846,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 4,
         "profitAt275": 147116,
         "salePsf": 942,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 1548716,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20814001M",
@@ -46466,7 +49987,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-04",
       "lastSeen": "2026-10-18",
       "peakScore": 94,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21311009",
@@ -46641,7 +50164,13 @@ window.PHX_LAND_LEADS = {
             "price": 920000,
             "sf": 2160
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -46654,8 +50183,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -65,
         "profitAt275": -1057470,
         "salePsf": 426,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -27579,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16639004B",
@@ -46833,7 +50373,13 @@ window.PHX_LAND_LEADS = {
             "price": 490000,
             "sf": 1717
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -46846,8 +50392,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -72,
         "profitAt275": -869714,
         "salePsf": 319,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -376179,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325678",
@@ -47024,7 +50581,13 @@ window.PHX_LAND_LEADS = {
             "price": 990000,
             "sf": 2926
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -47037,8 +50600,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 25,
         "profitAt275": 519625,
         "salePsf": 548,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 349366,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "16611025",
@@ -47176,7 +50750,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 97,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20325689",
@@ -47351,7 +50927,13 @@ window.PHX_LAND_LEADS = {
             "price": 1350000,
             "sf": 3179
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -47364,8 +50946,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 22,
         "profitAt275": 449596,
         "salePsf": 548,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": 349366,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20816431",
@@ -47541,7 +51134,13 @@ window.PHX_LAND_LEADS = {
             "price": 2900000,
             "sf": 9094
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -47554,8 +51153,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -21,
         "profitAt275": -268053,
         "salePsf": 334,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -311834,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21012013L",
@@ -47731,7 +51341,13 @@ window.PHX_LAND_LEADS = {
             "price": 1325000,
             "sf": 4198
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -47744,8 +51360,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -26,
         "profitAt275": -312499,
         "salePsf": 322,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -348910,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21309007H",
@@ -47865,7 +51492,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 97,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21324013B",
@@ -48041,7 +51670,13 @@ window.PHX_LAND_LEADS = {
             "price": 1090000,
             "sf": 4535
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -48054,8 +51689,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -87,
         "profitAt275": -1312131,
         "salePsf": 397,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -117181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21316012C",
@@ -48231,7 +51877,13 @@ window.PHX_LAND_LEADS = {
             "price": 1090000,
             "sf": 4535
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -48244,8 +51896,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -23,
         "profitAt275": -311863,
         "salePsf": 362,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -225321,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21324002",
@@ -48421,7 +52084,13 @@ window.PHX_LAND_LEADS = {
             "price": 1044750,
             "sf": 3632
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -48434,8 +52103,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -136,
         "profitAt275": -1682704,
         "salePsf": 325,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -339641,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20413001S",
@@ -48611,7 +52291,13 @@ window.PHX_LAND_LEADS = {
             "price": 635000,
             "sf": 1923
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -48624,8 +52310,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -182,
         "profitAt275": -2299544,
         "salePsf": 332,
-        "risk": "Medium"
-      }
+        "risk": "Medium",
+        "supportableOffer": -318013,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21431012A",
@@ -48751,7 +52448,9 @@ window.PHX_LAND_LEADS = {
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-18",
       "peakScore": 97,
-      "verdict": null
+      "verdict": null,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "15901302",
@@ -48926,7 +52625,13 @@ window.PHX_LAND_LEADS = {
             "price": 2000000,
             "sf": 3968
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -48939,8 +52644,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 13,
         "profitAt275": 248081,
         "salePsf": 504,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 213419,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325534",
@@ -49115,7 +52831,13 @@ window.PHX_LAND_LEADS = {
             "price": 750000,
             "sf": 3232
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -49128,8 +52850,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 13,
         "profitAt275": 234606,
         "salePsf": 478,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 133086,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "20325630",
@@ -49304,7 +53037,13 @@ window.PHX_LAND_LEADS = {
             "price": 1325000,
             "sf": 3050
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -49317,8 +53056,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 13,
         "profitAt275": 241527,
         "salePsf": 478,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": 133086,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21411890",
@@ -49493,7 +53243,13 @@ window.PHX_LAND_LEADS = {
             "price": 527364,
             "sf": 1590
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "landOverride": null,
       "verdict": {
@@ -49506,8 +53262,19 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -33,
         "profitAt275": -422087,
         "salePsf": 332,
-        "risk": "Low"
-      }
+        "risk": "Low",
+        "supportableOffer": -318013,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      },
+      "landPriceOverride": null
     },
     {
       "apn": "21411009G",
@@ -49725,7 +53492,13 @@ window.PHX_LAND_LEADS = {
             "price": 550000,
             "sf": 2259
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -49737,10 +53510,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -97,
         "profitAt275": -1197972,
         "salePsf": 325,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -357641,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21523014B",
@@ -49958,7 +53742,13 @@ window.PHX_LAND_LEADS = {
             "price": 720000,
             "sf": 2028
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -49970,10 +53760,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -30,
         "profitAt275": -494708,
         "salePsf": 440,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -2323,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21407024M",
@@ -50195,7 +53996,13 @@ window.PHX_LAND_LEADS = {
             "price": 975000,
             "sf": 3589
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -50207,10 +54014,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -114,
         "profitAt275": -1404103,
         "salePsf": 325,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -339641,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21426009",
@@ -50315,7 +54133,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 103,
       "verdict": null,
-      "stale": true
+      "stale": true,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21426008D",
@@ -50432,7 +54252,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 103,
       "verdict": null,
-      "stale": true
+      "stale": true,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21309001P",
@@ -50649,7 +54471,13 @@ window.PHX_LAND_LEADS = {
             "price": 575000,
             "sf": 1522
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -50661,10 +54489,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -39,
         "profitAt275": -558114,
         "salePsf": 378,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -193886,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20604021E",
@@ -50882,7 +54721,13 @@ window.PHX_LAND_LEADS = {
             "price": 322500,
             "sf": 2082
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -50894,10 +54739,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -169,
         "profitAt275": -1689870,
         "salePsf": 263,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -531204,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21215002U",
@@ -51115,7 +54971,13 @@ window.PHX_LAND_LEADS = {
             "price": 680000,
             "sf": 2030
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -51127,10 +54989,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -22,
         "profitAt275": -305147,
         "salePsf": 363,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -240232,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21309007J",
@@ -51350,7 +55223,13 @@ window.PHX_LAND_LEADS = {
             "price": 825000,
             "sf": 2142
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -51362,10 +55241,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -6,
         "profitAt275": -100398,
         "salePsf": 426,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -45579,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21454004",
@@ -51582,7 +55472,13 @@ window.PHX_LAND_LEADS = {
             "price": 1075000,
             "sf": 3000
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -51594,10 +55490,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -41,
         "profitAt275": -674024,
         "salePsf": 433,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -5951,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21454022",
@@ -51814,7 +55721,13 @@ window.PHX_LAND_LEADS = {
             "price": 1075000,
             "sf": 3000
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -51826,10 +55739,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -68,
         "profitAt275": -1117840,
         "salePsf": 433,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -5951,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21399006C",
@@ -52045,7 +55969,13 @@ window.PHX_LAND_LEADS = {
             "price": 735000,
             "sf": 3149
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -52057,10 +55987,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -138,
         "profitAt275": -2086112,
         "salePsf": 397,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -117181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20816438",
@@ -52277,7 +56218,13 @@ window.PHX_LAND_LEADS = {
             "price": 3650000,
             "sf": 10129
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -52289,10 +56236,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -81,
         "profitAt275": -1041688,
         "salePsf": 338,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -299475,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21411917",
@@ -52509,7 +56467,13 @@ window.PHX_LAND_LEADS = {
             "price": 1044750,
             "sf": 3632
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -52521,10 +56485,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -91,
         "profitAt275": -1119686,
         "salePsf": 325,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -339641,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21454005",
@@ -52741,7 +56716,13 @@ window.PHX_LAND_LEADS = {
             "price": 1075000,
             "sf": 3000
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -52753,10 +56734,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -57,
         "profitAt275": -933302,
         "salePsf": 433,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -5951,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21454042",
@@ -52973,7 +56965,13 @@ window.PHX_LAND_LEADS = {
             "price": 885000,
             "sf": 3261
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -52985,10 +56983,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -75,
         "profitAt275": -1234958,
         "salePsf": 433,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -5951,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21431021E",
@@ -53129,7 +57138,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 95,
       "verdict": null,
-      "stale": true
+      "stale": true,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20816007H",
@@ -53339,7 +57350,13 @@ window.PHX_LAND_LEADS = {
             "price": 2900000,
             "sf": 9094
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -53351,10 +57368,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -101,
         "profitAt275": -1286096,
         "salePsf": 334,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -311834,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20816427",
@@ -53570,7 +57598,13 @@ window.PHX_LAND_LEADS = {
             "price": 1965250,
             "sf": 6465
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -53582,10 +57616,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -169,
         "profitAt275": -2051971,
         "salePsf": 319,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -358179,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21215879",
@@ -53801,7 +57846,13 @@ window.PHX_LAND_LEADS = {
             "price": 680000,
             "sf": 2030
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -53813,10 +57864,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -88,
         "profitAt275": -1213538,
         "salePsf": 363,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -222232,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21460013",
@@ -54036,7 +58098,13 @@ window.PHX_LAND_LEADS = {
             "price": 1075000,
             "sf": 3000
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -54048,10 +58116,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -19,
         "profitAt275": -260806,
         "salePsf": 368,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -224783,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21309001F",
@@ -54270,7 +58349,13 @@ window.PHX_LAND_LEADS = {
             "price": 575000,
             "sf": 1522
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -54282,10 +58367,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -16,
         "profitAt275": -230417,
         "salePsf": 378,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -193886,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20604428",
@@ -54501,7 +58597,13 @@ window.PHX_LAND_LEADS = {
             "price": 565000,
             "sf": 2480
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -54513,10 +58615,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -138,
         "profitAt275": -1378206,
         "salePsf": 263,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -531204,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21454006",
@@ -54732,7 +58845,13 @@ window.PHX_LAND_LEADS = {
             "price": 1075000,
             "sf": 3000
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -54744,10 +58863,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -34,
         "profitAt275": -554806,
         "salePsf": 433,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -5951,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16632020",
@@ -54963,7 +59093,13 @@ window.PHX_LAND_LEADS = {
             "price": 590000,
             "sf": 1850
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -54975,10 +59111,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -57,
         "profitAt275": -688156,
         "salePsf": 319,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -358179,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20604060A",
@@ -55154,7 +59301,13 @@ window.PHX_LAND_LEADS = {
             "price": 322500,
             "sf": 2082
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -55166,10 +59319,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -119,
         "profitAt275": -1188041,
         "salePsf": 263,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -531204,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20805002F",
@@ -55276,7 +59440,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 89,
       "verdict": null,
-      "stale": true
+      "stale": true,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20816423",
@@ -55452,7 +59618,13 @@ window.PHX_LAND_LEADS = {
             "price": 2815000,
             "sf": 8330
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -55464,10 +59636,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -85,
         "profitAt275": -1080624,
         "salePsf": 334,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -311834,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21011015N",
@@ -55644,7 +59827,13 @@ window.PHX_LAND_LEADS = {
             "price": 1450000,
             "sf": 2983
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -55656,10 +59845,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -55,
         "profitAt275": -834406,
         "salePsf": 399,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -111002,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21316387C",
@@ -55835,7 +60035,13 @@ window.PHX_LAND_LEADS = {
             "price": 502000,
             "sf": 1876
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -55847,10 +60053,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -60,
         "profitAt275": -780761,
         "salePsf": 343,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -284026,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21326002R",
@@ -56026,7 +60243,13 @@ window.PHX_LAND_LEADS = {
             "price": 765000,
             "sf": 2986
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -56038,10 +60261,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -109,
         "profitAt275": -1237258,
         "salePsf": 299,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -419974,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21454036",
@@ -56217,7 +60451,13 @@ window.PHX_LAND_LEADS = {
             "price": 1360000,
             "sf": 4134
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -56229,10 +60469,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -57,
         "profitAt275": -941794,
         "salePsf": 433,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -5951,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20813003K",
@@ -56409,7 +60660,13 @@ window.PHX_LAND_LEADS = {
             "price": 874300,
             "sf": 3688
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -56421,10 +60678,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -144,
         "profitAt275": -1846052,
         "salePsf": 338,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -299475,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21316628",
@@ -56601,7 +60869,13 @@ window.PHX_LAND_LEADS = {
             "price": 502000,
             "sf": 1876
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -56613,10 +60887,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -75,
         "profitAt275": -976209,
         "salePsf": 343,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -284026,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21316625",
@@ -56793,7 +61078,13 @@ window.PHX_LAND_LEADS = {
             "price": 599000,
             "sf": 1596
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -56805,10 +61096,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -50,
         "profitAt275": -687922,
         "salePsf": 362,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -225321,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21316626",
@@ -56985,7 +61287,13 @@ window.PHX_LAND_LEADS = {
             "price": 599000,
             "sf": 1596
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -56997,10 +61305,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -50,
         "profitAt275": -688082,
         "salePsf": 362,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -225321,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21316627",
@@ -57177,7 +61496,13 @@ window.PHX_LAND_LEADS = {
             "price": 599000,
             "sf": 1596
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -57189,10 +61514,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -50,
         "profitAt275": -688163,
         "salePsf": 362,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -225321,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20816224",
@@ -57369,7 +61705,13 @@ window.PHX_LAND_LEADS = {
             "price": 1965250,
             "sf": 6465
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -57381,10 +61723,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -136,
         "profitAt275": -1642762,
         "salePsf": 319,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -358179,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21215877",
@@ -57561,7 +61914,13 @@ window.PHX_LAND_LEADS = {
             "price": 680000,
             "sf": 2030
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -57573,10 +61932,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -88,
         "profitAt275": -1213832,
         "salePsf": 363,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -222232,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21011021H",
@@ -57751,7 +62121,13 @@ window.PHX_LAND_LEADS = {
             "price": 1450000,
             "sf": 2983
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -57763,10 +62139,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -68,
         "profitAt275": -1036483,
         "salePsf": 399,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -111002,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21399084",
@@ -57943,7 +62330,13 @@ window.PHX_LAND_LEADS = {
             "price": 569900,
             "sf": 1574
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -57955,10 +62348,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -153,
         "profitAt275": -2108434,
         "salePsf": 362,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -225321,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20816425",
@@ -58133,7 +62537,13 @@ window.PHX_LAND_LEADS = {
             "price": 1750000,
             "sf": 4664
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -58145,10 +62555,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -76,
         "profitAt275": -966783,
         "salePsf": 334,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -311834,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20816430",
@@ -58324,7 +62745,13 @@ window.PHX_LAND_LEADS = {
             "price": 2815000,
             "sf": 8330
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -58336,10 +62763,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -144,
         "profitAt275": -1830972,
         "salePsf": 334,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -311834,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20816439",
@@ -58515,7 +62953,13 @@ window.PHX_LAND_LEADS = {
             "price": 1800000,
             "sf": 5382
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -58527,10 +62971,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -81,
         "profitAt275": -1029506,
         "salePsf": 334,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -311834,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21454003",
@@ -58705,7 +63160,13 @@ window.PHX_LAND_LEADS = {
             "price": 1075000,
             "sf": 3000
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -58717,10 +63178,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -40,
         "profitAt275": -657978,
         "salePsf": 433,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -5951,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21454087",
@@ -58895,7 +63367,13 @@ window.PHX_LAND_LEADS = {
             "price": 1075000,
             "sf": 3000
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -58907,10 +63385,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -57,
         "profitAt275": -932585,
         "salePsf": 433,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -5951,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21440502",
@@ -59049,7 +63538,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 87,
       "verdict": null,
-      "stale": true
+      "stale": true,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21153021E",
@@ -59222,7 +63713,13 @@ window.PHX_LAND_LEADS = {
             "price": 1025000,
             "sf": 3007
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -59234,10 +63731,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -63,
         "profitAt275": -946956,
         "salePsf": 397,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -117181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21010035",
@@ -59377,7 +63885,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 86,
       "verdict": null,
-      "stale": true
+      "stale": true,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20325681",
@@ -59554,7 +64064,13 @@ window.PHX_LAND_LEADS = {
             "price": 3000000,
             "sf": 7131
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Good",
@@ -59566,10 +64082,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 23,
         "profitAt275": 483622,
         "salePsf": 548,
-        "risk": "Medium"
+        "risk": "Medium",
+        "supportableOffer": 349366,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21570354",
@@ -59709,7 +64236,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 85,
       "verdict": null,
-      "stale": true
+      "stale": true,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20311073",
@@ -59883,7 +64412,13 @@ window.PHX_LAND_LEADS = {
             "price": 1203000,
             "sf": 2710
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -59895,10 +64430,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -243,
         "profitAt275": -3865145,
         "salePsf": 418,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -52297,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20311071",
@@ -60072,7 +64618,13 @@ window.PHX_LAND_LEADS = {
             "price": 949900,
             "sf": 2530
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -60084,10 +64636,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -202,
         "profitAt275": -3160484,
         "salePsf": 411,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -73925,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21011008E",
@@ -60263,7 +64826,13 @@ window.PHX_LAND_LEADS = {
             "price": 1130000,
             "sf": 2831
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -60275,10 +64844,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -76,
         "profitAt275": -1067718,
         "salePsf": 368,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -206783,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21168058",
@@ -60451,7 +65031,13 @@ window.PHX_LAND_LEADS = {
             "price": 1195000,
             "sf": 3038
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -60463,10 +65049,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -52,
         "profitAt275": -805977,
         "salePsf": 411,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -73925,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21434036A",
@@ -60645,7 +65242,13 @@ window.PHX_LAND_LEADS = {
             "price": 2000000,
             "sf": 4890
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -60657,10 +65260,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -31,
         "profitAt275": -524159,
         "salePsf": 440,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": 15677,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21316622",
@@ -60836,7 +65450,13 @@ window.PHX_LAND_LEADS = {
             "price": 460000,
             "sf": 1685
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -60848,10 +65468,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -76,
         "profitAt275": -987873,
         "salePsf": 343,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -284026,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21316621",
@@ -61026,7 +65657,13 @@ window.PHX_LAND_LEADS = {
             "price": 502000,
             "sf": 1876
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -61038,10 +65675,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -56,
         "profitAt275": -734031,
         "salePsf": 343,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -284026,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21316619",
@@ -61220,7 +65868,13 @@ window.PHX_LAND_LEADS = {
             "price": 599000,
             "sf": 1596
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -61232,10 +65886,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -48,
         "profitAt275": -656572,
         "salePsf": 362,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -225321,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21460021",
@@ -61374,7 +66039,9 @@ window.PHX_LAND_LEADS = {
       "lastSeen": "2026-10-18",
       "peakScore": 84,
       "verdict": null,
-      "stale": true
+      "stale": true,
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21309001K",
@@ -61551,7 +66218,13 @@ window.PHX_LAND_LEADS = {
             "price": 790000,
             "sf": 1883
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -61563,10 +66236,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -7,
         "profitAt275": -112436,
         "salePsf": 403,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -116643,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21308006H",
@@ -61741,7 +66425,13 @@ window.PHX_LAND_LEADS = {
             "price": 1995000,
             "sf": 5944
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -61753,10 +66443,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -36,
         "profitAt275": -544623,
         "salePsf": 397,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -117181,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20816490C",
@@ -61933,7 +66634,13 @@ window.PHX_LAND_LEADS = {
             "price": 1800000,
             "sf": 5382
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -61945,10 +66652,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -46,
         "profitAt275": -595202,
         "salePsf": 338,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -299475,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21168001",
@@ -62120,7 +66838,13 @@ window.PHX_LAND_LEADS = {
             "price": 1020000,
             "sf": 2768
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -62132,10 +66856,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -49,
         "profitAt275": -811951,
         "salePsf": 438,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": 9497,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21153007C",
@@ -62308,10 +67043,16 @@ window.PHX_LAND_LEADS = {
             "price": 1060000,
             "sf": 2746
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
-        "label": "Maybe",
+        "label": "Pass",
         "strategy": "1 custom home",
         "land": 268050,
         "finished": 1736600,
@@ -62320,10 +67061,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 10,
         "profitAt275": 179386,
         "salePsf": 457,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": 68202,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16627018F",
@@ -62429,7 +67181,13 @@ window.PHX_LAND_LEADS = {
             "price": 498000,
             "sf": 1717
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -62441,10 +67199,21 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -16,
         "profitAt275": -207369,
         "salePsf": 341,
-        "risk": "Medium"
+        "risk": "Medium",
+        "supportableOffer": -290206,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "21326215",
@@ -62619,7 +67388,13 @@ window.PHX_LAND_LEADS = {
             "price": 1250000,
             "sf": 4010
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "verdict": {
         "label": "Pass",
@@ -62631,9 +67406,20 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -75,
         "profitAt275": -892705,
         "salePsf": 312,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -379807,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16768062",
@@ -62824,7 +67610,17 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 11,
         "profitAt275": 260162,
         "salePsf": 629,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": 581634,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
       "houseComps": {
@@ -62865,9 +67661,16 @@ window.PHX_LAND_LEADS = {
             "price": 6225000,
             "sf": 7396
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16657073",
@@ -63054,7 +67857,17 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 4,
         "profitAt275": 87754,
         "salePsf": 629,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": 581634,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
       "houseComps": {
@@ -63095,9 +67908,16 @@ window.PHX_LAND_LEADS = {
             "price": 3050000,
             "sf": 3936
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16811019A",
@@ -63283,7 +68103,17 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 23,
         "profitAt275": 748768,
         "salePsf": 842,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": 1239744,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
       "houseComps": {
@@ -63324,9 +68154,16 @@ window.PHX_LAND_LEADS = {
             "price": 6225000,
             "sf": 7396
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16770040",
@@ -63518,7 +68355,17 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -1,
         "profitAt275": -22296,
         "salePsf": 629,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": 581634,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
       "houseComps": {
@@ -63559,9 +68406,16 @@ window.PHX_LAND_LEADS = {
             "price": 6225000,
             "sf": 7396
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16768046",
@@ -63743,7 +68597,17 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 11,
         "profitAt275": 265047,
         "salePsf": 629,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": 581634,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
       "houseComps": {
@@ -63784,9 +68648,16 @@ window.PHX_LAND_LEADS = {
             "price": 6225000,
             "sf": 7396
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16768055",
@@ -63974,7 +68845,17 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 8,
         "profitAt275": 192976,
         "salePsf": 629,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": 581634,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
       "houseComps": {
@@ -64015,9 +68896,16 @@ window.PHX_LAND_LEADS = {
             "price": 1275000,
             "sf": 5734
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16768052",
@@ -64164,7 +69052,17 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 11,
         "profitAt275": 251658,
         "salePsf": 629,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": 581634,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "stale": true,
       "houseComps": {
@@ -64205,9 +69103,16 @@ window.PHX_LAND_LEADS = {
             "price": 6225000,
             "sf": 7396
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "20715022D",
@@ -64351,7 +69256,17 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -96,
         "profitAt275": -906396,
         "salePsf": 248,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": -577550,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "newBuild": {
         "arv": 584619,
@@ -64431,10 +69346,17 @@ window.PHX_LAND_LEADS = {
             "price": 485000,
             "sf": 2287
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
       "stale": true,
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16770039",
@@ -64618,7 +69540,17 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 1,
         "profitAt275": 30981,
         "salePsf": 629,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": 581634,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "houseComps": {
         "psf": 629,
@@ -64658,9 +69590,16 @@ window.PHX_LAND_LEADS = {
             "price": 6225000,
             "sf": 7396
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16770018",
@@ -64844,7 +69783,17 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 27,
         "profitAt275": 875738,
         "salePsf": 842,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": 1239744,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "houseComps": {
         "psf": 842,
@@ -64884,9 +69833,16 @@ window.PHX_LAND_LEADS = {
             "price": 6225000,
             "sf": 7396
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16771075",
@@ -65075,7 +70031,17 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": 12,
         "profitAt275": 280617,
         "salePsf": 629,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": 581634,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "houseComps": {
         "psf": 629,
@@ -65115,9 +70081,16 @@ window.PHX_LAND_LEADS = {
             "price": 1275000,
             "sf": 5734
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     },
     {
       "apn": "16768058",
@@ -65301,7 +70274,17 @@ window.PHX_LAND_LEADS = {
         "marginPctAt275": -1,
         "profitAt275": -31609,
         "salePsf": 629,
-        "risk": "Low"
+        "risk": "Low",
+        "supportableOffer": 581634,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": null,
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
       },
       "houseComps": {
         "psf": 629,
@@ -65341,9 +70324,16 @@ window.PHX_LAND_LEADS = {
             "price": 1275000,
             "sf": 5734
           }
-        ]
+        ],
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": null,
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
       },
-      "landOverride": null
+      "landOverride": null,
+      "landPriceOverride": null
     }
   ],
   "history": [

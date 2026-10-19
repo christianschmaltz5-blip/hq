@@ -22,12 +22,14 @@ Page layout: a tab bar (Leads, Maps, Calculator, Profit & Offers, Outreach, Trac
 
 ## Underwriting math (keep `verdict.py` and `profitFor()` in the page identical)
 - Sale price per sf = the **2nd-highest** of the 5 closest home sales (`houseComps.psf`; `medPsf` keeps the median). Chosen so one outlier sale can't set the price.
-- Per home cost = build $/sf x sf, plus soft costs %, plus site work, plus land, then times (1 + 7% loan interest).
+- Total cost = homes × (build $/sf × sf × (1 + soft costs %) + site work), plus land, demolition and `(homes − 1) × split cost`, all times (1 + 7% financing). Single-lot ADU costs and resale premium apply only when configured; splits ignore ADUs.
 - Defaults: 3,800 sf, build $275-325/sf, soft 8%, site work $10k, selling cost 3% (Christian is the agent), profit target 10%.
-- Land = county comps value if reliable, else assessed value. This is a proxy, not a market price.
-- Lot split: homes = floor(lot sf x 0.85 / zoning minimum lot), max 4, each split home valued at 80%, $25k per split. Picks the better of 1 home vs the split.
-- Verdict uses the $325/sf case: Good at margin >= 10% and not High risk, Maybe at >= 5% (or >= 10% at $275/sf), else Pass.
+- Land = a valid per-APN override first, else county comps value if reliable, else assessed value. Overrides live in `agents/phx_land_leads/overrides.json`; each needs positive `landCost`, `source`, `sourceUrl`, ISO `observedAt` and `priceDate`, and `priceType` (for example, recorded historical sale versus asking price). `landPriceOverride` carries this metadata to the page; `landOverride` retains numeric compatibility. An unsourced or invalid entry is ignored with `landPriceOverrideError`. Cloud Road starts with its $535k April 2026 recorded sale, explicitly not a current asking price or offer. Model and assessed values remain proxies, not market prices.
+- Supportable land = finished sale value × (1 − selling rate − target margin) / (1 + financing rate), less construction, site, demolition, splits and applicable ADU costs. The offer shown beside the price uses the $325/sf case and 10% target, and identifies the most supportable candidate strategy. Keep negative budgets signed: even free land cannot meet that target.
+- Lot split: homes = floor(lot sf × usable share / zoning minimum lot), max 4, each split home valued at 80%, $25k per split. Usable share defaults to 85% in Python and the browser; the browser's parcel setting is editable and applies to both capacity and underwriting. The daily job uses 85%. Capacity is an estimate requiring confirmation. Picks the better of 1 home vs the split.
+- Verdict uses the $325/sf case: Good at margin >= 10% and not High risk. Maybe requires profit >= 0 at $325/sf and either margin >= 5% there or margin >= 10% at $275/sf. Otherwise Pass.
 - The calculator's saved numbers live in the user's browser localStorage and override these defaults.
+- Comp results carry `source`, `sourceUrl`, `retrievedAt`, `fellBack`, `error`, and `fallbackReason`. County HTTP errors and ArcGIS error bodies stay visible. `newBuild` fallback is explicit and used in verdict metadata/risk; an unknown stored retrieval date stays null. `python3 agents/phx_land_leads/verdict.py --cached` recalculates stored data without a network request or invented retrieval time. Shared numeric fixtures live in `tests/underwriting-fixtures.json`; run Python tests with `python3 -m unittest discover -s tests` and the JS runner with `node --test tests/underwriting.test.mjs`.
 
 ## Known facts and gotchas
 - `landUseClass` comes from the county PUC code, not zoning. `currentZoning` is often null for unincorporated parcels.
