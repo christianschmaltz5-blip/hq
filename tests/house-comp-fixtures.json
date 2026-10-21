@@ -1,0 +1,16 @@
+{
+  "policy": {"id": "home-3800-25pct-3m-v1", "planSf": 3800, "minSf": 2850, "maxSf": 4750, "minPrice": 150000, "maxPrice": 3000000, "minComps": 3},
+  "cases": [
+    {"name": "lower inclusive bounds", "sf": 2850, "price": 150000, "expected": true},
+    {"name": "upper inclusive bounds", "sf": 4750, "price": 3000000, "expected": true},
+    {"name": "ordinary planned home", "sf": 3800, "price": 1900000, "expected": true},
+    {"name": "below size band", "sf": 2849, "price": 1900000, "expected": false},
+    {"name": "above size band", "sf": 4751, "price": 1900000, "expected": false},
+    {"name": "Horseshoe mansion fits size but exceeds price cap", "sf": 4258, "price": 4500000, "expected": false},
+    {"name": "oversized mansion", "sf": 5959, "price": 6500000, "expected": false},
+    {"name": "above price ceiling", "sf": 3800, "price": 3000001, "expected": false},
+    {"name": "below minimum price", "sf": 3800, "price": 149999, "expected": false},
+    {"name": "missing size", "sf": null, "price": 1900000, "expected": false},
+    {"name": "missing price", "sf": 3800, "price": null, "expected": false}
+  ]
+}

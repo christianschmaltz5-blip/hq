@@ -3,14 +3,15 @@
 For each residential lead: median sale price of recently SOLD newly built single-family homes nearby.
 The dashboard turns that into a max offer (editable assumptions live there). Standalone: `python3 offer.py`
 re-attaches to the current data.js without a full pull."""
-import json, re, statistics as st
+import json, math, re, statistics as st
 from datetime import date, datetime, timezone
 from pathlib import Path
 from comps import _esri_query, _haversine_mi, _parse_num, _parse_sale_date, COMP_OUT_FIELDS, MARICOPA_PARCELS
+from house_comp_policy import HOUSE_COMP_POLICY, eligible_home_sale
 
 OFFER_LEADS = 120        # top residential leads by score
 MIN_NEWBUILD_COMPS = 4
-MIN_PRICE, MIN_LIVING_SF, MAX_SALE_AGE_YEARS = 250_000, 1500, 3
+MIN_PRICE, MAX_SALE_AGE_YEARS = 250_000, 3
 
 
 def new_build_values(lead):
@@ -31,14 +32,27 @@ def new_build_values(lead):
             print(f"new_build_values: county query failed for {lead.get('apn')} ({miles} mi): {error}; new-build values unavailable")
             return {"error": str(error), "source": "Maricopa County Assessor nearby new-build sales", "sourceUrl": MARICOPA_PARCELS,
                     "retrievedAt": retrieved_at, "radiusMi": miles, "n": 0}
-        rows, seen = [], {}
+        rows, seen, seen_apns = [], {}, set()
         for f in r.get("features") or []:
             c = f["attributes"]
             sold, price, sf = _parse_sale_date(c.get("SALE_DATE")), _parse_num(c.get("SALE_PRICE")), _parse_num(c.get("LIVING_SPACE"))
-            if not (sold and sold >= cutoff and price >= MIN_PRICE and sf >= MIN_LIVING_SF):
+            if not (sold and cutoff <= sold <= date.today() and eligible_home_sale(sf, price) and price >= MIN_PRICE):
                 continue
-            if sold.year < int(_parse_num(c.get("CONST_YEAR"))):   # a pre-construction land sale, not a home sale
+            built = _parse_num(c.get("CONST_YEAR"))
+            apn = c.get("APN")
+            if not built or sold.year < built:   # a pre-construction land sale, not a home sale
                 continue
+            if apn and (apn == lead.get("apn") or apn in seen_apns):
+                continue
+            try:
+                comp_lat, comp_lng = float(c["LATITUDE"]), float(c["LONGITUDE"])
+                if not math.isfinite(comp_lat) or not math.isfinite(comp_lng) or not -90 <= comp_lat <= 90 or not -180 <= comp_lng <= 180:
+                    continue
+            except (ValueError, TypeError, KeyError):
+                continue
+            c = {**c, "LATITUDE": comp_lat, "LONGITUDE": comp_lng}
+            if apn:
+                seen_apns.add(apn)
             seen[(price, sold)] = seen.get((price, sold), 0) + 1
             rows.append((price, sold, sf, c))
         rows = [t for t in rows if seen[(t[0], t[1])] == 1]       # same price+date on 2+ parcels = bulk deal
@@ -52,6 +66,7 @@ def new_build_values(lead):
             "n": len(rows), "radiusMi": miles, "lowPsf": round(min(psfs)), "highPsf": round(max(psfs)),
             "source": "Maricopa County Assessor nearby new-build sales", "sourceUrl": MARICOPA_PARCELS,
             "retrievedAt": retrieved_at, "fellBack": False, "error": None, "fallbackReason": None,
+            "selectionPolicy": HOUSE_COMP_POLICY["id"],
             "examples": [{"address": t[3]["PHYSICAL_ADDRESS"].split("  ")[0], "price": round(t[0]), "sf": round(t[2]), "apn": t[3].get("APN"), "yearBuilt": _parse_num(t[3].get("CONST_YEAR")),
                           "distanceMi": round(_haversine_mi(lat, lng, t[3]["LATITUDE"], t[3]["LONGITUDE"]), 3), "sold": t[1].isoformat()} for t in near]}
 

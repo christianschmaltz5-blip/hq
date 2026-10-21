@@ -11,13 +11,18 @@ import math
 import re
 from datetime import date, datetime, timezone
 from pathlib import Path
-from statistics import median
 from urllib.parse import urlsplit
-from comps import MARICOPA_PARCELS, _esri_query, _haversine_mi, _parse_num as _pn
+from comps import MARICOPA_PARCELS, _esri_query, _haversine_mi
+from house_comp_policy import HOUSE_COMP_POLICY, eligible_home_sale, filter_stored_house_comps
 
-_parse_num = lambda x: _pn(x) or 0
+def _parse_num(value):
+    try:
+        number = float(re.sub(r"[$,\s]", "", str(value)))
+        return number if math.isfinite(number) else 0
+    except (ValueError, TypeError):
+        return 0
 
-A = dict(sf=3800, hard=(275, 325), soft=0.08, site=10_000, fin=0.07, sell=0.03,
+A = dict(sf=HOUSE_COMP_POLICY["planSf"], hard=(275, 325), soft=0.08, site=10_000, fin=0.07, sell=0.03,
          adu=dict(n=0, sf=800, hard=350, site=15_000, value=0),
          split_cost=25_000, haircut=0.8, min_lot=14_375, usable=0.85, good=0.10, maybe=0.05)
 
@@ -101,8 +106,25 @@ def house_comps(l):
                 error = error.get("message") or str(error)
             print(f"house_comps: county query failed for {l.get('apn')} ({miles} mi); fallback will be marked")
             return _comp_metadata({"n": 0, "error": str(error), "radiusMi": miles}, retrieved_at)
-        rows = [f["attributes"] for f in r.get("features") or []]
-        rows = [a for a in rows if 0.6 * A["sf"] <= _parse_num(a.get("LIVING_SPACE")) <= 1.6 * A["sf"] and _parse_num(a.get("SALE_PRICE")) >= 150_000]   # match the planned home size
+        rows, seen = [], set()
+        for feature in r.get("features") or []:
+            a = feature.get("attributes") or {}
+            if not eligible_home_sale(_parse_num(a.get("LIVING_SPACE")), _parse_num(a.get("SALE_PRICE"))):
+                continue
+            apn = a.get("APN")
+            if apn and (apn == l.get("apn") or apn in seen):
+                continue
+            try:
+                sold = datetime.strptime(a["SALE_DATE"], "%m/%d/%Y").date()
+                comp_lat, comp_lng = float(a["LATITUDE"]), float(a["LONGITUDE"])
+                if (sold > date.today() or sold.year < yr - 2 or not math.isfinite(comp_lat) or not math.isfinite(comp_lng)
+                        or not -90 <= comp_lat <= 90 or not -180 <= comp_lng <= 180):
+                    continue
+            except (ValueError, TypeError, KeyError):
+                continue
+            if apn:
+                seen.add(apn)
+            rows.append(a)
         if len(rows) >= 10:
             break
     sub_lot, out = l.get("landSf") or 43560, []
@@ -117,28 +139,26 @@ def house_comps(l):
         out.append((score, price, price / sf, (a.get("PHYSICAL_ADDRESS") or "").split("  ")[0].strip(), a["SALE_DATE"], round(sf), a.get("APN"), round(built) if built else None, round(d, 3)))
     out.sort(key=lambda t: t[0])
     out = out[:5]
-    if len(out) < 3:
-        return _comp_metadata({"n": len(out), "radiusMi": miles, "fallbackReason": f"Fewer than 3 home sales of {round(0.6 * A['sf']):,}-{round(1.6 * A['sf']):,} sf nearby"}, retrieved_at)
-    return _comp_metadata({"psf": round(sorted((t[2] for t in out), reverse=True)[min(1, len(out) - 1)]),
-             "medPsf": round(median(t[2] for t in out)), "price": round(median(t[1] for t in out)), "lowPsf": round(min(t[2] for t in out)), "n": len(out), "radiusMi": miles,
-             "comps": [{"address": t[3], "sold": t[4], "price": round(t[1]), "sf": t[5], "apn": t[6], "yearBuilt": t[7], "distanceMi": t[8]} for t in out]}, retrieved_at)
+    return _comp_metadata(filter_stored_house_comps({"radiusMi": miles,
+             "comps": [{"address": t[3], "sold": t[4], "price": round(t[1]), "sf": t[5], "apn": t[6], "yearBuilt": t[7], "distanceMi": t[8]} for t in out]}), retrieved_at)
 
 
 def resolve_house_comps(l, result):
     """Keep lookup errors visible even when the stored new-build model is usable."""
-    hc = _comp_metadata(result)
+    hc = _comp_metadata(filter_stored_house_comps(result))
     if hc.get("psf"):
         return hc
     fallback = l.get("newBuild") or {}
-    if not fallback.get("psf"):
+    if (not fallback.get("psf") or fallback.get("selectionPolicy") != HOUSE_COMP_POLICY["id"]
+            or fallback.get("error") or (l.get("newBuildLookup") or {}).get("error")):
         return hc
     reason = hc.get("error") or hc.get("fallbackReason") or "No stored nearby home-sales comps are available"
-    return _comp_metadata({**fallback,
+    return _comp_metadata(filter_stored_house_comps({**fallback,
         "source": fallback.get("source") or FALLBACK_SOURCE,
         "sourceUrl": fallback.get("sourceUrl") or MARICOPA_PARCELS,
         "retrievedAt": fallback.get("retrievedAt"),
         "lookupAttemptedAt": hc.get("retrievedAt"),
-        "fellBack": True, "error": hc.get("error"), "fallbackReason": reason})
+        "fellBack": True, "error": hc.get("error"), "fallbackReason": reason}))
 
 
 def home_econ(x):

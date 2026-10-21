@@ -963,17 +963,48 @@ function landCompsHtml(lead){
 
 
 // House comps: recent HOME sales near the lead, pulled live from the Maricopa Assessor GIS (read-only, public).
+const HOUSE_COMP_POLICY = { id: 'home-3800-25pct-3m-v1', planSf: 3800, minSf: 2850, maxSf: 4750, minPrice: 150000, maxPrice: 3000000, minComps: 3 };
 const houseCache = {};
+function houseCompMatchesPolicy(c){
+  const sf = Number(c.sf), price = Number(c.price), p = HOUSE_COMP_POLICY;
+  return Number.isFinite(sf) && Number.isFinite(price) && sf >= p.minSf && sf <= p.maxSf && price >= p.minPrice && price <= p.maxPrice;
+}
+function houseCompCriteria(){ return '2,850–4,750 sf (±25% of the 3,800 sf plan), $150,000–$3,000,000; at least 3 sales'; }
+function normalizeHouseComps(saved){
+  if(!saved) return null;
+  if(saved.fellBack || !Array.isArray(saved.comps)){
+    if(saved.selectionPolicy === HOUSE_COMP_POLICY.id && Number.isFinite(saved.psf) && saved.psf > 0 && saved.n >= HOUSE_COMP_POLICY.minComps && !saved.requiresRefresh) return saved;
+    return { ...saved, psf: null, medPsf: null, price: null, lowPsf: null, highPsf: null, n: 0, requiresRefresh: true,
+      note: 'Stored home-sale summary needs a refresh under the current comp filter (' + houseCompCriteria() + ').' };
+  }
+  const comps = saved.comps.filter(houseCompMatchesPolicy).slice(0, 5).map(c => ({ ...c, psf: Number(c.price) / Number(c.sf) }));
+  const result = { ...saved, comps, n: comps.length, selectionPolicy: HOUSE_COMP_POLICY.id };
+  if(comps.length < HOUSE_COMP_POLICY.minComps) return { ...result, psf: null, medPsf: null, price: null, lowPsf: null, highPsf: null, requiresRefresh: true,
+    note: 'Insufficient filtered comps: ' + comps.length + ' stored home sales match ' + houseCompCriteria() + '. Refresh the county sales.' };
+  const psfs = comps.map(c => c.psf).sort((a,b) => a-b), prices = comps.map(c => Number(c.price)).sort((a,b) => a-b);
+  const median = a => a.length % 2 ? a[(a.length-1)/2] : (a[a.length/2-1] + a[a.length/2])/2;
+  return { ...result, psf: Math.round(psfs[psfs.length-2]), medPsf: Math.round(median(psfs)), price: Math.round(median(prices)), lowPsf: Math.round(psfs[0]), highPsf: Math.round(psfs[psfs.length-1]), requiresRefresh: false };
+}
+function usableNewBuild(l){
+  const c = l.newBuild;
+  return !!(c && c.selectionPolicy === HOUSE_COMP_POLICY.id && Number.isFinite(c.psf) && c.psf > 0 && c.n >= HOUSE_COMP_POLICY.minComps && !c.requiresRefresh && !c.error && !(l.newBuildLookup || {}).error);
+}
 const hcNum = v => parseFloat(String(v == null ? '' : v).replace(/[^0-9.]/g, '')) || 0;
+const houseCompNum = v => Number(String(v == null ? '' : v).replace(/[$,\s]/g, '')) || 0;
+function houseCompSaleTime(value){
+  const text = String(value || ''), us = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(text), iso = /^(\d{4})-(\d{2})-(\d{2})(?:T.*)?$/.exec(text);
+  if(!us && !iso) return NaN;
+  const year = Number(us ? us[3] : iso[1]), month = Number(us ? us[1] : iso[2]), day = Number(us ? us[2] : iso[3]), time = Date.parse(text), d = new Date(Date.UTC(year, month-1, day));
+  return Number.isFinite(time) && d.getUTCFullYear() === year && d.getUTCMonth() === month-1 && d.getUTCDate() === day ? time : NaN;
+}
 const hcMedian = a => { const b = a.slice().sort((x, y) => x - y); return b.length ? (b.length % 2 ? b[(b.length - 1) / 2] : (b[b.length / 2 - 1] + b[b.length / 2]) / 2) : 0; };
 async function fetchHouseComps(lead){
   if(houseCache[lead.apn]) return houseCache[lead.apn];
   const U = 'https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query';
-  const meta = { source: 'Maricopa County Assessor live home sales', sourceUrl: U, retrievedAt: new Date().toISOString(), fellBack: false };
-  if(lead.lat == null || lead.lng == null) return (houseCache[lead.apn] = { ...meta, rows: [], error: 'no coordinates for this lead' });
+  const meta = { source: 'Maricopa County Assessor live home sales', sourceUrl: U, retrievedAt: new Date().toISOString(), fellBack: false, selectionPolicy: HOUSE_COMP_POLICY.id };
+  if(lead.lat == null || lead.lng == null || !Number.isFinite(Number(lead.lat)) || !Number.isFinite(Number(lead.lng)) || Math.abs(Number(lead.lat)) > 90 || Math.abs(Number(lead.lng)) > 180) return (houseCache[lead.apn] = { ...meta, rows: [], error: 'no valid coordinates for this lead' });
   const yr = new Date().getFullYear(), years = [yr, yr - 1, yr - 2].map(y => `SALE_DATE LIKE '%/${y}'`).join(' OR ');
   let feats = [];
-  const planSf = 3800;   // same planned size verdict.py uses
   try{
     for(const miles of [1, 2, 3]){
       const body = new URLSearchParams({ geometry: JSON.stringify({ x: lead.lng, y: lead.lat, spatialReference: { wkid: 4326 } }), geometryType: 'esriGeometryPoint', inSR: '4326',
@@ -985,28 +1016,36 @@ async function fetchHouseComps(lead){
       const r = await response.json();   // the county server is sometimes very slow: fail fast, offer a retry
       if(r.error) throw new Error(r.error.message || 'GIS error');   // Esri returns errors as 200 + {error}, not as an HTTP failure
       if(!Array.isArray(r.features)) throw new Error('GIS response is missing parcel features');
-      feats = (r.features || []).map(f => f.attributes).filter(a => hcNum(a.LIVING_SPACE) >= 0.6 * planSf && hcNum(a.LIVING_SPACE) <= 1.6 * planSf && hcNum(a.SALE_PRICE) >= 150000);   // match the planned home size
+      const seen = new Set();
+      feats = r.features.map(f => f.attributes).filter(a => {
+        if(!a || !houseCompMatchesPolicy({ sf: houseCompNum(a.LIVING_SPACE), price: houseCompNum(a.SALE_PRICE) })) return false;
+        const lat = Number(a.LATITUDE), lng = Number(a.LONGITUDE), sold = houseCompSaleTime(a.SALE_DATE), apn = String(a.APN || '').trim();
+        if(a.LATITUDE == null || a.LONGITUDE == null || String(a.LATITUDE).trim() === '' || String(a.LONGITUDE).trim() === '' || !Number.isFinite(lat) || !Number.isFinite(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180 || !Number.isFinite(sold) || sold > Date.now() || new Date(sold).getFullYear() < yr-2) return false;
+        if(apn && (apn === String(lead.apn) || seen.has(apn))) return false;
+        if(apn) seen.add(apn);
+        return true;
+      });
       if(feats.length >= 10) break;
     }
   }catch(e){ return (houseCache[lead.apn] = { ...meta, rows: [], error: 'could not reach the county GIS (' + e.message + ')' }); }
   const subLot = lead.landSf || 43560, now = Date.now();
   const rows = feats.map(a => {
-    const lat = hcNum(a.LATITUDE), lng = hcNum(a.LONGITUDE) * (String(a.LONGITUDE).includes('-') ? -1 : 1);
+    const lat = Number(a.LATITUDE), lng = Number(a.LONGITUDE);
     const dLat = (lat - lead.lat) * 69, dLng = (lng - lead.lng) * 69 * Math.cos(lead.lat * Math.PI / 180);
-    const dist = Math.sqrt(dLat * dLat + dLng * dLng), sf = hcNum(a.LIVING_SPACE), price = hcNum(a.SALE_PRICE), lot = hcNum(a.LAND_SIZE);
-    const sold = new Date(a.SALE_DATE), months = (now - sold) / 2.63e9, built = hcNum(a.CONST_YEAR);
+    const dist = Math.sqrt(dLat * dLat + dLng * dLng), sf = houseCompNum(a.LIVING_SPACE), price = houseCompNum(a.SALE_PRICE), lot = houseCompNum(a.LAND_SIZE);
+    const sold = new Date(a.SALE_DATE), months = (now - sold) / 2.63e9, built = houseCompNum(a.CONST_YEAR);
     const score = dist + Math.abs(Math.log((lot || 1) / subLot)) * 0.7 + (yr - (built || yr - 40)) / 15 + months / 18;
-    return { address: String(a.PHYSICAL_ADDRESS || '').split(/\s{2,}/)[0], dist, sold: a.SALE_DATE, price, sf, psf: price / sf, built, lot, isNew: built >= yr - 5, score };
+    return { apn: a.APN || null, address: String(a.PHYSICAL_ADDRESS || '').split(/\s{2,}/)[0], dist, distanceMi: Math.round(dist * 100) / 100, sold: a.SALE_DATE, price, sf, psf: price / sf, built, yearBuilt: built || null, lot, isNew: built >= yr - 5, score };
   }).sort((a, b) => a.score - b.score).slice(0, 5);
-  if(rows.length < 3) return (houseCache[lead.apn] = { ...meta, rows: [], error: null, note: `Not enough comps: fewer than 3 home sales of ${(0.6 * planSf).toLocaleString()}–${(1.6 * planSf).toLocaleString()} sf within 3 miles.` });
+  if(rows.length < HOUSE_COMP_POLICY.minComps) return (houseCache[lead.apn] = { ...meta, rows: [], error: null, requiresRefresh: true, note: 'Not enough comps: fewer than 3 home sales matching ' + houseCompCriteria() + ' within 3 miles.' });
   return (houseCache[lead.apn] = { ...meta, rows, medianPsf: hcMedian(rows.map(r => r.psf)), medianPrice: hcMedian(rows.map(r => r.price)), error: null });
 }
 function houseCompsHtml(lead){
   const h = houseCache[lead.apn];
-  const title = '<div class="comps-title">House Comps — recent home sales nearby</div>';
+  const title = '<div class="comps-title">House Comps — recent home sales nearby</div><div class="comps-note">Filter: ' + houseCompCriteria() + '.</div>';
   if(!h) return `<div class="comps-section">${title}<div class="comps-empty">Loading from the county…</div></div>`;
   if(!h.rows.length){
-    const sv = selectedComps(lead), saved = sv ? `<div class="valuation-box"><div class="valuation-likely">Stored underwriting comps: <b>${money(sv.psf)}/sf</b> (${sv.fellBack ? 'new-build median · FALLBACK' : '2nd-highest'} of ${sv.n}) · ${sv.price ? money(sv.price) + ' median per home · ' : ''}${sv.n} sales within ${sv.radiusMi} mi<br>${compSourceHtml(lead)}</div></div>` : '';
+    const sv = selectedComps(lead), saved = sv ? `<div class="valuation-box"><div class="valuation-likely">Stored underwriting comps: <b>${money(sv.psf)}/sf</b> (${sv.fellBack ? 'new-build median · FALLBACK' : '2nd-highest'} of ${sv.n}) · ${sv.price ? money(sv.price) + ' median per home · ' : ''}${sv.n} sales within ${sv.radiusMi} mi<br>${compSourceHtml(lead)}</div></div>` : (lead.houseComps || lead.newBuild) ? `<div class="comps-empty">${compSourceHtml(lead)}</div>` : '';
     return `<div class="comps-section">${title}${saved}<div class="comps-empty">${esc(h.error ? 'County GIS lookup failed: ' + h.error : (h.note || 'No home sales found within 3 miles in the three calendar years queried.'))} ${h.error ? `<button class="mail-btn" onclick="retryHouseComps('${esc(lead.apn)}')">Try again</button>` : ''}<br>Live lookup attempted ${esc(h.retrievedAt || 'unknown')}</div></div>`;
   }
   const rows = h.rows.map(r => `<tr><td>${esc(r.address)}</td><td>${r.dist.toFixed(2)} mi</td><td>${esc(r.sold)}</td><td><b>${money(r.price)}</b></td>
@@ -2189,17 +2228,25 @@ function supportableLand(x, target){
   return e.finished * (1 - x.sell - target) / (1 + x.fin) - x.n * e.C - (x.demo || 0) - Math.max(0, x.n - 1) * x.splitCost - e.aduCost;
 }
 function selectedComps(l){
-  if(l.houseComps && l.houseComps.psf > 0) return l.houseComps;
-  if(l.newBuild && l.newBuild.psf > 0) return Object.assign({}, l.newBuild, { fellBack: true,
+  const home = normalizeHouseComps(l.houseComps);
+  if(home && home.psf > 0 && !home.requiresRefresh) return home;
+  if(usableNewBuild(l)) return Object.assign({}, l.newBuild, { fellBack: true,
     source: l.newBuild.source || 'Maricopa County Assessor stored new-build sales',
-    fallbackReason: (l.houseComps || {}).error || (l.houseComps || {}).fallbackReason || 'Nearby home-sales comps unavailable' });
+    fallbackReason: (home || {}).error || (home || {}).note || (home || {}).fallbackReason || 'Nearby home-sales comps unavailable' });
   return null;
 }
 function compSourceHtml(l){
-  const c = selectedComps(l); if(!c) return 'No usable sale-price comps.' + ((l.newBuildLookup||{}).error ? ' New-build lookup error: ' + esc(l.newBuildLookup.error) : '');
+  const c = selectedComps(l), home = normalizeHouseComps(l.houseComps);
+  if(!c){
+    const reasons = [...new Set([(home || {}).note, (home || {}).fallbackReason].filter(Boolean))].map(esc).join(' ');
+    return 'No usable sale-price comps. ' + reasons + ((home || {}).error ? ' GIS error: ' + esc(home.error) : '')
+      + (l.newBuild && l.newBuild.selectionPolicy !== HOUSE_COMP_POLICY.id ? ' Stored new-build summary needs a refresh under the current comp filter.' : '')
+      + ((l.newBuild || {}).error ? ' Stored new-build GIS error: ' + esc(l.newBuild.error) : '')
+      + ((l.newBuildLookup || {}).error ? ' New-build lookup error: ' + esc(l.newBuildLookup.error) : '');
+  }
   const source = c.source || 'Maricopa County Assessor nearby home sales';
   const url = /^https?:\/\//i.test(c.sourceUrl || '') ? c.sourceUrl : 'https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3';
-  return `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(source)}</a> · retrieved ${esc(c.retrievedAt || 'unknown (stored scan)')}${c.fellBack ? `<br><b>FALLBACK: stored new-build sales</b> · ${esc(c.fallbackReason || 'Nearby home-sales comps unavailable')}` : ''}${c.error ? `<br>GIS error: ${esc(c.error)}` : ''}`;
+  return `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(source)}</a> · retrieved ${esc(c.retrievedAt || 'unknown (stored scan)')} · filter: ${houseCompCriteria()}${c.fellBack ? `<br><b>FALLBACK: stored new-build sales</b> · ${esc(c.fallbackReason || 'Nearby home-sales comps unavailable')}` : ''}${c.error ? `<br>GIS error: ${esc(c.error)}` : ''}`;
 }
 function aduInput(l){   // Scenario only: a zoning string does not establish ADU eligibility.
   const g = id => parseFloat(document.getElementById(id).value) || 0;
@@ -2445,7 +2492,7 @@ function maxOfferRows(){
   const lotPct = v('moLotPct'), profit = v('moProfitPct'), costs = v('moCostPct');
   const doSplit = document.getElementById('moSplit').checked, splitCost = parseFloat(document.getElementById('moSplitCost').value) || 0, haircut = (parseFloat(document.getElementById('moSplitHaircut').value) || 100) / 100;
   const tags = loadCondition();
-  return (D.leads || []).filter(l => l.newBuild && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn)).map(l => {
+  return (D.leads || []).filter(l => usableNewBuild(l) && Number.isFinite(l.newBuild.arv) && l.newBuild.arv > 0 && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn)).map(l => {
     const potential = splitLots(l), n = doSplit ? potential : 1;
     const lotSale = l.newBuild.arv * lotPct * (n > 1 ? n * haircut : 1);  // smaller lots sell for less each
     const demo = l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0;

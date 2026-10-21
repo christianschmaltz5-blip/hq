@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT / "agents" / "phx_land_leads"))
 import comps
 import offer
 import verdict
+from house_comp_policy import HOUSE_COMP_POLICY
 
 FIXTURES = json.loads((Path(__file__).with_name("underwriting-fixtures.json")).read_text())["cases"]
 CLOUD_OVERRIDE = verdict.OVERRIDES["20338004C"]
@@ -20,8 +21,9 @@ def lead():
                 parcelStatus="improved", defaultDemoCost=45000, floodKnown=True,
                 valuation={"mostLikelyValue": 900000}, assessedValue=168400,
                 lat=33.8, lng=-112.1,
-                houseComps={"psf": 600, "n": 5, "radiusMi": 1, "retrievedAt": "2026-10-17T12:00:00Z"},
-                newBuild={"psf": 450, "n": 12, "radiusMi": 1})
+                houseComps={"psf": 600, "n": 5, "radiusMi": 1, "retrievedAt": "2026-10-17T12:00:00Z",
+                            "selectionPolicy": HOUSE_COMP_POLICY["id"]},
+                newBuild={"psf": 450, "n": 12, "radiusMi": 1, "selectionPolicy": HOUSE_COMP_POLICY["id"]})
 
 
 class EconomicsTests(unittest.TestCase):
@@ -143,7 +145,8 @@ class CompMetadataTests(unittest.TestCase):
         parcel["houseComps"] = {"psf": 450, "n": 12, "radiusMi": 1, "source": "Stored fallback source",
                               "sourceUrl": "https://county.example/record", "retrievedAt": "2026-09-30T10:00:00Z",
                               "fellBack": True, "error": "Previous county GIS HTTP 503",
-                              "fallbackReason": "Previous lookup failed", "lookupAttemptedAt": "2026-10-01T10:00:00Z"}
+                              "fallbackReason": "Previous lookup failed", "lookupAttemptedAt": "2026-10-01T10:00:00Z",
+                              "selectionPolicy": HOUSE_COMP_POLICY["id"]}
         data = {"leads": [parcel]}
         with patch.object(verdict, "_esri_query") as network:
             counts = verdict.recalculate_data(data, cached=True)
@@ -198,7 +201,7 @@ class CompMetadataTests(unittest.TestCase):
         parcel = lead()
         parcel["currentZoning"] = "R1-100"
         parcel.pop("houseComps")
-        parcel["newBuild"] = {"psf": 450, "n": 5, "radiusMi": 1}
+        parcel["newBuild"] = {"psf": 450, "n": 5, "radiusMi": 1, "selectionPolicy": HOUSE_COMP_POLICY["id"]}
         result = verdict.underwrite(parcel, fetch_comps=False)
         self.assertTrue(result["compFellBack"])
         self.assertEqual(result["risk"], "Low")
@@ -208,14 +211,15 @@ class CompMetadataTests(unittest.TestCase):
 
     def test_successful_comp_query_records_source_and_selection(self):
         parcel = lead()
-        rows = [{"attributes": {"APN": f"comp-{i}", "LIVING_SPACE": 2500, "SALE_PRICE": price,
+        rows = [{"attributes": {"APN": f"comp-{i}", "LIVING_SPACE": 4000, "SALE_PRICE": price,
                   "LAND_SIZE": 145627, "CONST_YEAR": 2025, "LATITUDE": 33.8, "LONGITUDE": -112.1,
                   "SALE_DATE": "04/01/2026", "PHYSICAL_ADDRESS": f"{i} Sample Rd"}}
                 for i, price in enumerate((800000, 900000, 1000000, 1100000, 1200000))]
         with patch.object(verdict, "_esri_query", return_value={"features": rows}):
             result = verdict.house_comps(parcel)
-        self.assertEqual(result["psf"], 440)
-        self.assertEqual(result["medPsf"], 400)
+        self.assertEqual(result["psf"], 275)
+        self.assertEqual(result["medPsf"], 250)
+        self.assertEqual(result["selectionPolicy"], HOUSE_COMP_POLICY["id"])
         self.assertEqual(result["comps"][0]["apn"], "comp-0")
         self.assertEqual(result["comps"][0]["yearBuilt"], 2025)
         self.assertEqual(result["comps"][0]["distanceMi"], 0)
@@ -258,14 +262,15 @@ class CountyHttpTests(unittest.TestCase):
 
 class NewBuildMetadataTests(unittest.TestCase):
     def test_fresh_new_build_result_records_actual_retrieval_time(self):
-        rows = [{"attributes": {"LIVING_SPACE": 2000, "SALE_PRICE": price,
+        rows = [{"attributes": {"LIVING_SPACE": 4000, "SALE_PRICE": price,
                  "CONST_YEAR": 2025, "LATITUDE": 33.8, "LONGITUDE": -112.1,
                  "SALE_DATE": "04/01/2026", "PHYSICAL_ADDRESS": f"{i} Sample Rd"}}
                 for i, price in enumerate((800000, 900000, 1000000, 1100000))]
         with patch.object(offer, "_esri_query", return_value={"features": rows}) as network:
             result = offer.new_build_values(lead())
         network.assert_called_once()
-        self.assertEqual(result["psf"], 475)
+        self.assertEqual(result["psf"], 238)
+        self.assertEqual(result["selectionPolicy"], HOUSE_COMP_POLICY["id"])
         self.assertEqual(result["sourceUrl"], comps.MARICOPA_PARCELS)
         self.assertIn("new-build", result["source"])
         self.assertTrue(result["retrievedAt"].endswith("Z"))

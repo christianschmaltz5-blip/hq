@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 const testDirectory = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(testDirectory, '..');
 const html = fs.readFileSync(path.join(root, 'phx-land-leads.html'), 'utf8');
+const HOUSE_COMP_POLICY_ID = 'home-3800-25pct-3m-v1';
 const fixtures = JSON.parse(fs.readFileSync(path.join(testDirectory, 'underwriting-fixtures.json'), 'utf8')).cases;
 
 test('every inline page script parses', () => {
@@ -125,6 +126,9 @@ function calculatorContext(fixture, leads = []) {
     fetchHouseComps: async () => ({ rows: [], error: 'Test GIS unavailable' }),
     todayStr: () => '2026-10-18',
   });
+  const compBegin = html.indexOf('const HOUSE_COMP_POLICY =');
+  const compEnd = html.indexOf('async function fetchHouseComps(', compBegin);
+  vm.runInContext(html.slice(compBegin, compEnd), context);
   // This section contains the actual page economics and selector dependencies.
   const begin = html.indexOf('function homeEcon(');
   const end = html.indexOf('\nfunction sellerSignals(', begin);
@@ -156,7 +160,7 @@ for (const fixture of fixtures.filter(f => f.input.land > 0)) {
       apn: 'TEST', address: fixture.name, currentZoning: 'R1-8',
       landSf: x.n * 8000 / .85 + 1,
       parcelStatus: x.demo ? 'improved' : 'vacant', defaultDemoCost: x.demo,
-      houseComps: { psf: x.psf, n: 5, radiusMi: 1 },
+      houseComps: { selectionPolicy: HOUSE_COMP_POLICY_ID, psf: x.psf, n: 5, radiusMi: 1 },
       valuation: { mostLikelyValue: x.land, unreliable: false },
       assessedValue: x.land,
     };
@@ -171,9 +175,9 @@ for (const fixture of fixtures.filter(f => f.input.land > 0)) {
 test('stored new-build fallback exposes its source, date, and GIS reason', () => {
   const { context } = calculatorContext(fixtures[0]);
   const lead = {
-    houseComps: { psf: 0, error: 'HTTP 503 from county GIS' },
+    houseComps: { selectionPolicy: HOUSE_COMP_POLICY_ID, psf: 0, error: 'HTTP 503 from county GIS' },
     newBuild: {
-      psf: 500, n: 6, radiusMi: 2,
+      selectionPolicy: HOUSE_COMP_POLICY_ID, psf: 500, n: 6, radiusMi: 2,
       source: 'Maricopa County Assessor stored new-build sales',
       sourceUrl: 'https://example.test/public-comps', retrievedAt: '2026-10-18',
     },
@@ -186,13 +190,13 @@ test('stored new-build fallback exposes its source, date, and GIS reason', () =>
   assert.match(rendered, /503/);
   assert.match(rendered, /2026-10-18/);
   assert.match(rendered, /https:\/\/example.test\/public-comps/);
-  assert.equal(context.selectedComps({ houseComps: { psf: 0 } }), null,
+  assert.equal(context.selectedComps({ houseComps: { selectionPolicy: HOUSE_COMP_POLICY_ID, psf: 0 } }), null,
     'empty home-comp payload cannot masquerade as usable pricing');
 });
 
 test('old saved comp metadata explicitly marks an unknown retrieval date', () => {
   const { context } = calculatorContext(fixtures[0]);
-  const rendered = context.compSourceHtml({ houseComps: { psf: 500, n: 5, radiusMi: 1 } });
+  const rendered = context.compSourceHtml({ houseComps: { selectionPolicy: HOUSE_COMP_POLICY_ID, psf: 500, n: 5, radiusMi: 1 } });
   assert.match(rendered, /Assessor/);
   assert.match(rendered, /retrieved unknown/i);
 });
@@ -258,7 +262,7 @@ test('lead offer wrapper survives a temporarily empty input and recovers', () =>
   const lead = {
     apn: 'REFRESH_RECOVERY', address: '24 Recovery Way', currentZoning: 'R1-8',
     landSf: 9000, landUseClass: 'residential', parcelStatus: 'vacant',
-    houseComps: { psf: 450, n: 5, radiusMi: 1 },
+    houseComps: { selectionPolicy: HOUSE_COMP_POLICY_ID, psf: 450, n: 5, radiusMi: 1 },
     valuation: { mostLikelyValue: 250000, unreliable: false },
   };
   const { context, getElementById } = calculatorContext(fixtures[0], [lead]);
@@ -286,14 +290,14 @@ test('lead autofill uses underwriting count, current comps, and resets demolitio
     apn: 'TEST_SPLIT', address: '12 Test Way  Phoenix AZ 85085', score: 90,
     landAcres: 1, landSf: 4 * 8000 / .85 + 1, currentZoning: 'R1-8',
     byRightUnits: 99, parcelStatus: 'improved', defaultDemoCost: 45000,
-    houseComps: { psf: 600, n: 5, radiusMi: 1 },
+    houseComps: { selectionPolicy: HOUSE_COMP_POLICY_ID, psf: 600, n: 5, radiusMi: 1 },
     valuation: { mostLikelyValue: 535000, rangeLow: 500000, rangeHigh: 550000 },
   };
   const vacant = {
     apn: 'TEST_VACANT', address: '14 Test Way  Phoenix AZ 85085', score: 80,
     landAcres: .2, landSf: 9000, currentZoning: 'R1-8',
     byRightUnits: 8, parcelStatus: 'vacant', defaultDemoCost: 90000,
-    houseComps: { psf: 450, n: 5, radiusMi: 1 },
+    houseComps: { selectionPolicy: HOUSE_COMP_POLICY_ID, psf: 450, n: 5, radiusMi: 1 },
     valuation: { mostLikelyValue: 250000, rangeLow: 200000, rangeHigh: 300000 },
   };
   const { context, getElementById } = calculatorContext(fixture, [improved, vacant]);
@@ -322,7 +326,7 @@ for (const unreliable of [false, true]) {
       landAcres: .2, landSf: 9000, currentZoning: 'R1-8', parcelStatus: 'vacant',
       assessedValue: 999999,
       ...(unreliable ? { valuation: { mostLikelyValue: 500000, unreliable: true } } : {}),
-      houseComps: { psf: 0 },
+      houseComps: { selectionPolicy: HOUSE_COMP_POLICY_ID, psf: 0 },
     };
     const { context, getElementById } = calculatorContext(fixtures[0], [lead]);
     assert.ok(context.window.hcLast, 'previous calculator values had a result');
@@ -352,7 +356,7 @@ for (const savedDemo of [undefined, 0]) {
       apn: 'SAVED_TEARDOWN', address: '12 Saved Way  Phoenix AZ 85085', score: 90,
       landAcres: 1, landSf: 4 * 8000 / .85 + 1, currentZoning: 'R1-8',
       parcelStatus: 'improved', defaultDemoCost: fixture.input.demo,
-      houseComps: { psf: 600, n: 5, radiusMi: 1 },
+      houseComps: { selectionPolicy: HOUSE_COMP_POLICY_ID, psf: 600, n: 5, radiusMi: 1 },
       valuation: { mostLikelyValue: 535000, rangeLow: 500000, rangeHigh: 550000 },
     };
     const { context, getElementById, stored } = calculatorContext(fixture, [lead]);
@@ -396,7 +400,7 @@ test('Maybe cannot pass a loss at $325 even when $275 clears the target', () => 
   const lead = {
     apn: 'MAYBE_BOUNDARY', address: '20 Boundary Way', currentZoning: 'R1-8',
     landSf: 9000, landUseClass: 'residential', parcelStatus: 'vacant',
-    houseComps: { psf: 400, n: 5, radiusMi: 1 },
+    houseComps: { selectionPolicy: HOUSE_COMP_POLICY_ID, psf: 400, n: 5, radiusMi: 1 },
     valuation: { mostLikelyValue: 35079, unreliable: false },
   };
   assert.ok(context.profitFor(lead, 0, 0, { hard: 325 }).profit < 0);
@@ -414,7 +418,7 @@ test('saved run target cannot override the current badge target', () => {
   const lead = {
     apn: 'SAVED_TARGET', address: '22 Boundary Way', currentZoning: 'R1-8',
     landSf: 9000, landUseClass: 'residential', parcelStatus: 'vacant',
-    houseComps: { psf: 550, n: 5, radiusMi: 1 },
+    houseComps: { selectionPolicy: HOUSE_COMP_POLICY_ID, psf: 550, n: 5, radiusMi: 1 },
     valuation: { mostLikelyValue: 150000, unreliable: false },
   };
   const margin = context.profitFor(lead, 0, 0, { hard: 325 }).margin;
@@ -429,12 +433,12 @@ function gisContext(response) {
   let calls = 0;
   const context = vm.createContext({
     URLSearchParams, AbortSignal,
-    fetch: async () => { calls++; return response; },
+    fetch: async (url, options) => { calls++; return typeof response === 'function' ? response(calls, url, options) : response; },
     esc: value => String(value ?? ''),
     money: value => '$' + Math.round(value || 0).toLocaleString('en-US'),
     num1: value => (+value).toFixed(1),
   });
-  const begin = html.indexOf('const houseCache =');
+  const begin = html.indexOf('const HOUSE_COMP_POLICY =');
   const end = html.indexOf('\nfunction houseCompsHtml(', begin);
   assert.ok(begin >= 0 && end > begin, 'Missing house-comp cache and fetch section');
   const economicsBegin = html.indexOf('function homeEcon(');
@@ -449,7 +453,7 @@ test('county HTTP failures remain visible with saved-comp fallback', async () =>
   const { context, calls } = gisContext({ ok: false, status: 503, json: async () => ({ features: [] }) });
   const lead = {
     apn: 'GIS_HTTP', lat: 33.7, lng: -112.1,
-    houseComps: { psf: 500, price: 1900000, n: 5, radiusMi: 1 },
+    houseComps: { selectionPolicy: HOUSE_COMP_POLICY_ID, psf: 500, price: 1900000, n: 5, radiusMi: 1 },
   };
   const result = await context.fetchHouseComps(lead);
   assert.match(result.error, /503/, 'HTTP status is explained');
@@ -515,7 +519,7 @@ for(const item of riskCases){
   test(`shared risk: ${item.name}`, () => {
     const {context} = calculatorContext(fixtures[0]);
     const parcel = {apn:'RISK', landSf:10000, currentZoning:'R1-100', floodKnown:item.floodKnown,
-      valuation:{mostLikelyValue:100000}, houseComps:{psf:item.psf,n:item.n,radiusMi:1}};
+      valuation:{mostLikelyValue:100000}, houseComps:{selectionPolicy:HOUSE_COMP_POLICY_ID,psf:item.psf,n:item.n,radiusMi:1}};
     assert.equal(context.profitFor(parcel).risk, item.risk);
   });
 }
@@ -561,8 +565,8 @@ test('build-and-hold blocks missing price and caps permanent debt', () => {
 test('median sensitivity flags changed verdict and shared comps', () => {
   const {context} = calculatorContext(fixtures[0]);
   const parcel={apn:'A',landSf:9000,currentZoning:'R1-8',floodKnown:true,
-    valuation:{mostLikelyValue:150000}, houseComps:{psf:600,medPsf:300,n:5,radiusMi:1,
-    comps:[1,2,3,4,5].map(i=>({apn:'C'+i}))}};
+    valuation:{mostLikelyValue:150000}, houseComps:{selectionPolicy:HOUSE_COMP_POLICY_ID,psf:600,medPsf:300,n:5,radiusMi:1,
+    comps:[300,300,300,600,650].map((psf,i)=>({apn:'C'+i,sf:3800,price:psf*3800}))}};
   context.D.leads=[parcel,{...parcel,apn:'B'}];
   const rendered=context.compSensitivityHtml(parcel);
   assert.match(rendered,/FRAGILE/);assert.match(rendered,/Shared comps/);
@@ -625,4 +629,187 @@ test('negative-NOI project still shows its loss with zero income-based debt', ()
   const result=context.calcHold(state);
   assert.ok(!result.error);assert.ok(result.noi1<0);assert.equal(result.permLoan,0);
   assert.equal(result.appraised,0);assert.ok(result.profit<0);
+});
+
+
+const houseCompFixtures = JSON.parse(fs.readFileSync(path.join(testDirectory, 'house-comp-fixtures.json'), 'utf8'));
+test('browser house-comp policy matches the shared daily-job policy', () => {
+  const { context } = calculatorContext(fixtures[0]);
+  assert.deepEqual(JSON.parse(vm.runInContext('JSON.stringify(HOUSE_COMP_POLICY)', context)), houseCompFixtures.policy);
+});
+for (const item of houseCompFixtures.cases) {
+  test(`shared house-comp filter: ${item.name}`, () => {
+    const { context } = calculatorContext(fixtures[0]);
+    assert.equal(context.houseCompMatchesPolicy(item), item.expected);
+  });
+}
+
+test('cached home sales drop mansions and recompute the second-highest price', () => {
+  const { context } = calculatorContext(fixtures[0]);
+  const original = {
+    psf: 950, medPsf: 900, price: 4000000, lowPsf: 800, n: 5, radiusMi: 2,
+    source: 'Stored county sales', sourceUrl: 'https://example.test/sales', retrievedAt: null,
+    error: 'Previous GIS refresh failed',
+    comps: [
+      { apn: 'MANSION', sf: 5332, price: 3325000 },
+      { apn: 'MID', sf: 3800, price: 1900000 },
+      { apn: 'SMALL_BOUNDARY', sf: 2850, price: 1140000 },
+      { apn: 'LARGE_BOUNDARY', sf: 4750, price: 2850000 },
+      { apn: 'SMALL', sf: 2500, price: 1750000 },
+    ],
+  };
+  const selected = context.selectedComps({ houseComps: original });
+  assert.equal(selected.n, 3);
+  assert.equal(selected.psf, 500);
+  assert.equal(selected.medPsf, 500);
+  assert.equal(selected.price, 1900000);
+  assert.equal(selected.lowPsf, 400);
+  assert.equal(selected.highPsf, 600);
+  assert.equal(selected.selectionPolicy, HOUSE_COMP_POLICY_ID);
+  assert.equal(selected.requiresRefresh, false);
+  assert.equal(selected.retrievedAt, null, 'unknown retrieval date remains unknown');
+  assert.equal(selected.source, original.source);
+  assert.equal(selected.error, original.error, 'existing GIS error remains visible');
+  assert.deepEqual(Array.from(selected.comps, c => c.apn), ['MID', 'SMALL_BOUNDARY', 'LARGE_BOUNDARY']);
+  assert.equal(original.psf, 950, 'normalization does not rewrite stored source data');
+});
+
+test('cached filtering keeps at most five remaining sales in their chosen order', () => {
+  const { context } = calculatorContext(fixtures[0]);
+  const comps = Array.from({ length: 7 }, (_, i) => ({ apn: 'C' + i, sf: 3800, price: 1140000 + i * 380000 }));
+  const selected = context.selectedComps({ houseComps: { comps } });
+  assert.equal(selected.n, 5);
+  assert.deepEqual(Array.from(selected.comps, c => c.apn), ['C0', 'C1', 'C2', 'C3', 'C4']);
+  assert.equal(selected.psf, 600, 'second-highest among chosen five, not the seventh sale');
+});
+
+test('fewer than three cached filtered sales clears price and requests a refresh', () => {
+  const { context } = calculatorContext(fixtures[0]);
+  const houseComps = { psf: 950, n: 5, retrievedAt: '2026-10-18', comps: [
+    { sf: 3800, price: 1900000 }, { sf: 4750, price: 2850000 },
+    { sf: 6000, price: 3000000 }, { sf: 3800, price: 3000001 },
+  ] };
+  const normalized = context.normalizeHouseComps(houseComps);
+  assert.equal(normalized.n, 2);
+  assert.equal(normalized.psf, null);
+  assert.equal(normalized.medPsf, null);
+  assert.equal(normalized.requiresRefresh, true);
+  assert.equal(normalized.retrievedAt, houseComps.retrievedAt);
+  assert.equal(context.selectedComps({ houseComps }), null);
+  assert.match(context.compSourceHtml({ houseComps }), /Insufficient filtered comps: 2/);
+});
+
+test('old summary-only comps and unqualified new-build examples cannot bypass the filter', () => {
+  const { context } = calculatorContext(fixtures[0]);
+  const summary = { psf: 700, n: 5, radiusMi: 1 };
+  assert.equal(context.selectedComps({ houseComps: summary }), null);
+  assert.equal(context.selectedComps({ houseComps: { ...summary, selectionPolicy: 'obsolete-policy' } }), null);
+  assert.equal(context.selectedComps({ houseComps: { ...summary, selectionPolicy: HOUSE_COMP_POLICY_ID } }).psf, 700);
+  const unqualified = { ...summary, examples: Array.from({ length: 3 }, () => ({ sf: 3800, price: 1900000 })) };
+  assert.equal(context.selectedComps({ newBuild: unqualified }), null,
+    'partial examples cannot qualify an unknown aggregate population');
+  const fallback = { ...unqualified, selectionPolicy: HOUSE_COMP_POLICY_ID };
+  assert.equal(context.selectedComps({ newBuild: fallback }).psf, 700,
+    'qualified full-population summary retains its aggregate rather than recalculating from examples');
+  assert.equal(context.selectedComps({ newBuild: fallback }).fellBack, true);
+  assert.equal(context.selectedComps({ newBuild: { ...fallback, n: 2 } }), null);
+  assert.equal(context.selectedComps({ newBuild: fallback, newBuildLookup: { error: 'County unavailable' } }), null);
+});
+
+test('live radius expansion counts only eligible, dated, located, distinct sales', async () => {
+  const base = { SALE_DATE: '05/01/2026', SALE_PRICE: '1900000', LIVING_SPACE: '3800',
+    LATITUDE: '33.7', LONGITUDE: '-112.1', LAND_SIZE: '43560', CONST_YEAR: '2025' };
+  const features = [
+    { APN: 'VALID0' }, { APN: 'VALID1' },
+    { APN: 'MANSION', SALE_PRICE: '3325000', LIVING_SPACE: '5332' },
+    { APN: 'TOO_LARGE', LIVING_SPACE: '4751' },
+    { APN: 'TOO_SMALL', LIVING_SPACE: '2849' },
+    { APN: 'EXPENSIVE', SALE_PRICE: '3000001' },
+    { APN: 'BAD_DATE', SALE_DATE: '02/30/2026' },
+    { APN: 'FUTURE_DATE', SALE_DATE: '01/01/2099' },
+    { APN: 'BAD_LAT', LATITUDE: 'not a coordinate' },
+    { APN: 'NO_LNG', LONGITUDE: '' },
+    { APN: 'VALID1' }, { APN: 'SUBJECT' },
+  ].map(a => ({ attributes: { ...base, ...a } }));
+  const expanded = Array.from({ length: 10 }, (_, i) => ({ attributes: { ...base, APN: 'EXPANDED' + i } }));
+  const { context, calls } = gisContext(call => ({ ok: true, status: 200,
+    json: async () => ({ features: call === 1 ? features : expanded }) }));
+  const result = await context.fetchHouseComps({ apn: 'SUBJECT', lat: 33.7, lng: -112.1 });
+  assert.equal(calls(), 2, 'invalid and duplicate rows do not trigger the ten-match early stop');
+  assert.equal(result.rows.length, 5);
+  assert.ok(result.rows.every(c => c.apn.startsWith('EXPANDED')));
+  assert.equal(result.selectionPolicy, HOUSE_COMP_POLICY_ID);
+});
+
+test('live lookup excludes mansions and exposes the filter on insufficient matches', async () => {
+  const base = { SALE_DATE: '05/01/2026', SALE_PRICE: '1900000', LIVING_SPACE: '3800',
+    LATITUDE: '33.7', LONGITUDE: '-112.1' };
+  const features = [ { APN: 'A' }, { APN: 'B' }, { APN: 'MANSION', SALE_PRICE: '3325000', LIVING_SPACE: '5332' } ]
+    .map(a => ({ attributes: { ...base, ...a } }));
+  const { context, calls } = gisContext({ ok: true, status: 200, json: async () => ({ features }) });
+  const lead = { apn: 'THIN', lat: 33.7, lng: -112.1 };
+  const result = await context.fetchHouseComps(lead);
+  assert.equal(calls(), 3);
+  assert.equal(result.rows.length, 0);
+  assert.equal(result.requiresRefresh, true);
+  assert.equal(result.selectionPolicy, HOUSE_COMP_POLICY_ID);
+  assert.match(result.note, /2,850–4,750/);
+  assert.match(result.note, /150,000–\$3,000,000/);
+  assert.match(context.houseCompsHtml(lead), /Filter:.*2,850–4,750/);
+});
+
+
+test('policy-qualified stored fallback keeps its full-population aggregate with partial examples', () => {
+  const { context } = calculatorContext(fixtures[0]);
+  const houseComps = { selectionPolicy: HOUSE_COMP_POLICY_ID, fellBack: true, n: 12, psf: 700,
+    comps: [{ sf: 3800, price: 1900000 }], retrievedAt: null };
+  assert.equal(context.selectedComps({ houseComps }).psf, 700);
+  assert.equal(context.selectedComps({ houseComps }).n, 12);
+  assert.equal(context.selectedComps({ houseComps: { ...houseComps, selectionPolicy: undefined } }), null);
+  assert.equal(context.selectedComps({ houseComps: { ...houseComps, requiresRefresh: true } }), null);
+});
+
+test('automatic maximum offers require a qualified usable new-build population', () => {
+  const valid = { psf: 500, arv: 1900000, n: 6, selectionPolicy: HOUSE_COMP_POLICY_ID };
+  const leads = [
+    { apn: 'QUALIFIED', address: 'Qualified Way', newBuild: { ...valid, examples: [] } },
+    { apn: 'OLD', newBuild: { ...valid, selectionPolicy: undefined } },
+    { apn: 'THIN', newBuild: { ...valid, n: 2 } },
+    { apn: 'FAILED', newBuild: valid, newBuildLookup: { error: 'GIS failed' } },
+    { apn: 'NO_VALUE', newBuild: { ...valid, arv: null } },
+    { apn: 'NONFINITE', newBuild: { ...valid, arv: Infinity } },
+    { apn: 'REFRESH', newBuild: { ...valid, requiresRefresh: true } },
+  ];
+  const { context, getElementById: g } = calculatorContext(fixtures[0], leads);
+  g('moLotPct').value = '30'; g('moProfitPct').value = '10'; g('moCostPct').value = '5';
+  g('moSplit').checked = false;
+  context.loadCondition = () => ({});
+  context.isDiscarded = () => false;
+  context.isContacted = () => false;
+  vm.runInContext(declaration('splitLots') + declaration('maxOfferRows'), context);
+  const rows = context.maxOfferRows();
+  assert.deepEqual(Array.from(rows, r => r.l.apn), ['QUALIFIED']);
+  assert.equal(rows[0].max, 484500);
+  g('moSort').value = 'max'; g('moOpenPct').value = '80';
+  context.xBtn = () => '';
+  vm.runInContext(declaration('renderMaxOffer'), context);
+  context.renderMaxOffer();
+  assert.match(g('mo-summary').textContent, /^1 leads work.*top 1/);
+  assert.match(g('mo-table').innerHTML, /Qualified Way/);
+  assert.doesNotMatch(g('mo-table').innerHTML, /OLD|FAILED|THIN/);
+});
+
+
+test('unusable cached comps show refresh notes and escaped stored and lookup GIS errors', () => {
+  const { context } = calculatorContext(fixtures[0]);
+  vm.runInContext(declaration('esc'), context);
+  const rendered = context.compSourceHtml({
+    houseComps: { psf: 0, n: 0, error: 'HTTP 503 <county>', fallbackReason: 'Retry <county> lookup' },
+    newBuildLookup: { error: 'Timeout <new-build>' },
+  });
+  assert.match(rendered, /summary needs a refresh/);
+  assert.match(rendered, /Retry &lt;county&gt; lookup/);
+  assert.match(rendered, /GIS error: HTTP 503 &lt;county&gt;/);
+  assert.match(rendered, /New-build lookup error: Timeout &lt;new-build&gt;/);
+  assert.doesNotMatch(rendered, /<county>|<new-build>/);
 });
