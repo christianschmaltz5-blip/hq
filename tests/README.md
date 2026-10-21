@@ -39,3 +39,8 @@ at a 10% target. Negative supportable land remains negative; it means the target
 fails even with free land. The zero-offer fixture deliberately uses a simpler
 site-only budget to place the 10% threshold exactly at zero. ADU fixtures check
 both the single-home cost/value contribution and exclusion from split projects.
+
+The October 21 regression checks also cover browser/Python risk parity above
+$800/sf and for null flood flags, retained lookup failures, new comp provenance,
+median sensitivity, complete saved-run restoration, DSCR debt sizing in both
+rental calculators, demolition and blank-price blocking.

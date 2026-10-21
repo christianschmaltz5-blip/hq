@@ -36,10 +36,19 @@ Page layout: a tab bar (Leads, Maps, Calculator, Profit & Offers, Outreach, Trac
 - Maricopa GIS servers are slow; the page fails fast and offers a retry.
 - Sensitivity: each $25/sf of build cost moves about $400k of affordable land on a 4-home deal; each $25/sf of sale price moves about $300k.
 - The deal Christian is studying: APN 20338004C, 2812 W Cloud Rd, 3.34 ac. The owner paid $535k in April 2026, so the numbers only work with a lower land price or a structured option/JV deal. The real GC bid, zoning/lot-split confirmation and sewer/septic status are still unknown.
-- Open issues: Maps tab reported as not loading after the tab change (redraw now waits 60 ms after the tab shows; not confirmed fixed). Skip-trace phone numbers are not verified.
+- Maps were visually checked in a browser on 2026-10-21 after switching from Calculator; both map panels still need external GIS/tile availability. Skip-trace phone numbers are not verified.
 
 ## Rules
 - Daily jobs push to git themselves. Don't commit `agents/phx_permits/geocode_cache.json` by accident; it changes every run.
 - Never commit `.env` files or API keys (`agents/phx_land_leads/.env` is gitignored).
 - Underwriting output is a screen, not an appraisal. Don't present a verdict as verified.
 - Prefer editing existing files; keep the single-file-per-page pattern.
+
+## October 21 exchange implementation
+- Flood is confirmed only with `floodKnown === true`. False, null and missing are displayed as unknown and share the existing one-point unknown-risk penalty in Python and JS; explicit mapped floodplain remains two points.
+- Browser risk includes the same two-point >$800/sf term as Python. Shared `riskCases` in the underwriting fixture cover that boundary and null flood flags.
+- Missing sale-date display is honest, but the existing +15 score credit is retained. Do not silently change its weight. Deed-derived yearsHeld is separate from sale recency.
+- Median sensitivity is a separate scenario, not a replacement for second-highest pricing. UI flags verdict flips and at least three shared comp sales across active leads. Python persists medianStress. Newly fetched comps retain APN, yearBuilt and distanceMi; do not invent provenance for old cached comps.
+- Land/new-build query failures persist in landCompLookup/newBuildLookup; failed lookups cannot produce a usable newBuild price. Displayed error messages are escaped.
+- Saved custom-home runs include ADU, split-cost, split-haircut, minimum-lot and lender DSCR fields plus usablePct. Older runs still load.
+- Both rental calculators require a positive land/purchase price and use the lower of LTV and DSCR debt limits (editable minimum DSCR, default 1.25). calcRent includes demolition. Construction timing/lease-up and jurisdiction-specific ADU/split rules remain unverified/deferred.

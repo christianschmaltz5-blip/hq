@@ -666,7 +666,8 @@ def score_lead(rec):
         if yrs_since_sale is not None and yrs_since_sale <= 5:
             score -= 20; reasons.append(f"sold {yrs_since_sale:.0f}y ago — likely renovated/flipped, probably not a teardown")
         elif built and built <= 1975 and (yrs_since_sale is None or yrs_since_sale >= 15):
-            score += 15; reasons.append(f"built {built}, no sale in 15+ years — likely dated/deferred maintenance")
+            score += 15
+            reasons.append(f"built {built}, no sale in 15+ years — likely dated/deferred maintenance" if yrs_since_sale is not None else f"built {built}, sale date unknown — legacy +15 scoring credit, sale recency unverified")
         elif built and built <= 1975:
             score += 6; reasons.append(f"built {built} — older housing stock")
 
@@ -835,10 +836,11 @@ def main():
             try:
                 result = fut.result()
             except Exception as e:
-                result = {"comps": [], "valuation": None, "note": f"Comps lookup failed: {e}"}
+                result = {"comps": [], "valuation": None, "note": f"Comps lookup failed: {e}", "error": str(e)}
             lead["comps"] = result["comps"]
             lead["valuation"] = result["valuation"]
             lead["compsNote"] = result["note"]
+            lead["landCompLookup"] = {k: result.get(k) for k in ("source", "sourceUrl", "retrievedAt", "error")}
             lead["equityMarginPct"] = None
             if result["valuation"] and lead.get("assessedValue"):
                 lead["equityMarginPct"] = round(

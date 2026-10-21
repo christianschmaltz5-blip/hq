@@ -210,5 +210,35 @@
         "maxLand": 437061.68224299065
       }
     }
+  ],
+  "riskCases": [
+    {
+      "name": "high_sale_price",
+      "psf": 801,
+      "n": 5,
+      "floodKnown": true,
+      "risk": "Medium"
+    },
+    {
+      "name": "boundary_sale_price",
+      "psf": 800,
+      "n": 5,
+      "floodKnown": true,
+      "risk": "Low"
+    },
+    {
+      "name": "null_flood_with_thin_comps",
+      "psf": 600,
+      "n": 3,
+      "floodKnown": null,
+      "risk": "Medium"
+    },
+    {
+      "name": "failed_flood_with_thin_comps",
+      "psf": 600,
+      "n": 3,
+      "floodKnown": false,
+      "risk": "Medium"
+    }
   ]
 }

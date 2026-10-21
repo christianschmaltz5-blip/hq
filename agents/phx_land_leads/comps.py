@@ -23,7 +23,7 @@ import threading
 import time
 import urllib.parse
 import urllib.request
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 
 MARICOPA_PARCELS = "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query"
 
@@ -143,6 +143,8 @@ def _fetch_pool(lat, lng, miles, vacant_only=False):
         "resultRecordCount": 500,
     }
     result = _esri_query(params)
+    if result.get("_failed") or result.get("error"):
+        raise RuntimeError(result.get("_error") or str(result.get("error")) or "County GIS lookup failed")
     return [f["attributes"] for f in (result.get("features") or [])]
 
 
@@ -213,7 +215,7 @@ def _implied_value(subject, cand):
     return price / cand_land_sf * subj_land_sf
 
 
-def build_comps_for_lead(lead, today=None, vacant_only=None):
+def _build_comps_for_lead(lead, today=None, vacant_only=None):
     """Returns {"comps": [...], "valuation": {...} or None, "note": str} for
     a single lead dict (in the same shape find_leads.py's enrich_parcel
     produces). Never raises -- a lookup failure just yields no comps."""
@@ -231,7 +233,13 @@ def build_comps_for_lead(lead, today=None, vacant_only=None):
     scored, radius_used = [], RADII_MI[-1]
     for miles in RADII_MI:
         radius_used = miles
-        pool = _fetch_pool(lat, lng, miles, vacant_only)
+        try:
+            pool = _fetch_pool(lat, lng, miles, vacant_only)
+        except Exception as exc:
+            return {"comps": [], "valuation": None, "note": f"Land comp lookup failed: {exc}", "error": str(exc),
+                    "source": "Maricopa County Assessor land sales", "sourceUrl": MARICOPA_PARCELS,
+                    "retrievedAt": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+
         scored = []
         for cand in pool:
             if cand.get("APN") == lead.get("apn"):
@@ -357,3 +365,16 @@ def build_comps_for_lead(lead, today=None, vacant_only=None):
         "valuation": valuation,
         "note": note,
     }
+
+
+def build_comps_for_lead(lead, today=None, vacant_only=None):
+    retrieved = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    try:
+        result = _build_comps_for_lead(lead, today, vacant_only)
+    except Exception as exc:
+        result = {"comps": [], "valuation": None, "note": f"Land comp lookup failed: {exc}", "error": str(exc)}
+    result.setdefault("source", "Maricopa County Assessor land sales")
+    result.setdefault("sourceUrl", MARICOPA_PARCELS)
+    result.setdefault("retrievedAt", retrieved)
+    result.setdefault("error", None)
+    return result

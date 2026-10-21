@@ -92,7 +92,7 @@ def house_comps(l):
                 "geometry": json.dumps({"x": lng, "y": lat, "spatialReference": {"wkid": 4326}}), "geometryType": "esriGeometryPoint",
                 "inSR": "4326", "distance": miles * 1609.34, "units": "esriSRUnit_Meter", "spatialRel": "esriSpatialRelIntersects",
                 "where": f"SALE_PRICE IS NOT NULL AND SALE_PRICE <> '0' AND PUC LIKE '01%' AND ({years})",
-                "outFields": "SALE_DATE,SALE_PRICE,LAND_SIZE,LIVING_SPACE,CONST_YEAR,LATITUDE,LONGITUDE,PHYSICAL_ADDRESS", "resultRecordCount": 1000})
+                "outFields": "APN,SALE_DATE,SALE_PRICE,LAND_SIZE,LIVING_SPACE,CONST_YEAR,LATITUDE,LONGITUDE,PHYSICAL_ADDRESS", "resultRecordCount": 1000})
         except Exception as exc:
             return _comp_metadata({"n": 0, "error": f"County GIS request failed: {type(exc).__name__}: {exc}", "radiusMi": miles}, retrieved_at)
         if r.get("_failed") or r.get("error"):
@@ -114,14 +114,14 @@ def house_comps(l):
         except (ValueError, TypeError, KeyError):
             continue
         score = d + abs(math.log((lot or 1) / sub_lot)) * 0.7 + (yr - (built or yr - 40)) / 15 + (date.today() - sold).days / 30.4 / 18
-        out.append((score, price, price / sf, (a.get("PHYSICAL_ADDRESS") or "").split("  ")[0].strip(), a["SALE_DATE"], round(sf)))
-    out.sort()
+        out.append((score, price, price / sf, (a.get("PHYSICAL_ADDRESS") or "").split("  ")[0].strip(), a["SALE_DATE"], round(sf), a.get("APN"), round(built) if built else None, round(d, 3)))
+    out.sort(key=lambda t: t[0])
     out = out[:5]
     if len(out) < 3:
         return _comp_metadata({"n": len(out), "radiusMi": miles, "fallbackReason": f"Fewer than 3 home sales of {round(0.6 * A['sf']):,}-{round(1.6 * A['sf']):,} sf nearby"}, retrieved_at)
     return _comp_metadata({"psf": round(sorted((t[2] for t in out), reverse=True)[min(1, len(out) - 1)]),
              "medPsf": round(median(t[2] for t in out)), "price": round(median(t[1] for t in out)), "lowPsf": round(min(t[2] for t in out)), "n": len(out), "radiusMi": miles,
-             "comps": [{"address": t[3], "sold": t[4], "price": round(t[1]), "sf": t[5]} for t in out]}, retrieved_at)
+             "comps": [{"address": t[3], "sold": t[4], "price": round(t[1]), "sf": t[5], "apn": t[6], "yearBuilt": t[7], "distanceMi": t[8]} for t in out]}, retrieved_at)
 
 
 def resolve_house_comps(l, result):
@@ -186,28 +186,39 @@ def underwrite(l, *, fetch_comps=True, overrides=None):
         return None
     n_split, known = split_n(l)
 
-    def inputs(n, hard):
+    def inputs(n, hard, psf=None):
         return dict(sf=A["sf"], hard=hard, soft=A["soft"], site=A["site"], fin=A["fin"], sell=A["sell"],
                     land=land, demo=(l.get("defaultDemoCost") or 0) if l.get("parcelStatus") == "improved" else 0,
-                    n=n, psf=hc["psf"], haircut=A["haircut"], splitCost=A["split_cost"], adu=A["adu"] if l.get("currentZoning") else None)
+                    n=n, psf=hc["psf"] if psf is None else psf, haircut=A["haircut"], splitCost=A["split_cost"], adu=A["adu"] if l.get("currentZoning") else None)
 
-    def run(hard):
-        return max((dict(n=n, **home_econ(inputs(n, hard))) for n in sorted({1, n_split})), key=lambda result: result["profit"])
+    def run(hard, psf=None):
+        return max((dict(n=n, **home_econ(inputs(n, hard, psf))) for n in sorted({1, n_split})), key=lambda result: result["profit"])
 
     cheap, best = run(A["hard"][0]), run(A["hard"][1])
     fallback = bool(hc.get("fellBack"))
     risk = ((0 if land_ok else 2) + ((hc.get("n") or 0) < (6 if fallback else 4)) + ((hc.get("radiusMi") or 0) >= 3)
-            + (2 if l.get("inFloodplain") else 1 if l.get("floodKnown") is False else 0)
+            + (2 if l.get("inFloodplain") else 1 if l.get("floodKnown") is not True else 0)
             + ((1 if known else 2) if best["n"] > 1 else 0)
             + (2 if hc["psf"] > 800 else 0))   # unverified: sale price above $800/sf
     risk = "Low" if risk <= 1 else "Medium" if risk <= 3 else "High"
+    median_psf = hc.get("medPsf") or (hc["psf"] if fallback else None)
+    stress = None
+    if median_psf:
+        med_high, med_low = run(A["hard"][1], median_psf), run(A["hard"][0], median_psf)
+        med_risk_points = ((0 if land_ok else 2) + ((hc.get("n") or 0) < (6 if fallback else 4)) + ((hc.get("radiusMi") or 0) >= 3)
+                           + (2 if l.get("inFloodplain") else 1 if l.get("floodKnown") is not True else 0)
+                           + ((1 if known else 2) if med_high["n"] > 1 else 0) + (2 if median_psf > 800 else 0))
+        med_risk = "Low" if med_risk_points <= 1 else "Medium" if med_risk_points <= 3 else "High"
+        med_label = verdict_label(med_high["profit"], med_high["margin"], med_low["margin"], med_risk)
+        stress = dict(salePsf=median_psf, label=med_label, profit=round(med_high["profit"]), marginPct=round(med_high["margin"]*100, 1), homes=med_high["n"],
+                      fragile=med_label != verdict_label(best["profit"], best["margin"], cheap["margin"], risk))
     m = best["margin"]
     offer, offer_n = max(((supportable_land(inputs(n, A["hard"][1]), A["good"]), n)
                          for n in sorted({1, n_split})), key=lambda item: item[0])
     return dict(label=verdict_label(best["profit"], m, cheap["margin"], risk),
                 strategy=f"{best['n']} homes" if best["n"] > 1 else "1 custom home", land=round(land),
                 finished=round(best["finished"]), profit=round(best["profit"]), marginPct=round(m * 100), marginPctAt275=round(cheap["margin"] * 100),
-                profitAt275=round(cheap["profit"]), salePsf=hc["psf"], risk=risk,
+                profitAt275=round(cheap["profit"]), salePsf=hc["psf"], risk=risk, medianStress=stress, capacityConfirmed=False,
                 supportableOffer=round(offer), offerHomes=offer_n, offerTargetMargin=A["good"], offerHardPsf=A["hard"][1],
                 compSource=hc["source"], compSourceUrl=hc["sourceUrl"], compRetrievedAt=hc["retrievedAt"],
                 compFellBack=fallback, compError=hc["error"], compFallbackReason=hc["fallbackReason"])

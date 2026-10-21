@@ -29,7 +29,8 @@ def new_build_values(lead):
         if r.get("_failed") or r.get("error"):
             error = r.get("_error") or r.get("error") or "County GIS query failed"
             print(f"new_build_values: county query failed for {lead.get('apn')} ({miles} mi): {error}; new-build values unavailable")
-            return None
+            return {"error": str(error), "source": "Maricopa County Assessor nearby new-build sales", "sourceUrl": MARICOPA_PARCELS,
+                    "retrievedAt": retrieved_at, "radiusMi": miles, "n": 0}
         rows, seen = [], {}
         for f in r.get("features") or []:
             c = f["attributes"]
@@ -51,14 +52,16 @@ def new_build_values(lead):
             "n": len(rows), "radiusMi": miles, "lowPsf": round(min(psfs)), "highPsf": round(max(psfs)),
             "source": "Maricopa County Assessor nearby new-build sales", "sourceUrl": MARICOPA_PARCELS,
             "retrievedAt": retrieved_at, "fellBack": False, "error": None, "fallbackReason": None,
-            "examples": [{"address": t[3]["PHYSICAL_ADDRESS"].split("  ")[0], "price": round(t[0]), "sf": round(t[2]),
-                          "sold": t[1].isoformat()} for t in near]}
+            "examples": [{"address": t[3]["PHYSICAL_ADDRESS"].split("  ")[0], "price": round(t[0]), "sf": round(t[2]), "apn": t[3].get("APN"), "yearBuilt": _parse_num(t[3].get("CONST_YEAR")),
+                          "distanceMi": round(_haversine_mi(lat, lng, t[3]["LATITUDE"], t[3]["LONGITUDE"]), 3), "sold": t[1].isoformat()} for t in near]}
 
 
 def attach_new_build_values(leads):
     res = [l for l in leads if l.get("landUseClass") == "residential" and not l.get("stale")]
     for l in sorted(res, key=lambda l: -l["score"])[:OFFER_LEADS]:
-        l["newBuild"] = new_build_values(l)
+        result = new_build_values(l)
+        l["newBuildLookup"] = {k: (result or {}).get(k) for k in ("source", "sourceUrl", "retrievedAt", "error")}
+        l["newBuild"] = result if result and result.get("arv") and result.get("psf") else None
 
 
 if __name__ == "__main__":

@@ -63,6 +63,41 @@ class EconomicsTests(unittest.TestCase):
         self.assertEqual(verdict.split_n({"landSf": 145627}), (4, False))
 
 
+class ReviewRegressionTests(unittest.TestCase):
+    def test_shared_risk_cases(self):
+        cases=json.loads((Path(__file__).with_name("underwriting-fixtures.json")).read_text())["riskCases"]
+        for case in cases:
+            with self.subTest(case=case["name"]):
+                parcel=lead()
+                parcel.update(currentZoning="R1-100",landSf=10000,floodKnown=case["floodKnown"])
+                parcel["houseComps"].update(psf=case["psf"],n=case["n"])
+                self.assertEqual(verdict.underwrite(parcel,fetch_comps=False)["risk"],case["risk"])
+
+    def test_median_stress_does_not_change_primary_verdict(self):
+        parcel=lead(); parcel["houseComps"].update(psf=700,medPsf=300)
+        result=verdict.underwrite(parcel,fetch_comps=False)
+        self.assertEqual(result["salePsf"],700)
+        self.assertTrue(result["medianStress"]["fragile"])
+        self.assertFalse(result["capacityConfirmed"])
+
+    def test_land_lookup_error_remains_distinct_from_no_sales(self):
+        with patch.object(comps,"_esri_query",return_value={"_failed":True,"_error":"HTTP 503"}):
+            result=comps.build_comps_for_lead(lead())
+        self.assertIsNone(result["valuation"])
+        self.assertEqual(result["error"],"HTTP 503")
+        self.assertTrue(result["retrievedAt"])
+        with patch.object(comps,"_esri_query",return_value={"features":[]}):
+            empty=comps.build_comps_for_lead(lead())
+        self.assertIsNone(empty["error"])
+
+    def test_failed_new_build_result_is_stored_without_usable_price(self):
+        parcel=lead(); parcel["score"]=100
+        with patch.object(offer,"_esri_query",return_value={"_failed":True,"_error":"HTTP 503"}):
+            offer.attach_new_build_values([parcel])
+        self.assertIsNone(parcel["newBuild"])
+        self.assertEqual(parcel["newBuildLookup"]["error"],"HTTP 503")
+
+
 class OverrideTests(unittest.TestCase):
     def test_valid_cloud_source_dates(self):
         self.assertEqual(verdict.validate_override(CLOUD_OVERRIDE), CLOUD_OVERRIDE)
@@ -141,7 +176,7 @@ class CompMetadataTests(unittest.TestCase):
             result = verdict.underwrite(parcel)
         self.assertTrue(result["compFellBack"])
         self.assertIsNone(result["compError"])
-        self.assertIn("No qualifying", result["compFallbackReason"])
+        self.assertIn("Fewer than 3 home sales", result["compFallbackReason"])
 
     def test_error_without_fallback_remains_on_lead(self):
         parcel = lead()
@@ -173,14 +208,17 @@ class CompMetadataTests(unittest.TestCase):
 
     def test_successful_comp_query_records_source_and_selection(self):
         parcel = lead()
-        rows = [{"attributes": {"LIVING_SPACE": 2000, "SALE_PRICE": price,
+        rows = [{"attributes": {"APN": f"comp-{i}", "LIVING_SPACE": 2500, "SALE_PRICE": price,
                   "LAND_SIZE": 145627, "CONST_YEAR": 2025, "LATITUDE": 33.8, "LONGITUDE": -112.1,
                   "SALE_DATE": "04/01/2026", "PHYSICAL_ADDRESS": f"{i} Sample Rd"}}
                 for i, price in enumerate((800000, 900000, 1000000, 1100000, 1200000))]
         with patch.object(verdict, "_esri_query", return_value={"features": rows}):
             result = verdict.house_comps(parcel)
-        self.assertEqual(result["psf"], 550)
-        self.assertEqual(result["medPsf"], 500)
+        self.assertEqual(result["psf"], 440)
+        self.assertEqual(result["medPsf"], 400)
+        self.assertEqual(result["comps"][0]["apn"], "comp-0")
+        self.assertEqual(result["comps"][0]["yearBuilt"], 2025)
+        self.assertEqual(result["comps"][0]["distanceMi"], 0)
         self.assertFalse(result["fellBack"])
         self.assertIsNone(result["error"])
         self.assertTrue(result["retrievedAt"].endswith("Z"))
@@ -243,7 +281,7 @@ class NewBuildMetadataTests(unittest.TestCase):
 
     def test_failed_new_build_query_stops_before_larger_radii(self):
         with patch.object(offer, "_esri_query", return_value={"error": {"message": "GIS unavailable"}}) as network:
-            self.assertIsNone(offer.new_build_values(lead()))
+            self.assertEqual(offer.new_build_values(lead())["error"], "{'message': 'GIS unavailable'}")
         network.assert_called_once()
 
 

@@ -304,8 +304,8 @@
           <label style="font-size:12.5px;color:var(--text-soft);">Profit target (% of sale)<input class="filter-input" id="hcProfit" type="number" value="10" style="width:60px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Open offer at (% of max)<input class="filter-input" id="hcOpen" type="number" value="84" style="width:60px;"></label>
         </div>
-        <div class="filter-row" title="Optional. Phoenix allows up to 2 ADUs per lot, each up to 75% of the main house (1,000 sf max on lots of 10,000 sf or less). Leave ADUs at 0 to ignore. Only applied to leads with Phoenix zoning, and only when keeping the lot whole.">
-          <label style="font-size:12.5px;color:var(--text-soft);">ADUs / casitas (0 = off)<input class="filter-input" id="hcAduN" type="number" min="0" max="2" value="0" style="width:60px;"></label>
+        <div class="filter-row" title="Optional scenario, not verified ADU eligibility. Check jurisdiction, district, primary dwelling, dimensions and permits. Leave ADUs at 0 to ignore; splits exclude ADUs.">
+          <label style="font-size:12.5px;color:var(--text-soft);">ADUs / casitas (eligibility unconfirmed; 0 = off)<input class="filter-input" id="hcAduN" type="number" min="0" max="2" value="0" style="width:60px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Size each (sf)<input class="filter-input" id="hcAduSf" type="number" value="800" style="width:80px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">ADU build ($/sf) <i>placeholder</i><input class="filter-input" id="hcAduHard" type="number" value="350" style="width:80px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">ADU extra site work ($ each) <i>placeholder</i><input class="filter-input" id="hcAduSite" type="number" value="15000" style="width:100px;"></label>
@@ -322,6 +322,7 @@
             <label style="font-size:12.5px;color:var(--text-soft);">Long-term loan (% of value)<input class="filter-input" id="hcLtv" type="number" value="70" style="width:60px;"></label>
             <label style="font-size:12.5px;color:var(--text-soft);">Loan rate (%)<input class="filter-input" id="hcRate" type="number" value="6.75" step="0.05" style="width:70px;"></label>
           </div>
+          <label style="font-size:12.5px;">Lender minimum DSCR (x) <input class="filter-input" id="hcDscr" type="number" value="1.25" min="0.01" step="0.05" style="width:75px;"></label>
           <div id="hcRentHint" style="font-size:12.5px;color:var(--text-soft);margin:-4px 0 10px;"></div>
         </div>
         <div id="hcOut" style="margin-top:6px;font-size:13.5px;line-height:1.6;"></div>
@@ -645,7 +646,7 @@ const HOLD_SECTIONS = [
   ['Soft Costs', [['permit','Permit/Inspection Fee 1','usd'],['design','Design Fee 1','usd'],['survey','Survey','usd'],['ffe','FF&E ($10/sqft) — auto','usd','auto'],['misc','Miscellaneous','usd'],['finConstr','Financing/Closing Cost (construction)','usd'],['finPerm','Financing/Closing Cost (permanent)','usd'],['otherCost1','Other Cost 1','usd']]],
   ['Contingency, Reserve & Fee', [['contPct','Contingency %','pct'],['interestReserve','Interest Reserve ($) — auto','usd','auto'],['devFeePct','Developer Fee %','pct']]],
   ['Construction Loan', [['ltcPct','Construction Loan-to-Cost %','pct'],['constrRate','Construction Interest Rate','pct'],['constrTerm','Construction Term (months)','num']]],
-  ['Permanent Loan', [['appraisedValue','Appraised Value (post-construction) — auto = NOI ÷ cap','usd','auto'],['ltvPct','Permanent Loan-to-Value % (max)','pct'],['permRate','Permanent Interest Rate','pct'],['permTerm','Permanent Term (months)','num']]],
+  ['Permanent Loan', [['appraisedValue','Appraised Value (post-construction) — auto = NOI ÷ cap','usd','auto'],['ltvPct','Permanent Loan-to-Value % (max)','pct'],['permRate','Permanent Interest Rate','pct'],['permTerm','Permanent Term (months)','num'],['minDscr','Lender minimum DSCR (x)','num']]],
   ['Exit & Growth', [['holdYears','Hold Period (years, 1-5)','num'],['exitCap','Exit Cap Rate','pct'],['sellPct','Selling Closing Cost %','pct'],['rentGrowth','Rent Growth % / yr','pct'],['expGrowth','Expense Growth % / yr','pct']]],
 ];
 const LOTS_SECTIONS = [
@@ -666,12 +667,19 @@ function holdDefaults(lead, units){
     permit: Math.round(hard1*0.02), design: Math.round(hard1*0.04), survey: 6000, ffe: null, misc: 10000, finConstr: Math.round(hard1*0.015), finPerm: Math.round(hard1*0.01), otherCost1: 0,
     contPct: 0.05, interestReserve: null, devFeePct: 0.03,
     ltcPct: 0.65, constrRate: 0.075, constrTerm: 18,
-    appraisedValue: null, ltvPct: 0.70, permRate: 0.0675, permTerm: 360,
+    appraisedValue: null, ltvPct: 0.70, permRate: 0.0675, permTerm: 360, minDscr: 1.25,
     holdYears: 3, exitCap: 0.0565, sellPct: 0.06, rentGrowth: 0.03, expGrowth: 0.03,
   };
 }
 
 function pmt(rate, n, loan){ if(!loan || !n) return 0; if(!rate) return loan / n; const f = Math.pow(1 + rate, n); return loan * rate * f / (f - 1); }
+function rentalDebt(noi, value, ltv, rate, months, minDscr){
+  if(![noi,value,ltv,rate,months,minDscr].every(Number.isFinite) || value < 0 || ltv < 0 || ltv > 1 || rate < 0 || months <= 0 || minDscr <= 0) return null;
+  const annualPerDollar = pmt(rate / 12, months, 1) * 12;
+  const ltvLimit = Math.max(0, value * ltv), dscrLimit = Math.max(0, noi) / minDscr / annualPerDollar;
+  const loan = Math.min(ltvLimit, dscrLimit), service = loan * annualPerDollar;
+  return { loan, service, ltvLimit, dscrLimit, dscr: service > 0 ? noi / service : null, binding: dscrLimit < ltvLimit ? 'DSCR' : 'LTV' };
+}
 function loanBal(rate, n, loan, paid){ if(!rate) return Math.max(0, loan - loan / n * paid); const f = Math.pow(1 + rate, paid); return loan * f - pmt(rate, n, loan) * (f - 1) / rate; }
 function irrOf(cfs){
   const npv = r => cfs.reduce((a, c, t) => a + c / Math.pow(1 + r, t), 0);
@@ -682,6 +690,7 @@ function irrOf(cfs){
 }
 
 function calcHold(s){
+  if(s.askingPrice == null || String(s.askingPrice).trim() === '' || !Number.isFinite(+s.askingPrice) || +s.askingPrice <= 0) return { error: 'Enter a positive supported purchase price before calculating returns.' };
   const r = {}, n = s.units || 0, hold = Math.min(5, Math.max(1, Math.round(s.holdYears || 1)));
   r.land = (s.askingPrice||0) + (s.landExp1||0) + (s.demoCost||0);
   r.hard = (s.hard1||0) + (s.hard2||0);
@@ -711,7 +720,9 @@ function calcHold(s){
   }
   r.noi1 = r.years[0].noi;
   r.appraised = s.appraisedValue != null ? s.appraisedValue : (s.exitCap ? r.noi1 / s.exitCap : 0);
-  r.permLoan = (s.ltvPct||0) * r.appraised;
+  r.debt = rentalDebt(r.noi1, r.appraised, s.ltvPct || 0, s.permRate || 0, s.permTerm || 0, s.minDscr ?? 1.25);
+  if(!r.debt) return { error: 'Enter valid loan terms and a lender minimum DSCR above zero.' };
+  r.permLoan = r.debt.loan;
   r.permMonthly = pmt((s.permRate||0)/12, s.permTerm||0, r.permLoan);
   r.ds = r.permMonthly * 12;
   r.yieldOnCost = r.total ? r.noi1 / r.total : null;
@@ -759,6 +770,7 @@ function calcFieldsHtml(idx, state){
 
 function renderHoldResults(idx, state){
   const r = calcHold(state), x = v => v == null ? '—' : money(v);
+  if(r.error){ document.getElementById(`calc-kpis-${idx}`).textContent = r.error; document.getElementById(`calc-detail-${idx}`).innerHTML = ''; return; }
   document.getElementById(`calc-kpis-${idx}`).innerHTML = `
     ${calcRow('Total Development Budget', money(r.total))}
     ${calcRow('Equity Required (construction)', money(r.equity))}
@@ -768,9 +780,10 @@ function renderHoldResults(idx, state){
     ${calcRow('Appraised Value', money(r.appraised))}
     ${calcRow('Developer Profit', money(r.profit), r.profit>0?'pos':'neg')}
     ${calcRow('Profit Margin', pct1(r.profitMargin), r.profitMargin>0?'pos':'neg')}
-    ${calcRow('Permanent Loan', money(r.permLoan))}
+    ${calcRow('Permanent Loan (' + r.debt.binding + ' limited)', money(r.permLoan))}
+    ${calcRow('LTV maximum', money(r.debt.ltvLimit))}${calcRow('DSCR maximum', money(r.debt.dscrLimit))}
     ${calcRow('Perm Monthly Payment', money(r.permMonthly))}
-    ${calcRow('DSCR (yr 1)', r.dscr==null?'—':r.dscr.toFixed(2)+'x', r.dscr>=1.25?'pos':'neg')}
+    ${calcRow('DSCR (yr 1)', r.dscr==null?'—':r.dscr.toFixed(2)+'x', r.dscr>=(state.minDscr ?? 1.25)-1e-9?'pos':'neg')}
     ${calcRow('Equity Multiple', r.equityMultiple==null?'—':r.equityMultiple.toFixed(2)+'x')}
     ${calcRow('IRR', pct1(r.irr))}
   `;
@@ -792,8 +805,8 @@ function renderHoldResults(idx, state){
 
 function renderCalcResults(idx, state){
   const warnEl = document.getElementById(`calc-kpis-warn-${idx}`);
-  if(warnEl) warnEl.innerHTML = state.askingPrice ? '' :
-    `<div class="dm-note" style="margin-bottom:12px;">⚠️ Purchase price is $0 — every profit/return figure below assumes free land until you enter one.</div>`;
+  if(!(Number(state.askingPrice) > 0)){ if(warnEl) warnEl.textContent = 'Enter a positive supported purchase price before calculating returns.'; document.getElementById(`calc-kpis-${idx}`).innerHTML = ''; document.getElementById(`calc-detail-${idx}`).innerHTML = ''; return; }
+  if(warnEl) warnEl.innerHTML = '';
   document.getElementById(`calc-detail-${idx}`).innerHTML = '';
   if(state.mode === 'lots'){
     const r = calcSubdivision(state);
@@ -816,7 +829,9 @@ function renderCalcResults(idx, state){
 const calcStates = {};
 function loadCalcs(){ try{ return JSON.parse(localStorage.getItem('leadCalcs') || '{}'); }catch(e){ return {}; } }
 function calcSummary(st){
+  if(!(Number(st.askingPrice) > 0)) return 'Purchase price missing — returns unavailable';
   const r = st.mode === 'lots' ? calcSubdivision(st) : calcHold(st);
+  if(r.error) return r.error;
   const pr = st.mode === 'lots' ? r.developerProfit : r.profit, mg = st.mode === 'lots' ? r.profitMargin : r.profitMargin;
   return `${pr < 0 ? '−' : ''}$${Math.abs(Math.round(pr)).toLocaleString()} profit${mg == null ? '' : ' (' + (mg * 100).toFixed(0) + '%)'} · price $${Math.round(st.askingPrice || 0).toLocaleString()}`;
 }
@@ -1135,6 +1150,7 @@ function ownerLookupBtn(lead){
 }
 function leadCard(lead, idx){
   const reasons = (lead.reasons||[]).map(r=>{
+    if(!lead.saleDate && r.includes('no sale in 15+ years')) r = r.replace('no sale in 15+ years — likely dated/deferred maintenance', 'sale date unknown — legacy +15 scoring credit, sale recency unverified');
     const isFlood = r.toLowerCase().includes('flood');
     return `<span class="reason-chip ${isFlood?'flood':''}">${esc(r)}</span>`;
   }).join('');
@@ -1184,13 +1200,14 @@ function leadCard(lead, idx){
       <span>By-right <b>${lead.byRightUnits==null?'n/a':lead.byRightUnits+' units'}</b></span>
       <span>Rezone target <b>${lead.rezoneTargetUnits==null?'n/a':lead.rezoneTargetUnits+' units'}</b></span>
       <span>Rezonings nearby (0.5mi) <b>${lead.rezoningNearby}</b></span>
-      <span>Held <b>${own.yearsHeld==null?'—':own.yearsHeld.toFixed(1)+'y'}</b></span>
+      <span>Sale date <b>${esc(lead.saleDate)||'unknown'}</b></span>
+      <span>Held <b>${own.yearsHeld==null?'unknown':own.yearsHeld.toFixed(1)+'y'}</b></span>
     </div>
     <div class="lead-reasons">${reasons}</div>
     <div class="lead-detail" id="detail-${idx}">
       <div class="detail-grid">
         <div class="detail-field"><div class="detail-label">General Plan Code (raw)</div><div class="detail-val">${esc(lead.generalPlanDesignation)||'—'}<div style="font-size:10px;font-weight:400;color:var(--text-faint);margin-top:2px;">no public code→label legend found — cross-check the city's GP map</div></div></div>
-        <div class="detail-field"><div class="detail-label">Flood Zone</div><div class="detail-val">${esc(lead.floodZone)||'None mapped'}</div></div>
+        <div class="detail-field"><div class="detail-label">Flood Zone</div><div class="detail-val">${lead.floodKnown === true ? (esc(lead.floodZone)||'None mapped') : 'Unknown — lookup not confirmed'}</div></div>
         <div class="detail-field"><div class="detail-label">Land Size</div><div class="detail-val">${esc(lead.landSf)} sf</div></div>
         <div class="detail-field"><div class="detail-label">PUC Code</div><div class="detail-val">${esc(lead.puc)}</div></div>
         <div class="detail-field"><div class="detail-label">Owner Mailing Address</div><div class="detail-val">${esc(lead.ownerMailAddress)||'—'}</div>
@@ -1583,7 +1600,7 @@ async function initParcelMap(lead, idx){
       <div class="pm-why">None of these is an approved lot count. Distances and areas are computed in a local meter coordinate system centered on the parcel, not from screen pixels.</div>
       <div><b>Sources:</b> parcel boundary &amp; jurisdiction: ${ring ? link(GIS_PARCELS, 'Maricopa County Assessor GIS') + ', retrieved ' + par.fetched : '<b>unavailable</b> (' + esc(par.err) + ')'}. Zoning: ${hasZone ? link(zn.url, zn.name) + ', retrieved ' + esc(zn.date) : '<b>unavailable</b> (' + esc(zn && zn.err || 'lookup failed') + ')'}. Roads: ${link(GIS_ROADS, 'Census TIGERweb local roads')}${site ? ', retrieved ' + site.fetched : ''}.</div>
       <div class="pm-verify"><b>Still needs verification</b> (<b>unknown</b> means nobody has checked it. It is not a pass, and not “no restriction”):
-        <ul><li>Driveway / curb-cut approval and street standards — ${CF('u', 'unknown')}</li><li>Drainage and washes — ${CF('u', 'unknown')}; FEMA mapped floodplain: ${CF('v', 'verified · ' + (lead.inFloodplain ? 'inside' : 'outside') + ', daily scan')}</li><li>Terrain and slope — ${CF('u', 'unknown')}; the hillshade layer shows relief only</li><li>Water, sewer and electric utilities — ${CF('u', 'unknown')}</li><li>Easements and HOA/CC&amp;Rs — ${CF('u', 'unknown')}</li><li>Applicable subdivision / lot-split requirements — ${CF('u', 'unknown')}</li></ul></div>
+        <ul><li>Driveway / curb-cut approval and street standards — ${CF('u', 'unknown')}</li><li>Drainage and washes — ${CF('u', 'unknown')}; FEMA mapped floodplain: ${lead.floodKnown === true ? CF('v', 'verified · ' + (lead.inFloodplain ? 'inside' : 'outside') + ', daily scan') : CF('u', 'unknown · lookup not confirmed')}</li><li>Terrain and slope — ${CF('u', 'unknown')}; the hillshade layer shows relief only</li><li>Water, sewer and electric utilities — ${CF('u', 'unknown')}</li><li>Easements and HOA/CC&amp;Rs — ${CF('u', 'unknown')}</li><li>Applicable subdivision / lot-split requirements — ${CF('u', 'unknown')}</li></ul></div>
       <div>View is flat 2D satellite. ${link('https://www.google.com/maps/@' + lead.lat + ',' + lead.lng + ',19z/data=!3m1!1e3', 'Open it in Google Maps')} for tilted 3D imagery.</div>`;
   }
   box._redraw = () => {
@@ -2146,12 +2163,12 @@ function selectedComps(l){
   return null;
 }
 function compSourceHtml(l){
-  const c = selectedComps(l); if(!c) return 'No usable sale-price comps.';
+  const c = selectedComps(l); if(!c) return 'No usable sale-price comps.' + ((l.newBuildLookup||{}).error ? ' New-build lookup error: ' + esc(l.newBuildLookup.error) : '');
   const source = c.source || 'Maricopa County Assessor nearby home sales';
   const url = /^https?:\/\//i.test(c.sourceUrl || '') ? c.sourceUrl : 'https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3';
   return `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(source)}</a> · retrieved ${esc(c.retrievedAt || 'unknown (stored scan)')}${c.fellBack ? `<br><b>FALLBACK: stored new-build sales</b> · ${esc(c.fallbackReason || 'Nearby home-sales comps unavailable')}` : ''}${c.error ? `<br>GIS error: ${esc(c.error)}` : ''}`;
 }
-function aduInput(l){   // the calculator's ADU box, applied only where Phoenix zoning is confirmed
+function aduInput(l){   // Scenario only: a zoning string does not establish ADU eligibility.
   const g = id => parseFloat(document.getElementById(id).value) || 0;
   return l.currentZoning ? { n: g('hcAduN'), sf: g('hcAduSf'), hard: g('hcAduHard'), site: g('hcAduSite'), value: g('hcAduVal') } : null;
 }
@@ -2176,7 +2193,7 @@ function priceBasisHtml(l){
   const reference = ov ? ov.landCost : l.salePrice;
   const gap = reference > 0 && proxy > 0 && Math.max(reference, proxy) / Math.min(reference, proxy) > 1.5
     ? `<br>⚠ Price gap: ${money(reference)} ${ov ? 'override' : 'recorded sale'} vs ${money(proxy)} county proxy (${(Math.max(reference, proxy) / Math.min(reference, proxy)).toFixed(1)}×). Check both inputs.` : '';
-  return `<div style="display:flex;flex-wrap:wrap;gap:20px;"><div>${basis}</div><div>${offer}<br>Screen at $325/sf build, ${document.getElementById('hcProfit').value}% target, stored sale comps and parcel demolition; other calculator assumptions apply. Split capacity is estimated.</div></div>${gap}<div style="margin-top:5px;">${compSourceHtml(l)}</div>`;
+  return `<div style="display:flex;flex-wrap:wrap;gap:20px;"><div>${basis}</div><div>${offer}<br>Screen at $325/sf build, ${document.getElementById('hcProfit').value}% target, stored sale comps and parcel demolition; other calculator assumptions apply. Split capacity is unconfirmed; approval, access and utilities still need checking.</div></div>${gap}<div style="margin-top:5px;">${compSourceHtml(l)}</div>`;
 }
 function profitFor(l, extraHard, psfOverride, o){
   o = o || {};
@@ -2198,11 +2215,23 @@ function profitFor(l, extraHard, psfOverride, o){
     if(!best || e.profit > best.profit) best = { n, finished: e.finished, cost: e.cost, profit: e.profit, land, margin: e.margin };
   }
   best.maxLand = maxLand; best.offerN = offerN;
-  let r = (landOK ? 0 : 2) + ((nb.n || 0) < (nb.fellBack ? 6 : 4) ? 1 : 0) + ((nb.radiusMi || 0) >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : l.floodKnown === false ? 1 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0);
+  let r = (landOK ? 0 : 2) + ((nb.n || 0) < (nb.fellBack ? 6 : 4) ? 1 : 0) + ((nb.radiusMi || 0) >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : l.floodKnown !== true ? 1 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0) + (psf > 800 ? 2 : 0);
   best.risk = r <= 1 ? 'Low' : r <= 3 ? 'Medium' : 'High';
   best.adj = best.profit > 0 ? best.profit * ({ Low: .85, Medium: .65, High: .4 }[best.risk]) : best.profit;
-  best.strategy = best.n > 1 ? `Lot split → ${best.n} custom homes${sp.known ? '' : ' (zoning min lot unknown — assumed)'}` : 'Custom home';
+  best.strategy = best.n > 1 ? `Lot split → ${best.n} custom homes (unconfirmed capacity)${sp.known ? '' : ' (zoning min lot unknown — assumed)'}` : 'Custom home';
   return best;
+}
+function compSensitivityHtml(l){
+  const c = selectedComps(l); if(!c) return '';
+  const high = profitFor(l, 0, 0, { hard: 325 }), cheap = profitFor(l, 0, 0, { hard: 275 });
+  if(!high || !cheap) return '';
+  const target = parseFloat(document.getElementById('hcProfit').value) / 100 || .10;
+  const classify = (a,b) => a.margin >= target && a.risk !== 'High' ? 'Good' : a.profit >= 0 && (a.margin >= target / 2 || b.margin >= target) ? 'Maybe' : 'Pass';
+  const median = c.medPsf || (c.fellBack ? c.psf : 0);
+  const normal = classify(high, cheap), mh = median ? profitFor(l, 0, median, {hard:325}) : null, ml = median ? profitFor(l, 0, median, {hard:275}) : null;
+  const ids = x => new Set(((selectedComps(x)||{}).comps || (selectedComps(x)||{}).examples || []).map(t => t.apn || [t.address,t.sold,t.price,t.sf].join('|')));
+  const mine = ids(l), shared = (D.leads || []).filter(x => x.apn !== l.apn && !x.stale && [...ids(x)].filter(k => mine.has(k)).length >= 3).length;
+  return `<div style="font-size:11px;margin-top:5px;">${mh ? `Median stress ($${median}/sf): <b>${classify(mh,ml)}</b> · ${money(mh.profit)} · ${(mh.margin*100).toFixed(1)}%${normal !== classify(mh,ml) ? ' · ⚠ FRAGILE: verdict changes at median pricing' : ''}` : 'Median sensitivity unavailable in stored comps'}${shared ? ` · Shared comps: at least 3 sales also support ${shared} other lead${shared===1?'':'s'}` : ''}.</div>`;
 }
 function sellerSignals(l){
   const o = l.ownership || {}, s = [];
@@ -2217,7 +2246,7 @@ function profitLine(l){
   const p = profitFor(l); if(!p) return '';
   const m = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString(), m2 = m;
   let badge = '', runNote = '';
-  if(l.parcelStatus === 'vacant' && l.landUseClass === 'residential'){
+  if(l.landUseClass === 'residential'){
     const run = loadRuns().find(r => r.name.toLowerCase() === String(l.address || '').split(/\s{2,}/)[0].toLowerCase());
     const target = parseFloat(document.getElementById('hcProfit').value) / 100 || 0.1;
     const high = profitFor(l, 0, 0, { hard: 325 }), cheap = profitFor(l, 0, 0, { hard: 275 });
@@ -2226,7 +2255,7 @@ function profitLine(l){
     if(run) runNote = ` · <b>your saved run:</b> ${run.vals.hcLots} homes, land ${m2(+run.vals.hcLand)}, profit ${m2(run.gain)} per home (${(run.margin * 100).toFixed(0)}%)`;
     badge = `<span title="Screen at $325/sf build; Maybe requires break-even. Other current calculator inputs apply." style="background:${col};color:#fff;border-radius:4px;padding:1px 6px;margin-right:6px;font-size:11px;font-weight:700;">${lab.toUpperCase()} · $325/sf</span>`;
   }
-  return `<div class="lead-sub" data-profit-apn="${esc(l.apn)}" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${badge}📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%) · risk ${p.risk}${selectedComps(l).fellBack ? ' · ⚠ FALLBACK comps' : ''}${runNote}${landBasis(l).override ? '<div style="margin-top:6px;">' + priceBasisHtml(l) + '</div>' : ''}</div>`;
+  return `<div class="lead-sub" data-profit-apn="${esc(l.apn)}" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${badge}📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%) · risk ${p.risk}${selectedComps(l).fellBack ? ' · ⚠ FALLBACK comps' : ''}${runNote}${[l.landCompLookup,l.newBuildLookup].filter(x => x && x.error).map(x => `<div>Lookup error: ${esc(x.error)} · attempted ${esc(x.retrievedAt || 'unknown')}</div>`).join('')}${compSensitivityHtml(l)}${landBasis(l).override ? '<div style="margin-top:6px;">' + priceBasisHtml(l) + '</div>' : ''}</div>`;
 }
 function refreshProfitLines(){
   const byApn = new Map((D.leads || []).map(l => [l.apn, l]));
@@ -2235,7 +2264,7 @@ function refreshProfitLines(){
 function lowSalePsf(l){ const c = selectedComps(l); if(!c) return 0; const e = (c.examples || []).filter(x => x.sf > 0).map(x => x.price / x.sf); return Math.min(c.lowPsf || c.psf, ...e); }
 function salesCell(l){
   const nb = selectedComps(l); if(!nb) return 'No sale-price comps'; const mo = n => '$' + (n / 1e6).toFixed(2) + 'M';
-  const ex = (nb.examples || []).map(e => `${esc(e.address)} · ${mo(e.price)} · ${e.sf.toLocaleString()} sf · $${Math.round(e.price / e.sf)}/sf · ${e.sold.slice(0,7)}`).join('<br>');
+  const ex = (nb.comps || nb.examples || []).map(e => `${esc(e.address)} · ${mo(e.price)} · ${e.sf.toLocaleString()} sf · $${Math.round(e.price / e.sf)}/sf · ${esc((e.sold||'').slice(0,7))}${e.apn ? ' · APN ' + esc(e.apn) : ''}${e.yearBuilt ? ' · built ' + esc(e.yearBuilt) : ''}${e.distanceMi != null ? ' · ' + e.distanceMi + ' mi' : ''}`).join('<br>');
   return `<div style="font-size:10.5px;line-height:1.35;min-width:230px;">${nb.fellBack ? 'Median (FALLBACK)' : '2nd-highest'} $${nb.psf}/sf of ${nb.n} sales within ${nb.radiusMi}mi${nb.lowPsf && nb.highPsf ? ' (range $' + nb.lowPsf + '–$' + nb.highPsf + ')' : ''}${ex ? `<br><span style="color:var(--text-faint);">Closest:<br>${ex}</span>` : (nb.price ? ` · median home $${(nb.price / 1e6).toFixed(2)}M` : '')}<br>${compSourceHtml(l)}</div>`;
 }
 function renderTopProfit(){
@@ -2281,7 +2310,7 @@ function intakeHtml(l){
   const flags = [];
   if(l.landUseClass && l.landUseClass !== 'residential') flags.push(`The county codes this parcel ${l.landUseClass}, which may not match its zoning.`);
   if(l.inFloodplain) flags.push('In a mapped floodplain (' + esc(l.floodZone || 'zone ?') + ').');
-  else if(l.floodKnown === false) flags.push('Flood status UNKNOWN: the FEMA lookup failed, so "not in a floodplain" is unconfirmed.');
+  else if(l.floodKnown !== true) flags.push('Flood status UNKNOWN: a successful FEMA lookup is not recorded.');
   if(l.zoningKnown && !l.currentZoning) flags.push('No City of Phoenix zoning at this point: it may be unincorporated Maricopa County (mailing city is not jurisdiction). Phoenix ADU / lot-split rules and the "adjacent zoning" rezone target may not apply. Confirm jurisdiction and zoning before relying on this.');
   const lv = l.valuation, landV = lv && lv.mostLikelyValue && !lv.unreliable ? lv.mostLikelyValue : (l.assessedValue || 0), price = landBasis(l).override ? landBasis(l).land : l.salePrice;
   if(price > 0 && landV > 0 && Math.max(price, landV) / Math.min(price, landV) > 1.5) flags.push('Price ' + money(price) + ' vs county proxy ' + money(landV) + ': a gap over 1.5× in either direction. Verify both before relying on the land cost.');
@@ -2337,14 +2366,14 @@ function renderBids(){
 }
 
 // ── Saved Numbers (Custom Home Calculator runs + per-lead calculators) ───
-const RUN_IDS = ['hcLand','hcDemo','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcMode','hcUnits','hcUnitSf','hcRent','hcVac','hcOpex','hcCap','hcLtv','hcRate'];
+const RUN_IDS = ['hcAduN','hcAduSf','hcAduHard','hcAduSite','hcAduVal','moSplitCost','moSplitHaircut','moMinLot','hcLand','hcDemo','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcMode','hcUnits','hcUnitSf','hcRent','hcVac','hcOpex','hcCap','hcLtv','hcRate','hcDscr'];
 function loadRuns(){ try{ return JSON.parse(localStorage.getItem('savedRuns') || '[]'); }catch(e){ return []; } }
 function storeRuns(r){ try{ localStorage.setItem('savedRuns', JSON.stringify(r)); }catch(e){} renderRuns(); drawMaps(true); }
 function saveRun(){
   const g = id => document.getElementById(id), L = window.hcLast; if(!L) return;
   const vals = {}; RUN_IDS.forEach(k => vals[k] = g(k).value);
   const name = g('hcLead').value.trim() || 'Unnamed (land $' + Math.round(parseFloat(vals.hcLand) || 0).toLocaleString() + ')';
-  const run = { name, vals, gain: L.gain, margin: L.margin, maxLand: L.maxLand, at: new Date().toLocaleDateString() };
+  const run = { name, vals, usablePct, gain: L.gain, margin: L.margin, maxLand: L.maxLand, at: new Date().toLocaleDateString() };
   const runs = loadRuns(), i = runs.findIndex(r => r.name.toLowerCase() === name.toLowerCase());
   if(i >= 0) runs[i] = run; else runs.unshift(run);
   storeRuns(runs); g('hcSaved').textContent = 'Saved ' + name + '.';
@@ -2354,6 +2383,7 @@ function loadRun(i){
   document.getElementById('hcLead').value = /^Unnamed/.test(r.name) ? '' : r.name;
   document.getElementById('hcDemo').value = 0;
   document.getElementById('hcLead').dispatchEvent(new Event('input'));
+  if(r.usablePct > 0 && r.usablePct <= 100) setParcelAssumption('use', r.usablePct);
   RUN_IDS.forEach(k => { const e = document.getElementById(k); if(r.vals[k] == null) return; e.value = r.vals[k]; e.dispatchEvent(new Event('input')); });
   showTab('calc'); document.getElementById('home-calc').scrollIntoView({ behavior: 'smooth' });
 }
@@ -2421,7 +2451,7 @@ renderMaxOffer();
   const ids = ['hcLand','hcDemo','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcAduN','hcAduSf','hcAduHard','hcAduSite','hcAduVal'];
   const el = id => document.getElementById(id), num = id => parseFloat(el(id).value) || 0;
   const money = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
-  const RIDS = ['hcUnits','hcUnitSf','hcRent','hcVac','hcOpex','hcCap','hcLtv','hcRate'];
+  const RIDS = ['hcUnits','hcUnitSf','hcRent','hcVac','hcOpex','hcCap','hcLtv','hcRate','hcDscr'];
   const KEEP = ['hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcAduN','hcAduSf','hcAduHard','hcAduSite','hcAduVal','hcMode', ...RIDS];
   try{ const saved = JSON.parse(localStorage.getItem('homeCalc') || '{}'); KEEP.forEach(k => { if(saved[k] != null) el(k).value = saved[k]; }); }catch(e){}
   const addr = l => String(l.address || '').split(/\s{2,}/)[0];
@@ -2442,7 +2472,7 @@ renderMaxOffer();
     if(l.salePrice) bits.push(`owner paid ${money(l.salePrice)}${l.saleDate ? ' (' + l.saleDate.slice(-4) + ')' : ''}`);
     if(l.assessedValue) bits.push(`assessed ${money(l.assessedValue)}`);
     rentHint(l);
-    el('hcAnchor').textContent = bits.filter(Boolean).join(' · ') + ` — ${fill.lots} homes in the ranking's best scenario; estimated split capacity ${splitInfo(l).n}.` + (fill.land === '' ? ' Enter a supported land price: reliable valuation unavailable.' : ' Price, demolition and sale comps filled in; adjust to your plan.');
+    el('hcAnchor').textContent = bits.filter(Boolean).join(' · ') + ` — ${fill.lots} homes in the ranking's best scenario; estimated split capacity ${splitInfo(l).n} (unconfirmed capacity).` + (fill.land === '' ? ' Enter a supported land price: reliable valuation unavailable.' : ' Price, demolition and sale comps filled in; adjust to your plan.');
     el('hcHouse').textContent = 'Looking up recent home sales nearby…';
     fetchHouseComps(l).then(h => {
       if(el('hcLead').value.trim().toLowerCase() !== addr(l).toLowerCase()) return;
@@ -2464,24 +2494,28 @@ renderMaxOffer();
     const fin = num('hcFin') / 100, sell = num('hcSell') / 100, profit = num('hcProfit') / 100, den = 1 - sell - profit, cap = num('hcCap') / 100, opex = num('hcOpex') / 100, vac = num('hcVac') / 100;
     const out = el('hcOut');
     if(den <= 0 || bsf <= 0 || cap <= 0){ out.textContent = 'Selling costs + profit must be under 100%; unit size and cap rate above 0.'; window.hcLast = null; return; }
-    const C = hard + soft + site, total = (C + land) * (1 + fin);
+    const demo = num('hcDemo');
+    if(!(land > 0) || el('hcLand').value.trim() === ''){ out.textContent = 'Enter a positive supported land price before calculating rental returns.'; window.hcLast = null; return; }
+    const C = hard + soft + site + demo, total = (C + land) * (1 + fin);
     const egi = u * num('hcRent') * 12 * (1 - vac), noi = egi * (1 - opex), value = noi / cap;
     const gain = value * (1 - sell) - total, margin = value ? gain / value : 0, maxLand = value * den / (1 + fin) - C;
-    const loan = num('hcLtv') / 100 * value, ds = pmt(num('hcRate') / 1200, 360, loan) * 12, cf = noi - ds, cashIn = total - loan;
+    const debt = rentalDebt(noi, value, num('hcLtv') / 100, num('hcRate') / 100, 360, num('hcDscr'));
+    if(!debt){ out.textContent = 'Enter valid loan terms and a lender minimum DSCR above zero.'; window.hcLast = null; return; }
+    const loan = debt.loan, ds = debt.service, cf = noi - ds, cashIn = total - loan;
     const needRent = (total / den) * cap / (1 - opex) / (1 - vac) / 12 / u;
-    window.hcLast = { gain, margin, maxLand };
+    window.hcLast = { gain, margin, maxLand, loan, debtService: ds, cashIn, totalCost: total };
     const row = (k, v, b) => `<tr><td style="padding:2px 14px 2px 0;${b ? 'font-weight:700;' : ''}">${k}</td><td style="text-align:right;${b ? 'font-weight:700;' : ''}">${v}</td></tr>`;
     const good = c => c ? '#2f6b47' : '#b03a3a';
     out.innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:28px;">
       <div><div style="font-weight:700;margin-bottom:4px;">Cost of the ${u}-unit building (${bsf.toLocaleString()} sf)</div><table>
-        ${row('Build', money(hard))}${row('Design / permits / fees', money(soft))}${row('Site work', money(site))}${row('Land', money(land))}${row('Loan interest', money((C + land) * fin))}${row('Total cost', money(total), 1)}</table></div>
+        ${row('Build', money(hard))}${row('Design / permits / fees', money(soft))}${row('Site work', money(site))}${row('Demolition', money(demo))}${row('Land', money(land))}${row('Loan interest', money((C + land) * fin))}${row('Total cost', money(total), 1)}</table></div>
       <div><div style="font-weight:700;margin-bottom:4px;">Income</div><table>
         ${row('Rent after vacancy / yr', money(egi))}${row('Operating costs', '−' + money(egi * opex).replace('−',''))}${row('Net operating income (NOI)', money(noi), 1)}${row('Value at ' + num('hcCap') + '% cap', money(value))}${row('Yield on cost', total ? (noi / total * 100).toFixed(1) + '%' : '—')}</table></div>
       <div style="max-width:440px;">
         <div style="margin-bottom:8px;"><b>To hit your ${num('hcProfit')}% profit, rent must be ${money(needRent)}/unit/mo</b> (you entered ${money(num('hcRent'))}).</div>
-        <div style="margin-bottom:8px;"><b>The most you can pay for the land (to build and sell at that value) is <span style="color:#2f6b47;">${money(maxLand)}</span></b> — open at <b>${money(maxLand * num('hcOpen') / 100)}</b>.</div>
+        <div style="margin-bottom:8px;">${maxLand >= 0 ? `<b>The most you can pay for the land (to build and sell at that value) is ${money(maxLand)}</b> — open at <b>${money(maxLand * num('hcOpen') / 100)}</b>.` : `<b>No nonnegative land offer meets your target.</b> Land budget: ${money(maxLand)}.`}</div>
         <div style="padding:8px 10px;border-radius:8px;margin-bottom:8px;background:${margin >= profit ? '#e6f4ea' : '#fdecec'};">If you sell at the cap-rate value: profit <b>${money(gain)}</b> (${(margin * 100).toFixed(1)}% of value) — ${margin >= profit ? 'meets' : 'below'} your ${num('hcProfit')}% target.</div>
-        <div style="padding:8px 10px;border-radius:8px;background:var(--card-bg-soft,#f3f5f9);">If you keep it: loan ${money(loan)}, payment ${money(ds / 12)}/mo · <b style="color:${good(cf > 0)};">cash flow ${money(cf / 12)}/mo</b> · DSCR <b style="color:${good(noi / ds >= 1.25)};">${ds ? (noi / ds).toFixed(2) + 'x' : '—'}</b> · cash left in the deal ${money(Math.max(0, cashIn))}${cashIn > 0 ? ' · cash-on-cash <b>' + (cf / cashIn * 100).toFixed(1) + '%</b>' : ' (the refinance returns all your cash)'}</div></div></div>
+        <div style="padding:8px 10px;border-radius:8px;background:var(--card-bg-soft,#f3f5f9);">If you keep it: loan ${money(loan)} (${debt.binding} limited; LTV max ${money(debt.ltvLimit)}, DSCR max ${money(debt.dscrLimit)}), payment ${money(ds / 12)}/mo · <b style="color:${good(cf > 0)};">cash flow ${money(cf / 12)}/mo</b> · DSCR <b style="color:${good(ds > 0 && noi / ds >= num('hcDscr') - 1e-9)};">${ds ? (noi / ds).toFixed(2) + 'x' : '—'}</b> · cash left in the deal ${money(Math.max(0, cashIn))}${cashIn > 0 ? ' · cash-on-cash <b>' + (cf / cashIn * 100).toFixed(1) + '%</b>' : ' (the refinance returns all your cash)'}</div></div></div>
       <div style="font-size:11px;color:var(--text-faint);margin-top:6px;">Rent, operating costs and cap rate are placeholders — operating costs include taxes, insurance, repairs, management and reserves. Not an appraisal; the loan is a 30-year fixed.</div>`;
   }
   function setMode(){ const r = el('hcMode').value === 'rent'; el('hcRentRow').style.display = r ? '' : 'none'; }
@@ -2615,7 +2649,7 @@ function renderMapInstance(inst, leads){
       <div style="font-family:'Inter',sans-serif;font-size:12.5px;">
         <div style="font-weight:700;">${esc(l.address)||'(no address)'}</div>
         <div style="font-weight:700;color:#1d3252;margin:3px 0;">Score ${l.score} · ${l.parcelStatus === 'improved' ? 'Underused lot' : 'Vacant'} · ${vl || 'No verdict'}</div>
-        <div>${esc(l.landAcres)} ac · Zoned ${esc(l.currentZoning)||'—'}</div>
+        <div>${esc(l.landAcres)} ac · Zoned ${esc(l.currentZoning)||'—'}</div>${compSensitivityHtml(l)}
       </div>`);
     inst.markers.push(marker);
     bounds.push([l.lat,l.lng]);

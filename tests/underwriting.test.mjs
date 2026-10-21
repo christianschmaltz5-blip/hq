@@ -130,7 +130,7 @@ function calculatorContext(fixture, leads = []) {
   const end = html.indexOf('\nfunction sellerSignals(', begin);
   assert.ok(begin >= 0 && end > begin);
   vm.runInContext(html.slice(begin, end), context);
-  vm.runInContext(declaration('splitInfo'), context);
+  vm.runInContext(declaration('splitInfo') + declaration('pmt') + declaration('rentalDebt'), context);
   const init = html.indexOf('(function hcInit(){');
   assert.ok(init >= 0, 'Missing calculator initialization');
   vm.runInContext(completeScript(init), context);
@@ -509,3 +509,77 @@ test('malformed county response is explained instead of becoming empty comps', a
   assert.match(result.error, /missing parcel features/i);
 });
 
+
+const riskCases = JSON.parse(fs.readFileSync(path.join(testDirectory, 'underwriting-fixtures.json'), 'utf8')).riskCases;
+for(const item of riskCases){
+  test(`shared risk: ${item.name}`, () => {
+    const {context} = calculatorContext(fixtures[0]);
+    const parcel = {apn:'RISK', landSf:10000, currentZoning:'R1-100', floodKnown:item.floodKnown,
+      valuation:{mostLikelyValue:100000}, houseComps:{psf:item.psf,n:item.n,radiusMi:1}};
+    assert.equal(context.profitFor(parcel).risk, item.risk);
+  });
+}
+
+test('DSCR limits debt and increases equity; LTV and zero-interest boundaries work', () => {
+  const {context} = calculatorContext(fixtures[0]);
+  const noi = 3*2600*12*.94*.6, value = noi/.055;
+  const debt = context.rentalDebt(noi,value,.70,.0675,360,1.25);
+  approximately(debt.ltvLimit, 671877.8181818181, 'LTV amount');
+  assert.ok(debt.loan < debt.ltvLimit);
+  approximately(debt.dscr,1.25,'DSCR binding limit');
+  approximately(context.rentalDebt(100000,1000000,.5,0,360,1.25).loan,500000,'zero interest LTV cap');
+  assert.equal(context.rentalDebt(-100,1000000,.7,.06,360,1.25).loan,0);
+  assert.equal(context.rentalDebt(noi,value,.7,.06,360,0),null);
+});
+
+test('rental calculator blocks blank land and includes demolition in cost and offer', () => {
+  const {context,getElementById:g} = calculatorContext(fixtures[0]);
+  for(const [id,value] of Object.entries({hcUnits:3,hcUnitSf:1200,hcRent:2600,hcVac:6,hcOpex:40,hcCap:5.5,hcLtv:70,hcRate:6.75,hcDscr:1.25})) g(id).value=String(value);
+  g('hcMode').value='rent';g('hcMode').dispatchEvent({type:'input'});
+  const original = {...context.window.hcLast};
+  assert.ok(original.loan > 0);
+  g('hcDemo').value=45000;g('hcDemo').dispatchEvent({type:'input'});
+  approximately(context.window.hcLast.totalCost-original.totalCost,45000*1.07,'financed demolition');
+  approximately(original.maxLand-context.window.hcLast.maxLand,45000,'offer deducts demolition');
+  g('hcLand').value='';g('hcLand').dispatchEvent({type:'input'});
+  assert.equal(context.window.hcLast,null);
+  assert.match(g('hcOut').textContent,/supported land price/);
+});
+
+test('build-and-hold blocks missing price and caps permanent debt', () => {
+  const {context} = calculatorContext(fixtures[0]);
+  vm.runInContext(declaration('holdDefaults')+declaration('loanBal')+declaration('irrOf')+declaration('calcHold'),context);
+  const state=context.holdDefaults({landAcres:1,landSf:43560},3);
+  assert.match(context.calcHold(state).error,/purchase price/);
+  state.askingPrice=250000;state.ltvPct=.95;state.minDscr=2;
+  const r=context.calcHold(state);
+  assert.ok(!r.error);
+  assert.ok(r.permLoan < r.debt.ltvLimit);
+  approximately(r.dscr,2,'hold DSCR');
+});
+
+test('median sensitivity flags changed verdict and shared comps', () => {
+  const {context} = calculatorContext(fixtures[0]);
+  const parcel={apn:'A',landSf:9000,currentZoning:'R1-8',floodKnown:true,
+    valuation:{mostLikelyValue:150000}, houseComps:{psf:600,medPsf:300,n:5,radiusMi:1,
+    comps:[1,2,3,4,5].map(i=>({apn:'C'+i}))}};
+  context.D.leads=[parcel,{...parcel,apn:'B'}];
+  const rendered=context.compSensitivityHtml(parcel);
+  assert.match(rendered,/FRAGILE/);assert.match(rendered,/Shared comps/);
+});
+
+test('saved runs round-trip ADU, split and usable-area assumptions', () => {
+  const {context,getElementById:g,stored} = calculatorContext(fixtures[0]);
+  const begin=html.indexOf('const RUN_IDS ='), end=html.indexOf('\nfunction delRun(',begin);
+  vm.runInContext(html.slice(begin,end),context);
+  context.renderRuns=()=>{};context.drawMaps=()=>{};
+  context.setParcelAssumption=(key,value)=>{context.usablePct=value;};
+  for(const [id,value] of Object.entries({hcAduN:2,hcAduSf:850,hcAduHard:375,hcAduSite:16000,hcAduVal:400000,moSplitCost:40000,moSplitHaircut:70,moMinLot:15000,hcDscr:1.4})) g(id).value=String(value);
+  context.usablePct=72; context.saveRun();
+  const saved=JSON.parse(stored.get('savedRuns'))[0];
+  assert.equal(saved.usablePct,72);
+  g('hcAduN').value='0';g('moSplitHaircut').value='90';context.usablePct=85;
+  context.loadRun(0);
+  assert.equal(+g('hcAduN').value,2);assert.equal(+g('moSplitHaircut').value,70);
+  assert.equal(context.usablePct,72);assert.equal(+g('hcDscr').value,1.4);
+});
