@@ -52,3 +52,5 @@ Page layout: a tab bar (Leads, Maps, Calculator, Profit & Offers, Outreach, Trac
 - Land/new-build query failures persist in landCompLookup/newBuildLookup; failed lookups cannot produce a usable newBuild price. Displayed error messages are escaped.
 - Saved custom-home runs include ADU, split-cost, split-haircut, minimum-lot and lender DSCR fields plus usablePct. Older runs still load.
 - Both rental calculators require a positive land/purchase price and use the lower of LTV and DSCR debt limits (editable minimum DSCR, default 1.25). calcRent includes demolition. Construction timing/lease-up and jurisdiction-specific ADU/split rules remain unverified/deferred.
+
+- White map markers now explain why no residential verdict is available and open `openLeadScenario(apn)`. Current active no-verdict leads are commercial. Manual scenarios start with one rentable space, not residential density, and can use a county-price proxy only through an explicit button. User-entered scenarios remain separate from automatic verdict colors. Negative NOI implies zero income-based value/debt while still showing project losses.

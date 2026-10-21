@@ -719,7 +719,7 @@ function calcHold(s){
     r.years.push({ t, rev, opex, noi: rev - opex });
   }
   r.noi1 = r.years[0].noi;
-  r.appraised = s.appraisedValue != null ? s.appraisedValue : (s.exitCap ? r.noi1 / s.exitCap : 0);
+  r.appraised = s.appraisedValue != null ? s.appraisedValue : (s.exitCap ? Math.max(0, r.noi1 / s.exitCap) : 0);
   r.debt = rentalDebt(r.noi1, r.appraised, s.ltvPct || 0, s.permRate || 0, s.permTerm || 0, s.minDscr ?? 1.25);
   if(!r.debt) return { error: 'Enter valid loan terms and a lender minimum DSCR above zero.' };
   r.permLoan = r.debt.loan;
@@ -730,7 +730,7 @@ function calcHold(s){
   r.profit = r.appraised - r.total;
   r.profitMargin = r.total ? r.profit / r.total : null;
   r.dscr = r.ds ? r.noi1 / r.ds : null;
-  r.exitValue = s.exitCap ? r.years[hold].noi / s.exitCap : 0;
+  r.exitValue = s.exitCap ? Math.max(0, r.years[hold].noi / s.exitCap) : 0;
   r.balance = loanBal((s.permRate||0)/12, s.permTerm||0, r.permLoan, hold * 12);
   const cfs = [-r.equity];
   for(let t = 1; t <= hold; t++){
@@ -772,6 +772,7 @@ function renderHoldResults(idx, state){
   const r = calcHold(state), x = v => v == null ? '—' : money(v);
   if(r.error){ document.getElementById(`calc-kpis-${idx}`).textContent = r.error; document.getElementById(`calc-detail-${idx}`).innerHTML = ''; return; }
   document.getElementById(`calc-kpis-${idx}`).innerHTML = `
+    ${r.noi1 <= 0 ? '<div class="dm-note">Operating income does not cover expenses. Income-based value and DSCR-supported debt are $0; revise the project assumptions.</div>' : ''}
     ${calcRow('Total Development Budget', money(r.total))}
     ${calcRow('Equity Required (construction)', money(r.equity))}
     ${calcRow('Stabilized NOI (yr 1)', money(r.noi1), r.noi1>0?'pos':'neg')}
@@ -852,17 +853,21 @@ function resetCalc(idx){
 
 function initCalc(idx, lead){
   const dealType = lead.dealType || 'rental';
-  const units = Math.max(1, Math.round(lead.rezoneTargetUnits || lead.byRightUnits || (lead.landAcres||0) * 8));
+  const nonResidential = lead.landUseClass && lead.landUseClass !== 'residential';
+  const units = nonResidential ? 1 : Math.max(1, Math.round(lead.rezoneTargetUnits || lead.byRightUnits || (lead.landAcres||0) * 8));
   const demoCost = lead.parcelStatus === 'improved' ? (lead.defaultDemoCost || 0) : 0;
   calcStates[idx] = Object.assign({}, SUBDIVISION_DEFAULTS, holdDefaults(lead, units),
-    { mode: dealType === 'subdivision' ? 'lots' : 'hold', demoCost, lots: units, sellingCostPct: SUBDIVISION_DEFAULTS.sellingCostPct },
+    { mode: !nonResidential && dealType === 'subdivision' ? 'lots' : 'hold', demoCost, lots: units, sellingCostPct: SUBDIVISION_DEFAULTS.sellingCostPct },
     lead.referenceCostPerLotAZ ? { costPerLot: lead.referenceCostPerLotAZ } : {});
   const saved = loadCalcs()[lead.apn];
   if(saved) Object.assign(calcStates[idx], saved.st);
   const notes = [];
+  if(nonResidential) notes.push('<b>Manual commercial scenario:</b> the county classifies this parcel as ' + esc(lead.landUseClass) + '. No residential verdict is available. Start with one rentable space as a placeholder; enter your proposed use, rentable area, rent and actual budget. Zoning and allowed capacity are unconfirmed. These results do not create an automatic map verdict.');
+  const basis = landBasis(lead);
+  if(basis.land > 0) notes.push(`<button class="mail-btn" type="button" onclick="useScenarioLand(${idx})">Use ${money(basis.land)} ${basis.override ? 'sourced price' : basis.ok ? 'land comps estimate' : 'assessed value'} for this scenario</button> This is ${basis.override ? esc(basis.override.priceType) : 'a valuation proxy'}, not a confirmed seller asking price.`);
   if(saved) notes.push(`💾 Loaded the numbers you saved on ${esc(saved.at)}. They save automatically. <button class="mail-btn" onclick="resetCalc(${idx})">Reset to defaults</button>`);
   notes.push(`Acres and lot square footage come from the county record for this parcel; building square footage defaults to ${calcStates[idx].buildingSf.toLocaleString()} sf (${units} units x 900) — change it to your plan. Every default below is a placeholder, <b>not a bid</b>.`);
-  if(dealType === 'subdivision'){
+  if(!nonResidential && dealType === 'subdivision'){
     notes.push(`The rezone target here is single-family zoning, so this lead opens in the "sell lots" model. Default cost/lot ($${lead.referenceCostPerLotAZ?.toLocaleString()||'65,000'}) is a Phoenix-metro general-market estimate, <b>not a real local civil bid</b>.`);
   }
   if(lead.parcelStatus === 'improved'){
@@ -870,6 +875,14 @@ function initCalc(idx, lead){
   }
   document.getElementById(`calc-note-${idx}`).innerHTML = `<div class="dm-note" style="margin-bottom:12px;">${notes.join('<br><br>')}</div>`;
   calcRender(idx, lead);
+}
+
+function useScenarioLand(idx){
+  const lead = currentLeads[idx], st = calcStates[idx];
+  if(!lead || !st) return;
+  const basis = landBasis(lead); if(!(basis.land > 0)) return;
+  st.askingPrice = basis.land;
+  calcRender(idx, lead); persistCalc(idx);
 }
 
 function calcRender(idx, lead){
@@ -1814,6 +1827,26 @@ function toggleCalc(idx){
   if(opening && !calcStates[idx]) initCalc(idx, currentLeads[idx]);
 }
 
+function noVerdictReason(l){
+  if(l.landUseClass && l.landUseClass !== 'residential') return 'No residential verdict: county use is ' + l.landUseClass + '. A manual project scenario is available.';
+  const c = selectedComps(l);
+  if(!c) return 'No automatic verdict: usable home-sale comps are missing. Enter a supported resale or rental scenario.';
+  if(!(landBasis(l).land > 0)) return 'No automatic verdict: a supported purchase-price input is needed.';
+  return 'No stored automatic verdict. Run a manual project scenario to review the assumptions.';
+}
+function openLeadScenario(apn){
+  if(!(D.leads || []).some(l => l.apn === apn)) return;
+  document.getElementById('typeFilter').value = 'all';
+  document.getElementById('landUseFilter').value = 'all';
+  document.getElementById('addrSearch').value = apn;
+  showTab('leads'); applyFilters();
+  const idx = currentLeads.findIndex(l => l.apn === apn); if(idx < 0) return;
+  const detail = document.getElementById('detail-' + idx), calc = document.getElementById('calc-' + idx);
+  if(detail && !detail.classList.contains('show')) toggleLead(idx);
+  if(calc && !calc.classList.contains('show')) toggleCalc(idx);
+  if(calc) calc.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
 function applyFilters(){
   const type = document.getElementById('typeFilter').value;
   const landUse = document.getElementById('landUseFilter').value;
@@ -1826,7 +1859,7 @@ function applyFilters(){
   // maps. Type only narrows the LIST -- the two maps always show their own
   // category side by side, that's the whole point of having two of them.
   let base = (D.leads || []).filter(l => !isDiscarded(l.apn) && !isContacted(l.apn));
-  if(q) base = base.filter(l => (l.address||'').toLowerCase().includes(q) || (l.ownerName||'').toLowerCase().includes(q));
+  if(q) base = base.filter(l => (l.address||'').toLowerCase().includes(q) || (l.ownerName||'').toLowerCase().includes(q) || String(l.apn||'').toLowerCase().includes(q));
   if(document.getElementById('estateOnly').checked) base = base.filter(l => l.ownership?.isEstateOwner);
   if(hideFlood) base = base.filter(l => !l.inFloodplain);
   if(!document.getElementById('showGood').checked) base = base.filter(l => loadCondition()[l.apn] !== 'good');
@@ -2650,6 +2683,7 @@ function renderMapInstance(inst, leads){
         <div style="font-weight:700;">${esc(l.address)||'(no address)'}</div>
         <div style="font-weight:700;color:#1d3252;margin:3px 0;">Score ${l.score} · ${l.parcelStatus === 'improved' ? 'Underused lot' : 'Vacant'} · ${vl || 'No verdict'}</div>
         <div>${esc(l.landAcres)} ac · Zoned ${esc(l.currentZoning)||'—'}</div>${compSensitivityHtml(l)}
+        ${!vl ? `<div style="margin:8px 0;">${esc(noVerdictReason(l))}</div><button class="mail-btn" type="button" onclick="openLeadScenario('${esc(l.apn)}')">Calculate a project scenario</button>${loadCalcs()[l.apn] ? '<div style="margin-top:6px;">Saved scenario: ' + esc(calcSummary(loadCalcs()[l.apn].st)) + '</div>' : ''}` : ''}
       </div>`);
     inst.markers.push(marker);
     bounds.push([l.lat,l.lng]);

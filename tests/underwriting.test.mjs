@@ -583,3 +583,46 @@ test('saved runs round-trip ADU, split and usable-area assumptions', () => {
   assert.equal(+g('hcAduN').value,2);assert.equal(+g('moSplitHaircut').value,70);
   assert.equal(context.usablePct,72);assert.equal(+g('hcDscr').value,1.4);
 });
+
+test('white-marker reason distinguishes commercial use from missing comps', () => {
+  const {context} = calculatorContext(fixtures[0]);
+  vm.runInContext(declaration('noVerdictReason'),context);
+  assert.match(context.noVerdictReason({landUseClass:'commercial'}),/county use is commercial/);
+  assert.match(context.noVerdictReason({landUseClass:'residential'}),/comps are missing/);
+});
+
+test('commercial scenario does not assume residential density and supports an explicit land proxy', () => {
+  const parcel={apn:'COMMERCIAL',landUseClass:'commercial',landAcres:2,landSf:87120,
+    rezoneTargetUnits:99,dealType:'subdivision',valuation:{mostLikelyValue:300000},parcelStatus:'vacant'};
+  const {context,getElementById:g}=calculatorContext(fixtures[0],[parcel]);
+  Object.assign(context,{SUBDIVISION_DEFAULTS:{},calcStates:{},currentLeads:[parcel],loadCalcs:()=>({}),calcRender:()=>{},persistCalc:()=>{}});
+  vm.runInContext(declaration('holdDefaults')+declaration('initCalc')+declaration('useScenarioLand'),context);
+  context.initCalc(0,parcel);
+  const state=context.calcStates[0];
+  assert.equal(state.mode,'hold');assert.equal(state.units,1);assert.equal(state.askingPrice,0);
+  assert.match(g('calc-note-0').innerHTML,/Manual commercial scenario/);
+  context.useScenarioLand(0);
+  assert.equal(state.askingPrice,300000);
+});
+
+test('map scenario button opens the selected APN calculator', () => {
+  const parcel={apn:'ABC',landUseClass:'commercial'};
+  const {context,getElementById:g}=calculatorContext(fixtures[0],[parcel]);
+  let calcOpened=false,detailOpened=false;
+  g('detail-0').classList={contains:()=>false};g('calc-0').classList={contains:()=>false};
+  Object.assign(context,{currentLeads:[],applyFilters:()=>{context.currentLeads=[parcel];},toggleCalc:()=>{calcOpened=true;},toggleLead:()=>{detailOpened=true;}});
+  vm.runInContext(declaration('openLeadScenario'),context);
+  context.openLeadScenario('ABC');
+  assert.equal(g('addrSearch').value,'ABC');assert.equal(g('landUseFilter').value,'all');
+  assert.ok(calcOpened && detailOpened);
+});
+
+
+test('negative-NOI project still shows its loss with zero income-based debt', () => {
+  const {context}=calculatorContext(fixtures[0]);
+  vm.runInContext(declaration('holdDefaults')+declaration('loanBal')+declaration('irrOf')+declaration('calcHold'),context);
+  const state=context.holdDefaults({landAcres:1,landSf:43560},1);state.askingPrice=1100000;
+  const result=context.calcHold(state);
+  assert.ok(!result.error);assert.ok(result.noi1<0);assert.equal(result.permLoan,0);
+  assert.equal(result.appraised,0);assert.ok(result.profit<0);
+});
