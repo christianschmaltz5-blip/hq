@@ -425,6 +425,7 @@
           <h2>Call Scripts</h2>
           <span class="card-sub">Plain-spoken scripts for calling an owner. Swap in the [brackets] before you dial.</span>
         </div>
+        <p style="font-size:13px;color:var(--text-soft);"><a class="mail-btn" href="https://arizonabusinesscenter.azcc.gov/businesssearch" target="_blank" rel="noopener noreferrer">🏛️ Arizona LLC / Business Search</a> Find an LLC's managers, members and filings. Enter the owner name from the lead card in Business Name and choose Contains.</p>
         <details style="margin:0 0 10px;border:1px solid var(--card-border);border-radius:8px;padding:10px 14px;">
           <summary style="cursor:pointer;font-weight:700;font-size:13.5px;">Phone call — opening and questions</summary>
           <pre style="white-space:pre-wrap;font-family:'Courier New', monospace;font-size:12.5px;line-height:1.6;margin:10px 0;">OPENING
@@ -1153,7 +1154,7 @@ function entityLookupBtns(lead){
   const nm = String(lead.ownerName || '').replace(/\s+/g, ' ').trim().replace(/'/g, '');
   const a = String(lead.apn || '').replace(/'/g, '');
   return `<div style="margin-top:6px;" onclick="event.stopPropagation()">
-    <button class="mail-btn" onclick="copyOpen('${esc(nm)}','https://ecorp.azcc.gov/EntitySearch/Index',this)" title="Copies the company name and opens the Arizona Corporation Commission search — LLCs list managers/members there">🏛️ Find owner (AZ eCorp)</button>
+    <button class="mail-btn" onclick="copyOpen('${esc(nm)}','https://arizonabusinesscenter.azcc.gov/businesssearch',this)" title="Copies the company name and opens Arizona Business Search — paste it into Business Name and choose Contains">🏛️ Find LLC owner (Arizona Business Search)</button>
     <button class="mail-btn" style="margin-left:6px;" onclick="copyOpen('${esc(a)}','https://recorder.maricopa.gov/recording/document-search.html',this)" title="Copies the parcel number and opens the county Recorder — the deed shows who signed (trustee/manager)">📜 Deed (Recorder)</button>
   </div>`;
 }
