@@ -549,7 +549,7 @@ def flag_unreliable_valuation(lead):
     low, high, mid, sf = v["rangeLow"], v["rangeHigh"], v["mostLikelyValue"], lead.get("landSf") or 0
     wild = low > 0 and high / low > 5
     too_rich = lead.get("landUseClass") == "residential" and sf and mid / sf > 150
-    if wild or too_rich:
+    if wild or too_rich or v.get("unreliable"):
         v["unreliable"] = True
         lead["equityMarginPct"] = None
 

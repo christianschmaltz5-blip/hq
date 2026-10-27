@@ -201,7 +201,8 @@ def underwrite(l, *, fetch_comps=True, overrides=None):
         return None
     v = l.get("valuation") or {}
     land_ok = bool(override or (v.get("mostLikelyValue") and not v.get("unreliable")))
-    land = override["landCost"] if override else (v["mostLikelyValue"] if land_ok else (l.get("assessedValue") or 0))
+    # No reliable land comp or hand-set price: assessed value is not a price, so give no verdict.
+    land = override["landCost"] if override else (v["mostLikelyValue"] if land_ok else 0)
     if not land:
         return None
     n_split, known = split_n(l)

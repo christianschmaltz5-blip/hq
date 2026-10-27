@@ -19,11 +19,12 @@ import http.client
 import json
 import math
 import re
+import statistics
 import threading
 import time
 import urllib.parse
 import urllib.request
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 MARICOPA_PARCELS = "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query"
 
@@ -32,8 +33,8 @@ COMP_OUT_FIELDS = (
     "CONST_YEAR,PUC,CITY_ZONING,LATITUDE,LONGITUDE"
 )
 
-RADII_MI = (1.0, 2.0, 3.0, 5.0)  # expand gradually until >=3 well-sized comps qualify
-MAX_SALE_AGE_YEARS = 5
+RADII_MI = (1.0,)  # land comps: 1 mile max, never widened (thin market -> unreliable, not looser filters)
+MAX_SALE_AGE_YEARS = 1  # land comps: sales in the last 12 months only
 MIN_COMPS = 3
 MAX_COMPS = 5
 MIN_SIZE_RATIO_FOR_VALUATION = 0.3  # comp land size must be within ~3x of subject's to price off it
@@ -104,6 +105,14 @@ def _esri_query(params, retries=3):
             if attempt == retries - 1:
                 return {"features": [], "_failed": True, "_error": f"County GIS request failed: {type(exc).__name__}: {exc}"}
             time.sleep(1.0)
+
+
+def _city(addr):
+    """'4613 E CHOLLA ST   PHOENIX  85028' -> 'PHOENIX' (Assessor pads fields with 2+ spaces)."""
+    parts = [p for p in re.split(r"\s{2,}", (addr or "").strip()) if p]
+    if parts and re.fullmatch(r"\d{5}(-\d{4})?", parts[-1]):
+        parts = parts[:-1]
+    return parts[-1].upper() if len(parts) > 1 else None
 
 
 def _parse_sale_date(s):
@@ -228,7 +237,8 @@ def _build_comps_for_lead(lead, today=None, vacant_only=None):
     if lat is None or lng is None:
         return {"comps": [], "valuation": None, "note": "No coordinates on file for this parcel."}
 
-    min_sale_date = today.replace(year=today.year - MAX_SALE_AGE_YEARS)
+    min_sale_date = today - timedelta(days=365 * MAX_SALE_AGE_YEARS)
+    subj_city = _city(lead.get("address"))
     subj_class = _land_use_class(lead.get("puc"))
     scored, radius_used = [], RADII_MI[-1]
     for miles in RADII_MI:
@@ -243,6 +253,11 @@ def _build_comps_for_lead(lead, today=None, vacant_only=None):
         scored = []
         for cand in pool:
             if cand.get("APN") == lead.get("apn"):
+                continue
+            # Plainly vacant only: a building (living space / construction year) means it's not a land sale.
+            if (_parse_num(cand.get("LIVING_SPACE")) or 0) > 0 or _parse_num(cand.get("CONST_YEAR")):
+                continue
+            if _city(cand.get("PHYSICAL_ADDRESS")) != subj_city:
                 continue
             sold = _parse_sale_date(cand.get("SALE_DATE"))
             if not sold or sold < min_sale_date:
@@ -274,8 +289,9 @@ def _build_comps_for_lead(lead, today=None, vacant_only=None):
     if not scored:
         class_note = f" of the same land-use type ({subj_class})" if subj_class else ""
         return {"comps": [], "valuation": None,
-                "note": f"No comparable {'vacant-land ' if vacant_only else ''}sales{class_note} found within {RADII_MI[-1]:.0f} miles in the "
-                        f"last {MAX_SALE_AGE_YEARS} years -- too rural/thin a market to comp automatically."}
+                "note": f"No comparable vacant-land sales{class_note} in {subj_city or 'the same city'} within {RADII_MI[-1]:g} mile in the "
+                        f"last 12 months -- land value unreliable (thin market); filters not loosened.",
+                "valuation": None}
 
     scored.sort(key=lambda t: -t[0])
 
@@ -294,9 +310,9 @@ def _build_comps_for_lead(lead, today=None, vacant_only=None):
         return bool(subj_sf and ls and _implied_value(lead, c) and sale_counts[(_parse_num(c.get("SALE_PRICE")), sold_)] == 1
                     and min(ls, subj_sf) / max(ls, subj_sf) >= MIN_SIZE_RATIO_FOR_VALUATION)
     ok = [t for t in scored if eligible(t)]
-    top = ok[:MAX_COMPS] if len(ok) >= MIN_COMPS else scored[:MAX_COMPS]
+    top = ok[:MAX_COMPS] if ok else scored[:MAX_COMPS]
     comps_out = []
-    implied_values, weights = [], []
+    implied_values = []
     for score, dist_mi, sold, cand in top:
         price = _parse_num(cand.get("SALE_PRICE"))
         living_sf = _parse_num(cand.get("LIVING_SPACE"))
@@ -323,42 +339,41 @@ def _build_comps_for_lead(lead, today=None, vacant_only=None):
         # (shown in the table) without being a valid VALUE comp for a
         # 3.5-acre teardown lot.
         is_bulk = sale_counts[(price, sold)] > 1
-        if len(ok) >= MIN_COMPS and iv and land_sf and lead.get("landSf") and not is_bulk:
+        if iv and land_sf and lead.get("landSf") and not is_bulk:
             size_ratio = min(land_sf, lead["landSf"]) / max(land_sf, lead["landSf"])
             if size_ratio >= MIN_SIZE_RATIO_FOR_VALUATION:
                 implied_values.append(iv)
-                weights.append(max(score, 1))
 
     valuation = None
     if implied_values:
-        # weighted MEDIAN, not mean — one outlier comp can't drag the estimate
-        half, acc = sum(weights) / 2, 0
-        for v, w in sorted(zip(implied_values, weights)):
-            acc += w
-            if acc >= half:
-                weighted_avg = v
-                break
+        n = len(implied_values)
+        median = statistics.median(implied_values)
         low, high = min(implied_values), max(implied_values)
-        land_basis = ("as a redevelopment/land play (existing structure ignored)" + (", priced off vacant-land sales" if vacant_only else "")) if lead.get("parcelStatus") == "improved" else "as vacant land"
+        land_basis = "as a redevelopment/land play (existing structure ignored)" if lead.get("parcelStatus") == "improved" else "as vacant land"
         valuation = {
-            "mostLikelyValue": round(weighted_avg),
+            "mostLikelyValue": round(median),
             "rangeLow": round(low),
             "rangeHigh": round(high),
             "explanation": (
-                f"Based on {len(top)} comparable sale{'s' if len(top) != 1 else ''} within "
-                f"{radius_used:.0f} miles, valued {land_basis} and scaled by lot size "
-                f"(recency is a ranking factor only, not a price adjustment), the subject's land is estimated at approximately ${round(weighted_avg):,} "
+                f"Median of {n} plainly-vacant land sale{'s' if n != 1 else ''} in {subj_city or 'the same city'} within "
+                f"{radius_used:g} mile in the last 12 months, valued {land_basis} and scaled by lot size, "
+                f"so the subject's land is estimated at approximately ${round(median):,} "
                 f"(range ${round(low):,}-${round(high):,})."
             ),
         }
+        if n < MIN_COMPS:
+            valuation["unreliable"] = True
+            valuation["explanation"] += f" UNRELIABLE: only {n} usable comp{'s' if n != 1 else ''} (need {MIN_COMPS}); filters were not loosened."
 
     note = ("County Assessor data only (latest recorded sale per parcel, not full sale "
             "history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, "
             "not an appraisal.")
     if not valuation:
-        note = ("Comparable sales below are the closest/most recent found, but none are close "
-                "enough in lot size to extrapolate a dollar value from without guessing -- "
-                "review them manually instead. " + note)
+        note = ("Comparable sales below are the closest found, but none are usable for a dollar value "
+                "(bulk sale or lot size too different) -- review them manually. " + note)
+    elif valuation.get("unreliable"):
+        note = (f"Land value unreliable: only {len(implied_values)} usable vacant-land comp(s) in-city within "
+                f"{radius_used:g} mile / 12 months (need {MIN_COMPS}). " + note)
 
     return {
         "comps": comps_out,
