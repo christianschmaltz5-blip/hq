@@ -281,11 +281,15 @@ body .letter-modal{background:#fff;}
 }
 
 /* ── Round 2: photo backdrop, clearer glass, segmented tabs ───────── */
-body{
+body{background:#ece6da;}
+/* Photo lives on its own fixed GPU layer so scrolling never repaints it */
+body::before{
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
   background:
     linear-gradient(rgba(255,252,245,.42),rgba(255,252,245,.42)),
-    url(../img/backdrop.jpg) center/cover no-repeat fixed,
+    url(../img/backdrop.jpg) center/cover no-repeat,
     linear-gradient(160deg,#f6efe1,#e4ddcc);
+  transform:translateZ(0); will-change:transform;
 }
 :root{--glass-blur:blur(22px) saturate(1.6); --glass-dense:rgba(255,255,255,.74); --radius:26px;}
 .sidebar,.topbar{background:rgba(255,255,255,.55);}
