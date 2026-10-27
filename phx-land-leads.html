@@ -525,6 +525,7 @@ BEFORE YOU SIGN ANYTHING
           </label>
           <button class="mail-btn" onclick="copySkipTraceCsv()">📋 Copy CSV for BatchSkipTracing</button>
           <label class="mail-btn" style="cursor:pointer;" title="Private: stays in this browser, never uploaded">📥 Import REISkip results (CSV)<input type="file" accept=".csv" style="display:none" onchange="importContacts(this)"></label>
+          <span style="display:inline-flex;gap:6px;align-items:center;"><input id="encPass" type="password" placeholder="Passphrase" autocomplete="off" style="width:130px;"><button class="mail-btn" type="button" title="Downloads contacts.enc.json, encrypted with this passphrase" onclick="var v=document.getElementById('encPass');if(v.value){exportEncrypted(v.value);v.value='';}">🔒 Export encrypted</button></span>
         </div>
         <div id="skip-trace-summary" style="font-size:13px;color:var(--text-soft);margin-bottom:10px;"></div>
         <div style="overflow-x:auto;"><table class="comps-table" id="skip-trace-table"></table></div>
