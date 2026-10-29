@@ -33,8 +33,8 @@ COMP_OUT_FIELDS = (
     "CONST_YEAR,PUC,CITY_ZONING,LATITUDE,LONGITUDE"
 )
 
-RADII_MI = (1.0,)  # land comps: 1 mile max, never widened (thin market -> unreliable, not looser filters)
-MAX_SALE_AGE_YEARS = 1  # land comps: sales in the last 12 months only
+STEPS = ((1.0, 1), (2.0, 1), (3.0, 2), (5.0, 2))  # land comps (miles, years): start tight, stretch only until MIN_COMPS well-sized sales are found
+RADII_MI = tuple(m for m, _ in STEPS)
 MIN_COMPS = 3
 MAX_COMPS = 5
 MIN_SIZE_RATIO_FOR_VALUATION = 0.3  # comp land size must be within ~3x of subject's to price off it
@@ -237,12 +237,12 @@ def _build_comps_for_lead(lead, today=None, vacant_only=None):
     if lat is None or lng is None:
         return {"comps": [], "valuation": None, "note": "No coordinates on file for this parcel."}
 
-    min_sale_date = today - timedelta(days=365 * MAX_SALE_AGE_YEARS)
     subj_city = _city(lead.get("address"))
     subj_class = _land_use_class(lead.get("puc"))
     scored, radius_used = [], RADII_MI[-1]
-    for miles in RADII_MI:
-        radius_used = miles
+    for miles, years in STEPS:
+        radius_used, years_used = miles, years
+        min_sale_date = today - timedelta(days=365 * years)
         try:
             pool = _fetch_pool(lat, lng, miles, vacant_only)
         except Exception as exc:
@@ -283,14 +283,14 @@ def _build_comps_for_lead(lead, today=None, vacant_only=None):
             if subj_land_sf and cand.get("LAND_SIZE")
             and min(subj_land_sf, cand["LAND_SIZE"]) / max(subj_land_sf, cand["LAND_SIZE"]) >= MIN_SIZE_RATIO_FOR_VALUATION
         )
-        if well_sized >= MIN_COMPS or miles == RADII_MI[-1]:
+        if well_sized >= MIN_COMPS or miles == STEPS[-1][0]:
             break
 
     if not scored:
         class_note = f" of the same land-use type ({subj_class})" if subj_class else ""
         return {"comps": [], "valuation": None,
-                "note": f"No comparable vacant-land sales{class_note} in {subj_city or 'the same city'} within {RADII_MI[-1]:g} mile in the "
-                        f"last 12 months -- land value unreliable (thin market); filters not loosened.",
+                "note": f"No comparable vacant-land sales{class_note} in {subj_city or 'the same city'} within {RADII_MI[-1]:g} miles in the "
+                        f"last {STEPS[-1][1] * 12} months -- land value unreliable (thin market), even after stretching the radius.",
                 "valuation": None}
 
     scored.sort(key=lambda t: -t[0])
@@ -356,14 +356,14 @@ def _build_comps_for_lead(lead, today=None, vacant_only=None):
             "rangeHigh": round(high),
             "explanation": (
                 f"Median of {n} plainly-vacant land sale{'s' if n != 1 else ''} in {subj_city or 'the same city'} within "
-                f"{radius_used:g} mile in the last 12 months, valued {land_basis} and scaled by lot size, "
+                f"{radius_used:g} mile{'s' if radius_used != 1 else ''} in the last {years_used * 12} months, valued {land_basis} and scaled by lot size, "
                 f"so the subject's land is estimated at approximately ${round(median):,} "
                 f"(range ${round(low):,}-${round(high):,})."
             ),
         }
         if n < MIN_COMPS:
             valuation["unreliable"] = True
-            valuation["explanation"] += f" UNRELIABLE: only {n} usable comp{'s' if n != 1 else ''} (need {MIN_COMPS}); filters were not loosened."
+            valuation["explanation"] += f" UNRELIABLE: only {n} usable comp{'s' if n != 1 else ''} (need {MIN_COMPS}); radius already stretched to the max."
 
     note = ("County Assessor data only (latest recorded sale per parcel, not full sale "
             "history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, "
@@ -373,7 +373,7 @@ def _build_comps_for_lead(lead, today=None, vacant_only=None):
                 "(bulk sale or lot size too different) -- review them manually. " + note)
     elif valuation.get("unreliable"):
         note = (f"Land value unreliable: only {len(implied_values)} usable vacant-land comp(s) in-city within "
-                f"{radius_used:g} mile / 12 months (need {MIN_COMPS}). " + note)
+                f"{radius_used:g} mi / {years_used * 12} months (need {MIN_COMPS}). " + note)
 
     return {
         "comps": comps_out,
