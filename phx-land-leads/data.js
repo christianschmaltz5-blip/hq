@@ -1,5 +1,5 @@
 window.PHX_LAND_LEADS = {
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "market": "North Phoenix",
   "zipCodes": [
     "85085",
@@ -15,7 +15,7 @@ window.PHX_LAND_LEADS = {
     "85022"
   ],
   "parcelsScanned": 8000,
-  "newLeadsThisRun": 23,
+  "newLeadsThisRun": 7,
   "leads": [
     {
       "apn": "20325527",
@@ -77,7 +77,7 @@ window.PHX_LAND_LEADS = {
         "18 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+108% vs assessed, rank 13/65 (+20 pts)"
+        "comps value ~+108% vs assessed, rank 13/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -151,7 +151,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": 108,
@@ -159,7 +159,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:22Z",
+        "retrievedAt": "2026-10-29T17:15:46Z",
         "error": null
       },
       "newBuild": {
@@ -171,7 +171,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:22Z",
+        "retrievedAt": "2026-10-29T17:15:46Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -227,7 +227,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 112,
       "landOverride": null,
       "landPriceOverride": null,
@@ -290,7 +290,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:04Z",
+        "retrievedAt": "2026-10-29T17:16:35Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -321,7 +321,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:04Z",
+        "compRetrievedAt": "2026-10-29T17:16:35Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -387,7 +387,7 @@ window.PHX_LAND_LEADS = {
         "10 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+133% vs assessed, rank 8/65 (+20 pts)"
+        "comps value ~+133% vs assessed, rank 8/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -461,7 +461,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": 133,
@@ -469,7 +469,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:22Z",
+        "retrievedAt": "2026-10-29T17:15:46Z",
         "error": null
       },
       "newBuild": {
@@ -481,7 +481,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 562,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:22Z",
+        "retrievedAt": "2026-10-29T17:15:46Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -537,7 +537,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 112,
       "landOverride": null,
       "landPriceOverride": null,
@@ -600,7 +600,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:04Z",
+        "retrievedAt": "2026-10-29T17:16:36Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -631,7 +631,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:04Z",
+        "compRetrievedAt": "2026-10-29T17:16:36Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -693,7 +693,7 @@ window.PHX_LAND_LEADS = {
         "owned by an estate \u2014 heirs are often motivated sellers",
         "existing structure occupies only 2% of the lot \u2014 under-improved for the land size",
         "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot",
-        "comps value ~+281% vs assessed, rank 2/65 (+20 pts)"
+        "comps value ~+281% vs assessed, rank 2/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -743,7 +743,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:21+00:00",
+        "retrievedAt": "2026-10-29T17:15:44+00:00",
         "error": null
       },
       "equityMarginPct": 281,
@@ -751,7 +751,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:22Z",
+        "retrievedAt": "2026-10-29T17:15:46Z",
         "error": null
       },
       "newBuild": {
@@ -763,7 +763,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 438,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:22Z",
+        "retrievedAt": "2026-10-29T17:15:46Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -819,7 +819,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 109,
       "landOverride": null,
       "landPriceOverride": null,
@@ -882,7 +882,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:05Z",
+        "retrievedAt": "2026-10-29T17:16:36Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -913,7 +913,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:05Z",
+        "compRetrievedAt": "2026-10-29T17:16:36Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -978,7 +978,7 @@ window.PHX_LAND_LEADS = {
         "24 homes within 0.2 mi \u2014 surrounded by development",
         "owner's mailing address is out of state (absentee)",
         "held 21+ years \u2014 likely low or no debt on the land",
-        "comps value ~+224% vs assessed, rank 4/65 (+20 pts)"
+        "comps value ~+224% vs assessed, rank 4/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -1040,7 +1040,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": 224,
@@ -1048,7 +1048,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:22Z",
+        "retrievedAt": "2026-10-29T17:15:46Z",
         "error": null
       },
       "newBuild": {
@@ -1060,7 +1060,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 509,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:22Z",
+        "retrievedAt": "2026-10-29T17:15:46Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -1106,7 +1106,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 108,
       "landOverride": null,
       "landPriceOverride": null,
@@ -1169,7 +1169,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:05Z",
+        "retrievedAt": "2026-10-29T17:16:36Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -1200,7 +1200,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:05Z",
+        "compRetrievedAt": "2026-10-29T17:16:36Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -1249,7 +1249,7 @@ window.PHX_LAND_LEADS = {
       "farRatio": null,
       "yearBuilt": null,
       "codeCases": {
-        "count": 10,
+        "count": 7,
         "severe": false,
         "distress": true
       },
@@ -1270,7 +1270,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "code complaint mentions vacant/boarded/unsecured/abandoned/dilapidated",
-        "10 code-enforcement cases at this address (2024+)"
+        "7 code-enforcement cases at this address (2024+)"
       ],
       "comps": [],
       "valuation": null,
@@ -1278,15 +1278,100 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 105,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "verdict": null
+    },
+    {
+      "apn": "20707002P",
+      "address": "2710 W THUNDERBIRD RD   PHOENIX  85053",
+      "ownerName": "COWTOWN BOOT CO INC",
+      "ownerMailAddress": "PO BOX 26428 EL PASO TX USA 79926",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 34.5
+      },
+      "landSf": 87120,
+      "landAcres": 2.0,
+      "puc": "0022",
+      "landUseClass": "commercial",
+      "lat": 33.612318820581365,
+      "lng": -112.11929323824664,
+      "assessedValue": 1299300.0,
+      "assessedValuePerAcre": 649650.0,
+      "currentZoning": "C-2",
+      "generalPlanDesignation": "GP code 60",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-5",
+        "targetDensity": 43,
+        "basis": "adjacent parcels already zoned R-5"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 86.0,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": {
+        "count": 4,
+        "severe": true,
+        "distress": false
+      },
+      "saleDate": null,
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": null,
+      "homesNearby": 86,
+      "vacantNearby": 2,
+      "score": 104,
+      "reasons": [
+        "adjacent parcels already zoned R-5",
+        "parcel size fits small-to-mid infill development",
+        "no house on the lot \u2014 undeveloped land",
+        "86 homes within 0.2 mi \u2014 surrounded by development",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 34+ years \u2014 likely low or no debt on the land",
+        "city issued a violation notice, ticket, or abatement here",
+        "4 code-enforcement cases at this address (2024+)"
+      ],
+      "comps": [],
+      "valuation": null,
+      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-01",
+      "lastSeen": "2026-10-29",
+      "peakScore": 114,
       "landOverride": null,
       "landPriceOverride": null,
       "verdict": null
@@ -1347,7 +1432,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 9 years",
-        "comps value ~+105% vs assessed, rank 14/65 (+20 pts)"
+        "comps value ~+105% vs assessed, rank 14/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -1421,7 +1506,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": 105,
@@ -1429,7 +1514,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:22Z",
+        "retrievedAt": "2026-10-29T17:15:46Z",
         "error": null
       },
       "newBuild": {
@@ -1441,7 +1526,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 562,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:22Z",
+        "retrievedAt": "2026-10-29T17:15:46Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -1495,9 +1580,9 @@ window.PHX_LAND_LEADS = {
         ]
       },
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 98,
       "landOverride": null,
       "landPriceOverride": null,
@@ -1560,7 +1645,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:05Z",
+        "retrievedAt": "2026-10-29T17:16:36Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -1591,7 +1676,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:05Z",
+        "compRetrievedAt": "2026-10-29T17:16:36Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -1656,7 +1741,7 @@ window.PHX_LAND_LEADS = {
         "48 homes within 0.2 mi \u2014 surrounded by development",
         "12 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+97% vs assessed, rank 17/65 (+20 pts)"
+        "comps value ~+97% vs assessed, rank 17/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -1730,7 +1815,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": 97,
@@ -1738,7 +1823,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:22Z",
+        "retrievedAt": "2026-10-29T17:15:47Z",
         "error": null
       },
       "newBuild": {
@@ -1750,7 +1835,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 562,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:22Z",
+        "retrievedAt": "2026-10-29T17:15:47Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -1804,9 +1889,9 @@ window.PHX_LAND_LEADS = {
         ]
       },
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 97,
       "landOverride": null,
       "landPriceOverride": null,
@@ -1869,7 +1954,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:05Z",
+        "retrievedAt": "2026-10-29T17:16:36Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -1900,7 +1985,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:05Z",
+        "compRetrievedAt": "2026-10-29T17:16:36Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -1965,7 +2050,7 @@ window.PHX_LAND_LEADS = {
         "20 homes within 0.2 mi \u2014 surrounded by development",
         "25 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+149% vs assessed, rank 7/65 (+20 pts)"
+        "comps value ~+149% vs assessed, rank 7/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -1990,7 +2075,7 @@ window.PHX_LAND_LEADS = {
           "livingSpaceSf": null,
           "pricePerSf": null,
           "pricePerAcre": 96229,
-          "similarity": 81
+          "similarity": 80
         },
         {
           "apn": "21174116",
@@ -2039,7 +2124,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": 149,
@@ -2047,7 +2132,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:22Z",
+        "retrievedAt": "2026-10-29T17:15:47Z",
         "error": null
       },
       "newBuild": {
@@ -2059,7 +2144,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 562,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:22Z",
+        "retrievedAt": "2026-10-29T17:15:47Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -2114,7 +2199,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 97,
       "landOverride": null,
       "landPriceOverride": null,
@@ -2177,7 +2262,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:05Z",
+        "retrievedAt": "2026-10-29T17:16:37Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -2208,95 +2293,11 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:05Z",
+        "compRetrievedAt": "2026-10-29T17:16:37Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
       }
-    },
-    {
-      "apn": "20707002P",
-      "address": "2710 W THUNDERBIRD RD   PHOENIX  85053",
-      "ownerName": "COWTOWN BOOT CO INC",
-      "ownerMailAddress": "PO BOX 26428 EL PASO TX USA 79926",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 34.5
-      },
-      "landSf": 87120,
-      "landAcres": 2.0,
-      "puc": "0022",
-      "landUseClass": "commercial",
-      "lat": 33.612318820581365,
-      "lng": -112.11929323824664,
-      "assessedValue": 1299300.0,
-      "assessedValuePerAcre": 649650.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 60",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-5",
-        "targetDensity": 43,
-        "basis": "adjacent parcels already zoned R-5"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 86.0,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": {
-        "count": 5,
-        "severe": false,
-        "distress": false
-      },
-      "saleDate": null,
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "homesNearby": 86,
-      "vacantNearby": 2,
-      "score": 96,
-      "reasons": [
-        "adjacent parcels already zoned R-5",
-        "parcel size fits small-to-mid infill development",
-        "no house on the lot \u2014 undeveloped land",
-        "86 homes within 0.2 mi \u2014 surrounded by development",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 34+ years \u2014 likely low or no debt on the land",
-        "5 code-enforcement cases at this address (2024+)"
-      ],
-      "comps": [],
-      "valuation": null,
-      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
-      "peakScore": 114,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "verdict": null
     },
     {
       "apn": "21431004B",
@@ -2365,14 +2366,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 116,
       "landOverride": null,
       "landPriceOverride": null,
@@ -2445,14 +2446,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 106,
       "landOverride": null,
       "landPriceOverride": null,
@@ -2525,14 +2526,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 106,
       "landOverride": null,
       "landPriceOverride": null,
@@ -2605,14 +2606,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 106,
       "landOverride": null,
       "landPriceOverride": null,
@@ -2677,7 +2678,7 @@ window.PHX_LAND_LEADS = {
         "14 homes within 0.2 mi \u2014 surrounded by development",
         "27 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
-        "comps value ~+181% vs assessed, rank 6/65 (+20 pts)"
+        "comps value ~+181% vs assessed, rank 6/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -2739,7 +2740,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": 181,
@@ -2747,7 +2748,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:47Z",
         "error": null
       },
       "newBuild": {
@@ -2759,7 +2760,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 562,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:47Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -2814,7 +2815,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 95,
       "landOverride": null,
       "landPriceOverride": null,
@@ -2877,7 +2878,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:06Z",
+        "retrievedAt": "2026-10-29T17:16:37Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -2908,7 +2909,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:06Z",
+        "compRetrievedAt": "2026-10-29T17:16:37Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -2926,7 +2927,7 @@ window.PHX_LAND_LEADS = {
         "isOwnerOccupied": false,
         "isHiddenOwner": false,
         "isEstateOwner": false,
-        "yearsHeld": 0.4
+        "yearsHeld": 0.5
       },
       "landSf": 145627,
       "landAcres": 3.343,
@@ -2973,7 +2974,7 @@ window.PHX_LAND_LEADS = {
         "52 homes within 0.2 mi \u2014 surrounded by development",
         "9 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
-        "comps value ~+231% vs assessed, rank 3/65 (+20 pts)"
+        "comps value ~+231% vs assessed, rank 3/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -3022,7 +3023,7 @@ window.PHX_LAND_LEADS = {
           "livingSpaceSf": null,
           "pricePerSf": null,
           "pricePerAcre": 166430,
-          "similarity": 60
+          "similarity": 59
         }
       ],
       "valuation": {
@@ -3035,7 +3036,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": 231,
@@ -3043,7 +3044,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:47Z",
         "error": null
       },
       "newBuild": {
@@ -3055,7 +3056,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:47Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -3110,7 +3111,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 95,
       "landOverride": 535000,
       "landPriceOverride": {
@@ -3181,7 +3182,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:06Z",
+        "retrievedAt": "2026-10-29T17:16:37Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -3212,7 +3213,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:06Z",
+        "compRetrievedAt": "2026-10-29T17:16:37Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -3337,14 +3338,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:19+00:00",
+        "retrievedAt": "2026-10-29T17:15:42+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:47Z",
         "error": null
       },
       "newBuild": {
@@ -3356,7 +3357,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 438,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:47Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -3412,7 +3413,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 94,
       "landOverride": null,
       "landPriceOverride": null,
@@ -3475,7 +3476,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:06Z",
+        "retrievedAt": "2026-10-29T17:16:37Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -3494,7 +3495,7 @@ window.PHX_LAND_LEADS = {
         "isOwnerOccupied": false,
         "isHiddenOwner": true,
         "isEstateOwner": false,
-        "yearsHeld": 12.8
+        "yearsHeld": 12.9
       },
       "landSf": 10911,
       "landAcres": 0.25,
@@ -3542,7 +3543,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 13 years",
-        "comps value ~+80% vs assessed, rank 24/65 (+10 pts)"
+        "comps value ~+80% vs assessed, rank 24/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -3592,7 +3593,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": 80,
@@ -3600,7 +3601,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:47Z",
         "error": null
       },
       "newBuild": {
@@ -3612,7 +3613,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:47Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -3659,7 +3660,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-11",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 93,
       "landOverride": null,
       "landPriceOverride": null,
@@ -3722,7 +3723,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:06Z",
+        "retrievedAt": "2026-10-29T17:16:37Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -3753,7 +3754,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:06Z",
+        "compRetrievedAt": "2026-10-29T17:16:37Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -3826,26 +3827,26 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:47Z",
         "error": null
       },
       "newBuild": {
-        "arv": 1140000,
-        "psf": 288,
-        "n": 18,
+        "arv": 1130000,
+        "psf": 291,
+        "n": 19,
         "radiusMi": 2.0,
         "lowPsf": 250,
         "highPsf": 486,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:47Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -3901,7 +3902,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 102,
       "landOverride": null,
       "landPriceOverride": null,
@@ -3964,7 +3965,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:07Z",
+        "retrievedAt": "2026-10-29T17:16:38Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -4026,7 +4027,7 @@ window.PHX_LAND_LEADS = {
         "29 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+101% vs assessed, rank 16/65 (+20 pts)"
+        "comps value ~+101% vs assessed, rank 16/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -4100,7 +4101,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:38+00:00",
         "error": null
       },
       "equityMarginPct": 101,
@@ -4108,7 +4109,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:48Z",
         "error": null
       },
       "newBuild": {
@@ -4120,7 +4121,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 562,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:48Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -4174,9 +4175,9 @@ window.PHX_LAND_LEADS = {
         ]
       },
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 92,
       "landOverride": null,
       "landPriceOverride": null,
@@ -4239,7 +4240,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:07Z",
+        "retrievedAt": "2026-10-29T17:16:38Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -4270,7 +4271,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:07Z",
+        "compRetrievedAt": "2026-10-29T17:16:38Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -4364,14 +4365,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:20+00:00",
+        "retrievedAt": "2026-10-29T17:15:43+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:48Z",
         "error": null
       },
       "newBuild": {
@@ -4383,7 +4384,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 455,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:48Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -4436,9 +4437,9 @@ window.PHX_LAND_LEADS = {
           }
         ]
       },
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 91,
       "landOverride": null,
       "landPriceOverride": null,
@@ -4501,7 +4502,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:07Z",
+        "retrievedAt": "2026-10-29T17:16:38Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -4579,15 +4580,99 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 90,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "verdict": null
+    },
+    {
+      "apn": "20807001W",
+      "address": "2035 W COOLBROOK AVE   PHOENIX  85023",
+      "ownerName": "LITHIA REAL ESTATE INC",
+      "ownerMailAddress": "150 N BARTLETT ST MEDFORD OR USA 97501",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 6.0
+      },
+      "landSf": 184302,
+      "landAcres": 4.231,
+      "puc": "0022",
+      "landUseClass": "commercial",
+      "lat": 33.64178909555138,
+      "lng": -112.10421798171829,
+      "assessedValue": 1880500.0,
+      "assessedValuePerAcre": 444458.0,
+      "currentZoning": "C-2",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 25.4,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": {
+        "count": 2,
+        "severe": false,
+        "distress": false
+      },
+      "saleDate": "11/01/2020",
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": 4770000.0,
+      "defaultDemoCost": null,
+      "homesNearby": 169,
+      "vacantNearby": 12,
+      "score": 90,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "no house on the lot \u2014 undeveloped land",
+        "169 homes within 0.2 mi \u2014 surrounded by development",
+        "12 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "2 code-enforcement cases at this address (2024+)"
+      ],
+      "comps": [],
+      "valuation": null,
+      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-01",
+      "lastSeen": "2026-10-29",
+      "peakScore": 110,
       "landOverride": null,
       "landPriceOverride": null,
       "verdict": null
@@ -4635,7 +4720,7 @@ window.PHX_LAND_LEADS = {
       "farRatio": null,
       "yearBuilt": null,
       "codeCases": {
-        "count": 22,
+        "count": 19,
         "severe": false,
         "distress": true
       },
@@ -4655,7 +4740,7 @@ window.PHX_LAND_LEADS = {
         "4 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "code complaint mentions vacant/boarded/unsecured/abandoned/dilapidated",
-        "22 code-enforcement cases at this address (2024+)"
+        "19 code-enforcement cases at this address (2024+)"
       ],
       "comps": [],
       "valuation": null,
@@ -4663,17 +4748,233 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 110,
       "landOverride": null,
       "landPriceOverride": null,
+      "verdict": null
+    },
+    {
+      "apn": "21516036",
+      "address": "18042 N 42ND ST   PHOENIX  85032",
+      "ownerName": "FEDERAL NATIONAL MORTGAGE ASSOCIATION",
+      "ownerMailAddress": "5600 GRANITE  PKWY PLANO TX USA 75024",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 0.9
+      },
+      "landSf": 15394,
+      "landAcres": 0.353,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.651368601128716,
+      "lng": -111.991961229736,
+      "assessedValue": 225600.0,
+      "assessedValuePerAcre": 639093.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3",
+        "targetDensity": 16,
+        "basis": "adjacent parcels already zoned R-3"
+      },
+      "byRightUnits": 1.8,
+      "rezoneTargetUnits": 5.6,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": {
+        "count": 2,
+        "severe": false,
+        "distress": false
+      },
+      "saleDate": null,
+      "subdivision": "VILLA MARIA 3",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": null,
+      "homesNearby": 248,
+      "vacantNearby": 3,
+      "score": 90,
+      "reasons": [
+        "adjacent parcels already zoned R-3",
+        "parcel size fits small-to-mid infill development",
+        "no house on the lot \u2014 undeveloped land",
+        "248 homes within 0.2 mi \u2014 surrounded by development",
+        "3 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "2 code-enforcement cases at this address (2024+)"
+      ],
+      "comps": [],
+      "valuation": null,
+      "compsNote": "No comparable vacant-land sales of the same land-use type (residential) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:48Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 1380000,
+        "psf": 388,
+        "n": 31,
+        "radiusMi": 3.0,
+        "lowPsf": 278,
+        "highPsf": 567,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:48Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "21909 N 34TH WAY",
+            "price": 1540000,
+            "sf": 3568,
+            "apn": "21302211",
+            "yearBuilt": 2020.0,
+            "distanceMi": 2.525,
+            "sold": "2025-09-01"
+          },
+          {
+            "address": "3405 E TINA DR",
+            "price": 1400000,
+            "sf": 3949,
+            "apn": "21302222",
+            "yearBuilt": 2020.0,
+            "distanceMi": 2.526,
+            "sold": "2024-03-01"
+          },
+          {
+            "address": "3414 E TINA DR",
+            "price": 1000000,
+            "sf": 3067,
+            "apn": "21302230",
+            "yearBuilt": 2021.0,
+            "distanceMi": 2.543,
+            "sold": "2024-06-01"
+          },
+          {
+            "address": "3320 E TINA DR",
+            "price": 1360000,
+            "sf": 3126,
+            "apn": "21302227",
+            "yearBuilt": 2020.0,
+            "distanceMi": 2.559,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "3428 E LOUISE DR",
+            "price": 1460000,
+            "sf": 3568,
+            "apn": "21302207",
+            "yearBuilt": 2020.0,
+            "distanceMi": 2.568,
+            "sold": "2025-08-01"
+          }
+        ]
+      },
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-01",
+      "lastSeen": "2026-10-29",
+      "peakScore": 110,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 2,
+        "comps": [
+          {
+            "address": "5006 E WAGONER RD",
+            "sold": "08/01/2026",
+            "price": 1325000,
+            "sf": 4274,
+            "apn": "21511814",
+            "yearBuilt": 1997,
+            "distanceMi": 1.174
+          },
+          {
+            "address": "5012 E WAGONER RD",
+            "sold": "07/01/2026",
+            "price": 989770,
+            "sf": 3175,
+            "apn": "21511815",
+            "yearBuilt": 1997,
+            "distanceMi": 1.188
+          },
+          {
+            "address": "5312 E ANDERSON DR",
+            "sold": "09/01/2026",
+            "price": 1699000,
+            "sf": 3879,
+            "apn": "21511397",
+            "yearBuilt": 1997,
+            "distanceMi": 1.581
+          },
+          {
+            "address": "3849 E MATTHEW DR",
+            "sold": "09/01/2025",
+            "price": 1015000,
+            "sf": 3905,
+            "apn": "21247596",
+            "yearBuilt": 2008,
+            "distanceMi": 1.812
+          },
+          {
+            "address": "3805 E ZACHARY DR",
+            "sold": "05/01/2026",
+            "price": 1140000,
+            "sf": 3432,
+            "apn": "21239901",
+            "yearBuilt": 2008,
+            "distanceMi": 1.871
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 332,
+        "medPsf": 312,
+        "price": 1140000,
+        "lowPsf": 260,
+        "highPsf": 438,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:38Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
       "verdict": null
     },
     {
@@ -4746,94 +5047,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
-      "peakScore": 110,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "verdict": null
-    },
-    {
-      "apn": "20424982",
-      "address": "28375 N NORTH VALLEY PKWY   PHOENIX  85085",
-      "ownerName": "DE RITO NORTERRA LLC",
-      "ownerMailAddress": "2424 RIDGE RD ROCKWALL TX USA 75087",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 10.5
-      },
-      "landSf": 31056,
-      "landAcres": 0.713,
-      "puc": "0021",
-      "landUseClass": "commercial",
-      "lat": 33.74117709396374,
-      "lng": -112.10599473976303,
-      "assessedValue": 1208300.0,
-      "assessedValuePerAcre": 1694670.0,
-      "currentZoning": "PCD",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3A",
-        "targetDensity": 21,
-        "basis": "adjacent parcels already zoned R-3A"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 15.0,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "NORTERRA FIESTA",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "homesNearby": 107,
-      "vacantNearby": 6,
-      "score": 90,
-      "reasons": [
-        "adjacent parcels already zoned R-3A",
-        "parcel size fits small-to-mid infill development",
-        "no house on the lot \u2014 undeveloped land",
-        "107 homes within 0.2 mi \u2014 surrounded by development",
-        "6 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 10 years"
-      ],
-      "comps": [],
-      "valuation": null,
-      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 110,
       "landOverride": null,
       "landPriceOverride": null,
@@ -4906,14 +5127,94 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
+      "peakScore": 110,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "verdict": null
+    },
+    {
+      "apn": "20424982",
+      "address": "28375 N NORTH VALLEY PKWY   PHOENIX  85085",
+      "ownerName": "DE RITO NORTERRA LLC",
+      "ownerMailAddress": "2424 RIDGE RD ROCKWALL TX USA 75087",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 10.5
+      },
+      "landSf": 31056,
+      "landAcres": 0.713,
+      "puc": "0021",
+      "landUseClass": "commercial",
+      "lat": 33.74117709396374,
+      "lng": -112.10599473976303,
+      "assessedValue": 1208300.0,
+      "assessedValuePerAcre": 1694670.0,
+      "currentZoning": "PCD",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3A",
+        "targetDensity": 21,
+        "basis": "adjacent parcels already zoned R-3A"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 15.0,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "NORTERRA FIESTA",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": null,
+      "homesNearby": 107,
+      "vacantNearby": 6,
+      "score": 90,
+      "reasons": [
+        "adjacent parcels already zoned R-3A",
+        "parcel size fits small-to-mid infill development",
+        "no house on the lot \u2014 undeveloped land",
+        "107 homes within 0.2 mi \u2014 surrounded by development",
+        "6 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 10 years"
+      ],
+      "comps": [],
+      "valuation": null,
+      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-01",
+      "lastSeen": "2026-10-29",
       "peakScore": 110,
       "landOverride": null,
       "landPriceOverride": null,
@@ -4986,14 +5287,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 90,
       "landOverride": null,
       "landPriceOverride": null,
@@ -5127,14 +5428,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:49Z",
         "error": null
       },
       "newBuild": {
@@ -5146,7 +5447,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 509,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:23Z",
+        "retrievedAt": "2026-10-29T17:15:49Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -5202,7 +5503,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 90,
       "landOverride": null,
       "landPriceOverride": null,
@@ -5265,7 +5566,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:07Z",
+        "retrievedAt": "2026-10-29T17:16:39Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -5339,26 +5640,26 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:35+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:24Z",
+        "retrievedAt": "2026-10-29T17:15:49Z",
         "error": null
       },
       "newBuild": {
-        "arv": 1465000,
-        "psf": 446,
-        "n": 34,
+        "arv": 1470000,
+        "psf": 452,
+        "n": 35,
         "radiusMi": 2.0,
         "lowPsf": 279,
         "highPsf": 541,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:24Z",
+        "retrievedAt": "2026-10-29T17:15:49Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -5414,7 +5715,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 89,
       "landOverride": null,
       "landPriceOverride": null,
@@ -5477,7 +5778,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:07Z",
+        "retrievedAt": "2026-10-29T17:16:39Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -5551,14 +5852,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 109,
       "landOverride": null,
       "landPriceOverride": null,
@@ -5624,7 +5925,7 @@ window.PHX_LAND_LEADS = {
         "13 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+20% vs assessed, rank 37/65 (+4 pts)"
+        "comps value ~+20% vs assessed, rank 37/67 (+4 pts)"
       ],
       "comps": [
         {
@@ -5698,7 +5999,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": 20,
@@ -5706,7 +6007,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:24Z",
+        "retrievedAt": "2026-10-29T17:15:49Z",
         "error": null
       },
       "newBuild": {
@@ -5718,7 +6019,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 516,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:24Z",
+        "retrievedAt": "2026-10-29T17:15:49Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -5774,7 +6075,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 89,
       "landOverride": null,
       "landPriceOverride": null,
@@ -5837,7 +6138,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:07Z",
+        "retrievedAt": "2026-10-29T17:16:39Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -5868,7 +6169,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:07Z",
+        "compRetrievedAt": "2026-10-29T17:16:39Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -5934,7 +6235,7 @@ window.PHX_LAND_LEADS = {
         "13 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+2% vs assessed, rank 44/65 (+4 pts)"
+        "comps value ~+2% vs assessed, rank 44/67 (+4 pts)"
       ],
       "comps": [
         {
@@ -6008,7 +6309,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": 2,
@@ -6016,7 +6317,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:24Z",
+        "retrievedAt": "2026-10-29T17:15:49Z",
         "error": null
       },
       "newBuild": {
@@ -6028,7 +6329,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 516,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:24Z",
+        "retrievedAt": "2026-10-29T17:15:49Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -6084,7 +6385,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-03",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 95,
       "landOverride": null,
       "landPriceOverride": null,
@@ -6147,7 +6448,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:08Z",
+        "retrievedAt": "2026-10-29T17:16:39Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -6178,7 +6479,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:08Z",
+        "compRetrievedAt": "2026-10-29T17:16:39Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -6263,14 +6564,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:24Z",
+        "retrievedAt": "2026-10-29T17:15:50Z",
         "error": null
       },
       "newBuild": {
@@ -6282,7 +6583,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:24Z",
+        "retrievedAt": "2026-10-29T17:15:50Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -6338,7 +6639,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 88,
       "landOverride": null,
       "landPriceOverride": null,
@@ -6401,7 +6702,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:08Z",
+        "retrievedAt": "2026-10-29T17:16:40Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -6471,7 +6772,7 @@ window.PHX_LAND_LEADS = {
         "8 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+85% vs assessed, rank 20/65 (+10 pts)"
+        "comps value ~+85% vs assessed, rank 20/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -6521,7 +6822,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": 85,
@@ -6529,7 +6830,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:25Z",
+        "retrievedAt": "2026-10-29T17:15:51Z",
         "error": null
       },
       "newBuild": {
@@ -6541,7 +6842,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:25Z",
+        "retrievedAt": "2026-10-29T17:15:51Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -6588,7 +6889,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 97,
       "landOverride": null,
       "landPriceOverride": null,
@@ -6651,7 +6952,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:09Z",
+        "retrievedAt": "2026-10-29T17:16:40Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -6682,7 +6983,313 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:09Z",
+        "compRetrievedAt": "2026-10-29T17:16:40Z",
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      }
+    },
+    {
+      "apn": "20323019P",
+      "address": "3306 W RAMBLING RD   PHOENIX  85086",
+      "ownerName": "MORITZ PROPERTIES II LLC",
+      "ownerMailAddress": "5722 W ACOMA DR GLENDALE AZ USA 85306",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 17.0
+      },
+      "landSf": 50086,
+      "landAcres": 1.15,
+      "puc": "0014",
+      "landUseClass": "residential",
+      "lat": 33.82110821471658,
+      "lng": -112.13104619889157,
+      "assessedValue": 124600.0,
+      "assessedValuePerAcre": 108348.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 987",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": null,
+      "byRightUnits": null,
+      "rezoneTargetUnits": null,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": null,
+      "homesNearby": 22,
+      "vacantNearby": 25,
+      "score": 87,
+      "reasons": [
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "no house on the lot \u2014 undeveloped land",
+        "22 homes within 0.2 mi \u2014 surrounded by development",
+        "25 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 17+ years \u2014 likely low or no debt on the land",
+        "comps value ~+54% vs assessed, rank 34/67 (+10 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "20323019Y",
+          "address": "37164 N 33RD AVE   PHOENIX  85086",
+          "distanceMi": 0.09,
+          "soldDate": "2025-12-01",
+          "soldPrice": 190000.0,
+          "landSf": 49729,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 166430,
+          "similarity": 80
+        },
+        {
+          "apn": "20336012J",
+          "address": "37820 N 31ST AVE   PHOENIX  85086",
+          "distanceMi": 0.53,
+          "soldDate": "2026-07-01",
+          "soldPrice": 130000.0,
+          "landSf": 54450,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 104000,
+          "similarity": 77
+        },
+        {
+          "apn": "20338011H",
+          "address": "2905 W DOLORES RD   PHOENIX  85086",
+          "distanceMi": 0.55,
+          "soldDate": "2026-03-01",
+          "soldPrice": 241000.0,
+          "landSf": 47802,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 219613,
+          "similarity": 76
+        },
+        {
+          "apn": "20337007G",
+          "address": "37675 N 30TH DR   PHOENIX  85086",
+          "distanceMi": 0.53,
+          "soldDate": "2026-04-01",
+          "soldPrice": 185000.0,
+          "landSf": 62811,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 128299,
+          "similarity": 74
+        },
+        {
+          "apn": "20338011G",
+          "address": "2915 W DOLORES RD   PHOENIX  85086",
+          "distanceMi": 0.52,
+          "soldDate": "2026-03-01",
+          "soldPrice": 278000.0,
+          "landSf": 72655,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 166674,
+          "similarity": 71
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 191364,
+        "rangeLow": 119581,
+        "rangeHigh": 252515,
+        "explanation": "Median of 5 plainly-vacant land sales in PHOENIX within 1 mile in the last 12 months, valued as vacant land and scaled by lot size, so the subject's land is estimated at approximately $191,364 (range $119,581-$252,515)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
+        "error": null
+      },
+      "equityMarginPct": 54,
+      "compsAdj": 10,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:51Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 1252260,
+        "psf": 412,
+        "n": 7,
+        "radiusMi": 1.0,
+        "lowPsf": 179,
+        "highPsf": 448,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:51Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "36430 N 34TH AVE",
+            "price": 700000,
+            "sf": 3907,
+            "apn": "20339010A",
+            "yearBuilt": 2019.0,
+            "distanceMi": 0.409,
+            "sold": "2026-07-01"
+          },
+          {
+            "address": "3227 W LONG RIFLE RD",
+            "price": 990000,
+            "sf": 2926,
+            "apn": "20339023",
+            "yearBuilt": 2023.0,
+            "distanceMi": 0.464,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "2951 W HERE TO THERE DR",
+            "price": 1420000,
+            "sf": 3173,
+            "apn": "20338010P",
+            "yearBuilt": 2019.0,
+            "distanceMi": 0.611,
+            "sold": "2025-01-01"
+          },
+          {
+            "address": "2819 W CREEK CANYON RD",
+            "price": 1350000,
+            "sf": 3179,
+            "apn": "20338005D",
+            "yearBuilt": 2024.0,
+            "distanceMi": 0.699,
+            "sold": "2025-08-01"
+          },
+          {
+            "address": "2808 W HERE TO THERE DR",
+            "price": 1325000,
+            "sf": 3050,
+            "apn": "20338005L",
+            "yearBuilt": 2024.0,
+            "distanceMi": 0.755,
+            "sold": "2025-01-01"
+          }
+        ]
+      },
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-18",
+      "lastSeen": "2026-10-29",
+      "peakScore": 97,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 1,
+        "comps": [
+          {
+            "address": "36430 N 34TH AVE",
+            "sold": "07/01/2026",
+            "price": 700000,
+            "sf": 3907,
+            "apn": "20339010A",
+            "yearBuilt": 2019,
+            "distanceMi": 0.409
+          },
+          {
+            "address": "3227 W LONG RIFLE RD",
+            "sold": "12/01/2025",
+            "price": 990000,
+            "sf": 2926,
+            "apn": "20339023",
+            "yearBuilt": 2023,
+            "distanceMi": 0.464
+          },
+          {
+            "address": "2819 W CREEK CANYON RD",
+            "sold": "08/01/2025",
+            "price": 1350000,
+            "sf": 3179,
+            "apn": "20338005D",
+            "yearBuilt": 2024,
+            "distanceMi": 0.699
+          },
+          {
+            "address": "2639 W LAVITT LN",
+            "sold": "09/01/2026",
+            "price": 1050000,
+            "sf": 3011,
+            "apn": "20333005G",
+            "yearBuilt": 2018,
+            "distanceMi": 1.001
+          },
+          {
+            "address": "3015 W IRVINE RD",
+            "sold": "05/01/2025",
+            "price": 1252260,
+            "sf": 3038,
+            "apn": "20335022C",
+            "yearBuilt": 2025,
+            "distanceMi": 0.934
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 412,
+        "medPsf": 349,
+        "price": 1050000,
+        "lowPsf": 179,
+        "highPsf": 425,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:41Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 191364,
+        "finished": 1565600,
+        "profit": -123993,
+        "marginPct": -8,
+        "marginPctAt275": 6,
+        "profitAt275": 95571,
+        "salePsf": 412,
+        "risk": "Low",
+        "medianStress": {
+          "salePsf": 349,
+          "label": "Pass",
+          "profit": -356211,
+          "marginPct": -26.9,
+          "homes": 1,
+          "fragile": false
+        },
+        "capacityConfirmed": false,
+        "supportableOffer": -70836,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": "2026-10-29T17:16:41Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -6747,7 +7354,7 @@ window.PHX_LAND_LEADS = {
         "15 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+56% vs assessed, rank 32/65 (+10 pts)"
+        "comps value ~+56% vs assessed, rank 32/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -6821,7 +7428,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": 56,
@@ -6829,7 +7436,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:26Z",
+        "retrievedAt": "2026-10-29T17:15:51Z",
         "error": null
       },
       "newBuild": {
@@ -6841,7 +7448,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:26Z",
+        "retrievedAt": "2026-10-29T17:15:51Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -6897,7 +7504,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 87,
       "landOverride": null,
       "landPriceOverride": null,
@@ -6960,7 +7567,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:09Z",
+        "retrievedAt": "2026-10-29T17:16:41Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -6991,7 +7598,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:09Z",
+        "compRetrievedAt": "2026-10-29T17:16:41Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -7052,21 +7659,9 @@ window.PHX_LAND_LEADS = {
         "41 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
         "held 19+ years \u2014 likely low or no debt on the land",
-        "comps value ~+127% vs assessed, rank 9/65 (+20 pts)"
+        "comps value ~+127% vs assessed, rank 9/67 (+20 pts)"
       ],
       "comps": [
-        {
-          "apn": "20338004C",
-          "address": "2812 W CLOUD RD   PHOENIX  85086",
-          "distanceMi": 0.71,
-          "soldDate": "2026-04-01",
-          "soldPrice": 535000.0,
-          "landSf": 145627,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 160029,
-          "similarity": 72
-        },
         {
           "apn": "20337007G",
           "address": "37675 N 30TH DR   PHOENIX  85086",
@@ -7077,6 +7672,18 @@ window.PHX_LAND_LEADS = {
           "livingSpaceSf": null,
           "pricePerSf": null,
           "pricePerAcre": 128299,
+          "similarity": 72
+        },
+        {
+          "apn": "20338004C",
+          "address": "2812 W CLOUD RD   PHOENIX  85086",
+          "distanceMi": 0.71,
+          "soldDate": "2026-04-01",
+          "soldPrice": 535000.0,
+          "landSf": 145627,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 160029,
           "similarity": 72
         },
         {
@@ -7126,7 +7733,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:16+00:00",
+        "retrievedAt": "2026-10-29T17:15:39+00:00",
         "error": null
       },
       "equityMarginPct": 127,
@@ -7134,7 +7741,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:26Z",
+        "retrievedAt": "2026-10-29T17:15:52Z",
         "error": null
       },
       "newBuild": {
@@ -7146,7 +7753,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 448,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:26Z",
+        "retrievedAt": "2026-10-29T17:15:52Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -7201,7 +7808,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 87,
       "landOverride": null,
       "landPriceOverride": null,
@@ -7216,6 +7823,15 @@ window.PHX_LAND_LEADS = {
             "apn": "20336014C",
             "yearBuilt": 2024,
             "distanceMi": 0.758
+          },
+          {
+            "address": "2639 W LAVITT LN",
+            "sold": "09/01/2026",
+            "price": 1050000,
+            "sf": 3011,
+            "apn": "20333005G",
+            "yearBuilt": 2018,
+            "distanceMi": 0.566
           },
           {
             "address": "36430 N 34TH AVE",
@@ -7243,28 +7859,19 @@ window.PHX_LAND_LEADS = {
             "apn": "20338005D",
             "yearBuilt": 2024,
             "distanceMi": 0.545
-          },
-          {
-            "address": "3015 W IRVINE RD",
-            "sold": "05/01/2025",
-            "price": 1252260,
-            "sf": 3038,
-            "apn": "20335022C",
-            "yearBuilt": 2025,
-            "distanceMi": 0.699
           }
         ],
         "n": 5,
         "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 412,
+        "psf": 349,
         "medPsf": 346,
-        "price": 1100000,
+        "price": 1050000,
         "lowPsf": 179,
         "highPsf": 425,
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:09Z",
+        "retrievedAt": "2026-10-29T17:16:41Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -7273,12 +7880,12 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 413725,
-        "finished": 1565600,
-        "profit": -361920,
-        "marginPct": -23,
-        "marginPctAt275": -9,
-        "profitAt275": -142356,
-        "salePsf": 412,
+        "finished": 1326200,
+        "profit": -594138,
+        "marginPct": -45,
+        "marginPctAt275": -28,
+        "profitAt275": -374574,
+        "salePsf": 349,
         "risk": "Low",
         "medianStress": {
           "salePsf": 346,
@@ -7289,13 +7896,13 @@ window.PHX_LAND_LEADS = {
           "fragile": false
         },
         "capacityConfirmed": false,
-        "supportableOffer": -70836,
+        "supportableOffer": -265488,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:09Z",
+        "compRetrievedAt": "2026-10-29T17:16:41Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -7359,7 +7966,7 @@ window.PHX_LAND_LEADS = {
         "no house on the lot \u2014 undeveloped land",
         "11 homes within 0.2 mi \u2014 surrounded by development",
         "17 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "comps value ~+122% vs assessed, rank 11/65 (+20 pts)"
+        "comps value ~+122% vs assessed, rank 11/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -7433,7 +8040,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:16+00:00",
+        "retrievedAt": "2026-10-29T17:15:39+00:00",
         "error": null
       },
       "equityMarginPct": 122,
@@ -7441,7 +8048,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:26Z",
+        "retrievedAt": "2026-10-29T17:15:52Z",
         "error": null
       },
       "newBuild": {
@@ -7453,7 +8060,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 562,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:26Z",
+        "retrievedAt": "2026-10-29T17:15:52Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -7508,7 +8115,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-27",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 87,
       "landOverride": null,
       "landPriceOverride": null,
@@ -7571,7 +8178,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:09Z",
+        "retrievedAt": "2026-10-29T17:16:41Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -7602,7 +8209,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:09Z",
+        "compRetrievedAt": "2026-10-29T17:16:41Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -7675,14 +8282,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 106,
       "landOverride": null,
       "landPriceOverride": null,
@@ -7754,14 +8361,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:26Z",
+        "retrievedAt": "2026-10-29T17:15:52Z",
         "error": null
       },
       "newBuild": {
@@ -7773,7 +8380,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 562,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:26Z",
+        "retrievedAt": "2026-10-29T17:15:52Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -7828,7 +8435,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 86,
       "landOverride": null,
       "landPriceOverride": null,
@@ -7891,7 +8498,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:09Z",
+        "retrievedAt": "2026-10-29T17:16:41Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -7977,14 +8584,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:26Z",
+        "retrievedAt": "2026-10-29T17:15:52Z",
         "error": null
       },
       "newBuild": {
@@ -7996,7 +8603,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 564,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:26Z",
+        "retrievedAt": "2026-10-29T17:15:52Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -8051,7 +8658,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 106,
       "landOverride": null,
       "landPriceOverride": null,
@@ -8114,7 +8721,706 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:10Z",
+        "retrievedAt": "2026-10-29T17:16:41Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
+      "verdict": null
+    },
+    {
+      "apn": "21150014G",
+      "address": "38405 N 17TH AVE   PHOENIX  85086",
+      "ownerName": "CARTS REVOCABLE TRUST",
+      "ownerMailAddress": "11144 W COCO PL LITTLETON CO USA 80127",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 16.3
+      },
+      "landSf": 54450,
+      "landAcres": 1.25,
+      "puc": "0134",
+      "landUseClass": "residential",
+      "lat": 33.83382585175674,
+      "lng": -112.09425970899125,
+      "assessedValue": 479500.0,
+      "assessedValuePerAcre": 383600.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 990",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": null,
+      "byRightUnits": null,
+      "rezoneTargetUnits": null,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 1708.0,
+      "farRatio": 0.031368227731864096,
+      "yearBuilt": "1995",
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": 18000,
+      "homesNearby": 71,
+      "vacantNearby": 4,
+      "score": 86,
+      "reasons": [
+        "parcel size fits small-to-mid infill development",
+        "71 homes within 0.2 mi \u2014 surrounded by development",
+        "4 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 16+ years \u2014 likely low or no debt on the land",
+        "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
+        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot"
+      ],
+      "comps": [
+        {
+          "apn": "21150036Z",
+          "address": "721 W HIDDEN VALLEY RD   PHOENIX  85086",
+          "distanceMi": 0.67,
+          "soldDate": "2026-09-01",
+          "soldPrice": 750000.0,
+          "landSf": 56088,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 582478,
+          "similarity": 70
+        },
+        {
+          "apn": "21150081A",
+          "address": "721 W HIDDEN VALLEY RD   PHOENIX  85086",
+          "distanceMi": 0.62,
+          "soldDate": "2026-09-01",
+          "soldPrice": 750000.0,
+          "landSf": 49368,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 661765,
+          "similarity": 69
+        }
+      ],
+      "valuation": null,
+      "compsNote": "Comparable sales below are the closest found, but none are usable for a dollar value (bulk sale or lot size too different) -- review them manually. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:45+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:54Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 1250000,
+        "psf": 402,
+        "n": 11,
+        "radiusMi": 1.0,
+        "lowPsf": 311,
+        "highPsf": 455,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:54Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "1614 W LAVITT LN",
+            "price": 1796269,
+            "sf": 4124,
+            "apn": "21150044F",
+            "yearBuilt": 2026.0,
+            "distanceMi": 0.168,
+            "sold": "2026-02-01"
+          },
+          {
+            "address": "38024 N 17TH AVE",
+            "price": 1350000,
+            "sf": 3060,
+            "apn": "21150062C",
+            "yearBuilt": 2019.0,
+            "distanceMi": 0.274,
+            "sold": "2024-10-01"
+          },
+          {
+            "address": "38623 N 14TH AVE",
+            "price": 1100000,
+            "sf": 3537,
+            "apn": "21150027F",
+            "yearBuilt": 2019.0,
+            "distanceMi": 0.301,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "37913 N 14TH AVE",
+            "price": 1725000,
+            "sf": 3790,
+            "apn": "21150046E",
+            "yearBuilt": 2022.0,
+            "distanceMi": 0.377,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "39032 N 11TH AVE",
+            "price": 1250000,
+            "sf": 3408,
+            "apn": "21150028R",
+            "yearBuilt": 2023.0,
+            "distanceMi": 0.513,
+            "sold": "2024-08-01"
+          }
+        ]
+      },
+      "registeredAgent": null,
+      "isNew": true,
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29",
+      "peakScore": 86,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 1,
+        "comps": [
+          {
+            "address": "1614 W LAVITT LN",
+            "sold": "02/01/2026",
+            "price": 1796269,
+            "sf": 4124,
+            "apn": "21150044F",
+            "yearBuilt": 2026,
+            "distanceMi": 0.168
+          },
+          {
+            "address": "37913 N 14TH AVE",
+            "sold": "04/01/2026",
+            "price": 1725000,
+            "sf": 3790,
+            "apn": "21150046E",
+            "yearBuilt": 2022,
+            "distanceMi": 0.377
+          },
+          {
+            "address": "37233 N 11TH AVE",
+            "sold": "07/01/2026",
+            "price": 1350000,
+            "sf": 3064,
+            "apn": "21151031K",
+            "yearBuilt": 2020,
+            "distanceMi": 0.848
+          },
+          {
+            "address": "1632 W LAVITT LN",
+            "sold": "11/01/2024",
+            "price": 860000,
+            "sf": 4124,
+            "apn": "21150044E",
+            "yearBuilt": 2026,
+            "distanceMi": 0.168
+          },
+          {
+            "address": "",
+            "sold": "11/01/2024",
+            "price": 860000,
+            "sf": 3038,
+            "apn": "21150044D",
+            "yearBuilt": 2026,
+            "distanceMi": 0.173
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 441,
+        "medPsf": 436,
+        "price": 1350000,
+        "lowPsf": 209,
+        "highPsf": 455,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:42Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
+      "verdict": null
+    },
+    {
+      "apn": "21150001L",
+      "address": "38211 N 11TH AVE   PHOENIX  85086",
+      "ownerName": "HINES PATRICIA KAY TRUST",
+      "ownerMailAddress": "8533 NW BEAVER DR JOHNSTON IA USA 50131",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 15.5
+      },
+      "landSf": 48872,
+      "landAcres": 1.122,
+      "puc": "0144",
+      "landUseClass": "residential",
+      "lat": 33.83199716955367,
+      "lng": -112.0865866669956,
+      "assessedValue": 611800.0,
+      "assessedValuePerAcre": 545276.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 990",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": null,
+      "byRightUnits": null,
+      "rezoneTargetUnits": null,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 1699.0,
+      "farRatio": 0.034764282206580455,
+      "yearBuilt": "2002",
+      "codeCases": null,
+      "saleDate": "03/01/2011",
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": 180050.0,
+      "defaultDemoCost": 18000,
+      "homesNearby": 80,
+      "vacantNearby": 11,
+      "score": 86,
+      "reasons": [
+        "parcel size fits small-to-mid infill development",
+        "80 homes within 0.2 mi \u2014 surrounded by development",
+        "11 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 16+ years \u2014 likely low or no debt on the land",
+        "existing structure occupies only 3% of the lot \u2014 under-improved for the land size",
+        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot"
+      ],
+      "comps": [
+        {
+          "apn": "21150081A",
+          "address": "721 W HIDDEN VALLEY RD   PHOENIX  85086",
+          "distanceMi": 0.17,
+          "soldDate": "2026-09-01",
+          "soldPrice": 750000.0,
+          "landSf": 49368,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 661765,
+          "similarity": 75
+        },
+        {
+          "apn": "21150036Z",
+          "address": "721 W HIDDEN VALLEY RD   PHOENIX  85086",
+          "distanceMi": 0.22,
+          "soldDate": "2026-09-01",
+          "soldPrice": 750000.0,
+          "landSf": 56088,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 582478,
+          "similarity": 72
+        }
+      ],
+      "valuation": null,
+      "compsNote": "Comparable sales below are the closest found, but none are usable for a dollar value (bulk sale or lot size too different) -- review them manually. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:45+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:54Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 1250000,
+        "psf": 402,
+        "n": 11,
+        "radiusMi": 1.0,
+        "lowPsf": 311,
+        "highPsf": 455,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:54Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "37913 N 14TH AVE",
+            "price": 1725000,
+            "sf": 3790,
+            "apn": "21150046E",
+            "yearBuilt": 2022.0,
+            "distanceMi": 0.244,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "38623 N 14TH AVE",
+            "price": 1100000,
+            "sf": 3537,
+            "apn": "21150027F",
+            "yearBuilt": 2019.0,
+            "distanceMi": 0.342,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "1614 W LAVITT LN",
+            "price": 1796269,
+            "sf": 4124,
+            "apn": "21150044F",
+            "yearBuilt": 2026.0,
+            "distanceMi": 0.426,
+            "sold": "2026-02-01"
+          },
+          {
+            "address": "39032 N 11TH AVE",
+            "price": 1250000,
+            "sf": 3408,
+            "apn": "21150028R",
+            "yearBuilt": 2023.0,
+            "distanceMi": 0.55,
+            "sold": "2024-08-01"
+          },
+          {
+            "address": "39012 N 6TH DR",
+            "price": 1125937,
+            "sf": 3525,
+            "apn": "21123015G",
+            "yearBuilt": 2024.0,
+            "distanceMi": 0.559,
+            "sold": "2025-05-01"
+          }
+        ]
+      },
+      "registeredAgent": null,
+      "isNew": true,
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29",
+      "peakScore": 86,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 1,
+        "comps": [
+          {
+            "address": "37913 N 14TH AVE",
+            "sold": "04/01/2026",
+            "price": 1725000,
+            "sf": 3790,
+            "apn": "21150046E",
+            "yearBuilt": 2022,
+            "distanceMi": 0.244
+          },
+          {
+            "address": "1614 W LAVITT LN",
+            "sold": "02/01/2026",
+            "price": 1796269,
+            "sf": 4124,
+            "apn": "21150044F",
+            "yearBuilt": 2026,
+            "distanceMi": 0.426
+          },
+          {
+            "address": "37233 N 11TH AVE",
+            "sold": "07/01/2026",
+            "price": 1350000,
+            "sf": 3064,
+            "apn": "21151031K",
+            "yearBuilt": 2020,
+            "distanceMi": 0.58
+          },
+          {
+            "address": "37227 N 11TH AVE",
+            "sold": "05/01/2026",
+            "price": 1235000,
+            "sf": 3065,
+            "apn": "21151031L",
+            "yearBuilt": 2020,
+            "distanceMi": 0.583
+          },
+          {
+            "address": "810 W HIDDEN VALLEY DR",
+            "sold": "03/01/2026",
+            "price": 1355000,
+            "sf": 3584,
+            "apn": "21150070",
+            "yearBuilt": 2013,
+            "distanceMi": 0.14
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 441,
+        "medPsf": 436,
+        "price": 1355000,
+        "lowPsf": 378,
+        "highPsf": 455,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:42Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
+      "verdict": null
+    },
+    {
+      "apn": "21150014Q",
+      "address": "38407 N 17TH AVE   PHOENIX  85086",
+      "ownerName": "CARTS REVOCABLE TRUST",
+      "ownerMailAddress": "11144 W COCO PL LITTLETON CO USA 80127",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 16.3
+      },
+      "landSf": 52497,
+      "landAcres": 1.205,
+      "puc": "0134",
+      "landUseClass": "residential",
+      "lat": 33.83383969979199,
+      "lng": -112.09529493428546,
+      "assessedValue": 537000.0,
+      "assessedValuePerAcre": 445643.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 990",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": null,
+      "byRightUnits": null,
+      "rezoneTargetUnits": null,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 2040.0,
+      "farRatio": 0.03885936339219384,
+      "yearBuilt": "1995",
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": 18000,
+      "homesNearby": 70,
+      "vacantNearby": 5,
+      "score": 86,
+      "reasons": [
+        "parcel size fits small-to-mid infill development",
+        "70 homes within 0.2 mi \u2014 surrounded by development",
+        "5 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 16+ years \u2014 likely low or no debt on the land",
+        "existing structure occupies only 4% of the lot \u2014 under-improved for the land size",
+        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot"
+      ],
+      "comps": [
+        {
+          "apn": "21150081A",
+          "address": "721 W HIDDEN VALLEY RD   PHOENIX  85086",
+          "distanceMi": 0.67,
+          "soldDate": "2026-09-01",
+          "soldPrice": 750000.0,
+          "landSf": 49368,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 661765,
+          "similarity": 69
+        },
+        {
+          "apn": "21150036Z",
+          "address": "721 W HIDDEN VALLEY RD   PHOENIX  85086",
+          "distanceMi": 0.73,
+          "soldDate": "2026-09-01",
+          "soldPrice": 750000.0,
+          "landSf": 56088,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 582478,
+          "similarity": 69
+        }
+      ],
+      "valuation": null,
+      "compsNote": "Comparable sales below are the closest found, but none are usable for a dollar value (bulk sale or lot size too different) -- review them manually. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:45+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:54Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 1250000,
+        "psf": 402,
+        "n": 11,
+        "radiusMi": 1.0,
+        "lowPsf": 311,
+        "highPsf": 455,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:54Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "1614 W LAVITT LN",
+            "price": 1796269,
+            "sf": 4124,
+            "apn": "21150044F",
+            "yearBuilt": 2026.0,
+            "distanceMi": 0.184,
+            "sold": "2026-02-01"
+          },
+          {
+            "address": "38024 N 17TH AVE",
+            "price": 1350000,
+            "sf": 3060,
+            "apn": "21150062C",
+            "yearBuilt": 2019.0,
+            "distanceMi": 0.25,
+            "sold": "2024-10-01"
+          },
+          {
+            "address": "38623 N 14TH AVE",
+            "price": 1100000,
+            "sf": 3537,
+            "apn": "21150027F",
+            "yearBuilt": 2019.0,
+            "distanceMi": 0.352,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "37913 N 14TH AVE",
+            "price": 1725000,
+            "sf": 3790,
+            "apn": "21150046E",
+            "yearBuilt": 2022.0,
+            "distanceMi": 0.42,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "39032 N 11TH AVE",
+            "price": 1250000,
+            "sf": 3408,
+            "apn": "21150028R",
+            "yearBuilt": 2023.0,
+            "distanceMi": 0.551,
+            "sold": "2024-08-01"
+          }
+        ]
+      },
+      "registeredAgent": null,
+      "isNew": true,
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29",
+      "peakScore": 86,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 1,
+        "comps": [
+          {
+            "address": "1614 W LAVITT LN",
+            "sold": "02/01/2026",
+            "price": 1796269,
+            "sf": 4124,
+            "apn": "21150044F",
+            "yearBuilt": 2026,
+            "distanceMi": 0.184
+          },
+          {
+            "address": "37913 N 14TH AVE",
+            "sold": "04/01/2026",
+            "price": 1725000,
+            "sf": 3790,
+            "apn": "21150046E",
+            "yearBuilt": 2022,
+            "distanceMi": 0.42
+          },
+          {
+            "address": "37233 N 11TH AVE",
+            "sold": "07/01/2026",
+            "price": 1350000,
+            "sf": 3064,
+            "apn": "21151031K",
+            "yearBuilt": 2020,
+            "distanceMi": 0.883
+          },
+          {
+            "address": "1672 W LAVITT LN",
+            "sold": "11/01/2024",
+            "price": 860000,
+            "sf": 3038,
+            "apn": "21150044C",
+            "yearBuilt": 2026,
+            "distanceMi": 0.169
+          },
+          {
+            "address": "",
+            "sold": "11/01/2024",
+            "price": 860000,
+            "sf": 3038,
+            "apn": "21150044D",
+            "yearBuilt": 2026,
+            "distanceMi": 0.169
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 441,
+        "medPsf": 436,
+        "price": 1350000,
+        "lowPsf": 283,
+        "highPsf": 455,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:42Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -8164,7 +9470,7 @@ window.PHX_LAND_LEADS = {
       "farRatio": null,
       "yearBuilt": null,
       "codeCases": {
-        "count": 5,
+        "count": 4,
         "severe": true,
         "distress": false
       },
@@ -8184,7 +9490,7 @@ window.PHX_LAND_LEADS = {
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "city issued a violation notice, ticket, or abatement here",
-        "5 code-enforcement cases at this address (2024+)"
+        "4 code-enforcement cases at this address (2024+)"
       ],
       "comps": [],
       "valuation": null,
@@ -8192,312 +9498,18 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-02",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 85,
       "landOverride": null,
       "landPriceOverride": null,
       "verdict": null
-    },
-    {
-      "apn": "21152067D",
-      "address": "34811 N 14TH ST   PHOENIX  85086",
-      "ownerName": "OSP HOLDING COMPANY LLC",
-      "ownerMailAddress": "6835  E CONTINENTAL MOUNTAIN DR CAVE CREEK AZ USA 85331",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 1.0
-      },
-      "landSf": 100624,
-      "landAcres": 2.31,
-      "puc": "0011",
-      "landUseClass": "residential",
-      "lat": 33.801391102308955,
-      "lng": -112.05068512372658,
-      "assessedValue": 278100.0,
-      "assessedValuePerAcre": 120390.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 990",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": null,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": "09/01/2025",
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": 650000.0,
-      "defaultDemoCost": null,
-      "homesNearby": 21,
-      "vacantNearby": 5,
-      "score": 85,
-      "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "no house on the lot \u2014 undeveloped land",
-        "21 homes within 0.2 mi \u2014 surrounded by development",
-        "5 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps margin 520% looks extreme \u2014 verify assessed value/comps before trusting",
-        "comps value ~+520% vs assessed, rank 1/65 (+20 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "21174124",
-          "address": "1421 E COYOTE WASH DR   PHOENIX  85085",
-          "distanceMi": 0.86,
-          "soldDate": "2026-07-01",
-          "soldPrice": 325000.0,
-          "landSf": 43681,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 324100,
-          "similarity": 65
-        },
-        {
-          "apn": "21169182",
-          "address": "1712 E CLOUD RD   PHOENIX  85086",
-          "distanceMi": 0.93,
-          "soldDate": "2026-08-01",
-          "soldPrice": 1342423.0,
-          "landSf": 40548,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1442141,
-          "similarity": 64
-        },
-        {
-          "apn": "21174123",
-          "address": "1420 E COYOTE WASH DR   PHOENIX  85085",
-          "distanceMi": 0.82,
-          "soldDate": "2026-03-01",
-          "soldPrice": 375000.0,
-          "landSf": 43681,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 373961,
-          "similarity": 64
-        },
-        {
-          "apn": "21169189C",
-          "address": "1682 E LONG RIFLE RD   PHOENIX  85086",
-          "distanceMi": 0.99,
-          "soldDate": "2026-01-01",
-          "soldPrice": 1120000.0,
-          "landSf": 43560,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 1120000,
-          "similarity": 61
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 1725532,
-        "rangeLow": 748673,
-        "rangeHigh": 3331360,
-        "explanation": "Median of 4 plainly-vacant land sales in PHOENIX within 1 mile in the last 12 months, valued as vacant land and scaled by lot size, so the subject's land is estimated at approximately $1,725,532 (range $748,673-$3,331,360)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:17+00:00",
-        "error": null
-      },
-      "equityMarginPct": 520,
-      "compsAdj": 20,
-      "newBuildLookup": {
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:27Z",
-        "error": null
-      },
-      "newBuild": {
-        "arv": 1500000,
-        "psf": 397,
-        "n": 7,
-        "radiusMi": 1.0,
-        "lowPsf": 282,
-        "highPsf": 509,
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:27Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "examples": [
-          {
-            "address": "825 E PERDIDO WAY",
-            "price": 1025000,
-            "sf": 3007,
-            "apn": "21152054D",
-            "yearBuilt": 2020.0,
-            "distanceMi": 0.749,
-            "sold": "2026-06-01"
-          },
-          {
-            "address": "1244 E SMOKEHOUSE TRL",
-            "price": 1665000,
-            "sf": 4277,
-            "apn": "21174153",
-            "yearBuilt": 2025.0,
-            "distanceMi": 0.919,
-            "sold": "2025-11-01"
-          },
-          {
-            "address": "1204 E SMOKEHOUSE TRL",
-            "price": 1652197,
-            "sf": 4012,
-            "apn": "21174151",
-            "yearBuilt": 2024.0,
-            "distanceMi": 0.937,
-            "sold": "2024-09-01"
-          },
-          {
-            "address": "36320 N 16TH ST",
-            "price": 1375000,
-            "sf": 3155,
-            "apn": "21168067H",
-            "yearBuilt": 2024.0,
-            "distanceMi": 0.952,
-            "sold": "2024-09-01"
-          },
-          {
-            "address": "1424 E RED RANGE WAY",
-            "price": 1850000,
-            "sf": 3636,
-            "apn": "21174120",
-            "yearBuilt": 2020.0,
-            "distanceMi": 0.978,
-            "sold": "2024-01-01"
-          }
-        ]
-      },
-      "registeredAgent": null,
-      "isNew": true,
-      "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
-      "peakScore": 85,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "houseComps": {
-        "radiusMi": 1,
-        "comps": [
-          {
-            "address": "825 E PERDIDO WAY",
-            "sold": "06/01/2026",
-            "price": 1025000,
-            "sf": 3007,
-            "apn": "21152054D",
-            "yearBuilt": 2020,
-            "distanceMi": 0.749
-          },
-          {
-            "address": "544 E AMBER SUN DR",
-            "sold": "03/01/2026",
-            "price": 1500000,
-            "sf": 3776,
-            "apn": "21124031T",
-            "yearBuilt": 2025,
-            "distanceMi": 1.023
-          },
-          {
-            "address": "1510 E RED RANGE WAY",
-            "sold": "08/01/2025",
-            "price": 899900,
-            "sf": 3193,
-            "apn": "21174092U",
-            "yearBuilt": 2023,
-            "distanceMi": 0.982
-          },
-          {
-            "address": "1244 E SMOKEHOUSE TRL",
-            "sold": "11/01/2025",
-            "price": 1665000,
-            "sf": 4277,
-            "apn": "21174153",
-            "yearBuilt": 2025,
-            "distanceMi": 0.919
-          },
-          {
-            "address": "33609 N 14TH ST",
-            "sold": "12/01/2025",
-            "price": 1187500,
-            "sf": 3142,
-            "apn": "21174134",
-            "yearBuilt": 2016,
-            "distanceMi": 0.758
-          }
-        ],
-        "n": 5,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 389,
-        "medPsf": 378,
-        "price": 1187500,
-        "lowPsf": 282,
-        "highPsf": 397,
-        "requiresRefresh": false,
-        "source": "Maricopa County Assessor nearby home sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:10Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null
-      },
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 1725532,
-        "finished": 1478200,
-        "profit": -1850331,
-        "marginPct": -125,
-        "marginPctAt275": -110,
-        "profitAt275": -1630767,
-        "salePsf": 389,
-        "risk": "Low",
-        "medianStress": {
-          "salePsf": 378,
-          "label": "Pass",
-          "profit": -1890877,
-          "marginPct": -131.6,
-          "homes": 1,
-          "fragile": false
-        },
-        "capacityConfirmed": false,
-        "supportableOffer": -141899,
-        "offerHomes": 1,
-        "offerTargetMargin": 0.1,
-        "offerHardPsf": 325,
-        "compSource": "Maricopa County Assessor nearby home sales",
-        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:10Z",
-        "compFellBack": false,
-        "compError": null,
-        "compFallbackReason": null
-      }
     },
     {
       "apn": "21124072D",
@@ -8554,7 +9566,7 @@ window.PHX_LAND_LEADS = {
         "42 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+224% vs assessed, rank 5/65 (+20 pts)"
+        "comps value ~+224% vs assessed, rank 5/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -8628,7 +9640,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:17+00:00",
+        "retrievedAt": "2026-10-29T17:15:40+00:00",
         "error": null
       },
       "equityMarginPct": 224,
@@ -8636,7 +9648,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:27Z",
+        "retrievedAt": "2026-10-29T17:15:54Z",
         "error": null
       },
       "newBuild": {
@@ -8648,7 +9660,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 562,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:27Z",
+        "retrievedAt": "2026-10-29T17:15:54Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -8704,7 +9716,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 85,
       "landOverride": null,
       "landPriceOverride": null,
@@ -8767,7 +9779,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:11Z",
+        "retrievedAt": "2026-10-29T17:16:42Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -8798,7 +9810,301 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:11Z",
+        "compRetrievedAt": "2026-10-29T17:16:42Z",
+        "compFellBack": false,
+        "compError": null,
+        "compFallbackReason": null
+      }
+    },
+    {
+      "apn": "21152067D",
+      "address": "34811 N 14TH ST   PHOENIX  85086",
+      "ownerName": "OSP HOLDING COMPANY LLC",
+      "ownerMailAddress": "6835  E CONTINENTAL MOUNTAIN DR CAVE CREEK AZ USA 85331",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 1.0
+      },
+      "landSf": 100624,
+      "landAcres": 2.31,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.801391102308955,
+      "lng": -112.05068512372658,
+      "assessedValue": 278100.0,
+      "assessedValuePerAcre": 120390.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 990",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": null,
+      "byRightUnits": null,
+      "rezoneTargetUnits": null,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": "09/01/2025",
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": 650000.0,
+      "defaultDemoCost": null,
+      "homesNearby": 21,
+      "vacantNearby": 5,
+      "score": 85,
+      "reasons": [
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "no house on the lot \u2014 undeveloped land",
+        "21 homes within 0.2 mi \u2014 surrounded by development",
+        "5 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "comps margin 520% looks extreme \u2014 verify assessed value/comps before trusting",
+        "comps value ~+520% vs assessed, rank 1/67 (+20 pts)"
+      ],
+      "comps": [
+        {
+          "apn": "21174124",
+          "address": "1421 E COYOTE WASH DR   PHOENIX  85085",
+          "distanceMi": 0.86,
+          "soldDate": "2026-07-01",
+          "soldPrice": 325000.0,
+          "landSf": 43681,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 324100,
+          "similarity": 65
+        },
+        {
+          "apn": "21169182",
+          "address": "1712 E CLOUD RD   PHOENIX  85086",
+          "distanceMi": 0.93,
+          "soldDate": "2026-08-01",
+          "soldPrice": 1342423.0,
+          "landSf": 40548,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1442141,
+          "similarity": 64
+        },
+        {
+          "apn": "21174123",
+          "address": "1420 E COYOTE WASH DR   PHOENIX  85085",
+          "distanceMi": 0.82,
+          "soldDate": "2026-03-01",
+          "soldPrice": 375000.0,
+          "landSf": 43681,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 373961,
+          "similarity": 64
+        },
+        {
+          "apn": "21169189C",
+          "address": "1682 E LONG RIFLE RD   PHOENIX  85086",
+          "distanceMi": 0.99,
+          "soldDate": "2026-01-01",
+          "soldPrice": 1120000.0,
+          "landSf": 43560,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 1120000,
+          "similarity": 61
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 1725532,
+        "rangeLow": 748673,
+        "rangeHigh": 3331360,
+        "explanation": "Median of 4 plainly-vacant land sales in PHOENIX within 1 mile in the last 12 months, valued as vacant land and scaled by lot size, so the subject's land is estimated at approximately $1,725,532 (range $748,673-$3,331,360)."
+      },
+      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:40+00:00",
+        "error": null
+      },
+      "equityMarginPct": 520,
+      "compsAdj": 20,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:54Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 1500000,
+        "psf": 397,
+        "n": 7,
+        "radiusMi": 1.0,
+        "lowPsf": 282,
+        "highPsf": 509,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:54Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "825 E PERDIDO WAY",
+            "price": 1025000,
+            "sf": 3007,
+            "apn": "21152054D",
+            "yearBuilt": 2020.0,
+            "distanceMi": 0.749,
+            "sold": "2026-06-01"
+          },
+          {
+            "address": "1244 E SMOKEHOUSE TRL",
+            "price": 1665000,
+            "sf": 4277,
+            "apn": "21174153",
+            "yearBuilt": 2025.0,
+            "distanceMi": 0.919,
+            "sold": "2025-11-01"
+          },
+          {
+            "address": "1204 E SMOKEHOUSE TRL",
+            "price": 1652197,
+            "sf": 4012,
+            "apn": "21174151",
+            "yearBuilt": 2024.0,
+            "distanceMi": 0.937,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "36320 N 16TH ST",
+            "price": 1375000,
+            "sf": 3155,
+            "apn": "21168067H",
+            "yearBuilt": 2024.0,
+            "distanceMi": 0.952,
+            "sold": "2024-09-01"
+          },
+          {
+            "address": "1424 E RED RANGE WAY",
+            "price": 1850000,
+            "sf": 3636,
+            "apn": "21174120",
+            "yearBuilt": 2020.0,
+            "distanceMi": 0.978,
+            "sold": "2024-01-01"
+          }
+        ]
+      },
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
+      "peakScore": 85,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 1,
+        "comps": [
+          {
+            "address": "825 E PERDIDO WAY",
+            "sold": "06/01/2026",
+            "price": 1025000,
+            "sf": 3007,
+            "apn": "21152054D",
+            "yearBuilt": 2020,
+            "distanceMi": 0.749
+          },
+          {
+            "address": "544 E AMBER SUN DR",
+            "sold": "03/01/2026",
+            "price": 1500000,
+            "sf": 3776,
+            "apn": "21124031T",
+            "yearBuilt": 2025,
+            "distanceMi": 1.023
+          },
+          {
+            "address": "1510 E RED RANGE WAY",
+            "sold": "08/01/2025",
+            "price": 899900,
+            "sf": 3193,
+            "apn": "21174092U",
+            "yearBuilt": 2023,
+            "distanceMi": 0.982
+          },
+          {
+            "address": "1244 E SMOKEHOUSE TRL",
+            "sold": "11/01/2025",
+            "price": 1665000,
+            "sf": 4277,
+            "apn": "21174153",
+            "yearBuilt": 2025,
+            "distanceMi": 0.919
+          },
+          {
+            "address": "33609 N 14TH ST",
+            "sold": "12/01/2025",
+            "price": 1187500,
+            "sf": 3142,
+            "apn": "21174134",
+            "yearBuilt": 2016,
+            "distanceMi": 0.758
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 389,
+        "medPsf": 378,
+        "price": 1187500,
+        "lowPsf": 282,
+        "highPsf": 397,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:42Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
+      "verdict": {
+        "label": "Pass",
+        "strategy": "1 custom home",
+        "land": 1725532,
+        "finished": 1478200,
+        "profit": -1850331,
+        "marginPct": -125,
+        "marginPctAt275": -110,
+        "profitAt275": -1630767,
+        "salePsf": 389,
+        "risk": "Low",
+        "medianStress": {
+          "salePsf": 378,
+          "label": "Pass",
+          "profit": -1890877,
+          "marginPct": -131.6,
+          "homes": 1,
+          "fragile": false
+        },
+        "capacityConfirmed": false,
+        "supportableOffer": -141899,
+        "offerHomes": 1,
+        "offerTargetMargin": 0.1,
+        "offerHardPsf": 325,
+        "compSource": "Maricopa County Assessor nearby home sales",
+        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "compRetrievedAt": "2026-10-29T17:16:42Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -8859,7 +10165,7 @@ window.PHX_LAND_LEADS = {
         "30 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+105% vs assessed, rank 15/65 (+20 pts)"
+        "comps value ~+105% vs assessed, rank 15/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -8933,7 +10239,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:17+00:00",
+        "retrievedAt": "2026-10-29T17:15:40+00:00",
         "error": null
       },
       "equityMarginPct": 105,
@@ -8941,7 +10247,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:28Z",
+        "retrievedAt": "2026-10-29T17:15:54Z",
         "error": null
       },
       "newBuild": {
@@ -8953,7 +10259,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:28Z",
+        "retrievedAt": "2026-10-29T17:15:54Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -9009,7 +10315,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 85,
       "landOverride": null,
       "landPriceOverride": null,
@@ -9044,6 +10350,15 @@ window.PHX_LAND_LEADS = {
             "distanceMi": 0.474
           },
           {
+            "address": "2639 W LAVITT LN",
+            "sold": "09/01/2026",
+            "price": 1050000,
+            "sf": 3011,
+            "apn": "20333005G",
+            "yearBuilt": 2018,
+            "distanceMi": 0.755
+          },
+          {
             "address": "3212 W ADAMANDA DR",
             "sold": "09/01/2025",
             "price": 1100000,
@@ -9051,28 +10366,19 @@ window.PHX_LAND_LEADS = {
             "apn": "20336014C",
             "yearBuilt": 2024,
             "distanceMi": 0.858
-          },
-          {
-            "address": "3015 W IRVINE RD",
-            "sold": "05/01/2025",
-            "price": 1252260,
-            "sf": 3038,
-            "apn": "20335022C",
-            "yearBuilt": 2025,
-            "distanceMi": 0.841
           }
         ],
         "n": 5,
         "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 412,
+        "psf": 349,
         "medPsf": 346,
-        "price": 1100000,
+        "price": 1050000,
         "lowPsf": 179,
         "highPsf": 425,
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:11Z",
+        "retrievedAt": "2026-10-29T17:16:43Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -9081,12 +10387,12 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 285357,
-        "finished": 1565600,
-        "profit": -224566,
-        "marginPct": -14,
-        "marginPctAt275": 0,
-        "profitAt275": -5002,
-        "salePsf": 412,
+        "finished": 1326200,
+        "profit": -456784,
+        "marginPct": -34,
+        "marginPctAt275": -18,
+        "profitAt275": -237220,
+        "salePsf": 349,
         "risk": "Low",
         "medianStress": {
           "salePsf": 346,
@@ -9097,13 +10403,13 @@ window.PHX_LAND_LEADS = {
           "fragile": false
         },
         "capacityConfirmed": false,
-        "supportableOffer": -70836,
+        "supportableOffer": -265488,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:11Z",
+        "compRetrievedAt": "2026-10-29T17:16:43Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -9175,15 +10481,94 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 104,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "verdict": null
+    },
+    {
+      "apn": "20807084E",
+      "address": "17035 N 21ST AVE   PHOENIX  85023",
+      "ownerName": "LITHIA REAL ESTATE INC",
+      "ownerMailAddress": "150 N BARTLETT ST MEDFORD OR USA 97501",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 6.0
+      },
+      "landSf": 20329,
+      "landAcres": 0.467,
+      "puc": "0022",
+      "landUseClass": "commercial",
+      "lat": 33.64119570676199,
+      "lng": -112.10515315875446,
+      "assessedValue": 294900.0,
+      "assessedValuePerAcre": 631478.0,
+      "currentZoning": "C-2",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 2.8,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": "11/01/2020",
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": 4770000.0,
+      "defaultDemoCost": null,
+      "homesNearby": 166,
+      "vacantNearby": 10,
+      "score": 84,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "no house on the lot \u2014 undeveloped land",
+        "166 homes within 0.2 mi \u2014 surrounded by development",
+        "10 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address is out of state (absentee)",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [],
+      "valuation": null,
+      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-29",
+      "peakScore": 84,
       "landOverride": null,
       "landPriceOverride": null,
       "verdict": null
@@ -9254,14 +10639,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:28Z",
+        "retrievedAt": "2026-10-29T17:15:55Z",
         "error": null
       },
       "newBuild": {
@@ -9273,7 +10658,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:28Z",
+        "retrievedAt": "2026-10-29T17:15:55Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -9329,7 +10714,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 104,
       "landOverride": null,
       "landPriceOverride": null,
@@ -9392,173 +10777,11 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:11Z",
+        "retrievedAt": "2026-10-29T17:16:43Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
-      "verdict": null
-    },
-    {
-      "apn": "20807084E",
-      "address": "17035 N 21ST AVE   PHOENIX  85023",
-      "ownerName": "LITHIA REAL ESTATE INC",
-      "ownerMailAddress": "150 N BARTLETT ST MEDFORD OR USA 97501",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 6.0
-      },
-      "landSf": 20329,
-      "landAcres": 0.467,
-      "puc": "0022",
-      "landUseClass": "commercial",
-      "lat": 33.64119570676199,
-      "lng": -112.10515315875446,
-      "assessedValue": 294900.0,
-      "assessedValuePerAcre": 631478.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 2.8,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": "11/01/2020",
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": 4770000.0,
-      "defaultDemoCost": null,
-      "homesNearby": 166,
-      "vacantNearby": 10,
-      "score": 84,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "no house on the lot \u2014 undeveloped land",
-        "166 homes within 0.2 mi \u2014 surrounded by development",
-        "10 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [],
-      "valuation": null,
-      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-11",
-      "lastSeen": "2026-10-28",
-      "peakScore": 84,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "verdict": null
-    },
-    {
-      "apn": "20807001W",
-      "address": "2035 W COOLBROOK AVE   PHOENIX  85023",
-      "ownerName": "LITHIA REAL ESTATE INC",
-      "ownerMailAddress": "150 N BARTLETT ST MEDFORD OR USA 97501",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 6.0
-      },
-      "landSf": 184302,
-      "landAcres": 4.231,
-      "puc": "0022",
-      "landUseClass": "commercial",
-      "lat": 33.64178909555138,
-      "lng": -112.10421798171829,
-      "assessedValue": 1880500.0,
-      "assessedValuePerAcre": 444458.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 25.4,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": {
-        "count": 1,
-        "severe": false,
-        "distress": false
-      },
-      "saleDate": "11/01/2020",
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": 4770000.0,
-      "defaultDemoCost": null,
-      "homesNearby": 169,
-      "vacantNearby": 12,
-      "score": 84,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "no house on the lot \u2014 undeveloped land",
-        "169 homes within 0.2 mi \u2014 surrounded by development",
-        "12 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [],
-      "valuation": null,
-      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
-      "peakScore": 110,
-      "landOverride": null,
-      "landPriceOverride": null,
       "verdict": null
     },
     {
@@ -9627,14 +10850,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:30Z",
+        "retrievedAt": "2026-10-29T17:15:56Z",
         "error": null
       },
       "newBuild": {
@@ -9646,7 +10869,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:30Z",
+        "retrievedAt": "2026-10-29T17:15:56Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -9702,7 +10925,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 104,
       "landOverride": null,
       "landPriceOverride": null,
@@ -9765,7 +10988,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:12Z",
+        "retrievedAt": "2026-10-29T17:16:43Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -9838,14 +11061,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:31Z",
+        "retrievedAt": "2026-10-29T17:15:58Z",
         "error": null
       },
       "newBuild": {
@@ -9857,7 +11080,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 547,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:31Z",
+        "retrievedAt": "2026-10-29T17:15:58Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -9913,7 +11136,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 104,
       "landOverride": null,
       "landPriceOverride": null,
@@ -9976,7 +11199,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:13Z",
+        "retrievedAt": "2026-10-29T17:16:44Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -10049,14 +11272,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:33Z",
+        "retrievedAt": "2026-10-29T17:16:00Z",
         "error": null
       },
       "newBuild": {
@@ -10068,7 +11291,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 732,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:33Z",
+        "retrievedAt": "2026-10-29T17:16:00Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -10124,7 +11347,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 94,
       "landOverride": null,
       "landPriceOverride": null,
@@ -10187,7 +11410,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:14Z",
+        "retrievedAt": "2026-10-29T17:16:45Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -10282,14 +11505,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:34Z",
+        "retrievedAt": "2026-10-29T17:16:01Z",
         "error": null
       },
       "newBuild": {
@@ -10301,7 +11524,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 455,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:34Z",
+        "retrievedAt": "2026-10-29T17:16:01Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -10357,7 +11580,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-11",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 84,
       "landOverride": null,
       "landPriceOverride": null,
@@ -10420,7 +11643,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:14Z",
+        "retrievedAt": "2026-10-29T17:16:45Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -10516,26 +11739,26 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:34Z",
+        "retrievedAt": "2026-10-29T17:16:02Z",
         "error": null
       },
       "newBuild": {
-        "arv": 1390000,
-        "psf": 410,
-        "n": 24,
+        "arv": 1400000,
+        "psf": 411,
+        "n": 25,
         "radiusMi": 3.0,
         "lowPsf": 302,
         "highPsf": 529,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:34Z",
+        "retrievedAt": "2026-10-29T17:16:02Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -10591,7 +11814,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 110,
       "landOverride": null,
       "landPriceOverride": null,
@@ -10654,7 +11877,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:14Z",
+        "retrievedAt": "2026-10-29T17:16:45Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -10727,232 +11950,17 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-11",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 84,
       "landOverride": null,
       "landPriceOverride": null,
-      "verdict": null
-    },
-    {
-      "apn": "21516036",
-      "address": "18042 N 42ND ST   PHOENIX  85032",
-      "ownerName": "FEDERAL NATIONAL MORTGAGE ASSOCIATION",
-      "ownerMailAddress": "5600 GRANITE  PKWY PLANO TX USA 75024",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 0.9
-      },
-      "landSf": 15394,
-      "landAcres": 0.353,
-      "puc": "0011",
-      "landUseClass": "residential",
-      "lat": 33.651368601128716,
-      "lng": -111.991961229736,
-      "assessedValue": 225600.0,
-      "assessedValuePerAcre": 639093.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3",
-        "targetDensity": 16,
-        "basis": "adjacent parcels already zoned R-3"
-      },
-      "byRightUnits": 1.8,
-      "rezoneTargetUnits": 5.6,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": {
-        "count": 1,
-        "severe": false,
-        "distress": false
-      },
-      "saleDate": null,
-      "subdivision": "VILLA MARIA 3",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "homesNearby": 248,
-      "vacantNearby": 3,
-      "score": 84,
-      "reasons": [
-        "adjacent parcels already zoned R-3",
-        "parcel size fits small-to-mid infill development",
-        "no house on the lot \u2014 undeveloped land",
-        "248 homes within 0.2 mi \u2014 surrounded by development",
-        "3 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [],
-      "valuation": null,
-      "compsNote": "No comparable vacant-land sales of the same land-use type (residential) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "newBuildLookup": {
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:35Z",
-        "error": null
-      },
-      "newBuild": {
-        "arv": 1370000,
-        "psf": 386,
-        "n": 30,
-        "radiusMi": 3.0,
-        "lowPsf": 278,
-        "highPsf": 567,
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:35Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "examples": [
-          {
-            "address": "21909 N 34TH WAY",
-            "price": 1540000,
-            "sf": 3568,
-            "apn": "21302211",
-            "yearBuilt": 2020.0,
-            "distanceMi": 2.525,
-            "sold": "2025-09-01"
-          },
-          {
-            "address": "3405 E TINA DR",
-            "price": 1400000,
-            "sf": 3949,
-            "apn": "21302222",
-            "yearBuilt": 2020.0,
-            "distanceMi": 2.526,
-            "sold": "2024-03-01"
-          },
-          {
-            "address": "3414 E TINA DR",
-            "price": 1000000,
-            "sf": 3067,
-            "apn": "21302230",
-            "yearBuilt": 2021.0,
-            "distanceMi": 2.543,
-            "sold": "2024-06-01"
-          },
-          {
-            "address": "3320 E TINA DR",
-            "price": 1360000,
-            "sf": 3126,
-            "apn": "21302227",
-            "yearBuilt": 2020.0,
-            "distanceMi": 2.559,
-            "sold": "2025-02-01"
-          },
-          {
-            "address": "3428 E LOUISE DR",
-            "price": 1460000,
-            "sf": 3568,
-            "apn": "21302207",
-            "yearBuilt": 2020.0,
-            "distanceMi": 2.568,
-            "sold": "2025-08-01"
-          }
-        ]
-      },
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
-      "peakScore": 110,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "houseComps": {
-        "radiusMi": 2,
-        "comps": [
-          {
-            "address": "5006 E WAGONER RD",
-            "sold": "08/01/2026",
-            "price": 1325000,
-            "sf": 4274,
-            "apn": "21511814",
-            "yearBuilt": 1997,
-            "distanceMi": 1.174
-          },
-          {
-            "address": "5012 E WAGONER RD",
-            "sold": "07/01/2026",
-            "price": 989770,
-            "sf": 3175,
-            "apn": "21511815",
-            "yearBuilt": 1997,
-            "distanceMi": 1.188
-          },
-          {
-            "address": "5312 E ANDERSON DR",
-            "sold": "09/01/2026",
-            "price": 1699000,
-            "sf": 3879,
-            "apn": "21511397",
-            "yearBuilt": 1997,
-            "distanceMi": 1.581
-          },
-          {
-            "address": "3849 E MATTHEW DR",
-            "sold": "09/01/2025",
-            "price": 1015000,
-            "sf": 3905,
-            "apn": "21247596",
-            "yearBuilt": 2008,
-            "distanceMi": 1.812
-          },
-          {
-            "address": "3805 E ZACHARY DR",
-            "sold": "05/01/2026",
-            "price": 1140000,
-            "sf": 3432,
-            "apn": "21239901",
-            "yearBuilt": 2008,
-            "distanceMi": 1.871
-          }
-        ],
-        "n": 5,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 332,
-        "medPsf": 312,
-        "price": 1140000,
-        "lowPsf": 260,
-        "highPsf": 438,
-        "requiresRefresh": false,
-        "source": "Maricopa County Assessor nearby home sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:16Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null
-      },
       "verdict": null
     },
     {
@@ -11021,14 +12029,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 84,
       "landOverride": null,
       "landPriceOverride": null,
@@ -11104,14 +12112,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-27",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 84,
       "landOverride": null,
       "landPriceOverride": null,
@@ -11175,7 +12183,7 @@ window.PHX_LAND_LEADS = {
         "192 homes within 0.2 mi \u2014 surrounded by development",
         "8 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address is out of state (absentee)",
-        "comps value ~+77% vs assessed, rank 27/65 (+10 pts)"
+        "comps value ~+77% vs assessed, rank 27/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -11225,7 +12233,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": 77,
@@ -11233,7 +12241,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:36Z",
+        "retrievedAt": "2026-10-29T17:16:02Z",
         "error": null
       },
       "newBuild": {
@@ -11245,7 +12253,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:36Z",
+        "retrievedAt": "2026-10-29T17:16:02Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -11300,7 +12308,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-11",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 84,
       "landOverride": null,
       "landPriceOverride": null,
@@ -11363,7 +12371,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:18Z",
+        "retrievedAt": "2026-10-29T17:16:46Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -11394,7 +12402,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:18Z",
+        "compRetrievedAt": "2026-10-29T17:16:46Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -11458,7 +12466,7 @@ window.PHX_LAND_LEADS = {
         "95 homes within 0.2 mi \u2014 surrounded by development",
         "16 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address is out of state (absentee)",
-        "comps value ~+55% vs assessed, rank 33/65 (+10 pts)"
+        "comps value ~+55% vs assessed, rank 33/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -11508,7 +12516,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": 55,
@@ -11516,7 +12524,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:36Z",
+        "retrievedAt": "2026-10-29T17:16:02Z",
         "error": null
       },
       "newBuild": {
@@ -11528,7 +12536,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:36Z",
+        "retrievedAt": "2026-10-29T17:16:02Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -11583,7 +12591,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-05",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 94,
       "landOverride": null,
       "landPriceOverride": null,
@@ -11646,7 +12654,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:19Z",
+        "retrievedAt": "2026-10-29T17:16:46Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -11677,11 +12685,243 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:19Z",
+        "compRetrievedAt": "2026-10-29T17:16:46Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
       }
+    },
+    {
+      "apn": "21150026P",
+      "address": "38822 N 11TH AVE   PHOENIX  85086",
+      "ownerName": "WILSON DAVID W TR",
+      "ownerMailAddress": "1400 N TUSTIN AVE ORANGE CA USA 92867",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
+        "isEstateOwner": false,
+        "yearsHeld": 15.3
+      },
+      "landSf": 211408,
+      "landAcres": 4.853,
+      "puc": "0141",
+      "landUseClass": "residential",
+      "lat": 33.837679366091756,
+      "lng": -112.08830463142368,
+      "assessedValue": 668000.0,
+      "assessedValuePerAcre": 137647.0,
+      "currentZoning": null,
+      "generalPlanDesignation": "GP code 990",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": null,
+      "byRightUnits": null,
+      "rezoneTargetUnits": null,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "improved",
+      "livingSpaceSf": 2072.0,
+      "farRatio": 0.009800953606296828,
+      "yearBuilt": "1994",
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": 18000,
+      "homesNearby": 68,
+      "vacantNearby": 7,
+      "score": 84,
+      "reasons": [
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "68 homes within 0.2 mi \u2014 surrounded by development",
+        "7 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address is out of state (absentee)",
+        "held 15+ years \u2014 likely low or no debt on the land",
+        "existing structure occupies only 1% of the lot \u2014 under-improved for the land size",
+        "1+ acre lot \u2014 redevelopment rate ~5x a 14-20k sf lot"
+      ],
+      "comps": [
+        {
+          "apn": "21150036Z",
+          "address": "721 W HIDDEN VALLEY RD   PHOENIX  85086",
+          "distanceMi": 0.58,
+          "soldDate": "2026-09-01",
+          "soldPrice": 750000.0,
+          "landSf": 56088,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 582478,
+          "similarity": 57
+        },
+        {
+          "apn": "21150081A",
+          "address": "721 W HIDDEN VALLEY RD   PHOENIX  85086",
+          "distanceMi": 0.55,
+          "soldDate": "2026-09-01",
+          "soldPrice": 750000.0,
+          "landSf": 49368,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 661765,
+          "similarity": 56
+        }
+      ],
+      "valuation": null,
+      "compsNote": "Comparable sales below are the closest found, but none are usable for a dollar value (bulk sale or lot size too different) -- review them manually. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:45+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:02Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 1242500,
+        "psf": 392,
+        "n": 14,
+        "radiusMi": 1.0,
+        "lowPsf": 311,
+        "highPsf": 455,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:02Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "38623 N 14TH AVE",
+            "price": 1100000,
+            "sf": 3537,
+            "apn": "21150027F",
+            "yearBuilt": 2019.0,
+            "distanceMi": 0.137,
+            "sold": "2024-02-01"
+          },
+          {
+            "address": "39032 N 11TH AVE",
+            "price": 1250000,
+            "sf": 3408,
+            "apn": "21150028R",
+            "yearBuilt": 2023.0,
+            "distanceMi": 0.145,
+            "sold": "2024-08-01"
+          },
+          {
+            "address": "39012 N 6TH DR",
+            "price": 1125937,
+            "sf": 3525,
+            "apn": "21123015G",
+            "yearBuilt": 2024.0,
+            "distanceMi": 0.359,
+            "sold": "2025-05-01"
+          },
+          {
+            "address": "39027 N 6TH DR",
+            "price": 1120000,
+            "sf": 3525,
+            "apn": "21123015K",
+            "yearBuilt": 2024.0,
+            "distanceMi": 0.42,
+            "sold": "2025-06-01"
+          },
+          {
+            "address": "508 W TANYA RD",
+            "price": 999000,
+            "sf": 3205,
+            "apn": "21123015L",
+            "yearBuilt": 2024.0,
+            "distanceMi": 0.442,
+            "sold": "2025-06-01"
+          }
+        ]
+      },
+      "isNew": true,
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29",
+      "peakScore": 84,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 1,
+        "comps": [
+          {
+            "address": "1614 W LAVITT LN",
+            "sold": "02/01/2026",
+            "price": 1796269,
+            "sf": 4124,
+            "apn": "21150044F",
+            "yearBuilt": 2026,
+            "distanceMi": 0.542
+          },
+          {
+            "address": "37913 N 14TH AVE",
+            "sold": "04/01/2026",
+            "price": 1725000,
+            "sf": 3790,
+            "apn": "21150046E",
+            "yearBuilt": 2022,
+            "distanceMi": 0.555
+          },
+          {
+            "address": "19 E DESERT HILLS DR",
+            "sold": "07/01/2026",
+            "price": 1345000,
+            "sf": 3274,
+            "apn": "21123300F",
+            "yearBuilt": 2022,
+            "distanceMi": 0.913
+          },
+          {
+            "address": "39027 N 6TH DR",
+            "sold": "06/01/2025",
+            "price": 1120000,
+            "sf": 3525,
+            "apn": "21123015K",
+            "yearBuilt": 2024,
+            "distanceMi": 0.42
+          },
+          {
+            "address": "508 W TANYA RD",
+            "sold": "06/01/2025",
+            "price": 999000,
+            "sf": 3205,
+            "apn": "21123015L",
+            "yearBuilt": 2024,
+            "distanceMi": 0.442
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 436,
+        "medPsf": 411,
+        "price": 1345000,
+        "lowPsf": 312,
+        "highPsf": 455,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:46Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
+      "verdict": null
     },
     {
       "apn": "16643079",
@@ -11725,7 +12965,11 @@ window.PHX_LAND_LEADS = {
       "livingSpaceSf": null,
       "farRatio": null,
       "yearBuilt": null,
-      "codeCases": null,
+      "codeCases": {
+        "count": 1,
+        "severe": false,
+        "distress": false
+      },
       "saleDate": null,
       "subdivision": "HUYNH ACRES",
       "rebuildsInSub": 0,
@@ -11769,14 +13013,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:36Z",
+        "retrievedAt": "2026-10-29T17:16:02Z",
         "error": null
       },
       "newBuild": {
@@ -11788,7 +13032,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:36Z",
+        "retrievedAt": "2026-10-29T17:16:02Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -11844,7 +13088,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-11",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 103,
       "landOverride": null,
       "landPriceOverride": null,
@@ -11907,7 +13151,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:20Z",
+        "retrievedAt": "2026-10-29T17:16:46Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -12000,14 +13244,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:36Z",
+        "retrievedAt": "2026-10-29T17:16:03Z",
         "error": null
       },
       "newBuild": {
@@ -12019,7 +13263,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:36Z",
+        "retrievedAt": "2026-10-29T17:16:03Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -12066,7 +13310,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 103,
       "landOverride": null,
       "landPriceOverride": null,
@@ -12129,7 +13373,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:20Z",
+        "retrievedAt": "2026-10-29T17:16:46Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -12203,14 +13447,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:36Z",
+        "retrievedAt": "2026-10-29T17:16:03Z",
         "error": null
       },
       "newBuild": {
@@ -12222,7 +13466,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 304,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:36Z",
+        "retrievedAt": "2026-10-29T17:16:03Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -12278,7 +13522,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-17",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 83,
       "landOverride": null,
       "landPriceOverride": null,
@@ -12341,222 +13585,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:21Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null
-      },
-      "verdict": null
-    },
-    {
-      "apn": "20715022C",
-      "address": "3845 W PARADISE LN   PHOENIX  85053",
-      "ownerName": "EARL DEAN KENNEDY FAMILY TRUST",
-      "ownerMailAddress": "5146 E PINCHOT PHOENIX AZ USA 85017",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 15.2
-      },
-      "landSf": 143557,
-      "landAcres": 3.296,
-      "puc": "0014",
-      "landUseClass": "residential",
-      "lat": 33.631644644752875,
-      "lng": -112.14175267560414,
-      "assessedValue": 545100.0,
-      "assessedValuePerAcre": 165382.0,
-      "currentZoning": "S-1",
-      "generalPlanDesignation": "GP code 41",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 19.8,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": {
-        "count": 1,
-        "severe": false,
-        "distress": false
-      },
-      "saleDate": null,
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "homesNearby": 255,
-      "vacantNearby": 1,
-      "score": 83,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "no house on the lot \u2014 undeveloped land",
-        "255 homes within 0.2 mi \u2014 surrounded by development",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 15+ years \u2014 likely low or no debt on the land"
-      ],
-      "comps": [],
-      "valuation": null,
-      "compsNote": "No comparable vacant-land sales of the same land-use type (residential) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "newBuildLookup": {
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:36Z",
-        "error": null
-      },
-      "newBuild": {
-        "arv": 757450,
-        "psf": 236,
-        "n": 30,
-        "radiusMi": 3.0,
-        "lowPsf": 183,
-        "highPsf": 345,
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:36Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "examples": [
-          {
-            "address": "14927 N 55TH DR",
-            "price": 560000,
-            "sf": 3055,
-            "apn": "20074785",
-            "yearBuilt": 2024.0,
-            "distanceMi": 2.171,
-            "sold": "2025-04-01"
-          },
-          {
-            "address": "5526 W COUNTRY GABLES DR",
-            "price": 684774,
-            "sf": 3055,
-            "apn": "20074819",
-            "yearBuilt": 2024.0,
-            "distanceMi": 2.228,
-            "sold": "2024-04-01"
-          },
-          {
-            "address": "5518 W BANFF LN",
-            "price": 627890,
-            "sf": 3055,
-            "apn": "20074840",
-            "yearBuilt": 2025.0,
-            "distanceMi": 2.245,
-            "sold": "2025-08-01"
-          },
-          {
-            "address": "5520 W SAINT MORITZ LN",
-            "price": 1006729,
-            "sf": 4011,
-            "apn": "20074856",
-            "yearBuilt": 2024.0,
-            "distanceMi": 2.268,
-            "sold": "2024-04-01"
-          },
-          {
-            "address": "19617 N 39TH DR",
-            "price": 1187000,
-            "sf": 3556,
-            "apn": "20615358",
-            "yearBuilt": 2024.0,
-            "distanceMi": 2.277,
-            "sold": "2025-06-01"
-          }
-        ]
-      },
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-02",
-      "lastSeen": "2026-10-28",
-      "peakScore": 109,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "houseComps": {
-        "radiusMi": 1,
-        "comps": [
-          {
-            "address": "3944 W PARADISE LN",
-            "sold": "09/01/2025",
-            "price": 873000,
-            "sf": 3248,
-            "apn": "20717415",
-            "yearBuilt": 2012,
-            "distanceMi": 0.164
-          },
-          {
-            "address": "16815 N 40TH DR",
-            "sold": "06/01/2026",
-            "price": 650000,
-            "sf": 2939,
-            "apn": "20717212",
-            "yearBuilt": 2002,
-            "distanceMi": 0.472
-          },
-          {
-            "address": "3225 W MARCONI AVE",
-            "sold": "04/01/2026",
-            "price": 663500,
-            "sf": 3697,
-            "apn": "20742015",
-            "yearBuilt": 2005,
-            "distanceMi": 0.691
-          },
-          {
-            "address": "3754 W MONTE CRISTO AVE",
-            "sold": "09/01/2025",
-            "price": 622000,
-            "sf": 3101,
-            "apn": "20715391",
-            "yearBuilt": 1994,
-            "distanceMi": 0.059
-          },
-          {
-            "address": "4122 W PARADISE LN",
-            "sold": "09/01/2026",
-            "price": 763000,
-            "sf": 3615,
-            "apn": "20717168",
-            "yearBuilt": 1987,
-            "distanceMi": 0.36
-          }
-        ],
-        "n": 5,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 221,
-        "medPsf": 211,
-        "price": 663500,
-        "lowPsf": 179,
-        "highPsf": 269,
-        "requiresRefresh": false,
-        "source": "Maricopa County Assessor nearby home sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:22Z",
+        "retrievedAt": "2026-10-29T17:16:46Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -12629,17 +13658,232 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 103,
       "landOverride": null,
       "landPriceOverride": null,
+      "verdict": null
+    },
+    {
+      "apn": "20715022C",
+      "address": "3845 W PARADISE LN   PHOENIX  85053",
+      "ownerName": "EARL DEAN KENNEDY FAMILY TRUST",
+      "ownerMailAddress": "5146 E PINCHOT PHOENIX AZ USA 85017",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 15.2
+      },
+      "landSf": 143557,
+      "landAcres": 3.296,
+      "puc": "0014",
+      "landUseClass": "residential",
+      "lat": 33.631644644752875,
+      "lng": -112.14175267560414,
+      "assessedValue": 545100.0,
+      "assessedValuePerAcre": 165382.0,
+      "currentZoning": "S-1",
+      "generalPlanDesignation": "GP code 41",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 19.8,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": {
+        "count": 1,
+        "severe": false,
+        "distress": false
+      },
+      "saleDate": null,
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": null,
+      "homesNearby": 255,
+      "vacantNearby": 1,
+      "score": 83,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "no house on the lot \u2014 undeveloped land",
+        "255 homes within 0.2 mi \u2014 surrounded by development",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 15+ years \u2014 likely low or no debt on the land"
+      ],
+      "comps": [],
+      "valuation": null,
+      "compsNote": "No comparable vacant-land sales of the same land-use type (residential) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:03Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 757450,
+        "psf": 236,
+        "n": 30,
+        "radiusMi": 3.0,
+        "lowPsf": 183,
+        "highPsf": 345,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:03Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "14927 N 55TH DR",
+            "price": 560000,
+            "sf": 3055,
+            "apn": "20074785",
+            "yearBuilt": 2024.0,
+            "distanceMi": 2.171,
+            "sold": "2025-04-01"
+          },
+          {
+            "address": "5526 W COUNTRY GABLES DR",
+            "price": 684774,
+            "sf": 3055,
+            "apn": "20074819",
+            "yearBuilt": 2024.0,
+            "distanceMi": 2.228,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "5518 W BANFF LN",
+            "price": 627890,
+            "sf": 3055,
+            "apn": "20074840",
+            "yearBuilt": 2025.0,
+            "distanceMi": 2.245,
+            "sold": "2025-08-01"
+          },
+          {
+            "address": "5520 W SAINT MORITZ LN",
+            "price": 1006729,
+            "sf": 4011,
+            "apn": "20074856",
+            "yearBuilt": 2024.0,
+            "distanceMi": 2.268,
+            "sold": "2024-04-01"
+          },
+          {
+            "address": "19617 N 39TH DR",
+            "price": 1187000,
+            "sf": 3556,
+            "apn": "20615358",
+            "yearBuilt": 2024.0,
+            "distanceMi": 2.277,
+            "sold": "2025-06-01"
+          }
+        ]
+      },
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-02",
+      "lastSeen": "2026-10-29",
+      "peakScore": 109,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 1,
+        "comps": [
+          {
+            "address": "3944 W PARADISE LN",
+            "sold": "09/01/2025",
+            "price": 873000,
+            "sf": 3248,
+            "apn": "20717415",
+            "yearBuilt": 2012,
+            "distanceMi": 0.164
+          },
+          {
+            "address": "16815 N 40TH DR",
+            "sold": "06/01/2026",
+            "price": 650000,
+            "sf": 2939,
+            "apn": "20717212",
+            "yearBuilt": 2002,
+            "distanceMi": 0.472
+          },
+          {
+            "address": "3225 W MARCONI AVE",
+            "sold": "04/01/2026",
+            "price": 663500,
+            "sf": 3697,
+            "apn": "20742015",
+            "yearBuilt": 2005,
+            "distanceMi": 0.691
+          },
+          {
+            "address": "3754 W MONTE CRISTO AVE",
+            "sold": "09/01/2025",
+            "price": 622000,
+            "sf": 3101,
+            "apn": "20715391",
+            "yearBuilt": 1994,
+            "distanceMi": 0.059
+          },
+          {
+            "address": "4122 W PARADISE LN",
+            "sold": "09/01/2026",
+            "price": 763000,
+            "sf": 3615,
+            "apn": "20717168",
+            "yearBuilt": 1987,
+            "distanceMi": 0.36
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 221,
+        "medPsf": 211,
+        "price": 663500,
+        "lowPsf": 179,
+        "highPsf": 269,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:47Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
       "verdict": null
     },
     {
@@ -12722,14 +13966,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:37Z",
+        "retrievedAt": "2026-10-29T17:16:04Z",
         "error": null
       },
       "newBuild": {
@@ -12741,7 +13985,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 732,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:37Z",
+        "retrievedAt": "2026-10-29T17:16:04Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -12797,7 +14041,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 103,
       "landOverride": null,
       "landPriceOverride": null,
@@ -12860,94 +14104,11 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:22Z",
+        "retrievedAt": "2026-10-29T17:16:47Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
-      "verdict": null
-    },
-    {
-      "apn": "21311004D",
-      "address": "2713 E MOHAWK LN   PHOENIX  85050",
-      "ownerName": "JAMES WELLER INC",
-      "ownerMailAddress": "9393 N 90TH ST STE 102 PMB 168 SCOTTSDALE AZ USA 85258",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 34.9
-      },
-      "landSf": 60036,
-      "landAcres": 1.378,
-      "puc": "0021",
-      "landUseClass": "commercial",
-      "lat": 33.67357832203882,
-      "lng": -112.03036628910584,
-      "assessedValue": 850800.0,
-      "assessedValuePerAcre": 617417.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-4",
-        "targetDensity": 25,
-        "basis": "adjacent parcels already zoned R-4"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 34.4,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": {
-        "count": 1,
-        "severe": false,
-        "distress": false
-      },
-      "saleDate": null,
-      "subdivision": "MOHAWK PARK  LOTS 1-16",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "homesNearby": 68,
-      "vacantNearby": 1,
-      "score": 83,
-      "reasons": [
-        "adjacent parcels already zoned R-4",
-        "parcel size fits small-to-mid infill development",
-        "no house on the lot \u2014 undeveloped land",
-        "68 homes within 0.2 mi \u2014 surrounded by development",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 35+ years \u2014 likely low or no debt on the land"
-      ],
-      "comps": [],
-      "valuation": null,
-      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
-      "peakScore": 89,
-      "landOverride": null,
-      "landPriceOverride": null,
       "verdict": null
     },
     {
@@ -13020,24 +14181,24 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 89,
       "landOverride": null,
       "landPriceOverride": null,
       "verdict": null
     },
     {
-      "apn": "21426009",
-      "address": "2429 E BELL RD   PHOENIX  85032",
-      "ownerName": "SAGE FAMILY INVESTMENTS LLC",
-      "ownerMailAddress": "3845 STOCKTON HILL RD KINGMAN AZ USA 86409",
+      "apn": "21311004D",
+      "address": "2713 E MOHAWK LN   PHOENIX  85050",
+      "ownerName": "JAMES WELLER INC",
+      "ownerMailAddress": "9393 N 90TH ST STE 102 PMB 168 SCOTTSDALE AZ USA 85258",
       "ownership": {
         "isOutOfStateOwner": false,
         "isAbsenteeLocal": true,
@@ -13045,16 +14206,16 @@ window.PHX_LAND_LEADS = {
         "isOwnerOccupied": false,
         "isHiddenOwner": true,
         "isEstateOwner": false,
-        "yearsHeld": 10.8
+        "yearsHeld": 34.9
       },
-      "landSf": 28174,
-      "landAcres": 0.647,
-      "puc": "0022",
+      "landSf": 60036,
+      "landAcres": 1.378,
+      "puc": "0021",
       "landUseClass": "commercial",
-      "lat": 33.63943890224188,
-      "lng": -112.0302037112519,
-      "assessedValue": 436000.0,
-      "assessedValuePerAcre": 673879.0,
+      "lat": 33.67357832203882,
+      "lng": -112.03036628910584,
+      "assessedValue": 850800.0,
+      "assessedValuePerAcre": 617417.0,
       "currentZoning": "C-2",
       "generalPlanDesignation": "GP code 70",
       "floodZone": null,
@@ -13063,36 +14224,39 @@ window.PHX_LAND_LEADS = {
       "zoningKnown": true,
       "rezoningNearby": 0,
       "rezoneTarget": {
-        "targetZone": "R-3A",
-        "targetDensity": 21,
-        "basis": "adjacent parcels already zoned R-3A"
+        "targetZone": "R-4",
+        "targetDensity": 25,
+        "basis": "adjacent parcels already zoned R-4"
       },
       "byRightUnits": null,
-      "rezoneTargetUnits": 13.6,
+      "rezoneTargetUnits": 34.4,
       "dealType": "rental",
       "referenceCostPerLotAZ": null,
       "parcelStatus": "vacant",
       "livingSpaceSf": null,
       "farRatio": null,
       "yearBuilt": null,
-      "codeCases": null,
+      "codeCases": {
+        "count": 1,
+        "severe": false,
+        "distress": false
+      },
       "saleDate": null,
-      "subdivision": "KAY ACRES 2  LOTS 1-14, 19-22 BLKS A, B, C & D",
+      "subdivision": "MOHAWK PARK  LOTS 1-16",
       "rebuildsInSub": 0,
       "salePrice": null,
       "defaultDemoCost": null,
-      "homesNearby": 100,
-      "vacantNearby": 7,
+      "homesNearby": 68,
+      "vacantNearby": 1,
       "score": 83,
       "reasons": [
-        "adjacent parcels already zoned R-3A",
+        "adjacent parcels already zoned R-4",
         "parcel size fits small-to-mid infill development",
         "no house on the lot \u2014 undeveloped land",
-        "100 homes within 0.2 mi \u2014 surrounded by development",
-        "7 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "68 homes within 0.2 mi \u2014 surrounded by development",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 11 years"
+        "held 35+ years \u2014 likely low or no debt on the land"
       ],
       "comps": [],
       "valuation": null,
@@ -13100,15 +14264,15 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
-      "peakScore": 103,
+      "lastSeen": "2026-10-29",
+      "peakScore": 89,
       "landOverride": null,
       "landPriceOverride": null,
       "verdict": null
@@ -13180,14 +14344,94 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
+      "peakScore": 103,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "verdict": null
+    },
+    {
+      "apn": "21426009",
+      "address": "2429 E BELL RD   PHOENIX  85032",
+      "ownerName": "SAGE FAMILY INVESTMENTS LLC",
+      "ownerMailAddress": "3845 STOCKTON HILL RD KINGMAN AZ USA 86409",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 10.8
+      },
+      "landSf": 28174,
+      "landAcres": 0.647,
+      "puc": "0022",
+      "landUseClass": "commercial",
+      "lat": 33.63943890224188,
+      "lng": -112.0302037112519,
+      "assessedValue": 436000.0,
+      "assessedValuePerAcre": 673879.0,
+      "currentZoning": "C-2",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3A",
+        "targetDensity": 21,
+        "basis": "adjacent parcels already zoned R-3A"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 13.6,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "KAY ACRES 2  LOTS 1-14, 19-22 BLKS A, B, C & D",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": null,
+      "homesNearby": 100,
+      "vacantNearby": 7,
+      "score": 83,
+      "reasons": [
+        "adjacent parcels already zoned R-3A",
+        "parcel size fits small-to-mid infill development",
+        "no house on the lot \u2014 undeveloped land",
+        "100 homes within 0.2 mi \u2014 surrounded by development",
+        "7 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 11 years"
+      ],
+      "comps": [],
+      "valuation": null,
+      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-01",
+      "lastSeen": "2026-10-29",
       "peakScore": 103,
       "landOverride": null,
       "landPriceOverride": null,
@@ -13252,7 +14496,7 @@ window.PHX_LAND_LEADS = {
         "17 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
         "held 16+ years \u2014 likely low or no debt on the land",
-        "comps value ~+7% vs assessed, rank 39/65 (+4 pts)"
+        "comps value ~+7% vs assessed, rank 39/67 (+4 pts)"
       ],
       "comps": [
         {
@@ -13326,7 +14570,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": 7,
@@ -13334,7 +14578,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:38Z",
+        "retrievedAt": "2026-10-29T17:16:05Z",
         "error": null
       },
       "newBuild": {
@@ -13346,7 +14590,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:38Z",
+        "retrievedAt": "2026-10-29T17:16:05Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -13401,7 +14645,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-04",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 99,
       "landOverride": null,
       "landPriceOverride": null,
@@ -13464,7 +14708,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:23Z",
+        "retrievedAt": "2026-10-29T17:16:47Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -13495,7 +14739,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:23Z",
+        "compRetrievedAt": "2026-10-29T17:16:47Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -13544,7 +14788,7 @@ window.PHX_LAND_LEADS = {
       "farRatio": null,
       "yearBuilt": null,
       "codeCases": {
-        "count": 4,
+        "count": 2,
         "severe": false,
         "distress": false
       },
@@ -13563,8 +14807,8 @@ window.PHX_LAND_LEADS = {
         "82 homes within 0.2 mi \u2014 surrounded by development",
         "10 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
-        "4 code-enforcement cases at this address (2024+)",
-        "comps value ~+86% vs assessed, rank 19/65 (+10 pts)"
+        "2 code-enforcement cases at this address (2024+)",
+        "comps value ~+86% vs assessed, rank 19/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -13614,7 +14858,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:38+00:00",
         "error": null
       },
       "equityMarginPct": 86,
@@ -13622,7 +14866,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:38Z",
+        "retrievedAt": "2026-10-29T17:16:05Z",
         "error": null
       },
       "newBuild": {
@@ -13634,7 +14878,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:38Z",
+        "retrievedAt": "2026-10-29T17:16:05Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -13680,7 +14924,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-06",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 93,
       "landOverride": null,
       "landPriceOverride": null,
@@ -13743,7 +14987,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:23Z",
+        "retrievedAt": "2026-10-29T17:16:47Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -13774,7 +15018,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:23Z",
+        "compRetrievedAt": "2026-10-29T17:16:47Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -13835,7 +15079,7 @@ window.PHX_LAND_LEADS = {
         "31 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 10 years",
-        "comps value ~+115% vs assessed, rank 12/65 (+20 pts)"
+        "comps value ~+115% vs assessed, rank 12/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -13909,7 +15153,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:17+00:00",
+        "retrievedAt": "2026-10-29T17:15:40+00:00",
         "error": null
       },
       "equityMarginPct": 115,
@@ -13917,7 +15161,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:38Z",
+        "retrievedAt": "2026-10-29T17:16:05Z",
         "error": null
       },
       "newBuild": {
@@ -13929,7 +15173,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 562,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:38Z",
+        "retrievedAt": "2026-10-29T17:16:05Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -13983,9 +15227,9 @@ window.PHX_LAND_LEADS = {
         ]
       },
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 83,
       "landOverride": null,
       "landPriceOverride": null,
@@ -14048,7 +15292,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:23Z",
+        "retrievedAt": "2026-10-29T17:16:48Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -14079,7 +15323,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:23Z",
+        "compRetrievedAt": "2026-10-29T17:16:48Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -14140,7 +15384,7 @@ window.PHX_LAND_LEADS = {
         "33 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
         "held 11 years",
-        "comps value ~+124% vs assessed, rank 10/65 (+20 pts)"
+        "comps value ~+124% vs assessed, rank 10/67 (+20 pts)"
       ],
       "comps": [
         {
@@ -14214,7 +15458,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:17+00:00",
+        "retrievedAt": "2026-10-29T17:15:40+00:00",
         "error": null
       },
       "equityMarginPct": 124,
@@ -14222,7 +15466,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:38Z",
+        "retrievedAt": "2026-10-29T17:16:06Z",
         "error": null
       },
       "newBuild": {
@@ -14234,7 +15478,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 562,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:38Z",
+        "retrievedAt": "2026-10-29T17:16:06Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -14288,9 +15532,9 @@ window.PHX_LAND_LEADS = {
         ]
       },
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 83,
       "landOverride": null,
       "landPriceOverride": null,
@@ -14353,7 +15597,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:24Z",
+        "retrievedAt": "2026-10-29T17:16:48Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -14384,7 +15628,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:24Z",
+        "compRetrievedAt": "2026-10-29T17:16:48Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -14433,7 +15677,7 @@ window.PHX_LAND_LEADS = {
       "farRatio": null,
       "yearBuilt": null,
       "codeCases": {
-        "count": 3,
+        "count": 2,
         "severe": false,
         "distress": false
       },
@@ -14452,7 +15696,7 @@ window.PHX_LAND_LEADS = {
         "49 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "3 code-enforcement cases at this address (2024+)"
+        "2 code-enforcement cases at this address (2024+)"
       ],
       "comps": [
         {
@@ -14479,14 +15723,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-14",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 102,
       "landOverride": null,
       "landPriceOverride": null,
@@ -14547,7 +15791,7 @@ window.PHX_LAND_LEADS = {
         "23 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address is out of state (absentee)",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+69% vs assessed, rank 29/65 (+10 pts)"
+        "comps value ~+69% vs assessed, rank 29/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -14621,7 +15865,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:38+00:00",
         "error": null
       },
       "equityMarginPct": 69,
@@ -14629,7 +15873,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:38Z",
+        "retrievedAt": "2026-10-29T17:16:06Z",
         "error": null
       },
       "newBuild": {
@@ -14641,7 +15885,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 448,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:38Z",
+        "retrievedAt": "2026-10-29T17:16:06Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -14695,9 +15939,9 @@ window.PHX_LAND_LEADS = {
         ]
       },
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 82,
       "landOverride": null,
       "landPriceOverride": null,
@@ -14741,26 +15985,26 @@ window.PHX_LAND_LEADS = {
             "distanceMi": 0.587
           },
           {
-            "address": "3015 W IRVINE RD",
-            "sold": "05/01/2025",
-            "price": 1252260,
-            "sf": 3038,
-            "apn": "20335022C",
-            "yearBuilt": 2025,
-            "distanceMi": 0.911
+            "address": "2639 W LAVITT LN",
+            "sold": "09/01/2026",
+            "price": 1050000,
+            "sf": 3011,
+            "apn": "20333005G",
+            "yearBuilt": 2018,
+            "distanceMi": 0.918
           }
         ],
         "n": 5,
         "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 412,
+        "psf": 349,
         "medPsf": 346,
-        "price": 1100000,
+        "price": 1050000,
         "lowPsf": 179,
         "highPsf": 425,
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:24Z",
+        "retrievedAt": "2026-10-29T17:16:48Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -14769,12 +16013,12 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 400073,
-        "finished": 1565600,
-        "profit": -347312,
-        "marginPct": -22,
-        "marginPctAt275": -8,
-        "profitAt275": -127748,
-        "salePsf": 412,
+        "finished": 1326200,
+        "profit": -579530,
+        "marginPct": -44,
+        "marginPctAt275": -27,
+        "profitAt275": -359966,
+        "salePsf": 349,
         "risk": "Low",
         "medianStress": {
           "salePsf": 346,
@@ -14785,13 +16029,13 @@ window.PHX_LAND_LEADS = {
           "fragile": false
         },
         "capacityConfirmed": false,
-        "supportableOffer": -70836,
+        "supportableOffer": -265488,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:24Z",
+        "compRetrievedAt": "2026-10-29T17:16:48Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -14809,7 +16053,7 @@ window.PHX_LAND_LEADS = {
         "isOwnerOccupied": false,
         "isHiddenOwner": true,
         "isEstateOwner": false,
-        "yearsHeld": 17.1
+        "yearsHeld": 17.2
       },
       "landSf": 10019,
       "landAcres": 0.23,
@@ -14882,14 +16126,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:39Z",
+        "retrievedAt": "2026-10-29T17:16:06Z",
         "error": null
       },
       "newBuild": {
@@ -14901,7 +16145,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 547,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:39Z",
+        "retrievedAt": "2026-10-29T17:16:06Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -14957,7 +16201,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 101,
       "landOverride": null,
       "landPriceOverride": null,
@@ -15020,7 +16264,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:24Z",
+        "retrievedAt": "2026-10-29T17:16:48Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -15093,26 +16337,26 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:39Z",
+        "retrievedAt": "2026-10-29T17:16:07Z",
         "error": null
       },
       "newBuild": {
-        "arv": 1072372,
+        "arv": 1061317,
         "psf": 292,
-        "n": 29,
+        "n": 30,
         "radiusMi": 3.0,
         "lowPsf": 247,
         "highPsf": 547,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:39Z",
+        "retrievedAt": "2026-10-29T17:16:07Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -15168,7 +16412,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 101,
       "landOverride": null,
       "landPriceOverride": null,
@@ -15231,7 +16475,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:27Z",
+        "retrievedAt": "2026-10-29T17:16:49Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -15317,26 +16561,26 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:40Z",
+        "retrievedAt": "2026-10-29T17:16:09Z",
         "error": null
       },
       "newBuild": {
-        "arv": 1462500,
-        "psf": 437,
-        "n": 36,
+        "arv": 1465000,
+        "psf": 439,
+        "n": 37,
         "radiusMi": 3.0,
         "lowPsf": 302,
         "highPsf": 541,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:40Z",
+        "retrievedAt": "2026-10-29T17:16:09Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -15392,7 +16636,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 101,
       "landOverride": null,
       "landPriceOverride": null,
@@ -15455,7 +16699,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:29Z",
+        "retrievedAt": "2026-10-29T17:16:50Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -15528,14 +16772,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:40Z",
+        "retrievedAt": "2026-10-29T17:16:10Z",
         "error": null
       },
       "newBuild": {
@@ -15547,7 +16791,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 631,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:40Z",
+        "retrievedAt": "2026-10-29T17:16:10Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -15603,7 +16847,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-17",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 101,
       "landOverride": null,
       "landPriceOverride": null,
@@ -15666,318 +16910,12 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:30Z",
+        "retrievedAt": "2026-10-29T17:16:51Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
       "verdict": null
-    },
-    {
-      "apn": "20323019P",
-      "address": "3306 W RAMBLING RD   PHOENIX  85086",
-      "ownerName": "MORITZ PROPERTIES II LLC",
-      "ownerMailAddress": "5722 W ACOMA DR GLENDALE AZ USA 85306",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 17.0
-      },
-      "landSf": 50086,
-      "landAcres": 1.15,
-      "puc": "0014",
-      "landUseClass": "residential",
-      "lat": 33.82110821471658,
-      "lng": -112.13104619889157,
-      "assessedValue": 124600.0,
-      "assessedValuePerAcre": 108348.0,
-      "currentZoning": null,
-      "generalPlanDesignation": "GP code 987",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": null,
-      "byRightUnits": null,
-      "rezoneTargetUnits": null,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "homesNearby": 22,
-      "vacantNearby": 25,
-      "score": 81,
-      "reasons": [
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "no house on the lot \u2014 undeveloped land",
-        "22 homes within 0.2 mi \u2014 surrounded by development",
-        "25 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 17+ years \u2014 likely low or no debt on the land",
-        "comps value ~+54% vs assessed, rank 34/65 (+4 pts)"
-      ],
-      "comps": [
-        {
-          "apn": "20323019Y",
-          "address": "37164 N 33RD AVE   PHOENIX  85086",
-          "distanceMi": 0.09,
-          "soldDate": "2025-12-01",
-          "soldPrice": 190000.0,
-          "landSf": 49729,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 166430,
-          "similarity": 80
-        },
-        {
-          "apn": "20336012J",
-          "address": "37820 N 31ST AVE   PHOENIX  85086",
-          "distanceMi": 0.53,
-          "soldDate": "2026-07-01",
-          "soldPrice": 130000.0,
-          "landSf": 54450,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 104000,
-          "similarity": 77
-        },
-        {
-          "apn": "20338011H",
-          "address": "2905 W DOLORES RD   PHOENIX  85086",
-          "distanceMi": 0.55,
-          "soldDate": "2026-03-01",
-          "soldPrice": 241000.0,
-          "landSf": 47802,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 219613,
-          "similarity": 76
-        },
-        {
-          "apn": "20337007G",
-          "address": "37675 N 30TH DR   PHOENIX  85086",
-          "distanceMi": 0.53,
-          "soldDate": "2026-04-01",
-          "soldPrice": 185000.0,
-          "landSf": 62811,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 128299,
-          "similarity": 74
-        },
-        {
-          "apn": "20338011G",
-          "address": "2915 W DOLORES RD   PHOENIX  85086",
-          "distanceMi": 0.52,
-          "soldDate": "2026-03-01",
-          "soldPrice": 278000.0,
-          "landSf": 72655,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 166674,
-          "similarity": 71
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 191364,
-        "rangeLow": 119581,
-        "rangeHigh": 252515,
-        "explanation": "Median of 5 plainly-vacant land sales in PHOENIX within 1 mile in the last 12 months, valued as vacant land and scaled by lot size, so the subject's land is estimated at approximately $191,364 (range $119,581-$252,515)."
-      },
-      "compsNote": "County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
-        "error": null
-      },
-      "equityMarginPct": 54,
-      "compsAdj": 4,
-      "newBuildLookup": {
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:40Z",
-        "error": null
-      },
-      "newBuild": {
-        "arv": 1252260,
-        "psf": 412,
-        "n": 7,
-        "radiusMi": 1.0,
-        "lowPsf": 179,
-        "highPsf": 448,
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:40Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "examples": [
-          {
-            "address": "36430 N 34TH AVE",
-            "price": 700000,
-            "sf": 3907,
-            "apn": "20339010A",
-            "yearBuilt": 2019.0,
-            "distanceMi": 0.409,
-            "sold": "2026-07-01"
-          },
-          {
-            "address": "3227 W LONG RIFLE RD",
-            "price": 990000,
-            "sf": 2926,
-            "apn": "20339023",
-            "yearBuilt": 2023.0,
-            "distanceMi": 0.464,
-            "sold": "2025-12-01"
-          },
-          {
-            "address": "2951 W HERE TO THERE DR",
-            "price": 1420000,
-            "sf": 3173,
-            "apn": "20338010P",
-            "yearBuilt": 2019.0,
-            "distanceMi": 0.611,
-            "sold": "2025-01-01"
-          },
-          {
-            "address": "2819 W CREEK CANYON RD",
-            "price": 1350000,
-            "sf": 3179,
-            "apn": "20338005D",
-            "yearBuilt": 2024.0,
-            "distanceMi": 0.699,
-            "sold": "2025-08-01"
-          },
-          {
-            "address": "2808 W HERE TO THERE DR",
-            "price": 1325000,
-            "sf": 3050,
-            "apn": "20338005L",
-            "yearBuilt": 2024.0,
-            "distanceMi": 0.755,
-            "sold": "2025-01-01"
-          }
-        ]
-      },
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
-      "peakScore": 97,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "houseComps": {
-        "radiusMi": 1,
-        "comps": [
-          {
-            "address": "36430 N 34TH AVE",
-            "sold": "07/01/2026",
-            "price": 700000,
-            "sf": 3907,
-            "apn": "20339010A",
-            "yearBuilt": 2019,
-            "distanceMi": 0.409
-          },
-          {
-            "address": "3227 W LONG RIFLE RD",
-            "sold": "12/01/2025",
-            "price": 990000,
-            "sf": 2926,
-            "apn": "20339023",
-            "yearBuilt": 2023,
-            "distanceMi": 0.464
-          },
-          {
-            "address": "2819 W CREEK CANYON RD",
-            "sold": "08/01/2025",
-            "price": 1350000,
-            "sf": 3179,
-            "apn": "20338005D",
-            "yearBuilt": 2024,
-            "distanceMi": 0.699
-          },
-          {
-            "address": "3015 W IRVINE RD",
-            "sold": "05/01/2025",
-            "price": 1252260,
-            "sf": 3038,
-            "apn": "20335022C",
-            "yearBuilt": 2025,
-            "distanceMi": 0.934
-          },
-          {
-            "address": "2808 W HERE TO THERE DR",
-            "sold": "01/01/2025",
-            "price": 1325000,
-            "sf": 3050,
-            "apn": "20338005L",
-            "yearBuilt": 2024,
-            "distanceMi": 0.755
-          }
-        ],
-        "n": 5,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 425,
-        "medPsf": 412,
-        "price": 1252260,
-        "lowPsf": 179,
-        "highPsf": 434,
-        "requiresRefresh": false,
-        "source": "Maricopa County Assessor nearby home sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:32Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null
-      },
-      "verdict": {
-        "label": "Pass",
-        "strategy": "1 custom home",
-        "land": 191364,
-        "finished": 1615000,
-        "profit": -76075,
-        "marginPct": -5,
-        "marginPctAt275": 9,
-        "profitAt275": 143489,
-        "salePsf": 425,
-        "risk": "Low",
-        "medianStress": {
-          "salePsf": 412,
-          "label": "Pass",
-          "profit": -123993,
-          "marginPct": -7.9,
-          "homes": 1,
-          "fragile": false
-        },
-        "capacityConfirmed": false,
-        "supportableOffer": -30669,
-        "offerHomes": 1,
-        "offerTargetMargin": 0.1,
-        "offerHardPsf": 325,
-        "compSource": "Maricopa County Assessor nearby home sales",
-        "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:32Z",
-        "compFellBack": false,
-        "compError": null,
-        "compFallbackReason": null
-      }
     },
     {
       "apn": "20325619",
@@ -16038,7 +16976,7 @@ window.PHX_LAND_LEADS = {
         "11 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+8% vs assessed, rank 38/65 (+4 pts)"
+        "comps value ~+8% vs assessed, rank 38/67 (+4 pts)"
       ],
       "comps": [
         {
@@ -16112,7 +17050,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": 8,
@@ -16120,7 +17058,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:40Z",
+        "retrievedAt": "2026-10-29T17:16:10Z",
         "error": null
       },
       "newBuild": {
@@ -16132,7 +17070,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:40Z",
+        "retrievedAt": "2026-10-29T17:16:10Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -16188,7 +17126,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 87,
       "landOverride": null,
       "landPriceOverride": null,
@@ -16251,7 +17189,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:32Z",
+        "retrievedAt": "2026-10-29T17:16:51Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -16282,7 +17220,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:32Z",
+        "compRetrievedAt": "2026-10-29T17:16:51Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -16346,7 +17284,7 @@ window.PHX_LAND_LEADS = {
         "161 homes within 0.2 mi \u2014 surrounded by development",
         "8 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "held 20+ years \u2014 likely low or no debt on the land",
-        "comps value ~+87% vs assessed, rank 18/65 (+10 pts)"
+        "comps value ~+87% vs assessed, rank 18/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -16396,7 +17334,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:38+00:00",
         "error": null
       },
       "equityMarginPct": 87,
@@ -16404,7 +17342,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:40Z",
+        "retrievedAt": "2026-10-29T17:16:10Z",
         "error": null
       },
       "newBuild": {
@@ -16416,7 +17354,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 516,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:40Z",
+        "retrievedAt": "2026-10-29T17:16:10Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -16471,7 +17409,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 91,
       "landOverride": null,
       "landPriceOverride": null,
@@ -16534,7 +17472,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:32Z",
+        "retrievedAt": "2026-10-29T17:16:52Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -16565,7 +17503,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:32Z",
+        "compRetrievedAt": "2026-10-29T17:16:52Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -16636,14 +17574,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:41Z",
+        "retrievedAt": "2026-10-29T17:16:11Z",
         "error": null
       },
       "newBuild": {
@@ -16655,7 +17593,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 542,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:41Z",
+        "retrievedAt": "2026-10-29T17:16:11Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -16710,7 +17648,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-17",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 80,
       "landOverride": null,
       "landPriceOverride": null,
@@ -16773,7 +17711,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:33Z",
+        "retrievedAt": "2026-10-29T17:16:52Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -16864,14 +17802,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:41Z",
+        "retrievedAt": "2026-10-29T17:16:11Z",
         "error": null
       },
       "newBuild": {
@@ -16883,7 +17821,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 904,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:41Z",
+        "retrievedAt": "2026-10-29T17:16:11Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -16938,7 +17876,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-17",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 100,
       "landOverride": null,
       "landPriceOverride": null,
@@ -17001,7 +17939,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:33Z",
+        "retrievedAt": "2026-10-29T17:16:52Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -17079,7 +18017,7 @@ window.PHX_LAND_LEADS = {
           "livingSpaceSf": null,
           "pricePerSf": null,
           "pricePerAcre": 833313,
-          "similarity": 75
+          "similarity": 74
         }
       ],
       "valuation": {
@@ -17093,14 +18031,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:41Z",
+        "retrievedAt": "2026-10-29T17:16:11Z",
         "error": null
       },
       "newBuild": {
@@ -17112,7 +18050,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:41Z",
+        "retrievedAt": "2026-10-29T17:16:11Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -17158,7 +18096,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-04",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 100,
       "landOverride": null,
       "landPriceOverride": null,
@@ -17221,7 +18159,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:33Z",
+        "retrievedAt": "2026-10-29T17:16:52Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -17325,26 +18263,26 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:41Z",
+        "retrievedAt": "2026-10-29T17:16:11Z",
         "error": null
       },
       "newBuild": {
-        "arv": 960662,
+        "arv": 958835,
         "psf": 278,
-        "n": 30,
+        "n": 31,
         "radiusMi": 1.0,
         "lowPsf": 265,
         "highPsf": 420,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:41Z",
+        "retrievedAt": "2026-10-29T17:16:11Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -17399,7 +18337,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 100,
       "landOverride": null,
       "landPriceOverride": null,
@@ -17462,7 +18400,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:34Z",
+        "retrievedAt": "2026-10-29T17:16:52Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -17555,14 +18493,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:42Z",
+        "retrievedAt": "2026-10-29T17:16:12Z",
         "error": null
       },
       "newBuild": {
@@ -17574,7 +18512,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 330,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:42Z",
+        "retrievedAt": "2026-10-29T17:16:12Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -17621,7 +18559,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-17",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 80,
       "landOverride": null,
       "landPriceOverride": null,
@@ -17684,7 +18622,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:34Z",
+        "retrievedAt": "2026-10-29T17:16:53Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -17771,26 +18709,26 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:42Z",
+        "retrievedAt": "2026-10-29T17:16:13Z",
         "error": null
       },
       "newBuild": {
-        "arv": 1083840,
+        "arv": 1072372,
         "psf": 292,
-        "n": 28,
+        "n": 29,
         "radiusMi": 3.0,
         "lowPsf": 247,
         "highPsf": 547,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:42Z",
+        "retrievedAt": "2026-10-29T17:16:13Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -17846,7 +18784,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 100,
       "landOverride": null,
       "landPriceOverride": null,
@@ -17909,7 +18847,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:36Z",
+        "retrievedAt": "2026-10-29T17:16:53Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -17982,14 +18920,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:43Z",
+        "retrievedAt": "2026-10-29T17:16:13Z",
         "error": null
       },
       "newBuild": {
@@ -18001,7 +18939,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 442,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:43Z",
+        "retrievedAt": "2026-10-29T17:16:13Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -18048,7 +18986,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 99,
       "landOverride": null,
       "landPriceOverride": null,
@@ -18111,7 +19049,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:37Z",
+        "retrievedAt": "2026-10-29T17:16:54Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -18184,14 +19122,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:43Z",
+        "retrievedAt": "2026-10-29T17:16:13Z",
         "error": null
       },
       "newBuild": {
@@ -18203,7 +19141,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:43Z",
+        "retrievedAt": "2026-10-29T17:16:13Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -18258,7 +19196,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 89,
       "landOverride": null,
       "landPriceOverride": null,
@@ -18321,7 +19259,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:38Z",
+        "retrievedAt": "2026-10-29T17:16:54Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -18407,14 +19345,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:43Z",
+        "retrievedAt": "2026-10-29T17:16:14Z",
         "error": null
       },
       "newBuild": {
@@ -18426,7 +19364,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:43Z",
+        "retrievedAt": "2026-10-29T17:16:14Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -18472,7 +19410,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 99,
       "landOverride": null,
       "landPriceOverride": null,
@@ -18535,7 +19473,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:38Z",
+        "retrievedAt": "2026-10-29T17:16:55Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -18600,7 +19538,7 @@ window.PHX_LAND_LEADS = {
         "132 homes within 0.2 mi \u2014 surrounded by development",
         "8 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+82% vs assessed, rank 22/65 (+10 pts)"
+        "comps value ~+82% vs assessed, rank 22/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -18650,7 +19588,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:16+00:00",
+        "retrievedAt": "2026-10-29T17:15:38+00:00",
         "error": null
       },
       "equityMarginPct": 82,
@@ -18658,7 +19596,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:44Z",
+        "retrievedAt": "2026-10-29T17:16:14Z",
         "error": null
       },
       "newBuild": {
@@ -18670,7 +19608,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 516,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:44Z",
+        "retrievedAt": "2026-10-29T17:16:14Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -18726,7 +19664,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 79,
       "landOverride": null,
       "landPriceOverride": null,
@@ -18789,7 +19727,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:38Z",
+        "retrievedAt": "2026-10-29T17:16:55Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -18820,7 +19758,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:38Z",
+        "compRetrievedAt": "2026-10-29T17:16:55Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -18868,7 +19806,11 @@ window.PHX_LAND_LEADS = {
       "livingSpaceSf": null,
       "farRatio": null,
       "yearBuilt": null,
-      "codeCases": null,
+      "codeCases": {
+        "count": 1,
+        "severe": false,
+        "distress": false
+      },
       "saleDate": "02/01/2024",
       "subdivision": "",
       "rebuildsInSub": 0,
@@ -18891,14 +19833,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-04",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 94,
       "landOverride": null,
       "landPriceOverride": null,
@@ -18969,14 +19911,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:44Z",
+        "retrievedAt": "2026-10-29T17:16:14Z",
         "error": null
       },
       "newBuild": {
@@ -18988,7 +19930,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 439,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:44Z",
+        "retrievedAt": "2026-10-29T17:16:14Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -19035,7 +19977,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 78,
       "landOverride": null,
       "landPriceOverride": null,
@@ -19098,242 +20040,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:38Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null
-      },
-      "verdict": null
-    },
-    {
-      "apn": "21435011C",
-      "address": "15875 N 34TH ST   PHOENIX  85032",
-      "ownerName": "AMH LANDCO 34TH AND MANOR LLC",
-      "ownerMailAddress": "23975 PARK SORRENTO STE 300 CALABASAS CA USA 91302",
-      "ownership": {
-        "isOutOfStateOwner": true,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 0.9
-      },
-      "landSf": 166401,
-      "landAcres": 3.82,
-      "puc": "0011",
-      "landUseClass": "residential",
-      "lat": 33.63120669754584,
-      "lng": -112.0078004722608,
-      "assessedValue": 1356100.0,
-      "assessedValuePerAcre": 355000.0,
-      "currentZoning": "R1-6",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3",
-        "targetDensity": 16,
-        "basis": "adjacent parcels already zoned R-3"
-      },
-      "byRightUnits": 22.9,
-      "rezoneTargetUnits": 61.1,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": "10/01/2025",
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": 2260000.0,
-      "defaultDemoCost": null,
-      "homesNearby": 264,
-      "vacantNearby": 2,
-      "score": 78,
-      "reasons": [
-        "adjacent parcels already zoned R-3",
-        "parcel size fits small-to-mid infill development",
-        "no house on the lot \u2014 undeveloped land",
-        "264 homes within 0.2 mi \u2014 surrounded by development",
-        "owner's mailing address is out of state (absentee)",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [
-        {
-          "apn": "21524017B",
-          "address": "4075 E PARADISE LN   PHOENIX  85032",
-          "distanceMi": 0.85,
-          "soldDate": "2026-06-01",
-          "soldPrice": 425000.0,
-          "landSf": 22101,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 837654,
-          "similarity": 59
-        },
-        {
-          "apn": "21403040A",
-          "address": "3025 E HARTFORD AVE   PHOENIX  85032",
-          "distanceMi": 0.95,
-          "soldDate": "2026-05-01",
-          "soldPrice": 205000.0,
-          "landSf": 18447,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 484079,
-          "similarity": 57
-        }
-      ],
-      "valuation": null,
-      "compsNote": "Comparable sales below are the closest found, but none are usable for a dollar value (bulk sale or lot size too different) -- review them manually. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "newBuildLookup": {
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:44Z",
-        "error": null
-      },
-      "newBuild": {
-        "arv": 1275000,
-        "psf": 393,
-        "n": 10,
-        "radiusMi": 3.0,
-        "lowPsf": 229,
-        "highPsf": 504,
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:44Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "examples": [
-          {
-            "address": "2138 E PARADISE LN",
-            "price": 1092796,
-            "sf": 3455,
-            "apn": "21424013H",
-            "yearBuilt": 2024.0,
-            "distanceMi": 1.623,
-            "sold": "2025-02-01"
-          },
-          {
-            "address": "16244 N 21ST ST",
-            "price": 1100000,
-            "sf": 3637,
-            "apn": "21424005",
-            "yearBuilt": 2020.0,
-            "distanceMi": 1.748,
-            "sold": "2025-07-01"
-          },
-          {
-            "address": "3010 E CHARTER OAK RD",
-            "price": 1200000,
-            "sf": 3115,
-            "apn": "16606039",
-            "yearBuilt": 2023.0,
-            "distanceMi": 2.265,
-            "sold": "2023-11-01"
-          },
-          {
-            "address": "13036 N 23RD PL",
-            "price": 1350000,
-            "sf": 3056,
-            "apn": "16609095A",
-            "yearBuilt": 2024.0,
-            "distanceMi": 2.269,
-            "sold": "2026-04-01"
-          },
-          {
-            "address": "3002 E CHARTER OAK RD",
-            "price": 1185000,
-            "sf": 3478,
-            "apn": "16606038",
-            "yearBuilt": 2024.0,
-            "distanceMi": 2.27,
-            "sold": "2024-03-01"
-          }
-        ]
-      },
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
-      "peakScore": 98,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "houseComps": {
-        "radiusMi": 2,
-        "comps": [
-          {
-            "address": "16244 N 21ST ST",
-            "sold": "07/01/2025",
-            "price": 1100000,
-            "sf": 3637,
-            "apn": "21424005",
-            "yearBuilt": 2020,
-            "distanceMi": 1.748
-          },
-          {
-            "address": "3001 E ACOMA DR",
-            "sold": "09/01/2024",
-            "price": 1075000,
-            "sf": 3000,
-            "apn": "21459136",
-            "yearBuilt": 2014,
-            "distanceMi": 0.919
-          },
-          {
-            "address": "2437 E GROVERS AVE",
-            "sold": "08/01/2026",
-            "price": 887000,
-            "sf": 2891,
-            "apn": "21404242",
-            "yearBuilt": 2002,
-            "distanceMi": 1.667
-          },
-          {
-            "address": "2723 E ACOMA DR",
-            "sold": "06/01/2026",
-            "price": 885000,
-            "sf": 3261,
-            "apn": "21453180",
-            "yearBuilt": 1997,
-            "distanceMi": 1.218
-          },
-          {
-            "address": "2732 E FRIESS DR",
-            "sold": "02/01/2026",
-            "price": 1360000,
-            "sf": 4134,
-            "apn": "21454011",
-            "yearBuilt": 2002,
-            "distanceMi": 1.507
-          }
-        ],
-        "n": 5,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 329,
-        "medPsf": 307,
-        "price": 1075000,
-        "lowPsf": 271,
-        "highPsf": 358,
-        "requiresRefresh": false,
-        "source": "Maricopa County Assessor nearby home sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:39Z",
+        "retrievedAt": "2026-10-29T17:16:55Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -19424,14 +20131,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:45Z",
+        "retrievedAt": "2026-10-29T17:16:14Z",
         "error": null
       },
       "newBuild": {
@@ -19443,7 +20150,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 766,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:45Z",
+        "retrievedAt": "2026-10-29T17:16:14Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -19499,7 +20206,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 98,
       "landOverride": null,
       "landPriceOverride": null,
@@ -19562,7 +20269,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:40Z",
+        "retrievedAt": "2026-10-29T17:16:55Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -19627,7 +20334,7 @@ window.PHX_LAND_LEADS = {
         "71 homes within 0.2 mi \u2014 surrounded by development",
         "19 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address is out of state (absentee)",
-        "comps value ~+7% vs assessed, rank 40/65 (+4 pts)"
+        "comps value ~+7% vs assessed, rank 40/67 (+4 pts)"
       ],
       "comps": [
         {
@@ -19701,7 +20408,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": 7,
@@ -19709,7 +20416,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:45Z",
+        "retrievedAt": "2026-10-29T17:16:15Z",
         "error": null
       },
       "newBuild": {
@@ -19721,7 +20428,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:45Z",
+        "retrievedAt": "2026-10-29T17:16:15Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -19776,7 +20483,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-11",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 94,
       "landOverride": null,
       "landPriceOverride": null,
@@ -19839,7 +20546,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:40Z",
+        "retrievedAt": "2026-10-29T17:16:55Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -19870,7 +20577,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:40Z",
+        "compRetrievedAt": "2026-10-29T17:16:55Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -19936,7 +20643,7 @@ window.PHX_LAND_LEADS = {
         "17 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
         "held 19+ years \u2014 likely low or no debt on the land",
-        "comps value ~-11% vs assessed, rank 47/65 (-10 pts)"
+        "comps value ~-11% vs assessed, rank 47/67 (-10 pts)"
       ],
       "comps": [
         {
@@ -20010,7 +20717,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": -11,
@@ -20018,7 +20725,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:45Z",
+        "retrievedAt": "2026-10-29T17:16:15Z",
         "error": null
       },
       "newBuild": {
@@ -20030,7 +20737,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:45Z",
+        "retrievedAt": "2026-10-29T17:16:15Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -20085,7 +20792,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 87,
       "landOverride": null,
       "landPriceOverride": null,
@@ -20148,7 +20855,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:40Z",
+        "retrievedAt": "2026-10-29T17:16:55Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -20179,11 +20886,90 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:40Z",
+        "compRetrievedAt": "2026-10-29T17:16:55Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
       }
+    },
+    {
+      "apn": "16611025",
+      "address": "13216 N CAVE CREEK RD   PHOENIX  85022",
+      "ownerName": "BCH CAPITAL LLC",
+      "ownerMailAddress": "14235 N 49TH ST SCOTTSDALE AZ USA 85254",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 4.7
+      },
+      "landSf": 14505,
+      "landAcres": 0.333,
+      "puc": "0021",
+      "landUseClass": "commercial",
+      "lat": 33.60663087554222,
+      "lng": -112.03688812120672,
+      "assessedValue": 242500.0,
+      "assessedValuePerAcre": 728228.0,
+      "currentZoning": "C-2",
+      "generalPlanDesignation": "GP code 70",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-5",
+        "targetDensity": 43,
+        "basis": "adjacent parcels already zoned R-5"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 14.3,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": "01/01/2022",
+      "subdivision": "SUN & SAND BLK 1-3",
+      "rebuildsInSub": 4,
+      "salePrice": 175000.0,
+      "defaultDemoCost": null,
+      "homesNearby": 70,
+      "vacantNearby": 14,
+      "score": 77,
+      "reasons": [
+        "adjacent parcels already zoned R-5",
+        "parcel size fits small-to-mid infill development",
+        "no house on the lot \u2014 undeveloped land",
+        "70 homes within 0.2 mi \u2014 surrounded by development",
+        "14 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [],
+      "valuation": null,
+      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-01",
+      "lastSeen": "2026-10-29",
+      "peakScore": 97,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "verdict": null
     },
     {
       "apn": "16610050",
@@ -20270,14 +21056,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:45Z",
+        "retrievedAt": "2026-10-29T17:16:15Z",
         "error": null
       },
       "newBuild": {
@@ -20289,7 +21075,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:45Z",
+        "retrievedAt": "2026-10-29T17:16:15Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -20345,7 +21131,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 87,
       "landOverride": null,
       "landPriceOverride": null,
@@ -20408,90 +21194,11 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:41Z",
+        "retrievedAt": "2026-10-29T17:16:56Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
-      "verdict": null
-    },
-    {
-      "apn": "16611025",
-      "address": "13216 N CAVE CREEK RD   PHOENIX  85022",
-      "ownerName": "BCH CAPITAL LLC",
-      "ownerMailAddress": "14235 N 49TH ST SCOTTSDALE AZ USA 85254",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 4.7
-      },
-      "landSf": 14505,
-      "landAcres": 0.333,
-      "puc": "0021",
-      "landUseClass": "commercial",
-      "lat": 33.60663087554222,
-      "lng": -112.03688812120672,
-      "assessedValue": 242500.0,
-      "assessedValuePerAcre": 728228.0,
-      "currentZoning": "C-2",
-      "generalPlanDesignation": "GP code 70",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-5",
-        "targetDensity": 43,
-        "basis": "adjacent parcels already zoned R-5"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 14.3,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": "01/01/2022",
-      "subdivision": "SUN & SAND BLK 1-3",
-      "rebuildsInSub": 4,
-      "salePrice": 175000.0,
-      "defaultDemoCost": null,
-      "homesNearby": 70,
-      "vacantNearby": 14,
-      "score": 77,
-      "reasons": [
-        "adjacent parcels already zoned R-5",
-        "parcel size fits small-to-mid infill development",
-        "no house on the lot \u2014 undeveloped land",
-        "70 homes within 0.2 mi \u2014 surrounded by development",
-        "14 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [],
-      "valuation": null,
-      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
-      "peakScore": 97,
-      "landOverride": null,
-      "landPriceOverride": null,
       "verdict": null
     },
     {
@@ -20627,14 +21334,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:45Z",
+        "retrievedAt": "2026-10-29T17:16:15Z",
         "error": null
       },
       "newBuild": {
@@ -20646,7 +21353,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:45Z",
+        "retrievedAt": "2026-10-29T17:16:15Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -20699,9 +21406,9 @@ window.PHX_LAND_LEADS = {
           }
         ]
       },
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 77,
       "landOverride": null,
       "landPriceOverride": null,
@@ -20764,7 +21471,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:41Z",
+        "retrievedAt": "2026-10-29T17:16:56Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -20904,14 +21611,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:45Z",
+        "retrievedAt": "2026-10-29T17:16:15Z",
         "error": null
       },
       "newBuild": {
@@ -20923,7 +21630,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:45Z",
+        "retrievedAt": "2026-10-29T17:16:15Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -20979,7 +21686,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 97,
       "landOverride": null,
       "landPriceOverride": null,
@@ -21042,7 +21749,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:41Z",
+        "retrievedAt": "2026-10-29T17:16:56Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -21128,14 +21835,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:46Z",
+        "retrievedAt": "2026-10-29T17:16:16Z",
         "error": null
       },
       "newBuild": {
@@ -21147,7 +21854,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 565,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:46Z",
+        "retrievedAt": "2026-10-29T17:16:16Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -21203,7 +21910,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 77,
       "landOverride": null,
       "landPriceOverride": null,
@@ -21266,427 +21973,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:41Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null
-      },
-      "verdict": null
-    },
-    {
-      "apn": "21014036E",
-      "address": "303 E JOMAX RD   PHOENIX  85085",
-      "ownerName": "MCCLENAGHAN FAMILY TRUST",
-      "ownerMailAddress": "303 E JOMAX RD PHOENIX AZ USA 85085",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": true,
-        "isHiddenOwner": false,
-        "isEstateOwner": false,
-        "yearsHeld": 4.4
-      },
-      "landSf": 17048,
-      "landAcres": 0.391,
-      "puc": "0012",
-      "landUseClass": "residential",
-      "lat": 33.72594794906338,
-      "lng": -112.06856397231957,
-      "assessedValue": 61600.0,
-      "assessedValuePerAcre": 157545.0,
-      "currentZoning": "S-1",
-      "generalPlanDesignation": "GP code 204",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "RE-43",
-        "targetDensity": 1,
-        "basis": "adjacent parcels already zoned RE-43"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 0.4,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "homesNearby": 24,
-      "vacantNearby": 12,
-      "score": 77,
-      "reasons": [
-        "adjacent parcels already zoned RE-43",
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "no house on the lot \u2014 undeveloped land",
-        "24 homes within 0.2 mi \u2014 surrounded by development",
-        "12 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [],
-      "valuation": null,
-      "compsNote": "No comparable vacant-land sales of the same land-use type (residential) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "newBuildLookup": {
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:47Z",
-        "error": null
-      },
-      "newBuild": {
-        "arv": 998000,
-        "psf": 299,
-        "n": 25,
-        "radiusMi": 2.0,
-        "lowPsf": 250,
-        "highPsf": 480,
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:47Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "examples": [
-          {
-            "address": "103 E QUARTZ ROCK RD",
-            "price": 1400000,
-            "sf": 2918,
-            "apn": "21014008A",
-            "yearBuilt": 2022.0,
-            "distanceMi": 0.378,
-            "sold": "2025-07-01"
-          },
-          {
-            "address": "26112 N 7TH AVE",
-            "price": 1225000,
-            "sf": 4305,
-            "apn": "21012017D",
-            "yearBuilt": 2020.0,
-            "distanceMi": 0.869,
-            "sold": "2025-12-01"
-          },
-          {
-            "address": "1812 E FALLEN LEAF LN",
-            "price": 1345000,
-            "sf": 3508,
-            "apn": "21215834",
-            "yearBuilt": 2022.0,
-            "distanceMi": 1.762,
-            "sold": "2026-04-01"
-          },
-          {
-            "address": "1837 E VILLA LINDA DR",
-            "price": 1300000,
-            "sf": 3097,
-            "apn": "21215836",
-            "yearBuilt": 2022.0,
-            "distanceMi": 1.765,
-            "sold": "2026-01-01"
-          },
-          {
-            "address": "1928 E VILLA LINDA DR",
-            "price": 1275000,
-            "sf": 3509,
-            "apn": "21215845",
-            "yearBuilt": 2023.0,
-            "distanceMi": 1.823,
-            "sold": "2026-09-01"
-          }
-        ]
-      },
-      "isNew": false,
-      "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
-      "peakScore": 87,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "houseComps": {
-        "radiusMi": 2,
-        "comps": [
-          {
-            "address": "26716 N 10TH LN",
-            "sold": "09/01/2026",
-            "price": 1035000,
-            "sf": 3139,
-            "apn": "21020556",
-            "yearBuilt": 2013,
-            "distanceMi": 1.035
-          },
-          {
-            "address": "909 W SPUR DR",
-            "sold": "06/01/2026",
-            "price": 1020000,
-            "sf": 3167,
-            "apn": "21002934",
-            "yearBuilt": 2014,
-            "distanceMi": 0.943
-          },
-          {
-            "address": "1928 E VILLA LINDA DR",
-            "sold": "09/01/2026",
-            "price": 1275000,
-            "sf": 3509,
-            "apn": "21215845",
-            "yearBuilt": 2023,
-            "distanceMi": 1.823
-          },
-          {
-            "address": "103 E QUARTZ ROCK RD",
-            "sold": "07/01/2025",
-            "price": 1400000,
-            "sf": 2918,
-            "apn": "21014008A",
-            "yearBuilt": 2022,
-            "distanceMi": 0.378
-          },
-          {
-            "address": "26722 N 11TH DR",
-            "sold": "08/01/2026",
-            "price": 935000,
-            "sf": 4034,
-            "apn": "21020530",
-            "yearBuilt": 2013,
-            "distanceMi": 1.092
-          }
-        ],
-        "n": 5,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 363,
-        "medPsf": 330,
-        "price": 1035000,
-        "lowPsf": 232,
-        "highPsf": 480,
-        "requiresRefresh": false,
-        "source": "Maricopa County Assessor nearby home sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:42Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null
-      },
-      "verdict": null
-    },
-    {
-      "apn": "21014034E",
-      "address": "303 E JOMAX RD   PHOENIX  85085",
-      "ownerName": "MCCLENAGHAN FAMILY TRUST",
-      "ownerMailAddress": "303 E JOMAX RD PHOENIX AZ USA 85085",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": true,
-        "isHiddenOwner": false,
-        "isEstateOwner": false,
-        "yearsHeld": 4.4
-      },
-      "landSf": 26479,
-      "landAcres": 0.608,
-      "puc": "0014",
-      "landUseClass": "residential",
-      "lat": 33.725631901414445,
-      "lng": -112.06856437838258,
-      "assessedValue": 85300.0,
-      "assessedValuePerAcre": 140296.0,
-      "currentZoning": "COUNTY",
-      "generalPlanDesignation": "GP code 204",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "RE-43",
-        "targetDensity": 1,
-        "basis": "adjacent parcels already zoned RE-43"
-      },
-      "byRightUnits": null,
-      "rezoneTargetUnits": 0.6,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "homesNearby": 30,
-      "vacantNearby": 14,
-      "score": 77,
-      "reasons": [
-        "adjacent parcels already zoned RE-43",
-        "parcel size fits small-to-mid infill development",
-        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
-        "no house on the lot \u2014 undeveloped land",
-        "30 homes within 0.2 mi \u2014 surrounded by development",
-        "14 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [],
-      "valuation": null,
-      "compsNote": "No comparable vacant-land sales of the same land-use type (residential) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "newBuildLookup": {
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:47Z",
-        "error": null
-      },
-      "newBuild": {
-        "arv": 1000184,
-        "psf": 301,
-        "n": 26,
-        "radiusMi": 2.0,
-        "lowPsf": 250,
-        "highPsf": 480,
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:47Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "examples": [
-          {
-            "address": "103 E QUARTZ ROCK RD",
-            "price": 1400000,
-            "sf": 2918,
-            "apn": "21014008A",
-            "yearBuilt": 2022.0,
-            "distanceMi": 0.361,
-            "sold": "2025-07-01"
-          },
-          {
-            "address": "26112 N 7TH AVE",
-            "price": 1225000,
-            "sf": 4305,
-            "apn": "21012017D",
-            "yearBuilt": 2020.0,
-            "distanceMi": 0.865,
-            "sold": "2025-12-01"
-          },
-          {
-            "address": "1812 E FALLEN LEAF LN",
-            "price": 1345000,
-            "sf": 3508,
-            "apn": "21215834",
-            "yearBuilt": 2022.0,
-            "distanceMi": 1.75,
-            "sold": "2026-04-01"
-          },
-          {
-            "address": "1837 E VILLA LINDA DR",
-            "price": 1300000,
-            "sf": 3097,
-            "apn": "21215836",
-            "yearBuilt": 2022.0,
-            "distanceMi": 1.754,
-            "sold": "2026-01-01"
-          },
-          {
-            "address": "1928 E VILLA LINDA DR",
-            "price": 1275000,
-            "sf": 3509,
-            "apn": "21215845",
-            "yearBuilt": 2023.0,
-            "distanceMi": 1.812,
-            "sold": "2026-09-01"
-          }
-        ]
-      },
-      "isNew": false,
-      "firstSeen": "2026-10-05",
-      "lastSeen": "2026-10-28",
-      "peakScore": 87,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "houseComps": {
-        "radiusMi": 2,
-        "comps": [
-          {
-            "address": "103 E QUARTZ ROCK RD",
-            "sold": "07/01/2025",
-            "price": 1400000,
-            "sf": 2918,
-            "apn": "21014008A",
-            "yearBuilt": 2022,
-            "distanceMi": 0.361
-          },
-          {
-            "address": "26716 N 10TH LN",
-            "sold": "09/01/2026",
-            "price": 1035000,
-            "sf": 3139,
-            "apn": "21020556",
-            "yearBuilt": 2013,
-            "distanceMi": 1.037
-          },
-          {
-            "address": "26112 N 7TH AVE",
-            "sold": "12/01/2025",
-            "price": 1225000,
-            "sf": 4305,
-            "apn": "21012017D",
-            "yearBuilt": 2020,
-            "distanceMi": 0.865
-          },
-          {
-            "address": "909 W SPUR DR",
-            "sold": "06/01/2026",
-            "price": 1020000,
-            "sf": 3167,
-            "apn": "21002934",
-            "yearBuilt": 2014,
-            "distanceMi": 0.944
-          },
-          {
-            "address": "25803 N 8TH AVE",
-            "sold": "04/01/2026",
-            "price": 900000,
-            "sf": 3030,
-            "apn": "21012018H",
-            "yearBuilt": 2013,
-            "distanceMi": 0.928
-          }
-        ],
-        "n": 5,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 330,
-        "medPsf": 322,
-        "price": 1035000,
-        "lowPsf": 285,
-        "highPsf": 480,
-        "requiresRefresh": false,
-        "source": "Maricopa County Assessor nearby home sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:42Z",
+        "retrievedAt": "2026-10-29T17:16:57Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -21778,14 +22065,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:48Z",
+        "retrievedAt": "2026-10-29T17:16:17Z",
         "error": null
       },
       "newBuild": {
@@ -21797,7 +22084,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 480,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:48Z",
+        "retrievedAt": "2026-10-29T17:16:17Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -21853,7 +22140,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 77,
       "landOverride": null,
       "landPriceOverride": null,
@@ -21916,7 +22203,427 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:43Z",
+        "retrievedAt": "2026-10-29T17:16:57Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
+      "verdict": null
+    },
+    {
+      "apn": "21014034E",
+      "address": "303 E JOMAX RD   PHOENIX  85085",
+      "ownerName": "MCCLENAGHAN FAMILY TRUST",
+      "ownerMailAddress": "303 E JOMAX RD PHOENIX AZ USA 85085",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
+        "isEstateOwner": false,
+        "yearsHeld": 4.4
+      },
+      "landSf": 26479,
+      "landAcres": 0.608,
+      "puc": "0014",
+      "landUseClass": "residential",
+      "lat": 33.725631901414445,
+      "lng": -112.06856437838258,
+      "assessedValue": 85300.0,
+      "assessedValuePerAcre": 140296.0,
+      "currentZoning": "COUNTY",
+      "generalPlanDesignation": "GP code 204",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "RE-43",
+        "targetDensity": 1,
+        "basis": "adjacent parcels already zoned RE-43"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 0.6,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": null,
+      "homesNearby": 30,
+      "vacantNearby": 14,
+      "score": 77,
+      "reasons": [
+        "adjacent parcels already zoned RE-43",
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "no house on the lot \u2014 undeveloped land",
+        "30 homes within 0.2 mi \u2014 surrounded by development",
+        "14 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [],
+      "valuation": null,
+      "compsNote": "No comparable vacant-land sales of the same land-use type (residential) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:17Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 1000184,
+        "psf": 301,
+        "n": 26,
+        "radiusMi": 2.0,
+        "lowPsf": 250,
+        "highPsf": 480,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:17Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "103 E QUARTZ ROCK RD",
+            "price": 1400000,
+            "sf": 2918,
+            "apn": "21014008A",
+            "yearBuilt": 2022.0,
+            "distanceMi": 0.361,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "26112 N 7TH AVE",
+            "price": 1225000,
+            "sf": 4305,
+            "apn": "21012017D",
+            "yearBuilt": 2020.0,
+            "distanceMi": 0.865,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "1812 E FALLEN LEAF LN",
+            "price": 1345000,
+            "sf": 3508,
+            "apn": "21215834",
+            "yearBuilt": 2022.0,
+            "distanceMi": 1.75,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "1837 E VILLA LINDA DR",
+            "price": 1300000,
+            "sf": 3097,
+            "apn": "21215836",
+            "yearBuilt": 2022.0,
+            "distanceMi": 1.754,
+            "sold": "2026-01-01"
+          },
+          {
+            "address": "1928 E VILLA LINDA DR",
+            "price": 1275000,
+            "sf": 3509,
+            "apn": "21215845",
+            "yearBuilt": 2023.0,
+            "distanceMi": 1.812,
+            "sold": "2026-09-01"
+          }
+        ]
+      },
+      "isNew": false,
+      "firstSeen": "2026-10-05",
+      "lastSeen": "2026-10-29",
+      "peakScore": 87,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 2,
+        "comps": [
+          {
+            "address": "103 E QUARTZ ROCK RD",
+            "sold": "07/01/2025",
+            "price": 1400000,
+            "sf": 2918,
+            "apn": "21014008A",
+            "yearBuilt": 2022,
+            "distanceMi": 0.361
+          },
+          {
+            "address": "26716 N 10TH LN",
+            "sold": "09/01/2026",
+            "price": 1035000,
+            "sf": 3139,
+            "apn": "21020556",
+            "yearBuilt": 2013,
+            "distanceMi": 1.037
+          },
+          {
+            "address": "26112 N 7TH AVE",
+            "sold": "12/01/2025",
+            "price": 1225000,
+            "sf": 4305,
+            "apn": "21012017D",
+            "yearBuilt": 2020,
+            "distanceMi": 0.865
+          },
+          {
+            "address": "909 W SPUR DR",
+            "sold": "06/01/2026",
+            "price": 1020000,
+            "sf": 3167,
+            "apn": "21002934",
+            "yearBuilt": 2014,
+            "distanceMi": 0.944
+          },
+          {
+            "address": "25803 N 8TH AVE",
+            "sold": "04/01/2026",
+            "price": 900000,
+            "sf": 3030,
+            "apn": "21012018H",
+            "yearBuilt": 2013,
+            "distanceMi": 0.928
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 330,
+        "medPsf": 322,
+        "price": 1035000,
+        "lowPsf": 285,
+        "highPsf": 480,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:58Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
+      "verdict": null
+    },
+    {
+      "apn": "21014036E",
+      "address": "303 E JOMAX RD   PHOENIX  85085",
+      "ownerName": "MCCLENAGHAN FAMILY TRUST",
+      "ownerMailAddress": "303 E JOMAX RD PHOENIX AZ USA 85085",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": true,
+        "isHiddenOwner": false,
+        "isEstateOwner": false,
+        "yearsHeld": 4.4
+      },
+      "landSf": 17048,
+      "landAcres": 0.391,
+      "puc": "0012",
+      "landUseClass": "residential",
+      "lat": 33.72594794906338,
+      "lng": -112.06856397231957,
+      "assessedValue": 61600.0,
+      "assessedValuePerAcre": 157545.0,
+      "currentZoning": "S-1",
+      "generalPlanDesignation": "GP code 204",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "RE-43",
+        "targetDensity": 1,
+        "basis": "adjacent parcels already zoned RE-43"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 0.4,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": null,
+      "homesNearby": 24,
+      "vacantNearby": 12,
+      "score": 77,
+      "reasons": [
+        "adjacent parcels already zoned RE-43",
+        "parcel size fits small-to-mid infill development",
+        "assessed value/acre below typical infill land pricing \u2014 possible mispricing",
+        "no house on the lot \u2014 undeveloped land",
+        "24 homes within 0.2 mi \u2014 surrounded by development",
+        "12 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [],
+      "valuation": null,
+      "compsNote": "No comparable vacant-land sales of the same land-use type (residential) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:18Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 998000,
+        "psf": 299,
+        "n": 25,
+        "radiusMi": 2.0,
+        "lowPsf": 250,
+        "highPsf": 480,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:18Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "103 E QUARTZ ROCK RD",
+            "price": 1400000,
+            "sf": 2918,
+            "apn": "21014008A",
+            "yearBuilt": 2022.0,
+            "distanceMi": 0.378,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "26112 N 7TH AVE",
+            "price": 1225000,
+            "sf": 4305,
+            "apn": "21012017D",
+            "yearBuilt": 2020.0,
+            "distanceMi": 0.869,
+            "sold": "2025-12-01"
+          },
+          {
+            "address": "1812 E FALLEN LEAF LN",
+            "price": 1345000,
+            "sf": 3508,
+            "apn": "21215834",
+            "yearBuilt": 2022.0,
+            "distanceMi": 1.762,
+            "sold": "2026-04-01"
+          },
+          {
+            "address": "1837 E VILLA LINDA DR",
+            "price": 1300000,
+            "sf": 3097,
+            "apn": "21215836",
+            "yearBuilt": 2022.0,
+            "distanceMi": 1.765,
+            "sold": "2026-01-01"
+          },
+          {
+            "address": "1928 E VILLA LINDA DR",
+            "price": 1275000,
+            "sf": 3509,
+            "apn": "21215845",
+            "yearBuilt": 2023.0,
+            "distanceMi": 1.823,
+            "sold": "2026-09-01"
+          }
+        ]
+      },
+      "isNew": false,
+      "firstSeen": "2026-10-18",
+      "lastSeen": "2026-10-29",
+      "peakScore": 87,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 2,
+        "comps": [
+          {
+            "address": "26716 N 10TH LN",
+            "sold": "09/01/2026",
+            "price": 1035000,
+            "sf": 3139,
+            "apn": "21020556",
+            "yearBuilt": 2013,
+            "distanceMi": 1.035
+          },
+          {
+            "address": "909 W SPUR DR",
+            "sold": "06/01/2026",
+            "price": 1020000,
+            "sf": 3167,
+            "apn": "21002934",
+            "yearBuilt": 2014,
+            "distanceMi": 0.943
+          },
+          {
+            "address": "1928 E VILLA LINDA DR",
+            "sold": "09/01/2026",
+            "price": 1275000,
+            "sf": 3509,
+            "apn": "21215845",
+            "yearBuilt": 2023,
+            "distanceMi": 1.823
+          },
+          {
+            "address": "103 E QUARTZ ROCK RD",
+            "sold": "07/01/2025",
+            "price": 1400000,
+            "sf": 2918,
+            "apn": "21014008A",
+            "yearBuilt": 2022,
+            "distanceMi": 0.378
+          },
+          {
+            "address": "26722 N 11TH DR",
+            "sold": "08/01/2026",
+            "price": 935000,
+            "sf": 4034,
+            "apn": "21020530",
+            "yearBuilt": 2013,
+            "distanceMi": 1.092
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 363,
+        "medPsf": 330,
+        "price": 1035000,
+        "lowPsf": 232,
+        "highPsf": 480,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:58Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -21989,14 +22696,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 97,
       "landOverride": null,
       "landPriceOverride": null,
@@ -22068,14 +22775,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:48Z",
+        "retrievedAt": "2026-10-29T17:16:18Z",
         "error": null
       },
       "newBuild": {
@@ -22087,7 +22794,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 435,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:48Z",
+        "retrievedAt": "2026-10-29T17:16:18Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -22143,7 +22850,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-05",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 87,
       "landOverride": null,
       "landPriceOverride": null,
@@ -22206,429 +22913,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:43Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null
-      },
-      "verdict": null
-    },
-    {
-      "apn": "21324013B",
-      "address": "1423 E ROSEMONTE DR   PHOENIX  85024",
-      "ownerName": "STONE MOUNTAIN PROPERTY OWNER LLC",
-      "ownerMailAddress": "17470 N PACESETTER WAY SCOTTSDALE AZ USA 85255",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 5.6
-      },
-      "landSf": 173763,
-      "landAcres": 3.989,
-      "puc": "0012",
-      "landUseClass": "residential",
-      "lat": 33.655904246581215,
-      "lng": -112.05209941684198,
-      "assessedValue": 1455300.0,
-      "assessedValuePerAcre": 364828.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": 19.9,
-      "rezoneTargetUnits": 23.9,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": null,
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": null,
-      "defaultDemoCost": null,
-      "homesNearby": 342,
-      "vacantNearby": 5,
-      "score": 77,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "no house on the lot \u2014 undeveloped land",
-        "342 homes within 0.2 mi \u2014 surrounded by development",
-        "5 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [],
-      "valuation": null,
-      "compsNote": "No comparable vacant-land sales of the same land-use type (residential) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "newBuildLookup": {
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:48Z",
-        "error": null
-      },
-      "newBuild": {
-        "arv": 1415000,
-        "psf": 391,
-        "n": 9,
-        "radiusMi": 3.0,
-        "lowPsf": 302,
-        "highPsf": 455,
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:48Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "examples": [
-          {
-            "address": "16244 N 21ST ST",
-            "price": 1100000,
-            "sf": 3637,
-            "apn": "21424005",
-            "yearBuilt": 2020.0,
-            "distanceMi": 1.669,
-            "sold": "2025-07-01"
-          },
-          {
-            "address": "2138 E PARADISE LN",
-            "price": 1092796,
-            "sf": 3455,
-            "apn": "21424013H",
-            "yearBuilt": 2024.0,
-            "distanceMi": 1.79,
-            "sold": "2025-02-01"
-          },
-          {
-            "address": "1738 E WINCHCOMB DR",
-            "price": 1550000,
-            "sf": 3426,
-            "apn": "21450296",
-            "yearBuilt": 2023.0,
-            "distanceMi": 2.698,
-            "sold": "2024-07-01"
-          },
-          {
-            "address": "2947 E TINA DR",
-            "price": 1090000,
-            "sf": 3030,
-            "apn": "21301094",
-            "yearBuilt": 2020.0,
-            "distanceMi": 2.785,
-            "sold": "2023-11-01"
-          },
-          {
-            "address": "2919 E RIANE RD",
-            "price": 1090000,
-            "sf": 3030,
-            "apn": "21301241",
-            "yearBuilt": 2019.0,
-            "distanceMi": 2.809,
-            "sold": "2026-08-01"
-          }
-        ]
-      },
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
-      "peakScore": 77,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "houseComps": {
-        "radiusMi": 1,
-        "comps": [
-          {
-            "address": "18116 N 14TH ST",
-            "sold": "11/01/2025",
-            "price": 1900000,
-            "sf": 4705,
-            "apn": "21411005H",
-            "yearBuilt": 2006,
-            "distanceMi": 0.359
-          },
-          {
-            "address": "2110 E KERRY LN",
-            "sold": "06/01/2025",
-            "price": 1090000,
-            "sf": 4535,
-            "apn": "21399049",
-            "yearBuilt": 2007,
-            "distanceMi": 0.932
-          },
-          {
-            "address": "1507 E VILLA MARIA DR",
-            "sold": "03/01/2024",
-            "price": 220000,
-            "sf": 3463,
-            "apn": "21411766",
-            "yearBuilt": 2026,
-            "distanceMi": 0.325
-          },
-          {
-            "address": "18422 N 14TH ST",
-            "sold": "03/01/2026",
-            "price": 1044750,
-            "sf": 3632,
-            "apn": "21411822",
-            "yearBuilt": 2001,
-            "distanceMi": 0.16
-          },
-          {
-            "address": "1805 E MARCO POLO RD",
-            "sold": "08/01/2025",
-            "price": 765000,
-            "sf": 2986,
-            "apn": "21399053",
-            "yearBuilt": 2013,
-            "distanceMi": 1.007
-          }
-        ],
-        "n": 5,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 288,
-        "medPsf": 256,
-        "price": 1044750,
-        "lowPsf": 64,
-        "highPsf": 404,
-        "requiresRefresh": false,
-        "source": "Maricopa County Assessor nearby home sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:44Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null
-      },
-      "verdict": null
-    },
-    {
-      "apn": "21326007C",
-      "address": "2244 E BEHREND DR   PHOENIX  85024",
-      "ownerName": "C U L INCORPORATED",
-      "ownerMailAddress": "7280 E CAMINO SANTO SCOTTSDALE AZ USA 85260",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": true,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 2.6
-      },
-      "landSf": 11351,
-      "landAcres": 0.261,
-      "puc": "0012",
-      "landUseClass": "residential",
-      "lat": 33.66614208773537,
-      "lng": -112.03358464375077,
-      "assessedValue": 158900.0,
-      "assessedValuePerAcre": 608812.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 40",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-2",
-        "targetDensity": 12,
-        "basis": "adjacent parcels already zoned R-2"
-      },
-      "byRightUnits": 1.3,
-      "rezoneTargetUnits": 3.1,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": "03/01/2024",
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": 83000.0,
-      "defaultDemoCost": null,
-      "homesNearby": 213,
-      "vacantNearby": 18,
-      "score": 77,
-      "reasons": [
-        "adjacent parcels already zoned R-2",
-        "parcel size fits small-to-mid infill development",
-        "no house on the lot \u2014 undeveloped land",
-        "213 homes within 0.2 mi \u2014 surrounded by development",
-        "18 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "owner's mailing address differs from the property city",
-        "held in a trust/estate/LLC \u2014 often more open to an offer"
-      ],
-      "comps": [],
-      "valuation": null,
-      "compsNote": "No comparable vacant-land sales of the same land-use type (residential) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "newBuildLookup": {
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:49Z",
-        "error": null
-      },
-      "newBuild": {
-        "arv": 1407500,
-        "psf": 427,
-        "n": 22,
-        "radiusMi": 2.0,
-        "lowPsf": 326,
-        "highPsf": 529,
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:49Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "examples": [
-          {
-            "address": "2947 E TINA DR",
-            "price": 1090000,
-            "sf": 3030,
-            "apn": "21301094",
-            "yearBuilt": 2020.0,
-            "distanceMi": 1.56,
-            "sold": "2023-11-01"
-          },
-          {
-            "address": "2919 E RIANE RD",
-            "price": 1090000,
-            "sf": 3030,
-            "apn": "21301241",
-            "yearBuilt": 2019.0,
-            "distanceMi": 1.598,
-            "sold": "2026-08-01"
-          },
-          {
-            "address": "3011 E LOS GATOS DR",
-            "price": 1415000,
-            "sf": 3220,
-            "apn": "21301286",
-            "yearBuilt": 2019.0,
-            "distanceMi": 1.733,
-            "sold": "2025-02-01"
-          },
-          {
-            "address": "3031 E LOS GATOS DR",
-            "price": 1435000,
-            "sf": 3400,
-            "apn": "21301281",
-            "yearBuilt": 2019.0,
-            "distanceMi": 1.748,
-            "sold": "2026-02-01"
-          },
-          {
-            "address": "22105 N 31ST ST",
-            "price": 1750000,
-            "sf": 4477,
-            "apn": "21301279",
-            "yearBuilt": 2019.0,
-            "distanceMi": 1.78,
-            "sold": "2024-12-01"
-          }
-        ]
-      },
-      "registeredAgent": null,
-      "isNew": true,
-      "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
-      "peakScore": 77,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "houseComps": {
-        "radiusMi": 2,
-        "comps": [
-          {
-            "address": "1805 E MARCO POLO RD",
-            "sold": "08/01/2025",
-            "price": 765000,
-            "sf": 2986,
-            "apn": "21399053",
-            "yearBuilt": 2013,
-            "distanceMi": 0.52
-          },
-          {
-            "address": "1507 E VILLA MARIA DR",
-            "sold": "03/01/2024",
-            "price": 220000,
-            "sf": 3463,
-            "apn": "21411766",
-            "yearBuilt": 2026,
-            "distanceMi": 1.405
-          },
-          {
-            "address": "19427 N 23RD PL",
-            "sold": "10/01/2024",
-            "price": 1250000,
-            "sf": 4010,
-            "apn": "21326214",
-            "yearBuilt": 2007,
-            "distanceMi": 0.211
-          },
-          {
-            "address": "19617 N 27TH ST",
-            "sold": "12/01/2025",
-            "price": 850000,
-            "sf": 2945,
-            "apn": "21318135",
-            "yearBuilt": 2004,
-            "distanceMi": 0.529
-          },
-          {
-            "address": "1737 E SAMUEL DR",
-            "sold": "07/01/2026",
-            "price": 735000,
-            "sf": 3149,
-            "apn": "21305391",
-            "yearBuilt": 1996,
-            "distanceMi": 1.053
-          }
-        ],
-        "n": 5,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 289,
-        "medPsf": 256,
-        "price": 765000,
-        "lowPsf": 64,
-        "highPsf": 312,
-        "requiresRefresh": false,
-        "source": "Maricopa County Assessor nearby home sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:44Z",
+        "retrievedAt": "2026-10-29T17:16:59Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -22701,14 +22986,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:49Z",
+        "retrievedAt": "2026-10-29T17:16:19Z",
         "error": null
       },
       "newBuild": {
@@ -22720,7 +23005,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 452,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:49Z",
+        "retrievedAt": "2026-10-29T17:16:19Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -22776,7 +23061,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 77,
       "landOverride": null,
       "landPriceOverride": null,
@@ -22839,7 +23124,429 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:45Z",
+        "retrievedAt": "2026-10-29T17:17:00Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
+      "verdict": null
+    },
+    {
+      "apn": "21324013B",
+      "address": "1423 E ROSEMONTE DR   PHOENIX  85024",
+      "ownerName": "STONE MOUNTAIN PROPERTY OWNER LLC",
+      "ownerMailAddress": "17470 N PACESETTER WAY SCOTTSDALE AZ USA 85255",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 5.6
+      },
+      "landSf": 173763,
+      "landAcres": 3.989,
+      "puc": "0012",
+      "landUseClass": "residential",
+      "lat": 33.655904246581215,
+      "lng": -112.05209941684198,
+      "assessedValue": 1455300.0,
+      "assessedValuePerAcre": 364828.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": 19.9,
+      "rezoneTargetUnits": 23.9,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": null,
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": null,
+      "defaultDemoCost": null,
+      "homesNearby": 342,
+      "vacantNearby": 5,
+      "score": 77,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "no house on the lot \u2014 undeveloped land",
+        "342 homes within 0.2 mi \u2014 surrounded by development",
+        "5 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [],
+      "valuation": null,
+      "compsNote": "No comparable vacant-land sales of the same land-use type (residential) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:19Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 1415000,
+        "psf": 391,
+        "n": 9,
+        "radiusMi": 3.0,
+        "lowPsf": 302,
+        "highPsf": 455,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:19Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "16244 N 21ST ST",
+            "price": 1100000,
+            "sf": 3637,
+            "apn": "21424005",
+            "yearBuilt": 2020.0,
+            "distanceMi": 1.669,
+            "sold": "2025-07-01"
+          },
+          {
+            "address": "2138 E PARADISE LN",
+            "price": 1092796,
+            "sf": 3455,
+            "apn": "21424013H",
+            "yearBuilt": 2024.0,
+            "distanceMi": 1.79,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "1738 E WINCHCOMB DR",
+            "price": 1550000,
+            "sf": 3426,
+            "apn": "21450296",
+            "yearBuilt": 2023.0,
+            "distanceMi": 2.698,
+            "sold": "2024-07-01"
+          },
+          {
+            "address": "2947 E TINA DR",
+            "price": 1090000,
+            "sf": 3030,
+            "apn": "21301094",
+            "yearBuilt": 2020.0,
+            "distanceMi": 2.785,
+            "sold": "2023-11-01"
+          },
+          {
+            "address": "2919 E RIANE RD",
+            "price": 1090000,
+            "sf": 3030,
+            "apn": "21301241",
+            "yearBuilt": 2019.0,
+            "distanceMi": 2.809,
+            "sold": "2026-08-01"
+          }
+        ]
+      },
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-18",
+      "lastSeen": "2026-10-29",
+      "peakScore": 77,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 1,
+        "comps": [
+          {
+            "address": "18116 N 14TH ST",
+            "sold": "11/01/2025",
+            "price": 1900000,
+            "sf": 4705,
+            "apn": "21411005H",
+            "yearBuilt": 2006,
+            "distanceMi": 0.359
+          },
+          {
+            "address": "2110 E KERRY LN",
+            "sold": "06/01/2025",
+            "price": 1090000,
+            "sf": 4535,
+            "apn": "21399049",
+            "yearBuilt": 2007,
+            "distanceMi": 0.932
+          },
+          {
+            "address": "1507 E VILLA MARIA DR",
+            "sold": "03/01/2024",
+            "price": 220000,
+            "sf": 3463,
+            "apn": "21411766",
+            "yearBuilt": 2026,
+            "distanceMi": 0.325
+          },
+          {
+            "address": "18422 N 14TH ST",
+            "sold": "03/01/2026",
+            "price": 1044750,
+            "sf": 3632,
+            "apn": "21411822",
+            "yearBuilt": 2001,
+            "distanceMi": 0.16
+          },
+          {
+            "address": "1805 E MARCO POLO RD",
+            "sold": "08/01/2025",
+            "price": 765000,
+            "sf": 2986,
+            "apn": "21399053",
+            "yearBuilt": 2013,
+            "distanceMi": 1.007
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 288,
+        "medPsf": 256,
+        "price": 1044750,
+        "lowPsf": 64,
+        "highPsf": 404,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:17:01Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
+      "verdict": null
+    },
+    {
+      "apn": "21326007C",
+      "address": "2244 E BEHREND DR   PHOENIX  85024",
+      "ownerName": "C U L INCORPORATED",
+      "ownerMailAddress": "7280 E CAMINO SANTO SCOTTSDALE AZ USA 85260",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 2.6
+      },
+      "landSf": 11351,
+      "landAcres": 0.261,
+      "puc": "0012",
+      "landUseClass": "residential",
+      "lat": 33.66614208773537,
+      "lng": -112.03358464375077,
+      "assessedValue": 158900.0,
+      "assessedValuePerAcre": 608812.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 40",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-2",
+        "targetDensity": 12,
+        "basis": "adjacent parcels already zoned R-2"
+      },
+      "byRightUnits": 1.3,
+      "rezoneTargetUnits": 3.1,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": "03/01/2024",
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": 83000.0,
+      "defaultDemoCost": null,
+      "homesNearby": 213,
+      "vacantNearby": 18,
+      "score": 77,
+      "reasons": [
+        "adjacent parcels already zoned R-2",
+        "parcel size fits small-to-mid infill development",
+        "no house on the lot \u2014 undeveloped land",
+        "213 homes within 0.2 mi \u2014 surrounded by development",
+        "18 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer"
+      ],
+      "comps": [],
+      "valuation": null,
+      "compsNote": "No comparable vacant-land sales of the same land-use type (residential) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:20Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 1415000,
+        "psf": 431,
+        "n": 23,
+        "radiusMi": 2.0,
+        "lowPsf": 326,
+        "highPsf": 529,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:20Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "2947 E TINA DR",
+            "price": 1090000,
+            "sf": 3030,
+            "apn": "21301094",
+            "yearBuilt": 2020.0,
+            "distanceMi": 1.56,
+            "sold": "2023-11-01"
+          },
+          {
+            "address": "2919 E RIANE RD",
+            "price": 1090000,
+            "sf": 3030,
+            "apn": "21301241",
+            "yearBuilt": 2019.0,
+            "distanceMi": 1.598,
+            "sold": "2026-08-01"
+          },
+          {
+            "address": "3011 E LOS GATOS DR",
+            "price": 1415000,
+            "sf": 3220,
+            "apn": "21301286",
+            "yearBuilt": 2019.0,
+            "distanceMi": 1.733,
+            "sold": "2025-02-01"
+          },
+          {
+            "address": "3031 E LOS GATOS DR",
+            "price": 1435000,
+            "sf": 3400,
+            "apn": "21301281",
+            "yearBuilt": 2019.0,
+            "distanceMi": 1.748,
+            "sold": "2026-02-01"
+          },
+          {
+            "address": "22105 N 31ST ST",
+            "price": 1750000,
+            "sf": 4477,
+            "apn": "21301279",
+            "yearBuilt": 2019.0,
+            "distanceMi": 1.78,
+            "sold": "2024-12-01"
+          }
+        ]
+      },
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
+      "peakScore": 77,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 2,
+        "comps": [
+          {
+            "address": "1805 E MARCO POLO RD",
+            "sold": "08/01/2025",
+            "price": 765000,
+            "sf": 2986,
+            "apn": "21399053",
+            "yearBuilt": 2013,
+            "distanceMi": 0.52
+          },
+          {
+            "address": "1507 E VILLA MARIA DR",
+            "sold": "03/01/2024",
+            "price": 220000,
+            "sf": 3463,
+            "apn": "21411766",
+            "yearBuilt": 2026,
+            "distanceMi": 1.405
+          },
+          {
+            "address": "19427 N 23RD PL",
+            "sold": "10/01/2024",
+            "price": 1250000,
+            "sf": 4010,
+            "apn": "21326214",
+            "yearBuilt": 2007,
+            "distanceMi": 0.211
+          },
+          {
+            "address": "19617 N 27TH ST",
+            "sold": "12/01/2025",
+            "price": 850000,
+            "sf": 2945,
+            "apn": "21318135",
+            "yearBuilt": 2004,
+            "distanceMi": 0.529
+          },
+          {
+            "address": "1737 E SAMUEL DR",
+            "sold": "07/01/2026",
+            "price": 735000,
+            "sf": 3149,
+            "apn": "21305391",
+            "yearBuilt": 1996,
+            "distanceMi": 1.053
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 289,
+        "medPsf": 256,
+        "price": 765000,
+        "lowPsf": 64,
+        "highPsf": 312,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:17:01Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -22912,14 +23619,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:50Z",
+        "retrievedAt": "2026-10-29T17:16:20Z",
         "error": null
       },
       "newBuild": {
@@ -22931,7 +23638,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:50Z",
+        "retrievedAt": "2026-10-29T17:16:20Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -22987,7 +23694,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 97,
       "landOverride": null,
       "landPriceOverride": null,
@@ -23050,7 +23757,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:47Z",
+        "retrievedAt": "2026-10-29T17:17:02Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -23123,14 +23830,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:50Z",
+        "retrievedAt": "2026-10-29T17:16:20Z",
         "error": null
       },
       "newBuild": {
@@ -23142,7 +23849,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:50Z",
+        "retrievedAt": "2026-10-29T17:16:20Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -23198,7 +23905,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-05",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 97,
       "landOverride": null,
       "landPriceOverride": null,
@@ -23261,7 +23968,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:47Z",
+        "retrievedAt": "2026-10-29T17:17:02Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -23334,14 +24041,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:50Z",
+        "retrievedAt": "2026-10-29T17:16:21Z",
         "error": null
       },
       "newBuild": {
@@ -23353,7 +24060,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:50Z",
+        "retrievedAt": "2026-10-29T17:16:21Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -23409,7 +24116,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 97,
       "landOverride": null,
       "landPriceOverride": null,
@@ -23472,7 +24179,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:47Z",
+        "retrievedAt": "2026-10-29T17:17:03Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -23545,14 +24252,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:50Z",
+        "retrievedAt": "2026-10-29T17:16:21Z",
         "error": null
       },
       "newBuild": {
@@ -23564,7 +24271,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:50Z",
+        "retrievedAt": "2026-10-29T17:16:21Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -23620,7 +24327,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 97,
       "landOverride": null,
       "landPriceOverride": null,
@@ -23683,7 +24390,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:47Z",
+        "retrievedAt": "2026-10-29T17:17:03Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -23702,7 +24409,7 @@ window.PHX_LAND_LEADS = {
         "isOwnerOccupied": false,
         "isHiddenOwner": true,
         "isEstateOwner": false,
-        "yearsHeld": 4.5
+        "yearsHeld": 4.6
       },
       "landSf": 109074,
       "landAcres": 2.504,
@@ -23756,14 +24463,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:50Z",
+        "retrievedAt": "2026-10-29T17:16:21Z",
         "error": null
       },
       "newBuild": {
@@ -23775,7 +24482,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 304,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:50Z",
+        "retrievedAt": "2026-10-29T17:16:21Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -23831,7 +24538,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 77,
       "landOverride": null,
       "landPriceOverride": null,
@@ -23894,7 +24601,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:47Z",
+        "retrievedAt": "2026-10-29T17:17:03Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -23967,14 +24674,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:51Z",
+        "retrievedAt": "2026-10-29T17:16:21Z",
         "error": null
       },
       "newBuild": {
@@ -23986,7 +24693,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 442,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:51Z",
+        "retrievedAt": "2026-10-29T17:16:21Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -24033,7 +24740,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 97,
       "landOverride": null,
       "landPriceOverride": null,
@@ -24096,7 +24803,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:48Z",
+        "retrievedAt": "2026-10-29T17:17:03Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -24169,14 +24876,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 97,
       "landOverride": null,
       "landPriceOverride": null,
@@ -24248,14 +24955,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 97,
       "landOverride": null,
       "landPriceOverride": null,
@@ -24327,14 +25034,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 97,
       "landOverride": null,
       "landPriceOverride": null,
@@ -24437,14 +25144,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:51Z",
+        "retrievedAt": "2026-10-29T17:16:22Z",
         "error": null
       },
       "newBuild": {
@@ -24456,7 +25163,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:51Z",
+        "retrievedAt": "2026-10-29T17:16:22Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -24512,7 +25219,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 97,
       "landOverride": null,
       "landPriceOverride": null,
@@ -24575,7 +25282,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:48Z",
+        "retrievedAt": "2026-10-29T17:17:04Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -24640,7 +25347,7 @@ window.PHX_LAND_LEADS = {
         "98 homes within 0.2 mi \u2014 surrounded by development",
         "8 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
-        "comps value ~+83% vs assessed, rank 21/65 (+10 pts)"
+        "comps value ~+83% vs assessed, rank 21/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -24690,7 +25397,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:16+00:00",
+        "retrievedAt": "2026-10-29T17:15:39+00:00",
         "error": null
       },
       "equityMarginPct": 83,
@@ -24698,7 +25405,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:51Z",
+        "retrievedAt": "2026-10-29T17:16:22Z",
         "error": null
       },
       "newBuild": {
@@ -24710,7 +25417,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:51Z",
+        "retrievedAt": "2026-10-29T17:16:22Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -24756,7 +25463,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 87,
       "landOverride": null,
       "landPriceOverride": null,
@@ -24819,7 +25526,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:48Z",
+        "retrievedAt": "2026-10-29T17:17:04Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -24850,7 +25557,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:48Z",
+        "compRetrievedAt": "2026-10-29T17:17:04Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -24921,26 +25628,26 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:52Z",
+        "retrievedAt": "2026-10-29T17:16:22Z",
         "error": null
       },
       "newBuild": {
-        "arv": 1425000,
-        "psf": 413,
-        "n": 8,
+        "arv": 1435000,
+        "psf": 422,
+        "n": 9,
         "radiusMi": 2.0,
         "lowPsf": 360,
         "highPsf": 501,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:52Z",
+        "retrievedAt": "2026-10-29T17:16:22Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -24995,7 +25702,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 96,
       "landOverride": null,
       "landPriceOverride": null,
@@ -25058,7 +25765,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:49Z",
+        "retrievedAt": "2026-10-29T17:17:04Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -25130,14 +25837,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:14+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 76,
       "landOverride": null,
       "landPriceOverride": null,
@@ -25203,7 +25910,7 @@ window.PHX_LAND_LEADS = {
         "24 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~-11% vs assessed, rank 48/65 (-10 pts)"
+        "comps value ~-11% vs assessed, rank 48/67 (-10 pts)"
       ],
       "comps": [
         {
@@ -25277,7 +25984,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:13+00:00",
+        "retrievedAt": "2026-10-29T17:15:36+00:00",
         "error": null
       },
       "equityMarginPct": -11,
@@ -25285,7 +25992,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:52Z",
+        "retrievedAt": "2026-10-29T17:16:22Z",
         "error": null
       },
       "newBuild": {
@@ -25297,7 +26004,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:52Z",
+        "retrievedAt": "2026-10-29T17:16:22Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -25353,7 +26060,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 85,
       "landOverride": null,
       "landPriceOverride": null,
@@ -25416,7 +26123,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:49Z",
+        "retrievedAt": "2026-10-29T17:17:04Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -25447,7 +26154,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:49Z",
+        "compRetrievedAt": "2026-10-29T17:17:04Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -25538,14 +26245,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:52Z",
+        "retrievedAt": "2026-10-29T17:16:22Z",
         "error": null
       },
       "newBuild": {
@@ -25557,7 +26264,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:52Z",
+        "retrievedAt": "2026-10-29T17:16:22Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -25613,7 +26320,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 85,
       "landOverride": null,
       "landPriceOverride": null,
@@ -25676,228 +26383,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:49Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null
-      },
-      "verdict": null
-    },
-    {
-      "apn": "16617002X",
-      "address": "12644 N 18TH ST   PHOENIX  85022",
-      "ownerName": "HOPEFULL ONE LLC",
-      "ownerMailAddress": "2509 E BARBED WIRE PASS PHOENIX AZ USA 85024",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 14.2
-      },
-      "landSf": 35343,
-      "landAcres": 0.811,
-      "puc": "0012",
-      "landUseClass": "residential",
-      "lat": 33.601728599294894,
-      "lng": -112.04431219907275,
-      "assessedValue": 287500.0,
-      "assessedValuePerAcre": 354501.0,
-      "currentZoning": "R1-10",
-      "generalPlanDesignation": "GP code 38",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3A",
-        "targetDensity": 21,
-        "basis": "adjacent parcels already zoned R-3A"
-      },
-      "byRightUnits": 3.2,
-      "rezoneTargetUnits": 17.0,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": "08/01/2012",
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": 25000.0,
-      "defaultDemoCost": null,
-      "homesNearby": 106,
-      "vacantNearby": 8,
-      "score": 75,
-      "reasons": [
-        "adjacent parcels already zoned R-3A",
-        "parcel size fits small-to-mid infill development",
-        "no house on the lot \u2014 undeveloped land",
-        "106 homes within 0.2 mi \u2014 surrounded by development",
-        "8 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 14 years"
-      ],
-      "comps": [
-        {
-          "apn": "21450272",
-          "address": "13821 N 16TH WAY   PHOENIX  85022",
-          "distanceMi": 0.76,
-          "soldDate": "2026-07-01",
-          "soldPrice": 252500.0,
-          "landSf": 13199,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 833313,
-          "similarity": 64
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 676120,
-        "rangeLow": 676120,
-        "rangeHigh": 676120,
-        "explanation": "Median of 1 plainly-vacant land sale in PHOENIX within 1 mile in the last 12 months, valued as vacant land and scaled by lot size, so the subject's land is estimated at approximately $676,120 (range $676,120-$676,120). UNRELIABLE: only 1 usable comp (need 3); filters were not loosened.",
-        "unreliable": true
-      },
-      "compsNote": "Land value unreliable: only 1 usable vacant-land comp(s) in-city within 1 mile / 12 months (need 3). County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "newBuildLookup": {
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:52Z",
-        "error": null
-      },
-      "newBuild": {
-        "arv": 1412000,
-        "psf": 462,
-        "n": 4,
-        "radiusMi": 1.0,
-        "lowPsf": 229,
-        "highPsf": 504,
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:52Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "examples": [
-          {
-            "address": "12814 N 17TH PL",
-            "price": 1474000,
-            "sf": 3057,
-            "apn": "21447866",
-            "yearBuilt": 2025.0,
-            "distanceMi": 0.099,
-            "sold": "2025-10-01"
-          },
-          {
-            "address": "13218 N 17TH PL",
-            "price": 2000000,
-            "sf": 3968,
-            "apn": "21447857",
-            "yearBuilt": 2020.0,
-            "distanceMi": 0.393,
-            "sold": "2024-05-01"
-          },
-          {
-            "address": "13245 N 19TH WAY",
-            "price": 695000,
-            "sf": 3031,
-            "apn": "16615027",
-            "yearBuilt": 2024.0,
-            "distanceMi": 0.475,
-            "sold": "2025-03-01"
-          },
-          {
-            "address": "13036 N 23RD PL",
-            "price": 1350000,
-            "sf": 3056,
-            "apn": "16609095A",
-            "yearBuilt": 2024.0,
-            "distanceMi": 0.735,
-            "sold": "2026-04-01"
-          }
-        ]
-      },
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
-      "peakScore": 95,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "houseComps": {
-        "radiusMi": 1,
-        "comps": [
-          {
-            "address": "12814 N 17TH PL",
-            "sold": "10/01/2025",
-            "price": 1474000,
-            "sf": 3057,
-            "apn": "21447866",
-            "yearBuilt": 2025,
-            "distanceMi": 0.099
-          },
-          {
-            "address": "13036 N 23RD PL",
-            "sold": "04/01/2026",
-            "price": 1350000,
-            "sf": 3056,
-            "apn": "16609095A",
-            "yearBuilt": 2024,
-            "distanceMi": 0.735
-          },
-          {
-            "address": "13218 N 17TH PL",
-            "sold": "05/01/2024",
-            "price": 2000000,
-            "sf": 3968,
-            "apn": "21447857",
-            "yearBuilt": 2020,
-            "distanceMi": 0.393
-          },
-          {
-            "address": "13245 N 19TH WAY",
-            "sold": "03/01/2025",
-            "price": 695000,
-            "sf": 3031,
-            "apn": "16615027",
-            "yearBuilt": 2024,
-            "distanceMi": 0.475
-          },
-          {
-            "address": "13041 N 17TH PL",
-            "sold": "02/01/2026",
-            "price": 1775000,
-            "sf": 4018,
-            "apn": "21447849",
-            "yearBuilt": 1998,
-            "distanceMi": 0.265
-          }
-        ],
-        "n": 5,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 482,
-        "medPsf": 442,
-        "price": 1474000,
-        "lowPsf": 229,
-        "highPsf": 504,
-        "requiresRefresh": false,
-        "source": "Maricopa County Assessor nearby home sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:49Z",
+        "retrievedAt": "2026-10-29T17:17:05Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -25994,14 +26480,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:52Z",
+        "retrievedAt": "2026-10-29T17:16:23Z",
         "error": null
       },
       "newBuild": {
@@ -26013,7 +26499,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:52Z",
+        "retrievedAt": "2026-10-29T17:16:23Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -26058,9 +26544,9 @@ window.PHX_LAND_LEADS = {
         ]
       },
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 75,
       "landOverride": null,
       "landPriceOverride": null,
@@ -26123,7 +26609,228 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:49Z",
+        "retrievedAt": "2026-10-29T17:17:05Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
+      "verdict": null
+    },
+    {
+      "apn": "16617002X",
+      "address": "12644 N 18TH ST   PHOENIX  85022",
+      "ownerName": "HOPEFULL ONE LLC",
+      "ownerMailAddress": "2509 E BARBED WIRE PASS PHOENIX AZ USA 85024",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 14.2
+      },
+      "landSf": 35343,
+      "landAcres": 0.811,
+      "puc": "0012",
+      "landUseClass": "residential",
+      "lat": 33.601728599294894,
+      "lng": -112.04431219907275,
+      "assessedValue": 287500.0,
+      "assessedValuePerAcre": 354501.0,
+      "currentZoning": "R1-10",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3A",
+        "targetDensity": 21,
+        "basis": "adjacent parcels already zoned R-3A"
+      },
+      "byRightUnits": 3.2,
+      "rezoneTargetUnits": 17.0,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": "08/01/2012",
+      "subdivision": "",
+      "rebuildsInSub": 0,
+      "salePrice": 25000.0,
+      "defaultDemoCost": null,
+      "homesNearby": 106,
+      "vacantNearby": 8,
+      "score": 75,
+      "reasons": [
+        "adjacent parcels already zoned R-3A",
+        "parcel size fits small-to-mid infill development",
+        "no house on the lot \u2014 undeveloped land",
+        "106 homes within 0.2 mi \u2014 surrounded by development",
+        "8 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 14 years"
+      ],
+      "comps": [
+        {
+          "apn": "21450272",
+          "address": "13821 N 16TH WAY   PHOENIX  85022",
+          "distanceMi": 0.76,
+          "soldDate": "2026-07-01",
+          "soldPrice": 252500.0,
+          "landSf": 13199,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 833313,
+          "similarity": 64
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 676120,
+        "rangeLow": 676120,
+        "rangeHigh": 676120,
+        "explanation": "Median of 1 plainly-vacant land sale in PHOENIX within 1 mile in the last 12 months, valued as vacant land and scaled by lot size, so the subject's land is estimated at approximately $676,120 (range $676,120-$676,120). UNRELIABLE: only 1 usable comp (need 3); filters were not loosened.",
+        "unreliable": true
+      },
+      "compsNote": "Land value unreliable: only 1 usable vacant-land comp(s) in-city within 1 mile / 12 months (need 3). County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:23Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 1412000,
+        "psf": 462,
+        "n": 4,
+        "radiusMi": 1.0,
+        "lowPsf": 229,
+        "highPsf": 504,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:23Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "12814 N 17TH PL",
+            "price": 1474000,
+            "sf": 3057,
+            "apn": "21447866",
+            "yearBuilt": 2025.0,
+            "distanceMi": 0.099,
+            "sold": "2025-10-01"
+          },
+          {
+            "address": "13218 N 17TH PL",
+            "price": 2000000,
+            "sf": 3968,
+            "apn": "21447857",
+            "yearBuilt": 2020.0,
+            "distanceMi": 0.393,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "apn": "16615027",
+            "yearBuilt": 2024.0,
+            "distanceMi": 0.475,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "13036 N 23RD PL",
+            "price": 1350000,
+            "sf": 3056,
+            "apn": "16609095A",
+            "yearBuilt": 2024.0,
+            "distanceMi": 0.735,
+            "sold": "2026-04-01"
+          }
+        ]
+      },
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-18",
+      "lastSeen": "2026-10-29",
+      "peakScore": 95,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 1,
+        "comps": [
+          {
+            "address": "12814 N 17TH PL",
+            "sold": "10/01/2025",
+            "price": 1474000,
+            "sf": 3057,
+            "apn": "21447866",
+            "yearBuilt": 2025,
+            "distanceMi": 0.099
+          },
+          {
+            "address": "13036 N 23RD PL",
+            "sold": "04/01/2026",
+            "price": 1350000,
+            "sf": 3056,
+            "apn": "16609095A",
+            "yearBuilt": 2024,
+            "distanceMi": 0.735
+          },
+          {
+            "address": "13218 N 17TH PL",
+            "sold": "05/01/2024",
+            "price": 2000000,
+            "sf": 3968,
+            "apn": "21447857",
+            "yearBuilt": 2020,
+            "distanceMi": 0.393
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "sold": "03/01/2025",
+            "price": 695000,
+            "sf": 3031,
+            "apn": "16615027",
+            "yearBuilt": 2024,
+            "distanceMi": 0.475
+          },
+          {
+            "address": "13041 N 17TH PL",
+            "sold": "02/01/2026",
+            "price": 1775000,
+            "sf": 4018,
+            "apn": "21447849",
+            "yearBuilt": 1998,
+            "distanceMi": 0.265
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 482,
+        "medPsf": 442,
+        "price": 1474000,
+        "lowPsf": 229,
+        "highPsf": 504,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:17:05Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -26263,14 +26970,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:52Z",
+        "retrievedAt": "2026-10-29T17:16:23Z",
         "error": null
       },
       "newBuild": {
@@ -26282,7 +26989,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 516,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:52Z",
+        "retrievedAt": "2026-10-29T17:16:23Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -26335,9 +27042,9 @@ window.PHX_LAND_LEADS = {
           }
         ]
       },
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 75,
       "landOverride": null,
       "landPriceOverride": null,
@@ -26400,7 +27107,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:49Z",
+        "retrievedAt": "2026-10-29T17:17:05Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -26486,14 +27193,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:53Z",
+        "retrievedAt": "2026-10-29T17:16:23Z",
         "error": null
       },
       "newBuild": {
@@ -26505,7 +27212,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 564,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:53Z",
+        "retrievedAt": "2026-10-29T17:16:23Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -26560,7 +27267,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 95,
       "landOverride": null,
       "landPriceOverride": null,
@@ -26623,7 +27330,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:50Z",
+        "retrievedAt": "2026-10-29T17:17:05Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -26727,14 +27434,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:54Z",
+        "retrievedAt": "2026-10-29T17:16:25Z",
         "error": null
       },
       "newBuild": {
@@ -26746,7 +27453,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 562,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:54Z",
+        "retrievedAt": "2026-10-29T17:16:25Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -26799,9 +27506,9 @@ window.PHX_LAND_LEADS = {
           }
         ]
       },
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 75,
       "landOverride": null,
       "landPriceOverride": null,
@@ -26864,7 +27571,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:50Z",
+        "retrievedAt": "2026-10-29T17:17:05Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -26914,7 +27621,7 @@ window.PHX_LAND_LEADS = {
       "farRatio": null,
       "yearBuilt": null,
       "codeCases": {
-        "count": 5,
+        "count": 2,
         "severe": false,
         "distress": false
       },
@@ -26933,7 +27640,7 @@ window.PHX_LAND_LEADS = {
         "105 homes within 0.2 mi \u2014 surrounded by development",
         "14 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "5 code-enforcement cases at this address (2024+)"
+        "2 code-enforcement cases at this address (2024+)"
       ],
       "comps": [],
       "valuation": null,
@@ -26941,26 +27648,26 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:54Z",
+        "retrievedAt": "2026-10-29T17:16:25Z",
         "error": null
       },
       "newBuild": {
-        "arv": 1330000,
-        "psf": 385,
-        "n": 16,
+        "arv": 1360000,
+        "psf": 391,
+        "n": 17,
         "radiusMi": 2.0,
         "lowPsf": 302,
-        "highPsf": 439,
+        "highPsf": 469,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:54Z",
+        "retrievedAt": "2026-10-29T17:16:25Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -27014,9 +27721,9 @@ window.PHX_LAND_LEADS = {
         ]
       },
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 75,
       "landOverride": null,
       "landPriceOverride": null,
@@ -27079,7 +27786,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:50Z",
+        "retrievedAt": "2026-10-29T17:17:06Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -27171,14 +27878,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:54Z",
+        "retrievedAt": "2026-10-29T17:16:26Z",
         "error": null
       },
       "newBuild": {
@@ -27190,7 +27897,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 452,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:54Z",
+        "retrievedAt": "2026-10-29T17:16:26Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -27237,7 +27944,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 95,
       "landOverride": null,
       "landPriceOverride": null,
@@ -27300,7 +28007,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:50Z",
+        "retrievedAt": "2026-10-29T17:17:06Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -27373,14 +28080,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:55Z",
+        "retrievedAt": "2026-10-29T17:16:26Z",
         "error": null
       },
       "newBuild": {
@@ -27392,7 +28099,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 452,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:55Z",
+        "retrievedAt": "2026-10-29T17:16:26Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -27448,7 +28155,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-05",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 95,
       "landOverride": null,
       "landPriceOverride": null,
@@ -27511,7 +28218,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:51Z",
+        "retrievedAt": "2026-10-29T17:17:07Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -27560,7 +28267,11 @@ window.PHX_LAND_LEADS = {
       "livingSpaceSf": null,
       "farRatio": null,
       "yearBuilt": null,
-      "codeCases": null,
+      "codeCases": {
+        "count": 1,
+        "severe": false,
+        "distress": false
+      },
       "saleDate": null,
       "subdivision": "FAB SUNSET",
       "rebuildsInSub": 0,
@@ -27584,14 +28295,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:55Z",
+        "retrievedAt": "2026-10-29T17:16:27Z",
         "error": null
       },
       "newBuild": {
@@ -27603,7 +28314,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 452,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:55Z",
+        "retrievedAt": "2026-10-29T17:16:27Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -27650,7 +28361,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 85,
       "landOverride": null,
       "landPriceOverride": null,
@@ -27713,90 +28424,11 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:51Z",
+        "retrievedAt": "2026-10-29T17:17:07Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
-      "verdict": null
-    },
-    {
-      "apn": "21431021D",
-      "address": "16239 N 31ST ST   PHOENIX  85032",
-      "ownerName": "NUVO LLC",
-      "ownerMailAddress": "4210 E ST JOSEPH WAY PHOENIX AZ USA 85018",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 14.0
-      },
-      "landSf": 23577,
-      "landAcres": 0.541,
-      "puc": "0021",
-      "landUseClass": "commercial",
-      "lat": 33.63519115023367,
-      "lng": -112.01504665613021,
-      "assessedValue": 294400.0,
-      "assessedValuePerAcre": 544177.0,
-      "currentZoning": "R-3",
-      "generalPlanDesignation": "GP code 41",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R-3A",
-        "targetDensity": 21,
-        "basis": "adjacent parcels already zoned R-3A"
-      },
-      "byRightUnits": 8.7,
-      "rezoneTargetUnits": 11.4,
-      "dealType": "rental",
-      "referenceCostPerLotAZ": null,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": null,
-      "saleDate": "09/01/2012",
-      "subdivision": "KAY ACRES 3  LOTS 1-25",
-      "rebuildsInSub": 0,
-      "salePrice": 160000.0,
-      "defaultDemoCost": null,
-      "homesNearby": 37,
-      "vacantNearby": 5,
-      "score": 75,
-      "reasons": [
-        "adjacent parcels already zoned R-3A",
-        "parcel size fits small-to-mid infill development",
-        "no house on the lot \u2014 undeveloped land",
-        "37 homes within 0.2 mi \u2014 surrounded by development",
-        "5 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "held 14 years"
-      ],
-      "comps": [],
-      "valuation": null,
-      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "registeredAgent": null,
-      "isNew": true,
-      "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
-      "peakScore": 75,
-      "landOverride": null,
-      "landPriceOverride": null,
       "verdict": null
     },
     {
@@ -27865,14 +28497,93 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
+      "peakScore": 75,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "verdict": null
+    },
+    {
+      "apn": "21431021D",
+      "address": "16239 N 31ST ST   PHOENIX  85032",
+      "ownerName": "NUVO LLC",
+      "ownerMailAddress": "4210 E ST JOSEPH WAY PHOENIX AZ USA 85018",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 14.0
+      },
+      "landSf": 23577,
+      "landAcres": 0.541,
+      "puc": "0021",
+      "landUseClass": "commercial",
+      "lat": 33.63519115023367,
+      "lng": -112.01504665613021,
+      "assessedValue": 294400.0,
+      "assessedValuePerAcre": 544177.0,
+      "currentZoning": "R-3",
+      "generalPlanDesignation": "GP code 41",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R-3A",
+        "targetDensity": 21,
+        "basis": "adjacent parcels already zoned R-3A"
+      },
+      "byRightUnits": 8.7,
+      "rezoneTargetUnits": 11.4,
+      "dealType": "rental",
+      "referenceCostPerLotAZ": null,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": "09/01/2012",
+      "subdivision": "KAY ACRES 3  LOTS 1-25",
+      "rebuildsInSub": 0,
+      "salePrice": 160000.0,
+      "defaultDemoCost": null,
+      "homesNearby": 37,
+      "vacantNearby": 5,
+      "score": 75,
+      "reasons": [
+        "adjacent parcels already zoned R-3A",
+        "parcel size fits small-to-mid infill development",
+        "no house on the lot \u2014 undeveloped land",
+        "37 homes within 0.2 mi \u2014 surrounded by development",
+        "5 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 14 years"
+      ],
+      "comps": [],
+      "valuation": null,
+      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "registeredAgent": null,
+      "isNew": false,
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 75,
       "landOverride": null,
       "landPriceOverride": null,
@@ -27944,14 +28655,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 95,
       "landOverride": null,
       "landPriceOverride": null,
@@ -28023,14 +28734,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:56Z",
+        "retrievedAt": "2026-10-29T17:16:27Z",
         "error": null
       },
       "newBuild": {
@@ -28042,7 +28753,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:56Z",
+        "retrievedAt": "2026-10-29T17:16:27Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -28098,7 +28809,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 95,
       "landOverride": null,
       "landPriceOverride": null,
@@ -28161,7 +28872,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:52Z",
+        "retrievedAt": "2026-10-29T17:17:08Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -28234,14 +28945,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:56Z",
+        "retrievedAt": "2026-10-29T17:16:27Z",
         "error": null
       },
       "newBuild": {
@@ -28253,7 +28964,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 504,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:56Z",
+        "retrievedAt": "2026-10-29T17:16:27Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -28309,7 +29020,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 95,
       "landOverride": null,
       "landPriceOverride": null,
@@ -28372,7 +29083,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:52Z",
+        "retrievedAt": "2026-10-29T17:17:08Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -28445,14 +29156,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 75,
       "landOverride": null,
       "landPriceOverride": null,
@@ -28524,14 +29235,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-05",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 85,
       "landOverride": null,
       "landPriceOverride": null,
@@ -28622,14 +29333,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:56Z",
+        "retrievedAt": "2026-10-29T17:16:28Z",
         "error": null
       },
       "newBuild": {
@@ -28641,7 +29352,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 766,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:56Z",
+        "retrievedAt": "2026-10-29T17:16:28Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -28697,7 +29408,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-05",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 85,
       "landOverride": null,
       "landPriceOverride": null,
@@ -28760,469 +29471,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:52Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null
-      },
-      "verdict": null
-    },
-    {
-      "apn": "20813003M",
-      "address": "1520 W GREENWAY PKWY   PHOENIX  85023",
-      "ownerName": "GARY J BLYTHE CONSULTING INC",
-      "ownerMailAddress": "13237 N 13TH PL PHOENIX AZ USA 85022",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 6.9
-      },
-      "landSf": 23926,
-      "landAcres": 0.549,
-      "puc": "0012",
-      "landUseClass": "residential",
-      "lat": 33.62664365072231,
-      "lng": -112.09208783876907,
-      "assessedValue": 224300.0,
-      "assessedValuePerAcre": 408561.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 40",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": 2.7,
-      "rezoneTargetUnits": 3.3,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": {
-        "count": 2,
-        "severe": false,
-        "distress": false
-      },
-      "saleDate": "11/01/2019",
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": 70000.0,
-      "defaultDemoCost": null,
-      "homesNearby": 120,
-      "vacantNearby": 9,
-      "score": 75,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "no house on the lot \u2014 undeveloped land",
-        "120 homes within 0.2 mi \u2014 surrounded by development",
-        "9 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "2 code-enforcement cases at this address (2024+)"
-      ],
-      "comps": [
-        {
-          "apn": "20813179",
-          "address": "1533 W BECK LN   PHOENIX  85023",
-          "distanceMi": 0.05,
-          "soldDate": "2025-12-01",
-          "soldPrice": 115000.0,
-          "landSf": 5930,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 844755,
-          "similarity": 65
-        }
-      ],
-      "valuation": null,
-      "compsNote": "Comparable sales below are the closest found, but none are usable for a dollar value (bulk sale or lot size too different) -- review them manually. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "newBuildLookup": {
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:57Z",
-        "error": null
-      },
-      "newBuild": {
-        "arv": 1186000,
-        "psf": 343,
-        "n": 20,
-        "radiusMi": 5.0,
-        "lowPsf": 183,
-        "highPsf": 564,
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:57Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "examples": [
-          {
-            "address": "1738 E WINCHCOMB DR",
-            "price": 1550000,
-            "sf": 3426,
-            "apn": "21450296",
-            "yearBuilt": 2023.0,
-            "distanceMi": 2.809,
-            "sold": "2024-07-01"
-          },
-          {
-            "address": "13218 N 17TH PL",
-            "price": 2000000,
-            "sf": 3968,
-            "apn": "21447857",
-            "yearBuilt": 2020.0,
-            "distanceMi": 2.9,
-            "sold": "2024-05-01"
-          },
-          {
-            "address": "12814 N 17TH PL",
-            "price": 1474000,
-            "sf": 3057,
-            "apn": "21447866",
-            "yearBuilt": 2025.0,
-            "distanceMi": 3.154,
-            "sold": "2025-10-01"
-          },
-          {
-            "address": "16244 N 21ST ST",
-            "price": 1100000,
-            "sf": 3637,
-            "apn": "21424005",
-            "yearBuilt": 2020.0,
-            "distanceMi": 3.17,
-            "sold": "2025-07-01"
-          },
-          {
-            "address": "2138 E PARADISE LN",
-            "price": 1092796,
-            "sf": 3455,
-            "apn": "21424013H",
-            "yearBuilt": 2024.0,
-            "distanceMi": 3.273,
-            "sold": "2025-02-01"
-          }
-        ]
-      },
-      "registeredAgent": null,
-      "isNew": true,
-      "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
-      "peakScore": 75,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "houseComps": {
-        "radiusMi": 1,
-        "comps": [
-          {
-            "address": "557 W MOON VALLEY DR",
-            "sold": "09/01/2025",
-            "price": 817500,
-            "sf": 3176,
-            "apn": "20827091",
-            "yearBuilt": 2026,
-            "distanceMi": 0.716
-          },
-          {
-            "address": "1642 W MANDALAY LN",
-            "sold": "01/01/2026",
-            "price": 874300,
-            "sf": 3688,
-            "apn": "20816421",
-            "yearBuilt": 2006,
-            "distanceMi": 0.516
-          },
-          {
-            "address": "509 W MOON VALLEY DR",
-            "sold": "06/01/2025",
-            "price": 1750000,
-            "sf": 4664,
-            "apn": "20827085",
-            "yearBuilt": 2017,
-            "distanceMi": 0.805
-          },
-          {
-            "address": "326 W MOON VALLEY DR",
-            "sold": "05/01/2024",
-            "price": 375000,
-            "sf": 3362,
-            "apn": "20827074A",
-            "yearBuilt": 2025,
-            "distanceMi": 0.932
-          },
-          {
-            "address": "722 W MOON VALLEY DR",
-            "sold": "01/01/2026",
-            "price": 1150000,
-            "sf": 3158,
-            "apn": "20827041A",
-            "yearBuilt": 2006,
-            "distanceMi": 0.941
-          }
-        ],
-        "n": 5,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 364,
-        "medPsf": 257,
-        "price": 874300,
-        "lowPsf": 112,
-        "highPsf": 375,
-        "requiresRefresh": false,
-        "source": "Maricopa County Assessor nearby home sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:52Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null
-      },
-      "verdict": null
-    },
-    {
-      "apn": "20813003L",
-      "address": "1520 W GREENWAY PKWY   PHOENIX  85023",
-      "ownerName": "GARY J BLYTHE CONSULTING INC",
-      "ownerMailAddress": "13237 N 13TH PL PHOENIX AZ USA 85022",
-      "ownership": {
-        "isOutOfStateOwner": false,
-        "isAbsenteeLocal": false,
-        "isEntityOwner": true,
-        "isOwnerOccupied": false,
-        "isHiddenOwner": true,
-        "isEstateOwner": false,
-        "yearsHeld": 6.9
-      },
-      "landSf": 15080,
-      "landAcres": 0.346,
-      "puc": "0012",
-      "landUseClass": "residential",
-      "lat": 33.626822727225104,
-      "lng": -112.09157379592227,
-      "assessedValue": 167300.0,
-      "assessedValuePerAcre": 483526.0,
-      "currentZoning": "R1-8",
-      "generalPlanDesignation": "GP code 40",
-      "floodZone": null,
-      "inFloodplain": false,
-      "floodKnown": false,
-      "zoningKnown": true,
-      "rezoningNearby": 0,
-      "rezoneTarget": {
-        "targetZone": "R1-6",
-        "targetDensity": 6,
-        "basis": "adjacent parcels already zoned R1-6"
-      },
-      "byRightUnits": 1.7,
-      "rezoneTargetUnits": 2.1,
-      "dealType": "subdivision",
-      "referenceCostPerLotAZ": 65000,
-      "parcelStatus": "vacant",
-      "livingSpaceSf": null,
-      "farRatio": null,
-      "yearBuilt": null,
-      "codeCases": {
-        "count": 2,
-        "severe": false,
-        "distress": false
-      },
-      "saleDate": "11/01/2019",
-      "subdivision": "",
-      "rebuildsInSub": 0,
-      "salePrice": 70000.0,
-      "defaultDemoCost": null,
-      "homesNearby": 134,
-      "vacantNearby": 9,
-      "score": 75,
-      "reasons": [
-        "adjacent parcels already zoned R1-6",
-        "parcel size fits small-to-mid infill development",
-        "no house on the lot \u2014 undeveloped land",
-        "134 homes within 0.2 mi \u2014 surrounded by development",
-        "9 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
-        "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "2 code-enforcement cases at this address (2024+)"
-      ],
-      "comps": [
-        {
-          "apn": "20813179",
-          "address": "1533 W BECK LN   PHOENIX  85023",
-          "distanceMi": 0.07,
-          "soldDate": "2025-12-01",
-          "soldPrice": 115000.0,
-          "landSf": 5930,
-          "livingSpaceSf": null,
-          "pricePerSf": null,
-          "pricePerAcre": 844755,
-          "similarity": 68
-        }
-      ],
-      "valuation": {
-        "mostLikelyValue": 292445,
-        "rangeLow": 292445,
-        "rangeHigh": 292445,
-        "explanation": "Median of 1 plainly-vacant land sale in PHOENIX within 1 mile in the last 12 months, valued as vacant land and scaled by lot size, so the subject's land is estimated at approximately $292,445 (range $292,445-$292,445). UNRELIABLE: only 1 usable comp (need 3); filters were not loosened.",
-        "unreliable": true
-      },
-      "compsNote": "Land value unreliable: only 1 usable vacant-land comp(s) in-city within 1 mile / 12 months (need 3). County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
-      "landCompLookup": {
-        "source": "Maricopa County Assessor land sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
-        "error": null
-      },
-      "equityMarginPct": null,
-      "newBuildLookup": {
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:59Z",
-        "error": null
-      },
-      "newBuild": {
-        "arv": 1249500,
-        "psf": 381,
-        "n": 16,
-        "radiusMi": 5.0,
-        "lowPsf": 183,
-        "highPsf": 564,
-        "source": "Maricopa County Assessor nearby new-build sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:59Z",
-        "fellBack": false,
-        "error": null,
-        "fallbackReason": null,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "examples": [
-          {
-            "address": "1738 E WINCHCOMB DR",
-            "price": 1550000,
-            "sf": 3426,
-            "apn": "21450296",
-            "yearBuilt": 2023.0,
-            "distanceMi": 2.783,
-            "sold": "2024-07-01"
-          },
-          {
-            "address": "13218 N 17TH PL",
-            "price": 2000000,
-            "sf": 3968,
-            "apn": "21447857",
-            "yearBuilt": 2020.0,
-            "distanceMi": 2.88,
-            "sold": "2024-05-01"
-          },
-          {
-            "address": "12814 N 17TH PL",
-            "price": 1474000,
-            "sf": 3057,
-            "apn": "21447866",
-            "yearBuilt": 2025.0,
-            "distanceMi": 3.135,
-            "sold": "2025-10-01"
-          },
-          {
-            "address": "16244 N 21ST ST",
-            "price": 1100000,
-            "sf": 3637,
-            "apn": "21424005",
-            "yearBuilt": 2020.0,
-            "distanceMi": 3.139,
-            "sold": "2025-07-01"
-          },
-          {
-            "address": "2138 E PARADISE LN",
-            "price": 1092796,
-            "sf": 3455,
-            "apn": "21424013H",
-            "yearBuilt": 2024.0,
-            "distanceMi": 3.242,
-            "sold": "2025-02-01"
-          }
-        ]
-      },
-      "registeredAgent": null,
-      "isNew": false,
-      "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
-      "peakScore": 79,
-      "landOverride": null,
-      "landPriceOverride": null,
-      "houseComps": {
-        "radiusMi": 1,
-        "comps": [
-          {
-            "address": "557 W MOON VALLEY DR",
-            "sold": "09/01/2025",
-            "price": 817500,
-            "sf": 3176,
-            "apn": "20827091",
-            "yearBuilt": 2026,
-            "distanceMi": 0.703
-          },
-          {
-            "address": "16303 N 2ND AVE",
-            "sold": "03/01/2026",
-            "price": 820000,
-            "sf": 3638,
-            "apn": "20817753",
-            "yearBuilt": 2018,
-            "distanceMi": 0.982
-          },
-          {
-            "address": "509 W MOON VALLEY DR",
-            "sold": "06/01/2025",
-            "price": 1750000,
-            "sf": 4664,
-            "apn": "20827085",
-            "yearBuilt": 2017,
-            "distanceMi": 0.789
-          },
-          {
-            "address": "326 W MOON VALLEY DR",
-            "sold": "05/01/2024",
-            "price": 375000,
-            "sf": 3362,
-            "apn": "20827074A",
-            "yearBuilt": 2025,
-            "distanceMi": 0.914
-          },
-          {
-            "address": "16316 N 2ND DR",
-            "sold": "01/01/2026",
-            "price": 865000,
-            "sf": 3638,
-            "apn": "20817764",
-            "yearBuilt": 2017,
-            "distanceMi": 0.921
-          }
-        ],
-        "n": 5,
-        "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 257,
-        "medPsf": 238,
-        "price": 820000,
-        "lowPsf": 112,
-        "highPsf": 375,
-        "requiresRefresh": false,
-        "source": "Maricopa County Assessor nearby home sales",
-        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:52Z",
+        "retrievedAt": "2026-10-29T17:17:08Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -29294,14 +29543,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 75,
       "landOverride": null,
       "landPriceOverride": null,
@@ -29373,14 +29622,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 95,
       "landOverride": null,
       "landPriceOverride": null,
@@ -29444,7 +29693,7 @@ window.PHX_LAND_LEADS = {
         "157 homes within 0.2 mi \u2014 surrounded by development",
         "8 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "held 9 years",
-        "comps value ~+61% vs assessed, rank 31/65 (+10 pts)"
+        "comps value ~+61% vs assessed, rank 31/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -29494,7 +29743,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:16+00:00",
+        "retrievedAt": "2026-10-29T17:15:39+00:00",
         "error": null
       },
       "equityMarginPct": 61,
@@ -29502,7 +29751,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:00Z",
+        "retrievedAt": "2026-10-29T17:16:28Z",
         "error": null
       },
       "newBuild": {
@@ -29514,7 +29763,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:00Z",
+        "retrievedAt": "2026-10-29T17:16:28Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -29567,9 +29816,9 @@ window.PHX_LAND_LEADS = {
           }
         ]
       },
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 75,
       "landOverride": null,
       "landPriceOverride": null,
@@ -29632,7 +29881,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:53Z",
+        "retrievedAt": "2026-10-29T17:17:08Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -29663,7 +29912,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:53Z",
+        "compRetrievedAt": "2026-10-29T17:17:08Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -29727,7 +29976,7 @@ window.PHX_LAND_LEADS = {
         "124 homes within 0.2 mi \u2014 surrounded by development",
         "8 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "held 9 years",
-        "comps value ~+82% vs assessed, rank 23/65 (+10 pts)"
+        "comps value ~+82% vs assessed, rank 23/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -29777,7 +30026,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:16+00:00",
+        "retrievedAt": "2026-10-29T17:15:39+00:00",
         "error": null
       },
       "equityMarginPct": 82,
@@ -29785,7 +30034,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:00Z",
+        "retrievedAt": "2026-10-29T17:16:28Z",
         "error": null
       },
       "newBuild": {
@@ -29797,7 +30046,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 516,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:00Z",
+        "retrievedAt": "2026-10-29T17:16:28Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -29850,9 +30099,9 @@ window.PHX_LAND_LEADS = {
           }
         ]
       },
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 75,
       "landOverride": null,
       "landPriceOverride": null,
@@ -29915,7 +30164,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:53Z",
+        "retrievedAt": "2026-10-29T17:17:08Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -29946,7 +30195,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:53Z",
+        "compRetrievedAt": "2026-10-29T17:17:08Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -30010,7 +30259,7 @@ window.PHX_LAND_LEADS = {
         "66 homes within 0.2 mi \u2014 surrounded by development",
         "16 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "held 9 years",
-        "comps value ~+62% vs assessed, rank 30/65 (+10 pts)"
+        "comps value ~+62% vs assessed, rank 30/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -30084,7 +30333,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:16+00:00",
+        "retrievedAt": "2026-10-29T17:15:39+00:00",
         "error": null
       },
       "equityMarginPct": 62,
@@ -30092,7 +30341,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:01Z",
+        "retrievedAt": "2026-10-29T17:16:29Z",
         "error": null
       },
       "newBuild": {
@@ -30104,7 +30353,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:01Z",
+        "retrievedAt": "2026-10-29T17:16:29Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -30159,7 +30408,7 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 85,
       "landOverride": null,
       "landPriceOverride": null,
@@ -30222,7 +30471,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:53Z",
+        "retrievedAt": "2026-10-29T17:17:09Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -30253,7 +30502,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:53Z",
+        "compRetrievedAt": "2026-10-29T17:17:09Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -30314,7 +30563,7 @@ window.PHX_LAND_LEADS = {
         "40 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+78% vs assessed, rank 26/65 (+10 pts)"
+        "comps value ~+78% vs assessed, rank 26/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -30388,7 +30637,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:16+00:00",
+        "retrievedAt": "2026-10-29T17:15:39+00:00",
         "error": null
       },
       "equityMarginPct": 78,
@@ -30396,7 +30645,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:01Z",
+        "retrievedAt": "2026-10-29T17:16:29Z",
         "error": null
       },
       "newBuild": {
@@ -30408,7 +30657,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 448,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:01Z",
+        "retrievedAt": "2026-10-29T17:16:29Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -30464,13 +30713,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-06",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 85,
       "landOverride": null,
       "landPriceOverride": null,
       "houseComps": {
         "radiusMi": 1,
         "comps": [
+          {
+            "address": "2639 W LAVITT LN",
+            "sold": "09/01/2026",
+            "price": 1050000,
+            "sf": 3011,
+            "apn": "20333005G",
+            "yearBuilt": 2018,
+            "distanceMi": 0.478
+          },
           {
             "address": "3015 W IRVINE RD",
             "sold": "05/01/2025",
@@ -30506,28 +30764,19 @@ window.PHX_LAND_LEADS = {
             "apn": "20339023",
             "yearBuilt": 2023,
             "distanceMi": 0.855
-          },
-          {
-            "address": "2819 W CREEK CANYON RD",
-            "sold": "08/01/2025",
-            "price": 1350000,
-            "sf": 3179,
-            "apn": "20338005D",
-            "yearBuilt": 2024,
-            "distanceMi": 0.745
           }
         ],
         "n": 5,
         "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 412,
+        "psf": 349,
         "medPsf": 346,
-        "price": 1100000,
+        "price": 1050000,
         "lowPsf": 179,
-        "highPsf": 425,
+        "highPsf": 412,
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:53Z",
+        "retrievedAt": "2026-10-29T17:17:09Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -30536,12 +30785,12 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 239983,
-        "finished": 1565600,
-        "profit": -176016,
-        "marginPct": -11,
-        "marginPctAt275": 3,
-        "profitAt275": 43548,
-        "salePsf": 412,
+        "finished": 1326200,
+        "profit": -408234,
+        "marginPct": -31,
+        "marginPctAt275": -14,
+        "profitAt275": -188670,
+        "salePsf": 349,
         "risk": "Low",
         "medianStress": {
           "salePsf": 346,
@@ -30552,13 +30801,13 @@ window.PHX_LAND_LEADS = {
           "fragile": false
         },
         "capacityConfirmed": false,
-        "supportableOffer": -70836,
+        "supportableOffer": -265488,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:53Z",
+        "compRetrievedAt": "2026-10-29T17:17:09Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -30619,7 +30868,7 @@ window.PHX_LAND_LEADS = {
         "22 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+80% vs assessed, rank 25/65 (+10 pts)"
+        "comps value ~+80% vs assessed, rank 25/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -30693,7 +30942,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:17+00:00",
+        "retrievedAt": "2026-10-29T17:15:40+00:00",
         "error": null
       },
       "equityMarginPct": 80,
@@ -30701,7 +30950,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:01Z",
+        "retrievedAt": "2026-10-29T17:16:29Z",
         "error": null
       },
       "newBuild": {
@@ -30713,7 +30962,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 478,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:01Z",
+        "retrievedAt": "2026-10-29T17:16:29Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -30769,7 +31018,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-13",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 85,
       "landOverride": null,
       "landPriceOverride": null,
@@ -30813,26 +31062,26 @@ window.PHX_LAND_LEADS = {
             "distanceMi": 0.441
           },
           {
-            "address": "3015 W IRVINE RD",
-            "sold": "05/01/2025",
-            "price": 1252260,
-            "sf": 3038,
-            "apn": "20335022C",
-            "yearBuilt": 2025,
-            "distanceMi": 0.886
+            "address": "2639 W LAVITT LN",
+            "sold": "09/01/2026",
+            "price": 1050000,
+            "sf": 3011,
+            "apn": "20333005G",
+            "yearBuilt": 2018,
+            "distanceMi": 0.791
           }
         ],
         "n": 5,
         "selectionPolicy": "home-3800-25pct-3m-v1",
-        "psf": 412,
+        "psf": 349,
         "medPsf": 346,
-        "price": 1100000,
+        "price": 1050000,
         "lowPsf": 179,
         "highPsf": 425,
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:53Z",
+        "retrievedAt": "2026-10-29T17:17:09Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -30841,12 +31090,12 @@ window.PHX_LAND_LEADS = {
         "label": "Pass",
         "strategy": "1 custom home",
         "land": 356231,
-        "finished": 1565600,
-        "profit": -300401,
-        "marginPct": -19,
-        "marginPctAt275": -5,
-        "profitAt275": -80837,
-        "salePsf": 412,
+        "finished": 1326200,
+        "profit": -532619,
+        "marginPct": -40,
+        "marginPctAt275": -24,
+        "profitAt275": -313055,
+        "salePsf": 349,
         "risk": "Low",
         "medianStress": {
           "salePsf": 346,
@@ -30857,13 +31106,13 @@ window.PHX_LAND_LEADS = {
           "fragile": false
         },
         "capacityConfirmed": false,
-        "supportableOffer": -70836,
+        "supportableOffer": -265488,
         "offerHomes": 1,
         "offerTargetMargin": 0.1,
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:53Z",
+        "compRetrievedAt": "2026-10-29T17:17:09Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -30924,7 +31173,7 @@ window.PHX_LAND_LEADS = {
         "8 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
         "owner's mailing address differs from the property city",
         "held in a trust/estate/LLC \u2014 often more open to an offer",
-        "comps value ~+70% vs assessed, rank 28/65 (+10 pts)"
+        "comps value ~+70% vs assessed, rank 28/67 (+10 pts)"
       ],
       "comps": [
         {
@@ -30998,7 +31247,7 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:17+00:00",
+        "retrievedAt": "2026-10-29T17:15:40+00:00",
         "error": null
       },
       "equityMarginPct": 70,
@@ -31006,7 +31255,7 @@ window.PHX_LAND_LEADS = {
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:01Z",
+        "retrievedAt": "2026-10-29T17:16:29Z",
         "error": null
       },
       "newBuild": {
@@ -31018,7 +31267,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 562,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:01Z",
+        "retrievedAt": "2026-10-29T17:16:29Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -31074,7 +31323,7 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-18",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 85,
       "landOverride": null,
       "landPriceOverride": null,
@@ -31137,7 +31386,7 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:53Z",
+        "retrievedAt": "2026-10-29T17:17:09Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
@@ -31168,7 +31417,7 @@ window.PHX_LAND_LEADS = {
         "offerHardPsf": 325,
         "compSource": "Maricopa County Assessor nearby home sales",
         "compSourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "compRetrievedAt": "2026-10-28T16:16:53Z",
+        "compRetrievedAt": "2026-10-29T17:17:09Z",
         "compFellBack": false,
         "compError": null,
         "compFallbackReason": null
@@ -31261,14 +31510,14 @@ window.PHX_LAND_LEADS = {
       "landCompLookup": {
         "source": "Maricopa County Assessor land sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:15:15+00:00",
+        "retrievedAt": "2026-10-29T17:15:37+00:00",
         "error": null
       },
       "equityMarginPct": null,
       "newBuildLookup": {
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:01Z",
+        "retrievedAt": "2026-10-29T17:16:29Z",
         "error": null
       },
       "newBuild": {
@@ -31280,7 +31529,7 @@ window.PHX_LAND_LEADS = {
         "highPsf": 455,
         "source": "Maricopa County Assessor nearby new-build sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:01Z",
+        "retrievedAt": "2026-10-29T17:16:29Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null,
@@ -31333,9 +31582,9 @@ window.PHX_LAND_LEADS = {
           }
         ]
       },
-      "isNew": true,
+      "isNew": false,
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28",
+      "lastSeen": "2026-10-29",
       "peakScore": 74,
       "landOverride": null,
       "landPriceOverride": null,
@@ -31398,11 +31647,541 @@ window.PHX_LAND_LEADS = {
         "requiresRefresh": false,
         "source": "Maricopa County Assessor nearby home sales",
         "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
-        "retrievedAt": "2026-10-28T16:16:54Z",
+        "retrievedAt": "2026-10-29T17:17:09Z",
         "fellBack": false,
         "error": null,
         "fallbackReason": null
       },
+      "verdict": null
+    },
+    {
+      "apn": "20816427",
+      "address": "14802 N 15TH DR   PHOENIX  85023",
+      "ownerName": "OLAUGHLIN RICHARD LAWRENCE JR",
+      "ownerMailAddress": "45 CYPRESS LN WEST CREEK NJ USA 08092",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
+        "isEstateOwner": false,
+        "yearsHeld": 5.9
+      },
+      "landSf": 29377,
+      "landAcres": 0.674,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.62059169737751,
+      "lng": -112.093945421646,
+      "assessedValue": 291700.0,
+      "assessedValuePerAcre": 432789.0,
+      "currentZoning": "PAD-3",
+      "generalPlanDesignation": "GP code 38",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-8",
+        "targetDensity": 5,
+        "basis": "adjacent parcels already zoned R1-8"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 3.4,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": "09/01/2020",
+      "subdivision": "CORAL GABLES ESTATES WEST",
+      "rebuildsInSub": 0,
+      "salePrice": 290000.0,
+      "defaultDemoCost": null,
+      "homesNearby": 141,
+      "vacantNearby": 13,
+      "score": 74,
+      "reasons": [
+        "adjacent parcels already zoned R1-8",
+        "parcel size fits small-to-mid infill development",
+        "no house on the lot \u2014 undeveloped land",
+        "141 homes within 0.2 mi \u2014 surrounded by development",
+        "13 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address is out of state (absentee)"
+      ],
+      "comps": [
+        {
+          "apn": "20813179",
+          "address": "1533 W BECK LN   PHOENIX  85023",
+          "distanceMi": 0.46,
+          "soldDate": "2025-12-01",
+          "soldPrice": 115000.0,
+          "landSf": 5930,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 844755,
+          "similarity": 61
+        }
+      ],
+      "valuation": null,
+      "compsNote": "Comparable sales below are the closest found, but none are usable for a dollar value (bulk sale or lot size too different) -- review them manually. County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:38+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:30Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 1010864,
+        "psf": 287,
+        "n": 34,
+        "radiusMi": 5.0,
+        "lowPsf": 183,
+        "highPsf": 564,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:30Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "13218 N 17TH PL",
+            "price": 2000000,
+            "sf": 3968,
+            "apn": "21447857",
+            "yearBuilt": 2020.0,
+            "distanceMi": 2.826,
+            "sold": "2024-05-01"
+          },
+          {
+            "address": "1738 E WINCHCOMB DR",
+            "price": 1550000,
+            "sf": 3426,
+            "apn": "21450296",
+            "yearBuilt": 2023.0,
+            "distanceMi": 2.85,
+            "sold": "2024-07-01"
+          },
+          {
+            "address": "12814 N 17TH PL",
+            "price": 1474000,
+            "sf": 3057,
+            "apn": "21447866",
+            "yearBuilt": 2025.0,
+            "distanceMi": 3.057,
+            "sold": "2025-10-01"
+          },
+          {
+            "address": "13245 N 19TH WAY",
+            "price": 695000,
+            "sf": 3031,
+            "apn": "16615027",
+            "yearBuilt": 2024.0,
+            "distanceMi": 3.237,
+            "sold": "2025-03-01"
+          },
+          {
+            "address": "16244 N 21ST ST",
+            "price": 1100000,
+            "sf": 3637,
+            "apn": "21424005",
+            "yearBuilt": 2020.0,
+            "distanceMi": 3.373,
+            "sold": "2025-07-01"
+          }
+        ]
+      },
+      "isNew": true,
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29",
+      "peakScore": 74,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 1,
+        "comps": [
+          {
+            "address": "557 W MOON VALLEY DR",
+            "sold": "09/01/2025",
+            "price": 817500,
+            "sf": 3176,
+            "apn": "20827091",
+            "yearBuilt": 2026,
+            "distanceMi": 0.641
+          },
+          {
+            "address": "1642 W MANDALAY LN",
+            "sold": "01/01/2026",
+            "price": 874300,
+            "sf": 3688,
+            "apn": "20816421",
+            "yearBuilt": 2006,
+            "distanceMi": 0.125
+          },
+          {
+            "address": "509 W MOON VALLEY DR",
+            "sold": "06/01/2025",
+            "price": 1750000,
+            "sf": 4664,
+            "apn": "20827085",
+            "yearBuilt": 2017,
+            "distanceMi": 0.754
+          },
+          {
+            "address": "14845 N 15TH DR",
+            "sold": "06/01/2026",
+            "price": 1950000,
+            "sf": 4684,
+            "apn": "20816227",
+            "yearBuilt": 1988,
+            "distanceMi": 0.112
+          },
+          {
+            "address": "722 W MOON VALLEY DR",
+            "sold": "01/01/2026",
+            "price": 1150000,
+            "sf": 3158,
+            "apn": "20827041A",
+            "yearBuilt": 2006,
+            "distanceMi": 0.741
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 375,
+        "medPsf": 364,
+        "price": 1150000,
+        "lowPsf": 237,
+        "highPsf": 416,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:17:09Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
+      "verdict": null
+    },
+    {
+      "apn": "21215879",
+      "address": "2330 E CHARLENE PL   PHOENIX  85024",
+      "ownerName": "WILSON PRESTON JON/KELLY ANN",
+      "ownerMailAddress": "2648 FALCON RIDGE WAY LEHI UT USA 84043",
+      "ownership": {
+        "isOutOfStateOwner": true,
+        "isAbsenteeLocal": false,
+        "isEntityOwner": false,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": false,
+        "isEstateOwner": false,
+        "yearsHeld": 0.4
+      },
+      "landSf": 13586,
+      "landAcres": 0.312,
+      "puc": "0011",
+      "landUseClass": "residential",
+      "lat": 33.70213897817982,
+      "lng": -112.0325841432262,
+      "assessedValue": 225300.0,
+      "assessedValuePerAcre": 722115.0,
+      "currentZoning": "R1-8",
+      "generalPlanDesignation": "GP code 30",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-6",
+        "targetDensity": 6,
+        "basis": "adjacent parcels already zoned R1-6"
+      },
+      "byRightUnits": 1.6,
+      "rezoneTargetUnits": 1.9,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": "05/01/2026",
+      "subdivision": "23RD STREET DEVELOPMENT",
+      "rebuildsInSub": 0,
+      "salePrice": 300000.0,
+      "defaultDemoCost": null,
+      "homesNearby": 308,
+      "vacantNearby": 3,
+      "score": 74,
+      "reasons": [
+        "adjacent parcels already zoned R1-6",
+        "parcel size fits small-to-mid infill development",
+        "no house on the lot \u2014 undeveloped land",
+        "308 homes within 0.2 mi \u2014 surrounded by development",
+        "3 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address is out of state (absentee)"
+      ],
+      "comps": [
+        {
+          "apn": "21215878",
+          "address": "2320 E CHARLENE PL   PHOENIX  85024",
+          "distanceMi": 0.02,
+          "soldDate": "2025-12-01",
+          "soldPrice": 276000.0,
+          "landSf": 13598,
+          "livingSpaceSf": null,
+          "pricePerSf": null,
+          "pricePerAcre": 884142,
+          "similarity": 80
+        }
+      ],
+      "valuation": {
+        "mostLikelyValue": 275756,
+        "rangeLow": 275756,
+        "rangeHigh": 275756,
+        "explanation": "Median of 1 plainly-vacant land sale in PHOENIX within 1 mile in the last 12 months, valued as vacant land and scaled by lot size, so the subject's land is estimated at approximately $275,756 (range $275,756-$275,756). UNRELIABLE: only 1 usable comp (need 3); filters were not loosened.",
+        "unreliable": true
+      },
+      "compsNote": "Land value unreliable: only 1 usable vacant-land comp(s) in-city within 1 mile / 12 months (need 3). County Assessor data only (latest recorded sale per parcel, not full sale history or MLS-grade condition/bed-bath detail) -- treat as a sanity check, not an appraisal.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:38+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "newBuildLookup": {
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:31Z",
+        "error": null
+      },
+      "newBuild": {
+        "arv": 962490,
+        "psf": 279,
+        "n": 33,
+        "radiusMi": 1.0,
+        "lowPsf": 265,
+        "highPsf": 455,
+        "source": "Maricopa County Assessor nearby new-build sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:16:31Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "examples": [
+          {
+            "address": "2429 E VILLA LINDA DR",
+            "price": 889990,
+            "sf": 3222,
+            "apn": "21244481",
+            "yearBuilt": 2026.0,
+            "distanceMi": 0.447,
+            "sold": "2026-02-01"
+          },
+          {
+            "address": "24314 N 21ST PL",
+            "price": 1075000,
+            "sf": 3472,
+            "apn": "21215599",
+            "yearBuilt": 2019.0,
+            "distanceMi": 0.455,
+            "sold": "2025-10-01"
+          },
+          {
+            "address": "2445 E VILLA LINDA DR",
+            "price": 956275,
+            "sf": 3486,
+            "apn": "21244477",
+            "yearBuilt": 2026.0,
+            "distanceMi": 0.478,
+            "sold": "2026-02-01"
+          },
+          {
+            "address": "2438 E VILLA LINDA DR",
+            "price": 869990,
+            "sf": 3222,
+            "apn": "21244484",
+            "yearBuilt": 2026.0,
+            "distanceMi": 0.482,
+            "sold": "2026-03-01"
+          },
+          {
+            "address": "2457 E VILLA LINDA DR",
+            "price": 899990,
+            "sf": 3222,
+            "apn": "21244474",
+            "yearBuilt": 2026.0,
+            "distanceMi": 0.502,
+            "sold": "2026-04-01"
+          }
+        ]
+      },
+      "isNew": true,
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29",
+      "peakScore": 74,
+      "landOverride": null,
+      "landPriceOverride": null,
+      "houseComps": {
+        "radiusMi": 1,
+        "comps": [
+          {
+            "address": "2507 E VILLA LINDA DR",
+            "sold": "08/01/2026",
+            "price": 930000,
+            "sf": 3486,
+            "apn": "21244472",
+            "yearBuilt": 2026,
+            "distanceMi": 0.519
+          },
+          {
+            "address": "1928 E VILLA LINDA DR",
+            "sold": "09/01/2026",
+            "price": 1275000,
+            "sf": 3509,
+            "apn": "21215845",
+            "yearBuilt": 2023,
+            "distanceMi": 0.893
+          },
+          {
+            "address": "2515 E VILLA LINDA DR",
+            "sold": "03/01/2026",
+            "price": 954380,
+            "sf": 3486,
+            "apn": "21244470",
+            "yearBuilt": 2026,
+            "distanceMi": 0.536
+          },
+          {
+            "address": "2519 E VILLA LINDA DR",
+            "sold": "03/01/2026",
+            "price": 927940,
+            "sf": 3486,
+            "apn": "21244469",
+            "yearBuilt": 2026,
+            "distanceMi": 0.546
+          },
+          {
+            "address": "2457 E VILLA LINDA DR",
+            "sold": "04/01/2026",
+            "price": 899990,
+            "sf": 3222,
+            "apn": "21244474",
+            "yearBuilt": 2026,
+            "distanceMi": 0.502
+          }
+        ],
+        "n": 5,
+        "selectionPolicy": "home-3800-25pct-3m-v1",
+        "psf": 279,
+        "medPsf": 274,
+        "price": 930000,
+        "lowPsf": 266,
+        "highPsf": 363,
+        "requiresRefresh": false,
+        "source": "Maricopa County Assessor nearby home sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:17:10Z",
+        "fellBack": false,
+        "error": null,
+        "fallbackReason": null
+      },
+      "verdict": null
+    },
+    {
+      "apn": "20303023",
+      "address": "4211 W INNOVATIVE DR   PHOENIX  85086",
+      "ownerName": "E & T LP",
+      "ownerMailAddress": "6201 E HUMMINGBIRD LN PARADISE VALLEY AZ USA 85253",
+      "ownership": {
+        "isOutOfStateOwner": false,
+        "isAbsenteeLocal": true,
+        "isEntityOwner": true,
+        "isOwnerOccupied": false,
+        "isHiddenOwner": true,
+        "isEstateOwner": false,
+        "yearsHeld": 11.8
+      },
+      "landSf": 50206,
+      "landAcres": 1.153,
+      "puc": "0021",
+      "landUseClass": "commercial",
+      "lat": 33.8664970157684,
+      "lng": -112.14928767321119,
+      "assessedValue": 630500.0,
+      "assessedValuePerAcre": 546834.0,
+      "currentZoning": "CP/GCP",
+      "generalPlanDesignation": "GP code 247",
+      "floodZone": null,
+      "inFloodplain": false,
+      "floodKnown": false,
+      "zoningKnown": true,
+      "rezoningNearby": 0,
+      "rezoneTarget": {
+        "targetZone": "R1-8",
+        "targetDensity": 5,
+        "basis": "adjacent parcels already zoned R1-8"
+      },
+      "byRightUnits": null,
+      "rezoneTargetUnits": 5.8,
+      "dealType": "subdivision",
+      "referenceCostPerLotAZ": 65000,
+      "parcelStatus": "vacant",
+      "livingSpaceSf": null,
+      "farRatio": null,
+      "yearBuilt": null,
+      "codeCases": null,
+      "saleDate": "01/01/2015",
+      "subdivision": "ANTHEM COMMERCE PARK 33.2",
+      "rebuildsInSub": 0,
+      "salePrice": 120000.0,
+      "defaultDemoCost": null,
+      "homesNearby": 3,
+      "vacantNearby": 5,
+      "score": 73,
+      "reasons": [
+        "adjacent parcels already zoned R1-8",
+        "parcel size fits small-to-mid infill development",
+        "no house on the lot \u2014 undeveloped land",
+        "3 homes nearby",
+        "5 other vacant lots within 0.2 mi \u2014 pocket that could assemble",
+        "owner's mailing address differs from the property city",
+        "held in a trust/estate/LLC \u2014 often more open to an offer",
+        "held 12 years"
+      ],
+      "comps": [],
+      "valuation": null,
+      "compsNote": "No comparable vacant-land sales of the same land-use type (commercial) in PHOENIX within 1 mile in the last 12 months -- land value unreliable (thin market); filters not loosened.",
+      "landCompLookup": {
+        "source": "Maricopa County Assessor land sales",
+        "sourceUrl": "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query",
+        "retrievedAt": "2026-10-29T17:15:38+00:00",
+        "error": null
+      },
+      "equityMarginPct": null,
+      "registeredAgent": null,
+      "isNew": true,
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29",
+      "peakScore": 73,
+      "landOverride": null,
+      "landPriceOverride": null,
       "verdict": null
     }
   ],
@@ -31592,6 +32371,12 @@ window.PHX_LAND_LEADS = {
       "parcelsScanned": 8000,
       "leadsFound": 7239,
       "newLeads": 23
+    },
+    {
+      "date": "2026-10-29",
+      "parcelsScanned": 8000,
+      "leadsFound": 7239,
+      "newLeads": 7
     }
   ],
   "methodologyNote": "Public-records only: Maricopa Assessor parcels (vacant land AND underused single-family-improved parcels \u2014 an existing house occupying a small share of an oversized lot, tagged UNDERUSED LOT \u2014 condition is not in public data, verify by eye), Phoenix zoning + General Plan + rezoning-case layers, FEMA flood zones, plus ownership tenure/entity-type/mailing-address signals as a seller-motivation proxy. No asking price or water/sewer availability is in any public feed found \u2014 confirm those manually per lead before underwriting. Rezone targets landing on single-family zoning use a subdivision/lot-sale calculator (add a demolition cost for underused-lot leads); targets on multifamily/commercial zoning use a rental pro forma."
