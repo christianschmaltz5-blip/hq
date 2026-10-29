@@ -132,11 +132,10 @@ class OverrideTests(unittest.TestCase):
         self.assertEqual(parcel["landOverride"], 535000)
         self.assertEqual(parcel["landPriceOverride"]["sourceUrl"], CLOUD_OVERRIDE["sourceUrl"])
 
-    def test_unreliable_valuation_uses_assessed_fallback(self):
+    def test_unreliable_valuation_gives_no_verdict(self):
         parcel = lead()
         parcel["valuation"]["unreliable"] = True
-        result = verdict.underwrite(parcel, fetch_comps=False, overrides={})
-        self.assertEqual(result["land"], 168400)
+        self.assertIsNone(verdict.underwrite(parcel, fetch_comps=False, overrides={}))
 
 
 class CompMetadataTests(unittest.TestCase):
