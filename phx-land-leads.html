@@ -2096,14 +2096,14 @@ function setContactNote(apn, text){
   try{ localStorage.setItem('leadNotes', JSON.stringify(map)); }catch(e){}
 }
 function renderTraced(){
-  const con = loadContacts(), chk = loadChecks(), calls = loadCalls();
+  const con = loadContacts(), chk = loadChecks(), calls = loadCalls(), notes = loadNotes();
   const hid = loadHidden(), all = (D.leads || []).filter(l => con[l.apn] && !isDiscarded(l.apn)), nHid = all.filter(l => hid[l.apn]).length;
   const rows = all.filter(l => showHiddenRows || !hid[l.apn]).sort((a, b) => (con[b.apn].phones.length ? 1 : 0) - (con[a.apn].phones.length ? 1 : 0) || b.score - a.score);
   const hit = rows.filter(l => con[l.apn].phones.length).length;
   document.getElementById('traced-summary').textContent = rows.length
     ? `${rows.length} traced · ${hit} with a phone. Click a 🔍 number to check it on TruePeopleSearch, then mark Yes / No.` + '' : 'Nothing imported yet — use "Import REISkip results" on the Skip-Trace Priority card.';
   document.getElementById('traced-summary').innerHTML += hiddenLink(nHid);
-  document.getElementById('traced-table').innerHTML = rows.length ? `<thead><tr><th>Address</th><th>Owner</th><th>Mails to</th><th>Phones</th><th>Emails</th><th>Check</th><th>Right person?</th><th>Log call</th><th></th></tr></thead>
+  document.getElementById('traced-table').innerHTML = rows.length ? `<thead><tr><th>Address</th><th>Owner</th><th>Mails to</th><th>Phones</th><th>Emails</th><th>Check</th><th>Right person?</th><th>Log call</th><th>Notes</th><th></th></tr></thead>
     <tbody>${rows.map(l => { const c = con[l.apn], v = chk[l.apn];
       return `<tr>
       <td>${esc(l.address.split('  ')[0])}<div style="font-size:10.5px;color:var(--text-faint);">${l.parcelStatus === 'improved' ? 'Underused' : 'Vacant'} · score ${l.score}</div></td>
@@ -2114,6 +2114,7 @@ function renderTraced(){
       <td>${c.phones.length ? `<a href="${tpsPhone(c.phones[0].n)}" target="_blank" rel="noopener">🔍 phone</a><br>` : ''}${c.first || c.last ? `<a href="${tpsName(c)}" target="_blank" rel="noopener">🔍 name</a>` : ''}</td>
       <td>${c.phones.length ? `<button class="mail-btn" style="${v==='yes'?'outline:2px solid var(--success);':''}" onclick="setCheck('${esc(l.apn)}','yes')">✓</button> <button class="mail-btn" style="${v==='no'?'outline:2px solid #aa3f3c;':''}" onclick="setCheck('${esc(l.apn)}','no')">✗</button>` : ''}</td>
       <td>${c.phones.length ? callSelect(l.apn) + `<div style="font-size:10.5px;color:var(--text-faint);margin-top:2px;">${(calls[l.apn]||{}).status ? esc(callLabel(calls[l.apn].status)) + ' · ' + calls[l.apn].calls.length + ' call(s)' : ''}</div>` : ''}</td>
+      <td><input value="${esc(notes[l.apn]||'')}" placeholder="what they said…" style="width:100%;min-width:200px;" onchange="setContactNote('${esc(l.apn)}', this.value)"></td>
       <td style="white-space:nowrap;">${rowActions(l.apn)}</td></tr>`; }).join('')}</tbody>` : '';
 }
 const CALL_OPTS = [['noanswer','No answer',2],['vm','Left voicemail',3],['callback','Callback requested',3],['interested','Interested',1],['notint','Not interested',null],['wrong','Wrong number / person',null]];
