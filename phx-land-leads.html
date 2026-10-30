@@ -2750,14 +2750,14 @@ function initMap(containerId){
 }
 const VERDICT_FILL = { Good: '#2e9e57', Maybe: '#f0b429', Pass: '#d64545' };
 function renderMapInstance(inst, leads){
-  if(!inst.legend){ inst.legend = L.control({ position: 'bottomleft' }); inst.legend.onAdd = () => { const d = L.DomUtil.create('div', 'pm-legend'); d.innerHTML = Object.entries(VERDICT_FILL).map(([k, c]) => `<span style="color:${c};font-weight:700;">●</span> ${k}`).join(' &nbsp; ') + ' &nbsp; <span style="color:#999;font-weight:700;">○</span> no verdict'; return d; }; inst.legend.addTo(inst.map); }
+  if(!inst.legend){ inst.legend = L.control({ position: 'bottomleft' }); inst.legend.onAdd = () => { const d = L.DomUtil.create('div', 'pm-legend'); d.innerHTML = Object.entries(VERDICT_FILL).map(([k, c]) => `<span style="color:${c};font-weight:700;">●</span> ${k}`).join(' &nbsp; ') + ' &nbsp; <span style="color:#999;font-weight:700;">○</span> no verdict &nbsp; <span style="color:#7e57c2;font-weight:700;">●</span> contacted'; return d; }; inst.legend.addTo(inst.map); }
   const withCoords = (leads||[]).filter(l=>l.lat!=null && l.lng!=null);
   inst.markers.forEach(m => inst.map.removeLayer(m));
   inst.markers = [];
   const bounds = [];
   withCoords.forEach(l=>{
     const c = colorFor(l.parcelStatus);
-    const vl = (l.verdict || {}).label, fill = VERDICT_FILL[vl] || '#ffffff';   // white = no verdict
+    const vl = (l.verdict || {}).label, fill = isContacted(l.apn) ? '#7e57c2' : VERDICT_FILL[vl] || '#ffffff';   // purple = contacted; white = no verdict
     const marker = L.circleMarker([l.lat,l.lng], {
       radius: 5 + Math.min(l.score, 80)/12, color: c, fillColor: fill, fillOpacity: 0.85, weight: 1.5,
       dashArray: l.parcelStatus === 'improved' ? '3,2' : null
