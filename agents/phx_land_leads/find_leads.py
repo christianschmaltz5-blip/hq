@@ -601,14 +601,14 @@ def apply_comps_adjustment(leads):
     next +10, next +4, bottom 0; margin <= 0 is -10. Idempotent via the compsAdj field."""
     for l in leads:
         old = l.pop("compsAdj", 0)
-        l["score"] -= old
+        l["signalScore"] -= old
         l["reasons"] = [r for r in l["reasons"] if not r.startswith(("comps value", "comps margin"))]
     pool = sorted((l for l in leads if l.get("equityMarginPct") is not None), key=lambda l: l["equityMarginPct"], reverse=True)
     for i, l in enumerate(pool):
         m = l["equityMarginPct"]
         adj = -10 if m <= 0 else 20 if i < len(pool) * .25 else 10 if i < len(pool) * .5 else 4 if i < len(pool) * .75 else 0
         l["compsAdj"] = adj
-        l["score"] += adj
+        l["signalScore"] += adj
         if m > 300:
             l["reasons"].append(f"comps margin {m}% looks extreme — verify assessed value/comps before trusting")
         if adj:
@@ -821,7 +821,7 @@ def enrich_parcel(p):
                            " ESL overlay, slope, NAOS and floodplain NOT modeled")
         if juris != "PHOENIX":
             reasons.append("outside Phoenix: rezoning-case, General Plan and code-case signals not available (scored 0)")
-    rec["score"] = score
+    rec["score"] = rec["signalScore"] = score   # score is replaced by verdict.rescore once a verdict exists
     rec["reasons"] = reasons
     return rec
 
@@ -849,6 +849,20 @@ def attach_comps(leads):
             flag_unreliable_valuation(lead)
             if (i + 1) % 20 == 0:
                 print(f"  comped {i+1}/{len(leads)}...")
+
+
+def attach_verdicts(leads):
+    """Underwrite + rescore so comps drive the ranking (verdict.py redoes both once new-build fallbacks land)."""
+    from verdict import underwrite, rescore
+    def one(l):
+        try:
+            l["verdict"] = underwrite(l)
+        except Exception as e:
+            print(f"  verdict failed for {l.get('apn')}: {e}")
+            l["verdict"] = None
+        rescore(l)
+    with ThreadPoolExecutor(max_workers=ENRICH_WORKERS) as pool:
+        list(pool.map(one, leads))
 
 
 def load_east_apns():
@@ -888,15 +902,14 @@ def main_east_only():
     attach_comps(east)
     apply_comps_adjustment(east)   # ranked within the east pool here; the daily run ranks the combined pool
     from offer import attach_new_build_values
-    from verdict import underwrite
     attach_new_build_values(east, limit=None)
+    attach_verdicts(east)
     prev = {l["apn"]: l for l in data["leads"]}
     today = date.today().isoformat()
     for l in east:
         old = prev.get(l["apn"], {})
         l.update(isNew=l["apn"] not in prev, firstSeen=old.get("firstSeen", today), lastSeen=today,
                  peakScore=max(l["score"], old.get("peakScore", 0)))
-        l["verdict"] = underwrite(l)
     data["leads"] = [l for l in data["leads"] if l["apn"] not in east_apns] + east
     OUT_PATH.write_text(text[:m.start(1)] + json.dumps(data, indent=2) + text[m.end(1):])
     print(f"merged {len(east)} east leads into {OUT_PATH}")
@@ -961,7 +974,7 @@ def main():
             if (i + 1) % 50 == 0:
                 print(f"  enriched {i+1}/{len(candidates)}...")
 
-    leads.sort(key=lambda r: r["score"], reverse=True)
+    leads.sort(key=lambda r: r["signalScore"], reverse=True)   # comp pool picked on pre-comps signals
     east_leads = enrich_east(east_apns)
 
     # Vacant and teardown/improved leads are scored on the same scale, but
@@ -979,7 +992,8 @@ def main():
     comp_targets = (vacant_leads[:COMPS_MAX_LEADS] + improved_leads[:COMPS_MAX_LEADS])
     attach_comps(comp_targets + east_leads)
     apply_comps_adjustment(comp_targets + east_leads)
-    # Re-rank on comps-adjusted score and cut to the shown size per category.
+    attach_verdicts(comp_targets + east_leads)
+    # Re-rank on the comps-driven score (80% verdict margin, 20% signals) and cut to the shown size per category.
     # East leads are a fixed watch list: always shown, never compete for the Phoenix slots.
     strong_comps = lambda l: l["parcelStatus"] != "improved" or sum((c.get("soldPrice") or 0) >= MIN_COMP_PRICE for c in l.get("comps") or []) >= 2
     by_score = lambda ls: sorted(ls, key=lambda r: r["score"], reverse=True)[:LEADS_SHOWN_PER_CATEGORY]

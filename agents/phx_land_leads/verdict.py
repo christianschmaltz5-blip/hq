@@ -25,6 +25,8 @@ def _parse_num(value):
 A = dict(sf=HOUSE_COMP_POLICY["planSf"], hard=(275, 325), soft=0.08, site=10_000, fin=0.07, sell=0.03,
          adu=dict(n=0, sf=800, hard=350, site=15_000, value=0),
          split_cost=25_000, haircut=0.9, min_lot=14_375, usable=0.85, good=0.10, maybe=0.05)
+COMPS_WEIGHT = 0.8                  # lead score = 80% comps margin + 20% additive signals (signalScore)
+MARGIN_FLOOR, MARGIN_CEIL = -20, 25 # marginPct mapped linearly onto comps score 0..100
 
 OVERRIDES = json.loads(Path(__file__).with_name("overrides.json").read_text())
 COMP_SOURCE = "Maricopa County Assessor nearby home sales"
@@ -247,10 +249,31 @@ def underwrite(l, *, fetch_comps=True, overrides=None):
                 compFellBack=fallback, compError=hc["error"], compFallbackReason=hc["fallbackReason"])
 
 
+def comps_score(v):
+    """0-100 from the verdict margin (min with median-stress margin when fragile); no verdict = neutral 50."""
+    if not v or not v.get("label"):
+        return 50
+    m, s = v["marginPct"], v.get("medianStress") or {}
+    if s.get("fragile") and s.get("marginPct") is not None:
+        m = min(m, s["marginPct"])
+    return max(0, min(100, (m - MARGIN_FLOOR) / (MARGIN_CEIL - MARGIN_FLOOR) * 100))
+
+
+def rescore(l):
+    """Final score from the attached verdict; signalScore keeps the additive score_lead() value."""
+    sig = l.setdefault("signalScore", l.get("score") or 0)
+    c = comps_score(l.get("verdict"))
+    l["compsScore"] = round(c)
+    l["score"] = max(0, min(100, round(COMPS_WEIGHT * c + (1 - COMPS_WEIGHT) * min(100, sig))))
+    l["peakScore"] = max(l["score"], l.get("peakScore") or 0)
+
+
 def recalculate_data(data, *, cached=False):
     """Recalculate in place; cached mode never requests replacement county comps."""
     for lead in data["leads"]:
         lead["verdict"] = underwrite(lead, fetch_comps=not cached)
+        rescore(lead)
+    data["leads"].sort(key=lambda l: -l["score"])
     counts = {}
     for lead in data["leads"]:
         label = (lead["verdict"] or {}).get("label", "n/a")

@@ -248,7 +248,7 @@
           <input class="filter-input" id="addrSearch" type="text" placeholder="Search address or owner…" style="flex:1; min-width:200px;">
           <input class="filter-input" id="minValue" type="number" placeholder="Min assessed value ($)" style="width:180px;">
           <input class="filter-input" id="maxValue" type="number" placeholder="Max assessed value ($)" style="width:180px;">
-          <input type="checkbox" id="hotOnly"> <label for="hotOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">🔥 Hot deals only (score ≥ 50)</label>
+          <input type="checkbox" id="hotOnly"> <label for="hotOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">🔥 Hot deals only (score ≥ 60)</label>
           <input type="checkbox" id="showGood"> <label for="showGood" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Show leads I tagged "Good house"</label>
           <input type="checkbox" id="estateOnly"> <label for="estateOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;">Estate-owned only</label>
           <input type="checkbox" id="pencilOnly"> <label for="pencilOnly" style="font-size:12.5px; color:var(--text-soft); align-self:center;" title="Land at the county comps value, sale price from nearby house sales, costs from the Custom Home Calculator">💰 Only leads that hit my profit target</label>
@@ -515,7 +515,7 @@ BEFORE YOU SIGN ANYTHING
         </div>
         <div class="filter-row">
           <label style="font-size:12.5px;color:var(--text-soft);">Min score
-            <input class="filter-input" id="stMinScore" type="number" value="50" style="width:70px;">
+            <input class="filter-input" id="stMinScore" type="number" value="60" style="width:70px;">
           </label>
           <label style="font-size:12.5px;color:var(--text-soft);">Min equity margin %
             <input class="filter-input" id="stMinMargin" type="number" value="50" style="width:80px;">
@@ -1129,7 +1129,7 @@ function compsSectionHtml(lead){
 }
 
 // ── Lead cards ──────────────────────────────────────────────────────────
-function scoreClass(score){ return score >= 50 ? 'hot' : score < 15 ? 'cold' : ''; }
+function scoreClass(score){ return score >= 60 ? 'hot' : score < 15 ? 'cold' : ''; }
 
 function loadContacted(){
   try{ return JSON.parse(localStorage.getItem('contactedLeads') || '{}'); }catch(e){ return {}; }
@@ -1221,7 +1221,7 @@ function leadCard(lead, idx){
     ? `<span class="reason-chip" style="background:var(--warning-soft);color:#8f6418;border-color:rgba(179,131,31,.3);font-weight:700;">UNDERUSED LOT</span>`
     : '';
   const typeClass = lead.parcelStatus === 'improved' ? 'teardown' : 'vacant';
-  const isHot = lead.score >= 50;
+  const isHot = lead.score >= 60;
   const cond = loadCondition()[lead.apn];
   const condBadge = cond ? `<span class="reason-chip" style="font-weight:700;">${CONDITIONS.find(c=>c[0]===cond)[1]}</span>` : '';
   const staleBadge = lead.stale ? `<span class="reason-chip" title="Not in latest pull; kept as a hot lead">KEPT · last seen ${esc(lead.lastSeen)}</span>` : '';
@@ -1716,7 +1716,8 @@ function whyHtml(lead, zn, estA, estZ){
   else if(lead.ownership && lead.ownership.yearsHeld != null && lead.ownership.yearsHeld < 2 && lead.salePrice){ concern = `Bought recently (${lead.ownership.yearsHeld.toFixed(1)} years ago for ${money(lead.salePrice)}): the owner may expect a profit`; next = 'Open with the partnership pitch and ask what they plan to do with it.'; }
   else if(estA != null && estZ != null && estA > estZ){ concern = `The acreage-based lot count (${estA}) is higher than the zoning-minimum estimate (${estZ}); the difference is not confirmed`; next = 'Ask Planning &amp; Development how many lots this parcel could be divided into.'; }
   else { concern = 'Access, utilities and terrain have not been checked'; next = 'Check street access and utilities, then call the owner.'; }
-  return `<div><b>Why this lead:</b> ${bits.join(' · ')}${why ? ' — ' + why : ''}</div><div><b>Biggest concern:</b> ${concern}</div><div><b>Next step:</b> ${next}</div><div class="pm-why">Automated read of the data above. Not verified.</div>`;
+  const mix = lead.compsScore != null ? `<div>Comps ${lead.compsScore}/100 (80%) · signals ${Math.max(0, Math.min(100, lead.signalScore))}/100 (20%)</div>` : '';
+  return `<div><b>Why this lead:</b> ${bits.join(' · ')}${why ? ' — ' + why : ''}</div>${mix}<div><b>Biggest concern:</b> ${concern}</div><div><b>Next step:</b> ${next}</div><div class="pm-why">Automated read of the data above. Not verified.</div>`;
 }
 // ── Print / save one lead as a PDF: hide everything else on the page, print, restore ──
 function printLead(idx){
@@ -1903,12 +1904,12 @@ function applyFilters(){
   // Shared filters (search/value/flood/hot) apply to both the list and both
   // maps. Type only narrows the LIST -- the two maps always show their own
   // category side by side, that's the whole point of having two of them.
-  let base = (D.leads || []).filter(l => !isDiscarded(l.apn) && !isContacted(l.apn));
+  let base = (D.leads || []).filter(l => !isDiscarded(l.apn) && !isContacted(l.apn)).sort((a, b) => b.score - a.score);
   if(q) base = base.filter(l => (l.address||'').toLowerCase().includes(q) || (l.ownerName||'').toLowerCase().includes(q) || String(l.apn||'').toLowerCase().includes(q));
   if(document.getElementById('estateOnly').checked) base = base.filter(l => l.ownership?.isEstateOwner);
   if(hideFlood) base = base.filter(l => !l.inFloodplain);
   if(!document.getElementById('showGood').checked) base = base.filter(l => loadCondition()[l.apn] !== 'good');
-  if(hotOnly) base = base.filter(l => l.score >= 50);
+  if(hotOnly) base = base.filter(l => l.score >= 60);
   if(document.getElementById('pencilOnly').checked){   // same math as the Custom Home Calculator, run on every lead
     const tgt = (parseFloat(document.getElementById('hcProfit').value) || 10) / 100;
     base = base.filter(l => { const p = profitFor(l); return p && p.margin >= tgt; });

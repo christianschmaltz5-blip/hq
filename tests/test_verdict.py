@@ -79,6 +79,31 @@ class EconomicsTests(unittest.TestCase):
         self.assertEqual(verdict.split_n({"currentZoning": "RU-43", "minLotSf": 43560, "landSf": 112385}), (2, True))
 
 
+class ScoreTests(unittest.TestCase):
+    def test_comps_score_and_final_score(self):
+        self.assertEqual(verdict.comps_score({"label": "Pass", "marginPct": -20}), 0)
+        self.assertEqual(verdict.comps_score({"label": "Pass", "marginPct": -50}), 0)
+        self.assertEqual(verdict.comps_score({"label": "Good", "marginPct": 25}), 100)
+        self.assertEqual(verdict.comps_score({"label": "Good", "marginPct": 40}), 100)
+        self.assertEqual(verdict.comps_score(None), 50)
+        self.assertEqual(verdict.comps_score({}), 50)
+        stress = {"marginPct": -2.5, "fragile": True}
+        self.assertEqual(verdict.comps_score({"label": "Good", "marginPct": 25, "medianStress": stress}), 38.88888888888889)
+        stress["fragile"] = False
+        self.assertEqual(verdict.comps_score({"label": "Good", "marginPct": 25, "medianStress": stress}), 100)
+        l = {"score": 130, "verdict": {"label": "Good", "marginPct": 25}}
+        verdict.rescore(l)
+        self.assertEqual((l["score"], l["compsScore"], l["signalScore"], l["peakScore"]), (100, 100, 130, 100))
+        verdict.rescore(l)   # idempotent: signalScore is not overwritten by the final score
+        self.assertEqual(l["signalScore"], 130)
+        l = {"score": 50, "verdict": None}
+        verdict.rescore(l)
+        self.assertEqual(l["score"], 50)   # round(0.8*50 + 0.2*50)
+        l = {"score": -40, "verdict": {"label": "Pass", "marginPct": -30}}
+        verdict.rescore(l)
+        self.assertEqual(l["score"], 0)
+
+
 class ReviewRegressionTests(unittest.TestCase):
     def test_shared_risk_cases(self):
         cases=json.loads((Path(__file__).with_name("underwriting-fixtures.json")).read_text())["riskCases"]

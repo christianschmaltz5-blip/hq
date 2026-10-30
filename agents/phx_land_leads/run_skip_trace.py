@@ -24,7 +24,7 @@ from skip_trace_api import from_lead
 DATA_PATH = Path(__file__).resolve().parents[2] / "phx-land-leads" / "data.js"
 CACHE_PATH = Path(__file__).resolve().parent / "contact_cache.json"
 
-DEFAULT_MIN_SCORE = 40
+DEFAULT_MIN_SCORE = 60   # comps-driven 0-100 score; no-verdict leads max out at 60 (neutral comps = 40 pts)
 DEFAULT_LIMIT = 100
 
 
