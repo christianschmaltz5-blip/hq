@@ -69,6 +69,15 @@ class EconomicsTests(unittest.TestCase):
         self.assertEqual(verdict.split_n({"currentZoning": "R1-10", "landSf": 23529}), (1, True))
         self.assertEqual(verdict.split_n({"landSf": 145627}), (4, False))
 
+    def test_east_min_lot_and_byright_units(self):
+        import find_leads
+        self.assertEqual(find_leads.min_lot_sf("NO CITY/TOWN", "RU-43"), (43560, True))
+        self.assertEqual(find_leads.min_lot_sf("SCOTTSDALE", "R1-70 ESL FO"), (70000, False))
+        self.assertEqual(find_leads.min_lot_sf("SCOTTSDALE", "HC ESL"), (None, False))
+        self.assertEqual(find_leads.byright_units_from_min_lot(2.58, 43560), 2)   # floor(2.58*0.85)
+        self.assertEqual(find_leads.byright_units_from_min_lot(1.0, 190000), 1)   # undersized lot of record
+        self.assertEqual(verdict.split_n({"currentZoning": "RU-43", "minLotSf": 43560, "landSf": 112385}), (2, True))
+
 
 class ReviewRegressionTests(unittest.TestCase):
     def test_shared_risk_cases(self):

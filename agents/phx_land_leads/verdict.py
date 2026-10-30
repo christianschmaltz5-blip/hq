@@ -181,8 +181,10 @@ def supportable_land(x, target):
 
 def split_n(l):
     m = re.match(r"(?:R1|RE)-(\d+)", l.get("currentZoning") or "", re.I)
-    min_lot = int(m.group(1)) * 1000 if m else A["min_lot"]
-    return max(1, min(4, math.floor((l.get("landSf") or 0) * A["usable"] / min_lot))), bool(m)
+    # minLotSf: per-jurisdiction min lot stamped by find_leads for non-Phoenix parcels (RU-43, DR-190 ...)
+    min_lot = l.get("minLotSf") or (int(m.group(1)) * 1000 if m else A["min_lot"])
+    if l.get("area") == "east" and not l.get("minLotSf"): return 1, False   # no known min lot outside Phoenix: never assume a 14,375 sf split
+    return max(1, min(4, math.floor((l.get("landSf") or 0) * A["usable"] / min_lot))), bool(l.get("minLotSf") or m)
 
 
 def verdict_label(high_profit, high_margin, low_margin, risk):

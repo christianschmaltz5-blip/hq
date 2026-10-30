@@ -332,14 +332,6 @@
         </div>
       </div>
 
-      <div class="card" id="east-screen">
-        <div class="card-head">
-          <h2>East area screen (Scottsdale, Fountain Hills, Cave Creek, Rio Verde)</h2>
-          <span class="card-sub">Top parcels from county data only. <b>Zoning, flood and hillside limits are not checked</b>, so lot counts are unknown. Ranked by size, absentee owner, years held and whether the lot is unplatted.</span>
-        </div>
-        <div style="overflow-x:auto;"><table id="east-table" style="width:100%; border-collapse:collapse; font-size:12px;"></table></div>
-      </div>
-
       <div class="card" id="top-profit" style="border:2px solid #b8860b; background:#fffaf0;">
         <div class="card-head">
           <h2>📈 Top Profit Opportunities</h2>
@@ -585,7 +577,6 @@ BEFORE YOU SIGN ANYTHING
 </div>
 
 <script src="phx-land-leads/data.js"></script>
-<script src="phx-land-leads/east-screen.js"></script>
 <script src="dev-model/rent-comps.js"></script>
 <script src="assets/js/shell.js"></script>
 <script>
@@ -597,12 +588,6 @@ function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;',
 function money(n){ return n==null||isNaN(n) ? '—' : (n<0?'-':'')+'$'+Math.abs(Math.round(n)).toLocaleString(); }
 function pct1(n){ return n==null||isNaN(n) ? '—' : (n*100).toFixed(1)+'%'; }
 function num1(n){ return n==null||isNaN(n) ? '—' : Number(n).toLocaleString(undefined,{maximumFractionDigits:1}); }
-
-(function(){
-  const E = window.PHX_EAST_SCREEN || [], t = document.getElementById('east-table'); if(!t) return;
-  t.innerHTML = '<tr style="text-align:left;"><th>Score</th><th>Address</th><th>Area</th><th>Acres</th><th>Assessed</th><th>Owner</th><th>Held</th><th>Platted</th><th></th></tr>' +
-    E.map(e => `<tr style="border-top:1px solid var(--border,#ddd);"><td>${e.score}</td><td>${esc(e.address)}</td><td>${esc(e.city)}</td><td>${e.acres}</td><td>${money(e.assessed)}</td><td>${esc(e.owner)}<div style="color:#888;">${esc(e.mail)}</div></td><td>${e.yearsHeld==null?'—':e.yearsHeld+' yr'}</td><td>${e.platted?'yes':'no'}</td><td><a href="https://www.google.com/maps/search/?api=1&query=${e.lat},${e.lng}" target="_blank" rel="noopener">map</a></td></tr>`).join('');
-})();
 
 document.getElementById('methodology-note').innerHTML =
   `<b>Methodology:</b> ${esc(D.methodologyNote || '')}`;
@@ -1356,7 +1341,7 @@ async function fetchParcel(lead){
 }
 async function fetchZone(lead){
   if(zoneCache[lead.apn]) return zoneCache[lead.apn];
-  if(lead.currentZoning) return (zoneCache[lead.apn] = { zone: lead.currentZoning, url: GIS_PHX_ZONING, name: 'City of Phoenix zoning map', date: (lead.lastSeen || '') + ' (daily scan)' });
+  if(lead.currentZoning) return (zoneCache[lead.apn] = { zone: lead.currentZoning, url: lead.zoningSourceUrl || GIS_PHX_ZONING, name: lead.zoningSource || 'City of Phoenix zoning map', date: (lead.lastSeen || '') + ' (daily scan)' });
   const q = new URLSearchParams({ geometry: `${lead.lng},${lead.lat}`, geometryType: 'esriGeometryPoint', inSR: '4326', spatialRel: 'esriSpatialRelIntersects', outFields: 'ZONE,JURIS', returnGeometry: 'false', f: 'json' });
   const r = await (await fetch(GIS_COUNTY_ZONING + '/query?' + q, { signal: AbortSignal.timeout(20000) })).json();
   const a = ((r.features || [])[0] || {}).attributes;
@@ -1574,7 +1559,7 @@ async function initParcelMap(lead, idx){
   const group = L.layerGroup().addTo(map), lotGroup = L.layerGroup().addTo(map), handleGroup = L.layerGroup().addTo(map); box._traceGroup = L.layerGroup().addTo(map);
   const st = layoutState[lead.apn] = layoutState[lead.apn] || { style: 'auto', exact: true, scenario: null, cuts: null, rear: null }; box._st = st;
   const link = (u, t) => `<a href="${u}" target="_blank" rel="noopener">${esc(t)}</a>`, f2 = n => (Math.round(n * 100) / 100).toLocaleString(), ftf = m => Math.round(m * FT).toLocaleString();
-  const acres = lead.landAcres || (lead.landSf || 0) / 43560, u = usablePct / 100, minLot = hasZone ? minLotFromZone(zn.zone) : 0;
+  const acres = lead.landAcres || (lead.landSf || 0) / 43560, u = usablePct / 100, minLot = lead.minLotSf || (hasZone ? minLotFromZone(zn.zone) : 0);
   const estA = Math.floor(acres * u / acresPerLot), estZ = minLot ? Math.floor(acres * u / (minLot / 43560)) : null;
   const jur = par.juris ? (/NO CITY/i.test(par.juris) ? 'Unincorporated Maricopa County (no city or town)' : par.juris.replace(/\b(\w)(\w*)/g, (m, a, b) => a + b.toLowerCase())) : 'unavailable';
   let ctx = null, res = null, reasons = [], outline = null;
@@ -2390,7 +2375,7 @@ function renderTopProfit(){
 // ── Intake, value engineering, builder quotes ────────────────────────────
 function zoneRead(l){
   const z = (l.currentZoning || '').toUpperCase();
-  if(/^(R1|RE)-\d+/.test(z)) return ['ok', 'Single-family zoning: a house is allowed by right.'];
+  if(/^(R1|RE|RU|DR|RURAL)-\d+/.test(z)) return ['ok', 'Single-family zoning: a house is allowed by right.'];
   if(/^S-\d/.test(z)) return ['ok', 'Ranch/farm residential: single-family homes allowed, large lots.'];
   if(/^(PUD|PAD|PCD)/.test(z)) return ['warn', 'Planned development: its approved plan decides what is allowed. Get that plan from Phoenix Planning & Development.'];
   if(/^R-/.test(z)) return ['warn', 'Multifamily zoning: houses are usually allowed but the density rules differ. Verify.'];
@@ -2414,7 +2399,7 @@ function intakeHtml(l){
   if(l.landUseClass && l.landUseClass !== 'residential') flags.push(`The county codes this parcel ${l.landUseClass}, which may not match its zoning.`);
   if(l.inFloodplain) flags.push('In a mapped floodplain (' + esc(l.floodZone || 'zone ?') + ').');
   else if(l.floodKnown !== true) flags.push('Flood status UNKNOWN: a successful FEMA lookup is not recorded.');
-  if(l.zoningKnown && !l.currentZoning) flags.push('No City of Phoenix zoning at this point: it may be unincorporated Maricopa County (mailing city is not jurisdiction). Phoenix ADU / lot-split rules and the "adjacent zoning" rezone target may not apply. Confirm jurisdiction and zoning before relying on this.');
+  if(l.zoningKnown && !l.currentZoning && !l.zoningSource) flags.push('No City of Phoenix zoning at this point: it may be unincorporated Maricopa County (mailing city is not jurisdiction). Phoenix ADU / lot-split rules and the "adjacent zoning" rezone target may not apply. Confirm jurisdiction and zoning before relying on this.');
   const lv = l.valuation, landV = lv && lv.mostLikelyValue && !lv.unreliable ? lv.mostLikelyValue : (l.assessedValue || 0), price = landBasis(l).override ? landBasis(l).land : l.salePrice;
   if(price > 0 && landV > 0 && Math.max(price, landV) / Math.min(price, landV) > 1.5) flags.push('Price ' + money(price) + ' vs county proxy ' + money(landV) + ': a gap over 1.5× in either direction. Verify both before relying on the land cost.');
   if(l.rezoningNearby) flags.push(l.rezoningNearby + ' rezoning(s) nearby: the area is changing.');
@@ -2505,9 +2490,10 @@ function renderRuns(){
 // known = the min lot size comes from the zoning code (R1-14 = 14,000 sf, RE-35 = 35,000 sf); otherwise it is the fallback guess.
 function splitInfo(l){
   const m = /^(?:R1|RE)-(\d+)/i.exec(l.currentZoning || '');
-  const minLot = m ? parseInt(m[1],10) * 1000 : (parseFloat(document.getElementById('moMinLot').value) || 14375);
+  const minLot = l.minLotSf || (m ? parseInt(m[1],10) * 1000 : (parseFloat(document.getElementById('moMinLot').value) || 14375));   // minLotSf: per-jurisdiction min lot (east leads)
+  if(l.area === 'east' && !l.minLotSf) return { n: 1, known: false };   // no known min lot outside Phoenix: never assume a 14,375 sf split
   const usable = (typeof usablePct === 'number' ? usablePct : 85) / 100;
-  return { n: Math.max(1, Math.min(4, Math.floor((l.landSf || 0) * usable / minLot))), known: !!m };
+  return { n: Math.max(1, Math.min(4, Math.floor((l.landSf || 0) * usable / minLot))), known: !!(l.minLotSf || m) };
 }
 function splitLots(l){ return splitInfo(l).n; }
 function maxOfferRows(){
@@ -2757,12 +2743,6 @@ function renderMapInstance(inst, leads){
       </div>`);
     inst.markers.push(marker);
     bounds.push([l.lat,l.lng]);
-  });
-  if(inst === vacantMapInst) (window.PHX_EAST_SCREEN || []).forEach(e => {   // east screen: zoning unchecked, shown in blue
-    inst.markers.push(L.circleMarker([e.lat, e.lng], { radius: 5 + e.score / 20, color: '#2f5f9e', fillColor: '#8db7ee', fillOpacity: 0.85, weight: 1.5 })
-      .addTo(inst.map).bindTooltip(String(e.score), { permanent: true, direction: 'center', className: 'score-tooltip' })
-      .bindPopup(`<div style="font-family:'Inter',sans-serif;font-size:12.5px;"><div style="font-weight:700;">${esc(e.address)}</div><div>${esc(e.city)} · ${e.acres} ac · ${money(e.assessed)} assessed</div><div>${esc(e.owner)}${e.yearsHeld == null ? '' : ' · held ' + e.yearsHeld + ' yr'}</div><div style="color:#2f5f9e;margin-top:3px;">East screen: zoning not checked</div></div>`));
-    bounds.push([e.lat, e.lng]);
   });
   if(bounds.length>1 && !mapKeepView) inst.map.fitBounds(bounds, {padding:[24,24]});
 }

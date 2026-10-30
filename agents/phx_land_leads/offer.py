@@ -71,9 +71,9 @@ def new_build_values(lead):
                           "distanceMi": round(_haversine_mi(lat, lng, t[3]["LATITUDE"], t[3]["LONGITUDE"]), 3), "sold": t[1].isoformat()} for t in near]}
 
 
-def attach_new_build_values(leads):
+def attach_new_build_values(leads, limit=OFFER_LEADS):
     res = [l for l in leads if l.get("landUseClass") == "residential" and not l.get("stale")]
-    for l in sorted(res, key=lambda l: -l["score"])[:OFFER_LEADS]:
+    for l in sorted(res, key=lambda l: -l["score"])[:limit]:
         result = new_build_values(l)
         l["newBuildLookup"] = {k: (result or {}).get(k) for k in ("source", "sourceUrl", "retrievedAt", "error")}
         l["newBuild"] = result if result and result.get("arv") and result.get("psf") else None

@@ -57,6 +57,47 @@ PHX_REZONING = "https://maps.phoenix.gov/pds/rest/services/Hosted/Rezoning_Propo
 PHX_CODE_CASES = "https://maps.phoenix.gov/pub/rest/services/Public/NSD_Property_Maintenance/MapServer/0/query"
 FEMA_FLOOD = "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query"
 
+# East-valley parcels (north Scottsdale / Fountain Hills / Cave Creek / Carefree / Rio Verde)
+# tracked by APN on top of the Phoenix zip scan. Only APNs live in the committed file.
+EAST_APNS_PATH = Path(__file__).resolve().parents[2] / "phx-land-leads" / "east-apns.json"
+# Non-Phoenix zoning layers, keyed by the Assessor JURISDICTION field. Each checked
+# 2026-10-30 with a point-in-polygon query on a known parcel (WKID 4326).
+ZONING_BY_JURIS = {
+    "SCOTTSDALE": ("https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData/MapServer/24/query",
+                   "full_zoning", "City of Scottsdale OpenData zoning"),
+    "CAVE CREEK": ("https://services1.arcgis.com/MdyCMZnX1raZ7TS3/arcgis/rest/services/Zoning_February_2024/FeatureServer/0/query",
+                   "ZONE_31804", "Town of Cave Creek zoning (Feb 2024)"),
+    "NO CITY/TOWN": ("https://gis.maricopa.gov/arcgis/rest/services/PND/PlanNet/MapServer/11/query",
+                     "ZONE", "Maricopa County PlanNet zoning (unincorporated)"),
+    # No official layers found for these two; third-party ArcGIS Online copies, treat as unverified.
+    "CAREFREE": ("https://services6.arcgis.com/clPWQMwZfdWn4MQZ/arcgis/rest/services/TOC_Zoning/FeatureServer/104/query",
+                 "Zoning", "Town of Carefree zoning (unofficial third-party copy, last edited 2022)"),
+    "FOUNTAIN HILLS": ("https://services7.arcgis.com/tKxHAVUwBYWFvNcs/arcgis/rest/services/ToFH_2005_LandUse___Zoning/FeatureServer/0/query",
+                       "TEXTSTRING", "Town of Fountain Hills zoning labels (unofficial third-party CAD copy)"),
+}
+# (jurisdiction, base zone) -> min lot sf, checked against each code. Other R1-/RU-/DR-/R-/Rural-N
+# zones fall back to N x 1,000 sf and are flagged unverified.
+VERIFIED_MIN_LOT_SF = {
+    ("NO CITY/TOWN", "RU-43"): 43560, ("NO CITY/TOWN", "RU-190"): 190000,
+    ("CAVE CREEK", "DR-190"): 190000, ("CAVE CREEK", "DR-89"): 89000,
+    ("SCOTTSDALE", "R1-190"): 190000,
+}
+ZONE_LOT_RE = re.compile(r"^(?:R1|RU|DR|R|RURAL)-(\d+)$")
+
+
+def min_lot_sf(juris, zoning):
+    """(min lot sf, verified) for a non-Phoenix zone like 'R1-70 ESL FO' (overlays ignored), else (None, False)."""
+    base = (zoning or "").strip().upper().split(" ")[0]
+    if (juris, base) in VERIFIED_MIN_LOT_SF:
+        return VERIFIED_MIN_LOT_SF[(juris, base)], True
+    m = ZONE_LOT_RE.match(base)
+    return (int(m.group(1)) * 1000, False) if m else (None, False)
+
+
+def byright_units_from_min_lot(acres, min_lot):
+    # 85% net of roads/setbacks; floor at 1 since an existing lot of record is normally buildable
+    return max(1, math.floor(acres * 43560 * 0.85 / min_lot)) if min_lot else None
+
 # North Phoenix + nearby growth-corridor zip codes (Deer Valley, Desert Ridge,
 # Anthem-adjacent, North Gateway) — adjust as the thesis expands.
 NORTH_PHOENIX_ZIPS = ["85085", "85086", "85050", "85054", "85053", "85027",
@@ -583,10 +624,12 @@ def score_lead(rec):
     score = 0
     reasons = []
 
-    # Development upside
-    if rec["rezoningNearby"] >= 3:
+    # Development upside. Rezoning cases, rezone target and code cases are Phoenix-only
+    # layers; outside Phoenix they are None and simply add 0 points -- the same as a Phoenix
+    # lead with no rezoning activity, so no penalty, just no bonus.
+    if (rec["rezoningNearby"] or 0) >= 3:
         score += 25; reasons.append(f"{rec['rezoningNearby']} rezoning cases within {REZONING_RADIUS_MILES}mi")
-    elif rec["rezoningNearby"] >= 1:
+    elif (rec["rezoningNearby"] or 0) >= 1:
         score += 12; reasons.append(f"{rec['rezoningNearby']} rezoning case(s) nearby")
     if rec["rezoneTarget"]:
         score += 20; reasons.append(rec["rezoneTarget"]["basis"])
@@ -678,13 +721,26 @@ def enrich_parcel(p):
     lat, lng = p.get("LATITUDE"), p.get("LONGITUDE")
     land_sf = p.get("LAND_SIZE") or 0
 
-    zoning_rec = point_query(PHX_ZONING, lat, lng, "ZONING,ZCASE,DATE_APPRO")
-    gp_rec = point_query(PHX_GENERAL_PLAN, lat, lng, "NEWCODE,DETAILS")
+    juris = (p.get("JURISDICTION") or "").strip().upper()
+    other = ZONING_BY_JURIS.get(juris) if p.get("_east") else None   # Phoenix zip scan keeps the Phoenix path
     flood_rec = point_query(FEMA_FLOOD, lat, lng, "FLD_ZONE,SFHA_TF")
-    rezoning_nearby = buffer_count_query(PHX_REZONING, lat, lng, REZONING_RADIUS_MILES)
-    surrounding_zones = buffer_distinct_values(PHX_ZONING, lat, lng, NEIGHBOR_ZONING_RADIUS_MILES, "ZONING")
-
-    current_zoning = (zoning_rec or {}).get("ZONING")
+    if other:
+        url, field, zoning_source = other
+        zoning_rec = point_query(url, lat, lng, field)
+        current_zoning = ((zoning_rec or {}).get(field) or "").strip() or None
+        min_lot, lot_verified = min_lot_sf(juris, current_zoning)
+        if juris == "FOUNTAIN HILLS" and min_lot is None:   # CAD labels mix zones with case/ordinance numbers
+            current_zoning, zoning_rec = None, {"_failed": True}
+        gp_rec, rezoning_nearby, surrounding_zones = None, None, []   # Phoenix-only layers
+    else:
+        zoning_source, min_lot, lot_verified = None, None, False
+        zoning_rec = point_query(PHX_ZONING, lat, lng, "ZONING,ZCASE,DATE_APPRO")
+        gp_rec = point_query(PHX_GENERAL_PLAN, lat, lng, "NEWCODE,DETAILS")
+        rezoning_nearby = buffer_count_query(PHX_REZONING, lat, lng, REZONING_RADIUS_MILES)
+        surrounding_zones = buffer_distinct_values(PHX_ZONING, lat, lng, NEIGHBOR_ZONING_RADIUS_MILES, "ZONING")
+        current_zoning = (zoning_rec or {}).get("ZONING")
+        if p.get("_east") and juris != "PHOENIX":   # east parcel in a town with no layer: leave unknown
+            current_zoning, zoning_rec, gp_rec, rezoning_nearby, surrounding_zones = None, {"_failed": True}, None, None, []
     # NEWCODE is the city's numeric General Plan land-use classification —
     # the service carries no published code->label legend, so this is
     # reported as a raw code (cross-reference the city's General Plan map
@@ -697,7 +753,7 @@ def enrich_parcel(p):
     ownership = analyze_ownership(p)
 
     target_zone_for_type = (rezone_target or {}).get("targetZone") or current_zoning
-    is_single_family_play = (target_zone_for_type or "").strip().upper() in SINGLE_FAMILY_ZONES
+    is_single_family_play = (target_zone_for_type or "").strip().upper() in SINGLE_FAMILY_ZONES or bool(min_lot)
 
     is_improved = "_farRatio" in p
     living_sf = p.get("_livingSpaceSf")
@@ -729,7 +785,12 @@ def enrich_parcel(p):
         "zoningKnown": not (zoning_rec or {}).get("_failed"),
         "rezoningNearby": rezoning_nearby,
         "rezoneTarget": rezone_target,
-        "byRightUnits": estimate_byright_units(current_zoning, land_acres),
+        "byRightUnits": byright_units_from_min_lot(land_acres, min_lot) if other else estimate_byright_units(current_zoning, land_acres),
+        "jurisdiction": juris,
+        "zoningSource": zoning_source,
+        "zoningSourceUrl": other[0].removesuffix("/query") if other else None,
+        "minLotSf": min_lot,
+        "minLotVerified": lot_verified,
         "rezoneTargetUnits": (
             round(rezone_target["targetDensity"] * land_acres, 1)
             if rezone_target and rezone_target.get("targetDensity") else None
@@ -740,7 +801,7 @@ def enrich_parcel(p):
         "livingSpaceSf": living_sf,
         "farRatio": far_ratio,
         "yearBuilt": const_year,
-        "codeCases": _code_cases.get(_street_part(p.get("PHYSICAL_ADDRESS"), p.get("PHYSICAL_CITY"))),
+        "codeCases": None if p.get("_east") else _code_cases.get(_street_part(p.get("PHYSICAL_ADDRESS"), p.get("PHYSICAL_CITY"))),
         "saleDate": p.get("SALE_DATE"),
         "subdivision": (p.get("SUBNAME") or "").strip(),
         "rebuildsInSub": _rebuild_momentum.get((p.get("SUBNAME") or "").strip(), 0),
@@ -751,12 +812,99 @@ def enrich_parcel(p):
     if nc:
         rec["homesNearby"], rec["vacantNearby"] = nc[0], max(nc[1] - (0 if is_improved else 1), 0)
     score, reasons = score_lead(rec)
+    if p.get("_east"):
+        rec["area"] = "east"
+        if zoning_source:
+            reasons.append(f"zoning from {zoning_source}")
+        if min_lot:
+            reasons.append(f"by-right count uses {min_lot:,} sf min lot{'' if lot_verified else ' (unverified)'}, 85% net;"
+                           " ESL overlay, slope, NAOS and floodplain NOT modeled")
+        if juris != "PHOENIX":
+            reasons.append("outside Phoenix: rezoning-case, General Plan and code-case signals not available (scored 0)")
     rec["score"] = score
     rec["reasons"] = reasons
     return rec
 
 
+def attach_comps(leads):
+    from comps import build_comps_for_lead
+    print(f"Pulling comparable sales for {len(leads)} leads...")
+    with ThreadPoolExecutor(max_workers=ENRICH_WORKERS) as pool:
+        futures = {pool.submit(build_comps_for_lead, lead): lead for lead in leads}
+        for i, fut in enumerate(as_completed(futures)):
+            lead = futures[fut]
+            try:
+                result = fut.result()
+            except Exception as e:
+                result = {"comps": [], "valuation": None, "note": f"Comps lookup failed: {e}", "error": str(e)}
+            lead["comps"] = result["comps"]
+            lead["valuation"] = result["valuation"]
+            lead["compsNote"] = result["note"]
+            lead["landCompLookup"] = {k: result.get(k) for k in ("source", "sourceUrl", "retrievedAt", "error")}
+            lead["equityMarginPct"] = None
+            if result["valuation"] and lead.get("assessedValue"):
+                lead["equityMarginPct"] = round(
+                    (result["valuation"]["mostLikelyValue"] - lead["assessedValue"])
+                    / lead["assessedValue"] * 100)
+            flag_unreliable_valuation(lead)
+            if (i + 1) % 20 == 0:
+                print(f"  comped {i+1}/{len(leads)}...")
+
+
+def load_east_apns():
+    return set(json.loads(EAST_APNS_PATH.read_text())) if EAST_APNS_PATH.exists() else set()
+
+
+def enrich_east(apns):
+    """Fetch the east watch-list parcels by APN and enrich them (jurisdiction-aware zoning)."""
+    if not apns:
+        return []
+    parcels = []
+    ordered = sorted(apns)
+    for i in range(0, len(ordered), 100):   # keep the WHERE clause short
+        parcels += fetch_parcels("APN IN (" + ",".join(f"'{a}'" for a in ordered[i:i + 100]) + ")")
+    parcels = [dict(p, _east=True) for p in parcels if p.get("LATITUDE") is not None and p.get("LONGITUDE") is not None]
+    print(f"Enriching {len(parcels)}/{len(apns)} east watch-list parcels...")
+    out = []
+    with ThreadPoolExecutor(max_workers=ENRICH_WORKERS) as pool:
+        for fut in as_completed([pool.submit(enrich_parcel, p) for p in parcels]):
+            try:
+                out.append(fut.result())
+            except Exception as e:
+                print(f"  skipped one east parcel due to error: {e}")
+    return out
+
+
+def main_east_only():
+    """Refresh only the east watch list and merge it into the existing data.js (local use;
+    the daily run does the same inside main()). Verdicts are computed for east leads only."""
+    text = OUT_PATH.read_text()
+    m = re.search(r'window\.PHX_LAND_LEADS = (\{.*\});', text, re.S)
+    data = json.loads(m.group(1))
+    east_apns = load_east_apns()
+    east = enrich_east(east_apns)
+    if not east:
+        sys.exit("no east parcels enriched -- data.js left unchanged")
+    attach_comps(east)
+    apply_comps_adjustment(east)   # ranked within the east pool here; the daily run ranks the combined pool
+    from offer import attach_new_build_values
+    from verdict import underwrite
+    attach_new_build_values(east, limit=None)
+    prev = {l["apn"]: l for l in data["leads"]}
+    today = date.today().isoformat()
+    for l in east:
+        old = prev.get(l["apn"], {})
+        l.update(isNew=l["apn"] not in prev, firstSeen=old.get("firstSeen", today), lastSeen=today,
+                 peakScore=max(l["score"], old.get("peakScore", 0)))
+        l["verdict"] = underwrite(l)
+    data["leads"] = [l for l in data["leads"] if l["apn"] not in east_apns] + east
+    OUT_PATH.write_text(text[:m.start(1)] + json.dumps(data, indent=2) + text[m.end(1):])
+    print(f"merged {len(east)} east leads into {OUT_PATH}")
+
+
 def main():
+    if "--east-only" in sys.argv:
+        return main_east_only()
     load_code_cases()
     load_rebuild_momentum()
     print("Pulling vacant land parcels in North Phoenix zip codes...")
@@ -797,7 +945,8 @@ def main():
     improved_candidates.sort(key=lambda p: p["_farRatio"])  # lowest FAR (most underused) first
     improved_candidates = improved_candidates[:MAX_IMPROVED_ENRICHED]
 
-    candidates = vacant_candidates + improved_candidates
+    east_apns = load_east_apns()
+    candidates = [p for p in vacant_candidates + improved_candidates if p.get("APN") not in east_apns]
     print(f"  enriching {len(vacant_candidates)} vacant + {len(improved_candidates)} improved "
           f"= {len(candidates)} candidates (zoning/GP/flood/rezoning lookups)...")
 
@@ -813,6 +962,7 @@ def main():
                 print(f"  enriched {i+1}/{len(candidates)}...")
 
     leads.sort(key=lambda r: r["score"], reverse=True)
+    east_leads = enrich_east(east_apns)
 
     # Vacant and teardown/improved leads are scored on the same scale, but
     # improved leads pick up extra points (existing-structure/FAR signals)
@@ -826,31 +976,11 @@ def main():
                  + improved_leads[:LEADS_SHOWN_PER_CATEGORY])
     top_leads.sort(key=lambda r: r["score"], reverse=True)
 
-    from comps import build_comps_for_lead
     comp_targets = (vacant_leads[:COMPS_MAX_LEADS] + improved_leads[:COMPS_MAX_LEADS])
-    print(f"Pulling comparable sales for the top {len(comp_targets)} leads...")
-    with ThreadPoolExecutor(max_workers=ENRICH_WORKERS) as pool:
-        futures = {pool.submit(build_comps_for_lead, lead): lead for lead in comp_targets}
-        for i, fut in enumerate(as_completed(futures)):
-            lead = futures[fut]
-            try:
-                result = fut.result()
-            except Exception as e:
-                result = {"comps": [], "valuation": None, "note": f"Comps lookup failed: {e}", "error": str(e)}
-            lead["comps"] = result["comps"]
-            lead["valuation"] = result["valuation"]
-            lead["compsNote"] = result["note"]
-            lead["landCompLookup"] = {k: result.get(k) for k in ("source", "sourceUrl", "retrievedAt", "error")}
-            lead["equityMarginPct"] = None
-            if result["valuation"] and lead.get("assessedValue"):
-                lead["equityMarginPct"] = round(
-                    (result["valuation"]["mostLikelyValue"] - lead["assessedValue"])
-                    / lead["assessedValue"] * 100)
-            flag_unreliable_valuation(lead)
-            if (i + 1) % 20 == 0:
-                print(f"  comped {i+1}/{len(comp_targets)}...")
-    apply_comps_adjustment(comp_targets)
+    attach_comps(comp_targets + east_leads)
+    apply_comps_adjustment(comp_targets + east_leads)
     # Re-rank on comps-adjusted score and cut to the shown size per category.
+    # East leads are a fixed watch list: always shown, never compete for the Phoenix slots.
     strong_comps = lambda l: l["parcelStatus"] != "improved" or sum((c.get("soldPrice") or 0) >= MIN_COMP_PRICE for c in l.get("comps") or []) >= 2
     by_score = lambda ls: sorted(ls, key=lambda r: r["score"], reverse=True)[:LEADS_SHOWN_PER_CATEGORY]
     top_leads = by_score([l for l in comp_targets if l["parcelStatus"] == "vacant"]) \
@@ -859,6 +989,9 @@ def main():
 
     from offer import attach_new_build_values  # "Max Offer" section data (sell-to-builder model)
     attach_new_build_values(top_leads)
+    attach_new_build_values(east_leads, limit=None)
+    top_leads += east_leads
+    leads += east_leads
 
     # Unmask hidden LLC owners (not trusts -- a trust name already carries the
     # real person's name) via OpenCorporates. Scoped to top_leads only (not
@@ -933,7 +1066,10 @@ def main():
             "manually per lead before underwriting. Rezone targets landing "
             "on single-family zoning use a subdivision/lot-sale calculator "
             "(add a demolition cost for underused-lot leads); targets on "
-            "multifamily/commercial zoning use a rental pro forma."
+            "multifamily/commercial zoning use a rental pro forma. "
+            "Also tracks a fixed east-valley watch list (north Scottsdale, Fountain Hills, "
+            "Cave Creek, Carefree, Rio Verde) zoned from each town's or the county's layer; "
+            "their by-right counts use the zone's minimum lot and ignore ESL/slope/NAOS/floodplain."
         ),
     }
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
