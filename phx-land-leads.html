@@ -332,6 +332,14 @@
         </div>
       </div>
 
+      <div class="card" id="east-screen">
+        <div class="card-head">
+          <h2>East area screen (Scottsdale, Fountain Hills, Cave Creek, Rio Verde)</h2>
+          <span class="card-sub">Top parcels from county data only. <b>Zoning, flood and hillside limits are not checked</b>, so lot counts are unknown. Ranked by size, absentee owner, years held and whether the lot is unplatted.</span>
+        </div>
+        <div style="overflow-x:auto;"><table id="east-table" style="width:100%; border-collapse:collapse; font-size:12px;"></table></div>
+      </div>
+
       <div class="card" id="top-profit" style="border:2px solid #b8860b; background:#fffaf0;">
         <div class="card-head">
           <h2>📈 Top Profit Opportunities</h2>
@@ -577,6 +585,7 @@ BEFORE YOU SIGN ANYTHING
 </div>
 
 <script src="phx-land-leads/data.js"></script>
+<script src="phx-land-leads/east-screen.js"></script>
 <script src="dev-model/rent-comps.js"></script>
 <script src="assets/js/shell.js"></script>
 <script>
@@ -588,6 +597,12 @@ function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;',
 function money(n){ return n==null||isNaN(n) ? '—' : (n<0?'-':'')+'$'+Math.abs(Math.round(n)).toLocaleString(); }
 function pct1(n){ return n==null||isNaN(n) ? '—' : (n*100).toFixed(1)+'%'; }
 function num1(n){ return n==null||isNaN(n) ? '—' : Number(n).toLocaleString(undefined,{maximumFractionDigits:1}); }
+
+(function(){
+  const E = window.PHX_EAST_SCREEN || [], t = document.getElementById('east-table'); if(!t) return;
+  t.innerHTML = '<tr style="text-align:left;"><th>Score</th><th>Address</th><th>Area</th><th>Acres</th><th>Assessed</th><th>Owner</th><th>Held</th><th>Platted</th><th></th></tr>' +
+    E.map(e => `<tr style="border-top:1px solid var(--border,#ddd);"><td>${e.score}</td><td>${esc(e.address)}</td><td>${esc(e.city)}</td><td>${e.acres}</td><td>${money(e.assessed)}</td><td>${esc(e.owner)}<div style="color:#888;">${esc(e.mail)}</div></td><td>${e.yearsHeld==null?'—':e.yearsHeld+' yr'}</td><td>${e.platted?'yes':'no'}</td><td><a href="https://www.google.com/maps/search/?api=1&query=${e.lat},${e.lng}" target="_blank" rel="noopener">map</a></td></tr>`).join('');
+})();
 
 document.getElementById('methodology-note').innerHTML =
   `<b>Methodology:</b> ${esc(D.methodologyNote || '')}`;
