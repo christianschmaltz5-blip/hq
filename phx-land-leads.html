@@ -2665,16 +2665,17 @@ async function exportEncrypted(pass){
   a.click();
 }
 async function syncContacts(){
-  if(Object.keys(loadContacts()).length) return;
   try{
-    const r=await fetch(ENC_URL); if(!r.ok) return;
+    const r=await fetch(ENC_URL, {cache:'no-cache'}); if(!r.ok) return;
     const j=await r.json();
+    if(Object.keys(loadContacts()).length && localStorage.getItem('contactsSig')===j.ct.slice(0,40)) return;   // already have this version
     for(let tries=0;tries<3;tries++){
       let pass=localStorage.getItem('contactsPass')||prompt('Passphrase to unlock synced skip-trace contacts (Cancel to skip):');
       if(!pass) return;
       try{
         const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:unb64(j.iv)},await encKey(pass,unb64(j.salt)),unb64(j.ct));
-        localStorage.setItem('leadContacts',new TextDecoder().decode(pt));
+        localStorage.setItem('leadContacts',JSON.stringify({...loadContacts(),...JSON.parse(new TextDecoder().decode(pt))}));
+        localStorage.setItem('contactsSig',j.ct.slice(0,40));
         localStorage.setItem('contactsPass',pass);
         refreshAll(); return;
       }catch(e){ localStorage.removeItem('contactsPass'); }
