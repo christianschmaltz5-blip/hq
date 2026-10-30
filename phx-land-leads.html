@@ -2026,11 +2026,17 @@ function setCheck(apn, v){
 }
 function tpsPhone(n){ return 'https://www.truepeoplesearch.com/results?phoneno=' + encodeURIComponent(fmtPhone(n)); }
 function tpsName(c){ return 'https://www.truepeoplesearch.com/results?name=' + encodeURIComponent(((c.first || '') + ' ' + (c.last || '')).trim()) + '&citystatezip=' + encodeURIComponent(((c.mcity || '') + ' ' + (c.mstate || '')).trim()); }
+function mailOnlyBits(lead){
+  if(!lead.ownerMailAddress || (lead.ownership || {}).isHiddenOwner) return '';
+  const i = currentLeads.findIndex(l => l.apn === lead.apn);
+  return `<span style="background:#fff3cd;color:#7a5b00;font-weight:700;padding:2px 8px;border-radius:10px;">✉ MAIL ONLY</span>` + (i < 0 ? '' : ` <button class="mail-btn" onclick="openLetter(${i})">Draft letter</button>`);
+}
 function contactBlock(lead){
-  const c = loadContacts()[lead.apn]; if(!c) return '';
+  const c = loadContacts()[lead.apn];
+  if(!c){ const m = mailOnlyBits(lead); return m ? `<div id="cb-${esc(lead.apn)}" class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${m}</div>` : ''; }
   const usd = v => v ? '$' + Math.round(parseFloat(v)).toLocaleString() : '';
   const bits = [];
-  bits.push(c.phones.length ? '📞 ' + c.phones.map(p => `<a href="tel:${esc(String(p.n).replace(/\D/g,''))}">${esc(fmtPhone(p.n))}</a>${p.type ? ` <span style="color:var(--text-faint);">${esc(p.type.toLowerCase())}</span>` : ''}`).join(' · ') : '📞 no phone found');
+  bits.push(c.phones.length ? c.phones.map(p => `<span style="background:#e3f6e8;border-radius:10px;padding:2px 10px;font-size:15px;font-weight:700;white-space:nowrap;">📞 <a href="tel:${esc(String(p.n).replace(/\D/g,''))}">${esc(fmtPhone(p.n))}</a>${p.type ? ` <span style="font-size:11px;font-weight:400;color:var(--text-faint);">${esc(p.type.toLowerCase())}</span>` : ''}</span>`).join(' ') : (mailOnlyBits(lead) || '📞 no phone found'));
   if(c.emails.length) bits.push('✉ ' + c.emails.map(e => `<a href="mailto:${esc(e)}">${esc(e.toLowerCase())}</a>`).join(' · '));
   if(c.marketValue) bits.push('Market value ' + usd(c.marketValue));
   if(c.lastSaleAmount && c.lastSaleAmount !== '0') bits.push(`Last sale ${usd(c.lastSaleAmount)}${c.lastSaleDate ? ' (' + c.lastSaleDate.slice(0,4) + ')' : ''}`);
