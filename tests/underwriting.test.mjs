@@ -172,6 +172,20 @@ for (const fixture of fixtures.filter(f => f.input.land > 0)) {
   });
 }
 
+test('profitFor is gated on land price and zoning; ungated keeps maxLand', () => {
+  const { context } = calculatorContext(fixtures[0]);
+  const x = fixtures.find(f => f.input.land > 0).input;
+  const base = { apn: 'G', landSf: 40000, currentZoning: 'R1-8', houseComps: { selectionPolicy: HOUSE_COMP_POLICY_ID, psf: x.psf, n: 5, radiusMi: 1 },
+    valuation: { mostLikelyValue: x.land, unreliable: false }, assessedValue: x.land };
+  assert.ok(context.profitFor(base));
+  const noPrice = { ...base, valuation: { unreliable: true } };
+  assert.equal(context.profitFor(noPrice), null);
+  assert.ok(Number.isFinite(context.profitFor(noPrice, 0, 0, { ungated: true }).maxLand));
+  const cp = { ...base, currentZoning: 'CP/GCP' };
+  assert.equal(context.profitFor(cp), null);
+  assert.ok(context.profitFor(cp, 0, 0, { ungated: true }));
+});
+
 test('stored new-build fallback exposes its source, date, and GIS reason', () => {
   const { context } = calculatorContext(fixtures[0]);
   const lead = {
