@@ -207,7 +207,7 @@ def esri_query(url, params, retries=3):
     params = {**params, "f": "json"}
     body = urllib.parse.urlencode(params).encode()
     parsed = urllib.parse.urlsplit(url)
-    headers = {"Content-Type": "application/x-www-form-urlencoded"}
+    headers = {"Content-Type": "application/x-www-form-urlencoded", "User-Agent": "hq-land-leads/1.0 (personal parcel research)"}   # FEMA 403s requests with no User-Agent
     for attempt in range(retries):
         conn = _get_conn(parsed.netloc)
         try:
