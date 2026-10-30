@@ -1904,7 +1904,7 @@ function applyFilters(){
   // Shared filters (search/value/flood/hot) apply to both the list and both
   // maps. Type only narrows the LIST -- the two maps always show their own
   // category side by side, that's the whole point of having two of them.
-  let base = (D.leads || []).filter(l => !isDiscarded(l.apn) && !isContacted(l.apn)).sort((a, b) => b.score - a.score);
+  let base = (D.leads || []).filter(l => !isDiscarded(l.apn)).sort((a, b) => b.score - a.score);
   if(q) base = base.filter(l => (l.address||'').toLowerCase().includes(q) || (l.ownerName||'').toLowerCase().includes(q) || String(l.apn||'').toLowerCase().includes(q));
   if(document.getElementById('estateOnly').checked) base = base.filter(l => l.ownership?.isEstateOwner);
   if(hideFlood) base = base.filter(l => !l.inFloodplain);
@@ -2015,7 +2015,8 @@ function importContacts(input){
 function fmtPhone(n){ const d = String(n).replace(/\D/g, ''); return d.length === 10 ? `(${d.slice(0,3)}) ${d.slice(3,6)}-${d.slice(6)}` : n; }
 function contactInline(apn){
   const c = loadContacts()[apn]; if(!c) return '';
-  return c.phones.length ? c.phones.map(p => `<a href="tel:${esc(String(p.n).replace(/\D/g,''))}">${esc(fmtPhone(p.n))}</a>`).join(' · ') : '<span style="color:var(--text-faint);">traced – no phone found</span>';
+  const done = isContacted(apn);
+  return c.phones.length ? c.phones.map(p => `<a ${done ? 'style="background:#e6dcfa;color:#4b2e8a;font-weight:700;border-radius:8px;padding:1px 6px;" ' : ''}href="tel:${esc(String(p.n).replace(/\D/g,''))}">${esc(fmtPhone(p.n))}</a>`).join(' · ') : '<span style="color:var(--text-faint);">traced – no phone found</span>';
 }
 function loadChecks(){ try{ return JSON.parse(localStorage.getItem('contactChecks') || '{}'); }catch(e){ return {}; } }
 function setCheck(apn, v){
@@ -2037,7 +2038,8 @@ function contactBlock(lead){
   if(!c){ const m = mailOnlyBits(lead); return m ? `<div id="cb-${esc(lead.apn)}" class="lead-sub" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${m}</div>` : ''; }
   const usd = v => v ? '$' + Math.round(parseFloat(v)).toLocaleString() : '';
   const bits = [];
-  bits.push(c.phones.length ? c.phones.map(p => `<span style="background:#e3f6e8;border-radius:10px;padding:2px 10px;font-size:15px;font-weight:700;white-space:nowrap;">📞 <a href="tel:${esc(String(p.n).replace(/\D/g,''))}">${esc(fmtPhone(p.n))}</a>${p.type ? ` <span style="font-size:11px;font-weight:400;color:var(--text-faint);">${esc(p.type.toLowerCase())}</span>` : ''}</span>`).join(' ') : (mailOnlyBits(lead) || '📞 no phone found'));
+  const done = isContacted(lead.apn), pill = done ? 'background:#e6dcfa;color:#4b2e8a;' : 'background:#e3f6e8;';
+  bits.push(c.phones.length ? (done ? `<span style="font-weight:700;color:#4b2e8a;">✓ CONTACTED ${esc(loadContacted()[lead.apn])}</span> ` : '') + c.phones.map(p => `<span style="${pill}border-radius:10px;padding:2px 10px;font-size:15px;font-weight:700;white-space:nowrap;">📞 <a href="tel:${esc(String(p.n).replace(/\D/g,''))}">${esc(fmtPhone(p.n))}</a>${p.type ? ` <span style="font-size:11px;font-weight:400;color:var(--text-faint);">${esc(p.type.toLowerCase())}</span>` : ''}</span>`).join(' ') : (mailOnlyBits(lead) || '📞 no phone found'));
   if(c.emails.length) bits.push('✉ ' + c.emails.map(e => `<a href="mailto:${esc(e)}">${esc(e.toLowerCase())}</a>`).join(' · '));
   if(c.marketValue) bits.push('Market value ' + usd(c.marketValue));
   if(c.lastSaleAmount && c.lastSaleAmount !== '0') bits.push(`Last sale ${usd(c.lastSaleAmount)}${c.lastSaleDate ? ' (' + c.lastSaleDate.slice(0,4) + ')' : ''}`);
