@@ -51,13 +51,18 @@ class EconomicsTests(unittest.TestCase):
             result = verdict.underwrite(parcel, fetch_comps=False)
         network.assert_not_called()
         self.assertEqual(result["strategy"], "4 homes")
-        self.assertEqual(result["profit"], 624806)
-        self.assertEqual(result["finished"], 7296000)
-        # The maximum offer can favor a different strategy than profit at today's price.
-        self.assertEqual(result["supportableOffer"], 465032)
-        self.assertEqual(result["offerHomes"], 1)
+        self.assertEqual(result["profit"], 1509446)
+        self.assertEqual(result["finished"], 8208000)
+        # At the 90% split factor the max offer and profit both favor 4 homes.
+        self.assertEqual(result["supportableOffer"], 1178594)
+        self.assertEqual(result["offerHomes"], 4)
         self.assertEqual(result["land"], 535000)
         self.assertEqual(parcel["landPriceOverride"]["priceType"], "recorded historical sale")
+
+    def test_commercial_zoning_blocks_residential_verdict(self):
+        parcel = lead()
+        parcel["currentZoning"] = "CP/GCP"
+        self.assertIsNone(verdict.underwrite(parcel, fetch_comps=False))
 
     def test_split_cap_and_shared_usable_area(self):
         self.assertEqual(verdict.split_n({"currentZoning": "R1-10", "landSf": 1000000}), (4, True))

@@ -363,7 +363,7 @@
             <label style="font-size:12.5px;color:var(--text-soft);">Split cost per extra lot ($)
               <input class="filter-input" id="moSplitCost" type="number" value="25000" style="width:90px;"></label>
             <label style="font-size:12.5px;color:var(--text-soft);">Split lots sell at (% of full-lot value)
-              <input class="filter-input" id="moSplitHaircut" type="number" value="80" style="width:70px;"></label>
+              <input class="filter-input" id="moSplitHaircut" type="number" value="90" style="width:70px;"></label>
             <label style="font-size:12.5px;color:var(--text-soft);">Min lot size if zoning unknown (sf)
               <input class="filter-input" id="moMinLot" type="number" value="14375" style="width:80px;"></label>
             <select class="filter-input" id="moSort" style="width:230px;">
@@ -855,7 +855,7 @@ function resetCalc(idx){
 
 function initCalc(idx, lead){
   const dealType = lead.dealType || 'rental';
-  const nonResidential = lead.landUseClass && lead.landUseClass !== 'residential';
+  const nonResidential = (lead.landUseClass && lead.landUseClass !== 'residential') || commZoned(lead);
   const units = nonResidential ? 1 : Math.max(1, Math.round(lead.rezoneTargetUnits || lead.byRightUnits || (lead.landAcres||0) * 8));
   const demoCost = lead.parcelStatus === 'improved' ? (lead.defaultDemoCost || 0) : 0;
   calcStates[idx] = Object.assign({}, SUBDIVISION_DEFAULTS, holdDefaults(lead, units),
@@ -2271,7 +2271,7 @@ function leadAutofill(l){
     lots: p ? p.n : splitInfo(l).n, demo: l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0, psf: c ? c.psf : '' };
 }
 function priceBasisHtml(l){
-  const lb = landBasis(l), ov = lb.override, p = profitFor(l, 0, 0, { hard: 325 });
+  const lb = landBasis(l), ov = lb.override, p = profitFor(l, 0, 0, { hard: 325, ungated: true });
   const basis = ov ? `<b>APN ${esc(l.apn)} price override: ${money(ov.landCost)}</b> · ${esc(ov.priceType)} dated ${esc(ov.priceDate)}<br><a href="${esc(ov.sourceUrl)}" target="_blank" rel="noopener">${esc(ov.source)}</a> · observed ${esc(ov.observedAt)}${ov.note ? '<br>' + esc(ov.note) : ''}`
     : `APN ${esc(l.apn)} · ${lb.ok ? 'Reliable land comps proxy' : 'Assessed-value fallback'}: ${money(lb.land)}. No sourced price override.${l.landPriceOverrideError ? '<br>Override rejected: ' + esc(l.landPriceOverrideError) : ''}`;
   const offer = p ? p.maxLand >= 0 ? `<b>Supportable offer: up to ${money(p.maxLand)}</b> total (${p.offerN} home${p.offerN > 1 ? 's' : ''})` : `<b>No nonnegative land offer meets the target</b> (land budget ${money(p.maxLand)}).` : 'Supportable offer unavailable: land or home-sale inputs missing.';
@@ -2281,8 +2281,10 @@ function priceBasisHtml(l){
     ? `<br>⚠ Price gap: ${money(reference)} ${ov ? 'override' : 'recorded sale'} vs ${money(proxy)} county proxy (${(Math.max(reference, proxy) / Math.min(reference, proxy)).toFixed(1)}×). Check both inputs.` : '';
   return `<div style="display:flex;flex-wrap:wrap;gap:20px;"><div>${basis}</div><div>${offer}<br>Screen at $325/sf build, ${document.getElementById('hcProfit').value}% target, stored sale comps and parcel demolition; other calculator assumptions apply. Split capacity is unconfirmed; approval, access and utilities still need checking.</div></div>${gap}<div style="margin-top:5px;">${compSourceHtml(l)}</div>`;
 }
+function commZoned(l){ return /^(C-|CP|PSC|A-|I-|IND)/i.test((l.currentZoning || '').trim()); }   // county says residential, zoning says otherwise
 function profitFor(l, extraHard, psfOverride, o){
   o = o || {};
+  if(!o.ungated && (!landBasis(l).ok || commZoned(l))) return null;   // no real land price or non-residential zoning: no profit/verdict; maxLand callers pass ungated
   const nb = selectedComps(l); if(!nb) return null;
   const psf = psfOverride || nb.psf;
   const num = id => parseFloat(document.getElementById(id).value) || 0;

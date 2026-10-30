@@ -24,7 +24,7 @@ def _parse_num(value):
 
 A = dict(sf=HOUSE_COMP_POLICY["planSf"], hard=(275, 325), soft=0.08, site=10_000, fin=0.07, sell=0.03,
          adu=dict(n=0, sf=800, hard=350, site=15_000, value=0),
-         split_cost=25_000, haircut=0.8, min_lot=14_375, usable=0.85, good=0.10, maybe=0.05)
+         split_cost=25_000, haircut=0.9, min_lot=14_375, usable=0.85, good=0.10, maybe=0.05)
 
 OVERRIDES = json.loads(Path(__file__).with_name("overrides.json").read_text())
 COMP_SOURCE = "Maricopa County Assessor nearby home sales"
@@ -193,8 +193,8 @@ def verdict_label(high_profit, high_margin, low_margin, risk):
 
 def underwrite(l, *, fetch_comps=True, overrides=None):
     override = stamp_land_override(l, overrides)
-    if l.get("landUseClass") != "residential":
-        return None
+    if l.get("landUseClass") != "residential" or re.match(r"(?:C-|CP|PSC|A-|I-|IND)", (l.get("currentZoning") or "").strip(), re.I):
+        return None   # commercial zoning conflicts with the county's residential class
     # Offline recalculation preserves stored retrieval dates; unknown dates remain null.
     hc = l["houseComps"] = resolve_house_comps(l, house_comps(l) if fetch_comps else l.get("houseComps"))
     if not hc.get("psf"):
