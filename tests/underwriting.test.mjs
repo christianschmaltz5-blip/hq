@@ -183,7 +183,8 @@ test('profitFor is gated on land price and zoning; ungated keeps maxLand', () =>
   assert.ok(Number.isFinite(context.profitFor(noPrice, 0, 0, { ungated: true }).maxLand));
   const cp = { ...base, currentZoning: 'CP/GCP' };
   assert.equal(context.profitFor(cp), null);
-  assert.ok(context.profitFor(cp, 0, 0, { ungated: true }));
+  assert.equal(context.profitFor(cp, 0, 0, { ungated: true }), null);   // ungated waives only the land price
+  assert.equal(context.splitInfo({ ...base, currentZoning: 'PAD-2', landSf: 76231 }).n, 1);
 });
 
 test('stored new-build fallback exposes its source, date, and GIS reason', () => {

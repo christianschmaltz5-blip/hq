@@ -8,4 +8,6 @@ echo "=== rent-comps run $(date) ==="
 claude -p "$(cat agents/rent_comps/prompt.md)" \
   --model sonnet \
   --allowedTools "ToolSearch,Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(cd:*),Bash(date:*),mcp__claude-in-chrome"
-echo "=== rent-comps done $(date) exit=$? ==="
+rc=$?
+echo "=== rent-comps done $(date) exit=$rc ==="
+exit $rc
