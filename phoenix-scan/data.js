@@ -18,11 +18,40 @@
 // };
 
 window.PHX_SCAN = {
-  updated: "2026-10-19",
-  listingsScanned: 12,
+  updated: "2026-11-02",
+  listingsScanned: 16,
   benchmarks: { "A": 4.75, "B": 4.90, "C": 5.40, "2-4 unit": 5.50 },
 
-  qualifying: [],
+  qualifying: [
+    {
+      name: "Uptown Phoenix 9",
+      address: "5035 N 23rd Ave, Phoenix AZ 85015",
+      zip: "85015",
+      ask: 1699000,
+      units: 9,
+      cls: "C",
+      noi: 122000,
+      capPct: 7.18,
+      spreadBps: 178,
+      confidence: "MEDIUM",
+      notes: "Broker cites 2025 P&L NOI of $122,000 (7.2% cap), 100% occupied, 7 buildings on 0.56 ac R-3, Opportunity Zone, $250k renovations; seller financing 6% IO / 30% down. P&L itself not visible (login-gated), so NOI is broker-stated and expense ratio unverified. 243 days on market.",
+      url: "https://www.crexi.com/properties/2372857/arizona-5035-n-23rd-ave-phoenix-az-85015"
+    },
+    {
+      name: "3rd Street Apartments",
+      address: "8910-8912 N 3rd St, Phoenix AZ 85020",
+      zip: "85020",
+      ask: 1299000,
+      units: 10,
+      cls: "C",
+      noi: 88600,
+      capPct: 6.82,
+      spreadBps: 142,
+      confidence: "LOW",
+      notes: "Marketing text states 6.82% cap (implied NOI ~$88.6k), 100% occupied, $400k+ capex done, 'runway to 8.00%'. Crexi calculator shows 7.85% ($102,000), which looks like pro forma (would be +245bps); used the lower 6.82% as the conservative figure. No rents or P&L visible. 1031 exchange sale, 333 days on market.",
+      url: "https://www.crexi.com/properties/2289585/arizona-8910-8912-n-3rd-st"
+    }
+  ],
 
   nearMisses: [],
 
@@ -34,22 +63,22 @@ window.PHX_SCAN = {
       reason: "$2,599,000 ask, 5 units. Stated 9.37% = +397bps vs Class C 5.40% on paper, but no rents/NOI visible in logged-out view (LOW confidence). Prior scans found the listing copy describes sober-living / assisted-living income (~$28k/mo), specialty board-and-care, not conventional apartment rent, so the spread measures the wrong asset class. Excluded; story note: specialty use."
     },
     {
+      address: "1435 E Benson Hwy, Tucson AZ 85714 (21-door studio community)",
+      statedCapPct: null,
+      realCapPct: 7.61,
+      reason: "$850,000 ask. FY2025 NOI $64,723 on $140,051 income (53.8% expense ratio, all-bills-paid) = 7.61%, +221bps vs Class C, but Tucson is outside the Phoenix metro. Listing is typed 'RV Park, Apartment Building', unit count inconsistent (16 vs 21), built 1947. Excluded; story note: outside metro, utility-inclusive 1947 stock."
+    },
+    {
       address: "1477 S Warner Dr, Apache Junction AZ 85120 (Mesquite Ranch RV Park)",
-      statedCapPct: 6.11,
-      realCapPct: null,
-      reason: "$1,125,000 ask, 20 RV/MH sites. Carried from prior scan (6.11% stated, 64% occupied, pro forma); no cap shown in this run's feed. RV/MH park, outside conventional multifamily. LOW confidence."
-    },
-    {
-      address: "Clubhouse at Arcadia ($12.247M, 43 units) and Arcadia 52 ($10.571M)",
       statedCapPct: null,
       realCapPct: null,
-      reason: "Detail pages open but Cap Rate / NOI / Units are login-gated (asterisked); only Crexi's default 5.75% calculator placeholder shows, which is not a listing figure. Class B, 231 days on market. Cannot underwrite; prior near miss (Clubhouse +85bps) unverifiable this run."
+      reason: "$1,125,000 ask, 20 RV/MH sites. No cap shown in this run's feed (prior scans: 6.11% stated, 64% occupied, pro forma). RV/MH park, outside conventional multifamily. LOW confidence."
     },
     {
-      address: "Other listings in feed with no financials or non-comparable: 3044-3048 E Beck Ln ($1.65M, 8 units, 1983), 118-unit Scottsdale Rd Tempe ($19M, hotel conversion); land: The Capistrano Glendale ($18M), 903 & 909 N Miller Rd Tempe ($7.1M); rural/specialty: Lazy D Ranch Star Valley, Blue Sage Eagar, Dateland compound, Desert Ridge Quartzsite",
+      address: "Other listings in scrape with no financials or non-comparable: 1645 E Cheery Lynn Rd Phoenix ($6.386M, 14 units, 2024 Class A townhomes, JLL, assumable 3.52% debt; no NOI shown), 1214 S Farmer Ave Tempe ($1.395M, 7 units, 1947/58; no NOI), 3044-3048 E Beck Ln Phoenix ($1.65M, 8 units, 1983; no NOI), 118-unit 1429 N Scottsdale Rd Tempe ($19M); outside metro/specialty: Globe retail+2 apts, 113 & 119 E District St Tucson quadplex, Salome RV development, Sedona STR, Lazy D Ranch Star Valley, Blue Sage Eagar, Dateland compound",
       statedCapPct: null,
       realCapPct: null,
-      reason: "No cap rate, NOI or rents disclosed in the logged-out view (cannot underwrite), or land/hospitality/RV/specialty, or outside the Phoenix metro."
+      reason: "No cap rate, NOI or rents disclosed in the logged-out view (cannot underwrite), or hospitality/RV/specialty, or outside the Phoenix metro."
     }
   ],
 
@@ -63,6 +92,7 @@ window.PHX_SCAN = {
     { date: "2026-09-29", scanned: 27, qualifyingCount: 0, top: "Clubhouse at Arcadia +85bps (near miss). Headless scrape returned only the unfiltered 'Recommended' feed (pages 1-3, ~25 unique listings, 437 in pool) plus 8 detail pages; no cap-rate filter and most financials login-gated. Also reviewed, no flag: Macallister 5.04% actual vs 4.48% headline (Class A, +29bps), Alegre Park Tempe 5.75% (+35bps vs C), Row 31 in lease-up (~4.6% re-underwritten at $1,587 avg rent, Class A). Prior-scan qualifying/near-miss lists not re-scraped this run and dropped - verify individually before acting." },
     { date: "2026-10-05", scanned: 9, qualifyingCount: 0, top: "No qualifiers, no near misses. Headless scrape again returned only the unfiltered 'Recommended' feed (438 in pool; 9 unique listings, most outside the Phoenix metro: Payson, Yuma, Prescott, Tucson, Williams, Casa Grande) plus 8 detail pages; no cap-rate filter and nearly all financials login-gated. Closest: Mesquite Ranch RV Park (Apache Junction) stated 6.11% = +71bps vs Class C, but 64% occupied, 20 sites, RV/MH specialty, so excluded. Prior near-miss (Clubhouse at Arcadia) and Signature 18 / Rare Arcadia / Tempe 118-unit not in this scrape and dropped - verify individually before acting." },
     { date: "2026-10-12", scanned: 19, qualifyingCount: 0, top: "No qualifiers, no near misses. Headless scrape again returned only the unfiltered 'Recommended' feed (439 in pool, 17 unique search listings plus 2 extra detail pages) with nearly all financials login-gated. Closest: 2719 W Maryland Ave (8 units, 1958) stated 7.82% but re-underwrites to 5.29% (-11bps vs Class C) at stated rents with 42% opex. Payson 2-home property stated 7.83% re-underwrites to 5.78% (+28bps, outside metro). Clubhouse at Arcadia (prior near miss) had no financials visible this run - verify individually." },
-    { date: "2026-10-19", scanned: 12, qualifyingCount: 0, top: "No qualifiers, no near misses. Headless scrape again returned only the unfiltered 'Recommended' feed (430 in pool; 12 unique search listings, pages 1-2 populated, page 3 empty) plus 6 detail pages; nearly all financials login-gated. Only stated cap in feed: Rare Arcadia 9.37% (5 units), previously identified as sober-living/specialty income, excluded. Last week's 2719 W Maryland Ave and Payson 2-home property not in this scrape and dropped. Clubhouse at Arcadia (prior near miss) has no financials visible - verify individually." }
+    { date: "2026-10-19", scanned: 12, qualifyingCount: 0, top: "No qualifiers, no near misses. Headless scrape again returned only the unfiltered 'Recommended' feed (430 in pool; 12 unique search listings, pages 1-2 populated, page 3 empty) plus 6 detail pages; nearly all financials login-gated. Only stated cap in feed: Rare Arcadia 9.37% (5 units), previously identified as sober-living/specialty income, excluded. Last week's 2719 W Maryland Ave and Payson 2-home property not in this scrape and dropped. Clubhouse at Arcadia (prior near miss) has no financials visible - verify individually." },
+    { date: "2026-11-02", scanned: 16, qualifyingCount: 2, top: "5035 N 23rd Ave +178bps (Class C, 9 units, broker-stated 2025 NOI $122k = 7.18%, MEDIUM) and 8910-8912 N 3rd St +142bps (Class C, 10 units, 6.82% stated, LOW; calculator shows 7.85% likely pro forma). Headless scrape again returned only the unfiltered 'Recommended' feed (442 in pool; 12 unique search listings plus 4 extra detail pages); most financials login-gated and nothing independently verified. Tucson Benson Hwy 7.61% (+221bps) excluded as outside the Phoenix metro. Clubhouse at Arcadia (prior near miss) not in this scrape and dropped - verify individually." }
   ]
 };
