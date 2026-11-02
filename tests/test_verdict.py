@@ -177,6 +177,43 @@ class OverrideTests(unittest.TestCase):
         self.assertIsNone(verdict.underwrite(parcel, fetch_comps=False, overrides={}))
 
 
+class AreaAverageLandTests(unittest.TestCase):
+    AREAS = {"east": 400000, "phx": 300000}
+
+    def test_area_median_with_small_area_fallback(self):
+        leads = [{"area": None, "landAcres": 1, "valuation": {"mostLikelyValue": v}} for v in (100, 200, 300, 400, 10_000)]
+        leads += [{"area": "east", "landAcres": 2, "valuation": {"mostLikelyValue": 2000}},
+                  {"area": None, "landAcres": 1, "valuation": {"mostLikelyValue": 9e9, "unreliable": True}}]
+        self.assertEqual(verdict.area_land_per_acre(leads), {"phx": 300, "east": 350})   # east has 1 sample: all-lead median
+        self.assertEqual(verdict.area_land_per_acre([]), {})
+
+    def test_area_average_only_when_no_reliable_land(self):
+        parcel = lead()
+        parcel.update(landAcres=1)
+        result = verdict.underwrite(parcel, fetch_comps=False, area_per_acre=self.AREAS)
+        self.assertEqual(result["land"], 535000)   # override wins
+        self.assertNotIn("landBasis", result)
+        result = verdict.underwrite(parcel, fetch_comps=False, overrides={}, area_per_acre=self.AREAS)
+        self.assertEqual(result["land"], 900000)   # reliable valuation wins
+        self.assertNotIn("preliminary", result)
+
+    def test_area_average_verdict_is_preliminary_and_high_risk(self):
+        parcel = lead()
+        parcel.update(currentZoning="R1-100", landSf=10000, landAcres=2, area="east")
+        parcel["valuation"]["unreliable"] = True
+        result = verdict.underwrite(parcel, fetch_comps=False, overrides={}, area_per_acre=self.AREAS)
+        self.assertEqual((result["land"], result["landBasis"], result["preliminary"], result["risk"]), (800000, "area-avg", True, "High"))
+        self.assertIn("$400,000/acre", result["landBasisNote"])
+        self.assertNotEqual(result["label"], "Good")
+        parcel["currentZoning"] = "C-2"
+        self.assertIsNone(verdict.underwrite(parcel, fetch_comps=False, overrides={}, area_per_acre=self.AREAS))
+
+    def test_preliminary_score_capped_below_hot(self):
+        l = {"score": 100, "verdict": {"label": "Maybe", "marginPct": 25, "preliminary": True}}
+        verdict.rescore(l)
+        self.assertEqual((l["score"], l["compsScore"], l["signalScore"]), (59, 100, 100))
+
+
 class CompMetadataTests(unittest.TestCase):
     def test_cached_recalculation_preserves_error_source_and_time(self):
         parcel = lead()

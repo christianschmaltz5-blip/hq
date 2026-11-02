@@ -9,6 +9,7 @@ import argparse
 import json
 import math
 import re
+import statistics
 from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -197,7 +198,21 @@ def verdict_label(high_profit, high_margin, low_margin, risk):
     return "Maybe" if high_profit >= 0 and (high_margin >= A["maybe"] or low_margin >= A["good"]) else "Pass"
 
 
-def underwrite(l, *, fetch_comps=True, overrides=None):
+def area_land_per_acre(leads):
+    """Reliable land $/acre per area ('east' vs everything else = 'phx'). Median, not mean, so a few
+    outlier valuations can't drag the basis; areas with <5 samples use the all-lead median."""
+    by = {}
+    for l in leads:
+        v = l.get("valuation") or {}
+        if v.get("mostLikelyValue") and not v.get("unreliable") and l.get("landAcres"):
+            by.setdefault("east" if l.get("area") == "east" else "phx", []).append(v["mostLikelyValue"] / l["landAcres"])
+    every = [x for xs in by.values() for x in xs]
+    if not every:
+        return {}
+    return {a: statistics.median(by[a]) if len(by.get(a, [])) >= 5 else statistics.median(every) for a in ("east", "phx")}
+
+
+def underwrite(l, *, fetch_comps=True, overrides=None, area_per_acre=None):
     override = stamp_land_override(l, overrides)
     if l.get("landUseClass") != "residential" or re.match(r"(?:C-|CP|PSC|A-|I-|IND)", (l.get("currentZoning") or "").strip(), re.I):
         return None   # commercial zoning conflicts with the county's residential class
@@ -207,10 +222,15 @@ def underwrite(l, *, fetch_comps=True, overrides=None):
         return None
     v = l.get("valuation") or {}
     land_ok = bool(override or (v.get("mostLikelyValue") and not v.get("unreliable")))
-    # No reliable land comp or hand-set price: assessed value is not a price, so give no verdict.
+    # No reliable land comp or hand-set price: assessed value is not a price, so never use it as land.
     land = override["landCost"] if override else (v["mostLikelyValue"] if land_ok else 0)
+    # Fallback only: area-median $/acre gives a preliminary, always-High-risk verdict (+2 risk on top of land_ok's +2).
+    per_acre = None if land else (area_per_acre or {}).get("east" if l.get("area") == "east" else "phx")
+    if per_acre and l.get("landAcres"):
+        land = per_acre * l["landAcres"]
     if not land:
         return None
+    guess = 2 if per_acre else 0
     n_split, known = split_n(l)
 
     def inputs(n, hard, psf=None):
@@ -223,7 +243,7 @@ def underwrite(l, *, fetch_comps=True, overrides=None):
 
     cheap, best = run(A["hard"][0]), run(A["hard"][1])
     fallback = bool(hc.get("fellBack"))
-    risk = ((0 if land_ok else 2) + ((hc.get("n") or 0) < (6 if fallback else 4)) + ((hc.get("radiusMi") or 0) >= 3)
+    risk = ((0 if land_ok else 2) + guess + ((hc.get("n") or 0) < (6 if fallback else 4)) + ((hc.get("radiusMi") or 0) >= 3)
             + (2 if l.get("inFloodplain") else 1 if l.get("floodKnown") is not True else 0)
             + ((1 if known else 2) if best["n"] > 1 else 0)
             + (2 if hc["psf"] > 800 else 0))   # unverified: sale price above $800/sf
@@ -232,7 +252,7 @@ def underwrite(l, *, fetch_comps=True, overrides=None):
     stress = None
     if median_psf:
         med_high, med_low = run(A["hard"][1], median_psf), run(A["hard"][0], median_psf)
-        med_risk_points = ((0 if land_ok else 2) + ((hc.get("n") or 0) < (6 if fallback else 4)) + ((hc.get("radiusMi") or 0) >= 3)
+        med_risk_points = ((0 if land_ok else 2) + guess + ((hc.get("n") or 0) < (6 if fallback else 4)) + ((hc.get("radiusMi") or 0) >= 3)
                            + (2 if l.get("inFloodplain") else 1 if l.get("floodKnown") is not True else 0)
                            + ((1 if known else 2) if med_high["n"] > 1 else 0) + (2 if median_psf > 800 else 0))
         med_risk = "Low" if med_risk_points <= 1 else "Medium" if med_risk_points <= 3 else "High"
@@ -248,7 +268,9 @@ def underwrite(l, *, fetch_comps=True, overrides=None):
                 profitAt275=round(cheap["profit"]), salePsf=hc["psf"], risk=risk, medianStress=stress, capacityConfirmed=False,
                 supportableOffer=round(offer), offerHomes=offer_n, offerTargetMargin=A["good"], offerHardPsf=A["hard"][1],
                 compSource=hc["source"], compSourceUrl=hc["sourceUrl"], compRetrievedAt=hc["retrievedAt"],
-                compFellBack=fallback, compError=hc["error"], compFallbackReason=hc["fallbackReason"])
+                compFellBack=fallback, compError=hc["error"], compFallbackReason=hc["fallbackReason"],
+                **(dict(landBasis="area-avg", preliminary=True, areaPerAcre=round(per_acre),
+                        landBasisNote=f"Preliminary: land priced at area-average ${per_acre:,.0f}/acre") if per_acre else {}))
 
 
 def comps_score(v):
@@ -267,13 +289,16 @@ def rescore(l):
     c = comps_score(l.get("verdict"))
     l["compsScore"] = round(c)
     l["score"] = max(0, min(100, round(COMPS_WEIGHT * c + (1 - COMPS_WEIGHT) * min(100, sig))))
+    if (l.get("verdict") or {}).get("preliminary"):
+        l["score"] = min(l["score"], 59)   # guessed (area-avg) land never makes a lead hot (cutoff 60)
     l["peakScore"] = max(l["score"], l.get("peakScore") or 0)
 
 
 def recalculate_data(data, *, cached=False):
     """Recalculate in place; cached mode never requests replacement county comps."""
+    areas = area_land_per_acre(data["leads"])
     for lead in data["leads"]:
-        lead["verdict"] = underwrite(lead, fetch_comps=not cached)
+        lead["verdict"] = underwrite(lead, fetch_comps=not cached, area_per_acre=areas)
         rescore(lead)
     data["leads"].sort(key=lambda l: -l["score"])
     counts = {}

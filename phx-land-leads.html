@@ -866,7 +866,7 @@ function initCalc(idx, lead){
   const notes = [];
   if(nonResidential) notes.push('<b>Manual commercial scenario:</b> the county classifies this parcel as ' + esc(lead.landUseClass) + '. No residential verdict is available. Start with one rentable space as a placeholder; enter your proposed use, rentable area, rent and actual budget. Zoning and allowed capacity are unconfirmed. These results do not create an automatic map verdict.');
   const basis = landBasis(lead);
-  if(basis.land > 0) notes.push(`<button class="mail-btn" type="button" onclick="useScenarioLand(${idx})">Use ${money(basis.land)} ${basis.override ? 'sourced price' : basis.ok ? 'land comps estimate' : 'assessed value'} for this scenario</button> This is ${basis.override ? esc(basis.override.priceType) : 'a valuation proxy'}, not a confirmed seller asking price.`);
+  if(basis.land > 0) notes.push(`<button class="mail-btn" type="button" onclick="useScenarioLand(${idx})">Use ${money(basis.land)} ${basis.override ? 'sourced price' : basis.ok ? 'land comps estimate' : basis.areaAvg ? 'area-average land estimate' : 'assessed value'} for this scenario</button> This is ${basis.override ? esc(basis.override.priceType) : 'a valuation proxy'}, not a confirmed seller asking price.`);
   if(saved) notes.push(`💾 Loaded the numbers you saved on ${esc(saved.at)}. They save automatically. <button class="mail-btn" onclick="resetCalc(${idx})">Reset to defaults</button>`);
   notes.push(`Acres and lot square footage come from the county record for this parcel; building square footage defaults to ${calcStates[idx].buildingSf.toLocaleString()} sf (${units} units x 900) — change it to your plan. Every default below is a placeholder, <b>not a bid</b>.`);
   if(!nonResidential && dealType === 'subdivision'){
@@ -2292,7 +2292,8 @@ function landBasis(l){   // hand-set price > comps value (if reliable) > assesse
   const validDate = s => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s) && Number.isFinite(Date.parse(s)) && new Date(s).toISOString().slice(0, 10) === s;
   const valid = ov && Number.isFinite(ov.landCost) && ov.landCost > 0 && typeof ov.source === 'string' && ov.source.trim() && /^https?:\/\/[^/\s]+/i.test(ov.sourceUrl || '') && validDate(ov.priceDate) && validDate(ov.observedAt) && typeof ov.priceType === 'string' && ov.priceType.trim();
   const reliable = !!(v && v.mostLikelyValue > 0 && !v.unreliable);
-  return { ok: !!(valid || reliable), land: valid ? ov.landCost : reliable ? v.mostLikelyValue : (l.assessedValue || 0), override: valid ? ov : null };
+  const areaAvg = !valid && !reliable && l.verdict && l.verdict.landBasis === 'area-avg' ? l.verdict : null;   // verdict.py's preliminary area-median land
+  return { ok: !!(valid || reliable), land: valid ? ov.landCost : reliable ? v.mostLikelyValue : areaAvg ? areaAvg.land : (l.assessedValue || 0), override: valid ? ov : null, areaAvg };
 }
 function leadAutofill(l){
   const lb = landBasis(l), p = profitFor(l), c = selectedComps(l);
@@ -2302,7 +2303,7 @@ function leadAutofill(l){
 function priceBasisHtml(l){
   const lb = landBasis(l), ov = lb.override, p = profitFor(l, 0, 0, { hard: 325, ungated: true });
   const basis = ov ? `<b>APN ${esc(l.apn)} price override: ${money(ov.landCost)}</b> · ${esc(ov.priceType)} dated ${esc(ov.priceDate)}<br><a href="${esc(ov.sourceUrl)}" target="_blank" rel="noopener">${esc(ov.source)}</a> · observed ${esc(ov.observedAt)}${ov.note ? '<br>' + esc(ov.note) : ''}`
-    : `APN ${esc(l.apn)} · ${lb.ok ? 'Reliable land comps proxy' : 'Assessed-value fallback'}: ${money(lb.land)}. No sourced price override.${l.landPriceOverrideError ? '<br>Override rejected: ' + esc(l.landPriceOverrideError) : ''}`;
+    : `APN ${esc(l.apn)} · ${lb.ok ? 'Reliable land comps proxy' : lb.areaAvg ? esc(lb.areaAvg.landBasisNote) : 'Assessed-value fallback'}: ${money(lb.land)}. No sourced price override.${l.landPriceOverrideError ? '<br>Override rejected: ' + esc(l.landPriceOverrideError) : ''}`;
   const offer = p ? p.maxLand >= 0 ? `<b>Supportable offer: up to ${money(p.maxLand)}</b> total (${p.offerN} home${p.offerN > 1 ? 's' : ''})` : `<b>No nonnegative land offer meets the target</b> (land budget ${money(p.maxLand)}).` : 'Supportable offer unavailable: land or home-sale inputs missing.';
   const proxy = l.valuation && !l.valuation.unreliable ? l.valuation.mostLikelyValue : l.assessedValue;
   const reference = ov ? ov.landCost : l.salePrice;
@@ -2313,7 +2314,7 @@ function priceBasisHtml(l){
 function commZoned(l){ return /^(C-|CP|PSC|A-|I-|IND)/i.test((l.currentZoning || '').trim()); }   // county says residential, zoning says otherwise
 function profitFor(l, extraHard, psfOverride, o){
   o = o || {};
-  if(commZoned(l) || (!o.ungated && !landBasis(l).ok)) return null;   // non-residential zoning never prices; ungated waives only the missing land price
+  if(commZoned(l) || (!o.ungated && !landBasis(l).ok && !landBasis(l).areaAvg)) return null;   // non-residential zoning never prices; ungated waives only the missing land price; area-avg land prices as preliminary
   const nb = selectedComps(l); if(!nb) return null;
   const psf = psfOverride || nb.psf;
   const num = id => parseFloat(document.getElementById(id).value) || 0;
@@ -2332,7 +2333,7 @@ function profitFor(l, extraHard, psfOverride, o){
     if(!best || e.profit > best.profit) best = { n, finished: e.finished, cost: e.cost, profit: e.profit, land, margin: e.margin };
   }
   best.maxLand = maxLand; best.offerN = offerN;
-  let r = (landOK ? 0 : 2) + ((nb.n || 0) < (nb.fellBack ? 6 : 4) ? 1 : 0) + ((nb.radiusMi || 0) >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : l.floodKnown !== true ? 1 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0) + (psf > 800 ? 2 : 0);
+  let r = (landOK ? 0 : 2) + (lb.areaAvg ? 2 : 0) + ((nb.n || 0) < (nb.fellBack ? 6 : 4) ? 1 : 0) + ((nb.radiusMi || 0) >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : l.floodKnown !== true ? 1 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0) + (psf > 800 ? 2 : 0);
   best.risk = r <= 1 ? 'Low' : r <= 3 ? 'Medium' : 'High';
   best.adj = best.profit > 0 ? best.profit * ({ Low: .85, Medium: .65, High: .4 }[best.risk]) : best.profit;
   best.strategy = best.n > 1 ? `Lot split → ${best.n} custom homes (unconfirmed capacity)${sp.known ? '' : ' (zoning min lot unknown — assumed)'}` : 'Custom home';
@@ -2372,7 +2373,7 @@ function profitLine(l){
     if(run) runNote = ` · <b>your saved run:</b> ${run.vals.hcLots} homes, land ${m2(+run.vals.hcLand)}, profit ${m2(run.gain)} per home (${(run.margin * 100).toFixed(0)}%)`;
     badge = `<span title="Screen at $325/sf build; Maybe requires break-even. Other current calculator inputs apply." style="background:${col};color:#fff;border-radius:4px;padding:1px 6px;margin-right:6px;font-size:11px;font-weight:700;">${lab.toUpperCase()} · $325/sf</span>`;
   }
-  return `<div class="lead-sub" data-profit-apn="${esc(l.apn)}" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${badge}📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%) · risk ${p.risk}${selectedComps(l).fellBack ? ' · ⚠ FALLBACK comps' : ''}${runNote}${[l.landCompLookup,l.newBuildLookup].filter(x => x && x.error).map(x => `<div>Lookup error: ${esc(x.error)} · attempted ${esc(x.retrievedAt || 'unknown')}</div>`).join('')}${compSensitivityHtml(l)}${landBasis(l).override ? '<div style="margin-top:6px;">' + priceBasisHtml(l) + '</div>' : ''}</div>`;
+  return `<div class="lead-sub" data-profit-apn="${esc(l.apn)}" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${badge}📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%) · risk ${p.risk}${selectedComps(l).fellBack ? ' · ⚠ FALLBACK comps' : ''}${runNote}${[l.landCompLookup,l.newBuildLookup].filter(x => x && x.error).map(x => `<div>Lookup error: ${esc(x.error)} · attempted ${esc(x.retrievedAt || 'unknown')}</div>`).join('')}${compSensitivityHtml(l)}${landBasis(l).areaAvg ? '<div><b>' + esc(landBasis(l).areaAvg.landBasisNote) + '</b> (guess, not a land comp; risk forced High)</div>' : ''}${landBasis(l).override ? '<div style="margin-top:6px;">' + priceBasisHtml(l) + '</div>' : ''}</div>`;
 }
 function refreshProfitLines(){
   const byApn = new Map((D.leads || []).map(l => [l.apn, l]));
@@ -2775,7 +2776,7 @@ function renderMapInstance(inst, leads){
       <div style="font-family:'Inter',sans-serif;font-size:12.5px;">
         <div style="font-weight:700;">${esc(l.address)||'(no address)'}</div>
         <div style="font-weight:700;color:#1d3252;margin:3px 0;">Score ${l.score} · ${l.parcelStatus === 'improved' ? 'Underused lot' : 'Vacant'} · ${vl || 'No verdict'}</div>
-        <div>${esc(l.landAcres)} ac · Zoned ${esc(l.currentZoning)||'—'}</div>${compSensitivityHtml(l)}
+        <div>${esc(l.landAcres)} ac · Zoned ${esc(l.currentZoning)||'—'}</div>${(l.verdict || {}).landBasisNote ? '<div><b>' + esc(l.verdict.landBasisNote) + '</b></div>' : ''}${compSensitivityHtml(l)}
         ${!vl ? `<div style="margin:8px 0;">${esc(noVerdictReason(l))}</div><button class="mail-btn" type="button" onclick="openLeadScenario('${esc(l.apn)}')">Calculate a project scenario</button>${loadCalcs()[l.apn] ? '<div style="margin-top:6px;">Saved scenario: ' + esc(calcSummary(loadCalcs()[l.apn].st)) + '</div>' : ''}` : ''}
       </div>`);
     inst.markers.push(marker);

@@ -855,10 +855,11 @@ def attach_comps(leads):
 
 def attach_verdicts(leads):
     """Underwrite + rescore so comps drive the ranking (verdict.py redoes both once new-build fallbacks land)."""
-    from verdict import underwrite, rescore
+    from verdict import underwrite, rescore, area_land_per_acre
+    areas = area_land_per_acre(leads)
     def one(l):
         try:
-            l["verdict"] = underwrite(l)
+            l["verdict"] = underwrite(l, area_per_acre=areas)
         except Exception as e:
             print(f"  verdict failed for {l.get('apn')}: {e}")
             l["verdict"] = None
