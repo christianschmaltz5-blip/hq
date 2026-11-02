@@ -2611,7 +2611,8 @@ function initMap(containerId){
   const flood = new FemaFlood('https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/export', {
     maxZoom: 19, opacity: 0.5, attribution: 'Flood zones: FEMA NFHL'
   }).addTo(map);
-  const ov = Object.assign(overlayLayers(), { 'FEMA flood zones': flood }); defaultOn(ov).forEach(l => l.addTo(map));
+  const places = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Labels &copy; Esri' }).addTo(map);
+  const ov = Object.assign(overlayLayers(), { 'FEMA flood zones': flood, 'Town names': places }); defaultOn(ov).forEach(l => l.addTo(map));
   L.control.layers({ 'Satellite': satellite, 'Street map': streets }, ov).addTo(map);
   return { map, markers: [] };
 }
