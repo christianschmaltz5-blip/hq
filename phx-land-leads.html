@@ -282,8 +282,6 @@
           <label style="font-size:12.5px;color:var(--text-soft);">Pick a lead (type an address)
             <input class="filter-input" id="hcLead" list="hcLeads" placeholder="e.g. 25804 N 5TH AVE" style="width:230px;"></label>
           <datalist id="hcLeads"></datalist>
-          <label style="font-size:12.5px;color:var(--text-soft);">Plan
-            <select class="filter-input" id="hcMode" style="width:200px;"><option value="sale">Build &amp; sell homes</option><option value="rent">Build &amp; hold: rental (2–4 units)</option></select></label>
           <span id="hcAnchor" style="font-size:12px;color:var(--text-soft);align-self:center;max-width:520px;"></span>
         </div>
         <div id="hcHouse" style="font-size:12.5px;color:var(--text-soft);margin:-4px 0 10px;"></div>
@@ -310,20 +308,6 @@
           <label style="font-size:12.5px;color:var(--text-soft);">ADU build ($/sf) <i>placeholder</i><input class="filter-input" id="hcAduHard" type="number" value="350" style="width:80px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">ADU extra site work ($ each) <i>placeholder</i><input class="filter-input" id="hcAduSite" type="number" value="15000" style="width:100px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Added resale value, all ADUs ($) <i>unverified</i><input class="filter-input" id="hcAduVal" type="number" value="0" style="width:110px;"></label>
-        </div>
-        <div id="hcRentRow" style="display:none;">
-          <div class="filter-row">
-            <label style="font-size:12.5px;color:var(--text-soft);">Units in the building<input class="filter-input" id="hcUnits" type="number" value="3" style="width:60px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);">Size per unit (sf)<input class="filter-input" id="hcUnitSf" type="number" value="1200" style="width:80px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);">Rent per unit ($/mo) <i>placeholder</i><input class="filter-input" id="hcRent" type="number" value="2600" style="width:90px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);">Vacancy (%)<input class="filter-input" id="hcVac" type="number" value="6" style="width:60px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);">Operating costs (% of rent) <i>placeholder</i><input class="filter-input" id="hcOpex" type="number" value="40" style="width:60px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);">Value cap rate (%) <i>placeholder</i><input class="filter-input" id="hcCap" type="number" value="5.5" step="0.1" style="width:70px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);">Long-term loan (% of value)<input class="filter-input" id="hcLtv" type="number" value="70" style="width:60px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);">Loan rate (%)<input class="filter-input" id="hcRate" type="number" value="6.75" step="0.05" style="width:70px;"></label>
-          </div>
-          <label style="font-size:12.5px;">Lender minimum DSCR (x) <input class="filter-input" id="hcDscr" type="number" value="1.25" min="0.01" step="0.05" style="width:75px;"></label>
-          <div id="hcRentHint" style="font-size:12.5px;color:var(--text-soft);margin:-4px 0 10px;"></div>
         </div>
         <div id="hcOut" style="margin-top:6px;font-size:13.5px;line-height:1.6;"></div>
         <div style="margin-top:8px;"><button class="mail-btn" type="button" onclick="saveRun()">💾 Save these numbers</button> <span id="hcSaved" style="font-size:12px;color:var(--text-soft);"></span></div>
@@ -577,7 +561,6 @@ BEFORE YOU SIGN ANYTHING
 </div>
 
 <script src="phx-land-leads/data.js"></script>
-<script src="dev-model/rent-comps.js"></script>
 <script src="assets/js/shell.js"></script>
 <script>
 const D = window.PHX_LAND_LEADS || {leads:[], history:[], zipCodes:[]};
@@ -601,8 +584,8 @@ document.getElementById('meta-row').innerHTML = `
 
 // ── Ground-up development underwriting calculator (per lead) ──────────────
 // Subdivision/lot-sale model — for rezone targets landing on single-family
-// zoning (R1-x/RE-x), which is a plat-and-sell-lots play, not a rental
-// building. costPerLot default ($65k) is a Phoenix-metro/Maricopa general-
+// zoning (R1-x/RE-x), which is a plat-and-sell-lots play, not a build-
+// the-homes project. costPerLot default ($65k) is a Phoenix-metro/Maricopa general-
 // market estimate (grading/site prep $20k-$80k + utility connections
 // $10k-$40k per lot), not a real local civil bid — get one before trusting
 // this number.
@@ -635,70 +618,42 @@ const SUBDIVISION_FIELDS = [
   ['sellingCostPct','Selling Cost %'], ['holdYears','Hold (yrs)'],
 ];
 
-// ── Build-and-hold pro forma (replaces the old rental calculator) ───────────
+// ── Build-and-sell development pro forma (per lead) ────────────────────────
 // kind: usd | pct | num ; auto = blank means "computed" (shown as placeholder "auto")
-const HOLD_SECTIONS = [
-  ['Property', [['acres','Acres','num'],['lotSf','Lot Square Footage','num'],['buildingSf','Building Square Footage (to build)','num'],['units','Units','num']]],
-  ['Revenue', [['rent','Rent / unit / mo ($) — long-term','usd'],['vacancyPct','Vacancy %','pct'],['adr','Nightly rate ($) — short-term','usd'],['occPct','Occupancy % — short-term','pct'],['avgStay','Avg stay (nights) — short-term','num']]],
-  ['Operating Expenses — Utilities (monthly $)', [['water','Water','usd'],['gas','Gas','usd'],['electric','Electric','usd'],['internet','Internet','usd']]],
-  ['Short-Term Rental Specific', [['cleaningFee','Cleaning (fee x turnovers/mo)','usd'],['repairs','Repairs & Maintenance (monthly $)','usd'],['supplies','Supplies (monthly $)','usd'],['software','Software (monthly $)','usd']]],
-  ['Taxes & Insurance', [['salesTaxPct','Sales Tax (% of revenue)','pct'],['occTaxPct','Occupancy Tax (% of revenue)','pct'],['assessedValue','Assessed value ($) — auto = 10% of total cost','usd','auto'],['millRate','Mill rate ($ per $100 assessed)','num'],['insurance','Insurance (annual quote $)','usd'],['other1','Other Expense 1 (annual $)','usd'],['other2','Other Expense 2 (annual $)','usd'],['other3','Other Expense 3 (annual $)','usd']]],
+const SALE_SECTIONS = [
+  ['Property', [['acres','Acres','num'],['lotSf','Lot Square Footage','num'],['buildingSf','Building Square Footage (to build, all homes)','num'],['units','Homes','num']]],
+  ['Sale', [['salePsf','Sale Price ($/sf of building)','usd'],['salePrice','Sale Price, total ($) — auto = $/sf x building sf','usd','auto'],['sellPct','Selling Closing Cost %','pct'],['targetPct','Target Profit (% of sale)','pct']]],
   ['Land', [['askingPrice','Purchase Price','usd'],['landExp1','Land Acquisition Expense 1','usd'],['demoCost','Demolition (teardown lots)','usd']]],
   ['Hard Costs', [['hard1','Contract 1 (construction)','usd'],['hard2','Contract 2 (landscaping/utility)','usd']]],
-  ['Soft Costs', [['permit','Permit/Inspection Fee 1','usd'],['design','Design Fee 1','usd'],['survey','Survey','usd'],['ffe','FF&E ($10/sqft) — auto','usd','auto'],['misc','Miscellaneous','usd'],['finConstr','Financing/Closing Cost (construction)','usd'],['finPerm','Financing/Closing Cost (permanent)','usd'],['otherCost1','Other Cost 1','usd']]],
+  ['Soft Costs', [['permit','Permit/Inspection Fee 1','usd'],['design','Design Fee 1','usd'],['survey','Survey','usd'],['misc','Miscellaneous','usd'],['finConstr','Financing/Closing Cost (construction)','usd'],['otherCost1','Other Cost 1','usd']]],
   ['Contingency, Reserve & Fee', [['contPct','Contingency %','pct'],['interestReserve','Interest Reserve ($) — auto','usd','auto'],['devFeePct','Developer Fee %','pct']]],
   ['Construction Loan', [['ltcPct','Construction Loan-to-Cost %','pct'],['constrRate','Construction Interest Rate','pct'],['constrTerm','Construction Term (months)','num']]],
-  ['Permanent Loan', [['appraisedValue','Appraised Value (post-construction) — auto = NOI ÷ cap','usd','auto'],['ltvPct','Permanent Loan-to-Value % (max)','pct'],['permRate','Permanent Interest Rate','pct'],['permTerm','Permanent Term (months)','num'],['minDscr','Lender minimum DSCR (x)','num']]],
-  ['Exit & Growth', [['holdYears','Hold Period (years, 1-5)','num'],['exitCap','Exit Cap Rate','pct'],['sellPct','Selling Closing Cost %','pct'],['rentGrowth','Rent Growth % / yr','pct'],['expGrowth','Expense Growth % / yr','pct']]],
 ];
 const LOTS_SECTIONS = [
   ['Property', [['acres','Acres','num'],['lotSf','Lot Square Footage','num']]],
   ['Sell-the-lots model', SUBDIVISION_FIELDS.map(([k,l]) => [k, l, k==='sellingCostPct' ? 'pct' : (k==='lots'||k==='holdYears' ? 'num' : 'usd')])],
 ];
 
-function holdDefaults(lead, units){
-  const sf = Math.round(units * 900), hard1 = Math.round(units * 165000);
+function saleDefaults(lead, units){
+  const sf = Math.round(units * 900), hard1 = Math.round(units * 165000), c = selectedComps(lead);
   return {
     acres: lead.landAcres || 0, lotSf: lead.landSf || Math.round((lead.landAcres||0)*43560), buildingSf: sf, units,
-    rent: 1450, vacancyPct: 0.06, adr: 0, occPct: 0, avgStay: 3, strMode: false,
-    water: units*50, gas: 0, electric: units*40, internet: 0,
-    cleaningFee: 0, repairs: units*75, supplies: 0, software: 0,
-    salesTaxPct: 0, occTaxPct: 0, assessedValue: null, millRate: 11.5, insurance: units*700, other1: 0, other2: 0, other3: 0,
+    salePsf: c && c.psf > 0 ? Math.round(c.psf) : 400, salePrice: null, sellPct: 0.06, targetPct: 0.10,
     askingPrice: 0, landExp1: 0,
     hard1, hard2: Math.round(units*12000),
-    permit: Math.round(hard1*0.02), design: Math.round(hard1*0.04), survey: 6000, ffe: null, misc: 10000, finConstr: Math.round(hard1*0.015), finPerm: Math.round(hard1*0.01), otherCost1: 0,
+    permit: Math.round(hard1*0.02), design: Math.round(hard1*0.04), survey: 6000, misc: 10000, finConstr: Math.round(hard1*0.015), otherCost1: 0,
     contPct: 0.05, interestReserve: null, devFeePct: 0.03,
     ltcPct: 0.65, constrRate: 0.075, constrTerm: 18,
-    appraisedValue: null, ltvPct: 0.70, permRate: 0.0675, permTerm: 360, minDscr: 1.25,
-    holdYears: 3, exitCap: 0.0565, sellPct: 0.06, rentGrowth: 0.03, expGrowth: 0.03,
   };
 }
 
-function pmt(rate, n, loan){ if(!loan || !n) return 0; if(!rate) return loan / n; const f = Math.pow(1 + rate, n); return loan * rate * f / (f - 1); }
-function rentalDebt(noi, value, ltv, rate, months, minDscr){
-  if(![noi,value,ltv,rate,months,minDscr].every(Number.isFinite) || value < 0 || ltv < 0 || ltv > 1 || rate < 0 || months <= 0 || minDscr <= 0) return null;
-  const annualPerDollar = pmt(rate / 12, months, 1) * 12;
-  const ltvLimit = Math.max(0, value * ltv), dscrLimit = Math.max(0, noi) / minDscr / annualPerDollar;
-  const loan = Math.min(ltvLimit, dscrLimit), service = loan * annualPerDollar;
-  return { loan, service, ltvLimit, dscrLimit, dscr: service > 0 ? noi / service : null, binding: dscrLimit < ltvLimit ? 'DSCR' : 'LTV' };
-}
-function loanBal(rate, n, loan, paid){ if(!rate) return Math.max(0, loan - loan / n * paid); const f = Math.pow(1 + rate, paid); return loan * f - pmt(rate, n, loan) * (f - 1) / rate; }
-function irrOf(cfs){
-  const npv = r => cfs.reduce((a, c, t) => a + c / Math.pow(1 + r, t), 0);
-  let lo = -0.9, hi = 5;
-  if(npv(lo) * npv(hi) > 0) return null;
-  for(let i = 0; i < 80; i++){ const m = (lo + hi) / 2; if(npv(lo) * npv(m) <= 0) hi = m; else lo = m; }
-  return (lo + hi) / 2;
-}
-
-function calcHold(s){
+function calcSale(s){
   if(s.askingPrice == null || String(s.askingPrice).trim() === '' || !Number.isFinite(+s.askingPrice) || +s.askingPrice <= 0) return { error: 'Enter a positive supported purchase price before calculating returns.' };
-  const r = {}, n = s.units || 0, hold = Math.min(5, Math.max(1, Math.round(s.holdYears || 1)));
+  const r = {};
   r.land = (s.askingPrice||0) + (s.landExp1||0) + (s.demoCost||0);
   r.hard = (s.hard1||0) + (s.hard2||0);
-  r.ffe = s.ffe != null ? s.ffe : 10 * (s.buildingSf || 0);
-  r.softBase = (s.permit||0) + (s.design||0) + (s.survey||0) + r.ffe + (s.misc||0) + (s.otherCost1||0);
-  r.soft = r.softBase + (s.finConstr||0) + (s.finPerm||0);
+  r.softBase = (s.permit||0) + (s.design||0) + (s.survey||0) + (s.misc||0) + (s.otherCost1||0);
+  r.soft = r.softBase + (s.finConstr||0);
   r.contingency = (s.contPct||0) * (r.hard + r.softBase);
   r.direct = r.hard + r.softBase + r.contingency;               // bank-financeable: hard + soft (ex-financing) + contingency
   r.constrLoan = (s.ltcPct||0) * r.direct;
@@ -706,62 +661,25 @@ function calcHold(s){
   r.devFee = (s.devFeePct||0) * (r.hard + r.softBase);
   r.total = r.land + r.hard + r.soft + r.contingency + r.interestReserve + r.devFee;
   r.equity = r.total - r.constrLoan;
-  // revenue + opex, year 1
-  const str = !!s.strMode;
-  const rev1 = str ? n * (s.adr||0) * 365 * (s.occPct||0) : n * (s.rent||0) * 12 * (1 - (s.vacancyPct||0));
-  const turns = str ? n * ((s.occPct||0) * 30 / Math.max(1, s.avgStay||1)) : 0;
-  const fixed1 = 12 * ((s.water||0)+(s.gas||0)+(s.electric||0)+(s.internet||0)+(s.repairs||0)+(s.supplies||0)+(s.software||0))
-               + 12 * (s.cleaningFee||0) * turns + (s.insurance||0) + (s.other1||0)+(s.other2||0)+(s.other3||0);
-  r.assessed = s.assessedValue != null ? s.assessedValue : 0.10 * r.total;
-  r.propTax1 = r.assessed / 100 * (s.millRate||0);
-  r.years = [];
-  for(let t = 1; t <= hold + 1; t++){
-    const rev = rev1 * Math.pow(1 + (s.rentGrowth||0), t - 1), g = Math.pow(1 + (s.expGrowth||0), t - 1);
-    const opex = rev * ((s.salesTaxPct||0) + (s.occTaxPct||0)) + (fixed1 + r.propTax1) * g;
-    r.years.push({ t, rev, opex, noi: rev - opex });
-  }
-  r.noi1 = r.years[0].noi;
-  r.appraised = s.appraisedValue != null ? s.appraisedValue : (s.exitCap ? Math.max(0, r.noi1 / s.exitCap) : 0);
-  r.debt = rentalDebt(r.noi1, r.appraised, s.ltvPct || 0, s.permRate || 0, s.permTerm || 0, s.minDscr ?? 1.25);
-  if(!r.debt) return { error: 'Enter valid loan terms and a lender minimum DSCR above zero.' };
-  r.permLoan = r.debt.loan;
-  r.permMonthly = pmt((s.permRate||0)/12, s.permTerm||0, r.permLoan);
-  r.ds = r.permMonthly * 12;
-  r.yieldOnCost = r.total ? r.noi1 / r.total : null;
-  r.spreadBps = r.yieldOnCost != null ? (r.yieldOnCost - (s.exitCap||0)) * 10000 : null;
-  r.profit = r.appraised - r.total;
-  r.profitMargin = r.total ? r.profit / r.total : null;
-  r.dscr = r.ds ? r.noi1 / r.ds : null;
-  r.exitValue = s.exitCap ? Math.max(0, r.years[hold].noi / s.exitCap) : 0;
-  r.balance = loanBal((s.permRate||0)/12, s.permTerm||0, r.permLoan, hold * 12);
-  const cfs = [-r.equity];
-  for(let t = 1; t <= hold; t++){
-    let cf = r.years[t-1].noi - r.ds;
-    if(t === 1) cf += r.permLoan - r.constrLoan;                 // refinance construction loan into the permanent loan
-    if(t === hold) cf += r.exitValue * (1 - (s.sellPct||0)) - r.balance;
-    cfs.push(cf);
-  }
-  r.cfs = cfs; r.hold = hold;
-  r.equityMultiple = r.equity > 0 ? cfs.slice(1).reduce((a, c) => a + c, 0) / r.equity : null;
-  r.irr = r.equity > 0 ? irrOf(cfs) : null;
+  r.revenue = s.salePrice != null ? s.salePrice : (s.salePsf||0) * (s.buildingSf||0);
+  r.sellCost = r.revenue * (s.sellPct||0);
+  r.net = r.revenue - r.sellCost;
+  r.profit = r.net - r.total;
+  r.profitMargin = r.revenue ? r.profit / r.revenue : null;
+  r.maxLand = r.net - r.revenue * (s.targetPct||0) - (r.total - (s.askingPrice||0));   // purchase price that leaves exactly the target profit (no other cost depends on land)
   return r;
 }
 
-function sectionsFor(state){ return state.mode === 'lots' ? LOTS_SECTIONS : HOLD_SECTIONS; }
+function sectionsFor(state){ return state.mode === 'lots' ? LOTS_SECTIONS : SALE_SECTIONS; }
 
 function calcFieldsHtml(idx, state){
   const modeSel = `<div class="calc-field" style="grid-column:1/-1;"><label>Model</label>
     <select data-calc-mode="${idx}" style="padding:7px 10px;font-size:13px;border:1px solid var(--card-border);border-radius:7px;">
-      <option value="hold" ${state.mode==='hold'?'selected':''}>Build &amp; hold (full pro forma)</option>
+      <option value="sale" ${state.mode!=='lots'?'selected':''}>Build &amp; sell homes (full pro forma)</option>
       <option value="lots" ${state.mode==='lots'?'selected':''}>Subdivide &amp; sell lots</option></select></div>`;
-  const strSel = state.mode === 'hold' ? `<div class="calc-field"><label>Rental type</label>
-    <select data-calc-str="${idx}" style="padding:7px 10px;font-size:13px;border:1px solid var(--card-border);border-radius:7px;">
-      <option value="0" ${!state.strMode?'selected':''}>Long-term rental</option>
-      <option value="1" ${state.strMode?'selected':''}>Short-term rental</option></select></div>` : '';
   const body = sectionsFor(state).map(([title, fields]) => {
     const head = `<div style="grid-column:1/-1;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);margin-top:10px;">${esc(title)}</div>`;
-    const extra = title === 'Revenue' ? strSel : '';
-    return head + extra + fields.map(([k, label, kind, auto]) => {
+    return head + fields.map(([k, label, kind, auto]) => {
       const val = state[k];
       const display = val == null ? '' : (kind === 'pct' ? Math.round(val * 10000) / 100 : (kind === 'num' ? Math.round(val * 100) / 100 : Math.round(val)));
       return `<div class="calc-field"><label>${esc(label)}</label><input type="number" step="any" data-calc-key="${k}" data-calc-kind="${kind}" data-calc-auto="${auto ? 1 : 0}" data-lead="${idx}" value="${display}" ${auto ? 'placeholder="auto"' : ''}></div>`;
@@ -770,25 +688,17 @@ function calcFieldsHtml(idx, state){
   return modeSel + body;
 }
 
-function renderHoldResults(idx, state){
-  const r = calcHold(state), x = v => v == null ? '—' : money(v);
+function renderSaleResults(idx, state){
+  const r = calcSale(state);
   if(r.error){ document.getElementById(`calc-kpis-${idx}`).textContent = r.error; document.getElementById(`calc-detail-${idx}`).innerHTML = ''; return; }
   document.getElementById(`calc-kpis-${idx}`).innerHTML = `
-    ${r.noi1 <= 0 ? '<div class="dm-note">Operating income does not cover expenses. Income-based value and DSCR-supported debt are $0; revise the project assumptions.</div>' : ''}
-    ${calcRow('Total Development Budget', money(r.total))}
+    ${calcRow('Total Development Cost', money(r.total))}
     ${calcRow('Equity Required (construction)', money(r.equity))}
-    ${calcRow('Stabilized NOI (yr 1)', money(r.noi1), r.noi1>0?'pos':'neg')}
-    ${calcRow('Yield on Cost', pct1(r.yieldOnCost))}
-    ${calcRow('Dev Spread vs Exit Cap', num1(r.spreadBps)+' bps', r.spreadBps>0?'pos':'neg')}
-    ${calcRow('Appraised Value', money(r.appraised))}
+    ${calcRow('Gross Sale Price', money(r.revenue))}
+    ${calcRow('Net Sale Proceeds', money(r.net))}
     ${calcRow('Developer Profit', money(r.profit), r.profit>0?'pos':'neg')}
-    ${calcRow('Profit Margin', pct1(r.profitMargin), r.profitMargin>0?'pos':'neg')}
-    ${calcRow('Permanent Loan (' + r.debt.binding + ' limited)', money(r.permLoan))}
-    ${calcRow('LTV maximum', money(r.debt.ltvLimit))}${calcRow('DSCR maximum', money(r.debt.dscrLimit))}
-    ${calcRow('Perm Monthly Payment', money(r.permMonthly))}
-    ${calcRow('DSCR (yr 1)', r.dscr==null?'—':r.dscr.toFixed(2)+'x', r.dscr>=(state.minDscr ?? 1.25)-1e-9?'pos':'neg')}
-    ${calcRow('Equity Multiple', r.equityMultiple==null?'—':r.equityMultiple.toFixed(2)+'x')}
-    ${calcRow('IRR', pct1(r.irr))}
+    ${calcRow('Profit Margin (% of sale)', pct1(r.profitMargin), r.profitMargin>0?'pos':'neg')}
+    ${calcRow('Max Land Price at ' + pct1(state.targetPct||0) + ' profit', money(r.maxLand), r.maxLand>0?'pos':'neg')}
   `;
   const row = (a, b) => `<tr><td>${a}</td><td style="text-align:right;">${b}</td></tr>`;
   document.getElementById(`calc-detail-${idx}`).innerHTML = `
@@ -796,14 +706,13 @@ function renderHoldResults(idx, state){
       <table class="comps-table"><thead><tr><th colspan="2">Development budget</th></tr></thead><tbody>
         ${row('Land Total', money(r.land))}${row('Hard Cost Total', money(r.hard))}${row('Soft Cost Total', money(r.soft))}
         ${row('Contingency $', money(r.contingency))}${row('Interest Reserve', money(r.interestReserve))}${row('Developer Fee $', money(r.devFee))}
-        ${row('<b>Total Development Budget</b>', '<b>'+money(r.total)+'</b>')}${row('Direct Costs (bank-financeable)', money(r.direct))}
+        ${row('<b>Total Development Cost</b>', '<b>'+money(r.total)+'</b>')}${row('Direct Costs (bank-financeable)', money(r.direct))}
         ${row('Construction Loan Amount', money(r.constrLoan))}${row('Equity Required (construction)', money(r.equity))}</tbody></table>
-      <table class="comps-table"><thead><tr><th>Year</th><th style="text-align:right;">Revenue</th><th style="text-align:right;">Opex</th><th style="text-align:right;">NOI</th><th style="text-align:right;">Cash flow</th></tr></thead><tbody>
-        <tr><td>0</td><td></td><td></td><td></td><td style="text-align:right;">${money(r.cfs[0])}</td></tr>
-        ${r.cfs.slice(1).map((cf, i) => `<tr><td>${i+1}</td><td style="text-align:right;">${money(r.years[i].rev)}</td><td style="text-align:right;">${money(r.years[i].opex)}</td><td style="text-align:right;">${money(r.years[i].noi)}</td><td style="text-align:right;">${money(cf)}</td></tr>`).join('')}
-        </tbody></table>
+      <table class="comps-table"><thead><tr><th colspan="2">Sale</th></tr></thead><tbody>
+        ${row('Gross Sale Price', money(r.revenue))}${row('Selling Closing Costs', money(-r.sellCost))}${row('Net Sale Proceeds', money(r.net))}
+        ${row('Total Development Cost', money(-r.total))}${row('<b>Developer Profit</b>', '<b>'+money(r.profit)+'</b>')}</tbody></table>
     </div>
-    <div style="font-size:11px;color:var(--text-faint);margin-top:6px;">Year 1 cash flow includes the refinance into the permanent loan; last year includes sale proceeds after the loan balance. Exit value = next year's NOI ÷ exit cap. Simplified: construction and lease-up time are not modeled. Defaults are placeholders, not bids.</div>`;
+    <div style="font-size:11px;color:var(--text-faint);margin-top:6px;">Sale proceeds repay the construction loan; interest is the interest reserve. Max land price = net sale proceeds − target profit − every non-land cost. Defaults are placeholders, not bids.</div>`;
 }
 
 function renderCalcResults(idx, state){
@@ -826,14 +735,14 @@ function renderCalcResults(idx, state){
     `;
     return;
   }
-  renderHoldResults(idx, state);
+  renderSaleResults(idx, state);
 }
 
 const calcStates = {};
 function loadCalcs(){ try{ return JSON.parse(localStorage.getItem('leadCalcs') || '{}'); }catch(e){ return {}; } }
 function calcSummary(st){
   if(!(Number(st.askingPrice) > 0)) return 'Purchase price missing — returns unavailable';
-  const r = st.mode === 'lots' ? calcSubdivision(st) : calcHold(st);
+  const r = st.mode === 'lots' ? calcSubdivision(st) : calcSale(st);
   if(r.error) return r.error;
   const pr = st.mode === 'lots' ? r.developerProfit : r.profit, mg = st.mode === 'lots' ? r.profitMargin : r.profitMargin;
   return `${pr < 0 ? '−' : ''}$${Math.abs(Math.round(pr)).toLocaleString()} profit${mg == null ? '' : ' (' + (mg * 100).toFixed(0) + '%)'} · price $${Math.round(st.askingPrice || 0).toLocaleString()}`;
@@ -854,21 +763,21 @@ function resetCalc(idx){
 }
 
 function initCalc(idx, lead){
-  const dealType = lead.dealType || 'rental';
+  const dealType = lead.dealType;
   const nonResidential = (lead.landUseClass && lead.landUseClass !== 'residential') || commZoned(lead);
   const units = nonResidential ? 1 : Math.max(1, Math.round(lead.rezoneTargetUnits || lead.byRightUnits || (lead.landAcres||0) * 8));
   const demoCost = lead.parcelStatus === 'improved' ? (lead.defaultDemoCost || 0) : 0;
-  calcStates[idx] = Object.assign({}, SUBDIVISION_DEFAULTS, holdDefaults(lead, units),
-    { mode: !nonResidential && dealType === 'subdivision' ? 'lots' : 'hold', demoCost, lots: units, sellingCostPct: SUBDIVISION_DEFAULTS.sellingCostPct },
+  calcStates[idx] = Object.assign({}, SUBDIVISION_DEFAULTS, saleDefaults(lead, units),
+    { mode: !nonResidential && dealType === 'subdivision' ? 'lots' : 'sale', demoCost, lots: units, sellingCostPct: SUBDIVISION_DEFAULTS.sellingCostPct },
     lead.referenceCostPerLotAZ ? { costPerLot: lead.referenceCostPerLotAZ } : {});
   const saved = loadCalcs()[lead.apn];
   if(saved) Object.assign(calcStates[idx], saved.st);
   const notes = [];
-  if(nonResidential) notes.push('<b>Manual commercial scenario:</b> the county classifies this parcel as ' + esc(lead.landUseClass) + '. No residential verdict is available. Start with one rentable space as a placeholder; enter your proposed use, rentable area, rent and actual budget. Zoning and allowed capacity are unconfirmed. These results do not create an automatic map verdict.');
+  if(nonResidential) notes.push('<b>Manual commercial scenario:</b> the county classifies this parcel as ' + esc(lead.landUseClass) + '. No residential verdict is available. Start with one building as a placeholder; enter your proposed use, building area, sale price and actual budget. Zoning and allowed capacity are unconfirmed. These results do not create an automatic map verdict.');
   const basis = landBasis(lead);
   if(basis.land > 0) notes.push(`<button class="mail-btn" type="button" onclick="useScenarioLand(${idx})">Use ${money(basis.land)} ${basis.override ? 'sourced price' : basis.ok ? 'land comps estimate' : basis.areaAvg ? 'area-average land estimate' : 'assessed value'} for this scenario</button> This is ${basis.override ? esc(basis.override.priceType) : 'a valuation proxy'}, not a confirmed seller asking price.`);
   if(saved) notes.push(`💾 Loaded the numbers you saved on ${esc(saved.at)}. They save automatically. <button class="mail-btn" onclick="resetCalc(${idx})">Reset to defaults</button>`);
-  notes.push(`Acres and lot square footage come from the county record for this parcel; building square footage defaults to ${calcStates[idx].buildingSf.toLocaleString()} sf (${units} units x 900) — change it to your plan. Every default below is a placeholder, <b>not a bid</b>.`);
+  notes.push(`Acres and lot square footage come from the county record for this parcel; building square footage defaults to ${calcStates[idx].buildingSf.toLocaleString()} sf (${units} home${units === 1 ? '' : 's'} x 900) — change it to your plan. Every default below is a placeholder, <b>not a bid</b>.`);
   if(!nonResidential && dealType === 'subdivision'){
     notes.push(`The rezone target here is single-family zoning, so this lead opens in the "sell lots" model. Default cost/lot ($${lead.referenceCostPerLotAZ?.toLocaleString()||'65,000'}) is a Phoenix-metro general-market estimate, <b>not a real local civil bid</b>.`);
   }
@@ -893,9 +802,7 @@ function calcRender(idx, lead){
   renderCalcResults(idx, st);
   renderAcqKpis(idx, st, lead);
   const root = document.getElementById(`calc-fields-${idx}`);
-  root.querySelector('[data-calc-mode]').addEventListener('change', e => { st.mode = e.target.value; st.holdYears = st.mode === 'lots' ? 2 : 3; calcRender(idx, lead); persistCalc(idx); });
-  const strEl = root.querySelector('[data-calc-str]');
-  if(strEl) strEl.addEventListener('change', e => { st.strMode = e.target.value === '1'; renderCalcResults(idx, st); persistCalc(idx); });
+  root.querySelector('[data-calc-mode]').addEventListener('change', e => { st.mode = e.target.value; st.holdYears = 2; calcRender(idx, lead); persistCalc(idx); });
   root.querySelectorAll('input[data-calc-key]').forEach(inp => {
     inp.addEventListener('input', () => {
       const key = inp.dataset.calcKey, kind = inp.dataset.calcKind, v = parseFloat(inp.value);
@@ -1216,7 +1123,7 @@ function leadCard(lead, idx){
   const contactedDate = loadContacted()[lead.apn];
   const newBadge = lead.isNew ? `<span class="reason-chip" style="background:var(--success-soft);color:#2f5b41;border-color:rgba(63,122,87,.3);font-weight:800;">NEW</span>` : '';
   const contactedBadge = contactedDate ? `<span class="reason-chip" style="background:#eef2ff;color:#4338ca;border-color:rgba(67,56,202,.25);font-weight:700;">📨 Contacted ${esc(contactedDate)}</span>` : '';
-  const dealTypeLabel = lead.dealType === 'subdivision' ? 'Subdivision/lot-sale play' : 'Rental/multifamily play';
+  const dealTypeLabel = lead.dealType === 'subdivision' ? 'Subdivision/lot-sale play' : 'Build-and-sell homes play';
   const statusBadge = lead.parcelStatus === 'improved'
     ? `<span class="reason-chip" style="background:var(--warning-soft);color:#8f6418;border-color:rgba(179,131,31,.3);font-weight:700;">UNDERUSED LOT</span>`
     : '';
@@ -1876,7 +1783,7 @@ function toggleCalc(idx){
 function noVerdictReason(l){
   if(l.landUseClass && l.landUseClass !== 'residential') return 'No residential verdict: county use is ' + l.landUseClass + '. A manual project scenario is available.';
   const c = selectedComps(l);
-  if(!c) return 'No automatic verdict: usable home-sale comps are missing. Enter a supported resale or rental scenario.';
+  if(!c) return 'No automatic verdict: usable home-sale comps are missing. Enter a supported resale scenario.';
   if(!landBasis(l).ok) return 'No automatic verdict: fewer than 3 recent vacant-land sales (same city, within 1 mile, last 12 months). Enter a purchase price to run a scenario.';
   return 'No stored automatic verdict. Run a manual project scenario to review the assumptions.';
 }
@@ -2484,7 +2391,7 @@ function renderBids(){
 }
 
 // ── Saved Numbers (Custom Home Calculator runs + per-lead calculators) ───
-const RUN_IDS = ['hcAduN','hcAduSf','hcAduHard','hcAduSite','hcAduVal','moSplitCost','moSplitHaircut','moMinLot','hcLand','hcDemo','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcMode','hcUnits','hcUnitSf','hcRent','hcVac','hcOpex','hcCap','hcLtv','hcRate','hcDscr'];
+const RUN_IDS = ['hcAduN','hcAduSf','hcAduHard','hcAduSite','hcAduVal','moSplitCost','moSplitHaircut','moMinLot','hcLand','hcDemo','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen'];
 function loadRuns(){ try{ return JSON.parse(localStorage.getItem('savedRuns') || '[]'); }catch(e){ return []; } }
 function storeRuns(r){ try{ localStorage.setItem('savedRuns', JSON.stringify(r)); }catch(e){} renderRuns(); drawMaps(true); }
 function saveRun(){
@@ -2571,8 +2478,7 @@ renderMaxOffer();
   const ids = ['hcLand','hcDemo','hcLots','hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcAduN','hcAduSf','hcAduHard','hcAduSite','hcAduVal'];
   const el = id => document.getElementById(id), num = id => parseFloat(el(id).value) || 0;
   const money = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
-  const RIDS = ['hcUnits','hcUnitSf','hcRent','hcVac','hcOpex','hcCap','hcLtv','hcRate','hcDscr'];
-  const KEEP = ['hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcAduN','hcAduSf','hcAduHard','hcAduSite','hcAduVal','hcMode', ...RIDS];
+  const KEEP = ['hcSf','hcPrice','hcHard','hcSite','hcSoft','hcFin','hcSell','hcProfit','hcOpen','hcAduN','hcAduSf','hcAduHard','hcAduSite','hcAduVal'];
   try{ const saved = JSON.parse(localStorage.getItem('homeCalc') || '{}'); KEEP.forEach(k => { if(saved[k] != null) el(k).value = saved[k]; }); }catch(e){}
   const addr = l => String(l.address || '').split(/\s{2,}/)[0];
   let picked = null;
@@ -2591,7 +2497,6 @@ renderMaxOffer();
     if(l.valuation) bits.push(`land est. ${money(l.valuation.rangeLow)}–${money(l.valuation.rangeHigh)}`);
     if(l.salePrice) bits.push(`owner paid ${money(l.salePrice)}${l.saleDate ? ' (' + l.saleDate.slice(-4) + ')' : ''}`);
     if(l.assessedValue) bits.push(`assessed ${money(l.assessedValue)}`);
-    rentHint(l);
     el('hcAnchor').textContent = bits.filter(Boolean).join(' · ') + ` — ${fill.lots} homes in the ranking's best scenario; estimated split capacity ${splitInfo(l).n} (unconfirmed capacity).` + (fill.land === '' ? ' Enter a supported land price: reliable valuation unavailable.' : ' Price, demolition and sale comps filled in; adjust to your plan.');
     el('hcHouse').textContent = 'Looking up recent home sales nearby…';
     fetchHouseComps(l).then(h => {
@@ -2602,48 +2507,7 @@ renderMaxOffer();
       el('hcUse').onclick = () => { el('hcPrice').value = Math.round(pick); calc(); };
     });
   }
-  function rentHint(l){
-    const z = (String(l.address || '').match(/\b(\d{5})\s*$/) || [])[1], cs = ((window.RENT_COMPS || {}).comps || []).filter(c => c.zip === z && c.rent);
-    if(!cs.length){ el('hcRentHint').textContent = `No rent comps scanned for ZIP ${z || '?'} yet — type the rent per unit. (The weekly rent scan now includes 85085 and 85086.)`; return; }
-    const r = cs.map(c => c.rent).sort((a, b) => a - b), med = r[Math.floor(r.length / 2)];
-    el('hcRentHint').innerHTML = `Rent comps in ${z}: ${cs.length} listings, median <b>${money(med)}/mo</b> (${money(r[0])}–${money(r[r.length - 1])}). <button class="mail-btn" type="button" id="hcUseRent">Use ${money(med)} as rent per unit</button>`;
-    el('hcUseRent').onclick = () => { el('hcRent').value = med; el('hcRent').dispatchEvent(new Event('input')); };
-  }
-  function calcRent(){
-    const u = Math.max(1, num('hcUnits')), bsf = u * num('hcUnitSf'), hard = num('hcHard') * bsf, soft = hard * num('hcSoft') / 100, site = num('hcSite'), land = num('hcLand');
-    const fin = num('hcFin') / 100, sell = num('hcSell') / 100, profit = num('hcProfit') / 100, den = 1 - sell - profit, cap = num('hcCap') / 100, opex = num('hcOpex') / 100, vac = num('hcVac') / 100;
-    const out = el('hcOut');
-    if(den <= 0 || bsf <= 0 || cap <= 0){ out.textContent = 'Selling costs + profit must be under 100%; unit size and cap rate above 0.'; window.hcLast = null; return; }
-    const demo = num('hcDemo');
-    if(!(land > 0) || el('hcLand').value.trim() === ''){ out.textContent = 'Enter a positive supported land price before calculating rental returns.'; window.hcLast = null; return; }
-    const C = hard + soft + site + demo, total = (C + land) * (1 + fin);
-    const egi = u * num('hcRent') * 12 * (1 - vac), noi = egi * (1 - opex), value = noi / cap;
-    const gain = value * (1 - sell) - total, margin = value ? gain / value : 0, maxLand = value * den / (1 + fin) - C;
-    const debt = rentalDebt(noi, value, num('hcLtv') / 100, num('hcRate') / 100, 360, num('hcDscr'));
-    if(!debt){ out.textContent = 'Enter valid loan terms and a lender minimum DSCR above zero.'; window.hcLast = null; return; }
-    const loan = debt.loan, ds = debt.service, cf = noi - ds, cashIn = total - loan;
-    const needRent = (total / den) * cap / (1 - opex) / (1 - vac) / 12 / u;
-    window.hcLast = { gain, margin, maxLand, loan, debtService: ds, cashIn, totalCost: total };
-    const row = (k, v, b) => `<tr><td style="padding:2px 14px 2px 0;${b ? 'font-weight:700;' : ''}">${k}</td><td style="text-align:right;${b ? 'font-weight:700;' : ''}">${v}</td></tr>`;
-    const good = c => c ? '#2f6b47' : '#b03a3a';
-    out.innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:28px;">
-      <div><div style="font-weight:700;margin-bottom:4px;">Cost of the ${u}-unit building (${bsf.toLocaleString()} sf)</div><table>
-        ${row('Build', money(hard))}${row('Design / permits / fees', money(soft))}${row('Site work', money(site))}${row('Demolition', money(demo))}${row('Land', money(land))}${row('Loan interest', money((C + land) * fin))}${row('Total cost', money(total), 1)}</table></div>
-      <div><div style="font-weight:700;margin-bottom:4px;">Income</div><table>
-        ${row('Rent after vacancy / yr', money(egi))}${row('Operating costs', '−' + money(egi * opex).replace('−',''))}${row('Net operating income (NOI)', money(noi), 1)}${row('Value at ' + num('hcCap') + '% cap', money(value))}${row('Yield on cost', total ? (noi / total * 100).toFixed(1) + '%' : '—')}</table></div>
-      <div style="max-width:440px;">
-        <div style="margin-bottom:8px;"><b>To hit your ${num('hcProfit')}% profit, rent must be ${money(needRent)}/unit/mo</b> (you entered ${money(num('hcRent'))}).</div>
-        <div style="margin-bottom:8px;">${maxLand >= 0 ? `<b>The most you can pay for the land (to build and sell at that value) is ${money(maxLand)}</b> — open at <b>${money(maxLand * num('hcOpen') / 100)}</b>.` : `<b>No nonnegative land offer meets your target.</b> Land budget: ${money(maxLand)}.`}</div>
-        <div style="padding:8px 10px;border-radius:8px;margin-bottom:8px;background:${margin >= profit ? '#e6f4ea' : '#fdecec'};">If you sell at the cap-rate value: profit <b>${money(gain)}</b> (${(margin * 100).toFixed(1)}% of value) — ${margin >= profit ? 'meets' : 'below'} your ${num('hcProfit')}% target.</div>
-        <div style="padding:8px 10px;border-radius:8px;background:var(--card-bg-soft,#f3f5f9);">If you keep it: loan ${money(loan)} (${debt.binding} limited; LTV max ${money(debt.ltvLimit)}, DSCR max ${money(debt.dscrLimit)}), payment ${money(ds / 12)}/mo · <b style="color:${good(cf > 0)};">cash flow ${money(cf / 12)}/mo</b> · DSCR <b style="color:${good(ds > 0 && noi / ds >= num('hcDscr') - 1e-9)};">${ds ? (noi / ds).toFixed(2) + 'x' : '—'}</b> · cash left in the deal ${money(Math.max(0, cashIn))}${cashIn > 0 ? ' · cash-on-cash <b>' + (cf / cashIn * 100).toFixed(1) + '%</b>' : ' (the refinance returns all your cash)'}</div></div></div>
-      <div style="font-size:11px;color:var(--text-faint);margin-top:6px;">Rent, operating costs and cap rate are placeholders — operating costs include taxes, insurance, repairs, management and reserves. Not an appraisal; the loan is a 30-year fixed.</div>`;
-  }
-  function setMode(){ const r = el('hcMode').value === 'rent'; el('hcRentRow').style.display = r ? '' : 'none'; }
-  el('hcMode').addEventListener('input', () => { setMode(); calc(); try{ const m = JSON.parse(localStorage.getItem('homeCalc') || '{}'); m.hcMode = el('hcMode').value; localStorage.setItem('homeCalc', JSON.stringify(m)); }catch(e){} });
-  RIDS.forEach(id => el(id).addEventListener('input', () => { try{ const m = JSON.parse(localStorage.getItem('homeCalc') || '{}'); m[id] = el(id).value; localStorage.setItem('homeCalc', JSON.stringify(m)); }catch(e){} calc(); }));
-  setMode();
   function calc(){
-    if(el('hcMode').value === 'rent') return calcRent();
     const lots = Math.max(1, Math.floor(num('hcLots'))), sf = num('hcSf'), soft = num('hcSoft') / 100, site = num('hcSite'), demo = num('hcDemo');
     const fin = num('hcFin') / 100, sell = num('hcSell') / 100, profit = num('hcProfit') / 100, P = num('hcPrice') * sf;
     const splitCost = num('moSplitCost'), haircut = num('moSplitHaircut') / 100, den = 1 - sell - profit;
@@ -2788,7 +2652,7 @@ function renderMapInstance(inst, leads){
 // profit from the numbers you ran on this lead: its own calculator first, else a run saved under its address
 function runProfit(l){
   const c = loadCalcs()[l.apn];
-  if(c && c.st) return c.st.mode === 'lots' ? calcSubdivision(c.st).developerProfit : calcHold(c.st).profit;
+  if(c && c.st) return c.st.mode === 'lots' ? calcSubdivision(c.st).developerProfit : calcSale(c.st).profit;
   const a = String(l.address || '').split(/\s{2,}/)[0].toLowerCase(), r = loadRuns().find(x => x.name.toLowerCase() === a);
   return r ? r.gain : null;
 }
