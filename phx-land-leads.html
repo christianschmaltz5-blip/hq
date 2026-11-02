@@ -516,7 +516,7 @@ BEFORE YOU SIGN ANYTHING
       </div>
 
       <div class="card" id="traced" style="border:2px solid #3f7a57;">
-        <div class="card-head"><h2>📞 Skip-Traced Contacts</h2></div>
+        <div class="card-head"><h2>📞 Skip-Traced Contacts</h2><input id="tracedSearch" type="search" placeholder="Search address, owner or APN…" oninput="renderTraced()" style="min-width:220px;"></div>
         <div id="traced-summary" style="font-size:13px;color:var(--text-soft);margin-bottom:10px;"></div>
         <div style="overflow-x:auto;"><table class="comps-table" id="traced-table"></table></div>
       </div>
@@ -2005,7 +2005,8 @@ function setContactNote(apn, text){
 function renderTraced(){
   const con = loadContacts(), chk = loadChecks(), calls = loadCalls(), notes = loadNotes();
   const hid = loadHidden(), all = (D.leads || []).filter(l => con[l.apn] && !isDiscarded(l.apn)), nHid = all.filter(l => hid[l.apn]).length;
-  const rows = all.filter(l => showHiddenRows || !hid[l.apn]).sort((a, b) => (con[b.apn].phones.length ? 1 : 0) - (con[a.apn].phones.length ? 1 : 0) || b.score - a.score);
+  const q = (document.getElementById('tracedSearch').value || '').trim().toLowerCase();
+  const rows = all.filter(l => (showHiddenRows || !hid[l.apn]) && (!q || [l.address, l.ownerName, l.apn].join(' ').toLowerCase().includes(q))).sort((a, b) => (con[b.apn].phones.length ? 1 : 0) - (con[a.apn].phones.length ? 1 : 0) || b.score - a.score);
   const hit = rows.filter(l => con[l.apn].phones.length).length;
   document.getElementById('traced-summary').textContent = rows.length
     ? `${rows.length} traced · ${hit} with a phone. Click a 🔍 number to check it on TruePeopleSearch, then mark Yes / No.` + '' : 'Nothing imported yet — use "Import REISkip results" on the Skip-Trace Priority card.';
