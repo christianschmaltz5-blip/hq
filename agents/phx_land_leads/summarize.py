@@ -16,7 +16,7 @@ lines += [f"{l['score']} {l['address'].split('  ')[0].title()} ({l['parcelStatus
 best = sorted((l for l in fresh if (l.get("verdict") or {}).get("profit") is not None), key=lambda l: -l["verdict"]["profit"])[:3]
 if best:   # sale price = second-highest qualifying nearby comp $/sf
     lines.append("Top profit (screened comps; placeholder costs):")
-    lines += [f"${l['verdict']['profit']/1e3:,.0f}k {l['address'].split('  ')[0].title()} ({l['verdict']['strategy']}, {l['verdict']['salePsf']}/sf)" for l in best]
+    lines += [f"${l['verdict']['profit']/1e3:,.0f}k {l['address'].split('  ')[0].title()} ({l['verdict']['strategy']}, {l['verdict']['salePsf']}/sf){' PRELIMINARY LAND' if l['verdict'].get('landBasis') == 'area-avg' else ''}{' LOSES AT MEDIAN' if (l['verdict'].get('medianStress') or {}).get('profit', 0) < 0 else ''}" for l in best]
 
 good = [l for l in fresh if (l.get("verdict") or {}).get("label") == "Good"]
 if good:

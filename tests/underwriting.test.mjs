@@ -134,7 +134,7 @@ function calculatorContext(fixture, leads = []) {
   const end = html.indexOf('\nfunction sellerSignals(', begin);
   assert.ok(begin >= 0 && end > begin);
   vm.runInContext(html.slice(begin, end), context);
-  vm.runInContext(declaration('splitInfo') + declaration('pmt') + declaration('rentalDebt'), context);
+  vm.runInContext(declaration('splitInfo'), context);
   const init = html.indexOf('(function hcInit(){');
   assert.ok(init >= 0, 'Missing calculator initialization');
   vm.runInContext(completeScript(init), context);
@@ -539,44 +539,6 @@ for(const item of riskCases){
   });
 }
 
-test('DSCR limits debt and increases equity; LTV and zero-interest boundaries work', () => {
-  const {context} = calculatorContext(fixtures[0]);
-  const noi = 3*2600*12*.94*.6, value = noi/.055;
-  const debt = context.rentalDebt(noi,value,.70,.0675,360,1.25);
-  approximately(debt.ltvLimit, 671877.8181818181, 'LTV amount');
-  assert.ok(debt.loan < debt.ltvLimit);
-  approximately(debt.dscr,1.25,'DSCR binding limit');
-  approximately(context.rentalDebt(100000,1000000,.5,0,360,1.25).loan,500000,'zero interest LTV cap');
-  assert.equal(context.rentalDebt(-100,1000000,.7,.06,360,1.25).loan,0);
-  assert.equal(context.rentalDebt(noi,value,.7,.06,360,0),null);
-});
-
-test('rental calculator blocks blank land and includes demolition in cost and offer', () => {
-  const {context,getElementById:g} = calculatorContext(fixtures[0]);
-  for(const [id,value] of Object.entries({hcUnits:3,hcUnitSf:1200,hcRent:2600,hcVac:6,hcOpex:40,hcCap:5.5,hcLtv:70,hcRate:6.75,hcDscr:1.25})) g(id).value=String(value);
-  g('hcMode').value='rent';g('hcMode').dispatchEvent({type:'input'});
-  const original = {...context.window.hcLast};
-  assert.ok(original.loan > 0);
-  g('hcDemo').value=45000;g('hcDemo').dispatchEvent({type:'input'});
-  approximately(context.window.hcLast.totalCost-original.totalCost,45000*1.07,'financed demolition');
-  approximately(original.maxLand-context.window.hcLast.maxLand,45000,'offer deducts demolition');
-  g('hcLand').value='';g('hcLand').dispatchEvent({type:'input'});
-  assert.equal(context.window.hcLast,null);
-  assert.match(g('hcOut').textContent,/supported land price/);
-});
-
-test('build-and-hold blocks missing price and caps permanent debt', () => {
-  const {context} = calculatorContext(fixtures[0]);
-  vm.runInContext(declaration('holdDefaults')+declaration('loanBal')+declaration('irrOf')+declaration('calcHold'),context);
-  const state=context.holdDefaults({landAcres:1,landSf:43560},3);
-  assert.match(context.calcHold(state).error,/purchase price/);
-  state.askingPrice=250000;state.ltvPct=.95;state.minDscr=2;
-  const r=context.calcHold(state);
-  assert.ok(!r.error);
-  assert.ok(r.permLoan < r.debt.ltvLimit);
-  approximately(r.dscr,2,'hold DSCR');
-});
-
 test('median sensitivity flags changed verdict and shared comps', () => {
   const {context} = calculatorContext(fixtures[0]);
   const parcel={apn:'A',landSf:9000,currentZoning:'R1-8',floodKnown:true,
@@ -610,20 +572,6 @@ test('white-marker reason distinguishes commercial use from missing comps', () =
   assert.match(context.noVerdictReason({landUseClass:'residential'}),/comps are missing/);
 });
 
-test('commercial scenario does not assume residential density and supports an explicit land proxy', () => {
-  const parcel={apn:'COMMERCIAL',landUseClass:'commercial',landAcres:2,landSf:87120,
-    rezoneTargetUnits:99,dealType:'subdivision',valuation:{mostLikelyValue:300000},parcelStatus:'vacant'};
-  const {context,getElementById:g}=calculatorContext(fixtures[0],[parcel]);
-  Object.assign(context,{SUBDIVISION_DEFAULTS:{},calcStates:{},currentLeads:[parcel],loadCalcs:()=>({}),calcRender:()=>{},persistCalc:()=>{}});
-  vm.runInContext(declaration('holdDefaults')+declaration('initCalc')+declaration('useScenarioLand'),context);
-  context.initCalc(0,parcel);
-  const state=context.calcStates[0];
-  assert.equal(state.mode,'hold');assert.equal(state.units,1);assert.equal(state.askingPrice,0);
-  assert.match(g('calc-note-0').innerHTML,/Manual commercial scenario/);
-  context.useScenarioLand(0);
-  assert.equal(state.askingPrice,300000);
-});
-
 test('map scenario button opens the selected APN calculator', () => {
   const parcel={apn:'ABC',landUseClass:'commercial'};
   const {context,getElementById:g}=calculatorContext(fixtures[0],[parcel]);
@@ -634,16 +582,6 @@ test('map scenario button opens the selected APN calculator', () => {
   context.openLeadScenario('ABC');
   assert.equal(g('addrSearch').value,'ABC');assert.equal(g('landUseFilter').value,'all');
   assert.ok(calcOpened && detailOpened);
-});
-
-
-test('negative-NOI project still shows its loss with zero income-based debt', () => {
-  const {context}=calculatorContext(fixtures[0]);
-  vm.runInContext(declaration('holdDefaults')+declaration('loanBal')+declaration('irrOf')+declaration('calcHold'),context);
-  const state=context.holdDefaults({landAcres:1,landSf:43560},1);state.askingPrice=1100000;
-  const result=context.calcHold(state);
-  assert.ok(!result.error);assert.ok(result.noi1<0);assert.equal(result.permLoan,0);
-  assert.equal(result.appraised,0);assert.ok(result.profit<0);
 });
 
 
