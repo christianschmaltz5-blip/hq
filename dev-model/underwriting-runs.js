@@ -12,8 +12,53 @@
 // };
 
 window.UNDERWRITING_RUNS = {
-  "updated": "2026-10-19",
-  "runs": [],
+  "updated": "2026-11-02",
+  "runs": [
+    {
+      "name": "3rd Street Apartments",
+      "address": "8910-8912 N 3rd St, Phoenix AZ 85020",
+      "zip": "85020",
+      "bucket": "qualifying",
+      "units": 10,
+      "askingPrice": 1299000,
+      "inPlaceNOI": 88600,
+      "currentAvgRent": 1000,
+      "currentAvgRentSource": "default",
+      "rentPremium": 85,
+      "rentPremiumSource": "default",
+      "TAC": 1514934,
+      "stabilizedValue": 1269738,
+      "valueAddProfit": -245196,
+      "profitMargin": -0.1619,
+      "cashOnCash": 0.0014,
+      "equityMultiple": 0.28,
+      "noiVarianceFlag": true,
+      "verdict": "INSUFFICIENT RENT DATA (zip not scanned yet)",
+      "sourceUrl": "https://www.crexi.com/properties/2289585/arizona-8910-8912-n-3rd-st"
+    },
+    {
+      "name": "Uptown Phoenix 9",
+      "address": "5035 N 23rd Ave, Phoenix AZ 85015",
+      "zip": "85015",
+      "bucket": "qualifying",
+      "units": 9,
+      "askingPrice": 1699000,
+      "inPlaceNOI": 122000,
+      "currentAvgRent": 972,
+      "currentAvgRentSource": "comp-derived (classic)",
+      "rentPremium": 75,
+      "rentPremiumSource": "comp-derived",
+      "TAC": 1931073,
+      "stabilizedValue": 1102741,
+      "valueAddProfit": -828332,
+      "profitMargin": -0.4289,
+      "cashOnCash": -0.0481,
+      "equityMultiple": -0.68,
+      "noiVarianceFlag": true,
+      "verdict": "DOES NOT PENCIL",
+      "sourceUrl": "https://www.crexi.com/properties/2372857/arizona-5035-n-23rd-ave-phoenix-az-85015"
+    }
+  ],
   "history": [
     {
       "date": "2026-08-05",
@@ -98,6 +143,12 @@ window.UNDERWRITING_RUNS = {
       "dealsRun": 0,
       "pencilCount": 0,
       "topDeal": null
+    },
+    {
+      "date": "2026-11-02",
+      "dealsRun": 2,
+      "pencilCount": 0,
+      "topDeal": "3rd Street Apartments ($-245,196)"
     }
   ]
 };
