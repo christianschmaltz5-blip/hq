@@ -872,11 +872,12 @@ function landCompsHtml(lead){
 
 
 // House comps: recent HOME sales near the lead, pulled live from the Maricopa Assessor GIS (read-only, public).
-const HOUSE_COMP_POLICY = { id: 'home-3800-25pct-3m-v1', planSf: 3800, minSf: 2850, maxSf: 4750, minPrice: 150000, maxPrice: 3000000, minComps: 3 };
+const HOUSE_COMP_POLICY = { id: 'home-3800-25pct-3m-v2', planSf: 3800, minSf: 2850, maxSf: 4750, minPrice: 150000, maxPrice: 3000000, minComps: 3 };
 const houseCache = {};
 function houseCompMatchesPolicy(c){
   const sf = Number(c.sf), price = Number(c.price), p = HOUSE_COMP_POLICY;
-  return Number.isFinite(sf) && Number.isFinite(price) && sf >= p.minSf && sf <= p.maxSf && price >= p.minPrice && price <= p.maxPrice;
+  return Number.isFinite(sf) && Number.isFinite(price) && sf >= p.minSf && sf <= p.maxSf && price >= p.minPrice && price <= p.maxPrice
+    && !(Number(c.built || c.yearBuilt) > new Date(c.sold).getFullYear());   // sold before it was built = land sale; unknown dates pass
 }
 function houseCompCriteria(){ return '2,850–4,750 sf (±25% of the 3,800 sf plan), $150,000–$3,000,000; at least 3 sales'; }
 function normalizeHouseComps(saved){
@@ -927,7 +928,7 @@ async function fetchHouseComps(lead){
       if(!Array.isArray(r.features)) throw new Error('GIS response is missing parcel features');
       const seen = new Set();
       feats = r.features.map(f => f.attributes).filter(a => {
-        if(!a || !houseCompMatchesPolicy({ sf: houseCompNum(a.LIVING_SPACE), price: houseCompNum(a.SALE_PRICE) })) return false;
+        if(!a || !houseCompMatchesPolicy({ sf: houseCompNum(a.LIVING_SPACE), price: houseCompNum(a.SALE_PRICE), sold: a.SALE_DATE, built: houseCompNum(a.CONST_YEAR) })) return false;
         const lat = Number(a.LATITUDE), lng = Number(a.LONGITUDE), sold = houseCompSaleTime(a.SALE_DATE), apn = String(a.APN || '').trim();
         if(a.LATITUDE == null || a.LONGITUDE == null || String(a.LATITUDE).trim() === '' || String(a.LONGITUDE).trim() === '' || !Number.isFinite(lat) || !Number.isFinite(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180 || !Number.isFinite(sold) || sold > Date.now() || new Date(sold).getFullYear() < yr-2) return false;
         if(apn && (apn === String(lead.apn) || seen.has(apn))) return false;
@@ -1172,7 +1173,7 @@ function leadCard(lead, idx){
     <div class="lead-detail" id="detail-${idx}">
       <div class="detail-grid">
         <div class="detail-field"><div class="detail-label">General Plan Code (raw)</div><div class="detail-val">${esc(lead.generalPlanDesignation)||'—'}<div style="font-size:10px;font-weight:400;color:var(--text-faint);margin-top:2px;">no public code→label legend found — cross-check the city's GP map</div></div></div>
-        <div class="detail-field"><div class="detail-label">Flood Zone</div><div class="detail-val">${lead.floodKnown === true ? (esc(lead.floodZone)||'None mapped') : 'Unknown — lookup not confirmed'}</div></div>
+        <div class="detail-field"><div class="detail-label">Flood Zone</div><div class="detail-val">${lead.floodKnown === true && lead.floodZone !== 'D' ? (esc(lead.floodZone)||'None mapped') : 'Unknown — lookup not confirmed'}</div></div>
         <div class="detail-field"><div class="detail-label">Land Size</div><div class="detail-val">${esc(lead.landSf)} sf</div></div>
         <div class="detail-field"><div class="detail-label">PUC Code</div><div class="detail-val">${esc(lead.puc)}</div></div>
         <div class="detail-field"><div class="detail-label">Owner Mailing Address</div><div class="detail-val">${esc(lead.ownerMailAddress)||'—'}</div>
@@ -2241,7 +2242,7 @@ function profitFor(l, extraHard, psfOverride, o){
     if(!best || e.profit > best.profit) best = { n, finished: e.finished, cost: e.cost, profit: e.profit, land, margin: e.margin };
   }
   best.maxLand = maxLand; best.offerN = offerN;
-  let r = (landOK ? 0 : 2) + (lb.areaAvg ? 2 : 0) + ((nb.n || 0) < (nb.fellBack ? 6 : 4) ? 1 : 0) + ((nb.radiusMi || 0) >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : l.floodKnown !== true ? 1 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0) + (psf > 800 ? 2 : 0);
+  let r = (landOK ? 0 : 2) + (lb.areaAvg ? 2 : 0) + ((nb.n || 0) < (nb.fellBack ? 6 : 4) ? 1 : 0) + ((nb.radiusMi || 0) >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : l.floodKnown !== true || l.floodZone === 'D' ? 1 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0) + (psf > 800 ? 2 : 0);
   best.risk = r <= 1 ? 'Low' : r <= 3 ? 'Medium' : 'High';
   best.adj = best.profit > 0 ? best.profit * ({ Low: .85, Medium: .65, High: .4 }[best.risk]) : best.profit;
   best.strategy = best.n > 1 ? `Lot split → ${best.n} custom homes (unconfirmed capacity)${sp.known ? '' : ' (zoning min lot unknown — assumed)'}` : 'Custom home';
@@ -2252,7 +2253,7 @@ function compSensitivityHtml(l){
   const high = profitFor(l, 0, 0, { hard: 325 }), cheap = profitFor(l, 0, 0, { hard: 275 });
   if(!high || !cheap) return '';
   const target = parseFloat(document.getElementById('hcProfit').value) / 100 || .10;
-  const classify = (a,b) => a.margin >= target && a.risk !== 'High' ? 'Good' : a.profit >= 0 && (a.margin >= target / 2 || b.margin >= target) ? 'Maybe' : 'Pass';
+  const classify = (a,b) => a.margin >= target && a.risk !== 'High' && l.currentZoning ? 'Good' : a.profit >= 0 && (a.margin >= target / 2 || b.margin >= target) ? 'Maybe' : 'Pass';
   const median = c.medPsf || (c.fellBack ? c.psf : 0);
   const normal = classify(high, cheap), mh = median ? profitFor(l, 0, median, {hard:325}) : null, ml = median ? profitFor(l, 0, median, {hard:275}) : null;
   const ids = x => new Set(((selectedComps(x)||{}).comps || (selectedComps(x)||{}).examples || []).map(t => t.apn || [t.address,t.sold,t.price,t.sf].join('|')));
@@ -2336,7 +2337,7 @@ function intakeHtml(l){
   const flags = [];
   if(l.landUseClass && l.landUseClass !== 'residential') flags.push(`The county codes this parcel ${l.landUseClass}, which may not match its zoning.`);
   if(l.inFloodplain) flags.push('In a mapped floodplain (' + esc(l.floodZone || 'zone ?') + ').');
-  else if(l.floodKnown !== true) flags.push('Flood status UNKNOWN: a successful FEMA lookup is not recorded.');
+  else if(l.floodKnown !== true || l.floodZone === 'D') flags.push('Flood status UNKNOWN: a successful FEMA lookup is not recorded, or the zone is D (undetermined).');
   if(l.zoningKnown && !l.currentZoning && !l.zoningSource) flags.push('No City of Phoenix zoning at this point: it may be unincorporated Maricopa County (mailing city is not jurisdiction). Phoenix ADU / lot-split rules and the "adjacent zoning" rezone target may not apply. Confirm jurisdiction and zoning before relying on this.');
   const lv = l.valuation, landV = lv && lv.mostLikelyValue && !lv.unreliable ? lv.mostLikelyValue : (l.assessedValue || 0), price = landBasis(l).override ? landBasis(l).land : l.salePrice;
   if(price > 0 && landV > 0 && Math.max(price, landV) / Math.min(price, landV) > 1.5) flags.push('Price ' + money(price) + ' vs county proxy ' + money(landV) + ': a gap over 1.5× in either direction. Verify both before relying on the land cost.');

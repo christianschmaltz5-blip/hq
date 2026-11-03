@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 const testDirectory = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(testDirectory, '..');
 const html = fs.readFileSync(path.join(root, 'phx-land-leads.html'), 'utf8');
-const HOUSE_COMP_POLICY_ID = 'home-3800-25pct-3m-v1';
+const HOUSE_COMP_POLICY_ID = 'home-3800-25pct-3m-v2';
 const fixtures = JSON.parse(fs.readFileSync(path.join(testDirectory, 'underwriting-fixtures.json'), 'utf8')).cases;
 
 test('every inline page script parses', () => {

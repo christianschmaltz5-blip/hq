@@ -783,7 +783,7 @@ def enrich_parcel(p):
         "generalPlanDesignation": gp_designation,
         "floodZone": (flood_rec or {}).get("FLD_ZONE"),
         "inFloodplain": bool((flood_rec or {}).get("SFHA_TF") == "T"),
-        "floodKnown": not (flood_rec or {}).get("_failed"),   # False = the FEMA lookup failed, so "not in floodplain" is unconfirmed
+        "floodKnown": bool((flood_rec or {}).get("FLD_ZONE")) and flood_rec.get("FLD_ZONE") != "D",   # False = lookup failed/empty or Zone D (undetermined), so "not in floodplain" is unconfirmed
         "zoningKnown": not (zoning_rec or {}).get("_failed"),
         "rezoningNearby": rezoning_nearby,
         "rezoneTarget": rezone_target,

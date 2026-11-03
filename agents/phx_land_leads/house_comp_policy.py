@@ -6,7 +6,7 @@ The browser mirrors this policy; shared fixtures check both implementations.
 import math
 from statistics import median
 
-HOUSE_COMP_POLICY = dict(id="home-3800-25pct-3m-v1", planSf=3800, minSf=2850,
+HOUSE_COMP_POLICY = dict(id="home-3800-25pct-3m-v2", planSf=3800, minSf=2850,
                          maxSf=4750, minPrice=150000, maxPrice=3000000, minComps=3)
 
 
@@ -18,6 +18,15 @@ def eligible_home_sale(sf, price):
     return (math.isfinite(sf) and math.isfinite(price)
             and HOUSE_COMP_POLICY["minSf"] <= sf <= HOUSE_COMP_POLICY["maxSf"]
             and HOUSE_COMP_POLICY["minPrice"] <= price <= HOUSE_COMP_POLICY["maxPrice"])
+
+
+def sold_after_built(sold, built):
+    """False for a pre-construction sale (land or lot, not a finished home). Unknown dates pass."""
+    try:
+        year = int(str(sold).strip()[-4:]) if "/" in str(sold) else int(str(sold)[:4])
+        return year >= int(float(built))
+    except (TypeError, ValueError):
+        return True
 
 
 def policy_description():
@@ -35,7 +44,8 @@ def filter_stored_house_comps(result):
     hc = dict(result or {})
     rows = hc.get("comps")
     if isinstance(rows, list) and not hc.get("fellBack"):
-        rows = [c for c in rows if isinstance(c, dict) and eligible_home_sale(c.get("sf"), c.get("price"))][:5]
+        rows = [c for c in rows if isinstance(c, dict) and eligible_home_sale(c.get("sf"), c.get("price"))
+                and sold_after_built(c.get("sold"), c.get("yearBuilt"))][:5]
         hc.update(comps=rows, n=len(rows), selectionPolicy=HOUSE_COMP_POLICY["id"])
         if len(rows) >= HOUSE_COMP_POLICY["minComps"]:
             psfs = [float(c["price"]) / float(c["sf"]) for c in rows]

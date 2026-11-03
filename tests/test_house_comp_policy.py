@@ -7,7 +7,7 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "agents" / "phx_land_leads"))
-from house_comp_policy import HOUSE_COMP_POLICY, eligible_home_sale, filter_stored_house_comps
+from house_comp_policy import HOUSE_COMP_POLICY, eligible_home_sale, filter_stored_house_comps, sold_after_built
 import offer
 import verdict
 
@@ -37,7 +37,7 @@ class HouseCompPolicyTests(unittest.TestCase):
         cases = fixture["cases"]
         for case in cases:
             with self.subTest(case=case["name"]):
-                self.assertEqual(eligible_home_sale(case["sf"], case["price"]), case["expected"])
+                self.assertEqual(eligible_home_sale(case["sf"], case["price"]) and sold_after_built(case.get("sold"), case.get("built")), case["expected"])
 
     def test_cached_mansions_are_removed_and_statistics_recomputed(self):
         old = {"psf": 1000, "medPsf": 600, "price": 2700000, "lowPsf": 400, "highPsf": 1000,

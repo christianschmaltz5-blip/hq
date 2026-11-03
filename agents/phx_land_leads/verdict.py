@@ -14,7 +14,7 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
 from comps import MARICOPA_PARCELS, _esri_query, _haversine_mi
-from house_comp_policy import HOUSE_COMP_POLICY, eligible_home_sale, filter_stored_house_comps
+from house_comp_policy import HOUSE_COMP_POLICY, eligible_home_sale, filter_stored_house_comps, sold_after_built
 
 def _parse_num(value):
     try:
@@ -120,7 +120,7 @@ def house_comps(l):
             try:
                 sold = datetime.strptime(a["SALE_DATE"], "%m/%d/%Y").date()
                 comp_lat, comp_lng = float(a["LATITUDE"]), float(a["LONGITUDE"])
-                if (sold > date.today() or sold.year < yr - 2 or not math.isfinite(comp_lat) or not math.isfinite(comp_lng)
+                if (sold > date.today() or sold.year < yr - 2 or not sold_after_built(a["SALE_DATE"], _parse_num(a.get("CONST_YEAR"))) or not math.isfinite(comp_lat) or not math.isfinite(comp_lng)
                         or not -90 <= comp_lat <= 90 or not -180 <= comp_lng <= 180):
                     continue
             except (ValueError, TypeError, KeyError):
@@ -244,7 +244,7 @@ def underwrite(l, *, fetch_comps=True, overrides=None, area_per_acre=None):
     cheap, best = run(A["hard"][0]), run(A["hard"][1])
     fallback = bool(hc.get("fellBack"))
     risk = ((0 if land_ok else 2) + guess + ((hc.get("n") or 0) < (6 if fallback else 4)) + ((hc.get("radiusMi") or 0) >= 3)
-            + (2 if l.get("inFloodplain") else 1 if l.get("floodKnown") is not True else 0)
+            + (2 if l.get("inFloodplain") else 1 if l.get("floodKnown") is not True or l.get("floodZone") == "D" else 0)
             + ((1 if known else 2) if best["n"] > 1 else 0)
             + (2 if hc["psf"] > 800 else 0))   # unverified: sale price above $800/sf
     risk = "Low" if risk <= 1 else "Medium" if risk <= 3 else "High"
@@ -253,16 +253,21 @@ def underwrite(l, *, fetch_comps=True, overrides=None, area_per_acre=None):
     if median_psf:
         med_high, med_low = run(A["hard"][1], median_psf), run(A["hard"][0], median_psf)
         med_risk_points = ((0 if land_ok else 2) + guess + ((hc.get("n") or 0) < (6 if fallback else 4)) + ((hc.get("radiusMi") or 0) >= 3)
-                           + (2 if l.get("inFloodplain") else 1 if l.get("floodKnown") is not True else 0)
+                           + (2 if l.get("inFloodplain") else 1 if l.get("floodKnown") is not True or l.get("floodZone") == "D" else 0)
                            + ((1 if known else 2) if med_high["n"] > 1 else 0) + (2 if median_psf > 800 else 0))
         med_risk = "Low" if med_risk_points <= 1 else "Medium" if med_risk_points <= 3 else "High"
         med_label = verdict_label(med_high["profit"], med_high["margin"], med_low["margin"], med_risk)
+        if not l.get("currentZoning") and med_label == "Good":
+            med_label = "Maybe"
         stress = dict(salePsf=median_psf, label=med_label, profit=round(med_high["profit"]), marginPct=round(med_high["margin"]*100, 1), homes=med_high["n"],
                       fragile=med_label != verdict_label(best["profit"], best["margin"], cheap["margin"], risk))
     m = best["margin"]
     offer, offer_n = max(((supportable_land(inputs(n, A["hard"][1]), A["good"]), n)
                          for n in sorted({1, n_split})), key=lambda item: item[0])
-    return dict(label=verdict_label(best["profit"], m, cheap["margin"], risk),
+    label = verdict_label(best["profit"], m, cheap["margin"], risk)
+    if not l.get("currentZoning") and label == "Good":
+        label = "Maybe"   # zoning unconfirmed: never Good
+    return dict(label=label,
                 strategy=f"{best['n']} homes" if best["n"] > 1 else "1 custom home", land=round(land),
                 finished=round(best["finished"]), profit=round(best["profit"]), marginPct=round(m * 100), marginPctAt275=round(cheap["margin"] * 100),
                 profitAt275=round(cheap["profit"]), salePsf=hc["psf"], risk=risk, medianStress=stress, capacityConfirmed=False,
