@@ -321,7 +321,9 @@ def main(argv=None):
     p = Path(__file__).resolve().parents[2] / "phx-land-leads" / "data.js"
     d = json.loads(re.search(r"= (\{.*\});", p.read_text(), re.S).group(1))
     counts = recalculate_data(d, cached=args.cached)
-    p.write_text("window.PHX_LAND_LEADS = " + json.dumps(d, indent=2) + ";\n")
+    tmp = p.with_suffix(".js.tmp")   # write then rename, so a crash can't leave a half-written data.js
+    tmp.write_text("window.PHX_LAND_LEADS = " + json.dumps(d, indent=2) + ";\n")
+    tmp.replace(p)
     print("verdicts (stored comps; no network):" if args.cached else "verdicts:", counts)
     return 0
 

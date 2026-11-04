@@ -635,12 +635,14 @@ const LOTS_SECTIONS = [
 ];
 
 function saleDefaults(lead, units){
-  const sf = Math.round(units * 900), hard1 = Math.round(units * 165000), c = selectedComps(lead);
+  // Seeded from the verdict's plan (3,800 sf homes, $325/sf, 3% selling cost, split homes at the page's split factor) so the shortcut opens the same deal.
+  const sf = Math.round(units * 3800), hard1 = Math.round(sf * 325), c = selectedComps(lead);
+  const hc = (parseFloat((document.getElementById('moSplitHaircut') || {}).value) || 90) / 100;
   return {
     acres: lead.landAcres || 0, lotSf: lead.landSf || Math.round((lead.landAcres||0)*43560), buildingSf: sf, units,
-    salePsf: c && c.psf > 0 ? Math.round(c.psf) : 400, salePrice: null, sellPct: 0.06, targetPct: 0.10,
+    salePsf: c && c.psf > 0 ? Math.round(c.psf * (units > 1 ? hc : 1)) : 400, salePrice: null, sellPct: 0.03, targetPct: 0.10,
     askingPrice: 0, landExp1: 0,
-    hard1, hard2: Math.round(units*12000),
+    hard1, hard2: Math.round(units*10000),
     permit: Math.round(hard1*0.02), design: Math.round(hard1*0.04), survey: 6000, misc: 10000, finConstr: Math.round(hard1*0.015), otherCost1: 0,
     contPct: 0.05, interestReserve: null, devFeePct: 0.03,
     ltcPct: 0.65, constrRate: 0.075, constrTerm: 18,
@@ -765,7 +767,8 @@ function resetCalc(idx){
 function initCalc(idx, lead){
   const dealType = lead.dealType;
   const nonResidential = (lead.landUseClass && lead.landUseClass !== 'residential') || commZoned(lead);
-  const units = nonResidential ? 1 : Math.max(1, Math.round(lead.rezoneTargetUnits || lead.byRightUnits || (lead.landAcres||0) * 8));
+  const vHomes = /^(\d+) homes/.exec((lead.verdict || {}).strategy || '');   // the verdict's winning plan beats the density guess
+  const units = nonResidential ? 1 : lead.verdict ? (vHomes ? +vHomes[1] : 1) : Math.max(1, Math.round(lead.rezoneTargetUnits || lead.byRightUnits || (lead.landAcres||0) * 8));
   const demoCost = lead.parcelStatus === 'improved' ? (lead.defaultDemoCost || 0) : 0;
   calcStates[idx] = Object.assign({}, SUBDIVISION_DEFAULTS, saleDefaults(lead, units),
     { mode: !nonResidential && dealType === 'subdivision' ? 'lots' : 'sale', demoCost, lots: units, sellingCostPct: SUBDIVISION_DEFAULTS.sellingCostPct },
@@ -2232,7 +2235,7 @@ function profitFor(l, extraHard, psfOverride, o){
   const lb = landBasis(l), landOK = lb.ok, land = lb.land * (o.landMult || 1);
   if(!land || sf <= 0) return null;
   const demo = l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0;
-  const splitCost = num('moSplitCost'), haircut = num('moSplitHaircut') / 100;
+  const splitCost = num('moSplitCost'), haircut = o.haircut != null ? o.haircut : num('moSplitHaircut') / 100;
   let best = null, maxLand = -Infinity, offerN = 1;
   const sp = splitInfo(l);
   for(const n of new Set([1, sp.n])){
@@ -2282,7 +2285,9 @@ function profitLine(l){
     if(run) runNote = ` · <b>your saved run:</b> ${run.vals.hcLots} homes, land ${m2(+run.vals.hcLand)}, profit ${m2(run.gain)} per home (${(run.margin * 100).toFixed(0)}%)`;
     badge = `<span title="Screen at $325/sf build; Maybe requires break-even. Other current calculator inputs apply." style="background:${col};color:#fff;border-radius:4px;padding:1px 6px;margin-right:6px;font-size:11px;font-weight:700;">${lab.toUpperCase()} · $325/sf</span>`;
   }
-  return `<div class="lead-sub" data-profit-apn="${esc(l.apn)}" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${badge}📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%) · risk ${p.risk}${selectedComps(l).fellBack ? ' · ⚠ FALLBACK comps' : ''}${runNote}${[l.landCompLookup,l.newBuildLookup].filter(x => x && x.error).map(x => `<div>Lookup error: ${esc(x.error)} · attempted ${esc(x.retrievedAt || 'unknown')}</div>`).join('')}${compSensitivityHtml(l)}${landBasis(l).areaAvg ? '<div><b>' + esc(landBasis(l).areaAvg.landBasisNote) + '</b> (guess, not a land comp; risk forced High)</div>' : ''}${landBasis(l).override ? '<div style="margin-top:6px;">' + priceBasisHtml(l) + '</div>' : ''}</div>`;
+  const alt = p.n > 1 && Math.abs((parseFloat(document.getElementById('moSplitHaircut').value) || 0) - 80) > 0.5 ? profitFor(l, 0, 0, { haircut: 0.8 }) : null;   // display only: split homes at 80% (the AGENTS.md figure)
+  const altNote = alt ? ` · <span title="Display only: split homes valued at 80% instead of the page's split factor.">at 80% split value: ${m(alt.profit)} (${(alt.margin * 100).toFixed(0)}%)</span>` : '';
+  return `<div class="lead-sub" data-profit-apn="${esc(l.apn)}" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${badge}📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%)${altNote} · risk ${p.risk}${selectedComps(l).fellBack ? ' · ⚠ FALLBACK comps' : ''}${runNote}${[l.landCompLookup,l.newBuildLookup].filter(x => x && x.error).map(x => `<div>Lookup error: ${esc(x.error)} · attempted ${esc(x.retrievedAt || 'unknown')}</div>`).join('')}${compSensitivityHtml(l)}${landBasis(l).areaAvg ? '<div><b>' + esc(landBasis(l).areaAvg.landBasisNote) + '</b> (guess, not a land comp; risk forced High)</div>' : ''}${landBasis(l).override ? '<div style="margin-top:6px;">' + priceBasisHtml(l) + '</div>' : ''}</div>`;
 }
 function refreshProfitLines(){
   const byApn = new Map((D.leads || []).map(l => [l.apn, l]));
