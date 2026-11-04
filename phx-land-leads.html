@@ -2277,7 +2277,7 @@ function profitLine(l){
     const run = loadRuns().find(r => r.name.toLowerCase() === String(l.address || '').split(/\s{2,}/)[0].toLowerCase());
     const target = parseFloat(document.getElementById('hcProfit').value) / 100 || 0.1;
     const high = profitFor(l, 0, 0, { hard: 325 }), cheap = profitFor(l, 0, 0, { hard: 275 });
-    const lab = high.margin >= target && high.risk !== 'High' ? 'Good' : high.profit >= 0 && (high.margin >= target / 2 || cheap.margin >= target) ? 'Maybe' : 'Pass';
+    const lab = high.margin >= target && high.risk !== 'High' && l.currentZoning ? 'Good' : high.profit >= 0 && (high.margin >= target / 2 || cheap.margin >= target) ? 'Maybe' : 'Pass';
     const col = { Good: '#2f6b47', Maybe: '#9a7a1c', Pass: '#b03a3a' }[lab];
     if(run) runNote = ` · <b>your saved run:</b> ${run.vals.hcLots} homes, land ${m2(+run.vals.hcLand)}, profit ${m2(run.gain)} per home (${(run.margin * 100).toFixed(0)}%)`;
     badge = `<span title="Screen at $325/sf build; Maybe requires break-even. Other current calculator inputs apply." style="background:${col};color:#fff;border-radius:4px;padding:1px 6px;margin-right:6px;font-size:11px;font-weight:700;">${lab.toUpperCase()} · $325/sf</span>`;

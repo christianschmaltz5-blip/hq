@@ -248,6 +248,9 @@ def underwrite(l, *, fetch_comps=True, overrides=None, area_per_acre=None):
             + ((1 if known else 2) if best["n"] > 1 else 0)
             + (2 if hc["psf"] > 800 else 0))   # unverified: sale price above $800/sf
     risk = "Low" if risk <= 1 else "Medium" if risk <= 3 else "High"
+    label = verdict_label(best["profit"], best["margin"], cheap["margin"], risk)
+    if not l.get("currentZoning") and label == "Good":
+        label = "Maybe"   # zoning unconfirmed: never Good
     median_psf = hc.get("medPsf") or (hc["psf"] if fallback else None)
     stress = None
     if median_psf:
@@ -260,13 +263,10 @@ def underwrite(l, *, fetch_comps=True, overrides=None, area_per_acre=None):
         if not l.get("currentZoning") and med_label == "Good":
             med_label = "Maybe"
         stress = dict(salePsf=median_psf, label=med_label, profit=round(med_high["profit"]), marginPct=round(med_high["margin"]*100, 1), homes=med_high["n"],
-                      fragile=med_label != verdict_label(best["profit"], best["margin"], cheap["margin"], risk))
+                      fragile=med_label != label)
     m = best["margin"]
     offer, offer_n = max(((supportable_land(inputs(n, A["hard"][1]), A["good"]), n)
                          for n in sorted({1, n_split})), key=lambda item: item[0])
-    label = verdict_label(best["profit"], m, cheap["margin"], risk)
-    if not l.get("currentZoning") and label == "Good":
-        label = "Maybe"   # zoning unconfirmed: never Good
     return dict(label=label,
                 strategy=f"{best['n']} homes" if best["n"] > 1 else "1 custom home", land=round(land),
                 finished=round(best["finished"]), profit=round(best["profit"]), marginPct=round(m * 100), marginPctAt275=round(cheap["margin"] * 100),
