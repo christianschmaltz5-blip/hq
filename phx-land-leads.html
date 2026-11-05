@@ -347,7 +347,7 @@
             <label style="font-size:12.5px;color:var(--text-soft);">Split cost per extra lot ($)
               <input class="filter-input" id="moSplitCost" type="number" value="25000" style="width:90px;"></label>
             <label style="font-size:12.5px;color:var(--text-soft);">Split lots sell at (% of full-lot value)
-              <input class="filter-input" id="moSplitHaircut" type="number" value="90" style="width:70px;"></label>
+              <input class="filter-input" id="moSplitHaircut" type="number" value="80" style="width:70px;"></label>
             <label style="font-size:12.5px;color:var(--text-soft);">Min lot size if zoning unknown (sf)
               <input class="filter-input" id="moMinLot" type="number" value="14375" style="width:80px;"></label>
             <select class="filter-input" id="moSort" style="width:230px;">
@@ -637,7 +637,7 @@ const LOTS_SECTIONS = [
 function saleDefaults(lead, units){
   // Seeded from the verdict's plan (3,800 sf homes, $325/sf, 3% selling cost, split homes at the page's split factor) so the shortcut opens the same deal.
   const sf = Math.round(units * 3800), hard1 = Math.round(sf * 325), c = selectedComps(lead);
-  const hc = (parseFloat((document.getElementById('moSplitHaircut') || {}).value) || 90) / 100;
+  const hc = (parseFloat((document.getElementById('moSplitHaircut') || {}).value) || 80) / 100;
   return {
     acres: lead.landAcres || 0, lotSf: lead.landSf || Math.round((lead.landAcres||0)*43560), buildingSf: sf, units,
     salePsf: c && c.psf > 0 ? Math.round(c.psf * (units > 1 ? hc : 1)) : 400, salePrice: null, sellPct: 0.03, targetPct: 0.10,

@@ -25,7 +25,7 @@ def _parse_num(value):
 
 A = dict(sf=HOUSE_COMP_POLICY["planSf"], hard=(275, 325), soft=0.08, site=10_000, fin=0.07, sell=0.03,
          adu=dict(n=0, sf=800, hard=350, site=15_000, value=0),
-         split_cost=25_000, haircut=0.9, min_lot=14_375, usable=0.85, good=0.10, maybe=0.05)
+         split_cost=25_000, haircut=0.8, min_lot=14_375, usable=0.85, good=0.10, maybe=0.05)
 COMPS_WEIGHT = 0.8                  # lead score = 80% comps margin + 20% additive signals (signalScore)
 MARGIN_FLOOR, MARGIN_CEIL = -20, 25 # marginPct mapped linearly onto comps score 0..100
 

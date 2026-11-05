@@ -51,11 +51,12 @@ class EconomicsTests(unittest.TestCase):
             result = verdict.underwrite(parcel, fetch_comps=False)
         network.assert_not_called()
         self.assertEqual(result["strategy"], "4 homes")
-        self.assertEqual(result["profit"], 1509446)
-        self.assertEqual(result["finished"], 8208000)
-        # At the 90% split factor the max offer and profit both favor 4 homes.
-        self.assertEqual(result["supportableOffer"], 1178594)
-        self.assertEqual(result["offerHomes"], 4)
+        self.assertEqual(result["profit"], 624806)
+        self.assertEqual(result["finished"], 7296000)
+        # At the 80% split factor 4 homes still earn the most profit, but the max offer favors 1 home
+        # (1-home offer 465,032 vs 4-home offer 437,062; hand-checked from the 600 $/sf fixture).
+        self.assertEqual(result["supportableOffer"], 465032)
+        self.assertEqual(result["offerHomes"], 1)
         self.assertEqual(result["land"], 535000)
         self.assertEqual(parcel["landPriceOverride"]["priceType"], "recorded historical sale")
 
