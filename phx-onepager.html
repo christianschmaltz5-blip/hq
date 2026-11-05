@@ -13,7 +13,8 @@ body { margin: 0; font: 15px/1.5 Georgia, serif; color: #222; background: #eee; 
 h1 { font-size: 26px; margin: 0 0 4px; }
 h2 { font-size: 16px; margin: 12px 0 4px; color: #2f4a3a; }
 .sub { color: #666; margin-bottom: 14px; }
-.aerial { width: 100%; height: 3.0in; object-fit: cover; border: 1px solid #ccc; display: block; }
+.aw { position: relative; width: 100%; aspect-ratio: 1000 / 405; border: 1px solid #ccc; }
+.aw img, .aw svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .pin { position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border: 4px solid #ffd400; border-radius: 50%; box-shadow: 0 0 0 2px #0008; }
 .house { width: 100%; height: 3.6in; object-fit: cover; display: block; border-radius: 3px; }
 .cap { font-size: 11.5px; color: #777; margin: 3px 0 10px; }
@@ -46,14 +47,35 @@ if (!l || comps.length < 3) {
 } else {
   const addr = titleCase(String(l.address || '').split(/\s{2,}/)[0]);
   const bb = [l.lng - .0021, l.lat - .0013, l.lng + .0021, l.lat + .0013].join(',');
-  const aerial = 'https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/export?bbox=' + bb + '&bboxSR=4326&imageSR=4326&size=1000,620&f=image';
+  const aerial = 'https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/export?bbox=' + bb + '&bboxSR=4326&imageSR=4326&size=1000,405&f=image';
   const rows = comps.slice().sort((a, b) => b.price - a.price).map(c =>
     `<tr><td>${esc(titleCase(c.address))}</td><td>${Number(c.sf).toLocaleString()} sf</td><td>${esc(String(c.sold).slice(0, 2))}/${esc(String(c.sold).slice(-4))}</td><td>$${(c.price / 1e6).toFixed(2)}M</td></tr>`).join('');
   document.title = 'One-pager ' + addr;
+  // Same official sources as the Land Leads map: county Assessor parcel polygon over Esri World Imagery.
+  window.__drawParcel = async () => {
+    try {
+      const body = new URLSearchParams({ where: `APN='${String(l.apn).replace(/'/g, '')}'`, outFields: 'APN', returnGeometry: 'true', outSR: '4326', f: 'json' });
+      const r = await (await fetch('https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query', { method: 'POST', body, signal: AbortSignal.timeout(20000) })).json();
+      const f = (r.features || [])[0], ring = f && f.geometry && f.geometry.rings && f.geometry.rings.slice().sort((a, b) => b.length - a.length)[0];
+      if (!ring) return;   // keep the center marker if the county has no polygon
+      const lngs = ring.map(q => q[0]), lats = ring.map(q => q[1]);
+      const w0 = Math.min(...lngs), e0 = Math.max(...lngs), s0 = Math.min(...lats), n0 = Math.max(...lats);
+      const cx = (w0 + e0) / 2, cy = (s0 + n0) / 2, cos = Math.cos(cy * Math.PI / 180);
+      const dLat = Math.max((n0 - s0) * 1.9, (e0 - w0) * cos * (405 / 1000) * 1.9, .0008), dLng = dLat * 1000 / (405 * cos);   // ground-square pixels
+      const west = cx - dLng / 2, north = cy + dLat / 2, bb = [west, cy - dLat / 2, west + dLng, north].join(',');
+      const ex = u => u + '?bbox=' + bb + '&bboxSR=4326&imageSR=4326&size=1000,405';
+      document.getElementById('ai').src = ex('https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/export') + '&f=image';
+      document.getElementById('po').src = ex('https://gis.mcassessor.maricopa.gov/arcgis/rest/services/ParcelOutline/MapServer/export') + '&layers=show:0&transparent=true&format=png32&f=image';
+      const pts = ring.map(q => ((q[0] - west) / dLng * 1000).toFixed(1) + ',' + ((north - q[1]) / dLat * 405).toFixed(1)).join(' ');
+      document.getElementById('ps').innerHTML = `<polygon points="${pts}" fill="rgba(217,48,37,.12)" stroke="#d93025" stroke-width="4" stroke-linejoin="round"/>`;
+      document.getElementById('pin').style.display = 'none';
+    } catch (e) { /* keep the center marker */ }
+  };
+  window.__drawParcel();
   out.innerHTML = `<div class="bar"><button onclick="print()">Print / save as PDF</button></div>
 <div class="page"><h1>A partnership on your lot at ${esc(addr)}</h1>
 <div class="sub">${esc(l.landAcres)} acres · zoned ${esc(l.currentZoning || 'on file')}</div>
-<div style="position:relative;"><img class="aerial" src="${aerial}" alt="Aerial of the parcel"><div class="pin"></div></div><div class="cap">Your parcel (marked)</div>
+<div class="aw"><img id="ai" src="${aerial}" alt="Aerial of the parcel"><img id="po" alt=""><svg id="ps" viewBox="0 0 1000 405"></svg><div class="pin" id="pin"></div></div><div class="cap">Your parcel, outlined in red (Maricopa County Assessor boundary; satellite imagery: Esri)</div>
 <img class="house" src="assets/house-example.jpg" alt="Example home"><div class="cap">Example of the kind of home we would build here</div>
 <div class="foot"><b>${NAME}</b> · Local builder · <b>${PHONE}</b> · ${EMAIL}</div></div>
 <div class="page"><h1>Keep your land's value. Share in what it becomes.</h1>
