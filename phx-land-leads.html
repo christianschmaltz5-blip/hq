@@ -751,7 +751,7 @@ function calcSummary(st){
 }
 function persistCalc(idx){
   const l = currentLeads[idx], st = calcStates[idx]; if(!l || !st) return;
-  const summary = calcSummary(st);
+  const summary = calcSummary(st); st.calcV = 2;
   try{ const d = loadCalcs(); d[l.apn] = { st, summary, at: new Date().toLocaleDateString() }; localStorage.setItem('leadCalcs', JSON.stringify(d)); }catch(e){}
   const b = document.getElementById('calcbadge-' + idx); if(b){ b.style.display = ''; b.textContent = '💾 ' + summary; }
   renderRuns(); drawMaps(true);
@@ -771,17 +771,17 @@ function initCalc(idx, lead){
   const units = nonResidential ? 1 : lead.verdict ? (vHomes ? +vHomes[1] : 1) : Math.max(1, Math.round(lead.rezoneTargetUnits || lead.byRightUnits || (lead.landAcres||0) * 8));
   const demoCost = lead.parcelStatus === 'improved' ? (lead.defaultDemoCost || 0) : 0;
   calcStates[idx] = Object.assign({}, SUBDIVISION_DEFAULTS, saleDefaults(lead, units),
-    { mode: !nonResidential && dealType === 'subdivision' ? 'lots' : 'sale', demoCost, lots: units, sellingCostPct: SUBDIVISION_DEFAULTS.sellingCostPct },
+    { mode: !nonResidential && dealType === 'subdivision' && !lead.verdict ? 'lots' : 'sale', demoCost, lots: units, sellingCostPct: SUBDIVISION_DEFAULTS.sellingCostPct },
     lead.referenceCostPerLotAZ ? { costPerLot: lead.referenceCostPerLotAZ } : {});
   const saved = loadCalcs()[lead.apn];
-  if(saved) Object.assign(calcStates[idx], saved.st);
+  if(saved){ Object.assign(calcStates[idx], saved.st); if(saved.st.calcV !== 2 && lead.verdict) calcStates[idx].mode = 'sale'; }   // pre-v2 saved runs could carry the old lots-mode default
   const notes = [];
   if(nonResidential) notes.push('<b>Manual commercial scenario:</b> the county classifies this parcel as ' + esc(lead.landUseClass) + '. No residential verdict is available. Start with one building as a placeholder; enter your proposed use, building area, sale price and actual budget. Zoning and allowed capacity are unconfirmed. These results do not create an automatic map verdict.');
   const basis = landBasis(lead);
   if(basis.land > 0) notes.push(`<button class="mail-btn" type="button" onclick="useScenarioLand(${idx})">Use ${money(basis.land)} ${basis.override ? 'sourced price' : basis.ok ? 'land comps estimate' : basis.areaAvg ? 'area-average land estimate' : 'assessed value'} for this scenario</button> This is ${basis.override ? esc(basis.override.priceType) : 'a valuation proxy'}, not a confirmed seller asking price.`);
   if(saved) notes.push(`💾 Loaded the numbers you saved on ${esc(saved.at)}. They save automatically. <button class="mail-btn" onclick="resetCalc(${idx})">Reset to defaults</button>`);
   notes.push(`Acres and lot square footage come from the county record for this parcel; building square footage defaults to ${calcStates[idx].buildingSf.toLocaleString()} sf (${units} home${units === 1 ? '' : 's'} x 900) — change it to your plan. Every default below is a placeholder, <b>not a bid</b>.`);
-  if(!nonResidential && dealType === 'subdivision'){
+  if(calcStates[idx].mode === 'lots'){
     notes.push(`The rezone target here is single-family zoning, so this lead opens in the "sell lots" model. Default cost/lot ($${lead.referenceCostPerLotAZ?.toLocaleString()||'65,000'}) is a Phoenix-metro general-market estimate, <b>not a real local civil bid</b>.`);
   }
   if(lead.parcelStatus === 'improved'){

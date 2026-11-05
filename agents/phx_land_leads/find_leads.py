@@ -583,14 +583,14 @@ def analyze_ownership(p):
 
 
 def flag_unreliable_valuation(lead):
-    """Blank the equity margin when the comps can't be trusted: the low/high range spans >5x
+    """Blank the equity margin when the comps can't be trusted: the low/high range spans >4x
     (comps disagree wildly) or a residential lot is valued above $150/sf of land.
     Keeps the valuation box (marked unreliable) but removes the margin from ranking/skip-trace."""
     v = lead.get("valuation")
     if not v:
         return
     low, high, mid, sf = v["rangeLow"], v["rangeHigh"], v["mostLikelyValue"], lead.get("landSf") or 0
-    wild = low > 0 and high / low > 5
+    wild = low > 0 and high / low > 4
     too_rich = lead.get("landUseClass") == "residential" and sf and mid / sf > 150
     if wild or too_rich or v.get("unreliable"):
         v["unreliable"] = True

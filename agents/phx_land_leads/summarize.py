@@ -13,9 +13,12 @@ top = sorted(fresh, key=lambda l: -l["score"])[:3]
 lines = [f"{len(fresh)} leads ({sum(l.get('isNew', False) for l in fresh)} new), {sum(l.get('stale', False) for l in d['leads'])} kept hot"]
 lines += [f"{l['score']} {l['address'].split('  ')[0].title()} ({l['parcelStatus']})" for l in top]
 
-best = sorted((l for l in fresh if (l.get("verdict") or {}).get("profit") is not None), key=lambda l: -l["verdict"]["profit"])[:3]
-if best:   # sale price = second-highest qualifying nearby comp $/sf
-    lines.append("Top profit (screened comps; placeholder costs):")
+priced = sorted((l for l in fresh if (l.get("verdict") or {}).get("profit") is not None), key=lambda l: -l["verdict"]["profit"])
+for area, name in (("phx", "Phoenix"), ("east", "East")):   # all Good leads are east, so one combined list hides Phoenix
+    best = [l for l in priced if (l.get("area") == "east") == (area == "east")][:3]
+    if not best: continue
+    # sale price = second-highest qualifying nearby comp $/sf
+    lines.append(f"Top profit, {name} (screened comps; placeholder costs):")
     lines += [f"${l['verdict']['profit']/1e3:,.0f}k {l['address'].split('  ')[0].title()} ({l['verdict']['strategy']}, {l['verdict']['salePsf']}/sf){' PRELIMINARY LAND' if l['verdict'].get('landBasis') == 'area-avg' else ''}{' LOSES AT MEDIAN' if (l['verdict'].get('medianStress') or {}).get('profit', 0) < 0 else ''}" for l in best]
 
 good = [l for l in fresh if (l.get("verdict") or {}).get("label") == "Good"]
