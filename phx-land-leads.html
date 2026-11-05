@@ -2289,14 +2289,15 @@ function profitLine(l){
   const altNote = alt ? ` · <span title="Display only: split homes valued at 80% instead of the page's split factor.">at 80% split value: ${m(alt.profit)} (${(alt.margin * 100).toFixed(0)}%)</span>` : '';
   return `<div class="lead-sub" data-profit-apn="${esc(l.apn)}" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${badge}📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%)${altNote} · risk ${p.risk}${selectedComps(l).fellBack ? ' · ⚠ FALLBACK comps' : ''}${runNote}${[l.landCompLookup,l.newBuildLookup].filter(x => x && x.error).map(x => `<div>Lookup error: ${esc(x.error)} · attempted ${esc(x.retrievedAt || 'unknown')}</div>`).join('')}${compSensitivityHtml(l)}${landBasis(l).areaAvg ? '<div><b>' + esc(landBasis(l).areaAvg.landBasisNote) + '</b> (guess, not a land comp; risk forced High)</div>' : ''}${landBasis(l).override ? '<div style="margin-top:6px;">' + priceBasisHtml(l) + '</div>' : ''}</div>`;
 }
-// Owner one-pager link: only for scored, non-preliminary leads that still make money at a $400/sf build.
-// The verdict's profit is at $325/sf, so re-cost the extra hard cost with the verdict's 8% soft and 7% financing.
-const ONEPAGER_BUILD_PSF = 400;
+// Owner one-pager link: non-preliminary leads where the deal still works at a $400/sf build if the owner credits their land
+// at no less than ONEPAGER_MIN_LAND_SHARE of the estimated land value (the sheet shows no land price; it is agreed later).
+// The verdict's max land offer is at $325/sf, so subtract the extra hard cost: (400 - 325) x 3,800 sf x 1.08 soft per home.
+const ONEPAGER_BUILD_PSF = 400, ONEPAGER_MIN_LAND_SHARE = 0.5;
 function onePagerLink(l){
   const v = l.verdict, c = l.houseComps;
-  if(!v || v.preliminary || v.profit == null || l.stale || (l.score || 0) < 60 || !c || (c.comps || []).length < 3) return '';
-  const n = +((/^(\d+) homes/.exec(v.strategy || '') || [])[1] || 1);
-  if(v.profit - (ONEPAGER_BUILD_PSF - 325) * 3800 * n * 1.08 * 1.07 <= 0) return '';
+  if(!v || v.preliminary || !(v.land > 0) || v.supportableOffer == null || l.stale || !c || (c.comps || []).length < 3) return '';
+  const resid = v.supportableOffer - (ONEPAGER_BUILD_PSF - 325) * 3800 * 1.08 * (v.offerHomes || 1);
+  if(resid < ONEPAGER_MIN_LAND_SHARE * v.land) return '';
   return `<div style="margin-bottom:4px;"><a href="phx-onepager.html?apn=${encodeURIComponent(l.apn)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:700;">📄 Owner one-pager</a></div>`;
 }
 function refreshProfitLines(){
