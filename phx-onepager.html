@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Owner One-Pager</title>
+<style>
+@page { size: letter; margin: 0; }
+body { margin: 0; font: 15px/1.5 Georgia, serif; color: #222; background: #eee; }
+.bar { text-align: center; padding: 10px; font: 14px system-ui, sans-serif; }
+.bar button { font: inherit; padding: 6px 14px; cursor: pointer; }
+.page { width: 8.5in; height: 11in; margin: 20px auto; background: #fff; padding: .55in; box-sizing: border-box; position: relative; box-shadow: 0 2px 12px #0003; overflow: hidden; }
+h1 { font-size: 26px; margin: 0 0 4px; }
+h2 { font-size: 16px; margin: 12px 0 4px; color: #2f4a3a; }
+.sub { color: #666; margin-bottom: 14px; }
+.aerial { width: 100%; height: 3.0in; object-fit: cover; border: 1px solid #ccc; display: block; }
+.pin { position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border: 4px solid #ffd400; border-radius: 50%; box-shadow: 0 0 0 2px #0008; }
+.house { width: 100%; height: 3.6in; object-fit: cover; display: block; border-radius: 3px; }
+.cap { font-size: 11.5px; color: #777; margin: 3px 0 10px; }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+td { padding: 3px 4px; border-bottom: 1px solid #e3e3e3; }
+td:last-child { text-align: right; font-weight: 700; }
+ol, ul { margin: 6px 0 0 18px; padding: 0; }
+li { margin: 3px 0; }
+.fine { font-size: 11.5px; color: #666; }
+.foot { position: absolute; bottom: .55in; left: .55in; right: .55in; border-top: 2px solid #222; padding-top: 10px; }
+.msg { max-width: 560px; margin: 60px auto; font: 16px system-ui, sans-serif; text-align: center; }
+@media print { body { background: #fff; } .bar { display: none; } .page { margin: 0; box-shadow: none; page-break-after: always; } }
+</style>
+</head>
+<body>
+<div id="out"></div>
+<script src="phx-land-leads/data.js"></script>
+<script>
+// Owner one-pager for one lead (?apn=...). Filled from data.js, so it never goes stale.
+// Deliberately shows no profit or margin figures: only the structure and nearby sales (county records).
+const NAME = 'Christian Schmaltz', PHONE = '605-786-5520', EMAIL = 'Christianschmaltz5@icloud.com';
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const titleCase = s => String(s || '').toLowerCase().replace(/\b[a-z]/g, c => c.toUpperCase());
+const apn = new URLSearchParams(location.search).get('apn');
+const l = ((window.PHX_LAND_LEADS || {}).leads || []).find(x => x.apn === apn);
+const out = document.getElementById('out');
+const comps = l && l.houseComps && l.houseComps.comps || [];
+if (!l || comps.length < 3) {
+  out.innerHTML = '<div class="msg">No one-pager for this parcel: it needs recent nearby home sales on file.</div>';
+} else {
+  const addr = titleCase(String(l.address || '').split(/\s{2,}/)[0]);
+  const bb = [l.lng - .0021, l.lat - .0013, l.lng + .0021, l.lat + .0013].join(',');
+  const aerial = 'https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/export?bbox=' + bb + '&bboxSR=4326&imageSR=4326&size=1000,620&f=image';
+  const rows = comps.slice().sort((a, b) => b.price - a.price).map(c =>
+    `<tr><td>${esc(titleCase(c.address))}</td><td>${Number(c.sf).toLocaleString()} sf</td><td>${esc(String(c.sold).slice(0, 2))}/${esc(String(c.sold).slice(-4))}</td><td>$${(c.price / 1e6).toFixed(2)}M</td></tr>`).join('');
+  document.title = 'One-pager ' + addr;
+  out.innerHTML = `<div class="bar"><button onclick="print()">Print / save as PDF</button></div>
+<div class="page"><h1>A partnership on your lot at ${esc(addr)}</h1>
+<div class="sub">${esc(l.landAcres)} acres · zoned ${esc(l.currentZoning || 'on file')}</div>
+<div style="position:relative;"><img class="aerial" src="${aerial}" alt="Aerial of the parcel"><div class="pin"></div></div><div class="cap">Your parcel (marked)</div>
+<img class="house" src="assets/house-example.jpg" alt="Example home"><div class="cap">Example of the kind of home we would build here</div>
+<div class="foot"><b>${NAME}</b> · Local builder · <b>${PHONE}</b> · ${EMAIL}</div></div>
+<div class="page"><h1>Keep your land's value. Share in what it becomes.</h1>
+<div class="sub">An alternative to selling the lot outright.</div>
+<h2>How it works</h2>
+<ol><li><b>We agree on your land's value up front.</b> That value is credited to you.</li>
+<li><b>I fund and manage the build.</b> You don't pay for construction.</li>
+<li><b>When the home sells,</b> your land credit comes back first.</li>
+<li><b>Then we split what's left,</b> in the percentages we agree on in writing.</li></ol>
+<h2>What homes near you have sold for</h2>
+<table>${rows}</table>
+<div class="fine">${comps.length} recent sales within ${esc(l.houseComps.radiusMi)} mile, county records. Sizes and prices vary; your home's value would depend on its size, design and finishes.</div>
+<h2>Why owners choose a partnership</h2>
+<ul><li><b>Share in the upside.</b> A sale ends at the lot's price. A partnership shares in what the finished home sells for.</li>
+<li><b>No listing, no showings.</b> I handle the build and the sale.</li>
+<li><b>Your land value comes back first,</b> before I take anything.</li>
+<li><b>Possible tax advantages</b> compared with an outright sale. Ask your CPA.</li></ul>
+<div class="fine" style="margin-top:6px">Prefer a straightforward cash offer? I can make one too. Just ask.</div>
+<h2>What happens next</h2>
+<p>Final numbers come from a real construction bid and a land value we set together, <b>before</b> anything is signed. A written agreement is drafted by an attorney. A 15-minute call is the only first step.</p>
+<div class="foot"><b>Let's talk for 15 minutes.</b> Call or text <b>${PHONE}</b> — ${NAME}</div></div>`;
+}
+</script>
+</body>
+</html>
