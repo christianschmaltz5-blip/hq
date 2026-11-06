@@ -8,6 +8,13 @@ unset ANTHROPIC_API_KEY   # that key is out of credit; use the Claude login inst
 cd /Users/christianschmaltz/hq || exit 1
 [ -f agents/phx_land_leads/.env ] && { set -a; source agents/phx_land_leads/.env; set +a; }   # NTFY_TOPIC for the phone push
 
+# Phone push on demand: run.sh push "Title" "Message" (used by the review job to ask for a yes/no)
+if [ "$1" = push ]; then
+  [ -n "$NTFY_TOPIC" ] || { echo "NTFY_TOPIC not set"; exit 1; }
+  curl -s -m 15 -H "Title: $2" -d "$3" "https://ntfy.sh/$NTFY_TOPIC" >/dev/null && echo "pushed" || { echo "ntfy push failed"; exit 1; }
+  exit 0
+fi
+
 SLOT=$([ "$(date +%H)" -lt 12 ] && echo am || echo pm)
 OUT=agents/exchange/$(date +%Y-%m-%d)-$SLOT.md
 notify() { osascript -e "display notification \"$1\" with title \"Claude + Codex\"" 2>/dev/null; }
@@ -54,7 +61,7 @@ Read AGENTS.md and $OUT. Implement the top 3 recommended actions from that summa
 EOP
   CHANGED=$(comm -13 <(printf '%s\n' "$BASE" | sort -u) <(git diff --name-only | sort -u) | grep -v -E 'geocode_cache|contacts\.enc|\.env|^agents/exchange/')
   if [ -n "$CHANGED" ]; then
-    if node --test tests/underwriting.test.mjs >/dev/null 2>&1 && [ "$(pyfail)" = "$PY0" ] \
+    if node --test tests/underwriting.test.mjs >/dev/null 2>&1 && [ "$(pyfail)" = "$PY0" ] && sh tests/page_load_check.sh >>/tmp/hq-exchange.log 2>&1 \
        && ! git diff -- $CHANGED | grep -E '^\+' | grep -qE '\(?[0-9]{3}\)?[ .-][0-9]{3}[ .-][0-9]{4}|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,}'; then
       git add -- $CHANGED && git commit -qm "Daily exchange: apply top actions ($(date +%F))" && git push -q \
         && notify "Applied + pushed: $(echo $CHANGED | wc -w) file(s)" || notify "Apply commit/push FAILED, see /tmp/hq-exchange.log"

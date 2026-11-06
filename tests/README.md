@@ -44,3 +44,5 @@ The October 21 regression checks also cover browser/Python risk parity above
 $800/sf and for null flood flags, retained lookup failures, new comp provenance,
 median sensitivity, complete saved-run restoration, DSCR debt sizing in both
 rental calculators, demolition and blank-price blocking.
+
+A third gate, `sh tests/page_load_check.sh`, loads the pages in headless Chrome and fails on any uncaught JS error (it needs network for Leaflet).
