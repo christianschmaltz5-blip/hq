@@ -1225,6 +1225,7 @@ function renderLeads(leads){
     ? leads.slice(0, cap).map((l,i)=>leadCard(l,i)).join('') + (leads.length > cap ? `<button class="mail-btn" style="margin:10px 0;" onclick="window.showAllLeads=true;applyFilters()">Show all ${leads.length} leads</button>` : '')
     : `<div class="empty-state">No leads match.</div>`;
 }
+const ONEPAGER_BUILD_PSF = 400, ONEPAGER_MIN_LAND_SHARE = 0.5;
 renderLeads(currentLeads);
 
 
@@ -2292,7 +2293,6 @@ function profitLine(l){
 // Owner one-pager link: non-preliminary leads where the deal still works at a $400/sf build if the owner credits their land
 // at no less than ONEPAGER_MIN_LAND_SHARE of the estimated land value (the sheet shows no land price; it is agreed later).
 // The verdict's max land offer is at $325/sf, so subtract the extra hard cost: (400 - 325) x 3,800 sf x 1.08 soft per home.
-const ONEPAGER_BUILD_PSF = 400, ONEPAGER_MIN_LAND_SHARE = 0.5;
 function onePagerLink(l){
   const v = l.verdict, c = l.houseComps;
   if(!v || v.preliminary || !(v.land > 0) || v.supportableOffer == null || l.stale || !c || (c.comps || []).length < 3) return '';
