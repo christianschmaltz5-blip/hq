@@ -188,7 +188,7 @@ def split_n(l):
     if re.match(r"(?:PAD|PUD|PCD)", (l.get("currentZoning") or "").strip(), re.I) or (l.get("minLotSf") and l.get("minLotVerified") is False):
         return 1, False   # unsupported zone or guessed min lot: provisional 1 home
     min_lot = l.get("minLotSf") or (int(m.group(1)) * 1000 if m else A["min_lot"])
-    if l.get("area") == "east" and not l.get("minLotSf"): return 1, False   # no known min lot outside Phoenix: never assume a 14,375 sf split
+    if not l.get("minLotSf") and (l.get("area") == "east" or not m): return 1, False   # no known min lot outside Phoenix: never assume a 14,375 sf split
     return max(1, min(4, math.floor((l.get("landSf") or 0) * A["usable"] / min_lot))), bool(l.get("minLotSf") or m)
 
 
@@ -301,6 +301,9 @@ def rescore(l):
 
 def recalculate_data(data, *, cached=False):
     """Recalculate in place; cached mode never requests replacement county comps."""
+    from find_leads import flag_unreliable_valuation   # re-apply the current guard to stored leads, before area medians use them
+    for lead in data["leads"]:
+        flag_unreliable_valuation(lead)
     areas = area_land_per_acre(data["leads"])
     for lead in data["leads"]:
         lead["verdict"] = underwrite(lead, fetch_comps=not cached, area_per_acre=areas)

@@ -42,8 +42,9 @@ const apn = new URLSearchParams(location.search).get('apn');
 const l = ((window.PHX_LAND_LEADS || {}).leads || []).find(x => x.apn === apn);
 const out = document.getElementById('out');
 const comps = l && l.houseComps && l.houseComps.comps || [];
-if (!l || comps.length < 3) {
-  out.innerHTML = '<div class="msg">No one-pager for this parcel: it needs recent nearby home sales on file.</div>';
+const v = l && l.verdict;   // same gate as the dashboard link: a real (not area-average) land basis and a trusted valuation
+if (!l || comps.length < 3 || !v || v.preliminary || !(v.land > 0) || l.stale || (l.valuation || {}).unreliable) {
+  out.innerHTML = '<div class="msg">No one-pager for this parcel: it needs recent nearby home sales and a reliable land value on file.</div>';
 } else {
   const addr = titleCase(String(l.address || '').split(/\s{2,}/)[0]);
   const bb = [l.lng - .0021, l.lat - .0013, l.lng + .0021, l.lat + .0013].join(',');
@@ -83,7 +84,7 @@ if (!l || comps.length < 3) {
 <h2>How it works</h2>
 <ol><li><b>We agree on your land's value up front.</b> That value is credited to you.</li>
 <li><b>I fund and manage the build.</b> You don't pay for construction.</li>
-<li><b>When the home sells,</b> your land credit comes back first.</li>
+<li><b>When the home sells,</b> your land credit is paid back first, out of the sale proceeds.</li>
 <li><b>Then we split what's left,</b> in the percentages we agree on in writing.</li></ol>
 <h2>What homes near you have sold for</h2>
 <table>${rows}</table>
@@ -91,7 +92,7 @@ if (!l || comps.length < 3) {
 <h2>Why owners choose a partnership</h2>
 <ul><li><b>Share in the upside.</b> A sale ends at the lot's price. A partnership shares in what the finished home sells for.</li>
 <li><b>No listing, no showings.</b> I handle the build and the sale.</li>
-<li><b>Your land value comes back first,</b> before I take anything.</li>
+<li><b>Your land credit is paid first</b> from the sale proceeds, before profit is split. It depends on the home selling; it is not a guaranteed payment.</li>
 <li><b>Possible tax advantages</b> compared with an outright sale. Ask your CPA.</li></ul>
 <div class="fine" style="margin-top:6px">Prefer a straightforward cash offer? I can make one too. Just ask.</div>
 <h2>What happens next</h2>

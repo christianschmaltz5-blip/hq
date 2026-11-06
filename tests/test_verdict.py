@@ -68,7 +68,7 @@ class EconomicsTests(unittest.TestCase):
     def test_split_cap_and_shared_usable_area(self):
         self.assertEqual(verdict.split_n({"currentZoning": "R1-10", "landSf": 1000000}), (4, True))
         self.assertEqual(verdict.split_n({"currentZoning": "R1-10", "landSf": 23529}), (1, True))
-        self.assertEqual(verdict.split_n({"landSf": 145627}), (4, False))
+        self.assertEqual(verdict.split_n({"landSf": 145627}), (1, False))   # no R1-/RE- size and no minLotSf: no 14,375 sf guess
 
     def test_east_min_lot_and_byright_units(self):
         import find_leads
@@ -176,6 +176,20 @@ class OverrideTests(unittest.TestCase):
         parcel = lead()
         parcel["valuation"]["unreliable"] = True
         self.assertIsNone(verdict.underwrite(parcel, fetch_comps=False, overrides={}))
+
+
+class CachedGuardTests(unittest.TestCase):
+    def test_recalc_flags_wide_comp_range_and_blocks_fallback_split(self):
+        wide = lead()
+        wide["valuation"] = {"mostLikelyValue": 900000, "rangeLow": 200000, "rangeHigh": 980000}   # 4.9x spread (40850 N 32nd shape)
+        wide["equityMarginPct"] = 300
+        verdict.recalculate_data({"leads": [wide]}, cached=True)
+        self.assertTrue(wide["valuation"]["unreliable"])
+        self.assertIsNone(wide["equityMarginPct"])
+        self.assertTrue(wide["verdict"] is None or wide["verdict"].get("preliminary") or wide["verdict"].get("label") != "Good")
+        other = lead()
+        other.update(currentZoning="C-2", landSf=145627)   # no R1-/RE- size: provisional 1 home, not the 14,375 sf guess
+        self.assertEqual(verdict.split_n(other), (1, False))
 
 
 class AreaAverageLandTests(unittest.TestCase):

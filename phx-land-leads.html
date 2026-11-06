@@ -2447,7 +2447,7 @@ function splitInfo(l){
   const m = /^(?:R1|RE)-(\d+)/i.exec(l.currentZoning || '');
   if(/^(PAD|PUD|PCD)/i.test((l.currentZoning || '').trim()) || (l.minLotSf && l.minLotVerified === false)) return { n: 1, known: false };   // unsupported zone or guessed min lot: provisional 1 home
   const minLot = l.minLotSf || (m ? parseInt(m[1],10) * 1000 : (parseFloat(document.getElementById('moMinLot').value) || 14375));   // minLotSf: per-jurisdiction min lot (east leads)
-  if(l.area === 'east' && !l.minLotSf) return { n: 1, known: false };   // no known min lot outside Phoenix: never assume a 14,375 sf split
+  if(!l.minLotSf && (l.area === 'east' || !m)) return { n: 1, known: false };   // no known min lot (outside Phoenix, or zoning without an R1-/RE- size): never assume a 14,375 sf split
   const usable = (typeof usablePct === 'number' ? usablePct : 85) / 100;
   return { n: Math.max(1, Math.min(4, Math.floor((l.landSf || 0) * usable / minLot))), known: !!(l.minLotSf || m) };
 }
