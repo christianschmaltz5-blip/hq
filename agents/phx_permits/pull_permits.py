@@ -160,7 +160,7 @@ def main():
             for r in permits
         ],
         key=lambda x: x["valuation"], reverse=True,
-    )[:500]  # top 500 by valuation; full count still in totalPermits
+    )[:2500]  # top 2,500 by valuation (the 60-day window is ~1,800 permits, so all); geocoding stays capped per run
 
     geocode_cache = load_geocode_cache()
     new_lookups = [0]
