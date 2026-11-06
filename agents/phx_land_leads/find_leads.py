@@ -872,7 +872,7 @@ def load_east_apns():
     return set(json.loads(EAST_APNS_PATH.read_text())) if EAST_APNS_PATH.exists() else set()
 
 
-SCOTTSDALE_DISCOVER_MAX = 250       # Scottsdale vacant lots enriched per run on top of the watch list
+SCOTTSDALE_DISCOVER_MAX = 450       # Scottsdale vacant lots enriched per run on top of the watch list
 SCOTTSDALE_ACRES = (0.3, 5)         # custom-home lot band; bigger tracts are a different play
 SCOTTSDALE_SKIP_OWNERS = ("HOMEOWNERS", "ASSOCIATION", " HOA", "PRESERVE", "CITY OF", "STATE OF", "UNITED STATES",
                           "SCHOOL DIST", "IRRIGATION", "MCDOWELL SONORAN", "COMMON AREA")
