@@ -380,5 +380,11 @@ class NewBuildMetadataTests(unittest.TestCase):
         network.assert_called_once()
 
 
+class ScottsdaleTests(unittest.TestCase):
+    def test_unverified_psf_flag_is_higher_in_scottsdale(self):
+        self.assertEqual(verdict.psf_flag({"jurisdiction": "SCOTTSDALE"}), 1000)
+        self.assertEqual(verdict.psf_flag({"jurisdiction": "PHOENIX"}), 800)
+
+
 if __name__ == "__main__":
     unittest.main()

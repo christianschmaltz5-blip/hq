@@ -872,14 +872,36 @@ def load_east_apns():
     return set(json.loads(EAST_APNS_PATH.read_text())) if EAST_APNS_PATH.exists() else set()
 
 
+SCOTTSDALE_DISCOVER_MAX = 250       # Scottsdale vacant lots enriched per run on top of the watch list
+SCOTTSDALE_ACRES = (0.3, 5)         # custom-home lot band; bigger tracts are a different play
+SCOTTSDALE_SKIP_OWNERS = ("HOMEOWNERS", "ASSOCIATION", " HOA", "PRESERVE", "CITY OF", "STATE OF", "UNITED STATES",
+                          "SCHOOL DIST", "IRRIGATION", "MCDOWELL SONORAN", "COMMON AREA")
+
+
+def discover_scottsdale(known_apns):
+    """Residential vacant lots inside Scottsdale city limits, beyond the hand-kept watch list. Same
+    enrichment and verdict as the watch list; the comps/verdict then decide which are worth showing."""
+    where = "JURISDICTION='SCOTTSDALE' AND (" + " OR ".join(f"PUC LIKE '{p}%'" for p in VACANT_PUC_PREFIXES[:2]) + ")"
+    lo, hi = (a * 43560 for a in SCOTTSDALE_ACRES)
+    ok = [p for p in fetch_parcels(where)
+          if p.get("APN") not in known_apns and p.get("LATITUDE") is not None and p.get("LONGITUDE") is not None
+          and lo <= _to_float(p.get("LAND_SIZE")) <= hi and _to_float(p.get("FCV_CUR")) > 0
+          and not any(k in (p.get("OWNER_NAME") or "").upper() for k in SCOTTSDALE_SKIP_OWNERS + BUILDER_OWNER_KEYWORDS)]
+    # 0.5-2.5 acres (where a 3,800 sf custom home fits comfortably) first, nearest to 1 acre first
+    ok.sort(key=lambda p: abs(math.log(_to_float(p["LAND_SIZE"]) / 43560)))
+    print(f"  Scottsdale discovery: {len(ok)} vacant residential lots in band, enriching {min(len(ok), SCOTTSDALE_DISCOVER_MAX)}")
+    return ok[:SCOTTSDALE_DISCOVER_MAX]
+
+
 def enrich_east(apns):
-    """Fetch the east watch-list parcels by APN and enrich them (jurisdiction-aware zoning)."""
+    """Fetch the east watch-list parcels by APN (plus discovered Scottsdale lots) and enrich them (jurisdiction-aware zoning)."""
     if not apns:
         return []
     parcels = []
     ordered = sorted(apns)
     for i in range(0, len(ordered), 100):   # keep the WHERE clause short
         parcels += fetch_parcels("APN IN (" + ",".join(f"'{a}'" for a in ordered[i:i + 100]) + ")")
+    parcels += discover_scottsdale(apns)
     parcels = [dict(p, _east=True) for p in parcels if p.get("LATITUDE") is not None and p.get("LONGITUDE") is not None]
     print(f"Enriching {len(parcels)}/{len(apns)} east watch-list parcels...")
     out = []
@@ -913,7 +935,7 @@ def main_east_only():
         old = prev.get(l["apn"], {})
         l.update(isNew=l["apn"] not in prev, firstSeen=old.get("firstSeen", today), lastSeen=today,
                  peakScore=max(l["score"], old.get("peakScore", 0)))
-    data["leads"] = [l for l in data["leads"] if l["apn"] not in east_apns] + east
+    data["leads"] = [l for l in data["leads"] if l["apn"] not in east_apns and l.get("area") != "east"] + east   # also drops last run's discovered Scottsdale lots
     OUT_PATH.write_text(text[:m.start(1)] + json.dumps(data, indent=2) + text[m.end(1):])
     print(f"merged {len(east)} east leads into {OUT_PATH}")
 

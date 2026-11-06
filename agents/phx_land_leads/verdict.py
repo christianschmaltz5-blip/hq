@@ -192,6 +192,11 @@ def split_n(l):
     return max(1, min(4, math.floor((l.get("landSf") or 0) * A["usable"] / min_lot))), bool(l.get("minLotSf") or m)
 
 
+def psf_flag(l):
+    """Sale $/sf above this is unverified. Scottsdale custom homes routinely sell above Phoenix's $800/sf."""
+    return 1000 if l.get("jurisdiction") == "SCOTTSDALE" else 800
+
+
 def verdict_label(high_profit, high_margin, low_margin, risk):
     if high_margin >= A["good"] and risk != "High":
         return "Good"
@@ -246,7 +251,7 @@ def underwrite(l, *, fetch_comps=True, overrides=None, area_per_acre=None):
     risk = ((0 if land_ok else 2) + guess + ((hc.get("n") or 0) < (6 if fallback else 4)) + ((hc.get("radiusMi") or 0) >= 3)
             + (2 if l.get("inFloodplain") else 1 if l.get("floodKnown") is not True or l.get("floodZone") == "D" else 0)
             + ((1 if known else 2) if best["n"] > 1 else 0)
-            + (2 if hc["psf"] > 800 else 0))   # unverified: sale price above $800/sf
+            + (2 if hc["psf"] > psf_flag(l) else 0))   # unverified: sale price above the area's plausible $/sf
     risk = "Low" if risk <= 1 else "Medium" if risk <= 3 else "High"
     label = verdict_label(best["profit"], best["margin"], cheap["margin"], risk)
     if not l.get("currentZoning") and label == "Good":
@@ -257,7 +262,7 @@ def underwrite(l, *, fetch_comps=True, overrides=None, area_per_acre=None):
         med_high, med_low = run(A["hard"][1], median_psf), run(A["hard"][0], median_psf)
         med_risk_points = ((0 if land_ok else 2) + guess + ((hc.get("n") or 0) < (6 if fallback else 4)) + ((hc.get("radiusMi") or 0) >= 3)
                            + (2 if l.get("inFloodplain") else 1 if l.get("floodKnown") is not True or l.get("floodZone") == "D" else 0)
-                           + ((1 if known else 2) if med_high["n"] > 1 else 0) + (2 if median_psf > 800 else 0))
+                           + ((1 if known else 2) if med_high["n"] > 1 else 0) + (2 if median_psf > psf_flag(l) else 0))
         med_risk = "Low" if med_risk_points <= 1 else "Medium" if med_risk_points <= 3 else "High"
         med_label = verdict_label(med_high["profit"], med_high["margin"], med_low["margin"], med_risk)
         if not l.get("currentZoning") and med_label == "Good":
