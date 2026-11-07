@@ -724,7 +724,7 @@ def enrich_parcel(p):
     land_sf = p.get("LAND_SIZE") or 0
 
     juris = (p.get("JURISDICTION") or "").strip().upper()
-    other = ZONING_BY_JURIS.get(juris) if p.get("_east") else None   # Phoenix zip scan keeps the Phoenix path
+    other = ZONING_BY_JURIS.get(juris) if p.get("_east") or juris not in ("PHOENIX", "") else None   # city of Phoenix keeps the Phoenix layers; any other jurisdiction (e.g. unincorporated NW county parcels in the Phoenix zip scan) uses its own
     flood_rec = point_query(FEMA_FLOOD, lat, lng, "FLD_ZONE,SFHA_TF")
     if other:
         url, field, zoning_source = other
