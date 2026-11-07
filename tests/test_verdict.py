@@ -111,7 +111,7 @@ class ReviewRegressionTests(unittest.TestCase):
         for case in cases:
             with self.subTest(case=case["name"]):
                 parcel=lead()
-                parcel.update(currentZoning="R1-100",landSf=10000,floodKnown=case["floodKnown"])
+                parcel.update(currentZoning="R1-100",landSf=10000,floodKnown=case["floodKnown"],jurisdiction=case.get("jurisdiction"))
                 parcel["houseComps"].update(psf=case["psf"],n=case["n"])
                 self.assertEqual(verdict.underwrite(parcel,fetch_comps=False)["risk"],case["risk"])
 

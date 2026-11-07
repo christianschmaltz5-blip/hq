@@ -47,7 +47,7 @@ Page layout: a tab bar (Leads, Maps, Calculator, Profit & Offers, Outreach, Trac
 
 ## October 21 exchange implementation
 - Flood is confirmed only with `floodKnown === true`. False, null and missing are displayed as unknown and share the existing one-point unknown-risk penalty in Python and JS; explicit mapped floodplain remains two points.
-- Browser risk includes the same two-point >$800/sf term as Python. Shared `riskCases` in the underwriting fixture cover that boundary and null flood flags.
+- Browser risk includes the same two-point unverified-price term as Python: >$800/sf, or >$1,000/sf for Scottsdale (`psf_flag()` in verdict.py). Shared `riskCases` in the underwriting fixture cover that boundary and null flood flags.
 - Missing sale-date display is honest, but the existing +15 score credit is retained. Do not silently change its weight. Deed-derived yearsHeld is separate from sale recency.
 - Median sensitivity is a separate scenario, not a replacement for second-highest pricing. UI flags verdict flips and at least three shared comp sales across active leads. Python persists medianStress. Newly fetched comps retain APN, yearBuilt and distanceMi; do not invent provenance for old cached comps.
 - Land/new-build query failures persist in landCompLookup/newBuildLookup; failed lookups cannot produce a usable newBuild price. Displayed error messages are escaped.

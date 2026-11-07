@@ -2246,7 +2246,7 @@ function profitFor(l, extraHard, psfOverride, o){
     if(!best || e.profit > best.profit) best = { n, finished: e.finished, cost: e.cost, profit: e.profit, land, margin: e.margin };
   }
   best.maxLand = maxLand; best.offerN = offerN;
-  let r = (landOK ? 0 : 2) + (lb.areaAvg ? 2 : 0) + ((nb.n || 0) < (nb.fellBack ? 6 : 4) ? 1 : 0) + ((nb.radiusMi || 0) >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : l.floodKnown !== true || l.floodZone === 'D' ? 1 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0) + (psf > 800 ? 2 : 0);
+  let r = (landOK ? 0 : 2) + (lb.areaAvg ? 2 : 0) + ((nb.n || 0) < (nb.fellBack ? 6 : 4) ? 1 : 0) + ((nb.radiusMi || 0) >= 3 ? 1 : 0) + (l.inFloodplain ? 2 : l.floodKnown !== true || l.floodZone === 'D' ? 1 : 0) + (best.n > 1 ? (sp.known ? 1 : 2) : 0) + (psf > (l.jurisdiction === 'SCOTTSDALE' ? 1000 : 800) ? 2 : 0);   // keep in sync with psf_flag() in verdict.py
   best.risk = r <= 1 ? 'Low' : r <= 3 ? 'Medium' : 'High';
   best.adj = best.profit > 0 ? best.profit * ({ Low: .85, Medium: .65, High: .4 }[best.risk]) : best.profit;
   best.strategy = best.n > 1 ? `Lot split → ${best.n} custom homes (unconfirmed capacity)${sp.known ? '' : ' (zoning min lot unknown — assumed)'}` : 'Custom home';
@@ -2316,10 +2316,10 @@ function renderTopProfit(){
   const tags = loadCondition();
   const all = (D.leads || []).filter(l => !l.stale && l.parcelStatus === 'vacant' && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn))
     .map(l => ({ l, p: profitFor(l), hi: profitFor(l, 50), sig: sellerSignals(l) })).filter(r => r.p)
-    .map(r => Object.assign(r, { lo: profitFor(r.l, 0, lowSalePsf(r.l)), call: r.hi.profit > 0 && r.sig.length >= 2 && landBasis(r.l).ok })).sort((a, b) => b.p.adj - a.p.adj);
+    .map(r => Object.assign(r, { lo: profitFor(r.l, 0, lowSalePsf(r.l)), call: r.hi.profit > 0 && ((r.l.verdict || {}).medianStress || { profit: 0 }).profit >= 0 && r.sig.length >= 2 && landBasis(r.l).ok })).sort((a, b) => b.p.adj - a.p.adj);
   const pos = all.filter(r => r.p.profit > 0).length, rows = all.slice(0, 25);
   const addr = r => esc(r.l.address.split('  ')[0]), profitable = all.filter(r => r.p.profit > 0), calls = all.filter(r => r.call);
-  document.getElementById('tp-summary').innerHTML = `${pos} of ${all.length} leads with nearby home sales show a profit at your calculator numbers; ${calls.length} are marked 📞 CALL FIRST (still profitable at +$50/sf build, 2+ seller signals AND a supported land price). Top ${rows.length} below.`
+  document.getElementById('tp-summary').innerHTML = `${pos} of ${all.length} leads with nearby home sales show a profit at your calculator numbers; ${calls.length} are marked 📞 CALL FIRST (still profitable at +$50/sf build and at the median comp price, 2+ seller signals AND a supported land price). Top ${rows.length} below.`
     + (profitable.length ? `<br><b>Profitable now:</b> ${profitable.map(addr).join(' · ')}` : '')
     + (calls.length ? `<br><b>📞 Call first:</b> ${calls.map(addr).join(' · ')}` : '');
   document.getElementById('tp-table').innerHTML = `<thead><tr><th>#</th><th>Address</th><th>Best strategy</th><th>Est. land cost</th><th>Est. finished value</th><th>Projected profit</th><th>Margin</th><th>Risk</th><th>Profit if build costs $50/sf more</th><th>Profit if it sells at the lowest nearby sale</th><th>New-home sales behind it</th><th>Seller signals</th><th>Opportunity (risk-adj. profit)</th></tr></thead>

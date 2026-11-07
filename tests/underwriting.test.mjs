@@ -533,7 +533,7 @@ const riskCases = JSON.parse(fs.readFileSync(path.join(testDirectory, 'underwrit
 for(const item of riskCases){
   test(`shared risk: ${item.name}`, () => {
     const {context} = calculatorContext(fixtures[0]);
-    const parcel = {apn:'RISK', landSf:10000, currentZoning:'R1-100', floodKnown:item.floodKnown,
+    const parcel = {apn:'RISK', landSf:10000, currentZoning:'R1-100', floodKnown:item.floodKnown, jurisdiction:item.jurisdiction,
       valuation:{mostLikelyValue:100000}, houseComps:{selectionPolicy:HOUSE_COMP_POLICY_ID,psf:item.psf,n:item.n,radiusMi:1}};
     assert.equal(context.profitFor(parcel).risk, item.risk);
   });

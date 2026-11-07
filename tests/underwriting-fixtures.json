@@ -239,6 +239,22 @@
       "n": 3,
       "floodKnown": false,
       "risk": "Medium"
+    },
+    {
+      "name": "scottsdale_psf_900",
+      "psf": 900,
+      "n": 5,
+      "floodKnown": true,
+      "risk": "Low",
+      "jurisdiction": "SCOTTSDALE"
+    },
+    {
+      "name": "scottsdale_psf_1001",
+      "psf": 1001,
+      "n": 5,
+      "floodKnown": true,
+      "risk": "Medium",
+      "jurisdiction": "SCOTTSDALE"
     }
   ]
 }
