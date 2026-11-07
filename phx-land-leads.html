@@ -2284,7 +2284,7 @@ function profitLine(l){
     const lab = high.margin >= target && high.risk !== 'High' && l.currentZoning ? 'Good' : high.profit >= 0 && (high.margin >= target / 2 || cheap.margin >= target) ? 'Maybe' : 'Pass';
     const col = { Good: '#2f6b47', Maybe: '#9a7a1c', Pass: '#b03a3a' }[lab];
     if(run) runNote = ` · <b>your saved run:</b> ${run.vals.hcLots} homes, land ${m2(+run.vals.hcLand)}, profit ${m2(run.gain)} per home (${(run.margin * 100).toFixed(0)}%)`;
-    badge = `<span title="Screen at $325/sf build; Maybe requires break-even. Other current calculator inputs apply." style="background:${col};color:#fff;border-radius:4px;padding:1px 6px;margin-right:6px;font-size:11px;font-weight:700;">${lab.toUpperCase()} · $325/sf</span>`;
+    badge = `<span title="Screen at $325/sf build; Maybe requires break-even. Other current calculator inputs apply." style="background:${col};color:#fff;border-radius:4px;padding:1px 6px;margin-right:6px;font-size:11px;font-weight:700;">${lab.toUpperCase()} · $325/sf</span>${lab === 'Good' ? `<span title="Buildability (NAOS, slope, building envelope, lot-split approval) is not modeled." style="color:#9a7a1c;margin-right:6px;font-size:11px;font-weight:700;">economic screen only — buildability unverified${l.inFloodplain ? ' · ⚠ mapped floodplain' : ''}</span>` : ''}`;
   }
   const alt = p.n > 1 && Math.abs((parseFloat(document.getElementById('moSplitHaircut').value) || 0) - 80) > 0.5 ? profitFor(l, 0, 0, { haircut: 0.8 }) : null;   // display only: split homes at 80% (the AGENTS.md figure)
   const altNote = alt ? ` · <span title="Display only: split homes valued at 80% instead of the page's split factor.">at 80% split value: ${m(alt.profit)} (${(alt.margin * 100).toFixed(0)}%)</span>` : '';
@@ -2298,7 +2298,7 @@ function onePagerLink(l){
   if(!v || v.preliminary || !(v.land > 0) || v.supportableOffer == null || l.stale || !c || (c.comps || []).length < 3) return '';
   const resid = v.supportableOffer - (ONEPAGER_BUILD_PSF - 325) * 3800 * 1.08 * (v.offerHomes || 1);
   if(resid < ONEPAGER_MIN_LAND_SHARE * v.land) return '';
-  if(((v.medianStress || {}).profit || 0) < 0) return '';   // loses at median comp: no owner outreach (same block as phx-onepager.html)
+  if(!((v.medianStress || {}).profit >= 0)) return '';   // fails closed: missing median or loses at median comp: no owner outreach (same block as phx-onepager.html)
   return `<div style="margin-bottom:4px;"><a href="phx-onepager.html?apn=${encodeURIComponent(l.apn)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:700;">📄 Owner one-pager</a></div>`;
 }
 function refreshProfitLines(){
@@ -2316,7 +2316,8 @@ function renderTopProfit(){
   const tags = loadCondition();
   const all = (D.leads || []).filter(l => !l.stale && l.parcelStatus === 'vacant' && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn))
     .map(l => ({ l, p: profitFor(l), hi: profitFor(l, 50), sig: sellerSignals(l) })).filter(r => r.p)
-    .map(r => Object.assign(r, { lo: profitFor(r.l, 0, lowSalePsf(r.l)), call: r.hi.profit > 0 && ((r.l.verdict || {}).medianStress || { profit: 0 }).profit >= 0 && r.sig.length >= 2 && landBasis(r.l).ok })).sort((a, b) => b.p.adj - a.p.adj);
+    .map(r => { const c = selectedComps(r.l) || {}, mp = c.medPsf || (c.fellBack ? c.psf : 0), mid = mp ? profitFor(r.l, 0, mp) : null;   // live median profit at the calculator's inputs; no median = not eligible
+      return Object.assign(r, { mp, mid, lo: profitFor(r.l, 0, lowSalePsf(r.l)), call: r.hi.profit > 0 && !!mid && mid.profit >= 0 && r.sig.length >= 2 && landBasis(r.l).ok }); }).sort((a, b) => b.p.adj - a.p.adj);
   const pos = all.filter(r => r.p.profit > 0).length, rows = all.slice(0, 25);
   const addr = r => esc(r.l.address.split('  ')[0]), profitable = all.filter(r => r.p.profit > 0), calls = all.filter(r => r.call);
   document.getElementById('tp-summary').innerHTML = `${pos} of ${all.length} leads with nearby home sales show a profit at your calculator numbers; ${calls.length} are marked 📞 CALL FIRST (still profitable at +$50/sf build and at the median comp price, 2+ seller signals AND a supported land price). Top ${rows.length} below.`
@@ -2325,7 +2326,7 @@ function renderTopProfit(){
   document.getElementById('tp-table').innerHTML = `<thead><tr><th>#</th><th>Address</th><th>Best strategy</th><th>Est. land cost</th><th>Est. finished value</th><th>Projected profit</th><th>Margin</th><th>Risk</th><th>Profit if build costs $50/sf more</th><th>Profit if it sells at the lowest nearby sale</th><th>New-home sales behind it</th><th>Seller signals</th><th>Opportunity (risk-adj. profit)</th></tr></thead>
     <tbody>${rows.map((r, i) => `<tr><td>${i + 1}</td><td>${r.call ? '<span class="reason-chip" style="font-weight:700;">📞 CALL FIRST</span> ' : ''}${esc(r.l.address.split('  ')[0])}${landBasis(r.l).ok ? '' : ' <span class="reason-chip">preliminary land</span>'}<div style="font-size:10.5px;color:var(--text-faint);">${esc(r.l.ownerName) || ''}</div></td>
       <td>${r.p.strategy}</td><td>${m(r.p.land)}</td><td>${m(r.p.finished)}</td>
-      <td><b style="color:${r.p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.p.profit)}</b></td><td>${(r.p.margin * 100).toFixed(0)}%</td><td>${r.p.risk}</td><td style="color:${r.hi.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.hi.profit)}</td><td style="color:${r.lo.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.lo.profit)}</td><td>${salesCell(r.l)}</td><td>${r.sig.join(', ') || '—'}</td><td><b>${m(r.p.adj)}</b></td></tr>`).join('')}</tbody>`;
+      <td><b style="color:${r.p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.p.profit)}</b>${r.mid ? `<div style="font-size:10.5px;color:var(--text-faint);">at median $${r.mp}/sf: ${m(r.mid.profit)}</div>` : ''}</td><td>${(r.p.margin * 100).toFixed(0)}%</td><td>${r.p.risk}</td><td style="color:${r.hi.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.hi.profit)}</td><td style="color:${r.lo.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.lo.profit)}</td><td>${salesCell(r.l)}</td><td>${r.sig.join(', ') || '—'}</td><td><b>${m(r.p.adj)}</b></td></tr>`).join('')}</tbody>`;
 }
 
 // ── Intake, value engineering, builder quotes ────────────────────────────

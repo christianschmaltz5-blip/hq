@@ -249,6 +249,14 @@
       "jurisdiction": "SCOTTSDALE"
     },
     {
+      "name": "scottsdale_psf_1000",
+      "psf": 1000,
+      "n": 5,
+      "floodKnown": true,
+      "risk": "Low",
+      "jurisdiction": "SCOTTSDALE"
+    },
+    {
       "name": "scottsdale_psf_1001",
       "psf": 1001,
       "n": 5,
