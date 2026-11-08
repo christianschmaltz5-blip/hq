@@ -766,3 +766,11 @@ test('unusable cached comps show refresh notes and escaped stored and lookup GIS
   assert.match(rendered, /New-build lookup error: Timeout &lt;new-build&gt;/);
   assert.doesNotMatch(rendered, /<county>|<new-build>/);
 });
+
+test('one-pager combined stress rejects lead 21668446 and missing medians', () => {
+  const context = vm.createContext({ ONEPAGER_BUILD_PSF: 400, ONEPAGER_MIN_LAND_SHARE: 0.5 });
+  vm.runInContext(declaration('onePagerStress'), context);
+  const v = { land: 232168, offerHomes: 1, medianStress: { profit: 42448, homes: 1 } };
+  assert.equal(Math.round(context.onePagerStress(v)), -162688);
+  assert.ok(!(context.onePagerStress({ land: 1, medianStress: {} }) >= 0));
+});
