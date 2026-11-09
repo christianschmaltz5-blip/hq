@@ -1065,7 +1065,7 @@ function toggleWritten(apn, cb){
   const map = loadWritten();
   if(cb.checked) map[apn] = localISO(); else delete map[apn];
   try{ localStorage.setItem('lettersWritten', JSON.stringify(map)); }catch(e){}
-  cb.nextElementSibling.textContent = map[apn] ? `Written ${map[apn]}` : 'Written';
+  syncOT('letter', apn);
   renderOutreachTracker();
 }
 // Outreach tracker: phone / email / letter checkboxes per lead (localStorage maps of apn -> date). Letter shares 'lettersWritten' with the lead-card checkbox.
@@ -1075,7 +1075,18 @@ function otToggle(kind, apn, cb){
   const map = otLoad(kind);
   if(cb.checked) map[apn] = localISO(); else delete map[apn];
   try{ localStorage.setItem(OT_KEYS[kind], JSON.stringify(map)); }catch(e){}
+  syncOT(kind, apn);
   renderOutreachTracker();
+}
+// Tick state lives in localStorage; the small checkboxes on each lead row and the tracker table both read it, so mirror a change to every copy.
+function syncOT(kind, apn){
+  const on = !!otLoad(kind)[apn];
+  document.querySelectorAll(`input[data-otk="${kind}"]`).forEach(i => { if(i.dataset.ota !== apn) return; i.checked = on; const s = i.nextElementSibling; if(s && s.tagName === 'SPAN') s.textContent = on ? 'Written ' + otLoad(kind)[apn] : 'Written'; });
+}
+function otChips(lead){
+  const m = { phone: otLoad('phone'), email: otLoad('email'), letter: otLoad('letter') };
+  return '<div style="display:flex;gap:10px;font-size:12px;" title="Mark how you contacted this owner">' + [['phone', '📞', 'Called'], ['email', '✉', 'Emailed'], ['letter', '✍️', 'Letter written']].map(([k, ic, t]) =>
+    `<label style="cursor:pointer;white-space:nowrap;" title="${t}${m[k][lead.apn] ? ' ' + esc(m[k][lead.apn]) : ''}"><input type="checkbox" data-otk="${k}" data-ota="${esc(lead.apn)}" ${m[k][lead.apn] ? 'checked' : ''} onchange="otToggle('${k}','${esc(lead.apn)}',this)"> ${ic}</label>`).join('') + '</div>';
 }
 function renderOutreachTracker(){
   const t = document.getElementById('otTable'); if(!t) return;
@@ -1193,6 +1204,7 @@ function leadCard(lead, idx){
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;" onclick="event.stopPropagation()">
         <div class="lead-score">${isHot?'<span class="hot-flag">🔥</span>':''}<span class="score-badge ${scoreClass(lead.score)}">${lead.score}</span> ${xBtn(lead.apn)}</div>
+        ${otChips(lead)}
         <textarea data-note-apn="${esc(lead.apn)}" placeholder="Notes…" style="width:230px;height:62px;padding:6px 8px;border:1px solid var(--card-border);border-radius:8px;font:inherit;font-size:12.5px;resize:vertical;background:#fff;" oninput="saveNote('${esc(lead.apn)}', ${idx}, this.value)">${esc(loadNotes()[lead.apn] || '')}</textarea>
       </div>
     </div>
@@ -1227,7 +1239,7 @@ function leadCard(lead, idx){
         <div class="detail-field"><div class="detail-label">PUC Code</div><div class="detail-val">${esc(lead.puc)}</div></div>
         <div class="detail-field"><div class="detail-label">Owner Mailing Address</div><div class="detail-val">${esc(lead.ownerMailAddress)||'—'}</div>
           ${lead.ownerMailAddress ? `<button class="mail-btn" onclick="event.stopPropagation(); openLetter(${idx}, true)">✍️ Handwritten Letter</button>
-            <label style="display:inline-flex;align-items:center;gap:5px;margin:12px 0 0 8px;font-size:12.5px;cursor:pointer;" onclick="event.stopPropagation()"><input type="checkbox" ${loadWritten()[lead.apn] ? 'checked' : ''} onchange="toggleWritten('${esc(lead.apn)}', this)"><span>${loadWritten()[lead.apn] ? 'Written ' + esc(loadWritten()[lead.apn]) : 'Written'}</span></label> ` : ''}
+            <label style="display:inline-flex;align-items:center;gap:5px;margin:12px 0 0 8px;font-size:12.5px;cursor:pointer;" onclick="event.stopPropagation()"><input type="checkbox" data-otk="letter" data-ota="${esc(lead.apn)}" ${loadWritten()[lead.apn] ? 'checked' : ''} onchange="toggleWritten('${esc(lead.apn)}', this)"><span>${loadWritten()[lead.apn] ? 'Written ' + esc(loadWritten()[lead.apn]) : 'Written'}</span></label> ` : ''}
           ${lead.ownerMailAddress && !own.isHiddenOwner ? `<button class="mail-btn" onclick="event.stopPropagation(); openLetter(${idx})">✉️ Generate Mail Letter</button>` : own.isHiddenOwner && lead.registeredAgent ? `<div style="font-size:10.5px;color:var(--text-soft);margin-top:6px;">Registered agent (via <a href="${esc(lead.registeredAgent.companyUrl)}" target="_blank" rel="noopener">OpenCorporates</a>): <b>${esc(lead.registeredAgent.agentLine)}</b></div>` : own.isHiddenOwner ? `<div style="font-size:10.5px;color:var(--text-faint);margin-top:6px;">Hidden LLC/Trust — no registered agent found; find it manually before mailing</div>` : ''}
           <button class="mail-btn" style="background:${contactedDate?'#f1f3f7':'var(--success)'}; color:${contactedDate?'var(--text-soft)':'#fff'}; margin-left:8px;" onclick="event.stopPropagation(); toggleContacted('${esc(lead.apn)}')">${contactedDate ? 'Undo Contacted' : '📨 Mark Contacted'}</button>
           ${ownerLookupBtn(lead)}${entityLookupBtns(lead)}
