@@ -1075,6 +1075,7 @@ function otRaw(kind){ try{ return JSON.parse(localStorage.getItem(OT_KEYS[kind])
 function otLoad(kind){
   const m = otRaw(kind); if(kind !== 'phone') return m;
   const out = {}, log = loadCalls();
+  Object.entries(loadContacted()).forEach(([a, d]) => { if(d) out[a] = String(d); });   // the Contacted mark counts as a call
   Object.keys(log).forEach(a => { const c = (log[a] || {}).calls || []; if(c.length) out[a] = c[0].d; });
   Object.keys(m).forEach(a => { if(m[a] === 'off') delete out[a]; else out[a] = m[a]; });
   return out;
