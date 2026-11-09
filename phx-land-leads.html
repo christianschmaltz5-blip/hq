@@ -1864,8 +1864,12 @@ function fmtEnvelope(lead){
   const us = raw.match(/^(.*?)\s+([A-Z]{2})\s+USA\s+(\d{5})(?:-?(\d{4}))?$/), ca = raw.match(/^(.*?)\s+([A-Z]{2})\s+CAN\s+([A-Z]\d[A-Z] ?\d[A-Z]\d)$/);
   const byCity = t => { const w = t.split(' '); for(let k = Math.min(3, w.length - 2); k >= 1; k--) { const c = w.slice(-k).join(' '); if(CITIES.has(us[2] + '|' + c) && /\d/.test(w.slice(0, -k).join(' '))) return [w.slice(0, -k).join(' '), c]; } return null; };
   const sp = us && (split(us[1]) || byCity(us[1]));
-  if(us && sp && /^(AZ)$/.test(us[2]) && !/^8[56]/.test(us[3])) warn = 'CHECK ZIP/STATE: ' + raw;
-  else if(us && sp) { /* county misspells Cedarburg WI; the ZIP decides */ addr = `${fixEnt(sp[0])}\n${({ 'WI|53012': 'Cedarburg' })[us[2] + '|' + us[3]] || fixEnt(sp[1])}, ${us[2]} ${us[3]}${us[4] ? '-' + us[4] : ''}`; }
+  // county misspellings, checked against ZIP-to-city lookups (Nov 2026)
+  const FIXC = { 'WI|CEDARBERG': 'Cedarburg', 'CT|HARFORD': 'Hartford', 'OH|DELWARE': 'Delaware', 'TX|CIBOLD': 'Cibolo', 'WA|RADMONS': 'Redmond', 'IL|HIGLAND PARK': 'Highland Park', 'IL|ELK GROVE VILLAG': 'Elk Grove Village', 'IL|DEERFEILD': 'Deerfield', 'PA|PHILA': 'Philadelphia', 'FL|FT LAUDERDALE': 'Fort Lauderdale' };
+  const BADZIP = ['TN|38625', 'AZ|85353', 'AZ|85204'];   // ZIP belongs to a different city than the one on record
+  if(us && BADZIP.includes(us[2] + '|' + us[3])) warn = 'CHECK ZIP/CITY (ZIP does not match the city): ' + raw;
+  else if(us && sp && /^(AZ)$/.test(us[2]) && !/^8[56]/.test(us[3])) warn = 'CHECK ZIP/STATE: ' + raw;
+  else if(us && sp) { addr = `${fixEnt(sp[0])}\n${FIXC[us[2] + '|' + sp[1]] || fixEnt(sp[1])}, ${us[2]} ${us[3]}${us[4] ? '-' + us[4] : ''}`; }
   else if(ca && split(ca[1])) { const [st, city] = split(ca[1]); addr = `${fixEnt(st)}\n${fixEnt(city)} ${ca[2]}  ${ca[3].replace(/ /g, '').replace(/^(...)/, '$1 ')}\nCANADA`; }
   else warn = 'CHECK ADDRESS (could not format reliably): ' + raw;
   return { lines: name + '\n' + (addr || raw), warn };
