@@ -1070,10 +1070,18 @@ function toggleWritten(apn, cb){
 }
 // Outreach tracker: phone / email / letter checkboxes per lead (localStorage maps of apn -> date). Letter shares 'lettersWritten' with the lead-card checkbox.
 const OT_KEYS = { phone: 'callsDone', email: 'emailsDone', letter: 'lettersWritten' };
-function otLoad(kind){ try{ return JSON.parse(localStorage.getItem(OT_KEYS[kind]) || '{}'); }catch(e){ return {}; } }
+function otRaw(kind){ try{ return JSON.parse(localStorage.getItem(OT_KEYS[kind]) || '{}'); }catch(e){ return {}; } }
+// Phone ticks also come from the call log (Tracking tab): first logged call date. An explicit untick is stored as 'off' so it sticks.
+function otLoad(kind){
+  const m = otRaw(kind); if(kind !== 'phone') return m;
+  const out = {}, log = loadCalls();
+  Object.keys(log).forEach(a => { const c = (log[a] || {}).calls || []; if(c.length) out[a] = c[0].d; });
+  Object.keys(m).forEach(a => { if(m[a] === 'off') delete out[a]; else out[a] = m[a]; });
+  return out;
+}
 function otToggle(kind, apn, cb){
-  const map = otLoad(kind);
-  if(cb.checked) map[apn] = localISO(); else delete map[apn];
+  const map = otRaw(kind);
+  if(cb.checked) map[apn] = localISO(); else if(kind === 'phone' && otLoad('phone')[apn]) map[apn] = 'off'; else delete map[apn];
   try{ localStorage.setItem(OT_KEYS[kind], JSON.stringify(map)); }catch(e){}
   syncOT(kind, apn);
   renderOutreachTracker();
@@ -2135,7 +2143,7 @@ function loadDiscarded(){
   try{ return JSON.parse(localStorage.getItem('discardedLeads') || '{}'); }catch(e){ return {}; }
 }
 function isDiscarded(apn){ return !!loadDiscarded()[apn]; }
-function refreshAll(){ applyFilters(); renderSkipTrace(); renderMaxOffer(); renderDiscarded(); renderContacted(); renderTraced(); }
+function refreshAll(){ renderOutreachTracker(); applyFilters(); renderSkipTrace(); renderMaxOffer(); renderDiscarded(); renderContacted(); renderTraced(); }
 function discardLead(apn){
   const map = loadDiscarded();
   map[apn] = { date: localISO(), reason: '' };
