@@ -1791,10 +1791,10 @@ function buildHandLetter(lead){
   if(!own.isEntityOwner && p.length >= 2 && p[0].split(' ')[1] && p[1].split(' ')[0]) sal = `Dear ${titleCase(p[0].split(' ')[1])} and ${titleCase(p[1].split(' ')[0])},`;
   else if(!own.isEntityOwner && w[1] && w[1].length > 1) sal = `Dear ${titleCase(w[1])},`;
   const a = titleCase(String(lead.address || '').split(/\s{2,}/)[0]);
-  const env = fmtEnvelope(lead), ret = (document.getElementById('fromAddress').value || '').trim();
+  const env = fmtEnvelope(lead), ret = 'Christian Schmaltz\nP.O. Box 11097\nPhoenix, AZ 85061';
   return `STEP 1: FRONT OF THE ENVELOPE${env.warn ? '\n*** ' + env.warn + ' ***' : ''}
 Top-left corner (return address):
-${ret || '[type your name and full address in the "Your return address" box above]'}
+${ret}
 
 Top-right corner:
 Stamp (a Forever stamp; one sheet of paper in a standard envelope needs only one)
@@ -1817,7 +1817,7 @@ Thank you,
 Christian Schmaltz
 605-786-5520
 
-Write your return address under your name if you want them to be able to write back. Do not write the parcel number or "Re:" line; the letter already names the lot.
+Under your name, add: P.O. Box 11097, Phoenix, AZ 85061. Do not write the parcel number or "Re:" line; the letter already names the lot.
 
 STEP 3: Fold the paper in thirds, put it in the envelope, seal it, and drop it in a blue mailbox or hand it over at the post office.`;
 }
