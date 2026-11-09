@@ -1865,7 +1865,7 @@ function fmtEnvelope(lead){
   const byCity = t => { const w = t.split(' '); for(let k = Math.min(3, w.length - 2); k >= 1; k--) { const c = w.slice(-k).join(' '); if(CITIES.has(us[2] + '|' + c) && /\d/.test(w.slice(0, -k).join(' '))) return [w.slice(0, -k).join(' '), c]; } return null; };
   const sp = us && (split(us[1]) || byCity(us[1]));
   if(us && sp && /^(AZ)$/.test(us[2]) && !/^8[56]/.test(us[3])) warn = 'CHECK ZIP/STATE: ' + raw;
-  else if(us && sp) { addr = `${fixEnt(sp[0])}\n${fixEnt(sp[1])}, ${us[2]} ${us[3]}${us[4] ? '-' + us[4] : ''}`; }
+  else if(us && sp) { /* county misspells Cedarburg WI; the ZIP decides */ addr = `${fixEnt(sp[0])}\n${({ 'WI|53012': 'Cedarburg' })[us[2] + '|' + us[3]] || fixEnt(sp[1])}, ${us[2]} ${us[3]}${us[4] ? '-' + us[4] : ''}`; }
   else if(ca && split(ca[1])) { const [st, city] = split(ca[1]); addr = `${fixEnt(st)}\n${fixEnt(city)} ${ca[2]}  ${ca[3].replace(/ /g, '').replace(/^(...)/, '$1 ')}\nCANADA`; }
   else warn = 'CHECK ADDRESS (could not format reliably): ' + raw;
   return { lines: name + '\n' + (addr || raw), warn };
