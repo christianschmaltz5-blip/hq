@@ -2297,7 +2297,8 @@ function profitLine(l){
 // Must be finite and >= 0. Same formula is inlined in phx-onepager.html.
 function onePagerStress(v){
   const ms = v && v.medianStress || {};
-  return ms.profit - (ONEPAGER_BUILD_PSF - 325) * 3800 * 1.08 * (ms.homes || v.offerHomes || 1) * 1.07 + (1 - ONEPAGER_MIN_LAND_SHARE) * v.land * 1.07;
+  if(!Number.isFinite(ms.profit)) return NaN;   // null/missing/Infinity must fail closed, not coerce to 0
+  return ms.profit -(ONEPAGER_BUILD_PSF - 325) * 3800 * 1.08 * (ms.homes || v.offerHomes || 1) * 1.07 + (1 - ONEPAGER_MIN_LAND_SHARE) * v.land * 1.07;
 }
 function onePagerLink(l){
   const v = l.verdict, c = l.houseComps;
@@ -2330,7 +2331,7 @@ function renderTopProfit(){
     + (profitable.length ? `<br><b>Profitable now:</b> ${profitable.map(addr).join(' · ')}` : '')
     + (calls.length ? `<br><b>📞 Call first:</b> ${calls.map(addr).join(' · ')}` : '');
   document.getElementById('tp-table').innerHTML = `<thead><tr><th>#</th><th>Address</th><th>Best strategy</th><th>Est. land cost</th><th>Est. finished value</th><th>Projected profit</th><th>Margin</th><th>Risk</th><th>Profit if build costs $50/sf more</th><th>Profit if it sells at the lowest nearby sale</th><th>New-home sales behind it</th><th>Seller signals</th><th>Opportunity (risk-adj. profit)</th></tr></thead>
-    <tbody>${rows.map((r, i) => `<tr><td>${i + 1}</td><td>${r.call ? '<span class="reason-chip" style="font-weight:700;">📞 CALL FIRST</span> ' : ''}${esc(r.l.address.split('  ')[0])}${landBasis(r.l).ok ? '' : ' <span class="reason-chip">preliminary land</span>'}<div style="font-size:10.5px;color:var(--text-faint);">${esc(r.l.ownerName) || ''}</div></td>
+    <tbody>${rows.map((r, i) => `<tr><td>${i + 1}</td><td>${r.call ? '<span class="reason-chip" style="font-weight:700;">📞 CALL FIRST</span> ' : ''}${esc(r.l.address.split('  ')[0])}${landBasis(r.l).ok ? '' : ' <span class="reason-chip">preliminary land</span>'}${r.l.inFloodplain ? ' <span class="reason-chip">⚠ mapped floodplain</span>' : ''}<div style="font-size:10.5px;color:var(--text-faint);">${esc(r.l.ownerName) || ''}</div></td>
       <td>${r.p.strategy}</td><td>${m(r.p.land)}</td><td>${m(r.p.finished)}</td>
       <td><b style="color:${r.p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.p.profit)}</b>${r.mid ? `<div style="font-size:10.5px;color:var(--text-faint);">at median $${r.mp}/sf: ${m(r.mid.profit)}</div>` : ''}</td><td>${(r.p.margin * 100).toFixed(0)}%</td><td>${r.p.risk}</td><td style="color:${r.hi.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.hi.profit)}</td><td style="color:${r.lo.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(r.lo.profit)}</td><td>${salesCell(r.l)}</td><td>${r.sig.join(', ') || '—'}</td><td><b>${m(r.p.adj)}</b></td></tr>`).join('')}</tbody>`;
 }

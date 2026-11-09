@@ -19,7 +19,7 @@ for area, name in (("phx", "Phoenix"), ("east", "East")):   # all Good leads are
     if not best: continue
     # sale price = second-highest qualifying nearby comp $/sf
     lines.append(f"Top profit, {name} (screened comps; placeholder costs):")
-    lines += [f"${l['verdict']['profit']/1e3:,.0f}k {l['address'].split('  ')[0].title()} ({l['verdict']['strategy']}, {l['verdict']['salePsf']}/sf){' PRELIMINARY LAND' if l['verdict'].get('landBasis') == 'area-avg' else ''}{' LOSES AT MEDIAN' if (l['verdict'].get('medianStress') or {}).get('profit', 0) < 0 else ''}" for l in best]
+    lines += [f"${l['verdict']['profit']/1e3:,.0f}k {l['address'].split('  ')[0].title()} ({l['verdict']['strategy']}, {l['verdict']['salePsf']}/sf){' PRELIMINARY LAND' if l['verdict'].get('landBasis') == 'area-avg' else ''}{' FLOODPLAIN' if l.get('inFloodplain') else ''}{' LOSES AT MEDIAN' if (l['verdict'].get('medianStress') or {}).get('profit', 0) < 0 else ''}" for l in best]
 
 good = [l for l in fresh if (l.get("verdict") or {}).get("label") == "Good"]
 if good:
