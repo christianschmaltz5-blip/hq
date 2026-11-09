@@ -1698,7 +1698,7 @@ I'd welcome a straightforward cash sale if that's what works for you — as-is, 
 
 I also want to mention a second option, since it's less commonly known: a land-for-equity partnership. In plain terms, instead of selling your property for a one-time cash payment, you contribute it into the development project — the same way an investor would contribute cash — and in exchange you receive an ownership percentage in that project. You wouldn't do any of the work yourself; I handle the permitting, construction, and sale (or lease-up) of what gets built. When the project is finished and sold, or refinanced, you're paid out your share of the profit based on your ownership stake, which is tied to the value of the land you put in. Depending on how the project performs, this can end up paying you more than a straight cash sale would — the tradeoff is that you wait until the project is complete to get paid, rather than getting cash right away, and like any investment there's no guaranteed outcome. Either option is genuinely on the table; I'm happy to walk through real numbers on your property for whichever one interests you.
 
-If you're open to a conversation, I'd love to hear from you at your convenience.
+${onePagerLink(lead) ? 'I have enclosed a short summary of how a partnership would work on your lot. It shows your parcel outlined on a map, an example of the kind of home I would build, and recent home sales nearby.\n\n' : ''}If you're open to a conversation, I'd love to hear from you at your convenience.
 
 Sincerely,
 ${fromName || '[Your Name]'}
@@ -1791,7 +1791,7 @@ function buildHandLetter(lead){
   if(!own.isEntityOwner && p.length >= 2 && p[0].split(' ')[1] && p[1].split(' ')[0]) sal = `Dear ${titleCase(p[0].split(' ')[1])} and ${titleCase(p[1].split(' ')[0])},`;
   else if(!own.isEntityOwner && w[1] && w[1].length > 1) sal = `Dear ${titleCase(w[1])},`;
   const a = titleCase(String(lead.address || '').split(/\s{2,}/)[0]);
-  const env = fmtEnvelope(lead), ret = 'Christian Schmaltz\nP.O. Box 11097\nPhoenix, AZ 85061';
+  const enc = !!onePagerLink(lead), env = fmtEnvelope(lead), ret = 'Christian Schmaltz\nP.O. Box 11097\nPhoenix, AZ 85061';
   return `STEP 1: FRONT OF THE ENVELOPE${env.warn ? '\n*** ' + env.warn + ' ***' : ''}
 Top-left corner (return address):
 ${ret}
@@ -1811,13 +1811,15 @@ My name is Christian Schmaltz. I am a local home builder, and I noticed you own 
 
 If you would ever consider selling, I would buy it as-is for cash. Or, if you would rather keep your lot's value, we could build a home together and share in the profit when it sells.
 
-Either way, no pressure. I would just enjoy a short call.
+${enc ? 'I have enclosed a short summary of how a partnership would work on your lot. It shows your parcel outlined on a map, an example of the kind of home I would build, and recent home sales nearby.\n\n' : ''}Either way, no pressure. I would just enjoy a short call.
 
 Thank you,
 Christian Schmaltz
 605-786-5520
 
 Under your name, add: P.O. Box 11097, Phoenix, AZ 85061. Do not write the parcel number or "Re:" line; the letter already names the lot.
+
+${enc ? 'ENCLOSURE: this lead has an owner one-pager. Open the lead card, click the 📄 one-pager link, print it (2 pages, no need to sign), and put it in the envelope with the letter. The letter mentions it.' : 'No owner one-pager exists for this lead, so send the letter alone (the letter does not mention an enclosure).'}
 
 STEP 3: Fold the paper in thirds, put it in the envelope, seal it, and drop it in a blue mailbox or hand it over at the post office.`;
 }
