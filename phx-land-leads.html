@@ -1045,6 +1045,14 @@ function scoreClass(score){ return score >= 60 ? 'hot' : score < 15 ? 'cold' : '
 function loadContacted(){
   try{ return JSON.parse(localStorage.getItem('contactedLeads') || '{}'); }catch(e){ return {}; }
 }
+// "Handwritten letter written" checkbox; same localStorage pattern as contacted leads. Updates in place so the open lead card stays open.
+function loadWritten(){ try{ return JSON.parse(localStorage.getItem('lettersWritten') || '{}'); }catch(e){ return {}; } }
+function toggleWritten(apn, cb){
+  const map = loadWritten();
+  if(cb.checked) map[apn] = localISO(); else delete map[apn];
+  try{ localStorage.setItem('lettersWritten', JSON.stringify(map)); }catch(e){}
+  cb.nextElementSibling.textContent = map[apn] ? `Written ${map[apn]}` : 'Written';
+}
 function isContacted(apn){ return !!loadContacted()[apn]; }
 function toggleContacted(apn){
   const map = loadContacted();
@@ -1180,7 +1188,8 @@ function leadCard(lead, idx){
         <div class="detail-field"><div class="detail-label">Land Size</div><div class="detail-val">${esc(lead.landSf)} sf</div></div>
         <div class="detail-field"><div class="detail-label">PUC Code</div><div class="detail-val">${esc(lead.puc)}</div></div>
         <div class="detail-field"><div class="detail-label">Owner Mailing Address</div><div class="detail-val">${esc(lead.ownerMailAddress)||'—'}</div>
-          ${lead.ownerMailAddress ? `<button class="mail-btn" onclick="event.stopPropagation(); openLetter(${idx}, true)">✍️ Handwritten Letter</button> ` : ''}
+          ${lead.ownerMailAddress ? `<button class="mail-btn" onclick="event.stopPropagation(); openLetter(${idx}, true)">✍️ Handwritten Letter</button>
+            <label style="display:inline-flex;align-items:center;gap:5px;margin:12px 0 0 8px;font-size:12.5px;cursor:pointer;" onclick="event.stopPropagation()"><input type="checkbox" ${loadWritten()[lead.apn] ? 'checked' : ''} onchange="toggleWritten('${esc(lead.apn)}', this)"><span>${loadWritten()[lead.apn] ? 'Written ' + esc(loadWritten()[lead.apn]) : 'Written'}</span></label> ` : ''}
           ${lead.ownerMailAddress && !own.isHiddenOwner ? `<button class="mail-btn" onclick="event.stopPropagation(); openLetter(${idx})">✉️ Generate Mail Letter</button>` : own.isHiddenOwner && lead.registeredAgent ? `<div style="font-size:10.5px;color:var(--text-soft);margin-top:6px;">Registered agent (via <a href="${esc(lead.registeredAgent.companyUrl)}" target="_blank" rel="noopener">OpenCorporates</a>): <b>${esc(lead.registeredAgent.agentLine)}</b></div>` : own.isHiddenOwner ? `<div style="font-size:10.5px;color:var(--text-faint);margin-top:6px;">Hidden LLC/Trust — no registered agent found; find it manually before mailing</div>` : ''}
           <button class="mail-btn" style="background:${contactedDate?'#f1f3f7':'var(--success)'}; color:${contactedDate?'var(--text-soft)':'#fff'}; margin-left:8px;" onclick="event.stopPropagation(); toggleContacted('${esc(lead.apn)}')">${contactedDate ? 'Undo Contacted' : '📨 Mark Contacted'}</button>
           ${ownerLookupBtn(lead)}${entityLookupBtns(lead)}
