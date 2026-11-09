@@ -1180,6 +1180,7 @@ function leadCard(lead, idx){
         <div class="detail-field"><div class="detail-label">Land Size</div><div class="detail-val">${esc(lead.landSf)} sf</div></div>
         <div class="detail-field"><div class="detail-label">PUC Code</div><div class="detail-val">${esc(lead.puc)}</div></div>
         <div class="detail-field"><div class="detail-label">Owner Mailing Address</div><div class="detail-val">${esc(lead.ownerMailAddress)||'—'}</div>
+          ${lead.ownerMailAddress ? `<button class="mail-btn" onclick="event.stopPropagation(); openLetter(${idx}, true)">✍️ Handwritten Letter</button> ` : ''}
           ${lead.ownerMailAddress && !own.isHiddenOwner ? `<button class="mail-btn" onclick="event.stopPropagation(); openLetter(${idx})">✉️ Generate Mail Letter</button>` : own.isHiddenOwner && lead.registeredAgent ? `<div style="font-size:10.5px;color:var(--text-soft);margin-top:6px;">Registered agent (via <a href="${esc(lead.registeredAgent.companyUrl)}" target="_blank" rel="noopener">OpenCorporates</a>): <b>${esc(lead.registeredAgent.agentLine)}</b></div>` : own.isHiddenOwner ? `<div style="font-size:10.5px;color:var(--text-faint);margin-top:6px;">Hidden LLC/Trust — no registered agent found; find it manually before mailing</div>` : ''}
           <button class="mail-btn" style="background:${contactedDate?'#f1f3f7':'var(--success)'}; color:${contactedDate?'var(--text-soft)':'#fff'}; margin-left:8px;" onclick="event.stopPropagation(); toggleContacted('${esc(lead.apn)}')">${contactedDate ? 'Undo Contacted' : '📨 Mark Contacted'}</button>
           ${ownerLookupBtn(lead)}${entityLookupBtns(lead)}
@@ -1740,14 +1741,38 @@ function printPreviewLetter(){
   document.getElementById('previewFromName').addEventListener('input', refreshPreviewLetter);
   document.getElementById('previewFromAddress').addEventListener('input', refreshPreviewLetter);
 })();
-function openLetter(idx){
+// Short version to copy by hand: envelope block, then ~90 words. Greeting guessed from the county's "SURNAME FIRST/SPOUSE" owner format.
+function buildHandLetter(lead){
+  const own = lead.ownership || {}, o = (lead.ownerName || '').replace(/\s+/g,' ').trim(), p = o.split('/'), w = o.split(' ');
+  let sal = 'Dear Property Owner,';
+  if(!own.isEntityOwner && p.length >= 2 && p[0].split(' ')[1] && p[1].split(' ')[0]) sal = `Dear ${titleCase(p[0].split(' ')[1])} and ${titleCase(p[1].split(' ')[0])},`;
+  else if(!own.isEntityOwner && w[1] && w[1].length > 1) sal = `Dear ${titleCase(w[1])},`;
+  const a = titleCase(String(lead.address || '').split(/\s{2,}/)[0]);
+  return `ENVELOPE (write this on the envelope)
+${titleCase(o)}${own.isHiddenOwner ? '\nAttn: Owner' : ''}
+${titleCase(lead.ownerMailAddress || '')}
+
+LETTER (copy by hand)
+${sal}
+
+My name is Christian Schmaltz. I am a local home builder, and I noticed you own the ${lead.landAcres}-acre lot at ${a}. I am not a realtor.
+
+If you would ever consider selling, I would buy it as-is for cash. Or, if you would rather keep your lot's value, we could build a home together and share in the profit when it sells.
+
+Either way, no pressure. I would just enjoy a short call.
+
+Thank you,
+Christian Schmaltz
+605-786-5520`;
+}
+function openLetter(idx, hand){
   const lead = currentLeads[idx];
   const fromName = localStorage.getItem('letterFromName') || '';
   const fromAddress = localStorage.getItem('letterFromAddress') || '';
   document.getElementById('fromName').value = fromName;
   document.getElementById('fromAddress').value = fromAddress;
-  document.getElementById('letterText').value = buildLetter(lead, fromName, fromAddress);
-  document.getElementById('letterText').dataset.leadIdx = idx;
+  document.getElementById('letterText').value = hand ? buildHandLetter(lead) : buildLetter(lead, fromName, fromAddress);
+  document.getElementById('letterText').dataset.leadIdx = hand ? '' : idx;
   document.getElementById('letterOverlay').classList.add('show');
 }
 function closeLetter(){
@@ -1755,7 +1780,7 @@ function closeLetter(){
 }
 function refreshLetter(){
   const idx = document.getElementById('letterText').dataset.leadIdx;
-  if(idx === undefined) return;
+  if(idx === undefined || idx === '') return;
   const fromName = document.getElementById('fromName').value;
   const fromAddress = document.getElementById('fromAddress').value;
   try{
