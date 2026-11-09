@@ -2322,11 +2322,11 @@ function renderTopProfit(){
   const tags = loadCondition();
   const all = (D.leads || []).filter(l => !l.stale && l.parcelStatus === 'vacant' && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn))
     .map(l => ({ l, p: profitFor(l), hi: profitFor(l, 50), sig: sellerSignals(l) })).filter(r => r.p)
-    .map(r => { const c = selectedComps(r.l) || {}, mp = c.medPsf || (c.fellBack ? c.psf : 0), mid = mp ? profitFor(r.l, 0, mp) : null;   // live median profit at the calculator's inputs; no median = not eligible
-      return Object.assign(r, { mp, mid, lo: profitFor(r.l, 0, lowSalePsf(r.l)), call: r.hi.profit > 0 && !!mid && mid.profit >= 0 && r.sig.length >= 2 && landBasis(r.l).ok }); }).sort((a, b) => b.p.adj - a.p.adj);
+    .map(r => { const c = selectedComps(r.l) || {}, mp = c.medPsf || (c.fellBack ? c.psf : 0), mid = mp ? profitFor(r.l, 0, mp) : null, midHi = mp ? profitFor(r.l, 50, mp) : null;   // midHi: +$50/sf build AND median price together   // live median profit at the calculator's inputs; no median = not eligible
+      return Object.assign(r, { mp, mid, lo: profitFor(r.l, 0, lowSalePsf(r.l)), call: r.hi.profit > 0 && !!mid && mid.profit >= 0 && !!midHi && Number.isFinite(midHi.profit) && midHi.profit >= 0 && r.sig.length >= 2 && landBasis(r.l).ok }); }).sort((a, b) => b.p.adj - a.p.adj);
   const pos = all.filter(r => r.p.profit > 0).length, rows = all.slice(0, 25);
   const addr = r => esc(r.l.address.split('  ')[0]), profitable = all.filter(r => r.p.profit > 0), calls = all.filter(r => r.call);
-  document.getElementById('tp-summary').innerHTML = `${pos} of ${all.length} leads with nearby home sales show a profit at your calculator numbers; ${calls.length} are marked 📞 CALL FIRST (still profitable at +$50/sf build and at the median comp price, 2+ seller signals AND a supported land price). Top ${rows.length} below.`
+  document.getElementById('tp-summary').innerHTML = `${pos} of ${all.length} leads with nearby home sales show a profit at your calculator numbers; ${calls.length} are marked 📞 CALL FIRST (still profitable at +$50/sf build combined with the median comp price, 2+ seller signals AND a supported land price). Top ${rows.length} below.`
     + (profitable.length ? `<br><b>Profitable now:</b> ${profitable.map(addr).join(' · ')}` : '')
     + (calls.length ? `<br><b>📞 Call first:</b> ${calls.map(addr).join(' · ')}` : '');
   document.getElementById('tp-table').innerHTML = `<thead><tr><th>#</th><th>Address</th><th>Best strategy</th><th>Est. land cost</th><th>Est. finished value</th><th>Projected profit</th><th>Margin</th><th>Risk</th><th>Profit if build costs $50/sf more</th><th>Profit if it sells at the lowest nearby sale</th><th>New-home sales behind it</th><th>Seller signals</th><th>Opportunity (risk-adj. profit)</th></tr></thead>
