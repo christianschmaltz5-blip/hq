@@ -388,6 +388,20 @@
         <div style="overflow-x:auto;"><table class="comps-table" id="bid-table"></table></div>
       </div>
 
+      <div class="card" id="outreach-tracker">
+        <div class="card-head">
+          <h2>Outreach Tracker</h2>
+          <span class="card-sub">Check off the three ways you contact each owner: phone, email, letter. Saved in this browser only. The Letter box is the same one on the lead card.</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:10px;">
+          <label style="font-size:12.5px;color:var(--text-soft);">Min lead score <input class="filter-input" id="otMinScore" type="number" value="80" min="0" max="100" style="width:70px" oninput="renderOutreachTracker()"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Show <select class="filter-input" id="otShow" onchange="renderOutreachTracker()">
+            <option value="all">All</option><option value="none">Not contacted yet</option><option value="noletter">No letter yet</option><option value="nophone">No call yet</option><option value="noemail">No email yet</option><option value="any">Contacted any way</option></select></label>
+          <span id="otSummary" style="font-size:12.5px;color:var(--text-soft);"></span>
+        </div>
+        <div style="overflow-x:auto;"><table class="comps-table" id="otTable"></table></div>
+      </div>
+
       <div class="card">
         <div class="card-head">
           <h2>Mail Letter Template</h2>
@@ -1052,7 +1066,31 @@ function toggleWritten(apn, cb){
   if(cb.checked) map[apn] = localISO(); else delete map[apn];
   try{ localStorage.setItem('lettersWritten', JSON.stringify(map)); }catch(e){}
   cb.nextElementSibling.textContent = map[apn] ? `Written ${map[apn]}` : 'Written';
+  renderOutreachTracker();
 }
+// Outreach tracker: phone / email / letter checkboxes per lead (localStorage maps of apn -> date). Letter shares 'lettersWritten' with the lead-card checkbox.
+const OT_KEYS = { phone: 'callsDone', email: 'emailsDone', letter: 'lettersWritten' };
+function otLoad(kind){ try{ return JSON.parse(localStorage.getItem(OT_KEYS[kind]) || '{}'); }catch(e){ return {}; } }
+function otToggle(kind, apn, cb){
+  const map = otLoad(kind);
+  if(cb.checked) map[apn] = localISO(); else delete map[apn];
+  try{ localStorage.setItem(OT_KEYS[kind], JSON.stringify(map)); }catch(e){}
+  renderOutreachTracker();
+}
+function renderOutreachTracker(){
+  const t = document.getElementById('otTable'); if(!t) return;
+  const min = Number(document.getElementById('otMinScore').value) || 0, show = document.getElementById('otShow').value;
+  const m = { phone: otLoad('phone'), email: otLoad('email'), letter: otLoad('letter') };
+  const all = (D.leads || []).filter(l => !l.stale && (l.score || 0) >= min).sort((a, b) => (b.score || 0) - (a.score || 0));
+  const any = l => m.phone[l.apn] || m.email[l.apn] || m.letter[l.apn];
+  const rows = all.filter(l => show === 'all' || (show === 'none' && !any(l)) || (show === 'any' && any(l)) || (show === 'noletter' && !m.letter[l.apn]) || (show === 'nophone' && !m.phone[l.apn]) || (show === 'noemail' && !m.email[l.apn]));
+  const n = k => all.filter(l => m[k][l.apn]).length;
+  document.getElementById('otSummary').textContent = `${all.length} leads at this score: ${n('phone')} called, ${n('email')} emailed, ${n('letter')} letters written`;
+  const box = (k, l) => `<td style="text-align:center;white-space:nowrap;"><label style="cursor:pointer;"><input type="checkbox" ${m[k][l.apn] ? 'checked' : ''} onchange="otToggle('${k}','${esc(l.apn)}',this)"> <span style="font-size:11px;color:var(--text-soft);">${m[k][l.apn] ? esc(m[k][l.apn]) : ''}</span></label></td>`;
+  t.innerHTML = '<thead><tr><th>Score</th><th>Address</th><th>Owner</th><th>Verdict</th><th>📞 Phone</th><th>✉ Email</th><th>✍️ Letter</th></tr></thead><tbody>' +
+    (rows.slice(0, 300).map(l => `<tr><td>${esc(l.score)}</td><td>${esc(titleCase(String(l.address || '').split(/\s{2,}/)[0]))}</td><td>${esc(titleCase(l.ownerName || ''))}</td><td>${esc((l.verdict || {}).label || '')}</td>${box('phone', l)}${box('email', l)}${box('letter', l)}</tr>`).join('') || '<tr><td colspan="7">No leads match.</td></tr>') + '</tbody>';
+}
+
 function isContacted(apn){ return !!loadContacted()[apn]; }
 function toggleContacted(apn){
   const map = loadContacted();
@@ -2807,9 +2845,10 @@ function drawMaps(keepView, tries = 0){  // keepView: recolor only, don't jump t
 applyFilters();  // draws the maps with the same filters as the list (discarded / contacted / 'Good house' hidden)
 
 // ── Tabs: one section at a time, no minimizing ───────────────────────────
+renderOutreachTracker();
 (function tabsInit(){
   const TABS = [['leads','📋 Leads'],['maps','🗺 Maps'],['calc','🏠 Calculator'],['money','💰 Profit & Offers'],['outreach','✉ Outreach'],['tracking','📞 Tracking']];
-  const BY_ID = { ranked:'leads', maps:'maps', 'home-calc':'calc', 'saved-runs':'calc', bids:'calc', 'top-profit':'money', 'max-offer':'money', 'call-scripts':'outreach', traced:'tracking', contacted:'tracking', discarded:'tracking' };
+  const BY_ID = { 'outreach-tracker':'outreach', ranked:'leads', maps:'maps', 'home-calc':'calc', 'saved-runs':'calc', bids:'calc', 'top-profit':'money', 'max-offer':'money', 'call-scripts':'outreach', traced:'tracking', contacted:'tracking', discarded:'tracking' };
   const BY_H2 = { 'Mail Letter Template':'outreach', 'Skip-Trace Priority':'tracking', 'Scan History':'tracking' };
   const secs = [...document.querySelectorAll('main.page > .card, main.page > .map-pair')];
   secs.forEach(el => { el.classList.remove('collapsed'); el.dataset.tab = BY_ID[el.id] || BY_H2[(el.querySelector('h2') || {}).textContent] || 'tracking'; });
