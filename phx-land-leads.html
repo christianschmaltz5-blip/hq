@@ -1792,13 +1792,19 @@ function buildHandLetter(lead){
   else if(!own.isEntityOwner && w[1] && w[1].length > 1) sal = `Dear ${titleCase(w[1])},`;
   const a = titleCase(String(lead.address || '').split(/\s{2,}/)[0]);
   const env = fmtEnvelope(lead), ret = (document.getElementById('fromAddress').value || '').trim();
-  return `ENVELOPE FRONT (center)${env.warn ? '\n*** ' + env.warn + ' ***' : ''}
+  return `STEP 1: FRONT OF THE ENVELOPE${env.warn ? '\n*** ' + env.warn + ' ***' : ''}
+Top-left corner (return address):
+${ret || '[type your name and full address in the "Your return address" box above]'}
+
+Top-right corner:
+Stamp (a Forever stamp; one sheet of paper in a standard envelope needs only one)
+
+Center of the envelope (who it goes to):
 ${env.lines}
 
-ENVELOPE TOP-LEFT (return address): ${ret || 'your name and address (type it in the box above to print it here)'}
-ENVELOPE TOP-RIGHT: stamp
+Print clearly in dark ink, one line per row, copied exactly as shown. Nothing else goes on the front. Leave the back blank. Seal it.
 
-LETTER (copy by hand)
+STEP 2: THE LETTER (blue or black ink on plain paper; nothing from Step 1 goes on it)
 ${sal}
 
 My name is Christian Schmaltz. I am a local home builder, and I noticed you own the ${lead.landAcres}-acre lot at ${a}. I am not a realtor.
@@ -1809,7 +1815,11 @@ Either way, no pressure. I would just enjoy a short call.
 
 Thank you,
 Christian Schmaltz
-605-786-5520`;
+605-786-5520
+
+Write your return address under your name if you want them to be able to write back. Do not write the parcel number or "Re:" line; the letter already names the lot.
+
+STEP 3: Fold the paper in thirds, put it in the envelope, seal it, and drop it in a blue mailbox or hand it over at the post office.`;
 }
 function openLetter(idx, hand){
   const lead = currentLeads[idx];
