@@ -1742,15 +1742,61 @@ function printPreviewLetter(){
   document.getElementById('previewFromAddress').addEventListener('input', refreshPreviewLetter);
 })();
 // Short version to copy by hand: envelope block, then ~90 words. Greeting guessed from the county's "SURNAME FIRST/SPOUSE" owner format.
+// Mailing-block formatter: USPS style (name / street / CITY ST ZIP+4). Returns {lines, warn}; warn = needs a human look before mailing.
+function fmtEnvelope(lead){
+  const own = lead.ownership || {};
+  const fixEnt = s => titleCase(s).replace(/\b(And|Of|De|La|Las|Del|The)\b(?!$)/g, (m, w, o) => o ? w.toLowerCase() : w).replace(/\b[A-Z]\d+[A-Za-z]\d+\b/g, m => m.toUpperCase()).replace(/\b(Llc|Lp|Llp|Lllp|Inc|Pllc|Hoa|Ii|Iii|Iv|Jr|Sr|Nw|Ne|Sw|Se|Po)\b/g, m => m.toUpperCase()).replace(/\bL L C\b/gi, 'LLC').replace(/\bP O\b/gi, 'PO');
+  let o = (lead.ownerName || '').replace(/\s+/g, ' ').trim(), warn = '';
+  const ENT = /\b(LLC|L L C|LP|LLP|LLLP|INC|CORP|CO|COMPANY|TRUST|TRUSTEES?|ESTATE|PARTNERS|PARTNERSHIP|PROPERTIES|HOLDINGS|ASSOCIATION|BANK|CHURCH|FOUNDATION|FUND|GROUP|ENTERPRISES|INVESTMENTS?|VENTURES?|DEVELOPMENT|BUILDERS|HOMES|REALTY|APARTMENTS)\b/;
+  let name;
+  if(ENT.test(o) || !o) name = fixEnt(o || 'Property Owner') + (own.isHiddenOwner ? '\nAttn: Owner' : '');
+  else {
+    const tr = /\s(TR|TRS|TTEE|TTEES)$/.test(o); o = o.replace(/\s(TR|TRS|TTEE|TTEES|ETAL|ET AL|ETUX|ETVIR)$/, '');
+    const flip = s => { const w = s.trim().split(' '), sfx = /^(JR|SR|II|III|IV)$/.test(w[w.length-1]) ? w.pop() : ''; const n = w.length > 1 ? titleCase(w.slice(1).join(' ') + ' ' + w[0]) : titleCase(w[0]); return n + (sfx ? ' ' + (/^(JR|SR)$/.test(sfx) ? titleCase(sfx) + '.' : sfx) : ''); };
+    const p = o.split('/'); let n;
+    if(p.length === 2 && p[1].trim().split(' ').length <= 2 && p[0].trim().split(' ').length > 1) { const w = p[0].trim().split(' '), sfx = /^(JR|SR|II|III|IV)$/.test(w[w.length-1]) ? ' ' + (/^(JR|SR)$/.test(w[w.length-1]) ? titleCase(w.pop()) + '.' : w.pop()) : ''; n = sfx ? `${titleCase(w.slice(1).join(' '))} ${titleCase(w[0])}${sfx} and ${titleCase(p[1].trim())} ${titleCase(w[0])}` : `${titleCase(w.slice(1).join(' '))} and ${titleCase(p[1].trim())} ${titleCase(w[0])}`; }
+    else if(p.length === 2) n = flip(p[0]) + ' and ' + flip(p[1]);
+    else n = flip(o);
+    name = n + (tr ? ', Trustees' : '');
+  }
+  // address: "STREET [UNIT] CITY ST USA ZIP" (US), or "... CITY PROV CAN POSTAL", else flag
+  const raw = String(lead.ownerMailAddress || '').replace(/\s+/g, ' ').trim().toUpperCase();
+  let addr = '';
+  const SUF = 'ST|STREET|RD|ROAD|DR|DRIVE|LN|LANE|TRL|TRAIL|BLVD|AVE|AVENUE|CT|COURT|WAY|PL|PLACE|CIR|CIRCLE|PKWY|PARKWAY|HWY|LOOP|TER|TERR|TERRACE|PT|CV|XING|ALY|WALK|TRCE|SQ|PLZ|RDG|VW|GLN|CRK|BND|PASS|PIKE|FWY|EXPY|CRES|BAY|WY';
+  const split = s => {   // -> [street line, city] or null
+    let m = s.match(/^((?:P ?O\.? )?BOX \S+|PMB \S+)\s+(.+)$/) || s.match(new RegExp(`^(\\S*\\d\\S*(?: \\S+)*?\\s(?:${SUF})\\.?(?: (?:N|S|E|W|NE|NW|SE|SW))?(?: (?:APT|UNIT|STE|SUITE|BLDG|FL|RM|#)\\.? ?\\S+)?)\\s+(.+)$`));
+    return m && m[2] ? [m[1], m[2]] : null;
+  };
+  const CITIES = fmtEnvelope.cities || (fmtEnvelope.cities = (() => {   // cities seen in cleanly-parsed addresses, keyed "ST|CITY"
+    const set = new Set();
+    for(const x of (window.PHX_LAND_LEADS || {}).leads || []) {
+      const m = String(x.ownerMailAddress || '').replace(/\s+/g, ' ').trim().toUpperCase().match(/^(.*?)\s+([A-Z]{2})\s+USA\s+\d{5}/), r = m && split(m[1]);
+      if(r) set.add(m[2] + '|' + r[1]);
+    }
+    return set;
+  })());
+  const us = raw.match(/^(.*?)\s+([A-Z]{2})\s+USA\s+(\d{5})(?:-?(\d{4}))?$/), ca = raw.match(/^(.*?)\s+([A-Z]{2})\s+CAN\s+([A-Z]\d[A-Z] ?\d[A-Z]\d)$/);
+  const byCity = t => { const w = t.split(' '); for(let k = Math.min(3, w.length - 2); k >= 1; k--) { const c = w.slice(-k).join(' '); if(CITIES.has(us[2] + '|' + c) && /\d/.test(w.slice(0, -k).join(' '))) return [w.slice(0, -k).join(' '), c]; } return null; };
+  const sp = us && (split(us[1]) || byCity(us[1]));
+  if(us && sp && /^(AZ)$/.test(us[2]) && !/^8[56]/.test(us[3])) warn = 'CHECK ZIP/STATE: ' + raw;
+  else if(us && sp) { addr = `${fixEnt(sp[0])}\n${fixEnt(sp[1])}, ${us[2]} ${us[3]}${us[4] ? '-' + us[4] : ''}`; }
+  else if(ca && split(ca[1])) { const [st, city] = split(ca[1]); addr = `${fixEnt(st)}\n${fixEnt(city)} ${ca[2]}  ${ca[3].replace(/ /g, '').replace(/^(...)/, '$1 ')}\nCANADA`; }
+  else warn = 'CHECK ADDRESS (could not format reliably): ' + raw;
+  return { lines: name + '\n' + (addr || raw), warn };
+}
+
 function buildHandLetter(lead){
   const own = lead.ownership || {}, o = (lead.ownerName || '').replace(/\s+/g,' ').trim(), p = o.split('/'), w = o.split(' ');
   let sal = 'Dear Property Owner,';
   if(!own.isEntityOwner && p.length >= 2 && p[0].split(' ')[1] && p[1].split(' ')[0]) sal = `Dear ${titleCase(p[0].split(' ')[1])} and ${titleCase(p[1].split(' ')[0])},`;
   else if(!own.isEntityOwner && w[1] && w[1].length > 1) sal = `Dear ${titleCase(w[1])},`;
   const a = titleCase(String(lead.address || '').split(/\s{2,}/)[0]);
-  return `ENVELOPE (write this on the envelope)
-${titleCase(o)}${own.isHiddenOwner ? '\nAttn: Owner' : ''}
-${titleCase(lead.ownerMailAddress || '')}
+  const env = fmtEnvelope(lead), ret = (document.getElementById('fromAddress').value || '').trim();
+  return `ENVELOPE FRONT (center)${env.warn ? '\n*** ' + env.warn + ' ***' : ''}
+${env.lines}
+
+ENVELOPE TOP-LEFT (return address): ${ret || 'your name and address (type it in the box above to print it here)'}
+ENVELOPE TOP-RIGHT: stamp
 
 LETTER (copy by hand)
 ${sal}
@@ -1772,7 +1818,8 @@ function openLetter(idx, hand){
   document.getElementById('fromName').value = fromName;
   document.getElementById('fromAddress').value = fromAddress;
   document.getElementById('letterText').value = hand ? buildHandLetter(lead) : buildLetter(lead, fromName, fromAddress);
-  document.getElementById('letterText').dataset.leadIdx = hand ? '' : idx;
+  document.getElementById('letterText').dataset.leadIdx = idx;
+  document.getElementById('letterText').dataset.hand = hand ? '1' : '';
   document.getElementById('letterOverlay').classList.add('show');
 }
 function closeLetter(){
@@ -1780,14 +1827,15 @@ function closeLetter(){
 }
 function refreshLetter(){
   const idx = document.getElementById('letterText').dataset.leadIdx;
-  if(idx === undefined || idx === '') return;
+  if(idx === undefined) return;
   const fromName = document.getElementById('fromName').value;
   const fromAddress = document.getElementById('fromAddress').value;
   try{
     localStorage.setItem('letterFromName', fromName);
     localStorage.setItem('letterFromAddress', fromAddress);
   }catch(e){}
-  document.getElementById('letterText').value = buildLetter(currentLeads[idx], fromName, fromAddress);
+  const lt = document.getElementById('letterText');
+  lt.value = lt.dataset.hand ? buildHandLetter(currentLeads[idx]) : buildLetter(currentLeads[idx], fromName, fromAddress);
 }
 document.getElementById('fromName').addEventListener('input', refreshLetter);
 document.getElementById('fromAddress').addEventListener('input', refreshLetter);
