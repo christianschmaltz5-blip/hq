@@ -1088,6 +1088,24 @@ function otChips(lead){
   return '<div style="display:flex;gap:10px;font-size:12px;" title="Mark how you contacted this owner">' + [['phone', '📞', 'Called'], ['email', '✉', 'Emailed'], ['letter', '✍️', 'Letter written']].map(([k, ic, t]) =>
     `<label style="cursor:pointer;white-space:nowrap;" title="${t}${m[k][lead.apn] ? ' ' + esc(m[k][lead.apn]) : ''}"><input type="checkbox" data-otk="${k}" data-ota="${esc(lead.apn)}" ${m[k][lead.apn] ? 'checked' : ''} onchange="otToggle('${k}','${esc(lead.apn)}',this)"> ${ic}</label>`).join('') + '</div>';
 }
+function otOpenLead(apn){
+  const l = (D.leads || []).find(x => x.apn === apn); if(!l) return;
+  const q = document.getElementById('addrSearch'); q.value = String(l.address || '').split(/\s{2,}/)[0];
+  showTab('leads'); applyFilters(); window.scrollTo(0, 0);
+}
+function otLinks(l){
+  const c = loadContacts()[l.apn] || {}, phones = c.phones || [], emails = c.emails || [], a = `'${esc(l.apn)}'`;
+  const lk = (t, href, extra) => `<a href="${href}" ${extra || ''} style="margin-right:8px;white-space:nowrap;">${t}</a>`;
+  return [
+    lk('Open lead', '#', `onclick="event.preventDefault();otOpenLead(${a})"`),
+    onePagerLink(l) ? lk('📄 One-pager', `phx-onepager.html?apn=${encodeURIComponent(l.apn)}`, 'target="_blank" rel="noopener"') : '',
+    l.ownerMailAddress ? lk('✍️ Letter', '#', `onclick="event.preventDefault();openLetter('a:${esc(l.apn)}',true)"`) : '',
+    l.ownerMailAddress && !(l.ownership || {}).isHiddenOwner ? lk('✉️ Typed letter', '#', `onclick="event.preventDefault();openLetter('a:${esc(l.apn)}')"`) : '',
+    phones[0] ? lk('📞 ' + esc(phones[0]), 'tel:' + esc(String(phones[0]).replace(/[^\d+]/g, ''))) : '',
+    emails[0] ? lk('✉ ' + esc(emails[0]), 'mailto:' + esc(emails[0])) : '',
+    l.lat && l.lng ? lk('🗺 Map', `https://www.google.com/maps/search/?api=1&query=${l.lat},${l.lng}`, 'target="_blank" rel="noopener"') : ''
+  ].join('');
+}
 function renderOutreachTracker(){
   const t = document.getElementById('otTable'); if(!t) return;
   const min = Number(document.getElementById('otMinScore').value) || 0, show = document.getElementById('otShow').value;
@@ -1098,8 +1116,8 @@ function renderOutreachTracker(){
   const n = k => all.filter(l => m[k][l.apn]).length;
   document.getElementById('otSummary').textContent = `${all.length} leads at this score: ${n('phone')} called, ${n('email')} emailed, ${n('letter')} letters written`;
   const box = (k, l) => `<td style="text-align:center;white-space:nowrap;"><label style="cursor:pointer;"><input type="checkbox" ${m[k][l.apn] ? 'checked' : ''} onchange="otToggle('${k}','${esc(l.apn)}',this)"> <span style="font-size:11px;color:var(--text-soft);">${m[k][l.apn] ? esc(m[k][l.apn]) : ''}</span></label></td>`;
-  t.innerHTML = '<thead><tr><th>Score</th><th>Address</th><th>Owner</th><th>Verdict</th><th>📞 Phone</th><th>✉ Email</th><th>✍️ Letter</th></tr></thead><tbody>' +
-    (rows.slice(0, 300).map(l => `<tr><td>${esc(l.score)}</td><td>${esc(titleCase(String(l.address || '').split(/\s{2,}/)[0]))}</td><td>${esc(titleCase(l.ownerName || ''))}</td><td>${esc((l.verdict || {}).label || '')}</td>${box('phone', l)}${box('email', l)}${box('letter', l)}</tr>`).join('') || '<tr><td colspan="7">No leads match.</td></tr>') + '</tbody>';
+  t.innerHTML = '<thead><tr><th>Score</th><th>Address</th><th>Owner</th><th>Verdict</th><th>📞 Phone</th><th>✉ Email</th><th>✍️ Letter</th><th>Links</th></tr></thead><tbody>' +
+    (rows.slice(0, 300).map(l => `<tr><td>${esc(l.score)}</td><td>${esc(titleCase(String(l.address || '').split(/\s{2,}/)[0]))}</td><td>${esc(titleCase(l.ownerName || ''))}</td><td>${esc((l.verdict || {}).label || '')}</td>${box('phone', l)}${box('email', l)}${box('letter', l)}<td>${otLinks(l)}</td></tr>`).join('') || '<tr><td colspan="8">No leads match.</td></tr>') + '</tbody>';
 }
 
 function isContacted(apn){ return !!loadContacted()[apn]; }
@@ -1882,8 +1900,9 @@ ${enc ? 'ENCLOSURE: this lead has an owner one-pager. Open the lead card, click 
 
 STEP 3: Fold the paper in thirds, put it in the envelope, seal it, and drop it in a blue mailbox or hand it over at the post office.`;
 }
+const leadFor = k => String(k).startsWith('a:') ? (D.leads || []).find(l => l.apn === String(k).slice(2)) : currentLeads[k];   // letter keys are a currentLeads index, or 'a:APN' from the Outreach tracker
 function openLetter(idx, hand){
-  const lead = currentLeads[idx];
+  const lead = leadFor(idx);
   const fromName = localStorage.getItem('letterFromName') || '';
   const fromAddress = localStorage.getItem('letterFromAddress') || '';
   document.getElementById('fromName').value = fromName;
@@ -1906,7 +1925,7 @@ function refreshLetter(){
     localStorage.setItem('letterFromAddress', fromAddress);
   }catch(e){}
   const lt = document.getElementById('letterText');
-  lt.value = lt.dataset.hand ? buildHandLetter(currentLeads[idx]) : buildLetter(currentLeads[idx], fromName, fromAddress);
+  lt.value = lt.dataset.hand ? buildHandLetter(leadFor(idx)) : buildLetter(leadFor(idx), fromName, fromAddress);
 }
 document.getElementById('fromName').addEventListener('input', refreshLetter);
 document.getElementById('fromAddress').addEventListener('input', refreshLetter);
