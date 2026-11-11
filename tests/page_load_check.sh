@@ -5,7 +5,7 @@ CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 [ -x "$CHROME" ] || exit 0
 cd "$(dirname "$0")/.." || exit 1
 rc=0
-for p in phx-land-leads.html phx-permits.html phx-onepager.html; do
+for p in phx-land-leads.html phx-permits.html phx-onepager.html naos.html; do
   out=$("$CHROME" --headless=new --disable-gpu --enable-logging=stderr --v=0 --virtual-time-budget=8000 --dump-dom "file://$PWD/$p" 2>&1 >/dev/null | grep -E 'CONSOLE.*(Uncaught|ReferenceError|TypeError|SyntaxError)')
   [ -n "$out" ] && { echo "$p: $out"; rc=1; }
 done

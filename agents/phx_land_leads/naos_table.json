@@ -1,0 +1,14 @@
+{
+  "source": "City of Scottsdale ESL Overlay page https://www.scottsdaleaz.gov/codes/ESLO (primary); reductions are in Zoning Ordinance Sec. 6.1060 and are NOT modeled",
+  "landforms": ["Lower Desert", "Upper Desert", "Hillside"],
+  "rows": [
+    {"label": "0-2%",   "maxSlope": 2,    "naos": [20, 25, 50]},
+    {"label": "2-5%",   "maxSlope": 5,    "naos": [25, 25, 50]},
+    {"label": "5-10%",  "maxSlope": 10,   "naos": [30, 35, 50]},
+    {"label": "10-15%", "maxSlope": 15,   "naos": [30, 45, 50]},
+    {"label": "15-25%", "maxSlope": 25,   "naos": [30, 45, 65]},
+    {"label": ">25%",   "maxSlope": null, "naos": [30, 45, 80]}
+  ],
+  "minimum": [15, 20, 40],
+  "note": "Percent of the lot that must stay natural. A slope on a row's upper edge belongs to that row (2.0% -> 0-2%, 25.0% -> 15-25%)."
+}
