@@ -605,14 +605,23 @@ document.getElementById('meta-row').innerHTML = `
 // this number.
 const SUBDIVISION_DEFAULTS = {
   costPerLot: 65000, lotSalePrice: 130000, sellingCostPct: 0.07, holdYears: 2,
+  softPct: 0.08, contPct: 0.10, ltcPct: 0.65, constrRate: 0.075, landClosePct: 0.01, taxPct: 0.007,   // placeholders, not bids
 };
 
 function calcSubdivision(inp){
-  const r = {};
+  const r = {}, hy = inp.holdYears || 0;
   r.landCost = inp.askingPrice || 0;
   r.demoCost = inp.demoCost || 0;
+  r.landClose = r.landCost * (inp.landClosePct || 0);
   r.lotDevCost = inp.lots * inp.costPerLot;
-  r.totalDevCost = r.landCost + r.demoCost + r.lotDevCost;
+  r.soft = r.lotDevCost * (inp.softPct || 0);
+  r.contingency = r.lotDevCost * (inp.contPct || 0);
+  r.direct = r.lotDevCost + r.soft + r.contingency;
+  r.loan = r.direct * (inp.ltcPct || 0);
+  r.interest = r.loan * (inp.constrRate || 0) * hy * 0.5;   // lots sell over the hold, so the balance averages about half
+  r.tax = r.landCost * (inp.taxPct || 0) * hy;
+  r.totalDevCost = r.landCost + r.demoCost + r.landClose + r.direct + r.interest + r.tax;
+  r.equity = r.totalDevCost - r.loan;
   r.costPerLot = inp.lots ? r.totalDevCost / inp.lots : null;
   r.grossLotRevenue = inp.lots * inp.lotSalePrice;
   r.sellingCosts = r.grossLotRevenue * inp.sellingCostPct;
@@ -620,6 +629,7 @@ function calcSubdivision(inp){
   r.developerProfit = r.netLotRevenue - r.totalDevCost;
   r.profitPerLot = inp.lots ? r.developerProfit / inp.lots : null;
   r.profitMargin = r.totalDevCost ? r.developerProfit / r.totalDevCost : null;
+  r.roe = r.equity > 0 ? r.developerProfit / r.equity : null;
   r.approxAnnualizedReturn = (r.profitMargin != null && inp.holdYears) ? r.profitMargin / inp.holdYears : null;
   return r;
 }
@@ -630,6 +640,8 @@ const SUBDIVISION_FIELDS = [
   ['askingPrice','Asking Price ($)'], ['demoCost','Demolition Cost ($)'], ['lots','Est. Lot Count'],
   ['costPerLot','Dev Cost/Lot ($)'], ['lotSalePrice','Lot Sale Price ($)'],
   ['sellingCostPct','Selling Cost %'], ['holdYears','Hold (yrs)'],
+  ['softPct','Soft Cost % of Lot Dev'], ['contPct','Contingency %'], ['ltcPct','Loan-to-Cost %'], ['constrRate','Interest Rate'],
+  ['landClosePct','Land Closing Cost %'], ['taxPct','Property Tax (% of land / yr)'],
 ];
 
 // ── Build-and-sell development pro forma (per lead) ────────────────────────
@@ -637,15 +649,23 @@ const SUBDIVISION_FIELDS = [
 const SALE_SECTIONS = [
   ['Property', [['acres','Acres','num'],['lotSf','Lot Square Footage','num'],['buildingSf','Building Square Footage (to build, all homes)','num'],['units','Homes','num']]],
   ['Sale', [['salePsf','Sale Price ($/sf of building)','usd'],['salePrice','Sale Price, total ($) — auto = $/sf x building sf','usd','auto'],['sellPct','Selling Closing Cost %','pct'],['targetPct','Target Profit (% of sale)','pct']]],
-  ['Land', [['askingPrice','Purchase Price','usd'],['landExp1','Land Acquisition Expense 1','usd'],['demoCost','Demolition (teardown lots)','usd']]],
+  ['Land', [['askingPrice','Purchase Price','usd'],['landClosePct','Land Closing Cost (% of price)','pct'],['landExp1','Land Acquisition Expense 1','usd'],['demoCost','Demolition (teardown lots)','usd']]],
   ['Hard Costs', [['hard1','Contract 1 (construction)','usd'],['hard2','Contract 2 (landscaping/utility)','usd']]],
-  ['Soft Costs', [['permit','Permit/Inspection Fee 1','usd'],['design','Design Fee 1','usd'],['survey','Survey','usd'],['misc','Miscellaneous','usd'],['finConstr','Financing/Closing Cost (construction)','usd'],['otherCost1','Other Cost 1','usd']]],
+  ['Soft Costs', [['permit','Permit/Inspection Fee 1','usd'],['design','Design Fee 1','usd'],['survey','Survey','usd'],['misc','Miscellaneous','usd'],['finConstr','Loan Points, Appraisal, Title & Draw Fees','usd'],['otherCost1','Other Cost 1','usd']]],
   ['Contingency, Reserve & Fee', [['contPct','Contingency %','pct'],['interestReserve','Interest Reserve ($) — auto','usd','auto'],['devFeePct','Developer Fee %','pct']]],
   ['Construction Loan', [['ltcPct','Construction Loan-to-Cost %','pct'],['constrRate','Construction Interest Rate','pct'],['constrTerm','Construction Term (months)','num']]],
+  ['Hold Costs', [['preMonths','Months before construction (design/permit)','num'],['saleMonths','Months to sell after completion','num'],['taxPct','Property Tax (% of land price / yr)','pct'],['brPct','Builder\'s-Risk Insurance (% of hard)','pct'],['utilMo','Utilities ($/month)','usd']]],
+];
+// Custom-builder model: the client owns the land and pays the costs and interest; you earn a fee on construction cost only.
+const CUSTOM_SECTIONS = [
+  ['Property', [['buildingSf','Building Square Footage','num'],['units','Homes','num']]],
+  ['Hard Costs', [['hard1','Contract 1 (construction)','usd'],['hard2','Contract 2 (landscaping/utility)','usd']]],
+  ['Soft Costs (client pays)', [['permit','Permit/Inspection Fee 1','usd'],['design','Design Fee 1','usd'],['survey','Survey','usd'],['misc','Miscellaneous','usd'],['otherCost1','Other Cost 1','usd']]],
+  ['Contingency, Fee & Your Costs', [['contPct','Contingency %','pct'],['customFeePct','Builder Fee (% of construction cost)','pct'],['overheadMo','Your Overhead on This Job ($/month)','usd'],['warrantyPct','Warranty Reserve (% of hard)','pct'],['constrTerm','Construction Term (months)','num']]],
 ];
 const LOTS_SECTIONS = [
   ['Property', [['acres','Acres','num'],['lotSf','Lot Square Footage','num']]],
-  ['Sell-the-lots model', SUBDIVISION_FIELDS.map(([k,l]) => [k, l, k==='sellingCostPct' ? 'pct' : (k==='lots'||k==='holdYears' ? 'num' : 'usd')])],
+  ['Sell-the-lots model', SUBDIVISION_FIELDS.map(([k,l]) => [k, l, ['sellingCostPct','softPct','contPct','ltcPct','constrRate','landClosePct','taxPct'].includes(k) ? 'pct' : (k==='lots'||k==='holdYears' ? 'num' : 'usd')])],
 ];
 
 function saleDefaults(lead, units){
@@ -658,7 +678,9 @@ function saleDefaults(lead, units){
     askingPrice: 0, landExp1: 0,
     hard1, hard2: Math.round(units*10000),
     permit: Math.round(hard1*0.02), design: Math.round(hard1*0.04), survey: 6000, misc: 10000, finConstr: Math.round(hard1*0.015), otherCost1: 0,
-    contPct: 0.05, interestReserve: null, devFeePct: 0.03,
+    contPct: 0.10, interestReserve: null, devFeePct: 0.03,
+    landClosePct: 0.01, preMonths: 3, saleMonths: 3, taxPct: 0.007, brPct: 0.005, utilMo: 600,
+    customFeePct: 0.12, overheadMo: 6000, warrantyPct: 0.01,
     ltcPct: 0.65, constrRate: 0.075, constrTerm: 18,
   };
 }
@@ -666,33 +688,60 @@ function saleDefaults(lead, units){
 function calcSale(s){
   if(s.askingPrice == null || String(s.askingPrice).trim() === '' || !Number.isFinite(+s.askingPrice) || +s.askingPrice <= 0) return { error: 'Enter a positive supported purchase price before calculating returns.' };
   const r = {};
-  r.land = (s.askingPrice||0) + (s.landExp1||0) + (s.demoCost||0);
+  r.landClose = (s.askingPrice||0) * (s.landClosePct||0);
+  r.land = (s.askingPrice||0) + (s.landExp1||0) + (s.demoCost||0) + r.landClose;
   r.hard = (s.hard1||0) + (s.hard2||0);
   r.softBase = (s.permit||0) + (s.design||0) + (s.survey||0) + (s.misc||0) + (s.otherCost1||0);
   r.soft = r.softBase + (s.finConstr||0);
   r.contingency = (s.contPct||0) * (r.hard + r.softBase);
   r.direct = r.hard + r.softBase + r.contingency;               // bank-financeable: hard + soft (ex-financing) + contingency
   r.constrLoan = (s.ltcPct||0) * r.direct;
-  r.interestReserve = s.interestReserve != null ? s.interestReserve : r.constrLoan * (s.constrRate||0) * ((s.constrTerm||0) / 12) * 0.5;
+  r.interestReserve = s.interestReserve != null ? s.interestReserve : r.constrLoan * (s.constrRate||0) * (((s.constrTerm||0) * 0.5 + (s.saleMonths||0)) / 12);   // half-drawn on average during construction, fully drawn while it sits for sale
+  const holdMo = (s.preMonths||0) + (s.constrTerm||0) + (s.saleMonths||0);
+  r.tax = (s.askingPrice||0) * (s.taxPct||0) * holdMo / 12;
+  r.holdCosts = r.tax + (s.brPct||0) * r.hard + (s.utilMo||0) * ((s.constrTerm||0) + (s.saleMonths||0));
   r.devFee = (s.devFeePct||0) * (r.hard + r.softBase);
-  r.total = r.land + r.hard + r.soft + r.contingency + r.interestReserve + r.devFee;
+  r.total = r.land + r.hard + r.soft + r.contingency + r.interestReserve + r.devFee + r.holdCosts;
   r.equity = r.total - r.constrLoan;
   r.revenue = s.salePrice != null ? s.salePrice : (s.salePsf||0) * (s.buildingSf||0);
   r.sellCost = r.revenue * (s.sellPct||0);
   r.net = r.revenue - r.sellCost;
   r.profit = r.net - r.total;
   r.profitMargin = r.revenue ? r.profit / r.revenue : null;
-  r.maxLand = r.net - r.revenue * (s.targetPct||0) - (r.total - (s.askingPrice||0));   // purchase price that leaves exactly the target profit (no other cost depends on land)
+  r.roe = r.equity > 0 ? r.profit / r.equity : null;
+  const k = (s.landClosePct||0) + (s.taxPct||0) * holdMo / 12;   // closing cost and property tax scale with the price paid
+  r.maxLand = (r.net - r.revenue * (s.targetPct||0) - (r.total - (s.askingPrice||0) * (1 + k))) / (1 + k);   // purchase price that leaves exactly the target profit
   return r;
 }
 
-function sectionsFor(state){ return state.mode === 'lots' ? LOTS_SECTIONS : SALE_SECTIONS; }
+function calcCustom(s){
+  const r = {};
+  r.hard = (s.hard1||0) + (s.hard2||0);
+  r.softBase = (s.permit||0) + (s.design||0) + (s.survey||0) + (s.misc||0) + (s.otherCost1||0);
+  r.contingency = (s.contPct||0) * (r.hard + r.softBase);
+  r.direct = r.hard + r.softBase + r.contingency;   // what the client pays for construction; land and interest are theirs
+  r.fee = (s.customFeePct||0) * r.direct;
+  r.overhead = (s.overheadMo||0) * (s.constrTerm||0);
+  r.warranty = (s.warrantyPct||0) * r.hard;
+  r.profit = r.fee - r.overhead - r.warranty;       // net fee after your own costs
+  r.contract = r.direct + r.fee;
+  r.profitMargin = r.fee ? r.profit / r.fee : null;
+  return r;
+}
+// profit + margin of whatever model a saved scenario uses
+function runCalc(st){
+  if(st.mode === 'lots'){ const r = calcSubdivision(st); return { profit: r.developerProfit, margin: r.profitMargin }; }
+  if(st.mode === 'custom'){ const r = calcCustom(st); return { profit: r.profit, margin: r.profitMargin }; }
+  const r = calcSale(st); return r.error ? r : { profit: r.profit, margin: r.profitMargin };
+}
+function sectionsFor(state){ return state.mode === 'lots' ? LOTS_SECTIONS : state.mode === 'custom' ? CUSTOM_SECTIONS : SALE_SECTIONS; }
 
 function calcFieldsHtml(idx, state){
   const modeSel = `<div class="calc-field" style="grid-column:1/-1;"><label>Model</label>
     <select data-calc-mode="${idx}" style="padding:7px 10px;font-size:13px;border:1px solid var(--card-border);border-radius:7px;">
-      <option value="sale" ${state.mode!=='lots'?'selected':''}>Build &amp; sell homes (full pro forma)</option>
-      <option value="lots" ${state.mode==='lots'?'selected':''}>Subdivide &amp; sell lots</option></select></div>`;
+      <option value="sale" ${state.mode!=='lots'&&state.mode!=='custom'?'selected':''}>Build &amp; sell homes (full pro forma)</option>
+      <option value="lots" ${state.mode==='lots'?'selected':''}>Subdivide &amp; sell lots</option>
+      <option value="custom" ${state.mode==='custom'?'selected':''}>Custom builder (client owns land, you earn a fee)</option></select></div>`;
   const body = sectionsFor(state).map(([title, fields]) => {
     const head = `<div style="grid-column:1/-1;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);margin-top:10px;">${esc(title)}</div>`;
     return head + fields.map(([k, label, kind, auto]) => {
@@ -713,6 +762,7 @@ function renderSaleResults(idx, state){
     ${calcRow('Gross Sale Price', money(r.revenue))}
     ${calcRow('Net Sale Proceeds', money(r.net))}
     ${calcRow('Developer Profit', money(r.profit), r.profit>0?'pos':'neg')}
+    ${calcRow('Profit ÷ Equity', pct1(r.roe), r.roe>0?'pos':'neg')}
     ${calcRow('Profit Margin (% of sale)', pct1(r.profitMargin), r.profitMargin>0?'pos':'neg')}
     ${calcRow('Max Land Price at ' + pct1(state.targetPct||0) + ' profit', money(r.maxLand), r.maxLand>0?'pos':'neg')}
   `;
@@ -721,7 +771,7 @@ function renderSaleResults(idx, state){
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:14px;">
       <table class="comps-table"><thead><tr><th colspan="2">Development budget</th></tr></thead><tbody>
         ${row('Land Total', money(r.land))}${row('Hard Cost Total', money(r.hard))}${row('Soft Cost Total', money(r.soft))}
-        ${row('Contingency $', money(r.contingency))}${row('Interest Reserve', money(r.interestReserve))}${row('Developer Fee $', money(r.devFee))}
+        ${row('Contingency $', money(r.contingency))}${row('Interest Reserve', money(r.interestReserve))}${row('Hold Costs (tax, insurance, utilities)', money(r.holdCosts))}${row('Developer Fee $', money(r.devFee))}
         ${row('<b>Total Development Cost</b>', '<b>'+money(r.total)+'</b>')}${row('Direct Costs (bank-financeable)', money(r.direct))}
         ${row('Construction Loan Amount', money(r.constrLoan))}${row('Equity Required (construction)', money(r.equity))}</tbody></table>
       <table class="comps-table"><thead><tr><th colspan="2">Sale</th></tr></thead><tbody>
@@ -731,7 +781,20 @@ function renderSaleResults(idx, state){
     <div style="font-size:11px;color:var(--text-faint);margin-top:6px;">Sale proceeds repay the construction loan; interest is the interest reserve. Max land price = net sale proceeds − target profit − every non-land cost. Defaults are placeholders, not bids.</div>`;
 }
 
+function renderCustomResults(idx, state){
+  const r = calcCustom(state);
+  const w = document.getElementById(`calc-kpis-warn-${idx}`); if(w) w.innerHTML = '';
+  document.getElementById(`calc-kpis-${idx}`).innerHTML = `
+    ${calcRow('Construction Cost (client pays)', money(r.direct))}
+    ${calcRow('Gross Fee', money(r.fee))}
+    ${calcRow('Your Overhead + Warranty', money(-(r.overhead + r.warranty)))}
+    ${calcRow('Net Fee', money(r.profit), r.profit>0?'pos':'neg')}
+    ${calcRow('Net as % of Gross Fee', pct1(r.profitMargin), r.profit>0?'pos':'neg')}
+    ${calcRow('Contract Price', money(r.contract))}`;
+  document.getElementById(`calc-detail-${idx}`).innerHTML = `<div style="font-size:11px;color:var(--text-faint);margin-top:6px;">The client owns the land and pays construction, financing and carry. The fee applies to construction cost only (hard + soft + contingency), not land or interest. Net fee is what is left after your own overhead and warranty reserve. Fee %, overhead and warranty are unsourced placeholders.</div>`;
+}
 function renderCalcResults(idx, state){
+  if(state.mode === 'custom') return renderCustomResults(idx, state);
   const warnEl = document.getElementById(`calc-kpis-warn-${idx}`);
   if(!(Number(state.askingPrice) > 0)){ if(warnEl) warnEl.textContent = 'Enter a positive supported purchase price before calculating returns.'; document.getElementById(`calc-kpis-${idx}`).innerHTML = ''; document.getElementById(`calc-detail-${idx}`).innerHTML = ''; return; }
   if(warnEl) warnEl.innerHTML = '';
@@ -741,12 +804,15 @@ function renderCalcResults(idx, state){
     document.getElementById(`calc-kpis-${idx}`).innerHTML = `
       ${calcRow('Total Dev Cost', money(r.totalDevCost))}
       ${calcRow('Demo Cost', money(r.demoCost))}
+      ${calcRow('Soft + Contingency', money(r.soft + r.contingency))}
+      ${calcRow('Interest + Property Tax', money(r.interest + r.tax))}
       ${calcRow('Cost/Lot', money(r.costPerLot))}
       ${calcRow('Gross Lot Revenue', money(r.grossLotRevenue))}
       ${calcRow('Net Lot Revenue', money(r.netLotRevenue))}
       ${calcRow('Developer Profit', money(r.developerProfit), r.developerProfit>0?'pos':'neg')}
       ${calcRow('Profit/Lot', money(r.profitPerLot), r.profitPerLot>0?'pos':'neg')}
       ${calcRow('Profit Margin', pct1(r.profitMargin), r.profitMargin>0?'pos':'neg')}
+      ${calcRow('Profit ÷ Equity', pct1(r.roe), r.roe>0?'pos':'neg')}
       ${calcRow('Approx. Annualized Return', pct1(r.approxAnnualizedReturn))}
     `;
     return;
@@ -757,10 +823,11 @@ function renderCalcResults(idx, state){
 const calcStates = {};
 function loadCalcs(){ try{ return JSON.parse(localStorage.getItem('leadCalcs') || '{}'); }catch(e){ return {}; } }
 function calcSummary(st){
+  if(st.mode === 'custom'){ const c = calcCustom(st); return `${c.profit < 0 ? '−' : ''}$${Math.abs(Math.round(c.profit)).toLocaleString()} net fee · custom build`; }
   if(!(Number(st.askingPrice) > 0)) return 'Purchase price missing — returns unavailable';
-  const r = st.mode === 'lots' ? calcSubdivision(st) : calcSale(st);
+  const r = runCalc(st);
   if(r.error) return r.error;
-  const pr = st.mode === 'lots' ? r.developerProfit : r.profit, mg = st.mode === 'lots' ? r.profitMargin : r.profitMargin;
+  const pr = r.profit, mg = r.margin;
   return `${pr < 0 ? '−' : ''}$${Math.abs(Math.round(pr)).toLocaleString()} profit${mg == null ? '' : ' (' + (mg * 100).toFixed(0) + '%)'} · price $${Math.round(st.askingPrice || 0).toLocaleString()}`;
 }
 function persistCalc(idx){
@@ -2870,7 +2937,7 @@ function renderMapInstance(inst, leads){
 // profit from the numbers you ran on this lead: its own calculator first, else a run saved under its address
 function runProfit(l){
   const c = loadCalcs()[l.apn];
-  if(c && c.st) return c.st.mode === 'lots' ? calcSubdivision(c.st).developerProfit : calcSale(c.st).profit;
+  if(c && c.st && c.st.mode !== 'custom') return runCalc(c.st).profit;   // a custom-build fee is not a land-deal profit
   const a = String(l.address || '').split(/\s{2,}/)[0].toLowerCase(), r = loadRuns().find(x => x.name.toLowerCase() === a);
   return r ? r.gain : null;
 }
