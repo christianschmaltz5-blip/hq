@@ -934,7 +934,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.52,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.309,
+        "usableAcres": 0.575,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17614542",
@@ -1224,7 +1237,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.16,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.363,
+        "usableAcres": 0.675,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17615148",
@@ -1828,7 +1854,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.26,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.339,
+        "usableAcres": 0.629,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17614546",
@@ -2119,7 +2158,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 19.41,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.391,
+        "usableAcres": 0.477,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17609068",
@@ -2725,7 +2777,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.85,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.238,
+        "usableAcres": 0.715,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17614488",
@@ -3013,7 +3078,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 8.87,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.369,
+        "usableAcres": 0.685,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911830",
@@ -3328,7 +3408,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.76,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.353,
+        "usableAcres": 0.656,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17614496",
@@ -3620,7 +3713,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.97,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.341,
+        "usableAcres": 0.632,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911833",
@@ -3933,7 +4039,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.75,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.32,
+        "usableAcres": 0.595,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911918",
@@ -4249,7 +4368,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.54,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.313,
+        "usableAcres": 0.582,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911497",
@@ -4541,7 +4673,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.3,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.247,
+        "usableAcres": 0.742,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21647281",
@@ -4829,7 +4974,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.78,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.262,
+        "usableAcres": 0.785,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956920",
@@ -5120,7 +5278,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.18,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.239,
+        "usableAcres": 0.716,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911845",
@@ -5435,7 +5606,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.41,
+        "slopeSamples": 10,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.379,
+        "usableAcres": 0.705,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911575",
@@ -5724,7 +5908,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.22,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.361,
+        "usableAcres": 0.67,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911593",
@@ -6016,7 +6213,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.68,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.318,
+        "usableAcres": 0.59,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956925",
@@ -6305,7 +6515,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.35,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.234,
+        "usableAcres": 0.701,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960622",
@@ -6620,7 +6843,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.62,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.378,
+        "usableAcres": 0.701,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956991",
@@ -6932,7 +7168,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.11,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.387,
+        "usableAcres": 0.719,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911816",
@@ -7246,7 +7495,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.97,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.219,
+        "usableAcres": 0.657,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960623",
@@ -7560,7 +7822,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.47,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.291,
+        "usableAcres": 0.54,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21669003D",
@@ -7850,7 +8125,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.34,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.418,
+        "usableAcres": 1.254,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911650",
@@ -8141,7 +8429,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.82,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.209,
+        "usableAcres": 0.627,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17614525",
@@ -8422,7 +8723,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 12.21,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.373,
+        "usableAcres": 0.456,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911476",
@@ -8724,7 +9038,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 4.37,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.221,
+        "usableAcres": 0.661,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17614547",
@@ -9015,7 +9344,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 19.84,
+        "slopeSamples": 10,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.457,
+        "usableAcres": 0.558,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911916",
@@ -9331,7 +9673,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.93,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.275,
+        "usableAcres": 0.826,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911572",
@@ -9621,7 +9976,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.72,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.28,
+        "usableAcres": 0.84,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911504",
@@ -9912,7 +10280,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 3.4,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.217,
+        "usableAcres": 0.652,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21651308",
@@ -10227,7 +10608,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.91,
+        "slopeSamples": 23,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.249,
+        "usableAcres": 0.746,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956935",
@@ -10515,7 +10909,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.51,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.223,
+        "usableAcres": 0.668,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960330",
@@ -10830,7 +11237,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.45,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.289,
+        "usableAcres": 0.536,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17611193",
@@ -11448,7 +11868,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.46,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.256,
+        "usableAcres": 0.769,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911609",
@@ -11760,7 +12193,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.51,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.262,
+        "usableAcres": 0.785,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911828",
@@ -12074,7 +12520,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.85,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.377,
+        "usableAcres": 0.7,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911543",
@@ -12364,7 +12823,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.3,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.34,
+        "usableAcres": 0.632,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21201200",
@@ -12678,7 +13150,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.92,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.201,
+        "usableAcres": 0.803,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17614548",
@@ -12968,7 +13453,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 12.26,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.481,
+        "usableAcres": 0.588,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21649984B",
@@ -13282,7 +13780,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.26,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.247,
+        "usableAcres": 0.741,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960332",
@@ -13594,7 +14105,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.76,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.334,
+        "usableAcres": 0.619,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956919",
@@ -13883,7 +14407,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.28,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.287,
+        "usableAcres": 0.86,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960326",
@@ -14197,7 +14734,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.1,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.297,
+        "usableAcres": 0.552,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911548",
@@ -14487,7 +15037,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.42,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.351,
+        "usableAcres": 0.651,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956942",
@@ -14787,7 +15350,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.35,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.255,
+        "usableAcres": 0.764,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21669047E",
@@ -15067,7 +15643,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.08,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.288,
+        "usableAcres": 0.865,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21683259",
@@ -15660,7 +16249,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.21,
+        "slopeSamples": 21,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.345,
+        "usableAcres": 0.64,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21647340",
@@ -15950,7 +16552,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.56,
+        "slopeSamples": 23,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.255,
+        "usableAcres": 0.765,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960251",
@@ -16265,7 +16880,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.1,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.29,
+        "usableAcres": 0.539,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21683127",
@@ -16870,7 +17498,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.96,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.243,
+        "usableAcres": 0.728,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960252",
@@ -17185,7 +17826,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.64,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.308,
+        "usableAcres": 0.572,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960264",
@@ -17500,7 +18154,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.32,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.217,
+        "usableAcres": 0.65,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16772017",
@@ -18763,7 +19430,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.83,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.307,
+        "usableAcres": 0.921,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17614522",
@@ -19053,7 +19733,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 11.07,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.497,
+        "usableAcres": 0.607,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16772019",
@@ -19684,7 +20377,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.95,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.353,
+        "usableAcres": 0.655,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960267",
@@ -19999,7 +20705,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.8,
+        "slopeSamples": 24,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.347,
+        "usableAcres": 0.644,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956659A",
@@ -20313,7 +21032,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.45,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.368,
+        "usableAcres": 0.683,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956663",
@@ -20627,7 +21359,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.06,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.373,
+        "usableAcres": 0.693,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911782",
@@ -20941,7 +21686,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.59,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.246,
+        "usableAcres": 0.739,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911679",
@@ -21256,7 +22014,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.4,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.237,
+        "usableAcres": 0.71,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960005",
@@ -21569,7 +22340,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.34,
+        "slopeSamples": 21,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.234,
+        "usableAcres": 0.703,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911477",
@@ -21882,7 +22666,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 2.22,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.224,
+        "usableAcres": 0.671,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21669173D",
@@ -22185,7 +22984,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 1.88,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.587,
+        "usableAcres": 1.761,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21208084",
@@ -22475,7 +23287,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.04,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.248,
+        "usableAcres": 0.745,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960122",
@@ -22790,7 +23615,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.44,
+        "slopeSamples": 24,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.382,
+        "usableAcres": 0.709,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911266",
@@ -23102,7 +23940,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.14,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.227,
+        "usableAcres": 0.679,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956973",
@@ -23406,7 +24257,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.77,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.367,
+        "usableAcres": 0.683,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960240",
@@ -23721,7 +24585,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.7,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.265,
+        "usableAcres": 0.796,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21647308",
@@ -24036,7 +24913,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.9,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.266,
+        "usableAcres": 0.799,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960258",
@@ -24351,7 +25241,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.17,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.383,
+        "usableAcres": 0.712,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21633741",
@@ -24653,7 +25556,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.04,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.385,
+        "usableAcres": 0.715,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21652079",
@@ -24968,7 +25884,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.48,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.288,
+        "usableAcres": 0.865,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911470",
@@ -25282,7 +26211,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Lower Desert"
+        ],
+        "slopePct": 2.96,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.249,
+        "usableAcres": 0.748,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911460",
@@ -25584,7 +26528,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.83,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.242,
+        "usableAcres": 0.725,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956659B",
@@ -25889,7 +26846,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.67,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.366,
+        "usableAcres": 0.679,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960293",
@@ -26203,7 +27173,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.62,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.322,
+        "usableAcres": 0.597,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21668004",
@@ -26508,7 +27491,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.37,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.625,
+        "usableAcres": 1.875,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960380",
@@ -26822,7 +27818,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.17,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.346,
+        "usableAcres": 0.643,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911742",
@@ -27137,7 +28146,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.46,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.366,
+        "usableAcres": 0.681,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21647015E",
@@ -27452,7 +28474,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.52,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.269,
+        "usableAcres": 0.806,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20807083",
@@ -28961,7 +29996,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.61,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.259,
+        "usableAcres": 0.776,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21208373B",
@@ -29249,7 +30297,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.55,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.249,
+        "usableAcres": 0.748,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21648985",
@@ -29563,7 +30624,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.81,
+        "slopeSamples": 24,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.265,
+        "usableAcres": 0.794,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21647252B",
@@ -29863,7 +30937,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.82,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.389,
+        "usableAcres": 0.723,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956642",
@@ -30175,7 +31262,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.75,
+        "slopeSamples": 23,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.391,
+        "usableAcres": 0.726,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960274",
@@ -30489,7 +31589,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.33,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.313,
+        "usableAcres": 0.581,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21647284",
@@ -30780,7 +31893,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.04,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.28,
+        "usableAcres": 0.841,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21647306",
@@ -31093,7 +32219,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.59,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.284,
+        "usableAcres": 0.853,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21652075",
@@ -31407,7 +32546,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.39,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.402,
+        "usableAcres": 0.746,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21648726",
@@ -31719,7 +32871,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.52,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.3,
+        "usableAcres": 0.899,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21431004B",
@@ -33415,7 +34580,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.92,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.25,
+        "usableAcres": 0.751,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21201022",
@@ -33731,7 +34909,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.04,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.25,
+        "usableAcres": 0.751,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21211017E",
@@ -34045,7 +35236,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.92,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.2,
+        "usableAcres": 0.802,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21201215",
@@ -34363,7 +35567,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.22,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.251,
+        "usableAcres": 0.752,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21665248",
@@ -34613,7 +35830,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.55,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.251,
+        "usableAcres": 0.754,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17615630",
@@ -34894,7 +36124,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 12.55,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.453,
+        "usableAcres": 0.553,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21719882",
@@ -35176,7 +36421,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 9.73,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.353,
+        "usableAcres": 0.656,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21702998E",
@@ -35494,7 +36752,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.18,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.347,
+        "usableAcres": 0.644,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21210363",
@@ -35796,7 +37067,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.21,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.247,
+        "usableAcres": 0.742,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956373",
@@ -36111,7 +37395,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.13,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.346,
+        "usableAcres": 0.643,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21913062",
@@ -36418,7 +37715,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.34,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.354,
+        "usableAcres": 0.657,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21762730",
@@ -36670,7 +37980,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Lower Desert"
+        ],
+        "slopePct": 4.03,
+        "slopeSamples": 24,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.247,
+        "usableAcres": 0.74,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21647004H",
@@ -36986,7 +38311,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.41,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.247,
+        "usableAcres": 0.74,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911535",
@@ -37276,7 +38614,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.43,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.246,
+        "usableAcres": 0.738,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21665240",
@@ -37526,7 +38877,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.64,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.254,
+        "usableAcres": 0.761,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911834",
@@ -37842,7 +39206,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.78,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.344,
+        "usableAcres": 0.639,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947963",
@@ -38159,7 +39536,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.63,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.357,
+        "usableAcres": 0.662,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947576",
@@ -38452,7 +39842,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 10.44,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.441,
+        "usableAcres": 0.538,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21959099",
@@ -38770,7 +40173,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.06,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.358,
+        "usableAcres": 0.664,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21673629",
@@ -39089,7 +40505,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 9.03,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.358,
+        "usableAcres": 0.664,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21702034",
@@ -39339,7 +40768,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.27,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.245,
+        "usableAcres": 0.734,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21211017D",
@@ -39653,7 +41095,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.36,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.257,
+        "usableAcres": 0.77,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21719887",
@@ -39935,7 +41390,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 11.43,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.437,
+        "usableAcres": 0.535,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911850",
@@ -40251,7 +41719,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.12,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.243,
+        "usableAcres": 0.729,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911693",
@@ -40560,7 +42041,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.46,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.361,
+        "usableAcres": 0.67,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21913072",
@@ -40868,7 +42362,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.18,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.362,
+        "usableAcres": 0.671,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911859",
@@ -41184,7 +42691,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.1,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.339,
+        "usableAcres": 0.629,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21959096",
@@ -41501,7 +43021,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.88,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.362,
+        "usableAcres": 0.672,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21702437",
@@ -41819,7 +43352,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 5.54,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.338,
+        "usableAcres": 0.627,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21913130",
@@ -42125,7 +43673,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.15,
+        "slopeSamples": 9,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.337,
+        "usableAcres": 0.627,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21913153",
@@ -42418,7 +43979,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.74,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.337,
+        "usableAcres": 0.627,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21704180",
@@ -42670,7 +44244,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.33,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.241,
+        "usableAcres": 0.722,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21665339",
@@ -42910,7 +44497,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.97,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.241,
+        "usableAcres": 0.722,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21762047",
@@ -43161,7 +44761,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 5.53,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 30,
+        "naosAcres": 0.288,
+        "usableAcres": 0.673,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947532",
@@ -43445,7 +45058,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 14.35,
+        "slopeSamples": 10,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.431,
+        "usableAcres": 0.526,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21959106",
@@ -43763,7 +45389,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 17.45,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.428,
+        "usableAcres": 0.524,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21665280",
@@ -44004,7 +45643,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.0,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.263,
+        "usableAcres": 0.789,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17615628",
@@ -44284,7 +45936,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 10.3,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.428,
+        "usableAcres": 0.523,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21913195",
@@ -44600,7 +46265,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.02,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.369,
+        "usableAcres": 0.686,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947572",
@@ -44906,7 +46584,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.84,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.332,
+        "usableAcres": 0.616,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947642",
@@ -45200,7 +46891,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.18,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.264,
+        "usableAcres": 0.792,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17615638",
@@ -45479,7 +47183,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 11.48,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 0.527,
+        "usableAcres": 0.527,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21913201",
@@ -45772,7 +47491,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.19,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.37,
+        "usableAcres": 0.686,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911849",
@@ -46088,7 +47820,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.63,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.265,
+        "usableAcres": 0.794,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956215",
@@ -46403,7 +48148,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.66,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.236,
+        "usableAcres": 0.708,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21633672",
@@ -46685,7 +48443,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.54,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.236,
+        "usableAcres": 0.708,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911910",
@@ -47001,7 +48772,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.14,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.373,
+        "usableAcres": 0.692,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21755312",
@@ -47318,7 +49102,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 11.62,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 0.53,
+        "usableAcres": 0.53,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21731030A",
@@ -47600,7 +49399,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.96,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.267,
+        "usableAcres": 0.8,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21762085",
@@ -47841,7 +49653,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.91,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.234,
+        "usableAcres": 0.704,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911808",
@@ -48159,7 +49984,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 3.44,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.267,
+        "usableAcres": 0.801,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21682088",
@@ -48454,7 +50294,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 12.69,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 0.468,
+        "usableAcres": 0.468,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21684226",
@@ -48770,7 +50625,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 6.26,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.374,
+        "usableAcres": 0.695,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21762022",
@@ -49019,7 +50889,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.3,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.233,
+        "usableAcres": 0.699,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21731039D",
@@ -49299,7 +51182,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.07,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.268,
+        "usableAcres": 0.805,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21682053",
@@ -49591,7 +51487,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 6.59,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.327,
+        "usableAcres": 0.606,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947202",
@@ -49897,7 +51808,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.59,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.326,
+        "usableAcres": 0.605,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21684119",
@@ -50203,7 +52127,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.87,
+        "slopeSamples": 21,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.269,
+        "usableAcres": 0.807,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21231976",
@@ -50521,7 +52458,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.61,
+        "slopeSamples": 23,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.27,
+        "usableAcres": 0.811,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956545",
@@ -50830,7 +52780,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.22,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.379,
+        "usableAcres": 0.703,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21665267",
@@ -51070,7 +53033,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.43,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.271,
+        "usableAcres": 0.814,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21702448",
@@ -51320,7 +53296,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 10.98,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 0.541,
+        "usableAcres": 0.541,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947159",
@@ -51614,7 +53605,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.35,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.38,
+        "usableAcres": 0.706,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21684293",
@@ -51929,7 +53933,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 5.61,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.319,
+        "usableAcres": 0.592,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21682098",
@@ -52222,7 +54241,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.2,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.228,
+        "usableAcres": 0.682,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956338",
@@ -52538,7 +54570,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.48,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.318,
+        "usableAcres": 0.59,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21682094",
@@ -52832,7 +54877,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.56,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.317,
+        "usableAcres": 0.59,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956364",
@@ -53149,7 +55207,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.71,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.317,
+        "usableAcres": 0.59,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21731023D",
@@ -53416,7 +55487,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.17,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.276,
+        "usableAcres": 0.827,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21684298",
@@ -53709,7 +55793,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 12.62,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 0.551,
+        "usableAcres": 0.551,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960230",
@@ -54026,7 +56125,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.92,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.387,
+        "usableAcres": 0.719,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21913086",
@@ -54330,7 +56442,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.85,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.225,
+        "usableAcres": 0.674,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21208127B",
@@ -54635,7 +56760,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.48,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.224,
+        "usableAcres": 0.672,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956232",
@@ -54953,7 +57091,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 13.92,
+        "slopeSamples": 10,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.503,
+        "usableAcres": 0.614,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21913053",
@@ -55251,7 +57402,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 9.3,
+        "slopeSamples": 24,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.313,
+        "usableAcres": 0.58,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21704110",
@@ -55493,7 +57657,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.94,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.223,
+        "usableAcres": 0.67,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911896",
@@ -55811,7 +57988,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.26,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.222,
+        "usableAcres": 0.666,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947365",
@@ -56116,7 +58306,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.55,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.31,
+        "usableAcres": 0.577,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911848",
@@ -56433,7 +58636,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.86,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.309,
+        "usableAcres": 0.574,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947486",
@@ -56728,7 +58944,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.68,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.397,
+        "usableAcres": 0.736,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21665297",
@@ -56968,7 +59197,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 14.0,
+        "slopeSamples": 24,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 0.567,
+        "usableAcres": 0.567,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21913056",
@@ -57274,7 +59518,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.8,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.306,
+        "usableAcres": 0.569,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947563",
@@ -57566,7 +59823,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.46,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.401,
+        "usableAcres": 0.746,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21702866",
@@ -57884,7 +60154,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 13.12,
+        "slopeSamples": 10,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.514,
+        "usableAcres": 0.628,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21208389",
@@ -58199,7 +60484,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.27,
+        "slopeSamples": 21,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.217,
+        "usableAcres": 0.652,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956598",
@@ -58516,7 +60814,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.78,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.217,
+        "usableAcres": 0.651,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21762045",
@@ -58767,7 +61078,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 4.5,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.288,
+        "usableAcres": 0.865,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21711058",
@@ -59082,7 +61406,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Lower Desert"
+        ],
+        "slopePct": 3.7,
+        "slopeSamples": 21,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.217,
+        "usableAcres": 0.65,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947457",
@@ -59390,7 +61729,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.3,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.303,
+        "usableAcres": 0.562,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956345",
@@ -59698,7 +62050,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 11.26,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.389,
+        "usableAcres": 0.476,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21702861",
@@ -60013,7 +62378,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 17.48,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.387,
+        "usableAcres": 0.474,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21762087",
@@ -60253,7 +62633,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.66,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.215,
+        "usableAcres": 0.645,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17540033",
@@ -60533,7 +62926,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21203370",
@@ -60848,7 +63245,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.14,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.215,
+        "usableAcres": 0.644,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911863",
@@ -61168,7 +63578,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.43,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.408,
+        "usableAcres": 0.758,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947582",
@@ -61463,7 +63886,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.72,
+        "slopeSamples": 24,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.213,
+        "usableAcres": 0.64,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956324",
@@ -61772,7 +64208,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.68,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.298,
+        "usableAcres": 0.554,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21684290",
@@ -62064,7 +64513,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 14.42,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 0.587,
+        "usableAcres": 0.587,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911858",
@@ -62383,7 +64847,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.54,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.212,
+        "usableAcres": 0.637,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21648437",
@@ -62665,7 +65142,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.58,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.211,
+        "usableAcres": 0.634,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21913156",
@@ -62971,7 +65461,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.53,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.415,
+        "usableAcres": 0.77,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21685007G",
@@ -63253,7 +65756,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.89,
+        "slopeSamples": 5,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.211,
+        "usableAcres": 0.633,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21702285",
@@ -63568,7 +66084,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 9.56,
+        "slopeSamples": 21,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.296,
+        "usableAcres": 0.55,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17615631",
@@ -63847,7 +66376,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 10.73,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.534,
+        "usableAcres": 0.653,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21704169",
@@ -64099,7 +66643,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.21,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.21,
+        "usableAcres": 0.631,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21201171",
@@ -64416,7 +66973,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.59,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.238,
+        "usableAcres": 0.954,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956101",
@@ -64726,7 +67296,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.21,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.293,
+        "usableAcres": 0.544,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21665145",
@@ -64964,7 +67547,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.84,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.299,
+        "usableAcres": 0.897,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911862",
@@ -65283,7 +67879,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.86,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.419,
+        "usableAcres": 0.778,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21767216",
@@ -65571,7 +68180,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 1.95,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.208,
+        "usableAcres": 0.625,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17528054",
@@ -65851,7 +68473,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956130",
@@ -66159,7 +68785,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.29,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.291,
+        "usableAcres": 0.54,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21702071",
@@ -66410,7 +69049,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.87,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.291,
+        "usableAcres": 0.54,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21913198",
@@ -66729,7 +69381,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.05,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.422,
+        "usableAcres": 0.785,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956423",
@@ -67032,7 +69697,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.29,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.207,
+        "usableAcres": 0.622,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947214C",
@@ -67337,7 +70015,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 10.49,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.373,
+        "usableAcres": 0.455,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21203242",
@@ -67652,7 +70343,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.54,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.207,
+        "usableAcres": 0.621,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21684060",
@@ -67969,7 +70673,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.85,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.206,
+        "usableAcres": 0.619,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21755689",
@@ -68283,7 +71000,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.26,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.288,
+        "usableAcres": 0.535,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947497",
@@ -68600,7 +71330,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.89,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.288,
+        "usableAcres": 0.534,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21704238",
@@ -68841,7 +71584,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.66,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.305,
+        "usableAcres": 0.914,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21665298",
@@ -69083,7 +71839,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 12.2,
+        "slopeSamples": 24,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 0.61,
+        "usableAcres": 0.61,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21684311",
@@ -69375,7 +72146,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.34,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.307,
+        "usableAcres": 0.921,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21702414",
@@ -69691,7 +72475,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.87,
+        "slopeSamples": 23,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.285,
+        "usableAcres": 0.528,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20401924",
@@ -71012,7 +73809,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.47,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.221,
+        "usableAcres": 0.883,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21742272",
@@ -71293,7 +74103,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 8.8,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.317,
+        "usableAcres": 0.588,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911789",
@@ -71608,7 +74433,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.89,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.312,
+        "usableAcres": 0.579,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960905",
@@ -71922,7 +74760,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.63,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.282,
+        "usableAcres": 0.845,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21647988",
@@ -72222,7 +75073,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.37,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.283,
+        "usableAcres": 0.85,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21651310",
@@ -72537,7 +75401,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.74,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.293,
+        "usableAcres": 0.878,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20907045E",
@@ -74598,7 +77475,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.63,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.247,
+        "usableAcres": 0.741,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911646",
@@ -74889,7 +77779,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.23,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.267,
+        "usableAcres": 0.8,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960386",
@@ -75202,7 +78105,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.56,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.373,
+        "usableAcres": 0.694,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21224002",
@@ -75494,7 +78410,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.66,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.23,
+        "usableAcres": 0.69,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21224001",
@@ -75786,7 +78715,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.57,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.23,
+        "usableAcres": 0.69,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21652096",
@@ -76101,7 +79043,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.9,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.276,
+        "usableAcres": 0.827,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21211282",
@@ -76406,7 +79361,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.08,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.281,
+        "usableAcres": 0.843,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960289A",
@@ -76720,7 +79688,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.28,
+        "slopeSamples": 10,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.394,
+        "usableAcres": 0.731,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960238",
@@ -77035,7 +80016,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.0,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.295,
+        "usableAcres": 0.886,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20413615",
@@ -78005,7 +80999,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.74,
+        "slopeSamples": 21,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.313,
+        "usableAcres": 0.582,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956641",
@@ -78317,7 +81324,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.65,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.289,
+        "usableAcres": 0.867,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21755172",
@@ -78608,7 +81628,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.68,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.301,
+        "usableAcres": 0.559,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21634189",
@@ -78921,7 +81954,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 5.12,
+        "slopeSamples": 24,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.422,
+        "usableAcres": 0.785,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21526037",
@@ -80602,7 +83650,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.68,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.233,
+        "usableAcres": 0.7,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21208115",
@@ -80881,7 +83942,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.05,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.22,
+        "usableAcres": 0.66,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21224026",
@@ -81173,7 +84247,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.91,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.176,
+        "usableAcres": 0.702,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21665114",
@@ -81415,7 +84502,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.27,
+        "slopeSamples": 10,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.29,
+        "usableAcres": 0.871,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20907045B",
@@ -83119,7 +86219,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.99,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 2.148,
+        "usableAcres": 6.444,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21652088",
@@ -83435,7 +86548,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.02,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.268,
+        "usableAcres": 0.804,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960337",
@@ -83751,7 +86877,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.66,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.377,
+        "usableAcres": 0.701,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21702075",
@@ -83999,7 +87138,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.63,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.226,
+        "usableAcres": 0.678,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911588",
@@ -84290,7 +87442,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.2,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.283,
+        "usableAcres": 0.85,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21210358",
@@ -84592,7 +87757,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.23,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.285,
+        "usableAcres": 0.856,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21665081",
@@ -84834,7 +88012,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.34,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.289,
+        "usableAcres": 0.868,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21570353",
@@ -85987,7 +89178,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.31,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.482,
+        "usableAcres": 0.896,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21208107",
@@ -86267,7 +89471,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.98,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.181,
+        "usableAcres": 0.725,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21764018",
@@ -86554,7 +89771,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.72,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.223,
+        "usableAcres": 0.67,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911658",
@@ -86857,7 +90087,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.76,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.413,
+        "usableAcres": 0.768,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16619002A",
@@ -88149,7 +91392,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.89,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.245,
+        "usableAcres": 0.736,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21702476",
@@ -88464,7 +91720,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.97,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.234,
+        "usableAcres": 0.701,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21633720",
@@ -88754,7 +92023,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.16,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.317,
+        "usableAcres": 0.59,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911634",
@@ -89044,7 +92326,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.57,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.389,
+        "usableAcres": 0.723,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911515",
@@ -89347,7 +92642,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 3.62,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.297,
+        "usableAcres": 0.89,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16610029",
@@ -90220,7 +93528,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.96,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.198,
+        "usableAcres": 0.794,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21211004W",
@@ -90522,7 +93843,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.55,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.254,
+        "usableAcres": 0.763,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17537015",
@@ -90793,7 +94127,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911631",
@@ -91081,7 +94419,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.18,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.383,
+        "usableAcres": 0.71,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911455",
@@ -91383,7 +94734,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.92,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.404,
+        "usableAcres": 0.75,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "15901318",
@@ -92879,7 +96243,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.89,
+        "slopeSamples": 23,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.2,
+        "usableAcres": 0.8,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21764504",
@@ -93167,7 +96544,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 7.63,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.35,
+        "usableAcres": 0.651,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21211063A",
@@ -93480,7 +96872,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.94,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.275,
+        "usableAcres": 0.824,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21764515",
@@ -93771,7 +97176,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.75,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.385,
+        "usableAcres": 0.716,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21652106",
@@ -94086,7 +97504,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 1.56,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.277,
+        "usableAcres": 0.832,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21445009F",
@@ -94820,7 +98251,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.32,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.251,
+        "usableAcres": 0.752,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21668446",
@@ -95123,7 +98567,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.9,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.267,
+        "usableAcres": 0.8,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960628",
@@ -95436,7 +98893,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.54,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.319,
+        "usableAcres": 0.592,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911538",
@@ -95737,7 +99207,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.96,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.3,
+        "usableAcres": 0.901,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16619010",
@@ -97496,7 +100979,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.47,
+        "slopeSamples": 7,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.242,
+        "usableAcres": 0.727,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "15901284",
@@ -98717,7 +102213,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.39,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.25,
+        "usableAcres": 0.751,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911224",
@@ -99025,7 +102534,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.64,
+        "slopeSamples": 21,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.35,
+        "usableAcres": 0.651,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911466",
@@ -99339,7 +102861,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 5.86,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 30,
+        "naosAcres": 0.305,
+        "usableAcres": 0.711,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21684111",
@@ -99656,7 +103191,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.53,
+        "slopeSamples": 9,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.342,
+        "usableAcres": 0.635,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911255",
@@ -99964,7 +103512,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.65,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.257,
+        "usableAcres": 0.77,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21726521",
@@ -100234,7 +103795,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21684189",
@@ -100551,7 +104116,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.61,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.384,
+        "usableAcres": 0.713,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21673533",
@@ -100858,7 +104436,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.14,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.288,
+        "usableAcres": 0.535,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21150014F",
@@ -102396,7 +105987,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.39,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.352,
+        "usableAcres": 0.655,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911260",
@@ -102703,7 +106307,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.38,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.352,
+        "usableAcres": 0.655,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911232",
@@ -103011,7 +106628,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.92,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.353,
+        "usableAcres": 0.655,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21767235",
@@ -103291,7 +106921,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.14,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.257,
+        "usableAcres": 0.772,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21764505",
@@ -103579,7 +107222,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 9.78,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 0.522,
+        "usableAcres": 0.522,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21727991",
@@ -103848,7 +107506,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21668447",
@@ -104148,7 +107810,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.86,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.271,
+        "usableAcres": 0.812,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21962358",
@@ -104463,7 +108138,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.65,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.319,
+        "usableAcres": 0.592,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17614518",
@@ -104778,7 +108466,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 9.53,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.303,
+        "usableAcres": 0.564,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21668071C",
@@ -105080,7 +108781,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.4,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.289,
+        "usableAcres": 0.866,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17614531",
@@ -105371,7 +109085,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 12.94,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.384,
+        "usableAcres": 0.469,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21742072A",
@@ -105653,7 +109380,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 14.12,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 0.588,
+        "usableAcres": 0.588,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21962405",
@@ -105958,7 +109700,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.94,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.211,
+        "usableAcres": 0.634,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21677139",
@@ -106250,7 +110005,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.47,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.301,
+        "usableAcres": 0.904,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20338049B",
@@ -106879,7 +110647,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.77,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.364,
+        "usableAcres": 0.677,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911239",
@@ -107187,7 +110968,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.78,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.375,
+        "usableAcres": 0.697,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17614517",
@@ -107479,7 +111273,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 8.79,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.323,
+        "usableAcres": 0.601,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21962426",
@@ -107785,7 +111594,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.34,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.321,
+        "usableAcres": 0.596,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21742273",
@@ -108067,7 +111889,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 6.49,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.319,
+        "usableAcres": 0.592,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17614519",
@@ -108358,7 +112195,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 10.84,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.405,
+        "usableAcres": 0.494,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21962423",
@@ -108663,7 +112513,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.2,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.218,
+        "usableAcres": 0.653,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21722041",
@@ -108980,7 +112843,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21962410",
@@ -109286,7 +113153,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.5,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.203,
+        "usableAcres": 0.61,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21650156",
@@ -109862,7 +113742,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Lower Desert"
+        ],
+        "slopePct": 2.64,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.254,
+        "usableAcres": 0.763,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21211278B",
@@ -110176,7 +114071,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.67,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.274,
+        "usableAcres": 0.823,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21450273",
@@ -110782,7 +114690,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.79,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.373,
+        "usableAcres": 0.692,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21704389",
@@ -111090,7 +115011,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.27,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.278,
+        "usableAcres": 0.835,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21704175",
@@ -111338,7 +115272,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.49,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.285,
+        "usableAcres": 0.855,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21704172",
@@ -111589,7 +115536,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 1.98,
+        "slopeSamples": 23,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.293,
+        "usableAcres": 0.878,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21677146",
@@ -111881,7 +115841,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.27,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.305,
+        "usableAcres": 0.916,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16611005",
@@ -112877,7 +116850,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.28,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.351,
+        "usableAcres": 0.651,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21673541",
@@ -113183,7 +117169,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.57,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.3,
+        "usableAcres": 0.556,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21673544",
@@ -113487,7 +117486,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.47,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.297,
+        "usableAcres": 0.552,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20325685",
@@ -114693,7 +118705,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.44,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.198,
+        "usableAcres": 0.791,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17527105",
@@ -114965,7 +118990,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21764499",
@@ -115253,7 +119282,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 9.53,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.404,
+        "usableAcres": 0.75,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20325678",
@@ -115886,7 +119930,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.04,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.625,
+        "usableAcres": 1.875,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21755664",
@@ -116175,7 +120232,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.51,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.272,
+        "usableAcres": 0.815,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21742268C",
@@ -116442,7 +120512,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.47,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.32,
+        "usableAcres": 0.594,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21667245A",
@@ -116754,7 +120837,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.97,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.217,
+        "usableAcres": 0.652,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21679181",
@@ -117055,7 +121151,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.89,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.291,
+        "usableAcres": 0.874,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21677140",
@@ -117348,7 +121457,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.23,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.301,
+        "usableAcres": 0.904,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21673482",
@@ -117651,7 +121773,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.73,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.285,
+        "usableAcres": 0.528,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20325681",
@@ -118879,7 +123014,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 1.84,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.253,
+        "usableAcres": 0.758,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21673562",
@@ -119173,7 +123321,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.61,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.267,
+        "usableAcres": 0.8,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21651301",
@@ -119455,7 +123616,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.77,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.316,
+        "usableAcres": 0.588,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21673486",
@@ -119770,7 +123944,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 12.97,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.406,
+        "usableAcres": 0.497,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16610043",
@@ -120644,7 +124833,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Lower Desert"
+        ],
+        "slopePct": 2.06,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.589,
+        "usableAcres": 1.766,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21669003H",
@@ -120934,7 +125138,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.01,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.838,
+        "usableAcres": 2.513,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21742072B",
@@ -121216,7 +125433,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 11.86,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 0.505,
+        "usableAcres": 0.505,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17614526",
@@ -121504,7 +125736,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 15.32,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.441,
+        "usableAcres": 0.538,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956517",
@@ -121820,7 +126065,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.63,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.29,
+        "usableAcres": 0.539,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20311071",
@@ -122761,7 +127019,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 9.97,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.352,
+        "usableAcres": 0.654,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947906",
@@ -123076,7 +127347,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.06,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.355,
+        "usableAcres": 0.658,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960642",
@@ -123381,7 +127665,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.89,
+        "slopeSamples": 10,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.241,
+        "usableAcres": 0.724,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21755141",
@@ -123663,7 +127960,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.48,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.318,
+        "usableAcres": 0.59,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21962417",
@@ -123969,7 +128279,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.55,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.293,
+        "usableAcres": 0.879,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21677145",
@@ -124262,7 +128585,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.39,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.304,
+        "usableAcres": 0.913,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20311073",
@@ -124892,7 +129228,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 9.62,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.321,
+        "usableAcres": 0.597,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21708169",
@@ -125208,7 +129557,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 5.0,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.275,
+        "usableAcres": 0.826,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21634278",
@@ -125511,7 +129875,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.74,
+        "slopeSamples": 24,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.214,
+        "usableAcres": 0.643,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20325684",
@@ -126413,7 +130790,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.94,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.326,
+        "usableAcres": 0.605,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21634279C",
@@ -126716,7 +131106,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.05,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.211,
+        "usableAcres": 0.633,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20325689",
@@ -127638,7 +132041,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.74,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.339,
+        "usableAcres": 1.017,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21673046",
@@ -127954,7 +132370,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.87,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.234,
+        "usableAcres": 0.704,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21732640",
@@ -128236,7 +132665,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.73,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.284,
+        "usableAcres": 0.852,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21732641",
@@ -128518,7 +132960,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 1.74,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.284,
+        "usableAcres": 0.852,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21434036A",
@@ -129422,7 +133877,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.93,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.214,
+        "usableAcres": 0.857,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21757478",
@@ -129713,7 +134181,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 12.65,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.419,
+        "usableAcres": 0.512,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960641",
@@ -130019,7 +134502,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.16,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.272,
+        "usableAcres": 0.815,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21959084",
@@ -130309,7 +134805,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.1,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.404,
+        "usableAcres": 0.75,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956453",
@@ -130611,7 +135120,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 10.78,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.369,
+        "usableAcres": 0.451,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "15901302",
@@ -131832,7 +136354,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.76,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.591,
+        "usableAcres": 1.772,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21732637",
@@ -132113,7 +136648,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 1.52,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.221,
+        "usableAcres": 0.885,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21732037G",
@@ -132395,7 +136945,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.21,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.235,
+        "usableAcres": 0.938,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21523001D",
@@ -133294,7 +137857,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.95,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.365,
+        "usableAcres": 0.678,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21211063B",
@@ -133598,7 +138174,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.52,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.275,
+        "usableAcres": 0.824,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16766026",
@@ -135661,7 +140250,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 12.15,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.414,
+        "usableAcres": 0.505,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956470",
@@ -135964,7 +140566,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 10.0,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.412,
+        "usableAcres": 0.765,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16773008",
@@ -136855,7 +141470,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.19,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.221,
+        "usableAcres": 0.664,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20325688",
@@ -138364,7 +142992,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.45,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.625,
+        "usableAcres": 1.875,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21732639",
@@ -138646,7 +143287,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 2.21,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.262,
+        "usableAcres": 0.787,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21673693",
@@ -138961,7 +143617,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.94,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.394,
+        "usableAcres": 0.733,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911798",
@@ -139274,7 +143943,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.62,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.207,
+        "usableAcres": 0.622,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16511046",
@@ -141094,7 +145776,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.59,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.392,
+        "usableAcres": 0.729,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17707005",
@@ -141407,7 +146102,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20325527",
@@ -142327,7 +147026,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21744361",
@@ -142596,7 +147299,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.82,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.224,
+        "usableAcres": 0.673,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21744362",
@@ -142866,7 +147582,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.65,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.224,
+        "usableAcres": 0.673,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21524017A",
@@ -144075,7 +148804,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 11.56,
+        "slopeSamples": 9,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.517,
+        "usableAcres": 0.632,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960451",
@@ -144389,7 +149131,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.0,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.299,
+        "usableAcres": 0.556,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16766024",
@@ -145850,7 +150605,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.09,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.27,
+        "usableAcres": 1.078,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21940298B",
@@ -146467,7 +151235,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.17,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.213,
+        "usableAcres": 0.64,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16773012",
@@ -147626,7 +152407,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.57,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.364,
+        "usableAcres": 0.677,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21962388",
@@ -147933,7 +152727,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.48,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.24,
+        "usableAcres": 0.719,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911768",
@@ -148248,7 +153055,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.89,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.237,
+        "usableAcres": 0.711,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911770",
@@ -148562,7 +153382,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.63,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.232,
+        "usableAcres": 0.695,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21222004A",
@@ -148880,7 +153713,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.95,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.217,
+        "usableAcres": 0.868,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21959092",
@@ -149171,7 +154017,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 14.97,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.493,
+        "usableAcres": 0.603,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21673556",
@@ -149484,7 +154343,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.16,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.4,
+        "usableAcres": 0.743,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17524040",
@@ -149799,7 +154671,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21317018",
@@ -151257,7 +156133,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 4.61,
+        "slopeSamples": 24,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.247,
+        "usableAcres": 0.742,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956137",
@@ -151566,7 +156455,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.46,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.292,
+        "usableAcres": 0.543,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16610001",
@@ -165100,7 +170002,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.14,
+        "slopeSamples": 23,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.35,
+        "usableAcres": 0.65,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21732014E",
@@ -165370,7 +170285,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Lower Desert"
+        ],
+        "slopePct": 3.55,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.297,
+        "usableAcres": 0.89,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21454004",
@@ -172474,7 +177404,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 3.57,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.312,
+        "usableAcres": 0.938,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21516036",
@@ -178487,7 +183430,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.22,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.253,
+        "usableAcres": 0.759,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911791",
@@ -178800,7 +183756,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.2,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.265,
+        "usableAcres": 0.795,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21222004B",
@@ -179118,7 +184087,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.6,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.217,
+        "usableAcres": 0.868,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21707263",
@@ -179407,7 +184389,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.79,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.38,
+        "usableAcres": 0.707,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16643079",
@@ -182143,7 +187138,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.87,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 2.396,
+        "usableAcres": 7.187,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21670006W",
@@ -182459,7 +187467,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.79,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 2.396,
+        "usableAcres": 7.187,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960138",
@@ -182762,7 +187783,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.14,
+        "slopeSamples": 24,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.355,
+        "usableAcres": 0.659,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21959155B",
@@ -183053,7 +188087,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.46,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.359,
+        "usableAcres": 0.666,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21651006",
@@ -183369,7 +188416,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.77,
+        "slopeSamples": 21,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.186,
+        "usableAcres": 0.746,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21962438",
@@ -183675,7 +188735,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.36,
+        "slopeSamples": 8,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.314,
+        "usableAcres": 0.582,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21529075",
@@ -184927,7 +190000,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.04,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 1.193,
+        "usableAcres": 3.58,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21107011D",
@@ -187369,7 +192455,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.12,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.364,
+        "usableAcres": 0.677,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947913",
@@ -187676,7 +192775,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 8.79,
+        "slopeSamples": 13,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.391,
+        "usableAcres": 0.726,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947914",
@@ -187983,7 +193095,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 12.19,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.535,
+        "usableAcres": 0.654,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "16618039",
@@ -189685,7 +194810,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21617032",
@@ -190318,7 +195447,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 18.88,
+        "slopeSamples": 11,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 65,
+        "naosAcres": 3.562,
+        "usableAcres": 1.918,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21629003G",
@@ -191526,7 +196670,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 10.77,
+        "slopeSamples": 21,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.473,
+        "usableAcres": 0.578,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21956389",
@@ -191841,7 +196998,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.76,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.383,
+        "usableAcres": 0.711,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960154",
@@ -192145,7 +197315,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.26,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.311,
+        "usableAcres": 0.577,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21221010B",
@@ -192449,7 +197632,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.59,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.235,
+        "usableAcres": 0.939,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20708524A",
@@ -193068,7 +198264,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21705009C",
@@ -193351,7 +198551,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.64,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 2.416,
+        "usableAcres": 7.249,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20218057B",
@@ -193930,7 +199143,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 20.29,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 65,
+        "naosAcres": 3.244,
+        "usableAcres": 1.747,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17607176",
@@ -194533,7 +199761,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.0,
+        "slopeSamples": 24,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.942,
+        "usableAcres": 3.77,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21936115",
@@ -196013,7 +201254,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947634",
@@ -196304,7 +201549,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 11.91,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.451,
+        "usableAcres": 0.552,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17511133",
@@ -196594,7 +201852,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21962357",
@@ -196908,7 +202170,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.52,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.382,
+        "usableAcres": 0.709,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21674019",
@@ -197189,7 +202464,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.6,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.319,
+        "usableAcres": 0.593,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21913082",
@@ -197479,7 +202767,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.35,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.317,
+        "usableAcres": 0.59,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17469004A",
@@ -197782,7 +203083,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21222024A",
@@ -198098,7 +203403,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.93,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.284,
+        "usableAcres": 0.852,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947984",
@@ -198403,7 +203721,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 11.79,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.513,
+        "usableAcres": 0.627,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960143",
@@ -198705,7 +204036,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.15,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.413,
+        "usableAcres": 0.767,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960169",
@@ -199019,7 +204363,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.47,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.211,
+        "usableAcres": 0.633,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21447848",
@@ -199934,7 +205291,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 3.12,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 1.145,
+        "usableAcres": 3.435,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21144120A",
@@ -200533,7 +205903,23 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Lower Desert",
+          "Hillside"
+        ],
+        "slopePct": 12.73,
+        "slopeSamples": 8,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 2.257,
+        "usableAcres": 2.758,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21911371",
@@ -200850,7 +206236,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [],
+        "slopePct": 12.88,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 2.502,
+        "usableAcres": 2.502,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21222009",
@@ -201132,7 +206531,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.97,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.47,
+        "usableAcres": 1.878,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21936014J",
@@ -201749,7 +207161,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.06,
+        "slopeSamples": 10,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 2.346,
+        "usableAcres": 7.039,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21936006J",
@@ -202692,7 +208117,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21727034F",
@@ -203007,7 +208436,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17304019",
@@ -203320,7 +208753,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960139",
@@ -203623,7 +209060,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.26,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.32,
+        "usableAcres": 0.593,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21727034E",
@@ -203938,7 +209388,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21721105",
@@ -204229,7 +209683,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [],
+        "slopePct": 15.89,
+        "slopeSamples": 24,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 65,
+        "naosAcres": 0.734,
+        "usableAcres": 0.395,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21726980",
@@ -204518,7 +209985,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17503057",
@@ -204831,7 +210302,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17513085",
@@ -205146,7 +210621,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21101044A",
@@ -206626,7 +212105,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [],
+        "slopePct": 14.64,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 2.591,
+        "usableAcres": 2.591,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21936017Q",
@@ -207542,7 +213034,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.1,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 1.942,
+        "usableAcres": 5.827,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21166020A",
@@ -208164,7 +213669,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [
+          "Hillside"
+        ],
+        "slopePct": 12.04,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 2.347,
+        "usableAcres": 2.868,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21726997",
@@ -208466,7 +213986,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17532024",
@@ -208757,7 +214281,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17521028",
@@ -209071,7 +214599,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21721099",
@@ -209362,7 +214894,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [],
+        "slopePct": 15.85,
+        "slopeSamples": 21,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 65,
+        "naosAcres": 0.63,
+        "usableAcres": 0.339,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21726996",
@@ -209664,7 +215209,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21964110",
@@ -209977,7 +215526,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 11.48,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.472,
+        "usableAcres": 0.578,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21727025A",
@@ -210267,7 +215829,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21726004N",
@@ -210557,7 +216123,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947732",
@@ -210872,7 +216442,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.72,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.327,
+        "usableAcres": 0.608,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960189",
@@ -211172,7 +216755,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.73,
+        "slopeSamples": 16,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.28,
+        "usableAcres": 0.839,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17513050",
@@ -211462,7 +217058,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21722024",
@@ -211752,7 +217352,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947741",
@@ -212067,7 +217671,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 18.18,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.54,
+        "usableAcres": 0.661,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947403",
@@ -212371,7 +217988,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 18.78,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.374,
+        "usableAcres": 0.457,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17527004K",
@@ -212676,7 +218306,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17513005",
@@ -212966,7 +218600,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17513108",
@@ -213280,7 +218918,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21726201",
@@ -213569,7 +219211,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21145108",
@@ -214130,7 +219776,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.08,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.561,
+        "usableAcres": 1.683,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21136945",
@@ -216731,7 +222390,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 11.29,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.449,
+        "usableAcres": 0.548,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17532010",
@@ -217010,7 +222682,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17515005",
@@ -217290,7 +222966,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947678",
@@ -217596,7 +223276,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 14.43,
+        "slopeSamples": 18,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.456,
+        "usableAcres": 0.557,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21673725",
@@ -217897,7 +223590,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.07,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.355,
+        "usableAcres": 0.658,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21720418",
@@ -218179,7 +223885,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [],
+        "slopePct": 14.59,
+        "slopeSamples": 19,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 0.489,
+        "usableAcres": 0.489,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21708350",
@@ -218469,7 +224188,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 13.16,
+        "slopeSamples": 15,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 50,
+        "naosAcres": 0.521,
+        "usableAcres": 0.521,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21726029B",
@@ -218758,7 +224492,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21726968",
@@ -219047,7 +224785,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21729960B",
@@ -219334,7 +225076,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17513195",
@@ -219645,7 +225391,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947392",
@@ -219949,7 +225699,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 12.13,
+        "slopeSamples": 17,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.422,
+        "usableAcres": 0.515,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21947695",
@@ -220263,7 +226026,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 10.5,
+        "slopeSamples": 10,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 45,
+        "naosAcres": 0.42,
+        "usableAcres": 0.513,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17518019",
@@ -220567,7 +226343,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21959148B",
@@ -220881,7 +226661,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.53,
+        "slopeSamples": 8,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.383,
+        "usableAcres": 0.71,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21962361",
@@ -221194,7 +226987,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.42,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.403,
+        "usableAcres": 0.747,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21913396",
@@ -221508,7 +227314,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 4.94,
+        "slopeSamples": 23,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.287,
+        "usableAcres": 0.862,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17535094",
@@ -221789,7 +227608,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17521005B",
@@ -222102,7 +227925,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21960430",
@@ -222416,7 +228243,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.02,
+        "slopeSamples": 8,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.425,
+        "usableAcres": 0.79,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17520021",
@@ -222729,7 +228569,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20218043D",
@@ -223645,7 +229489,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.52,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.904,
+        "usableAcres": 3.616,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21616021B",
@@ -224245,7 +230102,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 6.02,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 1.694,
+        "usableAcres": 3.146,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21685001B",
@@ -224561,7 +230431,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.23,
+        "slopeSamples": 23,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 1.157,
+        "usableAcres": 3.473,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21940003Y",
@@ -225780,7 +231663,22 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Hillside",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 15.72,
+        "slopeSamples": 12,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 65,
+        "naosAcres": 0.614,
+        "usableAcres": 0.33,
+        "minNaosPct": 40,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "20218001Z",
@@ -227321,7 +233219,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 2.4,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.53,
+        "usableAcres": 1.591,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21158002D",
@@ -228238,7 +234149,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17409017",
@@ -228540,7 +234455,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17335002",
@@ -228827,7 +234746,11 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "17520020",
@@ -229140,7 +235063,11 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": false,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21674004T",
@@ -229434,7 +235361,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 3.07,
+        "slopeSamples": 5,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.264,
+        "usableAcres": 0.792,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21732638",
@@ -229725,7 +235665,22 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [
+          "Upper Desert"
+        ],
+        "slopePct": 2.45,
+        "slopeSamples": 14,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.285,
+        "usableAcres": 0.855,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21677161",
@@ -230008,7 +235963,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.49,
+        "slopeSamples": 9,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.217,
+        "usableAcres": 0.65,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21936020J",
@@ -230621,7 +236589,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 1.74,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 1.093,
+        "usableAcres": 3.278,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21938062",
@@ -232120,7 +238101,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 9.98,
+        "slopeSamples": 21,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.386,
+        "usableAcres": 0.716,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21667180E",
@@ -232423,7 +238417,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 3.72,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 0.281,
+        "usableAcres": 0.844,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21107009F",
@@ -234235,7 +240242,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 5.85,
+        "slopeSamples": 22,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.389,
+        "usableAcres": 0.722,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21677163",
@@ -234554,7 +240574,20 @@ window.PHX_LAND_LEADS = {
       "registeredAgent": null,
       "isNew": false,
       "firstSeen": "2026-11-06",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 7.92,
+        "slopeSamples": 4,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 35,
+        "naosAcres": 0.301,
+        "usableAcres": 0.559,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21212002J",
@@ -237600,7 +243633,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Upper Desert",
+        "otherLandforms": [],
+        "slopePct": 2.26,
+        "slopeSamples": 25,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 25,
+        "naosAcres": 1.25,
+        "usableAcres": 3.75,
+        "minNaosPct": 20,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     },
     {
       "apn": "21937453A",
@@ -240534,7 +246580,20 @@ window.PHX_LAND_LEADS = {
       },
       "isNew": false,
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-11"
+      "lastSeen": "2026-11-11",
+      "esl": {
+        "inEsl": true,
+        "landform": "Lower Desert",
+        "otherLandforms": [],
+        "slopePct": 1.59,
+        "slopeSamples": 20,
+        "slopeStatus": "ok: USGS 3DEP via EPQS",
+        "naosPct": 20,
+        "naosAcres": 0.31,
+        "usableAcres": 1.242,
+        "minNaosPct": 15,
+        "basis": "estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and Zoning Ordinance Sec. 6.1060 reductions are NOT modeled"
+      }
     }
   ],
   "history": [
@@ -240803,5 +246862,75 @@ window.PHX_LAND_LEADS = {
       "newLeads": 12
     }
   ],
-  "methodologyNote": "Public-records only: Maricopa Assessor parcels (vacant land AND underused single-family-improved parcels \u2014 an existing house occupying a small share of an oversized lot, tagged UNDERUSED LOT \u2014 condition is not in public data, verify by eye), Phoenix zoning + General Plan + rezoning-case layers, FEMA flood zones, plus ownership tenure/entity-type/mailing-address signals as a seller-motivation proxy. No asking price or water/sewer availability is in any public feed found \u2014 confirm those manually per lead before underwriting. Rezone targets landing on single-family zoning use a subdivision/lot-sale calculator (add a demolition cost for underused-lot leads); targets on multifamily/commercial zoning use a rental pro forma. Also tracks a fixed east-valley watch list (north Scottsdale, Fountain Hills, Cave Creek, Carefree, Rio Verde) zoned from each town's or the county's layer; their by-right counts use the zone's minimum lot and ignore ESL/slope/NAOS/floodplain."
+  "methodologyNote": "Public-records only: Maricopa Assessor parcels (vacant land AND underused single-family-improved parcels \u2014 an existing house occupying a small share of an oversized lot, tagged UNDERUSED LOT \u2014 condition is not in public data, verify by eye), Phoenix zoning + General Plan + rezoning-case layers, FEMA flood zones, plus ownership tenure/entity-type/mailing-address signals as a seller-motivation proxy. No asking price or water/sewer availability is in any public feed found \u2014 confirm those manually per lead before underwriting. Rezone targets landing on single-family zoning use a subdivision/lot-sale calculator (add a demolition cost for underused-lot leads); targets on multifamily/commercial zoning use a rental pro forma. Also tracks a fixed east-valley watch list (north Scottsdale, Fountain Hills, Cave Creek, Carefree, Rio Verde) zoned from each town's or the county's layer; their by-right counts use the zone's minimum lot and ignore ESL/slope/NAOS/floodplain.",
+  "naosTable": {
+    "source": "City of Scottsdale ESL Overlay page https://www.scottsdaleaz.gov/codes/ESLO (primary); reductions are in Zoning Ordinance Sec. 6.1060 and are NOT modeled",
+    "landforms": [
+      "Lower Desert",
+      "Upper Desert",
+      "Hillside"
+    ],
+    "rows": [
+      {
+        "label": "0-2%",
+        "maxSlope": 2,
+        "naos": [
+          20,
+          25,
+          50
+        ]
+      },
+      {
+        "label": "2-5%",
+        "maxSlope": 5,
+        "naos": [
+          25,
+          25,
+          50
+        ]
+      },
+      {
+        "label": "5-10%",
+        "maxSlope": 10,
+        "naos": [
+          30,
+          35,
+          50
+        ]
+      },
+      {
+        "label": "10-15%",
+        "maxSlope": 15,
+        "naos": [
+          30,
+          45,
+          50
+        ]
+      },
+      {
+        "label": "15-25%",
+        "maxSlope": 25,
+        "naos": [
+          30,
+          45,
+          65
+        ]
+      },
+      {
+        "label": ">25%",
+        "maxSlope": null,
+        "naos": [
+          30,
+          45,
+          80
+        ]
+      }
+    ],
+    "minimum": [
+      15,
+      20,
+      40
+    ],
+    "note": "Percent of the lot that must stay natural. A slope on a row's upper edge belongs to that row (2.0% -> 0-2%, 25.0% -> 15-25%)."
+  }
 };
