@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Scottsdale NAOS Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/shell.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="logo-mark">C</div>
+      <div>
+        <div class="logo-text">Christian's HQ</div>
+        <div class="logo-sub">Personal dashboard</div>
+      </div>
+    </div>
+    <nav class="sidebar-scroll">
+      <div class="nav-label">Menu</div>
+      <a class="nav-item" href="index.html">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        <span class="label">Dashboard</span>
+      </a>
+      <a class="nav-item" href="phx-permits.html">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span class="label">Phoenix Permit Tracker</span>
+      </a>
+      <a class="nav-item" href="phx-land-leads.html">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 2 3 8l9 6 9-6-9-6z"/><path d="M3 16l9 6 9-6"/><path d="M3 12l9 6 9-6"/></svg>
+        <span class="label">North Phoenix Land Leads</span>
+      </a>
+      <a class="nav-item active" href="naos.html">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 20 10 8l4 7 3-4 3 9z"/></svg>
+        <span class="label">Scottsdale NAOS Guide</span>
+      </a>
+    </nav>
+  </aside>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="topbar-title">Scottsdale NAOS Guide</div>
+      <div class="topbar-spacer"></div>
+      
+    </header>
+
+    <main class="page">
+      <style>
+        .nt{width:100%;border-collapse:collapse;font-size:13.5px}
+        .nt th,.nt td{padding:8px 10px;border-bottom:1px solid var(--card-border);text-align:center}
+        .nt th:first-child,.nt td:first-child{text-align:left}
+        .nt tr.hit td.v{background:var(--accent-soft);font-weight:700}
+        .scroll{overflow-x:auto}
+        .steps{padding-left:20px;line-height:1.65;font-size:14px}
+        .steps li{margin-bottom:6px}
+        .note{font-size:12.5px;color:var(--text-soft);line-height:1.6}
+        .lookup{display:flex;gap:8px;flex-wrap:wrap}
+        .lookup input{flex:1;min-width:200px;padding:9px 13px;font-size:14px;border:1px solid var(--card-border);border-radius:var(--radius-sm);font-family:inherit}
+        .lookup button{font-size:13px;font-weight:700;color:#fff;background:var(--accent);border:none;border-radius:var(--radius-sm);padding:9px 16px;cursor:pointer}
+        #res{margin-top:12px;font-size:14px;line-height:1.7}
+        .card+.card{margin-top:16px}
+      </style>
+      <h1 class="page-title">Scottsdale NAOS Guide</h1>
+      <p class="page-sub">NAOS (natural area open space) is the share of an ESL lot that must stay natural: no house, pool or grading there.</p>
+
+      <div class="card">
+        <div class="card-head"><h2>Look up a tracked lead</h2></div>
+        <form class="lookup" id="f"><input id="q" type="search" placeholder="APN or address" autocomplete="off"><button>Look up</button></form>
+        <div id="res" class="note">Enter an APN or part of an address.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2>NAOS table</h2><span class="card-sub">% of lot that must stay natural</span></div>
+        <div class="scroll"><table class="nt" id="nt"></table></div>
+        <p class="note" style="margin-top:10px">Worked example, 1 acre: Lower Desert at 0-2% slope = 20% natural, <b>0.2 ac natural / 0.8 ac usable</b>. Upper Desert at 10-15% = 45%, <b>0.45 / 0.55</b>. Hillside over 25% = 80%, <b>0.8 / 0.2</b>. The last row of the table is the minimum after allowed reductions; underwrite on the box number, not the minimum.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2>How to read it</h2></div>
+        <ol class="steps">
+          <li>Find the landform column from the city ESL map (Lower Desert, Upper Desert or Hillside).</li>
+          <li>Find the slope row from the topo.</li>
+          <li>Read the box: that is the share that must stay natural (no house, pool or grading).</li>
+          <li>Usable acres = the rest (lot acres x (1 - box)).</li>
+          <li>Gray is not all buildable: setbacks, washes and HOA rules still bite.</li>
+          <li>Underwrite on the box number, not the minimum.</li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2>Source</h2></div>
+        <p class="note">The table comes from the City of Scottsdale ESL Overlay page, scottsdaleaz.gov/codes/ESLO (primary), which points to Zoning Ordinance Sec. 6.1060 for reductions. The landform descriptions (lower desert under 5% slope, upper desert 5-35%, hillside 15% to over 50%) and the 134 sq mile coverage come from the older Citizen's Guide to ESL, so the ESL page and the ordinance take priority. Read Sec. 6.1060 or confirm with Scottsdale planning before relying on it.</p>
+        <p class="note">Lead figures on this site are estimates: slope is averaged from USGS 3DEP elevation samples inside the parcel, landform comes from the city's ESLO Landforms map layer. The official NAOS uses the surveyed topo, and Sec. 6.1060 reductions are not modeled.</p>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="phx-land-leads/data.js"></script>
+<script src="assets/js/shell.js"></script>
+<script>
+const D = window.PHX_LAND_LEADS || {leads: []};
+const T = D.naosTable;
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const f1 = n => Number(n).toLocaleString(undefined, {maximumFractionDigits: 2});
+function table(hit) {
+  const nt = document.getElementById('nt');
+  if (!T) { nt.innerHTML = '<tr><td>Table unavailable (data not loaded).</td></tr>'; return; }
+  nt.innerHTML = '<tr><th>Slope</th>' + T.landforms.map(l => '<th>' + esc(l) + '</th>').join('') + '</tr>' +
+    T.rows.map(r => '<tr>' + '<td>' + esc(r.label) + '</td>' + r.naos.map(v => '<td class="v">' + v + '%</td>').join('') + '</tr>').join('') +
+    '<tr><td>Minimum after reductions</td>' + T.minimum.map(v => '<td>' + v + '%</td>').join('') + '</tr>';
+}
+function show(q) {
+  const res = document.getElementById('res'), s = q.trim().toLowerCase();
+  if (!s) { res.textContent = 'Enter an APN or part of an address.'; return; }
+  const l = D.leads.find(x => String(x.apn).toLowerCase() === s) || D.leads.find(x => (x.address || '').toLowerCase().includes(s));
+  if (!l) { res.textContent = 'That APN or address is not in the tracked leads.'; return; }
+  const e = l.esl, head = '<b>' + esc(l.address || l.apn) + '</b> (APN ' + esc(l.apn) + ', ' + f1(l.landAcres) + ' ac)<br>';
+  if (l.jurisdiction !== 'SCOTTSDALE' || !e) { res.innerHTML = head + 'Not a Scottsdale lead, so no ESL/NAOS figures.'; return; }
+  if (e.inEsl === false) { res.innerHTML = head + 'Outside the ESL overlay by the city landform map.'; return; }
+  if (e.inEsl == null) { res.innerHTML = head + 'Not computed yet: ' + esc(e.slopeStatus); return; }
+  const oth = (e.otherLandforms || []).length ? ' (also touches ' + esc(e.otherLandforms.join(', ')) + ')' : '';
+  res.innerHTML = head + 'Landform: <b>' + esc(e.landform) + '</b>' + oth + '<br>' + (e.naosPct == null
+    ? 'Slope not available (' + esc(e.slopeStatus) + '), so NAOS is not estimated.'
+    : 'Slope: <b>' + f1(e.slopePct) + '%</b> (' + e.slopeSamples + ' samples)<br>NAOS: <b>' + e.naosPct + '%</b> (minimum after reductions ' + e.minNaosPct + '%)<br>Natural: <b>' + f1(e.naosAcres) + ' ac</b> &middot; Usable: <b>' + f1(e.usableAcres) + ' ac</b>') +
+    '<br><span class="note">' + esc(e.basis) + '</span>';
+}
+table();
+document.getElementById('f').addEventListener('submit', ev => { ev.preventDefault(); show(document.getElementById('q').value); });
+const pre = new URLSearchParams(location.search).get('apn');
+if (pre) { document.getElementById('q').value = pre; show(pre); }
+</script>
+</body>
+</html>

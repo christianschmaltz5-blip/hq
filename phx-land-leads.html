@@ -1049,8 +1049,22 @@ async function loadCommComps(lead){
   await fetchCommComps(lead);
   box.innerHTML = commCompsHtml(lead);
 }
+function eslHtml(lead){
+  const e = lead.esl; if(lead.jurisdiction !== 'SCOTTSDALE' || !e) return '';
+  const link = ' <a href="naos.html?apn=' + encodeURIComponent(lead.apn) + '" onclick="event.stopPropagation()">How to read this</a>';
+  let body;
+  if(e.inEsl === false) body = 'Outside the ESL overlay by the city landform map: no NAOS requirement from ESL.';
+  else if(e.inEsl == null) body = 'Not computed yet: ' + esc(e.slopeStatus || 'no data');
+  else {
+    const others = (e.otherLandforms || []).length ? ' (also touches ' + esc(e.otherLandforms.join(', ')) + ')' : '';
+    body = e.naosPct == null
+      ? esc(e.landform) + others + ' · slope not available (' + esc(e.slopeStatus) + '), so NAOS is not estimated.'
+      : '<b>' + esc(e.landform) + '</b>' + others + ' · slope <b>' + num1(e.slopePct) + '%</b> (' + e.slopeSamples + ' elevation samples) · NAOS <b>' + e.naosPct + '%</b> · natural <b>' + num1(e.naosAcres) + ' ac</b> · usable <b>' + num1(e.usableAcres) + ' ac</b> of ' + num1(lead.landAcres) + ' ac';
+  }
+  return '<div class="comps-section"><div class="comps-title">ESL / NAOS</div><div class="valuation-box"><div class="valuation-likely">' + body + '</div></div><div class="comps-note">' + esc(e.basis) + '. Setbacks, washes and HOA rules shrink the buildable area further.' + link + '</div></div>';
+}
 function compsSectionHtml(lead){
-  return `<div class="comps-split"><div>${landCompsHtml(lead)}</div><div id="house-${esc(lead.apn)}">${isCommLead(lead) ? commCompsHtml(lead) : houseCompsHtml(lead)}</div></div>`;
+  return eslHtml(lead) + `<div class="comps-split"><div>${landCompsHtml(lead)}</div><div id="house-${esc(lead.apn)}">${isCommLead(lead) ? commCompsHtml(lead) : houseCompsHtml(lead)}</div></div>`;
 }
 
 // ── Lead cards ──────────────────────────────────────────────────────────
@@ -2844,7 +2858,7 @@ function renderMapInstance(inst, leads){
       <div style="font-family:'Inter',sans-serif;font-size:12.5px;">
         <div style="font-weight:700;">${esc(l.address)||'(no address)'}</div>
         <div style="font-weight:700;color:#1d3252;margin:3px 0;">Score ${l.score} · ${l.parcelStatus === 'improved' ? 'Underused lot' : 'Vacant'} · ${vl || 'No verdict'}</div>
-        <div>${esc(l.landAcres)} ac · Zoned ${esc(l.currentZoning)||'—'}</div>${(l.verdict || {}).landBasisNote ? '<div><b>' + esc(l.verdict.landBasisNote) + '</b></div>' : ''}${compSensitivityHtml(l)}
+        <div>${esc(l.landAcres)} ac · Zoned ${esc(l.currentZoning)||'—'}</div>${l.esl && l.esl.naosPct != null ? '<div>ESL ' + esc(l.esl.landform) + ' · NAOS ' + l.esl.naosPct + '% · usable ' + num1(l.esl.usableAcres) + ' ac (estimate)</div>' : ''}${(l.verdict || {}).landBasisNote ? '<div><b>' + esc(l.verdict.landBasisNote) + '</b></div>' : ''}${compSensitivityHtml(l)}
         ${!vl ? `<div style="margin:8px 0;">${esc(noVerdictReason(l))}</div>` : ''}<button class="mail-btn" type="button" style="margin-top:6px;" onclick="openLeadScenario('${esc(l.apn)}')">${vl ? 'Open project scenario' : 'Calculate a project scenario'}</button>${loadCalcs()[l.apn] ? '<div style="margin-top:6px;">Saved scenario: ' + esc(calcSummary(loadCalcs()[l.apn].st)) + '</div>' : ''}
       </div>`);
     inst.markers.push(marker);
