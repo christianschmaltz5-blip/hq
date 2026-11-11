@@ -17,7 +17,7 @@ from pathlib import Path
 
 ENDPOINT = "https://apps-secure.phoenix.gov/PDD/Search/IssuedPermit/_GetIssuedPermitData"
 GEOCODE_ENDPOINT = "https://nominatim.openstreetmap.org/search"
-GEOCODE_USER_AGENT = "hq-phx-permits/1.0 (personal dashboard, christianschmaltz5@gmail.com)"
+GEOCODE_USER_AGENT = "hq-phx-permits/1.0 (personal dashboard)"
 GEOCODE_MAX_NEW_PER_RUN = 300  # Nominatim usage policy: max 1 req/sec, be a good citizen
 WINDOW_DAYS = 60
 PAGE_SIZE = 500
@@ -47,8 +47,9 @@ def geocode(address, cache, budget):
     key = address.strip().upper()
     if not key:
         return None, None
-    if key in cache:
-        entry = cache[key]
+    entry = cache.get(key)
+    # Old null entries (no "empty" marker) may be past network failures: retry them.
+    if entry and (entry.get("lat") is not None or entry.get("empty")):
         return entry.get("lat"), entry.get("lng")
     if budget[0] >= GEOCODE_MAX_NEW_PER_RUN:
         return None, None
@@ -68,9 +69,11 @@ def geocode(address, cache, budget):
         lat = float(results[0]["lat"]) if results else None
         lng = float(results[0]["lon"]) if results else None
     except Exception:
-        lat, lng = None, None
+        budget[0] += 1
+        time.sleep(1.1)
+        return None, None  # network/parse error: not cached, retried next run
 
-    cache[key] = {"lat": lat, "lng": lng}
+    cache[key] = {"lat": lat, "lng": lng} if lat is not None else {"lat": None, "lng": None, "empty": True}
     budget[0] += 1
     time.sleep(1.1)  # Nominatim policy: max 1 request/sec
     return lat, lng

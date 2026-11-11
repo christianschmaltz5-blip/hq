@@ -1110,7 +1110,7 @@ function otLinks(l){
     onePagerLink(l) ? lk('📄 One-pager', `phx-onepager.html?apn=${encodeURIComponent(l.apn)}`, 'target="_blank" rel="noopener"') : '',
     l.ownerMailAddress ? lk('✍️ Letter', '#', `onclick="event.preventDefault();openLetter('a:${esc(l.apn)}',true)"`) : '',
     l.ownerMailAddress && !(l.ownership || {}).isHiddenOwner ? lk('✉️ Typed letter', '#', `onclick="event.preventDefault();openLetter('a:${esc(l.apn)}')"`) : '',
-    phones[0] ? lk('📞 ' + esc(phones[0]), 'tel:' + esc(String(phones[0]).replace(/[^\d+]/g, ''))) : '',
+    phones[0] && phones[0].n ? lk('📞 ' + esc(phones[0].n), 'tel:' + esc(String(phones[0].n).replace(/[^\d+]/g, ''))) : '',
     emails[0] ? lk('✉ ' + esc(emails[0]), 'mailto:' + esc(emails[0])) : '',
     l.lat && l.lng ? lk('🗺 Map', `https://www.google.com/maps/search/?api=1&query=${l.lat},${l.lng}`, 'target="_blank" rel="noopener"') : ''
   ].join('');
@@ -1119,7 +1119,7 @@ function renderOutreachTracker(){
   const t = document.getElementById('otTable'); if(!t) return;
   const min = Number(document.getElementById('otMinScore').value) || 0, show = document.getElementById('otShow').value;
   const m = { phone: otLoad('phone'), email: otLoad('email'), letter: otLoad('letter') };
-  const all = (D.leads || []).filter(l => !l.stale && (l.score || 0) >= min).sort((a, b) => (b.score || 0) - (a.score || 0));
+  const all = (D.leads || []).filter(l => !l.stale && !isDiscarded(l.apn) && (l.score || 0) >= min).sort((a, b) => (b.score || 0) - (a.score || 0));
   const any = l => m.phone[l.apn] || m.email[l.apn] || m.letter[l.apn];
   const rows = all.filter(l => show === 'all' || (show === 'none' && !any(l)) || (show === 'any' && any(l)) || (show === 'noletter' && !m.letter[l.apn]) || (show === 'nophone' && !m.phone[l.apn]) || (show === 'noemail' && !m.email[l.apn]));
   const n = k => all.filter(l => m[k][l.apn]).length;
@@ -2225,7 +2225,7 @@ function logCall(apn, key){
 function setNext(apn, v){ const m = loadCalls(); if(!m[apn]) return; m[apn].next = v; saveCalls(m); renderContacted(); }
 const callLabel = k => (CALL_OPTS.find(x => x[0] === k) || [0, '—'])[1];
 const callSelect = apn => `<select onchange="if(this.value){logCall('${esc(apn)}',this.value);}"><option value="">Log call…</option>${CALL_OPTS.map(o => `<option value="${o[0]}">${o[1]}</option>`).join('')}</select>`;
-const BACKUP_KEYS = ['callLog','contactedLeads','leadNotes','contactChecks','leadCondition','discardedLeads','hiddenRows','intakeChecks','bids','leadCalcs','savedRuns'];  // not leadContacts: phone numbers stay out of files
+const BACKUP_KEYS = ['callLog','contactedLeads','leadNotes','contactChecks','leadCondition','discardedLeads','hiddenRows','intakeChecks','bids','leadCalcs','savedRuns','callsDone','emailsDone','lettersWritten'];  // not leadContacts: phone numbers stay out of files
 function backupLog(){
   const o = {}; BACKUP_KEYS.forEach(k => { try{ const v = localStorage.getItem(k); if(v) o[k] = JSON.parse(v); }catch(e){} });
   const a = document.createElement('a');
@@ -2478,7 +2478,7 @@ function onePagerStress(v){
 }
 function onePagerLink(l){
   const v = l.verdict, c = l.houseComps;
-  if(!v || v.preliminary || !(v.land > 0) || !(v.supportableOffer > 0) || l.stale || !c || (c.comps || []).length < 3) return '';
+  if(!v || v.preliminary || !(v.land > 0) || !(v.supportableOffer > 0) || !Number.isFinite(v.supportableOffer) || l.stale || l.inFloodplain || !c || (c.comps || []).length < 3) return '';
   const resid = v.supportableOffer - (ONEPAGER_BUILD_PSF - 325) * 3800 * 1.08 * (v.offerHomes || 1);
   if(!(resid >= ONEPAGER_MIN_LAND_SHARE * v.land)) return '';   // NaN/Infinity-safe, same as phx-onepager.html
   if((l.valuation || {}).unreliable || !(onePagerStress(v) >= 0)) return '';   // fails closed (NaN/missing median fails `>= 0`): missing median or loses at median comp: no owner outreach (same block as phx-onepager.html)
@@ -2500,7 +2500,7 @@ function renderTopProfit(){
   const all = (D.leads || []).filter(l => !l.stale && l.parcelStatus === 'vacant' && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn))
     .map(l => ({ l, p: profitFor(l), hi: profitFor(l, 50), sig: sellerSignals(l) })).filter(r => r.p)
     .map(r => { const c = selectedComps(r.l) || {}, mp = c.medPsf || (c.fellBack ? c.psf : 0), mid = mp ? profitFor(r.l, 0, mp) : null, midHi = mp ? profitFor(r.l, 50, mp) : null;   // midHi: +$50/sf build AND median price together   // live median profit at the calculator's inputs; no median = not eligible
-      return Object.assign(r, { mp, mid, lo: profitFor(r.l, 0, lowSalePsf(r.l)), call: r.hi.profit > 0 && !!mid && mid.profit >= 0 && !!midHi && Number.isFinite(midHi.profit) && midHi.profit >= 0 && r.sig.length >= 2 && landBasis(r.l).ok }); }).sort((a, b) => b.p.adj - a.p.adj);
+      return Object.assign(r, { mp, mid, lo: profitFor(r.l, 0, lowSalePsf(r.l)), call: r.hi.profit > 0 && !!mid && mid.profit >= 0 && !!midHi && Number.isFinite(midHi.profit) && midHi.profit >= 0 && r.sig.length >= 2 && landBasis(r.l).ok && !r.l.inFloodplain }); }).sort((a, b) => b.p.adj - a.p.adj);
   const pos = all.filter(r => r.p.profit > 0).length, rows = all.slice(0, 25);
   const addr = r => esc(r.l.address.split('  ')[0]), profitable = all.filter(r => r.p.profit > 0), calls = all.filter(r => r.call);
   document.getElementById('tp-summary').innerHTML = `${pos} of ${all.length} leads with nearby home sales show a profit at your calculator numbers; ${calls.length} are marked 📞 CALL FIRST (still profitable at +$50/sf build combined with the median comp price, 2+ seller signals AND a supported land price). Top ${rows.length} below.`

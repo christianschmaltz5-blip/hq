@@ -45,7 +45,7 @@ const comps = l && l.houseComps && l.houseComps.comps || [];
 const v = l && l.verdict;   // same gate as the dashboard link: a real (not area-average) land basis and a trusted valuation
 // Keep in sync with onePagerLink() in phx-land-leads.html: positive supportable offer, land credit >= 50% of land value at a $400/sf build, no loss under combined stress (median price, +$75/sf build, 50% land credit).
 const resid = v && v.supportableOffer - (400 - 325) * 3800 * 1.08 * (v.offerHomes || 1);
-if (!l || comps.length < 3 || !v || v.preliminary || !(v.land > 0) || v.supportableOffer == null || !(v.supportableOffer > 0) || !(resid >= .5 * v.land) || !v.medianStress || !Number.isFinite(v.medianStress.profit) || !((v.medianStress.profit - 75 * 3800 * 1.08 * (v.medianStress.homes || v.offerHomes || 1) * 1.07 + .5 * v.land * 1.07) >= 0) || l.stale || (l.valuation || {}).unreliable) {
+if (!l || comps.length < 3 || !v || v.preliminary || !(v.land > 0) || !Number.isFinite(v.supportableOffer) || !(v.supportableOffer > 0) || !(resid >= .5 * v.land) || !v.medianStress || !Number.isFinite(v.medianStress.profit) || !((v.medianStress.profit - 75 * 3800 * 1.08 * (v.medianStress.homes || v.offerHomes || 1) * 1.07 + .5 * v.land * 1.07) >= 0) || l.stale || l.inFloodplain || (l.valuation || {}).unreliable) {
   out.innerHTML = '<div class="msg">No one-pager for this parcel: it needs recent nearby home sales and a reliable land value on file.</div>';
 } else {
   const addr = titleCase(String(l.address || '').split(/\s{2,}/)[0]);
