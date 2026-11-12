@@ -42,6 +42,22 @@ class NaosTests(unittest.TestCase):
         # 2x1 lattice, 100 ft apart east-west, 5 ft rise -> 5%
         self.assertAlmostEqual(esl.mean_slope({(0, 0): 100, (1, 0): 105}, 100, 100), 5.0)
 
+    def test_slope_is_gradient_magnitude_2d(self):
+        # plane rising 20% east, flat north: every cell must read 20%, not 10%
+        e = {(i, j): 100 + 20 * i for i in range(3) for j in range(3)}
+        self.assertAlmostEqual(esl.mean_slope(e, 100, 100), 20.0)
+        # 3% east + 4% north -> 5%
+        e = {(i, j): 3 * i + 4 * j for i in range(3) for j in range(3)}
+        self.assertAlmostEqual(esl.mean_slope(e, 100, 100), 5.0)
+
+    def test_old_method_cache_is_remeasured(self):
+        parcel = [[[0, 0], [.001, 0], [.001, .001], [0, .001], [0, 0]]]
+        cache = {"X9": dict(inEsl=True, landform="Upper Desert", otherLandforms=[], slopePct=9.0, slopeSamples=5, slopeStatus="ok")}
+        with patch.object(esl, "measure", return_value=(dict(inEsl=True, landform="Upper Desert", otherLandforms=[]), parcel)), \
+             patch.object(esl, "elevation_ft", return_value=100.0):
+            r = esl.process(dict(apn="X9", landAcres=1.0), cache, dict(fails=0, dirty=False))
+        self.assertEqual(r["slopePct"], 0.0); self.assertEqual(cache["X9"]["method"], esl.METHOD)
+
     def test_slope_failure_degrades_to_null_with_status(self):
         parcel = [[[0, 0], [.001, 0], [.001, .001], [0, .001], [0, 0]]]
         with patch.object(esl, "measure", return_value=(dict(inEsl=True, landform="Upper Desert", otherLandforms=[]), parcel)), \

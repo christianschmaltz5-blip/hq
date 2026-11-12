@@ -673,7 +673,7 @@ function saleDefaults(lead, units){
   const sf = Math.round(units * 3800), hard1 = Math.round(sf * 325), c = selectedComps(lead);
   const hc = (parseFloat((document.getElementById('moSplitHaircut') || {}).value) || 80) / 100;
   return {
-    acres: lead.landAcres || 0, lotSf: lead.landSf || Math.round((lead.landAcres||0)*43560), buildingSf: sf, units,
+    acres: lead.landAcres || 0, lotSf: lead.landSf || Math.round((lead.landAcres||0)*43560), buildingSf: sf, units, splitCost: parseFloat((document.getElementById('moSplitCost') || {}).value) || 0,
     salePsf: c && c.psf > 0 ? Math.round(c.psf * (units > 1 ? hc : 1)) : 400, salePrice: null, sellPct: 0.03, targetPct: 0.10,
     askingPrice: 0, landExp1: 0,
     hard1, hard2: Math.round(units*10000),
@@ -701,7 +701,8 @@ function calcSale(s){
   r.tax = (s.askingPrice||0) * (s.taxPct||0) * holdMo / 12;
   r.holdCosts = r.tax + (s.brPct||0) * r.hard + (s.utilMo||0) * ((s.constrTerm||0) + (s.saleMonths||0));
   r.devFee = (s.devFeePct||0) * (r.hard + r.softBase);
-  r.total = r.land + r.hard + r.soft + r.contingency + r.interestReserve + r.devFee + r.holdCosts;
+  r.splitFee = Math.max(0, (s.units||1) - 1) * (s.splitCost||0);   // lot-split cost, same $ per extra home as the quick screen
+  r.total = r.land + r.splitFee + r.hard + r.soft + r.contingency + r.interestReserve + r.devFee + r.holdCosts;
   r.equity = r.total - r.constrLoan;
   r.revenue = s.salePrice != null ? s.salePrice : (s.salePsf||0) * (s.buildingSf||0);
   r.sellCost = r.revenue * (s.sellPct||0);
@@ -845,17 +846,26 @@ function resetCalc(idx){
   renderRuns(); drawMaps(true);
 }
 
-function initCalc(idx, lead){
-  const dealType = lead.dealType;
+function calcStateFor(lead){
+  const { nonResidential, units } = planUnits(lead);   // defaults + verdict plan + saved run (with old-mode migration); shared by the open view and runProfit
+  const demoCost = lead.parcelStatus === 'improved' ? (lead.defaultDemoCost || 0) : 0;
+  const st = Object.assign({}, SUBDIVISION_DEFAULTS, saleDefaults(lead, units),
+    { mode: !nonResidential && lead.dealType === 'subdivision' && !lead.verdict ? 'lots' : 'sale', demoCost, lots: units, sellingCostPct: SUBDIVISION_DEFAULTS.sellingCostPct },
+    lead.referenceCostPerLotAZ ? { costPerLot: lead.referenceCostPerLotAZ } : {});
+  const saved = loadCalcs()[lead.apn];
+  if(saved){ Object.assign(st, saved.st); if(saved.st.calcV !== 2 && lead.verdict) st.mode = 'sale'; }   // pre-v2 saved runs could carry the old lots-mode default
+  return st;
+}
+function planUnits(lead){
   const nonResidential = (lead.landUseClass && lead.landUseClass !== 'residential') || commZoned(lead);
   const vHomes = /^(\d+) homes/.exec((lead.verdict || {}).strategy || '');   // the verdict's winning plan beats the density guess
   const units = nonResidential ? 1 : lead.verdict ? (vHomes ? +vHomes[1] : 1) : Math.max(1, Math.round(lead.rezoneTargetUnits || lead.byRightUnits || (lead.landAcres||0) * 8));
+  return { nonResidential, units };
+}
+function initCalc(idx, lead){
+  const dealType = lead.dealType, { nonResidential, units } = planUnits(lead);
   const demoCost = lead.parcelStatus === 'improved' ? (lead.defaultDemoCost || 0) : 0;
-  calcStates[idx] = Object.assign({}, SUBDIVISION_DEFAULTS, saleDefaults(lead, units),
-    { mode: !nonResidential && dealType === 'subdivision' && !lead.verdict ? 'lots' : 'sale', demoCost, lots: units, sellingCostPct: SUBDIVISION_DEFAULTS.sellingCostPct },
-    lead.referenceCostPerLotAZ ? { costPerLot: lead.referenceCostPerLotAZ } : {});
-  const saved = loadCalcs()[lead.apn];
-  if(saved){ Object.assign(calcStates[idx], saved.st); if(saved.st.calcV !== 2 && lead.verdict) calcStates[idx].mode = 'sale'; }   // pre-v2 saved runs could carry the old lots-mode default
+  calcStates[idx] = calcStateFor(lead);
   const notes = [];
   if(nonResidential) notes.push('<b>Manual commercial scenario:</b> the county classifies this parcel as ' + esc(lead.landUseClass) + '. No residential verdict is available. Start with one building as a placeholder; enter your proposed use, building area, sale price and actual budget. Zoning and allowed capacity are unconfirmed. These results do not create an automatic map verdict.');
   const basis = landBasis(lead);
@@ -2575,16 +2585,23 @@ function salesCell(l){
   const ex = (nb.comps || nb.examples || []).map(e => `${esc(e.address)} · ${mo(e.price)} · ${e.sf.toLocaleString()} sf · $${Math.round(e.price / e.sf)}/sf · ${esc((e.sold||'').slice(0,7))}${e.apn ? ' · APN ' + esc(e.apn) : ''}${e.yearBuilt ? ' · built ' + esc(e.yearBuilt) : ''}${e.distanceMi != null ? ' · ' + e.distanceMi + ' mi' : ''}`).join('<br>');
   return `<div style="font-size:10.5px;line-height:1.35;min-width:230px;">${nb.fellBack ? 'Median (FALLBACK)' : '2nd-highest'} $${nb.psf}/sf of ${nb.n} sales within ${nb.radiusMi}mi${nb.lowPsf && nb.highPsf ? ' (range $' + nb.lowPsf + '–$' + nb.highPsf + ')' : ''}${ex ? `<br><span style="color:var(--text-faint);">Closest:<br>${ex}</span>` : (nb.price ? ` · median home $${(nb.price / 1e6).toFixed(2)}M` : '')}<br>${compSourceHtml(l)}</div>`;
 }
+function fullModel(l){   // full pro forma (calcSale) at the lead's saved/default calculator state, priced at the supported land price
+  const st = calcStateFor(l); if(!(Number(st.askingPrice) > 0)) st.askingPrice = landBasis(l).land;
+  return st.mode === 'lots' || st.mode === 'custom' ? null : calcSale(st);
+}
+function fullOk(l){   // CALL FIRST needs the full model to clear the profit target too (fail closed when it can't run)
+  const f = fullModel(l); return !!f && !f.error && f.profit > 0 && f.profitMargin >= (parseFloat(document.getElementById('hcProfit').value) || 0) / 100;
+}
 function renderTopProfit(){
   const m = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
   const tags = loadCondition();
   const all = (D.leads || []).filter(l => !l.stale && l.parcelStatus === 'vacant' && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn))
     .map(l => ({ l, p: profitFor(l), hi: profitFor(l, 50), sig: sellerSignals(l) })).filter(r => r.p)
     .map(r => { const c = selectedComps(r.l) || {}, mp = c.medPsf || (c.fellBack ? c.psf : 0), mid = mp ? profitFor(r.l, 0, mp) : null, midHi = mp ? profitFor(r.l, 50, mp) : null;   // midHi: +$50/sf build AND median price together   // live median profit at the calculator's inputs; no median = not eligible
-      return Object.assign(r, { mp, mid, lo: profitFor(r.l, 0, lowSalePsf(r.l)), call: r.hi.profit > 0 && !!mid && mid.profit >= 0 && !!midHi && Number.isFinite(midHi.profit) && midHi.profit >= 0 && r.sig.length >= 2 && landBasis(r.l).ok && !r.l.inFloodplain }); }).sort((a, b) => b.p.adj - a.p.adj);
+      return Object.assign(r, { mp, mid, lo: profitFor(r.l, 0, lowSalePsf(r.l)), full: fullModel(r.l), call: r.hi.profit > 0 && fullOk(r.l) && !!mid && mid.profit >= 0 && !!midHi && Number.isFinite(midHi.profit) && midHi.profit >= 0 && r.sig.length >= 2 && landBasis(r.l).ok && !r.l.inFloodplain }); }).sort((a, b) => b.p.adj - a.p.adj);
   const pos = all.filter(r => r.p.profit > 0).length, rows = all.slice(0, 25);
   const addr = r => esc(r.l.address.split('  ')[0]), profitable = all.filter(r => r.p.profit > 0), calls = all.filter(r => r.call);
-  document.getElementById('tp-summary').innerHTML = `${pos} of ${all.length} leads with nearby home sales show a profit at your calculator numbers; ${calls.length} are marked 📞 CALL FIRST (still profitable at +$50/sf build combined with the median comp price, 2+ seller signals AND a supported land price). Top ${rows.length} below.`
+  document.getElementById('tp-summary').innerHTML = `${pos} of ${all.length} leads with nearby home sales show a profit at your calculator numbers; ${calls.length} are marked 📞 CALL FIRST (profitable and at target margin in the full pro forma, still profitable at +$50/sf build combined with the median comp price, 2+ seller signals AND a supported land price). Top ${rows.length} below.`
     + (profitable.length ? `<br><b>Profitable now:</b> ${profitable.map(addr).join(' · ')}` : '')
     + (calls.length ? `<br><b>📞 Call first:</b> ${calls.map(addr).join(' · ')}` : '');
   document.getElementById('tp-table').innerHTML = `<thead><tr><th>#</th><th>Address</th><th>Best strategy</th><th>Est. land cost</th><th>Est. finished value</th><th>Projected profit</th><th>Margin</th><th>Risk</th><th>Profit if build costs $50/sf more</th><th>Profit if it sells at the lowest nearby sale</th><th>New-home sales behind it</th><th>Seller signals</th><th>Opportunity (risk-adj. profit)</th></tr></thead>
@@ -2937,7 +2954,9 @@ function renderMapInstance(inst, leads){
 // profit from the numbers you ran on this lead: its own calculator first, else a run saved under its address
 function runProfit(l){
   const c = loadCalcs()[l.apn];
-  if(c && c.st && c.st.mode !== 'custom') return runCalc(c.st).profit;   // a custom-build fee is not a land-deal profit
+  if(c && c.st && c.st.mode !== 'custom'){   // a custom-build fee is not a land-deal profit
+    return runCalc(calcStateFor(l)).profit;   // same defaults + migration as opening it
+  }
   const a = String(l.address || '').split(/\s{2,}/)[0].toLowerCase(), r = loadRuns().find(x => x.name.toLowerCase() === a);
   return r ? r.gain : null;
 }

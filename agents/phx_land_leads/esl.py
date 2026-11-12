@@ -19,6 +19,7 @@ EPQS = "https://epqs.nationalmap.gov/v1/json"
 BASIS = ("estimate: DEM-derived slope + map landform; official NAOS uses the surveyed topo and "
          "Zoning Ordinance Sec. 6.1060 reductions are NOT modeled")
 FT_PER_DEG = 364000.0
+METHOD = 2             # bump when the slope math changes; older cached slopes are re-measured
 PACE = 0.26            # seconds between elevation requests (<= ~4/sec)
 MAX_CONSECUTIVE_FAILS = 5
 _last = [0.0]
@@ -116,13 +117,17 @@ def grid(rings, n):
 
 
 def mean_slope(elev, ftx, fty):
-    """Average % slope over every pair of neighbouring samples: |rise| / run * 100."""
+    """Average % slope: per cell the gradient magnitude hypot(east-west, north-south) * 100.
+    Each axis uses the forward neighbour, else the backward one; an axis with no neighbour is skipped."""
     s = []
     for (i, j), z in elev.items():
-        for (di, dj, run) in ((1, 0, ftx), (0, 1, fty)):
-            z2 = elev.get((i + di, j + dj))
+        g = []
+        for di, dj, run in ((1, 0, ftx), (0, 1, fty)):
+            z2 = elev.get((i + di, j + dj), elev.get((i - di, j - dj)))
             if z2 is not None and run > 0:
-                s.append(abs(z2 - z) / run * 100)
+                g.append(abs(z2 - z) / run)
+        if g:
+            s.append(math.hypot(*g) * 100)
     return sum(s) / len(s) if s else None
 
 
@@ -172,6 +177,8 @@ def slope_for(rings, acres):
 def process(lead, cache, state):
     apn, acres = lead["apn"], lead.get("landAcres") or lead.get("landSf", 0) / 43560
     c = cache.get(apn)
+    if c is not None and c.get("inEsl") and c.get("method") != METHOD:
+        c = None                                      # slope from an older method: re-measure
     if c is None:
         if state["fails"] >= MAX_CONSECUTIVE_FAILS:
             return dict(inEsl=None, slopePct=None, slopeStatus="skipped: services failing this run, retry next run", basis=BASIS)
@@ -183,7 +190,7 @@ def process(lead, cache, state):
                 c, rings = m
                 try:
                     c["slopePct"], c["slopeSamples"] = slope_for(rings, acres)
-                    c["slopeStatus"] = "ok: USGS 3DEP via EPQS"
+                    c["slopeStatus"], c["method"] = "ok: USGS 3DEP via EPQS", METHOD
                 except Exception as e:
                     c["slopePct"], c["slopeSamples"], c["slopeStatus"] = None, 0, f"unavailable: {type(e).__name__}: {e}"[:140]
             state["fails"] = 0
