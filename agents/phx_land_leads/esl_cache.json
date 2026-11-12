@@ -4233,5 +4233,23 @@
   "slopePct": 3.55,
   "slopeSamples": 25,
   "slopeStatus": "ok: USGS 3DEP via EPQS"
+ },
+ "21647362A": {
+  "inEsl": true,
+  "landform": "Upper Desert",
+  "otherLandforms": [],
+  "retrieved": "2026-11-12",
+  "slopePct": 4.94,
+  "slopeSamples": 24,
+  "slopeStatus": "ok: USGS 3DEP via EPQS"
+ },
+ "21768376D": {
+  "inEsl": true,
+  "landform": "Lower Desert",
+  "otherLandforms": [],
+  "retrieved": "2026-11-12",
+  "slopePct": 2.62,
+  "slopeSamples": 18,
+  "slopeStatus": "ok: USGS 3DEP via EPQS"
  }
 }
