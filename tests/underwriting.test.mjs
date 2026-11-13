@@ -774,3 +774,23 @@ test('one-pager combined stress rejects lead 21668446 and missing medians', () =
   assert.equal(Math.round(context.onePagerStress(v)), -162688);
   assert.ok(!(context.onePagerStress({ land: 1, medianStress: {} }) >= 0));
 });
+
+test('opening a lead calculator works fresh and with a saved run; save/reset refresh CALL FIRST', () => {
+  const { context, getElementById: g, stored } = calculatorContext(fixtures[0]);
+  let top = 0;
+  Object.assign(context, {
+    calcStates: {}, currentLeads: [{ apn: 'X1' }], top: 0,
+    planUnits: () => ({ nonResidential: false, units: 1 }),
+    landBasis: () => ({ land: 0 }), calcRender() {}, renderRuns() {}, drawMaps() {},
+    calcSummary: () => 'summary', renderTopProfit() { top++; },
+  });
+  vm.runInContext(declaration('loadCalcs') + declaration('initCalc') + declaration('persistCalc') + declaration('resetCalc'), context);
+  context.calcStateFor = () => ({ buildingSf: 3800 });
+  g('calc-note-0').innerHTML = '';
+  assert.doesNotThrow(() => context.initCalc(0, { apn: 'X1' }));
+  stored.set('leadCalcs', JSON.stringify({ X1: { st: {}, at: '1/1/2026' } }));
+  assert.doesNotThrow(() => context.initCalc(0, { apn: 'X1' }));
+  assert.match(g('calc-note-0').innerHTML, /Loaded the numbers you saved/);
+  context.persistCalc(0); context.resetCalc(0);
+  assert.equal(top, 2);
+});

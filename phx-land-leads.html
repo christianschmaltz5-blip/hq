@@ -836,14 +836,14 @@ function persistCalc(idx){
   const summary = calcSummary(st); st.calcV = 2;
   try{ const d = loadCalcs(); d[l.apn] = { st, summary, at: new Date().toLocaleDateString() }; localStorage.setItem('leadCalcs', JSON.stringify(d)); }catch(e){}
   const b = document.getElementById('calcbadge-' + idx); if(b){ b.style.display = ''; b.textContent = '💾 ' + summary; }
-  renderRuns(); drawMaps(true);
+  renderRuns(); drawMaps(true); renderTopProfit();
 }
 function resetCalc(idx){
   const l = currentLeads[idx]; if(!l) return;
   try{ const d = loadCalcs(); delete d[l.apn]; localStorage.setItem('leadCalcs', JSON.stringify(d)); }catch(e){}
   delete calcStates[idx]; initCalc(idx, l);
   const b = document.getElementById('calcbadge-' + idx); if(b) b.style.display = 'none';
-  renderRuns(); drawMaps(true);
+  renderRuns(); drawMaps(true); renderTopProfit();
 }
 
 function calcStateFor(lead){
@@ -866,6 +866,7 @@ function initCalc(idx, lead){
   const dealType = lead.dealType, { nonResidential, units } = planUnits(lead);
   const demoCost = lead.parcelStatus === 'improved' ? (lead.defaultDemoCost || 0) : 0;
   calcStates[idx] = calcStateFor(lead);
+  const saved = loadCalcs()[lead.apn];
   const notes = [];
   if(nonResidential) notes.push('<b>Manual commercial scenario:</b> the county classifies this parcel as ' + esc(lead.landUseClass) + '. No residential verdict is available. Start with one building as a placeholder; enter your proposed use, building area, sale price and actual budget. Zoning and allowed capacity are unconfirmed. These results do not create an automatic map verdict.');
   const basis = landBasis(lead);
