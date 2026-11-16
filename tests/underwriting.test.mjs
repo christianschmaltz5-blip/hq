@@ -191,6 +191,17 @@ test('lots mode: site work and NAOS add to lot dev cost and carry soft cost and 
   assert.equal(context.calcSubdivision({ askingPrice: 1, lots: 4, costPerLot: 65000 }).lotDevCost, 260000);   // old saved scenarios are unchanged
 });
 
+test('sale loan is the lower of LTC and LTV', () => {
+  const context = vm.createContext({});
+  vm.runInContext(declaration('calcSale'), context);
+  const s = { askingPrice: 500000, hard1: 1000000, contPct: 0, ltcPct: 0.65, ltvPct: 0.70, salePrice: 1000000 };
+  const lo = context.calcSale(s);   // LTC 650,000 vs LTV 700,000: LTC binds
+  assert.equal(lo.constrLoan, 650000); assert.equal(lo.ltvLimited, false);
+  const hi = context.calcSale({ ...s, salePrice: 800000 });   // LTV 560,000 binds
+  assert.equal(hi.constrLoan, 560000); assert.equal(hi.ltvLimited, true);
+  assert.equal(context.calcSale({ ...s, salePrice: 800000, ltvPct: 0 }).constrLoan, 650000);   // 0 = no cap
+});
+
 test('profitFor is gated on land price and zoning; ungated keeps maxLand', () => {
   const { context } = calculatorContext(fixtures[0]);
   const x = fixtures.find(f => f.input.land > 0).input;

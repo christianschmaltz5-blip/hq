@@ -657,7 +657,7 @@ const SALE_SECTIONS = [
   ['Hard Costs', [['hard1','Contract 1 (construction)','usd'],['hard2','Contract 2 (landscaping/utility)','usd']]],
   ['Soft Costs', [['permit','Permit/Inspection Fee 1','usd'],['design','Design Fee 1','usd'],['survey','Survey','usd'],['misc','Miscellaneous','usd'],['finConstr','Loan Points, Appraisal, Title & Draw Fees','usd'],['impactFee','Impact, Water/Sewer & Permit Fees (from the city fee schedule)','usd'],['otherCost1','Other Cost 1','usd']]],
   ['Contingency, Reserve & Fee', [['contPct','Contingency %','pct'],['interestReserve','Interest Reserve ($) — auto','usd','auto'],['devFeePct','Developer Fee %','pct']]],
-  ['Construction Loan', [['ltcPct','Construction Loan-to-Cost %','pct'],['constrRate','Construction Interest Rate','pct'],['constrTerm','Construction Term (months)','num']]],
+  ['Construction Loan', [['ltcPct','Construction Loan-to-Cost %','pct'],['ltvPct','Max Loan-to-Value % (of sale price; 0 = no cap)','pct'],['constrRate','Construction Interest Rate','pct'],['constrTerm','Construction Term (months)','num']]],
   ['Hold Costs', [['preMonths','Months before construction (design/permit)','num'],['saleMonths','Months to sell after completion','num'],['taxPct','Property Tax (% of land price / yr)','pct'],['brPct','Builder\'s-Risk Insurance (% of hard)','pct'],['utilMo','Utilities ($/month)','usd']]],
 ];
 // Custom-builder model: the client owns the land and pays the costs and interest; you earn a fee on construction cost only.
@@ -697,7 +697,7 @@ function saleDefaults(lead, units){
     contPct: 0.10, interestReserve: null, devFeePct: 0.03,
     landClosePct: 0.01, preMonths: units > 1 ? 9 : 3, saleMonths: 3, taxPct: 0.007, brPct: 0.005, utilMo: 600,
     customFeePct: 0.12, overheadMo: 6000, warrantyPct: 0.01,
-    ltcPct: 0.65, constrRate: 0.075, constrTerm: 18,
+    ltcPct: 0.65, ltvPct: 0.70, constrRate: 0.075, constrTerm: 18,
   };
 }
 
@@ -712,7 +712,10 @@ function calcSale(s){
   r.soft = r.softBase + (s.finConstr||0);
   r.contingency = (s.contPct||0) * (r.hard + r.softBase);
   r.direct = r.hard + r.softBase + r.contingency;               // bank-financeable: hard + soft (ex-financing) + contingency
+  r.revenue = s.salePrice != null ? s.salePrice : (s.salePsf||0) * (s.buildingSf||0);
   r.constrLoan = (s.ltcPct||0) * r.direct;
+  r.ltvLimited = (s.ltvPct||0) > 0 && r.constrLoan > s.ltvPct * r.revenue;   // lender lends the lower of LTC and LTV
+  if(r.ltvLimited) r.constrLoan = s.ltvPct * r.revenue;
   r.interestReserve = s.interestReserve != null ? s.interestReserve : r.constrLoan * (s.constrRate||0) * (((s.constrTerm||0) * 0.5 + (s.saleMonths||0)) / 12);   // half-drawn on average during construction, fully drawn while it sits for sale
   const holdMo = (s.preMonths||0) + (s.constrTerm||0) + (s.saleMonths||0);
   r.tax = (s.askingPrice||0) * (s.taxPct||0) * holdMo / 12;
@@ -721,7 +724,6 @@ function calcSale(s){
   r.splitFee = Math.max(0, (s.units||1) - 1) * (s.splitCost||0);   // lot-split cost, same $ per extra home as the quick screen
   r.total = r.land + r.splitFee + r.hard + r.soft + r.contingency + r.interestReserve + r.devFee + r.holdCosts;
   r.equity = r.total - r.constrLoan;
-  r.revenue = s.salePrice != null ? s.salePrice : (s.salePsf||0) * (s.buildingSf||0);
   r.sellCost = r.revenue * (s.sellPct||0);
   r.net = r.revenue - r.sellCost;
   r.profit = r.net - r.total;
@@ -792,7 +794,7 @@ function renderSaleResults(idx, state){
         ${row('Land Total', money(r.land))}${row('Hard Cost Total (incl. site work ' + money(r.site) + ')', money(r.hard))}${row('Soft Cost Total', money(r.soft))}
         ${row('Contingency $', money(r.contingency))}${row('Interest Reserve', money(r.interestReserve))}${row('Hold Costs (tax, insurance, utilities)', money(r.holdCosts))}${row('Developer Fee $', money(r.devFee))}
         ${row('<b>Total Development Cost</b>', '<b>'+money(r.total)+'</b>')}${row('Direct Costs (bank-financeable)', money(r.direct))}
-        ${row('Construction Loan Amount', money(r.constrLoan))}${row('Equity Required (construction)', money(r.equity))}</tbody></table>
+        ${row('Construction Loan Amount' + (r.ltvLimited ? ' (capped by LTV)' : ''), money(r.constrLoan))}${row('Equity Required (construction)', money(r.equity))}</tbody></table>
       <table class="comps-table"><thead><tr><th colspan="2">Sale</th></tr></thead><tbody>
         ${row('Gross Sale Price', money(r.revenue))}${row('Selling Closing Costs', money(-r.sellCost))}${row('Net Sale Proceeds', money(r.net))}
         ${row('Total Development Cost', money(-r.total))}${row('<b>Developer Profit</b>', '<b>'+money(r.profit)+'</b>')}</tbody></table>
