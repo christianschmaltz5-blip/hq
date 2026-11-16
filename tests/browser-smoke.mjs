@@ -27,7 +27,9 @@ page.on('requestfailed', request => report.failedRequests.push({ url: request.ur
 async function mapsSnapshot(label) {
   await page.waitForFunction(() => ['vacantMap', 'teardownMap'].every(id => {
     const el = document.getElementById(id);
-    return el && el.offsetWidth > 0 && el.offsetHeight > 0;
+    const inst = id === 'vacantMap' ? vacantMapInst : teardownMapInst;
+    return el && el.offsetWidth > 0 && el.offsetHeight > 0 && inst.map.getSize().x === el.clientWidth
+      && inst.markers.length === mapData[id === 'vacantMap' ? 'vacant' : 'teardown'].filter(l => l.lat != null && l.lng != null).length;   // showTab resizes and redraws 60 ms after the tab opens
   }));
   const maps = await page.evaluate(() => [
     ['vacantMap', vacantMapInst, mapData.vacant],
@@ -37,7 +39,7 @@ async function mapsSnapshot(label) {
     const tiles = [...el.querySelectorAll('img.leaflet-tile')];
     const satellite = tiles.filter(tile => tile.src.includes('World_Imagery'));
     const size = instance.map.getSize();
-    return { id, width: el.offsetWidth, height: el.offsetHeight,
+    return { id, width: el.clientWidth, height: el.clientHeight,   // Leaflet sizes the content box, so compare against clientWidth (offsetWidth includes the 2px border)
       leafletSize: { x: size.x, y: size.y },
       expectedMarkers: leads.filter(l => l.lat != null && l.lng != null).length,
       markers: instance.markers.length,

@@ -134,6 +134,8 @@ function calculatorContext(fixture, leads = []) {
   const end = html.indexOf('\nfunction sellerSignals(', begin);
   assert.ok(begin >= 0 && end > begin);
   vm.runInContext(html.slice(begin, end), context);
+  const sc = html.indexOf('const SCREEN ='); vm.runInContext(html.slice(sc, html.indexOf('\n', sc)), context);
+  vm.runInContext('Object.assign(SCREEN, { close: 0, cont: 0, hold: 0 })', context);   // fixtures predate the screen costs; test them separately below
   vm.runInContext(declaration('splitInfo'), context);
   const init = html.indexOf('(function hcInit(){');
   assert.ok(init >= 0, 'Missing calculator initialization');
@@ -171,6 +173,23 @@ for (const fixture of fixtures.filter(f => f.input.land > 0)) {
     approximately(result.margin, context.window.hcLast.margin, 'profitFor/calculator margin');
   });
 }
+
+test('screen costs (closing, contingency, hold) are hand-checked and keep the offer consistent', () => {
+  const x = { sf: 3800, hard: 325, soft: 0.08, site: 65000, cont: 0.10, close: 0.01, hold: 20000, fin: 0.07, sell: 0.03, land: 500000, n: 1, psf: 600, haircut: 0.8, splitCost: 0 };
+  const context = pureContext(), e = context.homeEcon(x);
+  approximately(e.cost, 2208137.6, 'cost');   // (1,538,680 + 505,000 + 20,000) x 1.07
+  approximately(e.profit, 3462.4, 'profit');
+  approximately(context.homeEcon({ ...x, land: context.supportableLand(x, 0.1) }).margin, 0.1, 'offer reproduces the target');
+});
+
+test('lots mode: site work and NAOS add to lot dev cost and carry soft cost and contingency', () => {
+  const context = vm.createContext({});
+  vm.runInContext(declaration('calcSubdivision'), context);
+  const r = context.calcSubdivision({ askingPrice: 1000000, lots: 4, costPerLot: 65000, siteDrive: 60000, naosCost: 0, softPct: 0.08, contPct: 0.10, lotSalePrice: 300000, sellingCostPct: 0.07 });
+  approximately(r.lotDevCost, 320000, 'lot dev cost');          // 4 x 65,000 + 60,000
+  approximately(r.direct, 377600, 'direct');                    // 320,000 x 1.18
+  assert.equal(context.calcSubdivision({ askingPrice: 1, lots: 4, costPerLot: 65000 }).lotDevCost, 260000);   // old saved scenarios are unchanged
+});
 
 test('profitFor is gated on land price and zoning; ungated keeps maxLand', () => {
   const { context } = calculatorContext(fixtures[0]);
@@ -771,7 +790,7 @@ test('one-pager combined stress rejects lead 21668446 and missing medians', () =
   const context = vm.createContext({ ONEPAGER_BUILD_PSF: 400, ONEPAGER_MIN_LAND_SHARE: 0.5 });
   vm.runInContext(declaration('onePagerStress'), context);
   const v = { land: 232168, offerHomes: 1, medianStress: { profit: 42448, homes: 1 } };
-  assert.equal(Math.round(context.onePagerStress(v)), -162688);
+  assert.equal(Math.round(context.onePagerStress(v)), -195623);
   assert.ok(!(context.onePagerStress({ land: 1, medianStress: {} }) >= 0));
 });
 

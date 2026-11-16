@@ -295,7 +295,7 @@
         <div id="hcPriceBasis" class="dm-note" style="margin:0 0 10px;"></div>
         <div class="filter-row">
           <label style="font-size:12.5px;color:var(--text-soft);">Build cost ($/sf) <i>placeholder</i><input class="filter-input" id="hcHard" type="number" value="275" style="width:80px;"></label>
-          <label style="font-size:12.5px;color:var(--text-soft);">Site work per lot ($) <i>placeholder</i><input class="filter-input" id="hcSite" type="number" value="10000" style="width:100px;"></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Site work per lot ($) <i>placeholder</i><input class="filter-input" id="hcSite" type="number" value="65000" style="width:100px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Design/permits/fees (% of build)<input class="filter-input" id="hcSoft" type="number" value="8" style="width:60px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Loan interest (% of total cost)<input class="filter-input" id="hcFin" type="number" value="7" style="width:60px;"></label>
           <label style="font-size:12.5px;color:var(--text-soft);">Selling costs (% of sale)<input class="filter-input" id="hcSell" type="number" value="3" style="width:60px;"></label>
@@ -603,6 +603,8 @@ document.getElementById('meta-row').innerHTML = `
 // market estimate (grading/site prep $20k-$80k + utility connections
 // $10k-$40k per lot), not a real local civil bid — get one before trusting
 // this number.
+// SCREEN: extra costs the quick screen carries (placeholders; mirror A in verdict.py). close = land closing % of land, cont = contingency % of build+soft+site, hold = tax/insurance/utilities $ per home.
+const SCREEN = { close: 0.01, cont: 0.10, hold: 20000 };
 const SUBDIVISION_DEFAULTS = {
   costPerLot: 65000, lotSalePrice: 130000, sellingCostPct: 0.07, holdYears: 2,
   softPct: 0.08, contPct: 0.10, ltcPct: 0.65, constrRate: 0.075, landClosePct: 0.01, taxPct: 0.007,   // placeholders, not bids
@@ -613,7 +615,8 @@ function calcSubdivision(inp){
   r.landCost = inp.askingPrice || 0;
   r.demoCost = inp.demoCost || 0;
   r.landClose = r.landCost * (inp.landClosePct || 0);
-  r.lotDevCost = inp.lots * inp.costPerLot;
+  r.site = (inp.siteWalls||0) + (inp.siteDrive||0) + (inp.siteDrain||0) + (inp.naosCost||0);   // project-level extras; grading and utilities are already inside Dev Cost/Lot
+  r.lotDevCost = inp.lots * inp.costPerLot + r.site;
   r.soft = r.lotDevCost * (inp.softPct || 0);
   r.contingency = r.lotDevCost * (inp.contPct || 0);
   r.direct = r.lotDevCost + r.soft + r.contingency;
@@ -650,9 +653,9 @@ const SALE_SECTIONS = [
   ['Property', [['acres','Acres','num'],['lotSf','Lot Square Footage','num'],['buildingSf','Building Square Footage (to build, all homes)','num'],['units','Homes','num']]],
   ['Sale', [['salePsf','Sale Price ($/sf of building)','usd'],['salePrice','Sale Price, total ($) — auto = $/sf x building sf','usd','auto'],['sellPct','Selling Closing Cost %','pct'],['targetPct','Target Profit (% of sale)','pct']]],
   ['Land', [['askingPrice','Purchase Price','usd'],['landClosePct','Land Closing Cost (% of price)','pct'],['landExp1','Land Acquisition Expense 1','usd'],['demoCost','Demolition (teardown lots)','usd']]],
-  ['Site Work & NAOS (hard cost)', [['siteGrade','Grading, Excavation & Rock','usd'],['siteWalls','Retaining Walls','usd'],['siteDrive','Driveway & Access','usd'],['siteUtil','Utilities: Water, Sewer/Septic, Power, Gas','usd'],['siteDrain','Drainage, Wash Crossings & Flood Mitigation','usd'],['naosCost','NAOS: Fencing, Revegetation, Survey & Easement','usd']]],
+  ['Site Work & NAOS (hard cost; placeholders, replace with a civil bid)', [['siteGrade','Grading, Excavation & Rock','usd'],['siteWalls','Retaining Walls','usd'],['siteDrive','Driveway & Access','usd'],['siteUtil','Utilities: Water, Sewer/Septic, Power, Gas','usd'],['siteDrain','Drainage, Wash Crossings & Flood Mitigation','usd'],['naosCost','NAOS: Fencing, Revegetation, Survey & Easement','usd']]],
   ['Hard Costs', [['hard1','Contract 1 (construction)','usd'],['hard2','Contract 2 (landscaping/utility)','usd']]],
-  ['Soft Costs', [['permit','Permit/Inspection Fee 1','usd'],['design','Design Fee 1','usd'],['survey','Survey','usd'],['misc','Miscellaneous','usd'],['finConstr','Loan Points, Appraisal, Title & Draw Fees','usd'],['otherCost1','Other Cost 1','usd']]],
+  ['Soft Costs', [['permit','Permit/Inspection Fee 1','usd'],['design','Design Fee 1','usd'],['survey','Survey','usd'],['misc','Miscellaneous','usd'],['finConstr','Loan Points, Appraisal, Title & Draw Fees','usd'],['impactFee','Impact, Water/Sewer & Permit Fees (from the city fee schedule)','usd'],['otherCost1','Other Cost 1','usd']]],
   ['Contingency, Reserve & Fee', [['contPct','Contingency %','pct'],['interestReserve','Interest Reserve ($) — auto','usd','auto'],['devFeePct','Developer Fee %','pct']]],
   ['Construction Loan', [['ltcPct','Construction Loan-to-Cost %','pct'],['constrRate','Construction Interest Rate','pct'],['constrTerm','Construction Term (months)','num']]],
   ['Hold Costs', [['preMonths','Months before construction (design/permit)','num'],['saleMonths','Months to sell after completion','num'],['taxPct','Property Tax (% of land price / yr)','pct'],['brPct','Builder\'s-Risk Insurance (% of hard)','pct'],['utilMo','Utilities ($/month)','usd']]],
@@ -660,15 +663,16 @@ const SALE_SECTIONS = [
 // Custom-builder model: the client owns the land and pays the costs and interest; you earn a fee on construction cost only.
 const CUSTOM_SECTIONS = [
   ['Property', [['buildingSf','Building Square Footage','num'],['units','Homes','num']]],
-  ['Site Work & NAOS (hard cost)', [['siteGrade','Grading, Excavation & Rock','usd'],['siteWalls','Retaining Walls','usd'],['siteDrive','Driveway & Access','usd'],['siteUtil','Utilities: Water, Sewer/Septic, Power, Gas','usd'],['siteDrain','Drainage, Wash Crossings & Flood Mitigation','usd'],['naosCost','NAOS: Fencing, Revegetation, Survey & Easement','usd']]],
+  ['Site Work & NAOS (hard cost; placeholders, replace with a civil bid)', [['siteGrade','Grading, Excavation & Rock','usd'],['siteWalls','Retaining Walls','usd'],['siteDrive','Driveway & Access','usd'],['siteUtil','Utilities: Water, Sewer/Septic, Power, Gas','usd'],['siteDrain','Drainage, Wash Crossings & Flood Mitigation','usd'],['naosCost','NAOS: Fencing, Revegetation, Survey & Easement','usd']]],
   ['Hard Costs', [['hard1','Contract 1 (construction)','usd'],['hard2','Contract 2 (landscaping/utility)','usd']]],
-  ['Soft Costs (client pays)', [['permit','Permit/Inspection Fee 1','usd'],['design','Design Fee 1','usd'],['survey','Survey','usd'],['misc','Miscellaneous','usd'],['otherCost1','Other Cost 1','usd']]],
+  ['Soft Costs (client pays)', [['permit','Permit/Inspection Fee 1','usd'],['design','Design Fee 1','usd'],['survey','Survey','usd'],['misc','Miscellaneous','usd'],['impactFee','Impact, Water/Sewer & Permit Fees (from the city fee schedule)','usd'],['otherCost1','Other Cost 1','usd']]],
   ['Contingency, Fee & Your Costs', [['contPct','Contingency %','pct'],['customFeePct','Builder Fee (% of construction cost)','pct'],['overheadMo','Your Overhead on This Job ($/month)','usd'],['warrantyPct','Warranty Reserve (% of hard)','pct'],['constrTerm','Construction Term (months)','num']]],
 ];
 const LOTS_SECTIONS = [
   ['Property', [['acres','Acres','num'],['lotSf','Lot Square Footage','num']]],
   ['Sell-the-lots model', SUBDIVISION_FIELDS.map(([k,l]) => [k, l, ['sellingCostPct','softPct','contPct','ltcPct','constrRate','landClosePct','taxPct'].includes(k) ? 'pct' : (k==='lots'||k==='holdYears' ? 'num' : 'usd')])],
 ];
+LOTS_SECTIONS.splice(2, 0, ['Site Work & NAOS on top of Dev Cost/Lot (project total)', [['siteWalls','Retaining Walls','usd'],['siteDrive','Roads & Access','usd'],['siteDrain','Drainage, Wash Crossings & Flood Mitigation','usd'],['naosCost','NAOS: Fencing, Revegetation, Survey & Easement','usd']]]);
 
 // Site-work placeholders per home, scaled by ESL slope when the lead has it. Real numbers come from a civil/geotech bid.
 function siteDefaults(lead, units){
@@ -688,10 +692,10 @@ function saleDefaults(lead, units){
     salePsf: c && c.psf > 0 ? Math.round(c.psf * (units > 1 ? hc : 1)) : 400, salePrice: null, sellPct: 0.03, targetPct: 0.10,
     askingPrice: 0, landExp1: 0,
     hard1, hard2: Math.round(units*10000),
-    permit: Math.round(hard1*0.02), design: Math.round(hard1*0.04), survey: 6000, misc: 10000, finConstr: Math.round(hard1*0.015), otherCost1: 0,
+    permit: Math.round(hard1*0.02), design: Math.round(hard1*0.04), survey: 6000, misc: 10000, impactFee: 0, finConstr: Math.round(hard1*0.015), otherCost1: 0,
     ...siteDefaults(lead, units),
     contPct: 0.10, interestReserve: null, devFeePct: 0.03,
-    landClosePct: 0.01, preMonths: 3, saleMonths: 3, taxPct: 0.007, brPct: 0.005, utilMo: 600,
+    landClosePct: 0.01, preMonths: units > 1 ? 9 : 3, saleMonths: 3, taxPct: 0.007, brPct: 0.005, utilMo: 600,
     customFeePct: 0.12, overheadMo: 6000, warrantyPct: 0.01,
     ltcPct: 0.65, constrRate: 0.075, constrTerm: 18,
   };
@@ -704,7 +708,7 @@ function calcSale(s){
   r.land = (s.askingPrice||0) + (s.landExp1||0) + (s.demoCost||0) + r.landClose;
   r.site = (s.siteGrade||0) + (s.siteWalls||0) + (s.siteDrive||0) + (s.siteUtil||0) + (s.siteDrain||0) + (s.naosCost||0);
   r.hard = (s.hard1||0) + (s.hard2||0) + r.site;
-  r.softBase = (s.permit||0) + (s.design||0) + (s.survey||0) + (s.misc||0) + (s.otherCost1||0);
+  r.softBase = (s.permit||0) + (s.design||0) + (s.survey||0) + (s.misc||0) + (s.impactFee||0) + (s.otherCost1||0);
   r.soft = r.softBase + (s.finConstr||0);
   r.contingency = (s.contPct||0) * (r.hard + r.softBase);
   r.direct = r.hard + r.softBase + r.contingency;               // bank-financeable: hard + soft (ex-financing) + contingency
@@ -732,7 +736,7 @@ function calcCustom(s){
   const r = {};
   r.site = (s.siteGrade||0) + (s.siteWalls||0) + (s.siteDrive||0) + (s.siteUtil||0) + (s.siteDrain||0) + (s.naosCost||0);
   r.hard = (s.hard1||0) + (s.hard2||0) + r.site;
-  r.softBase = (s.permit||0) + (s.design||0) + (s.survey||0) + (s.misc||0) + (s.otherCost1||0);
+  r.softBase = (s.permit||0) + (s.design||0) + (s.survey||0) + (s.misc||0) + (s.impactFee||0) + (s.otherCost1||0);
   r.contingency = (s.contPct||0) * (r.hard + r.softBase);
   r.direct = r.hard + r.softBase + r.contingency;   // what the client pays for construction; land and interest are theirs
   r.fee = (s.customFeePct||0) * r.direct;
@@ -793,7 +797,15 @@ function renderSaleResults(idx, state){
         ${row('Gross Sale Price', money(r.revenue))}${row('Selling Closing Costs', money(-r.sellCost))}${row('Net Sale Proceeds', money(r.net))}
         ${row('Total Development Cost', money(-r.total))}${row('<b>Developer Profit</b>', '<b>'+money(r.profit)+'</b>')}</tbody></table>
     </div>
-    <div style="font-size:11px;color:var(--text-faint);margin-top:6px;">Sale proceeds repay the construction loan; interest is the interest reserve. Max land price = net sale proceeds − target profit − every non-land cost. Defaults are placeholders, not bids.</div>`;
+    <div style="font-size:11px;color:var(--text-faint);margin-top:6px;">Sale proceeds repay the construction loan; interest is the interest reserve. Max land price = net sale proceeds − target profit − every non-land cost. Defaults are placeholders, not bids.</div>${saleSensitivityHtml(state, r)}`;
+}
+
+// Profit if hard + site cost and the sale price each move +/-10%. Thin luxury margins flip fast.
+function saleSensitivityHtml(state, base){
+  const keys = ['hard1','hard2','siteGrade','siteWalls','siteDrive','siteUtil','siteDrain','naosCost'], d = [-0.1, 0, 0.1];
+  const profit = (c, p) => { const t = { ...state, salePrice: base.revenue * (1 + p) }; keys.forEach(k => t[k] = (state[k] || 0) * (1 + c)); return calcSale(t).profit; };
+  const cell = v => `<td style="text-align:right;color:${v >= 0 ? '#2f6b47' : '#b03a3a'};">${money(v)}</td>`, sg = x => (x > 0 ? '+' : '') + Math.round(x * 100) + '%';
+  return `<table class="comps-table" style="margin-top:14px;"><thead><tr><th>Profit if cost ↓ / price →</th>${d.map(p => `<th style="text-align:right;">Price ${sg(p)}</th>`).join('')}</tr></thead><tbody>${[0.1, 0, -0.1].map(c => `<tr><td>Hard + site cost ${sg(c)}</td>${d.map(p => cell(profit(c, p))).join('')}</tr>`).join('')}</tbody></table>`;
 }
 
 function renderCustomResults(idx, state){
@@ -819,6 +831,7 @@ function renderCalcResults(idx, state){
     document.getElementById(`calc-kpis-${idx}`).innerHTML = `
       ${calcRow('Total Dev Cost', money(r.totalDevCost))}
       ${calcRow('Demo Cost', money(r.demoCost))}
+      ${calcRow('Site Work & NAOS (extra)', money(r.site))}
       ${calcRow('Soft + Contingency', money(r.soft + r.contingency))}
       ${calcRow('Interest + Property Tax', money(r.interest + r.tax))}
       ${calcRow('Cost/Lot', money(r.costPerLot))}
@@ -2331,7 +2344,7 @@ function logCall(apn, key){
 function setNext(apn, v){ const m = loadCalls(); if(!m[apn]) return; m[apn].next = v; saveCalls(m); renderContacted(); }
 const callLabel = k => (CALL_OPTS.find(x => x[0] === k) || [0, '—'])[1];
 const callSelect = apn => `<select onchange="if(this.value){logCall('${esc(apn)}',this.value);}"><option value="">Log call…</option>${CALL_OPTS.map(o => `<option value="${o[0]}">${o[1]}</option>`).join('')}</select>`;
-const BACKUP_KEYS = ['callLog','contactedLeads','leadNotes','contactChecks','leadCondition','discardedLeads','hiddenRows','intakeChecks','bids','leadCalcs','savedRuns','callsDone','emailsDone','lettersWritten'];  // not leadContacts: phone numbers stay out of files
+const BACKUP_KEYS = ['callLog','contactedLeads','leadNotes','contactChecks','leadCondition','discardedLeads','hiddenRows','intakeChecks','bids','leadCalcs','homeCalc','leadStatus','tracedBldgs','savedRuns','callsDone','emailsDone','lettersWritten'];  // not leadContacts: phone numbers stay out of files
 function backupLog(){
   const o = {}; BACKUP_KEYS.forEach(k => { try{ const v = localStorage.getItem(k); if(v) o[k] = JSON.parse(v); }catch(e){} });
   const a = document.createElement('a');
@@ -2446,16 +2459,16 @@ renderSkipTrace();
 // Custom Home Calculator. Land cost = comps value (assessed value if comps are unreliable). Risk = how shaky the inputs are.
 // One cost/profit formula for the Calculator and Top Profit (verdict.py mirrors it). n homes on one parcel; splits sell at a haircut and cost extra.
 function homeEcon(x){
-  const C = x.hard * x.sf * (1 + x.soft) + x.site, n = x.n, multi = n > 1;
-  const a = !multi && x.adu && x.adu.n > 0 ? x.adu : null, aduCost = a ? a.n * (a.sf * a.hard * (1 + x.soft) + a.site) : 0;   // ADUs only with the lot kept whole
+  const k = 1 + (x.cont || 0), C = (x.hard * x.sf * (1 + x.soft) + x.site) * k, n = x.n, multi = n > 1;
+  const a = !multi && x.adu && x.adu.n > 0 ? x.adu : null, aduCost = a ? a.n * (a.sf * a.hard * (1 + x.soft) + a.site) * k : 0;   // ADUs only with the lot kept whole
   const finished = n * x.psf * x.sf * (multi ? x.haircut : 1) + (a ? a.value : 0);
-  const cost = (n * C + x.land + (x.demo || 0) + (multi ? (n - 1) * x.splitCost : 0) + aduCost) * (1 + x.fin);
+  const cost = (n * C + x.land * (1 + (x.close || 0)) + n * (x.hold || 0) + (x.demo || 0) + (multi ? (n - 1) * x.splitCost : 0) + aduCost) * (1 + x.fin);
   const profit = finished * (1 - x.sell) - cost;
   return { C, finished, cost, profit, aduCost, margin: finished ? profit / finished : 0 };
 }
 function supportableLand(x, target){
   const e = homeEcon(x);
-  return e.finished * (1 - x.sell - target) / (1 + x.fin) - x.n * e.C - (x.demo || 0) - Math.max(0, x.n - 1) * x.splitCost - e.aduCost;
+  return (e.finished * (1 - x.sell - target) / (1 + x.fin) - x.n * e.C - x.n * (x.hold || 0) - (x.demo || 0) - Math.max(0, x.n - 1) * x.splitCost - e.aduCost) / (1 + (x.close || 0));
 }
 function selectedComps(l){
   const home = normalizeHouseComps(l.houseComps);
@@ -2522,7 +2535,7 @@ function profitFor(l, extraHard, psfOverride, o){
   let best = null, maxLand = -Infinity, offerN = 1;
   const sp = splitInfo(l);
   for(const n of new Set([1, sp.n])){
-    const x = { sf, hard, soft, site, fin, sell, land, demo, n, psf, haircut, splitCost, adu: aduInput(l) }, e = homeEcon(x);
+    const x = { ...SCREEN, sf, hard, soft, site, fin, sell, land, demo, n, psf, haircut, splitCost, adu: aduInput(l) }, e = homeEcon(x);
     const offer = supportableLand(x, num('hcProfit') / 100);
     if(offer > maxLand){ maxLand = offer; offerN = n; }
     if(!best || e.profit > best.profit) best = { n, finished: e.finished, cost: e.cost, profit: e.profit, land, margin: e.margin };
@@ -2574,18 +2587,18 @@ function profitLine(l){
 }
 // Owner one-pager link: non-preliminary leads where the deal still works at a $400/sf build if the owner credits their land
 // at no less than ONEPAGER_MIN_LAND_SHARE of the estimated land value (the sheet shows no land price; it is agreed later).
-// The verdict's max land offer is at $325/sf, so subtract the extra hard cost: (400 - 325) x 3,800 sf x 1.08 soft per home.
+// The verdict's max land offer is at $325/sf, so subtract the extra hard cost: (400 - 325) x 3,800 sf x 1.08 soft x 1.10 contingency per home.
 // Combined stress: median-comp profit, minus the extra hard cost at ONEPAGER_BUILD_PSF, plus the 50% land credit (all x1.07 financing).
 // Must be finite and >= 0. Same formula is inlined in phx-onepager.html.
 function onePagerStress(v){
   const ms = v && v.medianStress || {};
   if(!Number.isFinite(ms.profit)) return NaN;   // null/missing/Infinity must fail closed, not coerce to 0
-  return ms.profit -(ONEPAGER_BUILD_PSF - 325) * 3800 * 1.08 * (ms.homes || v.offerHomes || 1) * 1.07 + (1 - ONEPAGER_MIN_LAND_SHARE) * v.land * 1.07;
+  return ms.profit -(ONEPAGER_BUILD_PSF - 325) * 3800 * 1.08 * 1.1 * (ms.homes || v.offerHomes || 1) * 1.07 + (1 - ONEPAGER_MIN_LAND_SHARE) * v.land * 1.07;
 }
 function onePagerLink(l){
   const v = l.verdict, c = l.houseComps;
-  if(!v || v.preliminary || !(v.land > 0) || !(v.supportableOffer > 0) || !Number.isFinite(v.supportableOffer) || l.stale || l.inFloodplain || !c || (c.comps || []).length < 3) return '';
-  const resid = v.supportableOffer - (ONEPAGER_BUILD_PSF - 325) * 3800 * 1.08 * (v.offerHomes || 1);
+  if(!v || v.preliminary || !(v.land > 0) || !Number.isFinite(v.land) || !(v.supportableOffer > 0) || !Number.isFinite(v.supportableOffer) || l.stale || l.inFloodplain || !c || (c.comps || []).length < 3) return '';
+  const resid = v.supportableOffer - (ONEPAGER_BUILD_PSF - 325) * 3800 * 1.08 * 1.1 * (v.offerHomes || 1);
   if(!(resid >= ONEPAGER_MIN_LAND_SHARE * v.land)) return '';   // NaN/Infinity-safe, same as phx-onepager.html
   if((l.valuation || {}).unreliable || !(onePagerStress(v) >= 0)) return '';   // fails closed (NaN/missing median fails `>= 0`): missing median or loses at median comp: no owner outreach (same block as phx-onepager.html)
   return `<div style="margin-bottom:4px;"><a href="phx-onepager.html?apn=${encodeURIComponent(l.apn)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:700;">📄 Owner one-pager</a></div>`;
@@ -2830,7 +2843,7 @@ renderMaxOffer();
     const out = el('hcOut');
     if(den <= 0 || sf <= 0){ out.textContent = 'Selling costs + profit must be under 100%, and home size above 0.'; if(picked) el('hcPriceBasis').textContent = 'Supportable offer unavailable until the calculator inputs are valid.'; window.hcLast = null; return; }
     if(el('hcLand').value === '' || el('hcPrice').value === ''){ out.textContent = 'Enter a supported land price and expected sale price before relying on profit or offers.'; window.hcLast = null; return; }
-    const x = { sf, hard: num('hcHard'), soft, site, fin, sell, land: num('hcLand'), demo, n: lots, psf: num('hcPrice'), haircut, splitCost, adu: aduInput(picked || { currentZoning: 1 }) }, e = homeEcon(x);
+    const x = { ...SCREEN, sf, hard: num('hcHard'), soft, site, fin, sell, land: num('hcLand'), demo, n: lots, psf: num('hcPrice'), haircut, splitCost, adu: aduInput(picked || { currentZoning: 1 }) }, e = homeEcon(x);
     const hard = num('hcHard') * sf, softD = hard * soft, C = e.C, land = num('hcLand') / lots, sc = lots > 1 ? (lots - 1) * splitCost / lots : 0, aduV = e.aduCost ? num('hcAduVal') : 0, Ph = e.finished / lots - aduV;   // aduV: ADU resale value, shown separately from the house price
     const total = e.cost / lots, need = total / den - aduV, gain = e.profit / lots, margin = e.margin;
     const maxLand = supportableLand(x, profit), open = maxLand * num('hcOpen') / 100;
@@ -2839,7 +2852,7 @@ renderMaxOffer();
     const row = (k, v, b) => `<tr><td style="padding:2px 14px 2px 0;${b ? 'font-weight:700;' : ''}">${k}</td><td style="text-align:right;${b ? 'font-weight:700;' : ''}">${v}</td></tr>`;
     out.innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:28px;">
       <div><div style="font-weight:700;margin-bottom:4px;">Cost per home</div><table>
-        ${row('Build', money(hard))}${row('Design / permits / fees', money(softD))}${row('Site work', money(site))}${row('Land share', money(land))}${demo ? row('Demolition share', money(demo / lots)) : ''}${sc ? row('Lot-split cost share', money(sc)) : ''}${e.aduCost ? row('ADUs (build + soft + site)', money(e.aduCost)) : ''}${row('Loan interest', money((C + land + demo / lots + sc + e.aduCost / lots) * fin))}${row('Total cost', money(total), 1)}</table>${e.aduCost ? `<div style="font-size:12px;color:var(--text-soft);margin-top:6px;">ADUs need about <b>${money(e.aduCost * (1 + fin) / (1 - sell))}</b> of added resale value to pay for themselves (you entered ${money(aduV)}).</div>` : ''}</div>
+        ${row('Build', money(hard))}${row('Design / permits / fees', money(softD))}${row('Site work', money(site))}${row('Contingency (' + SCREEN.cont * 100 + '%)', money(SCREEN.cont * (hard + softD + site)))}${row('Land share', money(land))}${row('Land closing', money(land * SCREEN.close))}${row('Hold costs (tax, insurance, utilities)', money(SCREEN.hold))}${demo ? row('Demolition share', money(demo / lots)) : ''}${sc ? row('Lot-split cost share', money(sc)) : ''}${e.aduCost ? row('ADUs (build + soft + site)', money(e.aduCost)) : ''}${row('Loan interest', money((C + land * (1 + SCREEN.close) + SCREEN.hold + demo / lots + sc + e.aduCost / lots) * fin))}${row('Total cost', money(total), 1)}</table>${e.aduCost ? `<div style="font-size:12px;color:var(--text-soft);margin-top:6px;">ADUs need about <b>${money(e.aduCost * (1 + fin) / (1 - sell))}</b> of added resale value to pay for themselves (you entered ${money(aduV)}).</div>` : ''}</div>
       <div style="max-width:430px;"><div style="margin-bottom:8px;"><b>To hit your ${num('hcProfit')}% profit, each home must sell for ${money(need)}</b> (${money(need / sf)}/sf).</div>
         <div style="margin-bottom:8px;">At your expected ${money(Ph)} per home (${money(Ph / sf)}/sf${lots > 1 ? ', after the ' + Math.round(haircut * 100) + '% split factor' : ''}), ${maxLand >= 0 ? `<b>the most you can pay for the land is <span style="color:#2f6b47;">${money(maxLand)}</span></b> total — open at <b>${money(open)}</b>.` : `<b>No nonnegative land offer meets your target</b> (land budget ${money(maxLand)}).`}</div>
         <div style="padding:8px 10px;border-radius:8px;background:${margin >= profit ? '#e6f4ea' : '#fdecec'};">At your land price of ${money(num('hcLand'))}: profit of <b>${money(gain)}</b> per home (${(margin * 100).toFixed(1)}% of sale) — ${margin >= profit ? 'meets' : 'below'} your ${num('hcProfit')}% target.</div></div></div>`;

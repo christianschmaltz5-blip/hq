@@ -23,7 +23,7 @@ def _parse_num(value):
     except (ValueError, TypeError):
         return 0
 
-A = dict(sf=HOUSE_COMP_POLICY["planSf"], hard=(275, 325), soft=0.08, site=10_000, fin=0.07, sell=0.03,
+A = dict(sf=HOUSE_COMP_POLICY["planSf"], hard=(275, 325), soft=0.08, site=65_000, fin=0.07, sell=0.03, close=0.01, cont=0.10, hold=20_000,
          adu=dict(n=0, sf=800, hard=350, site=15_000, value=0),
          split_cost=25_000, haircut=0.8, min_lot=14_375, usable=0.85, good=0.10, maybe=0.05)
 COMPS_WEIGHT = 0.8                  # lead score = 80% comps margin + 20% additive signals (signalScore)
@@ -166,12 +166,13 @@ def resolve_house_comps(l, result):
 
 def home_econ(x):
     """Pure per-parcel economics, using the same input names as JS homeEcon."""
-    C = x["hard"] * x["sf"] * (1 + x["soft"]) + x["site"]
+    k = 1 + (x.get("cont") or 0)
+    C = (x["hard"] * x["sf"] * (1 + x["soft"]) + x["site"]) * k
     n, multi = x["n"], x["n"] > 1
     a = x.get("adu") if not multi and x.get("adu") and x["adu"].get("n", 0) > 0 else None
-    adu_cost = a["n"] * (a["sf"] * a["hard"] * (1 + x["soft"]) + a["site"]) if a else 0
+    adu_cost = a["n"] * (a["sf"] * a["hard"] * (1 + x["soft"]) + a["site"]) * k if a else 0
     finished = n * x["psf"] * x["sf"] * (x["haircut"] if multi else 1) + (a["value"] if a else 0)
-    cost = (n * C + x["land"] + (x.get("demo") or 0) + ((n - 1) * x["splitCost"] if multi else 0) + adu_cost) * (1 + x["fin"])
+    cost = (n * C + x["land"] * (1 + (x.get("close") or 0)) + n * (x.get("hold") or 0) + (x.get("demo") or 0) + ((n - 1) * x["splitCost"] if multi else 0) + adu_cost) * (1 + x["fin"])
     profit = finished * (1 - x["sell"]) - cost
     return dict(C=C, finished=finished, cost=cost, profit=profit, aduCost=adu_cost, margin=profit / finished if finished else 0)
 
@@ -179,7 +180,7 @@ def home_econ(x):
 def supportable_land(x, target):
     """Signed land budget at target margin; negative means no nonnegative offer works."""
     e = home_econ(x)
-    return e["finished"] * (1 - x["sell"] - target) / (1 + x["fin"]) - x["n"] * e["C"] - (x.get("demo") or 0) - (max(0, x["n"] - 1) * x["splitCost"]) - e["aduCost"]
+    return (e["finished"] * (1 - x["sell"] - target) / (1 + x["fin"]) - x["n"] * e["C"] - x["n"] * (x.get("hold") or 0) - (x.get("demo") or 0) - (max(0, x["n"] - 1) * x["splitCost"]) - e["aduCost"]) / (1 + (x.get("close") or 0))
 
 
 def split_n(l):
@@ -239,7 +240,7 @@ def underwrite(l, *, fetch_comps=True, overrides=None, area_per_acre=None):
     n_split, known = split_n(l)
 
     def inputs(n, hard, psf=None):
-        return dict(sf=A["sf"], hard=hard, soft=A["soft"], site=A["site"], fin=A["fin"], sell=A["sell"],
+        return dict(sf=A["sf"], hard=hard, soft=A["soft"], site=A["site"], fin=A["fin"], sell=A["sell"], close=A["close"], cont=A["cont"], hold=A["hold"],
                     land=land, demo=(l.get("defaultDemoCost") or 0) if l.get("parcelStatus") == "improved" else 0,
                     n=n, psf=hc["psf"] if psf is None else psf, haircut=A["haircut"], splitCost=A["split_cost"], adu=A["adu"] if l.get("currentZoning") else None)
 

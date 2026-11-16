@@ -38,6 +38,15 @@ class EconomicsTests(unittest.TestCase):
                 at_offer = verdict.home_econ({**case["input"], "land": actual["maxLand"]})
                 self.assertAlmostEqual(at_offer["margin"], case["target"], places=10)
 
+    def test_screen_costs_hand_checked(self):
+        x = dict(sf=3800, hard=325, soft=0.08, site=65000, cont=0.10, close=0.01, hold=20000, fin=0.07, sell=0.03,
+                 land=500000, n=1, psf=600, haircut=0.8, splitCost=0)
+        e = verdict.home_econ(x)
+        self.assertAlmostEqual(e["cost"], 2208137.6, places=4)   # (1,538,680 + 505,000 + 20,000) x 1.07
+        self.assertAlmostEqual(e["profit"], 3462.4, places=4)
+        at_offer = verdict.home_econ({**x, "land": verdict.supportable_land(x, 0.1)})
+        self.assertAlmostEqual(at_offer["margin"], 0.1, places=10)
+
     def test_maybe_requires_high_cost_break_even(self):
         self.assertEqual(verdict.verdict_label(-1, -0.00001, 0.20, "Low"), "Pass")
         self.assertEqual(verdict.verdict_label(0, 0, 0.10, "Low"), "Maybe")
@@ -47,7 +56,7 @@ class EconomicsTests(unittest.TestCase):
 
     def test_underwrite_matches_split_fixture_and_signed_offer(self):
         parcel = lead()
-        with patch.object(verdict, "_esri_query") as network:
+        with patch.object(verdict, "_esri_query") as network, patch.dict(verdict.A, close=0, cont=0, hold=0, site=10_000):   # the fixture predates the screen costs
             result = verdict.underwrite(parcel, fetch_comps=False)
         network.assert_not_called()
         self.assertEqual(result["strategy"], "4 homes")
@@ -59,6 +68,12 @@ class EconomicsTests(unittest.TestCase):
         self.assertEqual(result["offerHomes"], 1)
         self.assertEqual(result["land"], 535000)
         self.assertEqual(parcel["landPriceOverride"]["priceType"], "recorded historical sale")
+
+    def test_screen_costs_flip_the_thin_deal(self):
+        # Same parcel with closing, 10% contingency, $20k hold and $65k site work: -$34,362 build/land loss plus 45k demo x 1.07.
+        with patch.object(verdict, "_esri_query"):
+            result = verdict.underwrite(lead(), fetch_comps=False)
+        self.assertEqual((result["strategy"], result["label"], result["profit"]), ("1 custom home", "Pass", -82512))
 
     def test_commercial_zoning_blocks_residential_verdict(self):
         parcel = lead()
