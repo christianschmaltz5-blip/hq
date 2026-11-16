@@ -12,7 +12,7 @@
 // };
 
 window.UNDERWRITING_RUNS = {
-  "updated": "2026-11-09",
+  "updated": "2026-11-16",
   "runs": [
     {
       "name": "2242 E Taylor St",
@@ -152,6 +152,12 @@ window.UNDERWRITING_RUNS = {
     },
     {
       "date": "2026-11-09",
+      "dealsRun": 2,
+      "pencilCount": 0,
+      "topDeal": "2242 E Taylor St ($-132,124)"
+    },
+    {
+      "date": "2026-11-16",
       "dealsRun": 2,
       "pencilCount": 0,
       "topDeal": "2242 E Taylor St ($-132,124)"
