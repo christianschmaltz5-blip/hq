@@ -65,10 +65,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 6.97,
+  "retrieved": "2026-11-16",
+  "slopePct": 11.68,
   "slopeSamples": 22,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21911833": {
   "inEsl": true,
@@ -276,19 +277,21 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 3.51,
+  "retrieved": "2026-11-16",
+  "slopePct": 5.47,
   "slopeSamples": 16,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21911609": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 4.51,
+  "retrieved": "2026-11-16",
+  "slopePct": 6.67,
   "slopeSamples": 13,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21647365": {
   "inEsl": true,
@@ -304,10 +307,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 5.45,
+  "retrieved": "2026-11-16",
+  "slopePct": 8.52,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21911543": {
   "inEsl": true,
@@ -353,10 +357,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 5.76,
+  "retrieved": "2026-11-16",
+  "slopePct": 10.23,
   "slopeSamples": 18,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21201200": {
   "inEsl": true,
@@ -402,10 +407,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 7.42,
+  "retrieved": "2026-11-16",
+  "slopePct": 11.65,
   "slopeSamples": 19,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21669047E": {
   "inEsl": true,
@@ -431,10 +437,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 5.1,
+  "retrieved": "2026-11-16",
+  "slopePct": 7.62,
   "slopeSamples": 17,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21647340": {
   "inEsl": true,
@@ -450,10 +457,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 2.96,
+  "retrieved": "2026-11-16",
+  "slopePct": 3.9,
   "slopeSamples": 13,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "17614522": {
   "inEsl": true,
@@ -621,10 +629,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 7.04,
+  "retrieved": "2026-11-16",
+  "slopePct": 10.71,
   "slopeSamples": 13,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21956973": {
   "inEsl": true,
@@ -732,10 +741,11 @@
   "inEsl": true,
   "landform": "Lower Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 2.37,
+  "retrieved": "2026-11-16",
+  "slopePct": 3.69,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21210104B": {
   "inEsl": true,
@@ -761,10 +771,11 @@
   "inEsl": true,
   "landform": "Lower Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 2.55,
+  "retrieved": "2026-11-16",
+  "slopePct": 4.07,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21648985": {
   "inEsl": true,
@@ -1368,10 +1379,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 7.71,
+  "retrieved": "2026-11-16",
+  "slopePct": 11.64,
   "slopeSamples": 13,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21682098": {
   "inEsl": true,
@@ -1427,10 +1439,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 3.17,
+  "retrieved": "2026-11-16",
+  "slopePct": 4.81,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21956232": {
   "inEsl": true,
@@ -1552,10 +1565,11 @@
   "otherLandforms": [
    "Hillside"
   ],
-  "retrieved": "2026-11-11",
-  "slopePct": 13.12,
+  "retrieved": "2026-11-16",
+  "slopePct": 20.52,
   "slopeSamples": 10,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21956598": {
   "inEsl": true,
@@ -1571,10 +1585,11 @@
   "inEsl": true,
   "landform": "Lower Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 4.5,
+  "retrieved": "2026-11-16",
+  "slopePct": 7.41,
   "slopeSamples": 19,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21947457": {
   "inEsl": true,
@@ -2069,10 +2084,11 @@
   "otherLandforms": [
    "Hillside"
   ],
-  "retrieved": "2026-11-11",
-  "slopePct": 5.12,
+  "retrieved": "2026-11-16",
+  "slopePct": 8.85,
   "slopeSamples": 24,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21702499": {
   "inEsl": true,
@@ -2148,10 +2164,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 2.99,
+  "retrieved": "2026-11-16",
+  "slopePct": 4.76,
   "slopeSamples": 18,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21702075": {
   "inEsl": true,
@@ -2167,10 +2184,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 4.2,
+  "retrieved": "2026-11-16",
+  "slopePct": 6.46,
   "slopeSamples": 15,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21208107": {
   "inEsl": true,
@@ -2361,10 +2379,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 5.54,
+  "retrieved": "2026-11-16",
+  "slopePct": 7.12,
   "slopeSamples": 13,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21764515": {
   "inEsl": true,
@@ -2558,10 +2577,11 @@
   "inEsl": true,
   "landform": "Lower Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 2.4,
+  "retrieved": "2026-11-16",
+  "slopePct": 4.15,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21962405": {
   "inEsl": true,
@@ -2579,10 +2599,11 @@
   "otherLandforms": [
    "Upper Desert"
   ],
-  "retrieved": "2026-11-11",
-  "slopePct": 14.12,
+  "retrieved": "2026-11-16",
+  "slopePct": 20.79,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "17614517": {
   "inEsl": true,
@@ -2841,10 +2862,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 1.84,
+  "retrieved": "2026-11-16",
+  "slopePct": 2.87,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21673562": {
   "inEsl": true,
@@ -2966,10 +2988,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 9.97,
+  "retrieved": "2026-11-16",
+  "slopePct": 15.22,
   "slopeSamples": 15,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21755141": {
   "inEsl": true,
@@ -2985,19 +3008,21 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 6.94,
+  "retrieved": "2026-11-16",
+  "slopePct": 10.89,
   "slopeSamples": 17,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21677145": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 3.39,
+  "retrieved": "2026-11-16",
+  "slopePct": 4.75,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21673046": {
   "inEsl": true,
@@ -3023,19 +3048,21 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 4.74,
+  "retrieved": "2026-11-16",
+  "slopePct": 7.52,
   "slopeSamples": 24,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21634279C": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 3.05,
+  "retrieved": "2026-11-16",
+  "slopePct": 4.88,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21757478": {
   "inEsl": true,
@@ -3396,10 +3423,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 3.2,
+  "retrieved": "2026-11-16",
+  "slopePct": 4.95,
   "slopeSamples": 16,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21650095B": {
   "inEsl": true,
@@ -3415,10 +3443,11 @@
   "inEsl": true,
   "landform": "Lower Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 2.22,
+  "retrieved": "2026-11-16",
+  "slopePct": 3.19,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21222004B": {
   "inEsl": true,
@@ -3474,10 +3503,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 7.46,
+  "retrieved": "2026-11-16",
+  "slopePct": 10.55,
   "slopeSamples": 17,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21651006": {
   "inEsl": true,
@@ -3516,10 +3546,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 10.77,
+  "retrieved": "2026-11-16",
+  "slopePct": 16.23,
   "slopeSamples": 21,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21702489": {
   "inEsl": true,
@@ -3560,10 +3591,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 8.79,
+  "retrieved": "2026-11-16",
+  "slopePct": 15.06,
   "slopeSamples": 13,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "17530099": {
   "inEsl": false
@@ -3572,10 +3604,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 5.26,
+  "retrieved": "2026-11-16",
+  "slopePct": 6.58,
   "slopeSamples": 14,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "17511133": {
   "inEsl": false
@@ -3584,28 +3617,31 @@
   "inEsl": true,
   "landform": "Lower Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 1.59,
+  "retrieved": "2026-11-16",
+  "slopePct": 2.65,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21705009C": {
   "inEsl": true,
   "landform": "Lower Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 2.64,
+  "retrieved": "2026-11-16",
+  "slopePct": 3.85,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21211064": {
   "inEsl": true,
   "landform": "Lower Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 2.0,
+  "retrieved": "2026-11-16",
+  "slopePct": 3.0,
   "slopeSamples": 24,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21731050C": {
   "inEsl": true,
@@ -3613,10 +3649,11 @@
   "otherLandforms": [
    "Upper Desert"
   ],
-  "retrieved": "2026-11-11",
-  "slopePct": 20.29,
+  "retrieved": "2026-11-16",
+  "slopePct": 30.66,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "17469004A": {
   "inEsl": false
@@ -3645,28 +3682,31 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 5.6,
+  "retrieved": "2026-11-16",
+  "slopePct": 8.3,
   "slopeSamples": 17,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21947984": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 11.79,
+  "retrieved": "2026-11-16",
+  "slopePct": 17.18,
   "slopeSamples": 12,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21913082": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 7.35,
+  "retrieved": "2026-11-16",
+  "slopePct": 10.62,
   "slopeSamples": 19,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "17413007E": {
   "inEsl": false
@@ -3681,10 +3721,11 @@
   "inEsl": true,
   "landform": "Lower Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 2.93,
+  "retrieved": "2026-11-16",
+  "slopePct": 4.64,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21727034E": {
   "inEsl": false
@@ -3693,10 +3734,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 4.47,
+  "retrieved": "2026-11-16",
+  "slopePct": 7.38,
   "slopeSamples": 20,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21726980": {
   "inEsl": false
@@ -3711,28 +3753,31 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 6.15,
+  "retrieved": "2026-11-16",
+  "slopePct": 9.37,
   "slopeSamples": 18,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21960139": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 7.26,
+  "retrieved": "2026-11-16",
+  "slopePct": 11.15,
   "slopeSamples": 20,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21703007G": {
   "inEsl": true,
   "landform": "Lower Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 3.12,
+  "retrieved": "2026-11-16",
+  "slopePct": 4.44,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21726997": {
   "inEsl": false
@@ -3747,10 +3792,11 @@
   "inEsl": true,
   "landform": "Hillside",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 14.64,
+  "retrieved": "2026-11-16",
+  "slopePct": 22.76,
   "slopeSamples": 15,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21726996": {
   "inEsl": false
@@ -3759,10 +3805,11 @@
   "inEsl": true,
   "landform": "Lower Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 1.97,
+  "retrieved": "2026-11-16",
+  "slopePct": 2.96,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21727025A": {
   "inEsl": false
@@ -3774,19 +3821,21 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 3.1,
+  "retrieved": "2026-11-16",
+  "slopePct": 4.51,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21721105": {
   "inEsl": true,
   "landform": "Hillside",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 15.89,
+  "retrieved": "2026-11-16",
+  "slopePct": 23.45,
   "slopeSamples": 24,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "17513050": {
   "inEsl": false
@@ -3798,10 +3847,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 11.48,
+  "retrieved": "2026-11-16",
+  "slopePct": 17.08,
   "slopeSamples": 17,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21679013L": {
   "inEsl": true,
@@ -3809,10 +3859,11 @@
   "otherLandforms": [
    "Hillside"
   ],
-  "retrieved": "2026-11-11",
-  "slopePct": 12.04,
+  "retrieved": "2026-11-16",
+  "slopePct": 16.88,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "17527004K": {
   "inEsl": false
@@ -3830,19 +3881,21 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 5.72,
+  "retrieved": "2026-11-16",
+  "slopePct": 8.17,
   "slopeSamples": 18,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21960189": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 4.73,
+  "retrieved": "2026-11-16",
+  "slopePct": 7.68,
   "slopeSamples": 16,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "17532010": {
   "inEsl": false
@@ -3854,37 +3907,41 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 18.78,
+  "retrieved": "2026-11-16",
+  "slopePct": 28.21,
   "slopeSamples": 15,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21721099": {
   "inEsl": true,
   "landform": "Hillside",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 15.85,
+  "retrieved": "2026-11-16",
+  "slopePct": 28.53,
   "slopeSamples": 21,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21947741": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 18.18,
+  "retrieved": "2026-11-16",
+  "slopePct": 26.68,
   "slopeSamples": 15,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21947678": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 14.43,
+  "retrieved": "2026-11-16",
+  "slopePct": 21.6,
   "slopeSamples": 18,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21726029B": {
   "inEsl": false
@@ -3902,10 +3959,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 11.29,
+  "retrieved": "2026-11-16",
+  "slopePct": 16.95,
   "slopeSamples": 19,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "17518019": {
   "inEsl": false
@@ -3914,28 +3972,31 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 7.07,
+  "retrieved": "2026-11-16",
+  "slopePct": 11.17,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21720418": {
   "inEsl": true,
   "landform": "Hillside",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 14.59,
+  "retrieved": "2026-11-16",
+  "slopePct": 26.61,
   "slopeSamples": 19,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21959148B": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 6.53,
+  "retrieved": "2026-11-16",
+  "slopePct": 8.77,
   "slopeSamples": 8,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "17535094": {
   "inEsl": false
@@ -3947,10 +4008,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 10.5,
+  "retrieved": "2026-11-16",
+  "slopePct": 16.24,
   "slopeSamples": 10,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "17520021": {
   "inEsl": false
@@ -3961,46 +4023,51 @@
   "otherLandforms": [
    "Upper Desert"
   ],
-  "retrieved": "2026-11-11",
-  "slopePct": 13.16,
+  "retrieved": "2026-11-16",
+  "slopePct": 22.55,
   "slopeSamples": 15,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21947392": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 12.13,
+  "retrieved": "2026-11-16",
+  "slopePct": 18.03,
   "slopeSamples": 17,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21960430": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 5.02,
+  "retrieved": "2026-11-16",
+  "slopePct": 7.17,
   "slopeSamples": 8,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21962361": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 6.42,
+  "retrieved": "2026-11-16",
+  "slopePct": 9.13,
   "slopeSamples": 12,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21685001B": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 3.23,
+  "retrieved": "2026-11-16",
+  "slopePct": 4.75,
   "slopeSamples": 23,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "17518012": {
   "inEsl": false
@@ -4020,19 +4087,21 @@
   "otherLandforms": [
    "Upper Desert"
   ],
-  "retrieved": "2026-11-11",
-  "slopePct": 15.72,
+  "retrieved": "2026-11-16",
+  "slopePct": 22.89,
   "slopeSamples": 12,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21913396": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 4.94,
+  "retrieved": "2026-11-16",
+  "slopePct": 7.82,
   "slopeSamples": 23,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21680006V": {
   "inEsl": true,
@@ -4048,10 +4117,11 @@
   "inEsl": true,
   "landform": "Lower Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 1.52,
+  "retrieved": "2026-11-16",
+  "slopePct": 2.45,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21732638": {
   "inEsl": true,
@@ -4059,55 +4129,61 @@
   "otherLandforms": [
    "Upper Desert"
   ],
-  "retrieved": "2026-11-11",
-  "slopePct": 2.45,
+  "retrieved": "2026-11-16",
+  "slopePct": 3.64,
   "slopeSamples": 14,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21674004T": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 3.07,
+  "retrieved": "2026-11-16",
+  "slopePct": 2.62,
   "slopeSamples": 5,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21677161": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 2.49,
+  "retrieved": "2026-11-16",
+  "slopePct": 3.59,
   "slopeSamples": 9,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21667130A": {
   "inEsl": true,
   "landform": "Lower Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 2.4,
+  "retrieved": "2026-11-16",
+  "slopePct": 4.11,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21652017": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 1.74,
+  "retrieved": "2026-11-16",
+  "slopePct": 2.97,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21672782": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 9.98,
+  "retrieved": "2026-11-16",
+  "slopePct": 14.42,
   "slopeSamples": 21,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21672808": {
   "inEsl": true,
@@ -4131,10 +4207,11 @@
   "inEsl": true,
   "landform": "Lower Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 1.59,
+  "retrieved": "2026-11-16",
+  "slopePct": 2.45,
   "slopeSamples": 20,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21685026A": {
   "inEsl": true,
@@ -4179,10 +4256,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 9.73,
+  "retrieved": "2026-11-16",
+  "slopePct": 15.17,
   "slopeSamples": 20,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "17614546": {
   "inEsl": true,
@@ -4290,10 +4368,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 3.87,
+  "retrieved": "2026-11-16",
+  "slopePct": 6.27,
   "slopeSamples": 21,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21702448": {
   "inEsl": true,
@@ -4371,10 +4450,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 5.43,
+  "retrieved": "2026-11-16",
+  "slopePct": 9.32,
   "slopeSamples": 19,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21960289A": {
   "inEsl": true,
@@ -4470,10 +4550,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 4.55,
+  "retrieved": "2026-11-16",
+  "slopePct": 6.31,
   "slopeSamples": 14,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21708169": {
   "inEsl": true,
@@ -4511,10 +4592,11 @@
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 5.76,
+  "retrieved": "2026-11-16",
+  "slopePct": 7.7,
   "slopeSamples": 12,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21673736": {
   "inEsl": true,
@@ -4533,46 +4615,51 @@
    "Lower Desert",
    "Hillside"
   ],
-  "retrieved": "2026-11-11",
-  "slopePct": 12.73,
+  "retrieved": "2026-11-16",
+  "slopePct": 17.69,
   "slopeSamples": 8,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21677163": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
+  "retrieved": "2026-11-16",
   "slopePct": 7.92,
   "slopeSamples": 4,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21911371": {
   "inEsl": true,
   "landform": "Hillside",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 12.88,
+  "retrieved": "2026-11-16",
+  "slopePct": 18.35,
   "slopeSamples": 12,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21670003Q": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 2.06,
+  "retrieved": "2026-11-16",
+  "slopePct": 3.12,
   "slopeSamples": 10,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21677025G": {
   "inEsl": true,
   "landform": "Upper Desert",
   "otherLandforms": [],
-  "retrieved": "2026-11-11",
-  "slopePct": 4.08,
+  "retrieved": "2026-11-16",
+  "slopePct": 6.51,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21732014E": {
   "inEsl": true,
@@ -4580,10 +4667,11 @@
   "otherLandforms": [
    "Lower Desert"
   ],
-  "retrieved": "2026-11-11",
-  "slopePct": 3.55,
+  "retrieved": "2026-11-16",
+  "slopePct": 5.33,
   "slopeSamples": 25,
-  "slopeStatus": "ok: USGS 3DEP via EPQS"
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  },
  "21647362A": {
   "inEsl": true,
