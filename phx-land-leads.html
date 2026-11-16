@@ -650,6 +650,7 @@ const SALE_SECTIONS = [
   ['Property', [['acres','Acres','num'],['lotSf','Lot Square Footage','num'],['buildingSf','Building Square Footage (to build, all homes)','num'],['units','Homes','num']]],
   ['Sale', [['salePsf','Sale Price ($/sf of building)','usd'],['salePrice','Sale Price, total ($) — auto = $/sf x building sf','usd','auto'],['sellPct','Selling Closing Cost %','pct'],['targetPct','Target Profit (% of sale)','pct']]],
   ['Land', [['askingPrice','Purchase Price','usd'],['landClosePct','Land Closing Cost (% of price)','pct'],['landExp1','Land Acquisition Expense 1','usd'],['demoCost','Demolition (teardown lots)','usd']]],
+  ['Site Work & NAOS (hard cost)', [['siteGrade','Grading, Excavation & Rock','usd'],['siteWalls','Retaining Walls','usd'],['siteDrive','Driveway & Access','usd'],['siteUtil','Utilities: Water, Sewer/Septic, Power, Gas','usd'],['siteDrain','Drainage, Wash Crossings & Flood Mitigation','usd'],['naosCost','NAOS: Fencing, Revegetation, Survey & Easement','usd']]],
   ['Hard Costs', [['hard1','Contract 1 (construction)','usd'],['hard2','Contract 2 (landscaping/utility)','usd']]],
   ['Soft Costs', [['permit','Permit/Inspection Fee 1','usd'],['design','Design Fee 1','usd'],['survey','Survey','usd'],['misc','Miscellaneous','usd'],['finConstr','Loan Points, Appraisal, Title & Draw Fees','usd'],['otherCost1','Other Cost 1','usd']]],
   ['Contingency, Reserve & Fee', [['contPct','Contingency %','pct'],['interestReserve','Interest Reserve ($) — auto','usd','auto'],['devFeePct','Developer Fee %','pct']]],
@@ -659,6 +660,7 @@ const SALE_SECTIONS = [
 // Custom-builder model: the client owns the land and pays the costs and interest; you earn a fee on construction cost only.
 const CUSTOM_SECTIONS = [
   ['Property', [['buildingSf','Building Square Footage','num'],['units','Homes','num']]],
+  ['Site Work & NAOS (hard cost)', [['siteGrade','Grading, Excavation & Rock','usd'],['siteWalls','Retaining Walls','usd'],['siteDrive','Driveway & Access','usd'],['siteUtil','Utilities: Water, Sewer/Septic, Power, Gas','usd'],['siteDrain','Drainage, Wash Crossings & Flood Mitigation','usd'],['naosCost','NAOS: Fencing, Revegetation, Survey & Easement','usd']]],
   ['Hard Costs', [['hard1','Contract 1 (construction)','usd'],['hard2','Contract 2 (landscaping/utility)','usd']]],
   ['Soft Costs (client pays)', [['permit','Permit/Inspection Fee 1','usd'],['design','Design Fee 1','usd'],['survey','Survey','usd'],['misc','Miscellaneous','usd'],['otherCost1','Other Cost 1','usd']]],
   ['Contingency, Fee & Your Costs', [['contPct','Contingency %','pct'],['customFeePct','Builder Fee (% of construction cost)','pct'],['overheadMo','Your Overhead on This Job ($/month)','usd'],['warrantyPct','Warranty Reserve (% of hard)','pct'],['constrTerm','Construction Term (months)','num']]],
@@ -668,6 +670,15 @@ const LOTS_SECTIONS = [
   ['Sell-the-lots model', SUBDIVISION_FIELDS.map(([k,l]) => [k, l, ['sellingCostPct','softPct','contPct','ltcPct','constrRate','landClosePct','taxPct'].includes(k) ? 'pct' : (k==='lots'||k==='holdYears' ? 'num' : 'usd')])],
 ];
 
+// Site-work placeholders per home, scaled by ESL slope when the lead has it. Real numbers come from a civil/geotech bid.
+function siteDefaults(lead, units){
+  const e = lead.esl || {}, slope = Math.min(e.slopePct || 0, 30), u = units || 1, r = x => Math.round(x * u);
+  return {
+    siteGrade: r(20000 * (1 + slope / 10)), siteWalls: r(slope >= 10 ? 15000 * slope / 10 : 0),
+    siteDrive: r(15000 + slope * 1000), siteUtil: r(25000), siteDrain: r(lead.inFloodplain ? 20000 : 5000),
+    naosCost: e.inEsl ? r(8000) : 0,
+  };
+}
 function saleDefaults(lead, units){
   // Seeded from the verdict's plan (3,800 sf homes, $325/sf, 3% selling cost, split homes at the page's split factor) so the shortcut opens the same deal.
   const sf = Math.round(units * 3800), hard1 = Math.round(sf * 325), c = selectedComps(lead);
@@ -678,6 +689,7 @@ function saleDefaults(lead, units){
     askingPrice: 0, landExp1: 0,
     hard1, hard2: Math.round(units*10000),
     permit: Math.round(hard1*0.02), design: Math.round(hard1*0.04), survey: 6000, misc: 10000, finConstr: Math.round(hard1*0.015), otherCost1: 0,
+    ...siteDefaults(lead, units),
     contPct: 0.10, interestReserve: null, devFeePct: 0.03,
     landClosePct: 0.01, preMonths: 3, saleMonths: 3, taxPct: 0.007, brPct: 0.005, utilMo: 600,
     customFeePct: 0.12, overheadMo: 6000, warrantyPct: 0.01,
@@ -690,7 +702,8 @@ function calcSale(s){
   const r = {};
   r.landClose = (s.askingPrice||0) * (s.landClosePct||0);
   r.land = (s.askingPrice||0) + (s.landExp1||0) + (s.demoCost||0) + r.landClose;
-  r.hard = (s.hard1||0) + (s.hard2||0);
+  r.site = (s.siteGrade||0) + (s.siteWalls||0) + (s.siteDrive||0) + (s.siteUtil||0) + (s.siteDrain||0) + (s.naosCost||0);
+  r.hard = (s.hard1||0) + (s.hard2||0) + r.site;
   r.softBase = (s.permit||0) + (s.design||0) + (s.survey||0) + (s.misc||0) + (s.otherCost1||0);
   r.soft = r.softBase + (s.finConstr||0);
   r.contingency = (s.contPct||0) * (r.hard + r.softBase);
@@ -717,7 +730,8 @@ function calcSale(s){
 
 function calcCustom(s){
   const r = {};
-  r.hard = (s.hard1||0) + (s.hard2||0);
+  r.site = (s.siteGrade||0) + (s.siteWalls||0) + (s.siteDrive||0) + (s.siteUtil||0) + (s.siteDrain||0) + (s.naosCost||0);
+  r.hard = (s.hard1||0) + (s.hard2||0) + r.site;
   r.softBase = (s.permit||0) + (s.design||0) + (s.survey||0) + (s.misc||0) + (s.otherCost1||0);
   r.contingency = (s.contPct||0) * (r.hard + r.softBase);
   r.direct = r.hard + r.softBase + r.contingency;   // what the client pays for construction; land and interest are theirs
@@ -771,7 +785,7 @@ function renderSaleResults(idx, state){
   document.getElementById(`calc-detail-${idx}`).innerHTML = `
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:14px;">
       <table class="comps-table"><thead><tr><th colspan="2">Development budget</th></tr></thead><tbody>
-        ${row('Land Total', money(r.land))}${row('Hard Cost Total', money(r.hard))}${row('Soft Cost Total', money(r.soft))}
+        ${row('Land Total', money(r.land))}${row('Hard Cost Total (incl. site work ' + money(r.site) + ')', money(r.hard))}${row('Soft Cost Total', money(r.soft))}
         ${row('Contingency $', money(r.contingency))}${row('Interest Reserve', money(r.interestReserve))}${row('Hold Costs (tax, insurance, utilities)', money(r.holdCosts))}${row('Developer Fee $', money(r.devFee))}
         ${row('<b>Total Development Cost</b>', '<b>'+money(r.total)+'</b>')}${row('Direct Costs (bank-financeable)', money(r.direct))}
         ${row('Construction Loan Amount', money(r.constrLoan))}${row('Equity Required (construction)', money(r.equity))}</tbody></table>
