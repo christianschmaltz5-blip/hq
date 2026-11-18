@@ -6,6 +6,7 @@ Call underwrite(lead, fetch_comps=False) to recalculate stored data offline.
 Build cost and site work remain placeholders until real bids are available.
 """
 import argparse
+import hashlib
 import json
 import math
 import re
@@ -315,6 +316,8 @@ def recalculate_data(data, *, cached=False):
         lead["verdict"] = underwrite(lead, fetch_comps=not cached, area_per_acre=areas)
         rescore(lead)
     data["leads"].sort(key=lambda l: -l["score"])
+    data["assumptionsVersion"] = hashlib.sha1(json.dumps(A, sort_keys=True).encode()).hexdigest()[:8]   # changes whenever the cost assumptions do
+    data["underwrittenAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     counts = {}
     for lead in data["leads"]:
         label = (lead["verdict"] or {}).get("label", "n/a")
@@ -326,10 +329,14 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cached", action="store_true",
                         help="recalculate stored comps offline; preserve retrieval dates and lookup errors")
+    parser.add_argument("--dry-run", action="store_true", help="recalculate and print counts, but don't write data.js")
     args = parser.parse_args(argv)
     p = Path(__file__).resolve().parents[2] / "phx-land-leads" / "data.js"
     d = json.loads(re.search(r"= (\{.*\});", p.read_text(), re.S).group(1))
     counts = recalculate_data(d, cached=args.cached)
+    if args.dry_run:
+        print("dry run, data.js not written:", counts)
+        return 0
     tmp = p.with_suffix(".js.tmp")   # write then rename, so a crash can't leave a half-written data.js
     tmp.write_text("window.PHX_LAND_LEADS = " + json.dumps(d, indent=2) + ";\n")
     tmp.replace(p)

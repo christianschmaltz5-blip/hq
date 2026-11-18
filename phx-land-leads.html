@@ -591,6 +591,7 @@ document.getElementById('methodology-note').innerHTML =
 
 document.getElementById('meta-row').innerHTML = `
   <div class="meta-pill live"><span class="meta-dot"></span>Updated ${esc(D.updated)}</div>
+  ${(!D.assumptionsVersion || !D.underwrittenAt || Date.now() - Date.parse(D.underwrittenAt) > 2 * 864e5) ? '<div class="meta-pill" title="Verdicts have no version stamp or were last recalculated over 2 days ago">⚠ Verdicts may be stale</div>' : `<div class="meta-pill" title="Underwritten ${esc(D.underwrittenAt)}">Assumptions ${esc(D.assumptionsVersion)}</div>`}
   <div class="meta-pill"><b>${esc(D.parcelsScanned)}</b>&nbsp;parcels scanned</div>
   <div class="meta-pill"><b>${(D.leads||[]).length}</b>&nbsp;leads ranked</div>
   ${D.newLeadsThisRun ? `<div class="meta-pill" style="background:var(--success-soft);border-color:rgba(63,122,87,.3);color:#2f5b41;"><b>${esc(D.newLeadsThisRun)}</b>&nbsp;new since last scan</div>` : ''}
