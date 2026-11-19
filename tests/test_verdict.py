@@ -75,6 +75,17 @@ class EconomicsTests(unittest.TestCase):
             result = verdict.underwrite(lead(), fetch_comps=False)
         self.assertEqual((result["strategy"], result["label"], result["profit"]), ("1 custom home", "Pass", -82512))
 
+    def test_terrain_risk_points_from_slope(self):
+        self.assertEqual([verdict.terrain_risk({"esl": {"slopePct": x}}) for x in (None, 9.9, 10, 14.9, 15, 24.3)], [0, 0, 1, 1, 2, 2])
+        self.assertEqual(verdict.terrain_risk({}), 0)   # no ESL data (non-Scottsdale): no penalty
+        with patch.object(verdict, "_esri_query"):
+            flat, steep = lead(), lead()
+        steep["esl"] = {"slopePct": 24.3}
+        with patch.object(verdict, "_esri_query"):
+            a, b = verdict.underwrite(flat, fetch_comps=False), verdict.underwrite(steep, fetch_comps=False)
+        order = ["Low", "Medium", "High"]
+        self.assertGreaterEqual(order.index(b["risk"]), order.index(a["risk"]))
+
     def test_commercial_zoning_blocks_residential_verdict(self):
         parcel = lead()
         parcel["currentZoning"] = "CP/GCP"
