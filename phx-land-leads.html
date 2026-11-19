@@ -591,7 +591,7 @@ document.getElementById('methodology-note').innerHTML =
 
 document.getElementById('meta-row').innerHTML = `
   <div class="meta-pill live"><span class="meta-dot"></span>Updated ${esc(D.updated)}</div>
-  ${(!D.assumptionsVersion || !D.underwrittenAt || Date.now() - Date.parse(D.underwrittenAt) > 2 * 864e5) ? '<div class="meta-pill" title="Verdicts have no version stamp or were last recalculated over 2 days ago">⚠ Verdicts may be stale</div>' : `<div class="meta-pill" title="Underwritten ${esc(D.underwrittenAt)}">Assumptions ${esc(D.assumptionsVersion)}</div>`}
+  ${!stampsOk() ? '<div class="meta-pill" title="Verdicts have a missing, invalid or future version stamp, or were last recalculated over 2 days ago. CALL FIRST is off.">⚠ Verdicts may be stale</div>' : `<div class="meta-pill" title="Underwritten ${esc(D.underwrittenAt)}">Assumptions ${esc(D.assumptionsVersion)}</div>`}
   <div class="meta-pill"><b>${esc(D.parcelsScanned)}</b>&nbsp;parcels scanned</div>
   <div class="meta-pill"><b>${(D.leads||[]).length}</b>&nbsp;leads ranked</div>
   ${D.newLeadsThisRun ? `<div class="meta-pill" style="background:var(--success-soft);border-color:rgba(63,122,87,.3);color:#2f5b41;"><b>${esc(D.newLeadsThisRun)}</b>&nbsp;new since last scan</div>` : ''}
@@ -2620,6 +2620,10 @@ function fullModel(l){   // full pro forma (calcSale) at the lead's saved/defaul
   const st = calcStateFor(l); if(!(Number(st.askingPrice) > 0)) st.askingPrice = landBasis(l).land;
   return st.mode === 'lots' || st.mode === 'custom' ? null : calcSale(st);
 }
+function stampsOk(){   // version stamp present, underwrittenAt valid, not in the future (5 min skew), and under 2 days old
+  const age = Date.now() - Date.parse(D.underwrittenAt);
+  return !!D.assumptionsVersion && age >= -3e5 && age <= 2 * 864e5;   // NaN fails both comparisons
+}
 function fullOk(l){   // CALL FIRST needs the full model to clear the profit target too (fail closed when it can't run)
   const f = fullModel(l); return !!f && !f.error && f.profit > 0 && f.profitMargin >= (parseFloat(document.getElementById('hcProfit').value) || 0) / 100;
 }
@@ -2629,7 +2633,7 @@ function renderTopProfit(){
   const all = (D.leads || []).filter(l => !l.stale && l.parcelStatus === 'vacant' && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn))
     .map(l => ({ l, p: profitFor(l), hi: profitFor(l, 50), sig: sellerSignals(l) })).filter(r => r.p)
     .map(r => { const c = selectedComps(r.l) || {}, mp = c.medPsf || (c.fellBack ? c.psf : 0), mid = mp ? profitFor(r.l, 0, mp) : null, midHi = mp ? profitFor(r.l, 50, mp) : null;   // midHi: +$50/sf build AND median price together   // live median profit at the calculator's inputs; no median = not eligible
-      return Object.assign(r, { mp, mid, lo: profitFor(r.l, 0, lowSalePsf(r.l)), full: fullModel(r.l), call: r.hi.profit > 0 && fullOk(r.l) && !!mid && mid.profit >= 0 && !!midHi && Number.isFinite(midHi.profit) && midHi.profit >= 0 && r.sig.length >= 2 && landBasis(r.l).ok && !r.l.inFloodplain }); }).sort((a, b) => b.p.adj - a.p.adj);
+      return Object.assign(r, { mp, mid, lo: profitFor(r.l, 0, lowSalePsf(r.l)), full: fullModel(r.l), call: stampsOk() && r.hi.profit > 0 && fullOk(r.l) && !!mid && mid.profit >= 0 && !!midHi && Number.isFinite(midHi.profit) && midHi.profit >= 0 && r.sig.length >= 2 && landBasis(r.l).ok && !r.l.inFloodplain }); }).sort((a, b) => b.p.adj - a.p.adj);
   const pos = all.filter(r => r.p.profit > 0).length, rows = all.slice(0, 25);
   const addr = r => esc(r.l.address.split('  ')[0]), profitable = all.filter(r => r.p.profit > 0), calls = all.filter(r => r.call);
   document.getElementById('tp-summary').innerHTML = `${pos} of ${all.length} leads with nearby home sales show a profit at your calculator numbers; ${calls.length} are marked 📞 CALL FIRST (profitable and at target margin in the full pro forma, still profitable at +$50/sf build combined with the median comp price, 2+ seller signals AND a supported land price). Top ${rows.length} below.`
