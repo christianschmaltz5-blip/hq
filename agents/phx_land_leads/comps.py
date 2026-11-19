@@ -26,6 +26,8 @@ import urllib.parse
 import urllib.request
 from datetime import date, datetime, timedelta, timezone
 
+import footprints
+
 MARICOPA_PARCELS = "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3/query"
 
 COMP_OUT_FIELDS = (
@@ -285,6 +287,11 @@ def _build_comps_for_lead(lead, today=None, vacant_only=None):
         )
         if well_sized >= MIN_COMPS or miles == STEPS[-1][0]:
             break
+
+    # Assessor lag: a "vacant" sale may now have a house on it. Drop built comps (top 25 by score is plenty).
+    scored.sort(key=lambda t: -t[0])
+    built = footprints.built_apns((c.get("APN"), c.get("LATITUDE"), c.get("LONGITUDE"), c.get("LAND_SIZE")) for *_, c in scored[:25])
+    scored = [t for t in scored if t[3].get("APN") not in built]
 
     if not scored:
         class_note = f" of the same land-use type ({subj_class})" if subj_class else ""

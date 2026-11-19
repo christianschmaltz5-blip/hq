@@ -47,6 +47,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from datetime import date, datetime
 
+import footprints  # drops vacant-coded parcels that already have a house on them (Assessor lag)
 from comps import _land_use_class  # same PUC-based classifier comps already uses to
                                     # match residential-to-residential / commercial-to-commercial
 
@@ -890,7 +891,7 @@ def discover_scottsdale(known_apns):
     # 0.5-2.5 acres (where a 3,800 sf custom home fits comfortably) first, nearest to 1 acre first
     ok.sort(key=lambda p: abs(math.log(_to_float(p["LAND_SIZE"]) / 43560)))
     print(f"  Scottsdale discovery: {len(ok)} vacant residential lots in band, enriching {min(len(ok), SCOTTSDALE_DISCOVER_MAX)}")
-    return ok[:SCOTTSDALE_DISCOVER_MAX]
+    return footprints.drop_built(ok[:SCOTTSDALE_DISCOVER_MAX + 150])[:SCOTTSDALE_DISCOVER_MAX]
 
 
 def enrich_east(apns):
@@ -902,6 +903,7 @@ def enrich_east(apns):
     for i in range(0, len(ordered), 100):   # keep the WHERE clause short
         parcels += fetch_parcels("APN IN (" + ",".join(f"'{a}'" for a in ordered[i:i + 100]) + ")")
     parcels += discover_scottsdale(apns)
+    parcels = footprints.drop_built(parcels)
     parcels = [dict(p, _east=True) for p in parcels if p.get("LATITUDE") is not None and p.get("LONGITUDE") is not None]
     print(f"Enriching {len(parcels)}/{len(apns)} east watch-list parcels...")
     out = []
@@ -973,7 +975,7 @@ def main():
         acres = (p.get("LAND_SIZE") or 0) / 43560
         return 0 if 0.15 <= acres <= 5 else 1
     vacant_candidates.sort(key=infill_priority)
-    vacant_candidates = vacant_candidates[:MAX_PARCELS_ENRICHED]
+    vacant_candidates = footprints.drop_built(vacant_candidates[:MAX_PARCELS_ENRICHED])
 
     improved_candidates = [
         p for p in improved_parcels
@@ -1092,6 +1094,7 @@ def main():
         "zipCodes": NORTH_PHOENIX_ZIPS,
         "parcelsScanned": total_parcels_scanned,
         "newLeadsThisRun": new_count,
+        "removedBuilt": footprints.REMOVED,   # vacant-coded parcels dropped because a house footprint sits on them
         "leads": top_leads,
         "history": history,
         "methodologyNote": (
