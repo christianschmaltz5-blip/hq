@@ -126,6 +126,12 @@
 .letter-actions button{font-size:12.5px; font-weight:700; padding:9px 16px; border-radius:8px; cursor:pointer; border:1px solid var(--card-border); background:#fff;}
 .letter-actions button.primary{background:var(--accent); color:#fff; border:none;}
 #letterPrintArea{display:none;}
+#mailPrint{display:none;}
+.mp-page{box-sizing:border-box;width:8.5in;height:11in;padding:1in 1.1in;page-break-after:always;font:12pt/1.55 Georgia,'Times New Roman',serif;color:#000;white-space:pre-line;}
+.mp-page .mp-from{white-space:pre-line;margin-bottom:.35in;} .mp-page p{margin:0 0 .9em;white-space:pre-line;}
+.mp-env{box-sizing:border-box;position:relative;width:9.5in;height:4.125in;page-break-after:always;font:13pt/1.35 Georgia,'Times New Roman',serif;color:#000;white-space:pre-line;}
+.mp-env .r{position:absolute;left:.45in;top:.4in;font-size:11pt;} .mp-env .to{position:absolute;left:3.7in;top:1.65in;font-size:14pt;}
+@media print{ body.printing-mail > *:not(#mailPrint){display:none!important;} body.printing-mail > #mailPrint{display:block!important;} }
 @media print{
   body:not(.printing-lead) > *:not(.letter-overlay){display:none!important;}
   .letter-overlay{position:static!important; background:none!important; display:block!important; padding:0!important;}
@@ -399,6 +405,12 @@
             <option value="all">All</option><option value="none">Not contacted yet</option><option value="noletter">No letter yet</option><option value="nophone">No call yet</option><option value="noemail">No email yet</option><option value="any">Contacted any way</option></select></label>
           <span id="otSummary" style="font-size:12.5px;color:var(--text-soft);"></span>
         </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:10px;">
+          <label style="font-size:12.5px;color:var(--text-soft);">Print round <select class="filter-input" id="otRound"><option value="1">1st letter</option><option value="2">Follow-up 2</option><option value="3">Follow-up 3 (last)</option></select></label>
+          <button class="mail-btn" onclick="otPrint('letter')">🖨 Print letters</button>
+          <button class="mail-btn" onclick="otPrint('env')">🖨 Print #10 envelopes</button>
+          <span id="otPrintNote" style="font-size:12px;color:var(--text-soft);">Prints for every lead in the table below, so set the score and Show filters first.</span>
+        </div>
         <div style="overflow-x:auto;"><table class="comps-table" id="otTable"></table></div>
       </div>
 
@@ -557,6 +569,8 @@ BEFORE YOU SIGN ANYTHING
   </div>
 </div>
 
+<div id="mailPrint"></div>
+<style id="mailPage"></style>
 <div class="letter-overlay" id="letterOverlay">
   <div class="letter-modal">
     <h3>Mail letter</h3>
@@ -1237,6 +1251,21 @@ function otLinks(l){
     l.lat && l.lng ? lk('🗺 Map', `https://www.google.com/maps/search/?api=1&query=${l.lat},${l.lng}`, 'target="_blank" rel="noopener"') : ''
   ].join('');
 }
+function mailPrint(kind, leads, round){
+  const ok = leads.filter(l => l.ownerMailAddress && !fmtEnvelope(l).warn), skipped = leads.length - ok.length;
+  const date = new Date().toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'});
+  const ret = 'Christian Schmaltz\nP.O. Box 11097\nPhoenix, AZ 85061';
+  document.getElementById('mailPrint').innerHTML = ok.map(l => kind === 'env'
+    ? `<div class="mp-env"><div class="r">${esc(ret)}</div><div class="to">${esc(fmtEnvelope(l).lines)}</div></div>`
+    : `<div class="mp-page"><div class="mp-from">${esc(ret)}</div><p>${date}</p><p>${esc(handSal(l))}</p><p>${esc(mailBody(l, round))}</p><p>Thank you,\n\n\n\nChristian Schmaltz\n605-786-5520</p></div>`).join('');
+  document.getElementById('mailPage').textContent = kind === 'env' ? '@page{size:9.5in 4.125in;margin:0}' : '@page{size:8.5in 11in;margin:0}';
+  if(ok.length){ document.body.classList.add('printing-mail'); window.addEventListener('afterprint', () => document.body.classList.remove('printing-mail'), {once:true}); window.print(); }
+  return {printed: ok.length, skipped};
+}
+function otPrint(kind){
+  const r = mailPrint(kind, window._otRows || [], Number(document.getElementById('otRound').value));
+  document.getElementById('otPrintNote').textContent = r.printed ? `Sent ${r.printed} ${kind === 'env' ? 'envelopes' : 'letters'} to the printer.` + (r.skipped ? ` Skipped ${r.skipped} with a bad or missing mailing address.` : '') : 'Nothing to print: no leads in the table have a good mailing address.';
+}
 function renderOutreachTracker(){
   const t = document.getElementById('otTable'); if(!t) return;
   const min = Number(document.getElementById('otMinScore').value) || 0, show = document.getElementById('otShow').value;
@@ -1244,6 +1273,7 @@ function renderOutreachTracker(){
   const all = (D.leads || []).filter(l => !l.stale && !isDiscarded(l.apn) && (l.score || 0) >= min).sort((a, b) => (b.score || 0) - (a.score || 0));
   const any = l => m.phone[l.apn] || m.email[l.apn] || m.letter[l.apn];
   const rows = all.filter(l => show === 'all' || (show === 'none' && !any(l)) || (show === 'any' && any(l)) || (show === 'noletter' && !m.letter[l.apn]) || (show === 'nophone' && !m.phone[l.apn]) || (show === 'noemail' && !m.email[l.apn]));
+  window._otRows = rows;
   const n = k => all.filter(l => m[k][l.apn]).length;
   document.getElementById('otSummary').textContent = `${all.length} leads at this score: ${n('phone')} called, ${n('email')} emailed, ${n('letter')} letters written`;
   const box = (k, l) => `<td style="text-align:center;white-space:nowrap;"><label style="cursor:pointer;"><input type="checkbox" ${m[k][l.apn] ? 'checked' : ''} onchange="otToggle('${k}','${esc(l.apn)}',this)"> <span style="font-size:11px;color:var(--text-soft);">${m[k][l.apn] ? esc(m[k][l.apn]) : ''}</span></label></td>`;
@@ -1997,11 +2027,22 @@ function fmtEnvelope(lead){
   return { lines: name + '\n' + (addr || raw), warn };
 }
 
-function buildHandLetter(lead){
+function handSal(lead){
   const own = lead.ownership || {}, o = (lead.ownerName || '').replace(/\s+/g,' ').trim(), p = o.split('/'), w = o.split(' ');
   let sal = 'Dear Property Owner,';
   if(!own.isEntityOwner && p.length >= 2 && p[0].split(' ')[1] && p[1].split(' ')[0]) sal = `Dear ${titleCase(p[0].split(' ')[1])} and ${titleCase(p[1].split(' ')[0])},`;
   else if(!own.isEntityOwner && w[1] && w[1].length > 1) sal = `Dear ${titleCase(w[1])},`;
+  return sal;
+}
+// Body of the printed letter. Round 1 = the same words as the handwritten letter; rounds 2 and 3 are short follow-ups.
+function mailBody(lead, round){
+  const a = titleCase(String(lead.address || '').split(/\s{2,}/)[0]), enc = !!onePagerLink(lead);
+  if(round === 2) return `I wrote a few weeks ago about your ${lead.landAcres}-acre lot at ${a}, and I wanted to make sure my letter reached you.\n\nIf you would ever consider selling, I would buy it as-is for cash. Or, if you would rather keep your lot's value, we could build a home together and share in the profit when it sells.\n\nNo pressure either way. I would just enjoy a short call.`;
+  if(round === 3) return `This is my last note about your ${lead.landAcres}-acre lot at ${a}. If the timing was not right before, it may be now.\n\nMy offer still stands: a cash purchase as-is, or a partnership where we build a home on your lot together and share the profit. I would be glad to walk through real numbers for whichever you prefer.\n\nThank you for your time.`;
+  return `My name is Christian Schmaltz. I am a local home builder, and I noticed you own the ${lead.landAcres}-acre lot at ${a}. I am not a realtor.\n\nIf you would ever consider selling, I would buy it as-is for cash. Or, if you would rather keep your lot's value, we could build a home together and share in the profit when it sells.\n\n${enc ? 'I have enclosed a short summary of how a partnership would work on your lot. It shows your parcel outlined on a map, an example of the kind of home I would build, and recent home sales nearby.\n\n' : ''}Either way, no pressure. I would just enjoy a short call.`;
+}
+function buildHandLetter(lead){
+  const sal = handSal(lead);
   const a = titleCase(String(lead.address || '').split(/\s{2,}/)[0]);
   const enc = !!onePagerLink(lead), env = fmtEnvelope(lead), ret = 'Christian Schmaltz\nP.O. Box 11097\nPhoenix, AZ 85061';
   return `STEP 1: FRONT OF THE ENVELOPE${env.warn ? '\n*** ' + env.warn + ' ***' : ''}
@@ -2019,11 +2060,7 @@ Print clearly in dark ink, one line per row, copied exactly as shown. Nothing el
 STEP 2: THE LETTER (blue or black ink on plain paper; nothing from Step 1 goes on it)
 ${sal}
 
-My name is Christian Schmaltz. I am a local home builder, and I noticed you own the ${lead.landAcres}-acre lot at ${a}. I am not a realtor.
-
-If you would ever consider selling, I would buy it as-is for cash. Or, if you would rather keep your lot's value, we could build a home together and share in the profit when it sells.
-
-${enc ? 'I have enclosed a short summary of how a partnership would work on your lot. It shows your parcel outlined on a map, an example of the kind of home I would build, and recent home sales nearby.\n\n' : ''}Either way, no pressure. I would just enjoy a short call.
+${mailBody(lead, 1)}
 
 Thank you,
 Christian Schmaltz
