@@ -2655,8 +2655,10 @@ function salesCell(l){
   const ex = (nb.comps || nb.examples || []).map(e => `${esc(e.address)} · ${mo(e.price)} · ${e.sf.toLocaleString()} sf · $${Math.round(e.price / e.sf)}/sf · ${esc((e.sold||'').slice(0,7))}${e.apn ? ' · APN ' + esc(e.apn) : ''}${e.yearBuilt ? ' · built ' + esc(e.yearBuilt) : ''}${e.distanceMi != null ? ' · ' + e.distanceMi + ' mi' : ''}`).join('<br>');
   return `<div style="font-size:10.5px;line-height:1.35;min-width:230px;">${nb.fellBack ? 'Median (FALLBACK)' : '2nd-highest'} $${nb.psf}/sf of ${nb.n} sales within ${nb.radiusMi}mi${nb.lowPsf && nb.highPsf ? ' (range $' + nb.lowPsf + '–$' + nb.highPsf + ')' : ''}${ex ? `<br><span style="color:var(--text-faint);">Closest:<br>${ex}</span>` : (nb.price ? ` · median home $${(nb.price / 1e6).toFixed(2)}M` : '')}<br>${compSourceHtml(l)}</div>`;
 }
-function fullModel(l){   // full pro forma (calcSale) at the lead's saved/default calculator state, priced at the supported land price
+function fullModel(l, psf, extraHard){   // full pro forma (calcSale) at the lead's saved/default calculator state, priced at the supported land price; optional psf (overrides any saved salePrice) and extra build $/sf = stress cases
   const st = calcStateFor(l); if(!(Number(st.askingPrice) > 0)) st.askingPrice = landBasis(l).land;
+  if(psf){ const hc = (parseFloat((document.getElementById('moSplitHaircut') || {}).value) || 80) / 100; st.salePrice = psf * (st.units > 1 ? hc : 1) * st.buildingSf; }
+  if(extraHard) st.hard1 = (st.hard1 || 0) + extraHard * st.buildingSf;
   return st.mode === 'lots' || st.mode === 'custom' ? null : calcSale(st);
 }
 function stampsOk(){   // version stamp present, underwrittenAt valid, not in the future (5 min skew), and under 2 days old
@@ -2666,13 +2668,14 @@ function stampsOk(){   // version stamp present, underwrittenAt valid, not in th
 function fullOk(l){   // CALL FIRST needs the full model to clear the profit target too (fail closed when it can't run)
   const f = fullModel(l); return !!f && !f.error && f.profit > 0 && f.profitMargin >= (parseFloat(document.getElementById('hcProfit').value) || 0) / 100;
 }
+function stressOk(l, psf, extra){ const f = fullModel(l, psf, extra); return !!f && !f.error && Number.isFinite(f.profit) && f.profit >= 0; }   // CALL FIRST stress cases run on the same calcSale model as the base gate
 function renderTopProfit(){
   const m = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString();
   const tags = loadCondition();
   const all = (D.leads || []).filter(l => !l.stale && l.parcelStatus === 'vacant' && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn))
     .map(l => ({ l, p: profitFor(l), hi: profitFor(l, 50), sig: sellerSignals(l) })).filter(r => r.p)
     .map(r => { const c = selectedComps(r.l) || {}, mp = c.medPsf || (c.fellBack ? c.psf : 0), mid = mp ? profitFor(r.l, 0, mp) : null, midHi = mp ? profitFor(r.l, 50, mp) : null;   // midHi: +$50/sf build AND median price together   // live median profit at the calculator's inputs; no median = not eligible
-      return Object.assign(r, { mp, mid, lo: profitFor(r.l, 0, lowSalePsf(r.l)), full: fullModel(r.l), call: stampsOk() && r.hi.profit > 0 && fullOk(r.l) && !!mid && mid.profit >= 0 && !!midHi && Number.isFinite(midHi.profit) && midHi.profit >= 0 && r.sig.length >= 2 && landBasis(r.l).ok && !r.l.inFloodplain }); }).sort((a, b) => b.p.adj - a.p.adj);
+      return Object.assign(r, { mp, mid, lo: profitFor(r.l, 0, lowSalePsf(r.l)), full: fullModel(r.l), call: stampsOk() && r.hi.profit > 0 && fullOk(r.l) && !!mp && stressOk(r.l, mp, 0) && stressOk(r.l, mp, 50) && r.sig.length >= 2 && landBasis(r.l).ok && !r.l.inFloodplain }); }).sort((a, b) => b.p.adj - a.p.adj);
   const pos = all.filter(r => r.p.profit > 0).length, rows = all.slice(0, 25);
   const addr = r => esc(r.l.address.split('  ')[0]), profitable = all.filter(r => r.p.profit > 0), calls = all.filter(r => r.call);
   document.getElementById('tp-summary').innerHTML = `${pos} of ${all.length} leads with nearby home sales show a profit at your calculator numbers; ${calls.length} are marked 📞 CALL FIRST (profitable and at target margin in the full pro forma, still profitable at +$50/sf build combined with the median comp price, 2+ seller signals AND a supported land price). Top ${rows.length} below.`
