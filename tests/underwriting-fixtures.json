@@ -264,5 +264,33 @@
       "risk": "Medium",
       "jurisdiction": "SCOTTSDALE"
     }
+  ],
+  "lotSplitCases": [
+    {
+      "name": "lot_split_mode_4home_capacity",
+      "description": "Zoning R1-8 on 40,000 sf fits 4 lots (85% usable). Splits off: one house only. Splits on: best of 1 or 4 homes (profit) and best supportable land (offer). Python Decimal, 40 digits; zero closing/contingency/hold.",
+      "lead": {
+        "currentZoning": "R1-8",
+        "landSf": 40000,
+        "land": 535000,
+        "demo": 45000,
+        "psf": 600
+      },
+      "target": 0.1,
+      "expected": {
+        "off": {
+          "n": 1,
+          "profit": 153134.0,
+          "offerN": 1,
+          "maxLand": 465031.7757009346
+        },
+        "on": {
+          "n": 4,
+          "profit": 624806.0,
+          "offerN": 1,
+          "maxLand": 465031.7757009346
+        }
+      }
+    }
   ]
 }

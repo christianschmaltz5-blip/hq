@@ -221486,8 +221486,8 @@ window.PHX_LAND_LEADS = {
         "finished": 2310400,
         "profit": -1993028,
         "marginPct": -86,
-        "marginPctAt275": -16,
-        "profitAt275": -1180166,
+        "marginPctAt275": -76,
+        "profitAt275": -1751508,
         "salePsf": 608,
         "risk": "High",
         "medianStress": {
@@ -234082,8 +234082,8 @@ window.PHX_LAND_LEADS = {
         "finished": 2101400,
         "profit": -4654350,
         "marginPct": -221,
-        "marginPctAt275": -64,
-        "profitAt275": -4287494,
+        "marginPctAt275": -210,
+        "profitAt275": -4412830,
         "salePsf": 553,
         "risk": "High",
         "medianStress": {
@@ -236066,6 +236066,7 @@ window.PHX_LAND_LEADS = {
     ],
     "note": "Percent of the lot that must stay natural. A slope on a row's upper edge belongs to that row (2.0% -> 0-2%, 25.0% -> 15-25%)."
   },
-  "assumptionsVersion": "be40955d",
-  "underwrittenAt": "2026-11-20T16:32:58+00:00"
+  "assumptionsVersion": "3c431ead",
+  "underwrittenAt": "2026-11-23T00:56:37+00:00",
+  "lotSplits": false
 };

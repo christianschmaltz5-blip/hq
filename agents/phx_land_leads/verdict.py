@@ -26,7 +26,8 @@ def _parse_num(value):
 
 A = dict(sf=HOUSE_COMP_POLICY["planSf"], hard=(275, 325), soft=0.08, site=65_000, fin=0.07, sell=0.03, close=0.01, cont=0.10, hold=20_000,
          adu=dict(n=0, sf=800, hard=350, site=15_000, value=0),
-         split_cost=25_000, haircut=0.8, min_lot=14_375, usable=0.85, good=0.10, maybe=0.05)
+         split_cost=25_000, haircut=0.8, min_lot=14_375, usable=0.85, good=0.10, maybe=0.05,
+         splits=False)   # ONE house per lot by default; --splits opts in to pricing lot splits (also changes assumptionsVersion)
 COMPS_WEIGHT = 0.8                  # lead score = 80% comps margin + 20% additive signals (signalScore)
 MARGIN_FLOOR, MARGIN_CEIL = -20, 25 # marginPct mapped linearly onto comps score 0..100
 
@@ -244,7 +245,7 @@ def underwrite(l, *, fetch_comps=True, overrides=None, area_per_acre=None):
     if not land:
         return None
     guess = 2 if per_acre else 0
-    n_split, known = split_n(l)
+    n_split, known = split_n(l) if A["splits"] else (1, False)
 
     def inputs(n, hard, psf=None):
         return dict(sf=A["sf"], hard=hard, soft=A["soft"], site=A["site"], fin=A["fin"], sell=A["sell"], close=A["close"], cont=A["cont"], hold=A["hold"],
@@ -322,6 +323,7 @@ def recalculate_data(data, *, cached=False):
         lead["verdict"] = underwrite(lead, fetch_comps=not cached, area_per_acre=areas)
         rescore(lead)
     data["leads"].sort(key=lambda l: -l["score"])
+    data["lotSplits"] = A["splits"]   # the page refuses stored verdicts whose mode differs from its switch
     data["assumptionsVersion"] = hashlib.sha1(json.dumps(A, sort_keys=True).encode()).hexdigest()[:8]   # changes whenever the cost assumptions do
     data["underwrittenAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     counts = {}
@@ -336,7 +338,9 @@ def main(argv=None):
     parser.add_argument("--cached", action="store_true",
                         help="recalculate stored comps offline; preserve retrieval dates and lookup errors")
     parser.add_argument("--dry-run", action="store_true", help="recalculate and print counts, but don't write data.js")
+    parser.add_argument("--splits", action="store_true", help="price lot splits too (default: one house per lot)")
     args = parser.parse_args(argv)
+    A["splits"] = args.splits
     p = Path(__file__).resolve().parents[2] / "phx-land-leads" / "data.js"
     d = json.loads(re.search(r"= (\{.*\});", p.read_text(), re.S).group(1))
     counts = recalculate_data(d, cached=args.cached)

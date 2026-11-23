@@ -56,7 +56,7 @@ class EconomicsTests(unittest.TestCase):
 
     def test_underwrite_matches_split_fixture_and_signed_offer(self):
         parcel = lead()
-        with patch.object(verdict, "_esri_query") as network, patch.dict(verdict.A, close=0, cont=0, hold=0, site=10_000):   # the fixture predates the screen costs
+        with patch.object(verdict, "_esri_query") as network, patch.dict(verdict.A, close=0, cont=0, hold=0, site=10_000, splits=True):   # the fixture predates the screen costs
             result = verdict.underwrite(parcel, fetch_comps=False)
         network.assert_not_called()
         self.assertEqual(result["strategy"], "4 homes")
@@ -410,6 +410,37 @@ class ScottsdaleTests(unittest.TestCase):
     def test_unverified_psf_flag_is_higher_in_scottsdale(self):
         self.assertEqual(verdict.psf_flag({"jurisdiction": "SCOTTSDALE"}), 1000)
         self.assertEqual(verdict.psf_flag({"jurisdiction": "PHOENIX"}), 800)
+
+
+class LotSplitSwitchTests(unittest.TestCase):
+    """Default is ONE house; splits on must match the independent Decimal fixture (= the old behaviour)."""
+    def test_modes_match_shared_fixture(self):
+        case = json.loads(Path(__file__).with_name("underwriting-fixtures.json").read_text())["lotSplitCases"][0]
+        for mode in ("off", "on"):
+            with self.subTest(mode=mode):
+                parcel = {**lead(), "landSf": case["lead"]["landSf"], "currentZoning": case["lead"]["currentZoning"]}
+                parcel["houseComps"] = {**parcel["houseComps"], "psf": case["lead"]["psf"]}
+                parcel["valuation"] = {"mostLikelyValue": case["lead"]["land"]}
+                with patch.dict(verdict.A, close=0, cont=0, hold=0, site=10_000, hard=(275, 325), splits=mode == "on"), \
+                        patch.dict(verdict.OVERRIDES, clear=True):
+                    result = verdict.underwrite(parcel, fetch_comps=False)
+                want = case["expected"][mode]
+                self.assertEqual(result["offerHomes"], want["offerN"])
+                self.assertEqual(result["profit"], round(want["profit"]))
+                self.assertEqual(result["supportableOffer"], round(want["maxLand"]))
+                self.assertEqual(result["strategy"], "4 homes" if want["n"] > 1 else "1 custom home")
+                self.assertNotIn("split", result["strategy"].lower() if mode == "off" else "")
+
+    def test_switch_changes_assumptions_version_and_is_stamped(self):
+        stamps = {}
+        for on in (False, True):
+            with patch.dict(verdict.A, splits=on):
+                data = {"leads": []}
+                verdict.recalculate_data(data, cached=True)
+                stamps[on] = (data["assumptionsVersion"], data["lotSplits"])
+        self.assertNotEqual(stamps[False][0], stamps[True][0])
+        self.assertEqual((stamps[False][1], stamps[True][1]), (False, True))
+        self.assertIs(verdict.A["splits"], False)   # default OFF
 
 
 if __name__ == "__main__":

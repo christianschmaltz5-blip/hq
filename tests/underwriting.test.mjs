@@ -88,7 +88,7 @@ class Element {
   scrollIntoView() {}
 }
 
-function calculatorContext(fixture, leads = []) {
+function calculatorContext(fixture, leads = [], splits = true) {
   const x = fixture.input;
   const values = {
     hcLand: x.land, hcDemo: x.demo, hcLots: x.n, hcSf: x.sf,
@@ -119,7 +119,7 @@ function calculatorContext(fixture, leads = []) {
     D: { leads },
     esc: value => String(value ?? ''),
     money: value => '$' + Math.round(value || 0).toLocaleString('en-US'),
-    usablePct: 85,
+    usablePct: 85, LOT_SPLITS: splits,   // default ON = the pre-switch behaviour all older tests cover
     renderTopProfit() {}, renderBids() {},
     refreshProfitLines() { refreshCount++; },
     showTab() {},
@@ -765,7 +765,6 @@ test('automatic maximum offers require a qualified usable new-build population',
   ];
   const { context, getElementById: g } = calculatorContext(fixtures[0], leads);
   g('moLotPct').value = '30'; g('moProfitPct').value = '10'; g('moCostPct').value = '5';
-  g('moSplit').checked = false;
   context.loadCondition = () => ({});
   context.isDiscarded = () => false;
   context.isContacted = () => false;
@@ -824,3 +823,20 @@ test('opening a lead calculator works fresh and with a saved run; save/reset ref
   context.persistCalc(0); context.resetCalc(0);
   assert.equal(top, 2);
 });
+
+// Lot-splits switch: OFF prices one house only; ON must equal the old best-of-1-or-N behaviour (independent Decimal numbers).
+const splitCases = JSON.parse(fs.readFileSync(path.join(testDirectory, 'underwriting-fixtures.json'), 'utf8')).lotSplitCases;
+for (const c of splitCases) for (const mode of ['off', 'on']) {
+  test(`lot splits ${mode}: ${c.name}`, () => {
+    const { context } = calculatorContext(fixtures.find(f => f.name === 'four_home_split_325'), [], mode === 'on');
+    const lead = { apn: 'S', address: 'S', currentZoning: c.lead.currentZoning, landSf: c.lead.landSf, parcelStatus: 'improved', defaultDemoCost: c.lead.demo,
+      houseComps: { selectionPolicy: HOUSE_COMP_POLICY_ID, psf: c.lead.psf, n: 5, radiusMi: 1 }, valuation: { mostLikelyValue: c.lead.land, unreliable: false }, assessedValue: c.lead.land };
+    const r = context.profitFor(lead), want = c.expected[mode];
+    assert.equal(r.n, want.n); assert.equal(r.offerN, want.offerN);
+    approximately(r.profit, want.profit, 'profit'); approximately(r.maxLand, want.maxLand, 'maxLand');
+    assert.equal(context.splitInfo(lead).n, mode === 'on' ? 4 : 1);
+    assert.equal(context.leadAutofill(lead).lots, want.n);
+    assert.equal(r.strategy.startsWith('Lot split'), mode === 'on');
+    if (mode === 'off') assert.equal(r.strategy, 'Custom home');
+  });
+}

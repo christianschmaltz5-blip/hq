@@ -353,7 +353,6 @@
           <div class="filter-row" style="margin-top:8px;">
             <label style="font-size:12.5px;color:var(--text-soft);">Closing + holding (% of lot sale)
               <input class="filter-input" id="moCostPct" type="number" value="5" style="width:70px;"></label>
-            <label style="font-size:12.5px;color:var(--text-soft);align-self:center;"><input type="checkbox" id="moSplit"> Count lot splits</label>
             <label style="font-size:12.5px;color:var(--text-soft);">Split cost per extra lot ($)
               <input class="filter-input" id="moSplitCost" type="number" value="25000" style="width:90px;"></label>
             <label style="font-size:12.5px;color:var(--text-soft);">Split lots sell at (% of full-lot value)
@@ -597,6 +596,11 @@ BEFORE YOU SIGN ANYTHING
 <script>
 const D = window.PHX_LAND_LEADS || {leads:[], history:[], zipCodes:[]};
 D.leads = (D.leads || []).filter(l => !/\b(PHOENIX CITY OF|CITY OF PHOENIX)\b/i.test(l.ownerName || ''));  // city-owned land isn't a lead
+// ONE page-wide switch: default ONE house per lot; lot splits are opt-in (localStorage `lotSplits`). verdict.py stamps D.lotSplits the same way.
+const LOT_SPLITS = (() => { try{ return localStorage.getItem('lotSplits') === '1'; }catch(e){ return false; } })();
+function setLotSplits(on){ try{ localStorage.setItem('lotSplits', on ? '1' : '0'); }catch(e){} location.reload(); }
+const SPLIT_MISMATCH = D.lotSplits !== LOT_SPLITS;   // missing stamp = unknown mode: fail closed
+if(SPLIT_MISMATCH) D.leads.forEach(l => { l.verdict = null; });   // never show stored verdicts priced under the other mode
 document.getElementById('topbarDate').textContent = new Date().toLocaleDateString('en-US',{weekday:'long', year:'numeric', month:'long', day:'numeric'});
 
 function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
@@ -609,6 +613,8 @@ document.getElementById('methodology-note').innerHTML =
 
 document.getElementById('meta-row').innerHTML = `
   <div class="meta-pill live"><span class="meta-dot"></span>Updated ${esc(D.updated)}</div>
+  <label class="meta-pill" title="Default: ONE house per lot. On = also price lot splits (needs city approval). Reloads the page."><input type="checkbox" ${LOT_SPLITS ? 'checked' : ''} onchange="setLotSplits(this.checked)"> Lot splits: <b>${LOT_SPLITS ? 'on' : 'off'}</b></label>
+  ${SPLIT_MISMATCH ? `<div class="meta-pill" style="background:#fdecea;border-color:#d93025;color:#8a1c12;" title="Stored Good/Maybe/Pass labels and scores were calculated with lot splits ${D.lotSplits === true ? 'ON' : D.lotSplits === false ? 'OFF' : 'unknown'}; this page has them ${LOT_SPLITS ? 'ON' : 'OFF'}. Stored verdicts are hidden; run verdict.py --cached${LOT_SPLITS ? ' --splits' : ''} to restamp.">⚠ Stored verdicts were priced with lot splits ${D.lotSplits === true ? 'ON' : D.lotSplits === false ? 'OFF' : 'unknown'}, page is ${LOT_SPLITS ? 'ON' : 'OFF'}: hidden. Run verdict.py --cached${LOT_SPLITS ? ' --splits' : ''}.</div>` : ''}
   ${!stampsOk() ? '<div class="meta-pill" title="Verdicts have a missing, invalid or future version stamp, or were last recalculated over 2 days ago. CALL FIRST is off.">⚠ Verdicts may be stale</div>' : `<div class="meta-pill" title="Underwritten ${esc(D.underwrittenAt)}">Assumptions ${esc(D.assumptionsVersion)}</div>`}
   <div class="meta-pill"><b>${esc(D.parcelsScanned)}</b>&nbsp;parcels scanned</div>
   <div class="meta-pill"><b>${(D.leads||[]).length}</b>&nbsp;leads ranked</div>
@@ -1699,7 +1705,7 @@ function plan3d(lead, ring, ctx, lots){
   if(!ring) return '<div class="p3d"><div class="pm-review"><b>3D site plan: boundary unavailable.</b> The county returned no parcel polygon, so nothing is drawn.</div></div>';
   const lat0 = ring.reduce((t, p) => t + p[1], 0) / ring.length, lng0 = ring.reduce((t, p) => t + p[0], 0) / ring.length, kx = 111320 * Math.cos(lat0 * Math.PI / 180);
   const loc = p => [(p[0] - lng0) * kx, (p[1] - lat0) * 110540], ll = p => loc([p[1], p[0]]), iso = p => [(p[0] - p[1]) * .866, -(p[0] + p[1]) * .5];
-  const R = ring.map(loc), Ls = lots.map(l => l.map(ll)), Fr = ctx ? ctx.frontLL.map(e => e.map(ll)) : [], D = 14, PH = 7;
+  const R = ring.map(loc), split = LOT_SPLITS && lots.length > 0, Ls = split ? lots.map(l => l.map(ll)) : [R], Fr = ctx ? ctx.frontLL.map(e => e.map(ll)) : [], D = 14, PH = 7;
   const q = R.concat(...Ls).map(iso), x0 = Math.min(...q.map(p => p[0])), y0 = Math.min(...q.map(p => p[1])), sc = Math.min(320 / (Math.max(...q.map(p => p[0])) - x0 || 1), 190 / (Math.max(...q.map(p => p[1])) - y0 || 1));
   const T = (p, z) => { const a = iso(p); return ((a[0] - x0) * sc + 20).toFixed(1) + ',' + ((a[1] - y0) * sc + 20 + PH - (z || 0)).toFixed(1); };
   const poly = (a, z, st) => `<polygon points="${a.map(p => T(p, z)).join(' ')}" ${st}/>`;
@@ -1707,11 +1713,11 @@ function plan3d(lead, ring, ctx, lots){
   const pads = Ls.map(l => { const c = [l.reduce((t, p) => t + p[0], 0) / l.length, l.reduce((t, p) => t + p[1], 0) / l.length], ar = Math.abs(l.reduce((t, p, i) => t + p[0] * l[(i + 1) % l.length][1] - l[(i + 1) % l.length][0] * p[1], 0)) / 2, w = .15 * Math.sqrt(ar), k = (dx, dy) => [c[0] + dx * w, c[1] + dy * w];
     return `<polygon points="${[k(-1, -1), k(-1, 1), k(-1, 1), k(-1, -1)].map((p, i) => T(p, i > 1 ? PH : 0)).join(' ')}" fill="#b9b2a3"/><polygon points="${[k(-1, -1), k(1, -1), k(1, -1), k(-1, -1)].map((p, i) => T(p, i > 1 ? PH : 0)).join(' ')}" fill="#d8d2c4"/>` + poly([k(-1, -1), k(-1, 1), k(1, 1), k(1, -1)], PH, 'fill="#f4f1ea" stroke="#8a8372" stroke-width=".6"'); }).join('');
   const W = Math.ceil((Math.max(...q.map(p => p[0])) - x0) * sc + 40), H = Math.ceil((Math.max(...q.map(p => p[1])) - y0) * sc + 40 + PH + D);
-  const svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Schematic 3D site plan"><g transform="translate(9,7)" opacity=".2">${poly(R, -D, 'fill="#000"')}</g>${sides}${poly(R, 0, 'fill="#dfe6d3" stroke="#d93025" stroke-width="2"')}${Ls.map(l => poly(l, 0, 'fill="#ffd400" fill-opacity=".5" stroke="#b8860b" stroke-width="1"')).join('')}${Fr.map(e => `<polyline points="${e.map(p => T(p)).join(' ')}" fill="none" stroke="#00bcd4" stroke-width="3.5" stroke-linecap="round"/>`).join('')}${pads}</svg>`;
-  const m = n => '$' + Math.round(n).toLocaleString(), p = profitFor(lead), pill = (t, e) => `<span class="pill3d">${t}${e ? ' <small>est.</small>' : ''}</span>`;
+  const svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Schematic 3D site plan"><g transform="translate(9,7)" opacity=".2">${poly(R, -D, 'fill="#000"')}</g>${sides}${poly(R, 0, 'fill="#dfe6d3" stroke="#d93025" stroke-width="2"')}${(split ? Ls : []).map(l => poly(l, 0, 'fill="#ffd400" fill-opacity=".5" stroke="#b8860b" stroke-width="1"')).join('')}${Fr.map(e => `<polyline points="${e.map(p => T(p)).join(' ')}" fill="none" stroke="#00bcd4" stroke-width="3.5" stroke-linecap="round"/>`).join('')}${pads}</svg>`;
+  const m = n => '$' + Math.round(n).toLocaleString(), p = profitFor(lead, 0, 0), pill = (t, e) => `<span class="pill3d">${t}${e ? ' <small>est.</small>' : ''}</span>`;
   const frontFt = ctx && ctx.frontKnown ? ctx.front.reduce((t, e) => t + Math.hypot(e[1][0] - e[0][0], e[1][1] - e[0][1]), 0) * FT : 0;
-  const pills = [lots.length ? pill(lots.length + ' lots (sketch)') : pill('no split drawn'), p ? pill(m(p.cost / p.n) + '/home all-in', 1) + pill('Site work ' + m(p.n * (parseFloat(document.getElementById('hcSite').value) || 0)), 1) : '', frontFt ? pill(Math.round(frontFt).toLocaleString() + ' ft frontage', 1) : '', pill((lead.landAcres || 0).toFixed(2) + ' ac')].join('');
-  return `<div class="p3d"><b>3D site plan + costs</b> ${CF('e', 'schematic')}${svg}<div class="p3d-pills">${pills}</div><div class="p3d-note pm-why">Schematic drawn from the county parcel boundary: NOT LiDAR or surveyed terrain, and the slab is flat. Lot lines are the sketch above; boxes are placeholder house pads. ${p ? `Costs are the profit model's ${p.n} home${p.n > 1 ? 's' : ''}: all-in = land, build, soft costs, site work, demolition, split and financing; site work = homes × the calculator's site-work input. Estimates, not bids.` : 'Costs unavailable: no priced comps or land basis for this lead.'}</div></div>`;
+  const pills = [split ? pill(lots.length + ' lots (sketch)') : pill(LOT_SPLITS ? 'no split drawable' : '1 house'), p ? pill(m(p.cost / p.n) + '/home all-in', 1) + pill('Site work ' + m(p.n * (parseFloat(document.getElementById('hcSite').value) || 0)), 1) : '', frontFt ? pill(Math.round(frontFt).toLocaleString() + ' ft frontage', 1) : '', pill((lead.landAcres || 0).toFixed(2) + ' ac')].join('');
+  return `<div class="p3d"><b>3D site plan + costs</b> ${CF('e', 'schematic')}${svg}<div class="p3d-pills">${pills}</div><div class="p3d-note pm-why">Schematic drawn from the county parcel boundary: NOT LiDAR or surveyed terrain, and the slab is flat. ${split ? 'Lot lines are the sketch above; ' : LOT_SPLITS ? 'No lot split could be drawn here; ' : 'One house on the whole parcel, no lot split (switch Lot splits on at the top to sketch splits); '}boxes are placeholder house pads. ${p ? `Costs are the profit model's ${p.n} home${p.n > 1 ? 's' : ''}: all-in = land, build, soft costs, site work, demolition, split and financing; site work = homes × the calculator's site-work input. Estimates, not bids.` : 'Costs unavailable: no priced comps or land basis for this lead.'}</div></div>`;
 }
 async function reelHero(){
   const el = document.getElementById('reel-hero');
@@ -1725,7 +1731,7 @@ async function reelHero(){
     ctx = siteContext(lead, par, site);
     const acres = lead.landAcres || (lead.landSf || 0) / 43560, minLot = lead.minLotVerified === false ? 0 : lead.minLotSf || (zn && zn.zone ? minLotFromZone(zn.zone) : 0);
     const st = layoutState[lead.apn] || { style: 'auto', exact: true, scenario: ctx.bldgs.length ? 'keep' : 'removal', cuts: null, rear: null };
-    if(ctx.frontKnown && Math.abs(ctx.areaM2 / SQM_AC / acres - 1) <= 0.05){   // same gates as the lead's map
+    if(LOT_SPLITS && ctx.frontKnown && Math.abs(ctx.areaM2 / SQM_AC / acres - 1) <= 0.05){   // same gates as the lead's map
       const res = computeLayout(ctx, { targetAc: acresPerLot, minLotSf: minLot, setbackFt, stemFt }, st);
       if(!res.lay.failed && res.pieces.length > 1) lots = res.pieces.filter(p => p.kind === 'lot').map(p => p.poly.map(ctx.toLL));
     }
@@ -1766,7 +1772,7 @@ async function initParcelMap(lead, idx){
     const diff = ctx.areaM2 / SQM_AC / acres - 1;
     if(Math.abs(diff) > 0.05) reasons.push(`The boundary polygon measures ${f2(ctx.areaM2 / SQM_AC)} ac but the county record says ${f2(acres)} ac (${(diff * 100).toFixed(1)}% apart): the polygon may be the wrong shape or the record may be wrong.`);
     if(!ctx.frontKnown) reasons.push(`No road frontage could be found: no road centerline is within ${FRONT_M} m of any parcel edge${site.roadErr ? ' (the road lookup failed)' : ''}. Without a road, access to every lot is unknown.`);
-    if(reasons.length) return;
+    if(reasons.length || !LOT_SPLITS) return;   // splits off: one lot, no cut lines / flag lot
     res = computeLayout(ctx, { targetAc: acresPerLot, minLotSf: minLot, setbackFt, stemFt }, st);
     if(res.lay.failed) reasons.push('A front + rear layout is not possible here: the parcel is too small for two lots at this size, or a building blocks every side for the access stem.');
     else if(!st.cuts && !st.rear && res.nLots >= 2 && res.lay.mode === 'strip' && !res.lay.cuts.length) reasons.push(`Existing buildings (plus the ${setbackFt} ft placeholder setback) leave no place to put a dividing line, and no front + rear option fits.`);
@@ -1824,7 +1830,8 @@ async function initParcelMap(lead, idx){
     const bsrc = site ? `${ctx ? ctx.bldgs.filter(b => b.src === 'auto').length : 0} found in ${link(GIS_STRUCT, 'USA Structures (FEMA / Oak Ridge National Lab, derived from aerial imagery)')} + ${ctx ? ctx.bldgs.filter(b => b.src === 'traced').length : 0} traced by you. This data can miss new buildings and small structures: compare to the satellite image.` : '';
     const incomplete = ctx && st.scenario === 'keep' && (site.bldgErr || (!ctx.bldgs.length && lead.parcelStatus !== 'vacant'));
     let verdict;
-    if(reasons.length) verdict = `<div class="pm-review"><b>Layout needs review.</b> The data here cannot support a realistic layout, so no lot lines are drawn.<ul>${reasons.map(r => '<li>' + esc(r) + '</li>').join('')}</ul></div>`;
+    if(!LOT_SPLITS && !reasons.length) verdict = `<div class="pm-review pm-ok"><b>One house, no lot split.</b> Switch “Lot splits” on at the top of the page to sketch lots.</div>`;
+    else if(reasons.length) verdict = `<div class="pm-review"><b>Layout needs review.</b> The data here cannot support a realistic layout, so no lot lines are drawn.<ul>${reasons.map(r => '<li>' + esc(r) + '</li>').join('')}</ul></div>`;
     else if(!res || res.pieces.length <= 1) verdict = `<div class="pm-review pm-ok"><b>No split proposed.</b> ${f2(res.A / SQM_AC)} ac at ${f2(res.T / SQM_AC)} ac per lot is ${(res.A / res.T).toFixed(2)} lots, so this parcel supports one lot at the current target${minLot ? ' and the estimated ' + esc(zn.zone) + ' minimum' : ''}. Lower the target or change the layout style to try anyway.</div>`;
     else verdict = `<div><b>Proposed split: ${res.pieces.filter(p => p.kind === 'lot').length} lots${res.pieces.some(p => p.kind === 'rem') ? ' + remaining land' : ''}</b> <span class="pm-why">preliminary sketch · not a survey or approved lots</span></div>${res.note ? '<div class="pm-why">' + esc(res.note) + '</div>' : ''}${incomplete ? `<div class="pm-review"><b>Incomplete.</b> ${site.bldgErr ? 'Building footprints could not be loaded.' : 'No building footprints were found, but this parcel has a house.'} The automatic layout cannot avoid buildings it doesn't know about. Use “Trace a building” to outline them.</div>` : ''}${res.issues.filter(i => !/zoning minimum/.test(i.text)).length ? `<div class="pm-review"><b>Conflicts</b><ul>${res.issues.filter(i => !/zoning minimum/.test(i.text)).map(i => '<li>' + esc(i.text) + '</li>').join('')}</ul></div>` : (st.scenario === 'keep' && ctx.bldgs.length ? '<div class="pm-why">No building conflicts found against the placeholder setback.</div>' : '')}<table class="pm-table"><tr><th>Piece</th><th>Area</th><th>Size</th><th>Road frontage</th><th>Access</th><th>Checks</th></tr>${lotRows}</table><div class="pm-why" style="margin-top:6px;">${whySplit()}</div>`;
     const widths = res && lotsDrawn() ? res.pieces.filter(p => p.kind === 'lot').map(p => p.m) : [];
@@ -2599,7 +2606,7 @@ function priceBasisHtml(l){
   const reference = ov ? ov.landCost : l.salePrice;
   const gap = reference > 0 && proxy > 0 && Math.max(reference, proxy) / Math.min(reference, proxy) > 1.5
     ? `<br>⚠ Price gap: ${money(reference)} ${ov ? 'override' : 'recorded sale'} vs ${money(proxy)} county proxy (${(Math.max(reference, proxy) / Math.min(reference, proxy)).toFixed(1)}×). Check both inputs.` : '';
-  return `<div style="display:flex;flex-wrap:wrap;gap:20px;"><div>${basis}</div><div>${offer}<br>Screen at $325/sf build, ${document.getElementById('hcProfit').value}% target, stored sale comps and parcel demolition; other calculator assumptions apply. Split capacity is unconfirmed; approval, access and utilities still need checking.</div></div>${gap}<div style="margin-top:5px;">${compSourceHtml(l)}</div>`;
+  return `<div style="display:flex;flex-wrap:wrap;gap:20px;"><div>${basis}</div><div>${offer}<br>Screen at $325/sf build, ${document.getElementById('hcProfit').value}% target, stored sale comps and parcel demolition; other calculator assumptions apply. ${LOT_SPLITS ? 'Split capacity is unconfirmed; approval, access and utilities still need checking.' : 'One house per lot (Lot splits off).'}</div></div>${gap}<div style="margin-top:5px;">${compSourceHtml(l)}</div>`;
 }
 function commZoned(l){ return /^(C-|CP|PSC|A-|I-|IND)/i.test((l.currentZoning || '').trim()); }   // county says residential, zoning says otherwise
 // ESL slope risk points (Scottsdale only; mirrors terrain_risk() in verdict.py)
@@ -2705,7 +2712,7 @@ function fullModel(l, psf, extraHard){   // full pro forma (calcSale) at the lea
 }
 function stampsOk(){   // version stamp present, underwrittenAt valid, not in the future (5 min skew), and under 2 days old
   const age = Date.now() - Date.parse(D.underwrittenAt);
-  return !!D.assumptionsVersion && age >= -3e5 && age <= 2 * 864e5;   // NaN fails both comparisons
+  return !SPLIT_MISMATCH && !!D.assumptionsVersion && age >= -3e5 && age <= 2 * 864e5;   // NaN fails both comparisons
 }
 function fullOk(l){   // CALL FIRST needs the full model to clear the profit target too (fail closed when it can't run)
   const f = fullModel(l); return !!f && !f.error && f.profit > 0 && f.profitMargin >= (parseFloat(document.getElementById('hcProfit').value) || 0) / 100;
@@ -2765,7 +2772,7 @@ function intakeHtml(l){
   return `<div class="detail-field" style="margin-top:12px;" onclick="event.stopPropagation()">
     <div class="detail-label">📋 Build intake (${items.filter(([k]) => done[k]).length}/${items.length} checked)</div>
     <div style="font-size:13px;margin:6px 0;color:${col};font-weight:600;">${esc(l.currentZoning || 'No zoning')}: ${note}</div>
-    <div style="font-size:12.5px;line-height:1.6;">Lot ${Math.round(l.landSf || 0).toLocaleString()} sf${sp.known ? '' : ' (min lot assumed)'} · could fit ${sp.n} home${sp.n > 1 ? 's' : ''} if the city approves a split${flags.map(f => '<br>⚠️ ' + f).join('')}</div>
+    <div style="font-size:12.5px;line-height:1.6;">Lot ${Math.round(l.landSf || 0).toLocaleString()} sf${sp.known ? '' : ' (min lot assumed)'} · ${LOT_SPLITS ? `could fit ${sp.n} home${sp.n > 1 ? 's' : ''} if the city approves a split` : 'one custom home on the whole lot (lot splits off)'}${flags.map(f => '<br>⚠️ ' + f).join('')}</div>
     <div style="margin-top:6px;font-size:12.5px;">${items.map(([k, t]) => `<label style="display:block;"><input type="checkbox" ${done[k] ? 'checked' : ''} onchange="setIntake('${esc(l.apn)}','${k}',this.checked)"> ${t}</label>`).join('')}</div>
     <div style="font-size:11.5px;margin-top:6px;"><a href="https://mcassessor.maricopa.gov/mcs/?q=${esc(l.apn)}&mod=pd" target="_blank" rel="noopener">County parcel record</a> · <a href="https://www.phoenix.gov/pdd" target="_blank" rel="noopener">Phoenix Planning &amp; Development</a> <span style="color:var(--text-faint);">· typical steps, not legal advice; confirm each with the city</span></div>
   </div>`;
@@ -2845,22 +2852,22 @@ function renderRuns(){
 // How many home lots a parcel could split into: 85% usable (setbacks/access), min lot size from R1-x zoning
 // (R1-8 = 8,000 sf ...) else the fallback input. Capped at 4. Needs city lot-split approval — a rough ceiling.
 // known = the min lot size comes from the zoning code (R1-14 = 14,000 sf, RE-35 = 35,000 sf); otherwise it is the fallback guess.
-function splitInfo(l){
+function splitInfo(l){   // capacity; always 1 home while the page's Lot splits switch is off
   const m = /^(?:R1|RE)-(\d+)/i.exec(l.currentZoning || '');
   if(/^(PAD|PUD|PCD)/i.test((l.currentZoning || '').trim()) || (l.minLotSf && l.minLotVerified === false)) return { n: 1, known: false };   // unsupported zone or guessed min lot: provisional 1 home
   const minLot = l.minLotSf || (m ? parseInt(m[1],10) * 1000 : (parseFloat(document.getElementById('moMinLot').value) || 14375));   // minLotSf: per-jurisdiction min lot (east leads)
   if(!l.minLotSf && (l.area === 'east' || !m)) return { n: 1, known: false };   // no known min lot (outside Phoenix, or zoning without an R1-/RE- size): never assume a 14,375 sf split
   const usable = (typeof usablePct === 'number' ? usablePct : 85) / 100;
-  return { n: Math.max(1, Math.min(4, Math.floor((l.landSf || 0) * usable / minLot))), known: !!(l.minLotSf || m) };
+  return { n: LOT_SPLITS ? Math.max(1, Math.min(4, Math.floor((l.landSf || 0) * usable / minLot))) : 1, known: !!(l.minLotSf || m) };
 }
 function splitLots(l){ return splitInfo(l).n; }
 function maxOfferRows(){
   const v = id => (parseFloat(document.getElementById(id).value) || 0) / 100;
   const lotPct = v('moLotPct'), profit = v('moProfitPct'), costs = v('moCostPct');
-  const doSplit = document.getElementById('moSplit').checked, splitCost = parseFloat(document.getElementById('moSplitCost').value) || 0, haircut = (parseFloat(document.getElementById('moSplitHaircut').value) || 100) / 100;
+  const splitCost = parseFloat(document.getElementById('moSplitCost').value) || 0, haircut = (parseFloat(document.getElementById('moSplitHaircut').value) || 100) / 100;
   const tags = loadCondition();
   return (D.leads || []).filter(l => !commZoned(l) && usableNewBuild(l) && Number.isFinite(l.newBuild.arv) && l.newBuild.arv > 0 && tags[l.apn] !== 'good' && !isDiscarded(l.apn) && !isContacted(l.apn)).map(l => {
-    const potential = splitLots(l), n = doSplit ? potential : 1;
+    const potential = splitLots(l), n = potential;
     const lotSale = l.newBuild.arv * lotPct * (n > 1 ? n * haircut : 1);  // smaller lots sell for less each
     const demo = l.parcelStatus === 'improved' ? (l.defaultDemoCost || 0) : 0;
     const max = lotSale * (1 - profit - costs) - demo - splitCost * (n - 1);
@@ -2889,7 +2896,7 @@ function renderMaxOffer(){
         <td>${money(r.max * open)}</td>
         <td>${l.score}</td><td>${xBtn(l.apn)}</td></tr>`; }).join('')}</tbody>`;
 }
-['moLotPct','moProfitPct','moCostPct','moOpenPct','moSplit','moSplitCost','moSplitHaircut','moMinLot','moSort'].forEach(id =>
+['moLotPct','moProfitPct','moCostPct','moOpenPct','moSplitCost','moSplitHaircut','moMinLot','moSort'].forEach(id =>
   document.getElementById(id).addEventListener('input', renderMaxOffer));
 renderMaxOffer();
 
@@ -2917,7 +2924,7 @@ renderMaxOffer();
     if(l.valuation) bits.push(`land est. ${money(l.valuation.rangeLow)}–${money(l.valuation.rangeHigh)}`);
     if(l.salePrice) bits.push(`owner paid ${money(l.salePrice)}${l.saleDate ? ' (' + l.saleDate.slice(-4) + ')' : ''}`);
     if(l.assessedValue) bits.push(`assessed ${money(l.assessedValue)}`);
-    el('hcAnchor').textContent = bits.filter(Boolean).join(' · ') + ` — ${fill.lots} homes in the ranking's best scenario; estimated split capacity ${splitInfo(l).n} (unconfirmed capacity).` + (fill.land === '' ? ' Enter a supported land price: reliable valuation unavailable.' : ' Price, demolition and sale comps filled in; adjust to your plan.');
+    el('hcAnchor').textContent = bits.filter(Boolean).join(' · ') + ` — ${fill.lots} homes in the ranking's best scenario${LOT_SPLITS ? `; estimated split capacity ${splitInfo(l).n} (unconfirmed capacity)` : ''}.` + (fill.land === '' ? ' Enter a supported land price: reliable valuation unavailable.' : ' Price, demolition and sale comps filled in; adjust to your plan.');
     el('hcHouse').textContent = 'Looking up recent home sales nearby…';
     fetchHouseComps(l).then(h => {
       if(el('hcLead').value.trim().toLowerCase() !== addr(l).toLowerCase()) return;
