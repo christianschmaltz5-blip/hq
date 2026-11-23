@@ -82,7 +82,7 @@
 .parcel-map{height:400px;}
 .cf{display:inline-block; font-size:9.5px; font-weight:800; letter-spacing:.03em; padding:1px 6px; border-radius:9px; margin-left:5px; vertical-align:middle; text-transform:uppercase;}
 .p3d{margin:8px 0;} .p3d svg{width:100%;max-width:520px;height:auto;display:block;} .p3d-pills{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0;} .pill3d{background:#1f3a5f;color:#fff;font-weight:700;letter-spacing:.01em;font-size:13px;padding:5px 11px;border-radius:999px;} .pill3d small{font-weight:600;opacity:.85;}
-.reel{background:#14202f;color:#fff;border-radius:14px;padding:16px;margin-bottom:16px;} .reel h2{margin:0 0 8px;font-size:clamp(24px,6vw,36px);font-weight:900;letter-spacing:-.02em;} .reel>.pm-why{color:#c7d0dc;font-size:11.5px;} .reel .mail-btn{width:100%;justify-content:center;font-size:17px;padding:14px;background:#3b6ea5;} .p3d .pm-why{color:#4a5565;} .p3d-sizes{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0;font-size:12px;} .p3d-sizes button{border:1px solid #98a1b0;background:#fff;color:#14202f;border-radius:999px;padding:4px 11px;font-weight:700;cursor:pointer;} .p3d-sizes button.on{background:#1f3a5f;color:#fff;border-color:#1f3a5f;} .p3d-view{position:relative;width:100%;max-width:680px;aspect-ratio:4/3;background:#eef2f6;border-radius:8px;overflow:hidden;touch-action:none;} .p3d-view canvas{width:100%;height:100%;display:block;cursor:grab;}
+.reel{background:#14202f;color:#fff;border-radius:14px;padding:16px;margin-bottom:16px;} .reel h2{margin:0 0 8px;font-size:clamp(24px,6vw,36px);font-weight:900;letter-spacing:-.02em;} .reel>.pm-why{color:#c7d0dc;font-size:11.5px;} .reel .mail-btn{width:100%;justify-content:center;font-size:17px;padding:14px;background:#3b6ea5;} .p3d .pm-why{color:#4a5565;} .p3d-sizes{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0;font-size:12px;} .p3d-sizes button{border:1px solid #98a1b0;background:#fff;color:#14202f;border-radius:999px;padding:4px 11px;font-weight:700;cursor:pointer;} .p3d-sizes button.on{background:#1f3a5f;color:#fff;border-color:#1f3a5f;} .p3d-view{position:relative;width:100%;max-width:820px;margin:0 auto;aspect-ratio:4/3;background:#eef2f6;border-radius:8px;overflow:hidden;touch-action:none;} .p3d-view canvas{width:100%;height:100%;display:block;cursor:grab;}
 .cf-v{background:#e3f1e8; color:#2f6b47;} .cf-e{background:#fbf1d6; color:#8a6a10;} .cf-u{background:#eceff3; color:#5b6472; border:1px dashed #98a1b0;}
 .pm-bar{display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; padding:8px 14px; border-bottom:1px solid var(--card-border); font-size:12.5px;}
 .pm-why{}
@@ -1714,7 +1714,8 @@ async function fetchElevation(ring, lng0, lat0, kx){
   for(let j = 0; j < ny; j++) for(let i = 0; i < nx; i++){ const x = x0 + (i + .5) * dx, y = y0 + (j + .5) * dy; cells.push({ x, y, inside: pip([x, y], R) }); }
   if(cells.filter(c => c.inside).length < 3) return null;
   const body = new URLSearchParams({ geometry: JSON.stringify({ points: cells.map(c => [lng0 + c.x / kx, lat0 + c.y / 110540]), spatialReference: { wkid: 4326 } }), geometryType: 'esriGeometryMultipoint', returnFirstValueOnly: 'true', f: 'json' });
-  const r = await (await fetch('https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/getSamples', { method: 'POST', body, signal: AbortSignal.timeout(12000) })).json();
+  let r; for(let t = 0; t < 2 && !r; t++) r = await fetch('https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/getSamples', { method: 'POST', body, signal: AbortSignal.timeout(45000) }).then(x => x.json()).catch(() => null);   // USGS answers in 3-17 s: wait, retry once
+  if(!r) return null;
   const v = (r.samples || []).map(s => { const n = parseFloat(s.value); return s.value === '' || isNaN(n) ? null : n; });
   if(v.length !== cells.length) return null;
   cells.forEach((c, k) => { c.z = v[k]; });
@@ -1754,8 +1755,8 @@ function p3dFail(box, id){
 }
 function p3dCmd(id, c){
   const v = p3dViews[id]; if(!v) return;
-  if(c === 'in' || c === 'out') v.st.r = Math.min(v.maxR, Math.max(4, v.st.r * (c === 'in' ? .8 : 1.25)));
-  else Object.assign(v.st, v.views[c]);
+  if(c === 'in' || c === 'out'){ v.name = null; v.st.r = Math.min(v.maxR, Math.max(4, v.st.r * (c === 'in' ? .8 : 1.25))); }
+  else { v.name = c; Object.assign(v.st, v.views[c]); }
   v.req();
 }
 async function mount3d(id, a){
@@ -1904,25 +1905,25 @@ function buildView(T, box, a){
     eye: { tx: eyeT.x, ty: eyeT.y, tz: eyeT.z, th: Math.atan2(ed.x, ed.z), ph: Math.acos(ed.y / ed.length()), r: ed.length() } };
   const fpts = R.flatMap(q => [new V3(q[0], 0, -q[1]), new V3(q[0], -8, -q[1])]);   // center + fill the frame with the whole slab, not just the bbox middle
   cam.aspect = 4 / 3; cam.updateProjectionMatrix();
-  ['reset', 'aerial'].forEach(n => { const w = views[n]; for(let i = 0; i < 5; i++){
+  const frame = () => ['reset', 'aerial'].forEach(n => { const w = views[n]; for(let i = 0; i < 5; i++){
     cam.position.set(w.tx + w.r * Math.sin(w.ph) * Math.sin(w.th), w.ty + w.r * Math.cos(w.ph), w.tz + w.r * Math.sin(w.ph) * Math.cos(w.th)); cam.lookAt(w.tx, w.ty, w.tz); cam.updateMatrixWorld();
     const n2 = fpts.map(q => q.clone().project(cam)), x0 = Math.min(...n2.map(q => q.x)), x1 = Math.max(...n2.map(q => q.x)), y0 = Math.min(...n2.map(q => q.y)), y1 = Math.max(...n2.map(q => q.y)), h = w.r * Math.tan(21 * Math.PI / 180);
     const rt = new V3().setFromMatrixColumn(cam.matrixWorld, 0), up = new V3().setFromMatrixColumn(cam.matrixWorld, 1), mx = (x0 + x1) / 2 * h * cam.aspect, my = (y0 + y1) / 2 * h;
-    w.tx += rt.x * mx + up.x * my; w.ty += rt.y * mx + up.y * my; w.tz += rt.z * mx + up.z * my; w.r *= Math.max(x1 - x0, y1 - y0) / 1.5; } });
+    w.tx += rt.x * mx + up.x * my; w.ty += rt.y * mx + up.y * my; w.tz += rt.z * mx + up.z * my; w.r *= Math.max(x1 - x0, y1 - y0) / 1.5; } }); frame();
   const st = Object.assign({}, p3dCam[apn] || views.reset), maxR = span * 5 + 100;
   const place = () => { st.ph = Math.min(1.75, Math.max(.05, st.ph)); st.r = Math.min(maxR, Math.max(4, st.r)); cam.position.set(st.tx + st.r * Math.sin(st.ph) * Math.sin(st.th), st.ty + st.r * Math.cos(st.ph), st.tz + st.r * Math.sin(st.ph) * Math.cos(st.th)); cam.lookAt(st.tx, st.ty, st.tz); };
-  const v = { box, apn, renderer, scene, st, views, maxR, q: 0 };
+  const v = { box, apn, renderer, scene, st, views, maxR, q: 0, name: p3dCam[apn] ? null : 'reset' };
   v.draw = () => { v.q = 0; place(); renderer.render(scene, cam); }; v.req = () => { if(!v.q) v.q = requestAnimationFrame(v.draw); };
-  const fit = () => { const W = box.clientWidth, Hh = box.clientHeight; if(!W || !Hh) return; renderer.setSize(W, Hh, false); cam.aspect = W / Hh; cam.updateProjectionMatrix(); v.req(); };
+  const fit = () => { const W = box.clientWidth, Hh = box.clientHeight; if(!W || !Hh) return; renderer.setSize(W, Hh, false); if(Math.abs(W / Hh - cam.aspect) > .01){ cam.aspect = W / Hh; cam.updateProjectionMatrix(); frame(); if(v.name) Object.assign(st, views[v.name]); } cam.aspect = W / Hh; cam.updateProjectionMatrix(); v.req(); };
   v.ro = new ResizeObserver(fit); v.ro.observe(box);
   const cv = renderer.domElement, ptr = new Map(); cv.setAttribute('role', 'img'); cv.setAttribute('aria-label', '3D site model: drag to orbit, scroll or pinch to zoom');
   cv.addEventListener('pointerdown', e => { cv.setPointerCapture(e.pointerId); ptr.set(e.pointerId, e); });
   cv.addEventListener('pointermove', e => { const o = ptr.get(e.pointerId); if(!o) return;
-    if(ptr.size === 1){ st.th -= (e.clientX - o.clientX) * .008; st.ph -= (e.clientY - o.clientY) * .008; }
+    v.name = null; if(ptr.size === 1){ st.th -= (e.clientX - o.clientX) * .008; st.ph -= (e.clientY - o.clientY) * .008; }
     else if(ptr.size === 2){ const [p, q] = [...ptr.values()], d0 = Math.hypot(p.clientX - q.clientX, p.clientY - q.clientY); ptr.set(e.pointerId, e); const [p1, q1] = [...ptr.values()], d1 = Math.hypot(p1.clientX - q1.clientX, p1.clientY - q1.clientY); if(d1 > 1) st.r *= d0 / d1; }
     ptr.set(e.pointerId, e); v.req(); });
   ['pointerup', 'pointercancel'].forEach(n => cv.addEventListener(n, e => ptr.delete(e.pointerId)));
-  cv.addEventListener('wheel', e => { e.preventDefault(); st.r *= Math.exp(e.deltaY * .0015); v.req(); }, { passive: false });
+  cv.addEventListener('wheel', e => { e.preventDefault(); v.name = null; st.r *= Math.exp(e.deltaY * .0015); v.req(); }, { passive: false });
   box.innerHTML = ''; box.appendChild(cv); v.light = sun; fit(); place(); v.req();
   return v;
 }
@@ -1932,7 +1933,9 @@ function plan3d(lead, ring, ctx, lots, redraw){
   const loc = p => [(p[0] - lng0) * kx, (p[1] - lat0) * 110540], ll = p => loc([p[1], p[0]]);
   if(redraw) p3dRedraw[lead.apn] = redraw;
   let el = elevCache[lead.apn];
-  if(el === undefined){ elevCache[lead.apn] = 'pending'; fetchElevation(ring, lng0, lat0, kx).catch(() => null).then(r => { elevCache[lead.apn] = r || null; if(redraw) redraw(); }); }
+  const ek = 'elev1:' + lead.apn;
+  if(el === undefined){ try{ const c = JSON.parse(localStorage.getItem(ek)); if(c && c.cells && c.sl) el = elevCache[lead.apn] = c; }catch(e){} }   // ground doesn't change: reuse a past result
+  if(el === undefined){ elevCache[lead.apn] = 'pending'; fetchElevation(ring, lng0, lat0, kx).catch(() => null).then(r => { elevCache[lead.apn] = r || null; if(r) try{ localStorage.setItem(ek, JSON.stringify(r)); }catch(e){} if(redraw) redraw(); }); }
   if(el === 'pending') el = undefined;
   const R = ring.map(loc), split = LOT_SPLITS && lots.length > 0, Ls = split ? lots.map(l => l.map(ll)) : [R], Fr = ctx ? ctx.frontLL.map(e => e.map(ll)) : [];
   const cs = compSfs(lead), hs = houseSel[lead.apn], key = hs !== undefined ? (hs === 'comps' && !cs.med ? 3500 : hs) : cs.med ? 'comps' : 3500, hsf = key === 'comps' ? cs.med : key, hd = houseDims(hsf), hstyle = houseStyle[lead.apn] === 'B' ? 'B' : 'A';
@@ -1940,7 +1943,7 @@ function plan3d(lead, ring, ctx, lots, redraw){
   setTimeout(() => mount3d(id, { apn: lead.apn, R, Ls, Fr, el, hd, style: hstyle, split, ctx }), 0);
   const m = n => '$' + Math.round(n).toLocaleString(), p = profitFor(lead, 0, 0), pill = (t, e) => `<span class="pill3d">${t}${e ? ' <small>est.</small>' : ''}</span>`;
   const frontFt = ctx && ctx.frontKnown ? ctx.front.reduce((t, e) => t + Math.hypot(e[1][0] - e[0][0], e[1][1] - e[0][1]), 0) * FT : 0;
-  const pills = [split ? pill(lots.length + ' lots (sketch)') : pill(LOT_SPLITS ? 'no split drawable' : '1 house'), p ? pill(m(p.cost / p.n) + '/home all-in', 1) + pill('Site work ' + m(p.n * (parseFloat(document.getElementById('hcSite').value) || 0)), 1) : '', frontFt ? pill(Math.round(frontFt).toLocaleString() + ' ft frontage', 1) : '', pill('House ' + hsf.toLocaleString() + ' sf · ' + hd.st + '-story', 1) + pill('Build ~' + m(hsf * (parseFloat(document.getElementById('hcHard').value) || 0)), 1) + (hd.area > .3 * Math.min(...Ls.map(polyArea)) ? pill('tight fit: check setbacks') : '') + pill((lead.landAcres || 0).toFixed(2) + ' ac'), el ? pill('Avg slope ' + el.avg.toFixed(1) + '%', 1) + pill('Max ' + el.max.toFixed(0) + '%', 1) + pill('Relief ' + el.reliefFt.toFixed(0) + ' ft', 1) : el === null ? pill('slope unavailable') : ''].join('');
+  const pills = [split ? pill(lots.length + ' lots (sketch)') : pill(LOT_SPLITS ? 'no split drawable' : '1 house'), p ? pill(m(p.cost / p.n) + '/home all-in', 1) + pill('Site work ' + m(p.n * (parseFloat(document.getElementById('hcSite').value) || 0)), 1) : '', frontFt ? pill(Math.round(frontFt).toLocaleString() + ' ft frontage', 1) : '', pill('House ' + hsf.toLocaleString() + ' sf · ' + hd.st + '-story', 1) + pill('Build ~' + m(hsf * (parseFloat(document.getElementById('hcHard').value) || 0)), 1) + (hd.area > .3 * Math.min(...Ls.map(polyArea)) ? pill('tight fit: check setbacks') : '') + pill((lead.landAcres || 0).toFixed(2) + ' ac'), el ? pill('Avg slope ' + el.avg.toFixed(1) + '%', 1) + pill('Max ' + el.max.toFixed(0) + '%', 1) + pill('Relief ' + el.reliefFt.toFixed(0) + ' ft', 1) : el === null ? pill('slope unavailable (reload to retry)') : !el ? pill('loading slope…') : ''].join('');
   const btn = (c, t, l) => `<button type="button" onclick="p3dCmd(${id},'${c}')"${l ? ` aria-label="${l}"` : ''}>${t}</button>`;
   const view = `<div class="p3d-view" id="p3dv-${id}"><div class="pm-why" style="padding:14px;">Loading 3D viewer…</div></div><div class="p3d-sizes" id="p3db-${id}">${btn('aerial', 'Aerial')}${btn('eye', 'Eye level')}${btn('reset', 'Reset')}${btn('in', '+', 'Zoom in')}${btn('out', '&minus;', 'Zoom out')}<span class="pm-why">drag to orbit, scroll or pinch to zoom</span></div>`;
   const sizes = `<div class="p3d-sizes">House size: ${(cs.med ? [['comps', 'Comps ~' + cs.med.toLocaleString() + ' sf']] : []).concat([2500, 3000, 3500, 4000].map(v => [v, v.toLocaleString() + ' sf'])).map(([k, t]) => `<button type="button" class="${k === key ? 'on' : ''}" onclick="pickHouseSf('${apn}','${k}')">${t}</button>`).join('')}${cs.n ? ` <span class="pm-why">nearby new builds: ${cs.lo.toLocaleString()}-${cs.hi.toLocaleString()} sf (${cs.n} sales)</span>` : ''}</div><div class="p3d-sizes">Style: ${['A', 'B'].map(s => `<button type="button" class="${s === hstyle ? 'on' : ''}" onclick="pickHouseStyle('${apn}','${s}')">Style ${s}</button>`).join('')}<span class="pm-why">${hstyle === 'A' ? 'curved parapet, barrel-tile roof, balcony + curved stair' : 'hip tile roofs, roof terrace, pergola porch'}</span></div>`;
