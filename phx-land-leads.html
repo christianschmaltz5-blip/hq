@@ -81,8 +81,8 @@
 .parcel-info b{color:var(--text);}
 .parcel-map{height:400px;}
 .cf{display:inline-block; font-size:9.5px; font-weight:800; letter-spacing:.03em; padding:1px 6px; border-radius:9px; margin-left:5px; vertical-align:middle; text-transform:uppercase;}
-.p3d{margin:8px 0;} .p3d svg{width:100%;max-width:520px;height:auto;display:block;} .p3d-pills{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0;} .pill3d{background:#d93025;color:#fff;font-weight:800;font-size:13px;padding:5px 11px;border-radius:999px;} .pill3d small{font-weight:600;opacity:.85;}
-.reel{background:#14202f;color:#fff;border-radius:14px;padding:16px;margin-bottom:16px;} .reel h2{margin:0 0 8px;font-size:clamp(24px,6vw,36px);font-weight:900;letter-spacing:-.02em;} .reel>.pm-why{color:#c7d0dc;font-size:11.5px;} .reel .mail-btn{width:100%;justify-content:center;font-size:17px;padding:14px;background:#d93025;} .p3d .pm-why{color:#4a5565;}
+.p3d{margin:8px 0;} .p3d svg{width:100%;max-width:520px;height:auto;display:block;} .p3d-pills{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0;} .pill3d{background:#1f3a5f;color:#fff;font-weight:700;letter-spacing:.01em;font-size:13px;padding:5px 11px;border-radius:999px;} .pill3d small{font-weight:600;opacity:.85;}
+.reel{background:#14202f;color:#fff;border-radius:14px;padding:16px;margin-bottom:16px;} .reel h2{margin:0 0 8px;font-size:clamp(24px,6vw,36px);font-weight:900;letter-spacing:-.02em;} .reel>.pm-why{color:#c7d0dc;font-size:11.5px;} .reel .mail-btn{width:100%;justify-content:center;font-size:17px;padding:14px;background:#3b6ea5;} .p3d .pm-why{color:#4a5565;} .p3d-sizes{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0;font-size:12px;} .p3d-sizes button{border:1px solid #98a1b0;background:#fff;color:#14202f;border-radius:999px;padding:4px 11px;font-weight:700;cursor:pointer;} .p3d-sizes button.on{background:#1f3a5f;color:#fff;border-color:#1f3a5f;} .p3d-view{position:relative;width:100%;max-width:680px;aspect-ratio:4/3;background:#eef2f6;border-radius:8px;overflow:hidden;touch-action:none;} .p3d-view canvas{width:100%;height:100%;display:block;cursor:grab;}
 .cf-v{background:#e3f1e8; color:#2f6b47;} .cf-e{background:#fbf1d6; color:#8a6a10;} .cf-u{background:#eceff3; color:#5b6472; border:1px dashed #98a1b0;}
 .pm-bar{display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; padding:8px 14px; border-bottom:1px solid var(--card-border); font-size:12.5px;}
 .pm-why{}
@@ -1700,7 +1700,7 @@ function traceClear(idx, apn){
   try{ localStorage.setItem('tracedBldgs', JSON.stringify(all)); }catch(e){}
   if(box){ box._tracing = false; box._trace = []; box.style.cursor = ''; if(box._traceGroup) box._traceGroup.clearLayers(); box._redraw(); }
 }
-// Pseudo-3D schematic of the county parcel polygon + the page's lot sketch; every number comes from profitFor() / the calculator inputs / ctx
+// 3D schematic of the county parcel polygon + the page's lot sketch; every number comes from profitFor() / the calculator inputs / ctx
 // Slope % per grid cell (row-major z in meters, null = no sample) from neighbour rise/run; pure, tested in tests/slope.test.mjs
 function slopeCells(z, nx, ny, dx, dy){
   const at = (i, j) => i < 0 || j < 0 || i >= nx || j >= ny ? null : z[j * nx + i], g = (a, b, d) => a != null && b != null ? (b - a) / d : null;
@@ -1723,29 +1723,229 @@ async function fetchElevation(ring, lng0, lat0, kx){
   return sl.length ? { cells, sl: slopeCells(v, nx, ny, dx, dy), dx, dy, avg: sl.reduce((t, s) => t + s, 0) / sl.length, max: Math.max(...sl), reliefFt: (Math.max(...zs) - Math.min(...zs)) * FT } : null;
 }
 const elevCache = {};   // apn -> undefined (not asked) | 'pending' | result | null (unavailable)
+const houseSel = {}, p3dRedraw = {};   // apn -> 'comps' | square feet picked in the 3D plan
+function pickHouseSf(apn, k){ houseSel[apn] = k === 'comps' ? 'comps' : +k; if(p3dRedraw[apn]) p3dRedraw[apn](); }
+function houseDims(sf){   // massing only: 1 story to 3,000 sf, 2 above; footprint = sf/stories + 700 sf garage/porch, 1.5:1; meters
+  const st = sf > 3000 ? 2 : 1, a = (sf / st + 700) * SF2M, w = Math.sqrt(a * 1.5);
+  return { st, w, d: w / 1.5, h: st * 3.2, area: a };
+}
+function compSfs(l){   // nearby new-build sale sizes (sf) from the stored comps
+  const nb = l.newBuild || {}, v = (nb.comps || nb.examples || []).map(e => +e.sf).filter(x => x >= 1000 && x <= 10000).sort((a, b) => a - b);
+  return v.length ? { n: v.length, lo: v[0], hi: v[v.length - 1], med: Math.round((v.length % 2 ? v[(v.length - 1) / 2] : (v[v.length / 2 - 1] + v[v.length / 2]) / 2) / 50) * 50 } : { n: 0 };
+}
+// ---- Real 3D viewer: three.js r160 (ES module, loaded on first use; cdnjs, jsdelivr as fallback). Own tiny orbit control, render on demand, disposed on every redraw.
+const P3D_LIBS = ['https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.module.min.js', 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js'];
+const p3dViews = {}, p3dCam = {}, houseStyle = {}; let p3dLib = null, p3dSeq = 0;
+function pickHouseStyle(apn, s){ houseStyle[apn] = s === 'B' ? 'B' : 'A'; if(p3dRedraw[apn]) p3dRedraw[apn](); }
+function loadThree(){
+  if(!p3dLib) p3dLib = (async () => { for(const u of P3D_LIBS){ try{ return await import(u); }catch(e){} } throw new Error('three.js did not load'); })().catch(e => { p3dLib = null; throw e; });
+  return p3dLib;
+}
+function addLandscape(scene, ctx, info){}   // RESERVED hook for the future "landscaping mode" (trees, lawn, fences, paths); intentionally does nothing today
+function disposeView(id){
+  const v = p3dViews[id]; if(!v) return; delete p3dViews[id];
+  cancelAnimationFrame(v.q); v.ro.disconnect(); p3dCam[v.apn] = Object.assign({}, v.st);
+  v.scene.traverse(o => { if(o.geometry) o.geometry.dispose(); [].concat(o.material || []).forEach(m => { if(m.map) m.map.dispose(); m.dispose(); }); });
+  v.renderer.dispose(); v.renderer.forceContextLoss();
+}
+function p3dFail(box, id){
+  box.innerHTML = '<div class="pm-review"><b>3D viewer unavailable.</b> WebGL or the three.js library could not load here, so no model is drawn. The numbers below still apply.</div>';
+  const b = document.getElementById('p3db-' + id); if(b) b.style.display = 'none';
+}
+function p3dCmd(id, c){
+  const v = p3dViews[id]; if(!v) return;
+  if(c === 'in' || c === 'out') v.st.r = Math.min(v.maxR, Math.max(4, v.st.r * (c === 'in' ? .8 : 1.25)));
+  else Object.assign(v.st, v.views[c]);
+  v.req();
+}
+async function mount3d(id, a){
+  const box = document.getElementById('p3dv-' + id); if(!box) return;
+  const io = new IntersectionObserver(es => { if(es.some(e => e.isIntersecting)){ io.disconnect(); go(); } }); io.observe(box);   // lazy: hidden / off-screen panels never take a WebGL context
+  const go = async () => {
+    for(const k in p3dViews) if(!p3dViews[k].box.isConnected) disposeView(k);   // panels that were redrawn away
+    let T; try{ T = await loadThree(); }catch(e){ return p3dFail(box, id); }
+    if(!box.isConnected) return;
+    try{ p3dViews[id] = buildView(T, box, a); }catch(e){ console.warn('3D viewer', e); p3dFail(box, id); }
+  };
+}
+// pure-ish scene helpers
+function p3dElev(el, ex){   // (x,y) local meters -> meters above the lowest USGS sample, times exaggeration; flat 0 without data
+  if(!el) return () => 0;
+  const c = el.cells, nx = Math.max(1, c.findIndex(k => k.y !== c[0].y) < 0 ? c.length : c.findIndex(k => k.y !== c[0].y)), ny = c.length / nx, x0 = c[0].x - el.dx / 2, y0 = c[0].y - el.dy / 2, zmin = Math.min(...c.filter(k => k.z != null).map(k => k.z));
+  return (x, y) => {
+    const u = (x - x0) / el.dx - .5, v = (y - y0) / el.dy - .5, i = Math.floor(u), j = Math.floor(v), fu = u - i, fv = v - j; let s = 0, ws = 0;
+    [[0, 0, (1 - fu) * (1 - fv)], [1, 0, fu * (1 - fv)], [0, 1, (1 - fu) * fv], [1, 1, fu * fv]].forEach(([di, dj, w]) => { const k = c[Math.min(ny - 1, Math.max(0, j + dj)) * nx + Math.min(nx - 1, Math.max(0, i + di))]; if(k.z != null){ s += k.z * w; ws += w; } });
+    return ws > 1e-9 ? (s / ws - zmin) * ex : 0;
+  };
+}
+function p3dTexture(T, w, h, f, rep){
+  const c = document.createElement('canvas'); c.width = w; c.height = h; f(c.getContext('2d'), w, h);
+  const t = new T.CanvasTexture(c); t.wrapS = t.wrapT = T.RepeatWrapping; t.colorSpace = T.SRGBColorSpace; t.anisotropy = 4; if(rep) t.repeat.set(rep[0], rep[1]); return t;
+}
+// Massing model of one Spanish house, +z = front, origin = footprint center on the pad. style 'A' stucco/curved parapet/barrel roof/stairs, 'B' villa/hip roofs/terrace/pergola
+function buildHouse(T, style, hd){
+  const { st, w, d } = hd, FH = 3.2, H = st * FH, A = style !== 'B', g = new T.Group(), gw = Math.min(w * .35, 65.03 / d), mw = w - gw, mx = -gw / 2, gx = w / 2 - gw / 2, fz = d / 2;
+  const M = (c, o) => new T.MeshStandardMaterial(Object.assign({ color: c, roughness: .9 }, o || {}));
+  const stucco = M('#faf7f0'), trim = M('#ece4d2'), wood = M('#5b3a29'), glass = M('#2b3a4a', { roughness: .2, metalness: .3 }), iron = M('#26292e', { roughness: .5, metalness: .6 }), stone = M('#cdbfa6'), clay = M('#b57555'), leaf = M('#6b8e5a');
+  const tileTex = p3dTexture(T, 64, 64, (x) => { for(let i = 0; i < 4; i++){ const gr = x.createLinearGradient(i * 16, 0, i * 16 + 16, 0); gr.addColorStop(0, '#8e4f36'); gr.addColorStop(.35, '#c98a66'); gr.addColorStop(.7, '#b57555'); gr.addColorStop(1, '#7a4330'); x.fillStyle = gr; x.fillRect(i * 16, 0, 16, 64); } x.fillStyle = 'rgba(60,25,15,.35)'; for(let j = 0; j < 4; j++) x.fillRect(0, j * 16 + 14, 64, 2); });
+  const paverTex = p3dTexture(T, 64, 64, (x) => { x.fillStyle = '#cdbba0'; x.fillRect(0, 0, 64, 64); x.strokeStyle = '#a8957a'; x.lineWidth = 2; x.strokeRect(0, 0, 32, 32); x.strokeRect(32, 32, 32, 32); x.strokeRect(32, 0, 32, 32); x.strokeRect(0, 32, 32, 32); });
+  const roofM = new T.MeshStandardMaterial({ map: tileTex, roughness: .85, side: T.DoubleSide });
+  const pav = (pw, pd) => { const t = paverTex.clone(); t.needsUpdate = true; t.repeat.set(pw / 1.2, pd / 1.2); return M('#ffffff', { map: t }); };
+  const add = o => (g.add(o), o);
+  const box = (bw, bh, bd, m, x, y, z) => { const o = new T.Mesh(new T.BoxGeometry(bw, bh, bd), m); o.position.set(x, y + bh / 2, z); return add(o); };
+  const archG = (aw, ah, dep) => { const s = new T.Shape(), r = aw / 2; s.moveTo(-r, 0); s.lineTo(r, 0); s.lineTo(r, ah - r); s.absarc(0, ah - r, r, 0, Math.PI, false); s.lineTo(-r, 0); return new T.ExtrudeGeometry(s, { depth: dep, bevelEnabled: false, curveSegments: 12 }); };
+  const archM = (aw, ah, dep, m, x, y, z) => { const o = new T.Mesh(archG(aw, ah, dep), m); o.position.set(x, y, z); return add(o); };
+  const win = (x, y, z, ww, wh, door) => {   // tall arched wood-framed window / French door on a +z wall at z
+    archM(ww, wh, .1, wood, x, y, z); archM(ww - .3, wh - .3, .14, glass, x, y + .15, z); box(.06, wh - .45, .18, wood, x, y + .15, z + .07); box(ww - .3, .05, .18, wood, x, y + wh * .5, z + .07);
+    if(!door) box(ww + .3, .1, .3, stone, x, y - .1, z + .1);
+  };
+  const railX = (x0, x1, z, y) => { box(x1 - x0, .05, .05, iron, (x0 + x1) / 2, y + .95, z); box(x1 - x0, .04, .04, iron, (x0 + x1) / 2, y + .12, z); for(let x = x0; x <= x1 + 1e-6; x += .38) box(.025, .95, .025, iron, x, y, z); };
+  const railZ = (z0, z1, x, y) => { box(.05, .05, z1 - z0, iron, x, y + .95, (z0 + z1) / 2); for(let z = z0; z <= z1 + 1e-6; z += .38) box(.025, .95, .025, iron, x, y, z); };
+  const hip = (rw, rd, rh, x, y, z) => {   // low-pitch tiled hip roof, stripes run down-slope
+    const rl = Math.max(0, (rw - rd) / 2), a = rw / 2, b = rd / 2, ps = [], us = [];
+    [[[-a, 0, b], [a, 0, b], [rl, rh, 0], [-rl, rh, 0]], [[a, 0, -b], [-a, 0, -b], [-rl, rh, 0], [rl, rh, 0]], [[a, 0, b], [a, 0, -b], [rl, rh, 0]], [[-a, 0, -b], [-a, 0, b], [-rl, rh, 0]]].forEach((f, k) => {
+      const e = [[2, b], [2, -b], [0, a], [0, -a]][k], uvf = p => [(k < 2 ? p[0] : p[2]) / 1.2, Math.hypot(p[e[0]] - e[1], p[1]) / 1.6];
+      (f.length === 4 ? [0, 1, 2, 0, 2, 3] : [0, 1, 2]).forEach(i => { ps.push(...f[i]); us.push(...uvf(f[i])); }); });
+    const geo = new T.BufferGeometry(); geo.setAttribute('position', new T.Float32BufferAttribute(ps, 3)); geo.setAttribute('uv', new T.Float32BufferAttribute(us, 2)); geo.computeVertexNormals();
+    const o = new T.Mesh(geo, roofM); o.position.set(x, y, z); return add(o);
+  };
+  const pot = (x, z) => {   // clay pot + agave
+    const p = new T.Mesh(new T.CylinderGeometry(.3, .22, .5, 10), clay); p.position.set(x, .25, z); add(p);
+    for(let k = 0; k < 7; k++){ const s1 = new T.Group(), s2 = new T.Group(), c = new T.Mesh(new T.ConeGeometry(.09, .85, 5), leaf); s1.position.set(x, .5, z); s1.rotation.y = k * Math.PI * 2 / 7; s2.rotation.x = .55; c.position.y = .42; s2.add(c); s1.add(s2); add(s1); }
+  };
+  const cols = (n => Array.from({ length: n }, (_, i) => mx + (i - (n - 1) / 2) * (n > 1 ? (mw - 3.6) / (n - 1) : 0)))(2 * Math.floor((mw - 3) / 6.5) + 1), cx = cols[(cols.length - 1) / 2];
+  const gdw = Math.min(3.4, gw - .8);
+  box(gdw, 2.3, .08, M(A ? '#e8dfcc' : '#7a5a40'), gx, 0, fz + .04); box(gdw + .3, .25, .12, trim, gx, 2.3, fz + .05);
+  if(A){
+    box(mw, H, d, stucco, mx, 0, 0); box(gw, FH, d, stucco, gx, 0, 0); if(st > 1) box(mw + .12, .16, d + .12, trim, mx, FH - .08, 0);
+    // barrel-tile vault between wavy stucco parapets
+    const sag = 1, ch = mw + .5, Rv = (ch * ch / 4 + sag * sag) / (2 * sag), th = 2 * Math.asin(ch / 2 / Rv), vg = new T.CylinderGeometry(Rv, Rv, d + .6, 28, 1, true, -th / 2, th), uv = vg.attributes.uv;
+    for(let i = 0; i < uv.count; i++){ const u = uv.getX(i), v = uv.getY(i); uv.setXY(i, v * (d + .6) / 1.2, u * Rv * th / 1.6); }
+    const vm = new T.Mesh(vg, roofM); vm.rotation.x = -Math.PI / 2; vm.position.set(mx, H + sag - Rv, 0); add(vm);
+    [fz - .3, -fz].forEach(zz => { const s = new T.Shape(); s.moveTo(-ch / 2, 0); for(let i = 0; i <= 40; i++){ const x = -ch / 2 + ch * i / 40, u = x / (ch / 2); s.lineTo(x, sag * (1 - u * u) + .45 + .22 * Math.cos(x * 2.2)); } s.lineTo(ch / 2, 0); const o = new T.Mesh(new T.ExtrudeGeometry(s, { depth: .3, bevelEnabled: false }), stucco); o.position.set(mx, H, zz); add(o); });
+    [-1, 1].forEach(sg => box(.3, .5, d, stucco, mx + sg * (mw / 2 - .15), H, 0));
+    box(gw + .1, .2, d + .1, stucco, gx, FH, 0); [[gw + .1, .4, .2, 0, fz], [gw + .1, .4, .2, 0, -fz], [.2, .4, d, gw / 2, 0], [.2, .4, d, -gw / 2, 0]].forEach(([bw, bh, bd, dx, z]) => box(bw, bh, bd, stucco, gx + dx, FH + .2, z));
+    const ent = (ww, wh) => { box(ww + .6, .2, .9, stone, cx, 0, fz + .45); archM(ww + .5, wh + .35, .07, stone, cx, .2, fz); win(cx, .2, fz, ww, wh, true); };
+    cols.forEach((x, i) => { if(i === (cols.length - 1) / 2) return; win(x, .6, fz, 1.3, 2.4); if(st > 1) win(x, FH + .6, fz, 1.3, 2.2); });
+    ent(2, 2.9);
+    if(st > 1){
+      win(cx, FH + .05, fz, 1.9, 2.8, true); box(mw, .2, 1.3, stucco, mx, FH - .2, fz + .65); railX(mx - mw / 2, mx + mw / 2, fz + 1.25, FH); railZ(fz, fz + 1.25, mx + mw / 2, FH);
+      const N = 18, r = 1.4, sw = Math.PI * .9, C = [mx - mw / 2 - r, fz + .65];   // curved exterior stair wrapping the corner up to the balcony
+      for(let i = 0; i < N; i++){ const an = i / N * sw, hh = FH * (1 - i / N), o = box(1.1, hh, r * sw / N * 1.25, stucco, C[0] + r * Math.cos(an), 0, C[1] - r * Math.sin(an)); o.rotation.y = an; }
+    }
+    const lamp = M('#ffd88a', { emissive: '#ffb347', emissiveIntensity: .7 }); box(.1, .45, .06, iron, cx + 1.8, 1.95, fz + .04); box(.16, .3, .16, lamp, cx + 1.8, 2.05, fz + .14);
+    const cap = new T.Mesh(new T.ConeGeometry(.14, .16, 4), iron); cap.position.set(cx + 1.8, 2.43, fz + .14); add(cap);
+    pot(cx - 1.9, fz + .5); pot(cx + 1.9, fz + .5); pot(cols[0] - 1.1, fz + .5);
+    box(gdw + .4, .05, 9, M('#cfcac0'), gx, 0, fz + 4.5);
+  } else {
+    box(mw, FH, d, stucco, mx, 0, 0); box(gw, FH - .6, d, stucco, gx, 0, 0); box(w + .12, .18, d + .12, trim, 0, FH - .24, 0);
+    const pw = 4.6, pd = 2.8, tz = fz - d * .45;   // porch + terrace line
+    if(st > 1){
+      const ud = d * .55, uz = -fz + ud / 2; box(mw, FH, ud, stucco, mx, FH, uz); box(mw + .12, .18, ud + .12, trim, mx, 2 * FH - .24, uz);
+      box(mw, .12, d - ud, pav(mw, d - ud), mx, FH, fz - (d - ud) / 2); box(mw + .24, .3, .24, clay, mx, FH, fz); railX(mx - mw / 2, mx + mw / 2, fz - .1, FH + .12); [-1, 1].forEach(sg => railZ(fz - (d - ud), fz - .1, mx + sg * (mw / 2 - .1), FH + .12));
+      hip(mw + .8, ud + .8, 1.3, mx, 2 * FH, uz); win(cx, FH + .12, tz, 2, 2.8, true); cols.forEach((x, i) => { if(i !== (cols.length - 1) / 2) win(x, FH + .6, tz, 1.3, 2.2); });
+      box(.9, 2.1, .9, stucco, mx - mw / 2 + 1.8, 2 * FH, uz); box(1.1, .15, 1.1, stone, mx - mw / 2 + 1.8, 2 * FH + 2.1, uz);
+    } else { hip(mw + .8, d + .8, 1.5, mx, FH, 0); box(.9, 2.1, .9, stucco, mx - mw / 2 + 1.8, FH, 0); box(1.1, .15, 1.1, stone, mx - mw / 2 + 1.8, FH + 2.1, 0); }
+    hip(gw + .8, d + .8, .8, gx, FH - .6, 0);
+    cols.forEach((x, i) => { if(i === (cols.length - 1) / 2) return; win(x, .5, fz, i % 2 ? 1.3 : 1.9, i % 2 ? 2.4 : 2.9, i % 2 === 0); });
+    win(cx, .1, fz, 2, 2.8, true);
+    [[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(([sx, sz]) => box(.22, 2.75, .22, wood, cx + sx * (pw / 2 - .15), 0, fz + (sz > 0 ? pd - .15 : .2)));   // timber pergola posts
+    box(pw, .22, .22, wood, cx, 2.55, fz + pd - .15); for(let x = -pw / 2 + .2; x <= pw / 2; x += .6) box(.12, .14, pd, wood, cx + x, 2.77, fz + pd / 2);
+    hip(pw + .7, pd * 2 + .6, .45, cx, 2.75, fz);
+    box(w + 2, .06, 6, pav(w + 2, 6), 0, 0, fz + 3); box(gdw + .4, .06, 13, pav(gdw + .4, 13), gx, 0, fz + 6.5);
+    pot(cx - 3.2, fz + .6); pot(cx + 3.2, fz + .6);
+  }
+  g.userData.top = H + 3;
+  return g;
+}
+function buildView(T, box, a){
+  const { R, Ls, Fr, el, hd, style, split, apn } = a, V3 = T.Vector3, EX = 1.5, GREEN = '#cfd9bf', SC = ['#4caf50', '#fdd835', '#fb8c00', '#d32f2f'], sc4 = s => s >= 15 ? 3 : s >= 10 ? 2 : s >= 5 ? 1 : 0;
+  const renderer = new T.WebGLRenderer({ antialias: true }); renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2)); renderer.shadowMap.enabled = true; renderer.shadowMap.type = T.PCFSoftShadowMap;
+  const scene = new T.Scene(); scene.background = new T.Color('#eef2f6'); const cam = new T.PerspectiveCamera(42, 4 / 3, .5, 6000), gh = p3dElev(el, EX);
+  const xs = R.map(p => p[0]), ys = R.map(p => p[1]), bx = (Math.min(...xs) + Math.max(...xs)) / 2, by = (Math.min(...ys) + Math.max(...ys)) / 2, span = Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys), 20);
+  const P3 = (x, y, h) => new V3(x, h, -y), navy = new T.MeshBasicMaterial({ color: '#1f3a5f' }), cyan = new T.MeshBasicMaterial({ color: '#00bcd4' }), gold = new T.MeshBasicMaterial({ color: '#b8860b' });
+  // ground: triangulated county ring, subdivided so slope colors / relief follow the USGS grid; flat slab when there is no elevation data
+  const rr = R.slice(); if(rr.length > 1 && rr[0][0] === rr[rr.length - 1][0] && rr[0][1] === rr[rr.length - 1][1]) rr.pop();
+  const nx = el ? Math.max(1, el.cells.findIndex(k => k.y !== el.cells[0].y) < 0 ? el.cells.length : el.cells.findIndex(k => k.y !== el.cells[0].y)) : 1, ny = el ? el.cells.length / nx : 1;
+  const colAt = (x, y) => { if(!el) return GREEN; const i = Math.min(nx - 1, Math.max(0, Math.floor((x - (el.cells[0].x - el.dx / 2)) / el.dx))), j = Math.min(ny - 1, Math.max(0, Math.floor((y - (el.cells[0].y - el.dy / 2)) / el.dy))), s = el.sl[j * nx + i]; return s == null ? GREEN : SC[sc4(s)]; };
+  const pos = [], col = [], cc = new T.Color(), tgt = el ? Math.min(el.dx, el.dy) * .7 : 1e9;
+  const emit = (A, B, C) => { const q = [A, B, C].map(p => P3(p[0], p[1], gh(p[0], p[1]))); if(q[1].clone().sub(q[0]).cross(q[2].clone().sub(q[0])).y < 0) q.reverse(); cc.set(colAt((A[0] + B[0] + C[0]) / 3, (A[1] + B[1] + C[1]) / 3)); q.forEach(p => { pos.push(p.x, p.y, p.z); col.push(cc.r, cc.g, cc.b); }); };
+  const sub = (A, B, C, dp) => { const L = Math.max(Math.hypot(A[0] - B[0], A[1] - B[1]), Math.hypot(B[0] - C[0], B[1] - C[1]), Math.hypot(C[0] - A[0], C[1] - A[1])); if(L <= tgt || dp > 6) return emit(A, B, C);
+    const Mi = (p, q) => [(p[0] + q[0]) / 2, (p[1] + q[1]) / 2], ab = Mi(A, B), bc = Mi(B, C), ca = Mi(C, A); sub(A, ab, ca, dp + 1); sub(ab, B, bc, dp + 1); sub(ca, bc, C, dp + 1); sub(ab, bc, ca, dp + 1); };
+  T.ShapeUtils.triangulateShape(rr.map(p => new T.Vector2(p[0], p[1])), []).forEach(t => sub(rr[t[0]], rr[t[1]], rr[t[2]], 0));
+  const gg = new T.BufferGeometry(); gg.setAttribute('position', new T.Float32BufferAttribute(pos, 3)); gg.setAttribute('color', new T.Float32BufferAttribute(col, 3)); gg.computeVertexNormals();
+  const top = new T.Mesh(gg, new T.MeshStandardMaterial({ vertexColors: true, roughness: 1 })); top.receiveShadow = true; scene.add(top);
+  const sp = [], BASE = -2;   // slab sides
+  rr.forEach((p, i) => { const q = rr[(i + 1) % rr.length], a0 = P3(p[0], p[1], gh(p[0], p[1])), b0 = P3(q[0], q[1], gh(q[0], q[1])); [a0, b0, new V3(b0.x, BASE, b0.z), a0, new V3(b0.x, BASE, b0.z), new V3(a0.x, BASE, a0.z)].forEach(v => sp.push(v.x, v.y, v.z)); });
+  const sg = new T.BufferGeometry(); sg.setAttribute('position', new T.Float32BufferAttribute(sp, 3)); sg.computeVertexNormals(); scene.add(new T.Mesh(sg, new T.MeshStandardMaterial({ color: '#7d8b6e', roughness: 1, side: T.DoubleSide })));
+  const bar = (p, q, r, m) => { const dv = q.clone().sub(p), len = dv.length(); if(len < 1e-6) return; const o = new T.Mesh(new T.CylinderGeometry(r, r, len, 6), m); o.position.copy(p).add(q).multiplyScalar(.5); o.quaternion.setFromUnitVectors(new V3(0, 1, 0), dv.normalize()); scene.add(o); };
+  const drape = (pts, closed, r, m) => { const n = closed ? pts.length : pts.length - 1; for(let i = 0; i < n; i++){ const p = pts[i], q = pts[(i + 1) % pts.length], k = Math.max(1, Math.ceil(Math.hypot(q[0] - p[0], q[1] - p[1]) / 4)); let last = null;
+    for(let s = 0; s <= k; s++){ const x = p[0] + (q[0] - p[0]) * s / k, y = p[1] + (q[1] - p[1]) * s / k, v = P3(x, y, gh(x, y) + .15); if(last) bar(last, v, r, m); last = v; } } };
+  const lr = Math.max(.25, span * .004); drape(rr, true, lr, navy); Fr.forEach(e => drape(e, false, lr * 1.4, cyan)); if(split) Ls.forEach(l => drape(l, true, lr * .8, gold));
+  // houses: oriented to the longest road-front edge, facing the road
+  const fe = Fr.reduce((b, e) => !b || Math.hypot(e[1][0] - e[0][0], e[1][1] - e[0][1]) > Math.hypot(b[1][0] - b[0][0], b[1][1] - b[0][1]) ? e : b, null), ang = fe ? Math.atan2(fe[1][1] - fe[0][1], fe[1][0] - fe[0][0]) : 0, ca = Math.cos(ang), sa = Math.sin(ang);
+  let front3 = new V3(0, 0, 1), c0 = new V3(bx, 0, -by), fdist = 30;
+  Ls.forEach((l, li) => {
+    const c = [l.reduce((t, p) => t + p[0], 0) / l.length, l.reduce((t, p) => t + p[1], 0) / l.length], mid = fe ? [(fe[0][0] + fe[1][0]) / 2 - c[0], (fe[0][1] + fe[1][1]) / 2 - c[1]] : [0, -1], s = (mid[0] * -sa + mid[1] * ca) >= 0 ? 1 : -1;
+    const xa = s > 0 ? new V3(-ca, 0, sa) : new V3(ca, 0, -sa), za = s > 0 ? new V3(-sa, 0, -ca) : new V3(sa, 0, ca), ya = new V3(0, 1, 0), hg = buildHouse(T, style, hd), hw = hd.w / 2, hz = hd.d / 2;
+    const ys2 = [[0, 0], [hw, hz], [-hw, hz], [hw, -hz], [-hw, -hz]].map(([u, v]) => gh(c[0] + u * xa.x + v * za.x, c[1] - u * xa.z - v * za.z)), top0 = Math.max(...ys2), low = Math.min(...ys2);
+    const og = new T.Group(); og.add(hg); og.quaternion.setFromRotationMatrix(new T.Matrix4().makeBasis(xa, ya, za)); og.position.set(c[0], top0, -c[1]); scene.add(og);
+    const fnd = new T.Mesh(new T.BoxGeometry(hd.w, top0 - low + 1, hd.d), new T.MeshStandardMaterial({ color: '#d8ccb4', roughness: 1 })); fnd.position.set(0, -(top0 - low + 1) / 2, 0); og.add(fnd);
+    og.traverse(o => { if(o.isMesh){ o.castShadow = true; o.receiveShadow = true; } });
+    if(li === 0){ front3 = za.clone(); c0 = new V3(c[0], top0, -c[1]); fdist = fe ? mid[0] * za.x - mid[1] * za.z : 30; }
+  });
+  addLandscape(scene, a.ctx, { T, gh, R, Ls, span });
+  scene.add(new T.HemisphereLight('#ffffff', '#b5b09a', 1.8)); const sun = new T.DirectionalLight('#fff4e0', 2.4), sr = span * .75 + 25;
+  sun.position.set(bx + sr * .9, sr * 1.3, -by + sr * .6); sun.target.position.set(bx, 0, -by); sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); Object.assign(sun.shadow.camera, { left: -sr, right: sr, top: sr, bottom: -sr, near: 1, far: sr * 4 }); sun.shadow.bias = -.0004; sun.shadow.radius = 3; scene.add(sun, sun.target);
+  // camera state + the two preset views
+  const th0 = Math.atan2(front3.x, front3.z), fd = Math.max(14, Math.min(30, fdist - 1)), eyeP = c0.clone().addScaledVector(front3, fd); eyeP.y = gh(eyeP.x, -eyeP.z) + 1.7;
+  const eyeT = new V3(c0.x, c0.y + 3.8, c0.z), ed = eyeP.clone().sub(eyeT), views = {
+    reset: { tx: bx, ty: 0, tz: -by, th: th0, ph: .95, r: span * .95 + 18 }, aerial: { tx: bx, ty: 0, tz: -by, th: th0, ph: .5, r: span * 1.05 + 18 },
+    eye: { tx: eyeT.x, ty: eyeT.y, tz: eyeT.z, th: Math.atan2(ed.x, ed.z), ph: Math.acos(ed.y / ed.length()), r: ed.length() } };
+  const fpts = R.flatMap(q => [new V3(q[0], 0, -q[1]), new V3(q[0], -8, -q[1])]);   // center + fill the frame with the whole slab, not just the bbox middle
+  cam.aspect = 4 / 3; cam.updateProjectionMatrix();
+  ['reset', 'aerial'].forEach(n => { const w = views[n]; for(let i = 0; i < 5; i++){
+    cam.position.set(w.tx + w.r * Math.sin(w.ph) * Math.sin(w.th), w.ty + w.r * Math.cos(w.ph), w.tz + w.r * Math.sin(w.ph) * Math.cos(w.th)); cam.lookAt(w.tx, w.ty, w.tz); cam.updateMatrixWorld();
+    const n2 = fpts.map(q => q.clone().project(cam)), x0 = Math.min(...n2.map(q => q.x)), x1 = Math.max(...n2.map(q => q.x)), y0 = Math.min(...n2.map(q => q.y)), y1 = Math.max(...n2.map(q => q.y)), h = w.r * Math.tan(21 * Math.PI / 180);
+    const rt = new V3().setFromMatrixColumn(cam.matrixWorld, 0), up = new V3().setFromMatrixColumn(cam.matrixWorld, 1), mx = (x0 + x1) / 2 * h * cam.aspect, my = (y0 + y1) / 2 * h;
+    w.tx += rt.x * mx + up.x * my; w.ty += rt.y * mx + up.y * my; w.tz += rt.z * mx + up.z * my; w.r *= Math.max(x1 - x0, y1 - y0) / 1.5; } });
+  const st = Object.assign({}, p3dCam[apn] || views.reset), maxR = span * 5 + 100;
+  const place = () => { st.ph = Math.min(1.75, Math.max(.05, st.ph)); st.r = Math.min(maxR, Math.max(4, st.r)); cam.position.set(st.tx + st.r * Math.sin(st.ph) * Math.sin(st.th), st.ty + st.r * Math.cos(st.ph), st.tz + st.r * Math.sin(st.ph) * Math.cos(st.th)); cam.lookAt(st.tx, st.ty, st.tz); };
+  const v = { box, apn, renderer, scene, st, views, maxR, q: 0 };
+  v.draw = () => { v.q = 0; place(); renderer.render(scene, cam); }; v.req = () => { if(!v.q) v.q = requestAnimationFrame(v.draw); };
+  const fit = () => { const W = box.clientWidth, Hh = box.clientHeight; if(!W || !Hh) return; renderer.setSize(W, Hh, false); cam.aspect = W / Hh; cam.updateProjectionMatrix(); v.req(); };
+  v.ro = new ResizeObserver(fit); v.ro.observe(box);
+  const cv = renderer.domElement, ptr = new Map(); cv.setAttribute('role', 'img'); cv.setAttribute('aria-label', '3D site model: drag to orbit, scroll or pinch to zoom');
+  cv.addEventListener('pointerdown', e => { cv.setPointerCapture(e.pointerId); ptr.set(e.pointerId, e); });
+  cv.addEventListener('pointermove', e => { const o = ptr.get(e.pointerId); if(!o) return;
+    if(ptr.size === 1){ st.th -= (e.clientX - o.clientX) * .008; st.ph -= (e.clientY - o.clientY) * .008; }
+    else if(ptr.size === 2){ const [p, q] = [...ptr.values()], d0 = Math.hypot(p.clientX - q.clientX, p.clientY - q.clientY); ptr.set(e.pointerId, e); const [p1, q1] = [...ptr.values()], d1 = Math.hypot(p1.clientX - q1.clientX, p1.clientY - q1.clientY); if(d1 > 1) st.r *= d0 / d1; }
+    ptr.set(e.pointerId, e); v.req(); });
+  ['pointerup', 'pointercancel'].forEach(n => cv.addEventListener(n, e => ptr.delete(e.pointerId)));
+  cv.addEventListener('wheel', e => { e.preventDefault(); st.r *= Math.exp(e.deltaY * .0015); v.req(); }, { passive: false });
+  box.innerHTML = ''; box.appendChild(cv); v.light = sun; fit(); place(); v.req();
+  return v;
+}
 function plan3d(lead, ring, ctx, lots, redraw){
   if(!ring) return '<div class="p3d"><div class="pm-review"><b>3D site plan: boundary unavailable.</b> The county returned no parcel polygon, so nothing is drawn.</div></div>';
   const lat0 = ring.reduce((t, p) => t + p[1], 0) / ring.length, lng0 = ring.reduce((t, p) => t + p[0], 0) / ring.length, kx = 111320 * Math.cos(lat0 * Math.PI / 180);
-  const loc = p => [(p[0] - lng0) * kx, (p[1] - lat0) * 110540], ll = p => loc([p[1], p[0]]), iso = p => [(p[0] - p[1]) * .866, -(p[0] + p[1]) * .5];
+  const loc = p => [(p[0] - lng0) * kx, (p[1] - lat0) * 110540], ll = p => loc([p[1], p[0]]);
+  if(redraw) p3dRedraw[lead.apn] = redraw;
   let el = elevCache[lead.apn];
   if(el === undefined){ elevCache[lead.apn] = 'pending'; fetchElevation(ring, lng0, lat0, kx).catch(() => null).then(r => { elevCache[lead.apn] = r || null; if(redraw) redraw(); }); }
   if(el === 'pending') el = undefined;
-  const R = ring.map(loc), split = LOT_SPLITS && lots.length > 0, Ls = split ? lots.map(l => l.map(ll)) : [R], Fr = ctx ? ctx.frontLL.map(e => e.map(ll)) : [], D = 14, PH = 7;
-  const q = R.concat(...Ls).map(iso), x0 = Math.min(...q.map(p => p[0])), y0 = Math.min(...q.map(p => p[1])), sc = Math.min(320 / (Math.max(...q.map(p => p[0])) - x0 || 1), 190 / (Math.max(...q.map(p => p[1])) - y0 || 1));
-  const T = (p, z) => { const a = iso(p); return ((a[0] - x0) * sc + 20).toFixed(1) + ',' + ((a[1] - y0) * sc + 20 + PH - (z || 0)).toFixed(1); };
-  const poly = (a, z, st) => `<polygon points="${a.map(p => T(p, z)).join(' ')}" ${st}/>`;
-  const sides = R.map((a, i) => `<polygon points="${[T(a), T(R[(i + 1) % R.length]), T(R[(i + 1) % R.length], -D), T(a, -D)].join(' ')}" fill="#7d8b6e" stroke="#5f6c52" stroke-width=".5"/>`).join('');
-  const pads = Ls.map(l => { const c = [l.reduce((t, p) => t + p[0], 0) / l.length, l.reduce((t, p) => t + p[1], 0) / l.length], ar = Math.abs(l.reduce((t, p, i) => t + p[0] * l[(i + 1) % l.length][1] - l[(i + 1) % l.length][0] * p[1], 0)) / 2, w = .15 * Math.sqrt(ar), k = (dx, dy) => [c[0] + dx * w, c[1] + dy * w];
-    return `<polygon points="${[k(-1, -1), k(-1, 1), k(-1, 1), k(-1, -1)].map((p, i) => T(p, i > 1 ? PH : 0)).join(' ')}" fill="#b9b2a3"/><polygon points="${[k(-1, -1), k(1, -1), k(1, -1), k(-1, -1)].map((p, i) => T(p, i > 1 ? PH : 0)).join(' ')}" fill="#d8d2c4"/>` + poly([k(-1, -1), k(-1, 1), k(1, 1), k(1, -1)], PH, 'fill="#f4f1ea" stroke="#8a8372" stroke-width=".6"'); }).join('');
-  const W = Math.ceil((Math.max(...q.map(p => p[0])) - x0) * sc + 40), H = Math.ceil((Math.max(...q.map(p => p[1])) - y0) * sc + 40 + PH + D);
-  const cid = 'sl' + String(lead.apn).replace(/\W/g, ''), SC = ['#4caf50', '#fdd835', '#fb8c00', '#d32f2f'], sc4 = s => s >= 15 ? 3 : s >= 10 ? 2 : s >= 5 ? 1 : 0;
-  const shade = el ? `<clipPath id="${cid}"><polygon points="${R.map(a => T(a)).join(' ')}"/></clipPath><g clip-path="url(#${cid})" fill-opacity=".8">${el.cells.map((c, k) => el.sl[k] == null ? '' : poly([[c.x - el.dx / 2, c.y - el.dy / 2], [c.x + el.dx / 2, c.y - el.dy / 2], [c.x + el.dx / 2, c.y + el.dy / 2], [c.x - el.dx / 2, c.y + el.dy / 2]], 0, `fill="${SC[sc4(el.sl[k])]}"`)).join('')}</g>` : '';
-  const svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Schematic 3D site plan"><g transform="translate(9,7)" opacity=".2">${poly(R, -D, 'fill="#000"')}</g>${sides}${poly(R, 0, 'fill="#dfe6d3"')}${shade}${poly(R, 0, 'fill="none" stroke="#d93025" stroke-width="2"')}${(split ? Ls : []).map(l => poly(l, 0, 'fill="#ffd400" fill-opacity=".5" stroke="#b8860b" stroke-width="1"')).join('')}${Fr.map(e => `<polyline points="${e.map(p => T(p)).join(' ')}" fill="none" stroke="#00bcd4" stroke-width="3.5" stroke-linecap="round"/>`).join('')}${pads}</svg>`;
+  const R = ring.map(loc), split = LOT_SPLITS && lots.length > 0, Ls = split ? lots.map(l => l.map(ll)) : [R], Fr = ctx ? ctx.frontLL.map(e => e.map(ll)) : [];
+  const cs = compSfs(lead), hs = houseSel[lead.apn], key = hs !== undefined ? (hs === 'comps' && !cs.med ? 3500 : hs) : cs.med ? 'comps' : 3500, hsf = key === 'comps' ? cs.med : key, hd = houseDims(hsf), hstyle = houseStyle[lead.apn] === 'B' ? 'B' : 'A';
+  const SC = ['#4caf50', '#fdd835', '#fb8c00', '#d32f2f'], id = ++p3dSeq, apn = esc(String(lead.apn));
+  setTimeout(() => mount3d(id, { apn: lead.apn, R, Ls, Fr, el, hd, style: hstyle, split, ctx }), 0);
   const m = n => '$' + Math.round(n).toLocaleString(), p = profitFor(lead, 0, 0), pill = (t, e) => `<span class="pill3d">${t}${e ? ' <small>est.</small>' : ''}</span>`;
   const frontFt = ctx && ctx.frontKnown ? ctx.front.reduce((t, e) => t + Math.hypot(e[1][0] - e[0][0], e[1][1] - e[0][1]), 0) * FT : 0;
-  const pills = [split ? pill(lots.length + ' lots (sketch)') : pill(LOT_SPLITS ? 'no split drawable' : '1 house'), p ? pill(m(p.cost / p.n) + '/home all-in', 1) + pill('Site work ' + m(p.n * (parseFloat(document.getElementById('hcSite').value) || 0)), 1) : '', frontFt ? pill(Math.round(frontFt).toLocaleString() + ' ft frontage', 1) : '', pill((lead.landAcres || 0).toFixed(2) + ' ac'), el ? pill('Avg slope ' + el.avg.toFixed(1) + '%', 1) + pill('Max ' + el.max.toFixed(0) + '%', 1) + pill('Relief ' + el.reliefFt.toFixed(0) + ' ft', 1) : el === null ? pill('slope unavailable') : ''].join('');
-  const legend = el ? `<div class="pm-why">Slope: ${['&lt;5%', '5-10%', '10-15%', '&ge;15% (steep)'].map((t, i) => `<span style="background:${SC[i]};display:inline-block;width:10px;height:10px;margin:0 3px 0 8px;"></span>${t}`).join('')}</div>` : '';
-  return `<div class="p3d"><b>3D site plan + costs</b> ${CF('e', 'schematic')}${svg}${legend}<div class="p3d-pills">${pills}</div><div class="p3d-note pm-why">Schematic drawn from the county parcel boundary: NOT LiDAR or surveyed terrain, and the slab is flat. ${el ? 'Slope shading is estimated from USGS 3DEP public elevation data, not a survey.' : ''} ${split ? 'Lot lines are the sketch above; ' : LOT_SPLITS ? 'No lot split could be drawn here; ' : 'One house on the whole parcel, no lot split (switch Lot splits on at the top to sketch splits); '}boxes are placeholder house pads. ${p ? `Costs are the profit model's ${p.n} home${p.n > 1 ? 's' : ''}: all-in = land, build, soft costs, site work, demolition, split and financing; site work = homes × the calculator's site-work input. Estimates, not bids.` : 'Costs unavailable: no priced comps or land basis for this lead.'}</div></div>`;
+  const pills = [split ? pill(lots.length + ' lots (sketch)') : pill(LOT_SPLITS ? 'no split drawable' : '1 house'), p ? pill(m(p.cost / p.n) + '/home all-in', 1) + pill('Site work ' + m(p.n * (parseFloat(document.getElementById('hcSite').value) || 0)), 1) : '', frontFt ? pill(Math.round(frontFt).toLocaleString() + ' ft frontage', 1) : '', pill('House ' + hsf.toLocaleString() + ' sf · ' + hd.st + '-story', 1) + pill('Build ~' + m(hsf * (parseFloat(document.getElementById('hcHard').value) || 0)), 1) + (hd.area > .3 * Math.min(...Ls.map(polyArea)) ? pill('tight fit: check setbacks') : '') + pill((lead.landAcres || 0).toFixed(2) + ' ac'), el ? pill('Avg slope ' + el.avg.toFixed(1) + '%', 1) + pill('Max ' + el.max.toFixed(0) + '%', 1) + pill('Relief ' + el.reliefFt.toFixed(0) + ' ft', 1) : el === null ? pill('slope unavailable') : ''].join('');
+  const btn = (c, t, l) => `<button type="button" onclick="p3dCmd(${id},'${c}')"${l ? ` aria-label="${l}"` : ''}>${t}</button>`;
+  const view = `<div class="p3d-view" id="p3dv-${id}"><div class="pm-why" style="padding:14px;">Loading 3D viewer…</div></div><div class="p3d-sizes" id="p3db-${id}">${btn('aerial', 'Aerial')}${btn('eye', 'Eye level')}${btn('reset', 'Reset')}${btn('in', '+', 'Zoom in')}${btn('out', '&minus;', 'Zoom out')}<span class="pm-why">drag to orbit, scroll or pinch to zoom</span></div>`;
+  const sizes = `<div class="p3d-sizes">House size: ${(cs.med ? [['comps', 'Comps ~' + cs.med.toLocaleString() + ' sf']] : []).concat([2500, 3000, 3500, 4000].map(v => [v, v.toLocaleString() + ' sf'])).map(([k, t]) => `<button type="button" class="${k === key ? 'on' : ''}" onclick="pickHouseSf('${apn}','${k}')">${t}</button>`).join('')}${cs.n ? ` <span class="pm-why">nearby new builds: ${cs.lo.toLocaleString()}-${cs.hi.toLocaleString()} sf (${cs.n} sales)</span>` : ''}</div><div class="p3d-sizes">Style: ${['A', 'B'].map(s => `<button type="button" class="${s === hstyle ? 'on' : ''}" onclick="pickHouseStyle('${apn}','${s}')">Style ${s}</button>`).join('')}<span class="pm-why">${hstyle === 'A' ? 'curved parapet, barrel-tile roof, balcony + curved stair' : 'hip tile roofs, roof terrace, pergola porch'}</span></div>`;
+  const legend = el ? `<div class="pm-why">Slope: ${['&lt;5%', '5-10%', '10-15%', '&ge;15% (steep)'].map((t, i) => `<span style="background:${SC[i]};display:inline-block;width:10px;height:10px;margin:0 3px 0 8px;"></span>${t}`).join('')} &middot; terrain relief drawn 1.5&times; exaggerated</div>` : '';
+  return `<div class="p3d"><b>3D site plan + costs</b> ${CF('e', 'schematic')}${view}${sizes}${legend}<div class="p3d-pills">${pills}</div><div class="p3d-note pm-why">Schematic drawn from the county parcel boundary: NOT LiDAR or surveyed terrain. ${el ? 'Slope colors and relief are estimated from USGS 3DEP public elevation data (relief drawn 1.5&times; exaggerated), not a survey.' : 'The ground is drawn flat.'} ${split ? 'Lot lines are the sketch above; ' : LOT_SPLITS ? 'No lot split could be drawn here; ' : 'One house on the whole parcel, no lot split (switch Lot splits on at the top to sketch splits); '}the house is a massing model sized by square feet (1 story to 3,000 sf, 2 above; footprint = sf per story + 700 sf garage/porch; Spanish Style A or B), not a design or floor plan. ${p ? `Costs are the profit model's ${p.n} home${p.n > 1 ? 's' : ''}: all-in = land, build, soft costs, site work, demolition, split and financing; site work = homes × the calculator's site-work input. Estimates, not bids.` : 'Costs unavailable: no priced comps or land basis for this lead.'}</div></div>`;
 }
 async function reelHero(){
   const el = document.getElementById('reel-hero');
