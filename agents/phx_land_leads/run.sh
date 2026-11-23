@@ -32,9 +32,10 @@ if ! python3 agents/phx_land_leads/verdict.py; then   # don't publish data.js wi
   notify "verdict.py FAILED — nothing pushed. See $LOG"
   exit 1
 fi
+python3 agents/phx_land_leads/slope.py || echo "slope.py failed, continuing (leads keep no stored slope this run)"   # incremental USGS slope -> slope.json; page falls back to live fetch
 python3 agents/phx_land_leads/track.py || echo "track.py failed, continuing"
-if ! git diff --quiet -- phx-land-leads/data.js phx-land-leads/history.jsonl || [ -n "$(git ls-files -o --exclude-standard phx-land-leads/history.jsonl)" ]; then
-  git add phx-land-leads/data.js phx-land-leads/history.jsonl agents/phx_land_leads/esl_cache.json
+if ! git diff --quiet -- phx-land-leads/data.js phx-land-leads/history.jsonl phx-land-leads/slope.json || [ -n "$(git ls-files -o --exclude-standard phx-land-leads/slope.json)" ] || [ -n "$(git ls-files -o --exclude-standard phx-land-leads/history.jsonl)" ]; then
+  git add phx-land-leads/data.js phx-land-leads/history.jsonl phx-land-leads/slope.json agents/phx_land_leads/esl_cache.json
   git commit -m "phx-land-leads: daily pull $(date +%Y-%m-%d)"
   git push || notify "Pull OK but git push FAILED — dashboard not updated"
 fi

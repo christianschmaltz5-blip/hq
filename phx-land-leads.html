@@ -592,6 +592,7 @@ BEFORE YOU SIGN ANYTHING
 </div>
 
 <script src="phx-land-leads/data.js"></script>
+<script src="phx-land-leads/landscape.js"></script>
 <script src="assets/js/shell.js"></script>
 <script>
 const D = window.PHX_LAND_LEADS || {leads:[], history:[], zipCodes:[]};
@@ -1723,6 +1724,10 @@ async function fetchElevation(ring, lng0, lat0, kx){
   const sl = slopeCells(v, nx, ny, dx, dy).filter((s, k) => s != null && cells[k].inside), zs = ins.map(c => c.z);
   return sl.length ? { cells, sl: slopeCells(v, nx, ny, dx, dy), dx, dy, avg: sl.reduce((t, s) => t + s, 0) / sl.length, max: Math.max(...sl), reliefFt: (Math.max(...zs) - Math.min(...zs)) * FT } : null;
 }
+// Stored slope (agents/phx_land_leads/slope.py -> phx-land-leads/slope.json): used when its ringHash matches the current boundary, so no USGS call
+function ringHash(ring){ let h = 0x811c9dc5; for(const b of new TextEncoder().encode(ring.map(p => p[0].toFixed(6) + ',' + p[1].toFixed(6)).join(','))) h = Math.imul(h ^ b, 0x01000193) >>> 0; return h.toString(16).padStart(8, '0'); }   // FNV-1a, same as slope.py
+let slopeStore;
+const slopeReady = fetch('phx-land-leads/slope.json').then(r => r.ok ? r.json() : {}).catch(() => ({})).then(j => { slopeStore = j || {}; });
 const elevCache = {};   // apn -> undefined (not asked) | 'pending' | result | null (unavailable)
 const houseSel = {}, p3dRedraw = {};   // apn -> 'comps' | square feet picked in the 3D plan
 function pickHouseSf(apn, k){ houseSel[apn] = k === 'comps' ? 'comps' : +k; if(p3dRedraw[apn]) p3dRedraw[apn](); }
@@ -1742,7 +1747,7 @@ function loadThree(){
   if(!p3dLib) p3dLib = (async () => { for(const u of P3D_LIBS){ try{ return await import(u); }catch(e){} } throw new Error('three.js did not load'); })().catch(e => { p3dLib = null; throw e; });
   return p3dLib;
 }
-function addLandscape(scene, ctx, info){}   // RESERVED hook for the future "landscaping mode" (trees, lawn, fences, paths); intentionally does nothing today
+function addLandscape(scene, ctx, info){ try{ return typeof buildLandscape === 'function' ? buildLandscape(info.T, scene, Object.assign({ ctx, frontKnown: !ctx || ctx.frontKnown !== false }, info)) : null; }catch(e){ console.warn('landscape', e); return null; } }   // phx-land-leads/landscape.js; off by default, never breaks the viewer
 function disposeView(id){
   const v = p3dViews[id]; if(!v) return; delete p3dViews[id];
   cancelAnimationFrame(v.q); v.ro.disconnect(); p3dCam[v.apn] = Object.assign({}, v.st);
@@ -1885,17 +1890,17 @@ function buildView(T, box, a){
   const lr = Math.max(.25, span * .004); drape(rr, true, lr, navy); Fr.forEach(e => drape(e, false, lr * 1.4, cyan)); if(split) Ls.forEach(l => drape(l, true, lr * .8, gold));
   // houses: oriented to the longest road-front edge, facing the road
   const fe = Fr.reduce((b, e) => !b || Math.hypot(e[1][0] - e[0][0], e[1][1] - e[0][1]) > Math.hypot(b[1][0] - b[0][0], b[1][1] - b[0][1]) ? e : b, null), ang = fe ? Math.atan2(fe[1][1] - fe[0][1], fe[1][0] - fe[0][0]) : 0, ca = Math.cos(ang), sa = Math.sin(ang);
-  let front3 = new V3(0, 0, 1), c0 = new V3(bx, 0, -by), fdist = 30;
+  let front3 = new V3(0, 0, 1), c0 = new V3(bx, 0, -by), fdist = 30; const houses = [];
   Ls.forEach((l, li) => {
     const c = [l.reduce((t, p) => t + p[0], 0) / l.length, l.reduce((t, p) => t + p[1], 0) / l.length], mid = fe ? [(fe[0][0] + fe[1][0]) / 2 - c[0], (fe[0][1] + fe[1][1]) / 2 - c[1]] : [0, -1], s = (mid[0] * -sa + mid[1] * ca) >= 0 ? 1 : -1;
     const xa = s > 0 ? new V3(-ca, 0, sa) : new V3(ca, 0, -sa), za = s > 0 ? new V3(-sa, 0, -ca) : new V3(sa, 0, ca), ya = new V3(0, 1, 0), hg = buildHouse(T, style, hd), hw = hd.w / 2, hz = hd.d / 2;
     const ys2 = [[0, 0], [hw, hz], [-hw, hz], [hw, -hz], [-hw, -hz]].map(([u, v]) => gh(c[0] + u * xa.x + v * za.x, c[1] - u * xa.z - v * za.z)), top0 = Math.max(...ys2), low = Math.min(...ys2);
     const og = new T.Group(); og.add(hg); og.quaternion.setFromRotationMatrix(new T.Matrix4().makeBasis(xa, ya, za)); og.position.set(c[0], top0, -c[1]); scene.add(og);
     const fnd = new T.Mesh(new T.BoxGeometry(hd.w, top0 - low + 1, hd.d), new T.MeshStandardMaterial({ color: '#d8ccb4', roughness: 1 })); fnd.position.set(0, -(top0 - low + 1) / 2, 0); og.add(fnd);
-    og.traverse(o => { if(o.isMesh){ o.castShadow = true; o.receiveShadow = true; } });
+    og.traverse(o => { if(o.isMesh){ o.castShadow = true; o.receiveShadow = true; } }); houses.push({ c, xa: [xa.x, -xa.z], za: [za.x, -za.z], w: hd.w, d: hd.d, top0 });
     if(li === 0){ front3 = za.clone(); c0 = new V3(c[0], top0, -c[1]); fdist = fe ? mid[0] * za.x - mid[1] * za.z : 30; }
   });
-  addLandscape(scene, a.ctx, { T, gh, R, Ls, span });
+  addLandscape(scene, a.ctx, { T, gh, R, Ls, span, Fr, el, hd, top, houses, apn });
   scene.add(new T.HemisphereLight('#ffffff', '#b5b09a', 1.8)); const sun = new T.DirectionalLight('#fff4e0', 2.4), sr = span * .75 + 25;
   sun.position.set(bx + sr * .9, sr * 1.3, -by + sr * .6); sun.target.position.set(bx, 0, -by); sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); Object.assign(sun.shadow.camera, { left: -sr, right: sr, top: sr, bottom: -sr, near: 1, far: sr * 4 }); sun.shadow.bias = -.0004; sun.shadow.radius = 3; scene.add(sun, sun.target);
   // camera state + the two preset views
@@ -1934,8 +1939,10 @@ function plan3d(lead, ring, ctx, lots, redraw){
   if(redraw) p3dRedraw[lead.apn] = redraw;
   let el = elevCache[lead.apn];
   const ek = 'elev1:' + lead.apn;
-  if(el === undefined){ try{ const c = JSON.parse(localStorage.getItem(ek)); if(c && c.cells && c.sl) el = elevCache[lead.apn] = c; }catch(e){} }   // ground doesn't change: reuse a past result
-  if(el === undefined){ elevCache[lead.apn] = 'pending'; fetchElevation(ring, lng0, lat0, kx).catch(() => null).then(r => { elevCache[lead.apn] = r || null; if(r) try{ localStorage.setItem(ek, JSON.stringify(r)); }catch(e){} if(redraw) redraw(); }); }
+  if(el === undefined && slopeStore === undefined) slopeReady.then(() => { if(redraw) redraw(); });   // wait for the stored file before any live fetch
+  else if(el === undefined){ const st = slopeStore[lead.apn]; if(st && !st.failed && st.cells && st.sl && st.ringHash === ringHash(ring)) el = elevCache[lead.apn] = st; }
+  if(el === undefined && slopeStore !== undefined){ try{ const c = JSON.parse(localStorage.getItem(ek)); if(c && c.cells && c.sl) el = elevCache[lead.apn] = c; }catch(e){} }   // ground doesn't change: reuse a past result
+  if(el === undefined && slopeStore !== undefined){ elevCache[lead.apn] = 'pending'; fetchElevation(ring, lng0, lat0, kx).catch(() => null).then(r => { elevCache[lead.apn] = r || null; if(r) try{ localStorage.setItem(ek, JSON.stringify(r)); }catch(e){} if(redraw) redraw(); }); }
   if(el === 'pending') el = undefined;
   const R = ring.map(loc), split = LOT_SPLITS && lots.length > 0, Ls = split ? lots.map(l => l.map(ll)) : [R], Fr = ctx ? ctx.frontLL.map(e => e.map(ll)) : [];
   const cs = compSfs(lead), hs = houseSel[lead.apn], key = hs !== undefined ? (hs === 'comps' && !cs.med ? 3500 : hs) : cs.med ? 'comps' : 3500, hsf = key === 'comps' ? cs.med : key, hd = houseDims(hsf), hstyle = houseStyle[lead.apn] === 'B' ? 'B' : 'A';
@@ -1943,9 +1950,9 @@ function plan3d(lead, ring, ctx, lots, redraw){
   setTimeout(() => mount3d(id, { apn: lead.apn, R, Ls, Fr, el, hd, style: hstyle, split, ctx }), 0);
   const m = n => '$' + Math.round(n).toLocaleString(), p = profitFor(lead, 0, 0), pill = (t, e) => `<span class="pill3d">${t}${e ? ' <small>est.</small>' : ''}</span>`;
   const frontFt = ctx && ctx.frontKnown ? ctx.front.reduce((t, e) => t + Math.hypot(e[1][0] - e[0][0], e[1][1] - e[0][1]), 0) * FT : 0;
-  const pills = [split ? pill(lots.length + ' lots (sketch)') : pill(LOT_SPLITS ? 'no split drawable' : '1 house'), p ? pill(m(p.cost / p.n) + '/home all-in', 1) + pill('Site work ' + m(p.n * (parseFloat(document.getElementById('hcSite').value) || 0)), 1) : '', frontFt ? pill(Math.round(frontFt).toLocaleString() + ' ft frontage', 1) : '', pill('House ' + hsf.toLocaleString() + ' sf · ' + hd.st + '-story', 1) + pill('Build ~' + m(hsf * (parseFloat(document.getElementById('hcHard').value) || 0)), 1) + (hd.area > .3 * Math.min(...Ls.map(polyArea)) ? pill('tight fit: check setbacks') : '') + pill((lead.landAcres || 0).toFixed(2) + ' ac'), el ? pill('Avg slope ' + el.avg.toFixed(1) + '%', 1) + pill('Max ' + el.max.toFixed(0) + '%', 1) + pill('Relief ' + el.reliefFt.toFixed(0) + ' ft', 1) : el === null ? pill('slope unavailable (reload to retry)') : !el ? pill('loading slope…') : ''].join('');
+  const pills = [ctx && !ctx.frontKnown ? pill('road not found: house direction not set') : '', split ? pill(lots.length + ' lots (sketch)') : pill(LOT_SPLITS ? 'no split drawable' : '1 house'), p ? pill(m(p.cost / p.n) + '/home all-in', 1) + pill('Site work ' + m(p.n * (parseFloat(document.getElementById('hcSite').value) || 0)), 1) : '', frontFt ? pill(Math.round(frontFt).toLocaleString() + ' ft frontage', 1) : '', pill('House ' + hsf.toLocaleString() + ' sf · ' + hd.st + '-story', 1) + pill('Build ~' + m(hsf * (parseFloat(document.getElementById('hcHard').value) || 0)), 1) + (hd.area > .3 * Math.min(...Ls.map(polyArea)) ? pill('tight fit: check setbacks') : '') + pill((lead.landAcres || 0).toFixed(2) + ' ac'), el ? pill('Avg slope ' + el.avg.toFixed(1) + '%', 1) + pill('Max ' + el.max.toFixed(0) + '%', 1) + pill('Relief ' + el.reliefFt.toFixed(0) + ' ft', 1) : el === null ? pill('slope unavailable (reload to retry)') : !el ? pill('loading slope…') : ''].join('');
   const btn = (c, t, l) => `<button type="button" onclick="p3dCmd(${id},'${c}')"${l ? ` aria-label="${l}"` : ''}>${t}</button>`;
-  const view = `<div class="p3d-view" id="p3dv-${id}"><div class="pm-why" style="padding:14px;">Loading 3D viewer…</div></div><div class="p3d-sizes" id="p3db-${id}">${btn('aerial', 'Aerial')}${btn('eye', 'Eye level')}${btn('reset', 'Reset')}${btn('in', '+', 'Zoom in')}${btn('out', '&minus;', 'Zoom out')}<span class="pm-why">drag to orbit, scroll or pinch to zoom</span></div>`;
+  const view = `<div class="p3d-view" id="p3dv-${id}"><div class="pm-why" style="padding:14px;">Loading 3D viewer…</div></div><div class="p3d-sizes" id="p3db-${id}">${btn('aerial', 'Aerial')}${btn('eye', 'Eye level')}${btn('reset', 'Reset')}${typeof landBtn === 'function' ? landBtn(apn) : ''}${btn('in', '+', 'Zoom in')}${btn('out', '&minus;', 'Zoom out')}<span class="pm-why">drag to orbit, scroll or pinch to zoom</span></div>${typeof landUI === 'function' ? landUI(apn) : ''}`;
   const sizes = `<div class="p3d-sizes">House size: ${(cs.med ? [['comps', 'Comps ~' + cs.med.toLocaleString() + ' sf']] : []).concat([2500, 3000, 3500, 4000].map(v => [v, v.toLocaleString() + ' sf'])).map(([k, t]) => `<button type="button" class="${k === key ? 'on' : ''}" onclick="pickHouseSf('${apn}','${k}')">${t}</button>`).join('')}${cs.n ? ` <span class="pm-why">nearby new builds: ${cs.lo.toLocaleString()}-${cs.hi.toLocaleString()} sf (${cs.n} sales)</span>` : ''}</div><div class="p3d-sizes">Style: ${['A', 'B'].map(s => `<button type="button" class="${s === hstyle ? 'on' : ''}" onclick="pickHouseStyle('${apn}','${s}')">Style ${s}</button>`).join('')}<span class="pm-why">${hstyle === 'A' ? 'curved parapet, barrel-tile roof, balcony + curved stair' : 'hip tile roofs, roof terrace, pergola porch'}</span></div>`;
   const legend = el ? `<div class="pm-why">Slope: ${['&lt;5%', '5-10%', '10-15%', '&ge;15% (steep)'].map((t, i) => `<span style="background:${SC[i]};display:inline-block;width:10px;height:10px;margin:0 3px 0 8px;"></span>${t}`).join('')} &middot; terrain relief drawn 1.5&times; exaggerated</div>` : '';
   return `<div class="p3d"><b>3D site plan + costs</b> ${CF('e', 'schematic')}${view}${sizes}${legend}<div class="p3d-pills">${pills}</div><div class="p3d-note pm-why">Schematic drawn from the county parcel boundary: NOT LiDAR or surveyed terrain. ${el ? 'Slope colors and relief are estimated from USGS 3DEP public elevation data (relief drawn 1.5&times; exaggerated), not a survey.' : 'The ground is drawn flat.'} ${split ? 'Lot lines are the sketch above; ' : LOT_SPLITS ? 'No lot split could be drawn here; ' : 'One house on the whole parcel, no lot split (switch Lot splits on at the top to sketch splits); '}the house is a massing model sized by square feet (1 story to 3,000 sf, 2 above; footprint = sf per story + 700 sf garage/porch; Spanish Style A or B), not a design or floor plan. ${p ? `Costs are the profit model's ${p.n} home${p.n > 1 ? 's' : ''}: all-in = land, build, soft costs, site work, demolition, split and financing; site work = homes × the calculator's site-work input. Estimates, not bids.` : 'Costs unavailable: no priced comps or land basis for this lead.'}</div></div>`;
@@ -1968,7 +1975,7 @@ async function reelHero(){
     }
   }catch(e){ ring = null; }
   const draw = () => { el.innerHTML = `<h2>3D Site Plans + Costs</h2><div style="font-weight:700;margin-bottom:4px;">${esc(String(lead.address || lead.apn).split(/\s{2,}/)[0])} <span class="pill3d">GOOD screen</span></div><div style="background:#fff;color:var(--text);border-radius:10px;padding:8px;">${plan3d(lead, ring, ctx, lots, draw)}</div><button class="mail-btn" type="button" onclick="openLeadScenario('${esc(lead.apn)}')">Open this site plan</button>`; };
-  draw();
+  window.heroDraw = draw; draw();
 }
 async function initParcelMap(lead, idx){
   const box = document.getElementById('pm-' + idx), info = document.getElementById('pminfo-' + idx), note = document.getElementById('pmnote-' + idx); if(!box) return;
