@@ -1701,10 +1701,35 @@ function traceClear(idx, apn){
   if(box){ box._tracing = false; box._trace = []; box.style.cursor = ''; if(box._traceGroup) box._traceGroup.clearLayers(); box._redraw(); }
 }
 // Pseudo-3D schematic of the county parcel polygon + the page's lot sketch; every number comes from profitFor() / the calculator inputs / ctx
-function plan3d(lead, ring, ctx, lots){
+// Slope % per grid cell (row-major z in meters, null = no sample) from neighbour rise/run; pure, tested in tests/slope.test.mjs
+function slopeCells(z, nx, ny, dx, dy){
+  const at = (i, j) => i < 0 || j < 0 || i >= nx || j >= ny ? null : z[j * nx + i], g = (a, b, d) => a != null && b != null ? (b - a) / d : null;
+  return z.map((v, k) => { if(v == null) return null; const i = k % nx, j = (k - i) / nx, c = (a, b, h) => { const l = at(...a), r = at(...b); return l != null && r != null ? (r - l) / (2 * h) : g(v, r, h) ?? g(l, v, h); }, sx = c([i - 1, j], [i + 1, j], dx), sy = c([i, j - 1], [i, j + 1], dy);
+    return sx == null && sy == null ? null : Math.hypot(sx || 0, sy || 0) * 100; });
+}
+// USGS 3DEP samples on a <=12x12 grid over the parcel bbox (local-meter frame of plan3d); null on any failure / mostly NoData
+async function fetchElevation(ring, lng0, lat0, kx){
+  const R = ring.map(p => [(p[0] - lng0) * kx, (p[1] - lat0) * 110540]), xs = R.map(p => p[0]), ys = R.map(p => p[1]), x0 = Math.min(...xs), y0 = Math.min(...ys), w = Math.max(...xs) - x0, h = Math.max(...ys) - y0, sp = Math.max(5, Math.max(w, h) / 11);
+  const nx = Math.min(12, Math.floor(w / sp) + 1), ny = Math.min(12, Math.floor(h / sp) + 1), dx = w / nx, dy = h / ny, cells = [];
+  for(let j = 0; j < ny; j++) for(let i = 0; i < nx; i++){ const x = x0 + (i + .5) * dx, y = y0 + (j + .5) * dy; cells.push({ x, y, inside: pip([x, y], R) }); }
+  if(cells.filter(c => c.inside).length < 3) return null;
+  const body = new URLSearchParams({ geometry: JSON.stringify({ points: cells.map(c => [lng0 + c.x / kx, lat0 + c.y / 110540]), spatialReference: { wkid: 4326 } }), geometryType: 'esriGeometryMultipoint', returnFirstValueOnly: 'true', f: 'json' });
+  const r = await (await fetch('https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/getSamples', { method: 'POST', body, signal: AbortSignal.timeout(12000) })).json();
+  const v = (r.samples || []).map(s => { const n = parseFloat(s.value); return s.value === '' || isNaN(n) ? null : n; });
+  if(v.length !== cells.length) return null;
+  cells.forEach((c, k) => { c.z = v[k]; });
+  const ins = cells.filter(c => c.inside && c.z != null); if(ins.length < Math.max(3, cells.filter(c => c.inside).length / 2)) return null;
+  const sl = slopeCells(v, nx, ny, dx, dy).filter((s, k) => s != null && cells[k].inside), zs = ins.map(c => c.z);
+  return sl.length ? { cells, sl: slopeCells(v, nx, ny, dx, dy), dx, dy, avg: sl.reduce((t, s) => t + s, 0) / sl.length, max: Math.max(...sl), reliefFt: (Math.max(...zs) - Math.min(...zs)) * FT } : null;
+}
+const elevCache = {};   // apn -> undefined (not asked) | 'pending' | result | null (unavailable)
+function plan3d(lead, ring, ctx, lots, redraw){
   if(!ring) return '<div class="p3d"><div class="pm-review"><b>3D site plan: boundary unavailable.</b> The county returned no parcel polygon, so nothing is drawn.</div></div>';
   const lat0 = ring.reduce((t, p) => t + p[1], 0) / ring.length, lng0 = ring.reduce((t, p) => t + p[0], 0) / ring.length, kx = 111320 * Math.cos(lat0 * Math.PI / 180);
   const loc = p => [(p[0] - lng0) * kx, (p[1] - lat0) * 110540], ll = p => loc([p[1], p[0]]), iso = p => [(p[0] - p[1]) * .866, -(p[0] + p[1]) * .5];
+  let el = elevCache[lead.apn];
+  if(el === undefined){ elevCache[lead.apn] = 'pending'; fetchElevation(ring, lng0, lat0, kx).catch(() => null).then(r => { elevCache[lead.apn] = r || null; if(redraw) redraw(); }); }
+  if(el === 'pending') el = undefined;
   const R = ring.map(loc), split = LOT_SPLITS && lots.length > 0, Ls = split ? lots.map(l => l.map(ll)) : [R], Fr = ctx ? ctx.frontLL.map(e => e.map(ll)) : [], D = 14, PH = 7;
   const q = R.concat(...Ls).map(iso), x0 = Math.min(...q.map(p => p[0])), y0 = Math.min(...q.map(p => p[1])), sc = Math.min(320 / (Math.max(...q.map(p => p[0])) - x0 || 1), 190 / (Math.max(...q.map(p => p[1])) - y0 || 1));
   const T = (p, z) => { const a = iso(p); return ((a[0] - x0) * sc + 20).toFixed(1) + ',' + ((a[1] - y0) * sc + 20 + PH - (z || 0)).toFixed(1); };
@@ -1713,11 +1738,14 @@ function plan3d(lead, ring, ctx, lots){
   const pads = Ls.map(l => { const c = [l.reduce((t, p) => t + p[0], 0) / l.length, l.reduce((t, p) => t + p[1], 0) / l.length], ar = Math.abs(l.reduce((t, p, i) => t + p[0] * l[(i + 1) % l.length][1] - l[(i + 1) % l.length][0] * p[1], 0)) / 2, w = .15 * Math.sqrt(ar), k = (dx, dy) => [c[0] + dx * w, c[1] + dy * w];
     return `<polygon points="${[k(-1, -1), k(-1, 1), k(-1, 1), k(-1, -1)].map((p, i) => T(p, i > 1 ? PH : 0)).join(' ')}" fill="#b9b2a3"/><polygon points="${[k(-1, -1), k(1, -1), k(1, -1), k(-1, -1)].map((p, i) => T(p, i > 1 ? PH : 0)).join(' ')}" fill="#d8d2c4"/>` + poly([k(-1, -1), k(-1, 1), k(1, 1), k(1, -1)], PH, 'fill="#f4f1ea" stroke="#8a8372" stroke-width=".6"'); }).join('');
   const W = Math.ceil((Math.max(...q.map(p => p[0])) - x0) * sc + 40), H = Math.ceil((Math.max(...q.map(p => p[1])) - y0) * sc + 40 + PH + D);
-  const svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Schematic 3D site plan"><g transform="translate(9,7)" opacity=".2">${poly(R, -D, 'fill="#000"')}</g>${sides}${poly(R, 0, 'fill="#dfe6d3" stroke="#d93025" stroke-width="2"')}${(split ? Ls : []).map(l => poly(l, 0, 'fill="#ffd400" fill-opacity=".5" stroke="#b8860b" stroke-width="1"')).join('')}${Fr.map(e => `<polyline points="${e.map(p => T(p)).join(' ')}" fill="none" stroke="#00bcd4" stroke-width="3.5" stroke-linecap="round"/>`).join('')}${pads}</svg>`;
+  const cid = 'sl' + String(lead.apn).replace(/\W/g, ''), SC = ['#4caf50', '#fdd835', '#fb8c00', '#d32f2f'], sc4 = s => s >= 15 ? 3 : s >= 10 ? 2 : s >= 5 ? 1 : 0;
+  const shade = el ? `<clipPath id="${cid}"><polygon points="${R.map(a => T(a)).join(' ')}"/></clipPath><g clip-path="url(#${cid})" fill-opacity=".8">${el.cells.map((c, k) => el.sl[k] == null ? '' : poly([[c.x - el.dx / 2, c.y - el.dy / 2], [c.x + el.dx / 2, c.y - el.dy / 2], [c.x + el.dx / 2, c.y + el.dy / 2], [c.x - el.dx / 2, c.y + el.dy / 2]], 0, `fill="${SC[sc4(el.sl[k])]}"`)).join('')}</g>` : '';
+  const svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Schematic 3D site plan"><g transform="translate(9,7)" opacity=".2">${poly(R, -D, 'fill="#000"')}</g>${sides}${poly(R, 0, 'fill="#dfe6d3"')}${shade}${poly(R, 0, 'fill="none" stroke="#d93025" stroke-width="2"')}${(split ? Ls : []).map(l => poly(l, 0, 'fill="#ffd400" fill-opacity=".5" stroke="#b8860b" stroke-width="1"')).join('')}${Fr.map(e => `<polyline points="${e.map(p => T(p)).join(' ')}" fill="none" stroke="#00bcd4" stroke-width="3.5" stroke-linecap="round"/>`).join('')}${pads}</svg>`;
   const m = n => '$' + Math.round(n).toLocaleString(), p = profitFor(lead, 0, 0), pill = (t, e) => `<span class="pill3d">${t}${e ? ' <small>est.</small>' : ''}</span>`;
   const frontFt = ctx && ctx.frontKnown ? ctx.front.reduce((t, e) => t + Math.hypot(e[1][0] - e[0][0], e[1][1] - e[0][1]), 0) * FT : 0;
-  const pills = [split ? pill(lots.length + ' lots (sketch)') : pill(LOT_SPLITS ? 'no split drawable' : '1 house'), p ? pill(m(p.cost / p.n) + '/home all-in', 1) + pill('Site work ' + m(p.n * (parseFloat(document.getElementById('hcSite').value) || 0)), 1) : '', frontFt ? pill(Math.round(frontFt).toLocaleString() + ' ft frontage', 1) : '', pill((lead.landAcres || 0).toFixed(2) + ' ac')].join('');
-  return `<div class="p3d"><b>3D site plan + costs</b> ${CF('e', 'schematic')}${svg}<div class="p3d-pills">${pills}</div><div class="p3d-note pm-why">Schematic drawn from the county parcel boundary: NOT LiDAR or surveyed terrain, and the slab is flat. ${split ? 'Lot lines are the sketch above; ' : LOT_SPLITS ? 'No lot split could be drawn here; ' : 'One house on the whole parcel, no lot split (switch Lot splits on at the top to sketch splits); '}boxes are placeholder house pads. ${p ? `Costs are the profit model's ${p.n} home${p.n > 1 ? 's' : ''}: all-in = land, build, soft costs, site work, demolition, split and financing; site work = homes × the calculator's site-work input. Estimates, not bids.` : 'Costs unavailable: no priced comps or land basis for this lead.'}</div></div>`;
+  const pills = [split ? pill(lots.length + ' lots (sketch)') : pill(LOT_SPLITS ? 'no split drawable' : '1 house'), p ? pill(m(p.cost / p.n) + '/home all-in', 1) + pill('Site work ' + m(p.n * (parseFloat(document.getElementById('hcSite').value) || 0)), 1) : '', frontFt ? pill(Math.round(frontFt).toLocaleString() + ' ft frontage', 1) : '', pill((lead.landAcres || 0).toFixed(2) + ' ac'), el ? pill('Avg slope ' + el.avg.toFixed(1) + '%', 1) + pill('Max ' + el.max.toFixed(0) + '%', 1) + pill('Relief ' + el.reliefFt.toFixed(0) + ' ft', 1) : el === null ? pill('slope unavailable') : ''].join('');
+  const legend = el ? `<div class="pm-why">Slope: ${['&lt;5%', '5-10%', '10-15%', '&ge;15% (steep)'].map((t, i) => `<span style="background:${SC[i]};display:inline-block;width:10px;height:10px;margin:0 3px 0 8px;"></span>${t}`).join('')}</div>` : '';
+  return `<div class="p3d"><b>3D site plan + costs</b> ${CF('e', 'schematic')}${svg}${legend}<div class="p3d-pills">${pills}</div><div class="p3d-note pm-why">Schematic drawn from the county parcel boundary: NOT LiDAR or surveyed terrain, and the slab is flat. ${el ? 'Slope shading is estimated from USGS 3DEP public elevation data, not a survey.' : ''} ${split ? 'Lot lines are the sketch above; ' : LOT_SPLITS ? 'No lot split could be drawn here; ' : 'One house on the whole parcel, no lot split (switch Lot splits on at the top to sketch splits); '}boxes are placeholder house pads. ${p ? `Costs are the profit model's ${p.n} home${p.n > 1 ? 's' : ''}: all-in = land, build, soft costs, site work, demolition, split and financing; site work = homes × the calculator's site-work input. Estimates, not bids.` : 'Costs unavailable: no priced comps or land basis for this lead.'}</div></div>`;
 }
 async function reelHero(){
   const el = document.getElementById('reel-hero');
@@ -1736,7 +1764,8 @@ async function reelHero(){
       if(!res.lay.failed && res.pieces.length > 1) lots = res.pieces.filter(p => p.kind === 'lot').map(p => p.poly.map(ctx.toLL));
     }
   }catch(e){ ring = null; }
-  el.innerHTML = `<h2>3D Site Plans + Costs</h2><div style="font-weight:700;margin-bottom:4px;">${esc(String(lead.address || lead.apn).split(/\s{2,}/)[0])} <span class="pill3d">GOOD screen</span></div><div style="background:#fff;color:var(--text);border-radius:10px;padding:8px;">${plan3d(lead, ring, ctx, lots)}</div><button class="mail-btn" type="button" onclick="openLeadScenario('${esc(lead.apn)}')">Open this site plan</button>`;
+  const draw = () => { el.innerHTML = `<h2>3D Site Plans + Costs</h2><div style="font-weight:700;margin-bottom:4px;">${esc(String(lead.address || lead.apn).split(/\s{2,}/)[0])} <span class="pill3d">GOOD screen</span></div><div style="background:#fff;color:var(--text);border-radius:10px;padding:8px;">${plan3d(lead, ring, ctx, lots, draw)}</div><button class="mail-btn" type="button" onclick="openLeadScenario('${esc(lead.apn)}')">Open this site plan</button>`; };
+  draw();
 }
 async function initParcelMap(lead, idx){
   const box = document.getElementById('pm-' + idx), info = document.getElementById('pminfo-' + idx), note = document.getElementById('pmnote-' + idx); if(!box) return;
@@ -1852,7 +1881,7 @@ async function initParcelMap(lead, idx){
         <br><label>target acres per lot <input type="number" step="0.01" min="0.06" value="${acresPerLot}" class="filter-input" onchange="setParcelAssumption('apl', this.value)"></label> <label>usable land % (estimates only) <input type="number" step="1" min="1" max="100" value="${usablePct}" class="filter-input" onchange="setParcelAssumption('use', this.value)"></label> <label>setback ft (placeholder) <input type="number" step="1" min="0" value="${setbackFt}" class="filter-input" onchange="setParcelAssumption('sb', this.value)"></label> <label>stem width ft <input type="number" step="1" min="8" value="${stemFt}" class="filter-input" onchange="setParcelAssumption('stem', this.value)"></label>
         <br><button class="mail-btn" type="button" onclick="resetLines(${idx})">Reset lines</button> ${box._tracing ? `<b>Tracing: click each corner of the building on the map, then</b> <button class="mail-btn" type="button" onclick="traceFinish(${idx},'${esc(lead.apn)}')">Finish building</button>` : `<button class="mail-btn" type="button" onclick="traceStart(${idx})">✏ Trace a building</button>`} <button class="mail-btn" type="button" onclick="traceClear(${idx},'${esc(lead.apn)}')">Clear traced</button>
         <div class="pm-why">${acresPerLot} ac is an adjustable target, not a rule: if the shape, buildings or zoning don't support it the count drops, or the layout is marked for review. Buildings: ${bsrc || 'not loaded'}${ctx && !ctx.bldgs.length && st.scenario === 'keep' ? ' None found.' : ''}</div></div>`;
-    note.innerHTML = `${plan3d(lead, ring, ctx, lotsDrawn() ? res.pieces.filter(p => p.kind === 'lot').map(p => p.poly.map(ctx.toLL)) : [])}${verdict}${reasons.length || !res ? '' : reqs}
+    note.innerHTML = `${plan3d(lead, ring, ctx, lotsDrawn() ? res.pieces.filter(p => p.kind === 'lot').map(p => p.poly.map(ctx.toLL)) : [], () => box._redraw())}${verdict}${reasons.length || !res ? '' : reqs}
       <div style="margin-top:8px;">${num(estA + ' by acreage', 'Acreage-based estimate', `${f2(acres)} ac × ${usablePct}% usable ÷ ${acresPerLot} ac per lot = ${f2(acres * u / acresPerLot)}, rounded down to ${estA}. Ignores shape, access and zoning.`)}
       ${num(estZ == null ? 'n/a' : estZ + ' by zoning minimum', 'Estimate using the zoning minimum', estZ == null ? (hasZone ? `Not calculated: ${esc(zn.zone)} does not give a minimum lot area in this tool.` : `Not calculated: zoning unavailable (${esc(zn && zn.err || 'lookup failed')}).`) : `${f2(acres)} ac × ${usablePct}% usable ÷ ${f2(minLot / 43560)} ac (${esc(zn.zone)} minimum) = ${f2(acres * u / (minLot / 43560))}, rounded down to ${estZ}. The sketch above uses the whole parcel and real shape, so it can differ.`)}</div>
       <div class="pm-why">None of these is an approved lot count. Distances and areas are computed in a local meter coordinate system centered on the parcel, not from screen pixels.</div>
