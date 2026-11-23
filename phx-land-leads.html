@@ -81,6 +81,8 @@
 .parcel-info b{color:var(--text);}
 .parcel-map{height:400px;}
 .cf{display:inline-block; font-size:9.5px; font-weight:800; letter-spacing:.03em; padding:1px 6px; border-radius:9px; margin-left:5px; vertical-align:middle; text-transform:uppercase;}
+.p3d{margin:8px 0;} .p3d svg{width:100%;max-width:520px;height:auto;display:block;} .p3d-pills{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0;} .pill3d{background:#d93025;color:#fff;font-weight:800;font-size:13px;padding:5px 11px;border-radius:999px;} .pill3d small{font-weight:600;opacity:.85;}
+.reel{background:#14202f;color:#fff;border-radius:14px;padding:16px;margin-bottom:16px;} .reel h2{margin:0 0 8px;font-size:clamp(24px,6vw,36px);font-weight:900;letter-spacing:-.02em;} .reel>.pm-why{color:#c7d0dc;font-size:11.5px;} .reel .mail-btn{width:100%;justify-content:center;font-size:17px;padding:14px;background:#d93025;} .p3d .pm-why{color:#4a5565;}
 .cf-v{background:#e3f1e8; color:#2f6b47;} .cf-e{background:#fbf1d6; color:#8a6a10;} .cf-u{background:#eceff3; color:#5b6472; border:1px dashed #98a1b0;}
 .pm-bar{display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; padding:8px 14px; border-bottom:1px solid var(--card-border); font-size:12.5px;}
 .pm-why{}
@@ -233,6 +235,8 @@
       </details>
 
       <div class="meta-row" id="meta-row"></div>
+
+      <div class="card reel" id="reel-hero" style="display:none;"></div>
 
       <div class="card" id="ranked">
         <div class="card-head">
@@ -1690,6 +1694,44 @@ function traceClear(idx, apn){
   try{ localStorage.setItem('tracedBldgs', JSON.stringify(all)); }catch(e){}
   if(box){ box._tracing = false; box._trace = []; box.style.cursor = ''; if(box._traceGroup) box._traceGroup.clearLayers(); box._redraw(); }
 }
+// Pseudo-3D schematic of the county parcel polygon + the page's lot sketch; every number comes from profitFor() / the calculator inputs / ctx
+function plan3d(lead, ring, ctx, lots){
+  if(!ring) return '<div class="p3d"><div class="pm-review"><b>3D site plan: boundary unavailable.</b> The county returned no parcel polygon, so nothing is drawn.</div></div>';
+  const lat0 = ring.reduce((t, p) => t + p[1], 0) / ring.length, lng0 = ring.reduce((t, p) => t + p[0], 0) / ring.length, kx = 111320 * Math.cos(lat0 * Math.PI / 180);
+  const loc = p => [(p[0] - lng0) * kx, (p[1] - lat0) * 110540], ll = p => loc([p[1], p[0]]), iso = p => [(p[0] - p[1]) * .866, -(p[0] + p[1]) * .5];
+  const R = ring.map(loc), Ls = lots.map(l => l.map(ll)), Fr = ctx ? ctx.frontLL.map(e => e.map(ll)) : [], D = 14, PH = 7;
+  const q = R.concat(...Ls).map(iso), x0 = Math.min(...q.map(p => p[0])), y0 = Math.min(...q.map(p => p[1])), sc = Math.min(320 / (Math.max(...q.map(p => p[0])) - x0 || 1), 190 / (Math.max(...q.map(p => p[1])) - y0 || 1));
+  const T = (p, z) => { const a = iso(p); return ((a[0] - x0) * sc + 20).toFixed(1) + ',' + ((a[1] - y0) * sc + 20 + PH - (z || 0)).toFixed(1); };
+  const poly = (a, z, st) => `<polygon points="${a.map(p => T(p, z)).join(' ')}" ${st}/>`;
+  const sides = R.map((a, i) => `<polygon points="${[T(a), T(R[(i + 1) % R.length]), T(R[(i + 1) % R.length], -D), T(a, -D)].join(' ')}" fill="#7d8b6e" stroke="#5f6c52" stroke-width=".5"/>`).join('');
+  const pads = Ls.map(l => { const c = [l.reduce((t, p) => t + p[0], 0) / l.length, l.reduce((t, p) => t + p[1], 0) / l.length], ar = Math.abs(l.reduce((t, p, i) => t + p[0] * l[(i + 1) % l.length][1] - l[(i + 1) % l.length][0] * p[1], 0)) / 2, w = .15 * Math.sqrt(ar), k = (dx, dy) => [c[0] + dx * w, c[1] + dy * w];
+    return `<polygon points="${[k(-1, -1), k(-1, 1), k(-1, 1), k(-1, -1)].map((p, i) => T(p, i > 1 ? PH : 0)).join(' ')}" fill="#b9b2a3"/><polygon points="${[k(-1, -1), k(1, -1), k(1, -1), k(-1, -1)].map((p, i) => T(p, i > 1 ? PH : 0)).join(' ')}" fill="#d8d2c4"/>` + poly([k(-1, -1), k(-1, 1), k(1, 1), k(1, -1)], PH, 'fill="#f4f1ea" stroke="#8a8372" stroke-width=".6"'); }).join('');
+  const W = Math.ceil((Math.max(...q.map(p => p[0])) - x0) * sc + 40), H = Math.ceil((Math.max(...q.map(p => p[1])) - y0) * sc + 40 + PH + D);
+  const svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Schematic 3D site plan"><g transform="translate(9,7)" opacity=".2">${poly(R, -D, 'fill="#000"')}</g>${sides}${poly(R, 0, 'fill="#dfe6d3" stroke="#d93025" stroke-width="2"')}${Ls.map(l => poly(l, 0, 'fill="#ffd400" fill-opacity=".5" stroke="#b8860b" stroke-width="1"')).join('')}${Fr.map(e => `<polyline points="${e.map(p => T(p)).join(' ')}" fill="none" stroke="#00bcd4" stroke-width="3.5" stroke-linecap="round"/>`).join('')}${pads}</svg>`;
+  const m = n => '$' + Math.round(n).toLocaleString(), p = profitFor(lead), pill = (t, e) => `<span class="pill3d">${t}${e ? ' <small>est.</small>' : ''}</span>`;
+  const frontFt = ctx && ctx.frontKnown ? ctx.front.reduce((t, e) => t + Math.hypot(e[1][0] - e[0][0], e[1][1] - e[0][1]), 0) * FT : 0;
+  const pills = [lots.length ? pill(lots.length + ' lots (sketch)') : pill('no split drawn'), p ? pill(m(p.cost / p.n) + '/home all-in', 1) + pill('Site work ' + m(p.n * (parseFloat(document.getElementById('hcSite').value) || 0)), 1) : '', frontFt ? pill(Math.round(frontFt).toLocaleString() + ' ft frontage', 1) : '', pill((lead.landAcres || 0).toFixed(2) + ' ac')].join('');
+  return `<div class="p3d"><b>3D site plan + costs</b> ${CF('e', 'schematic')}${svg}<div class="p3d-pills">${pills}</div><div class="p3d-note pm-why">Schematic drawn from the county parcel boundary: NOT LiDAR or surveyed terrain, and the slab is flat. Lot lines are the sketch above; boxes are placeholder house pads. ${p ? `Costs are the profit model's ${p.n} home${p.n > 1 ? 's' : ''}: all-in = land, build, soft costs, site work, demolition, split and financing; site work = homes × the calculator's site-work input. Estimates, not bids.` : 'Costs unavailable: no priced comps or land basis for this lead.'}</div></div>`;
+}
+async function reelHero(){
+  const el = document.getElementById('reel-hero');
+  const lead = (D.leads || []).filter(l => !isDiscarded(l.apn) && (l.verdict || {}).label === 'Good').sort((a, b) => b.score - a.score)[0];   // same order as the ranked list
+  if(!lead) return;
+  el.style.display = ''; el.innerHTML = '<h2>3D Site Plans + Costs</h2><div class="pm-why">Loading the parcel boundary…</div>';
+  let ring = null, ctx = null, lots = [];
+  try{
+    const par = await fetchParcel(lead); ring = par.ring;
+    const site = await fetchSite(lead, ring).catch(e => ({ bldgs: [], roads: [], roadErr: e.message })), zn = await fetchZone(lead).catch(() => null);
+    ctx = siteContext(lead, par, site);
+    const acres = lead.landAcres || (lead.landSf || 0) / 43560, minLot = lead.minLotVerified === false ? 0 : lead.minLotSf || (zn && zn.zone ? minLotFromZone(zn.zone) : 0);
+    const st = layoutState[lead.apn] || { style: 'auto', exact: true, scenario: ctx.bldgs.length ? 'keep' : 'removal', cuts: null, rear: null };
+    if(ctx.frontKnown && Math.abs(ctx.areaM2 / SQM_AC / acres - 1) <= 0.05){   // same gates as the lead's map
+      const res = computeLayout(ctx, { targetAc: acresPerLot, minLotSf: minLot, setbackFt, stemFt }, st);
+      if(!res.lay.failed && res.pieces.length > 1) lots = res.pieces.filter(p => p.kind === 'lot').map(p => p.poly.map(ctx.toLL));
+    }
+  }catch(e){ ring = null; }
+  el.innerHTML = `<h2>3D Site Plans + Costs</h2><div style="font-weight:700;margin-bottom:4px;">${esc(String(lead.address || lead.apn).split(/\s{2,}/)[0])} <span class="pill3d">GOOD screen</span></div><div style="background:#fff;color:var(--text);border-radius:10px;padding:8px;">${plan3d(lead, ring, ctx, lots)}</div><button class="mail-btn" type="button" onclick="openLeadScenario('${esc(lead.apn)}')">Open this site plan</button>`;
+}
 async function initParcelMap(lead, idx){
   const box = document.getElementById('pm-' + idx), info = document.getElementById('pminfo-' + idx), note = document.getElementById('pmnote-' + idx); if(!box) return;
   if(box._map){ box._map.invalidateSize(); if(box._fit) box._fit(); return; }
@@ -1803,7 +1845,7 @@ async function initParcelMap(lead, idx){
         <br><label>target acres per lot <input type="number" step="0.01" min="0.06" value="${acresPerLot}" class="filter-input" onchange="setParcelAssumption('apl', this.value)"></label> <label>usable land % (estimates only) <input type="number" step="1" min="1" max="100" value="${usablePct}" class="filter-input" onchange="setParcelAssumption('use', this.value)"></label> <label>setback ft (placeholder) <input type="number" step="1" min="0" value="${setbackFt}" class="filter-input" onchange="setParcelAssumption('sb', this.value)"></label> <label>stem width ft <input type="number" step="1" min="8" value="${stemFt}" class="filter-input" onchange="setParcelAssumption('stem', this.value)"></label>
         <br><button class="mail-btn" type="button" onclick="resetLines(${idx})">Reset lines</button> ${box._tracing ? `<b>Tracing: click each corner of the building on the map, then</b> <button class="mail-btn" type="button" onclick="traceFinish(${idx},'${esc(lead.apn)}')">Finish building</button>` : `<button class="mail-btn" type="button" onclick="traceStart(${idx})">✏ Trace a building</button>`} <button class="mail-btn" type="button" onclick="traceClear(${idx},'${esc(lead.apn)}')">Clear traced</button>
         <div class="pm-why">${acresPerLot} ac is an adjustable target, not a rule: if the shape, buildings or zoning don't support it the count drops, or the layout is marked for review. Buildings: ${bsrc || 'not loaded'}${ctx && !ctx.bldgs.length && st.scenario === 'keep' ? ' None found.' : ''}</div></div>`;
-    note.innerHTML = `${verdict}${reasons.length || !res ? '' : reqs}
+    note.innerHTML = `${plan3d(lead, ring, ctx, lotsDrawn() ? res.pieces.filter(p => p.kind === 'lot').map(p => p.poly.map(ctx.toLL)) : [])}${verdict}${reasons.length || !res ? '' : reqs}
       <div style="margin-top:8px;">${num(estA + ' by acreage', 'Acreage-based estimate', `${f2(acres)} ac × ${usablePct}% usable ÷ ${acresPerLot} ac per lot = ${f2(acres * u / acresPerLot)}, rounded down to ${estA}. Ignores shape, access and zoning.`)}
       ${num(estZ == null ? 'n/a' : estZ + ' by zoning minimum', 'Estimate using the zoning minimum', estZ == null ? (hasZone ? `Not calculated: ${esc(zn.zone)} does not give a minimum lot area in this tool.` : `Not calculated: zoning unavailable (${esc(zn && zn.err || 'lookup failed')}).`) : `${f2(acres)} ac × ${usablePct}% usable ÷ ${f2(minLot / 43560)} ac (${esc(zn.zone)} minimum) = ${f2(acres * u / (minLot / 43560))}, rounded down to ${estZ}. The sketch above uses the whole parcel and real shape, so it can differ.`)}</div>
       <div class="pm-why">None of these is an approved lot count. Distances and areas are computed in a local meter coordinate system centered on the parcel, not from screen pixels.</div>
@@ -2916,6 +2958,7 @@ renderMaxOffer();
   calc();
 })();
 renderTopProfit();
+reelHero();
 renderBids();
 renderRuns();
 renderDiscarded();
@@ -3069,7 +3112,7 @@ applyFilters();  // draws the maps with the same filters as the list (discarded 
 renderOutreachTracker();
 (function tabsInit(){
   const TABS = [['leads','📋 Leads'],['maps','🗺 Maps'],['calc','🏠 Calculator'],['money','💰 Profit & Offers'],['outreach','✉ Outreach'],['tracking','📞 Tracking']];
-  const BY_ID = { 'outreach-tracker':'outreach', ranked:'leads', maps:'maps', 'home-calc':'calc', 'saved-runs':'calc', bids:'calc', 'top-profit':'money', 'max-offer':'money', 'call-scripts':'outreach', traced:'tracking', contacted:'tracking', discarded:'tracking' };
+  const BY_ID = { 'outreach-tracker':'outreach', ranked:'leads', 'reel-hero':'leads', maps:'maps', 'home-calc':'calc', 'saved-runs':'calc', bids:'calc', 'top-profit':'money', 'max-offer':'money', 'call-scripts':'outreach', traced:'tracking', contacted:'tracking', discarded:'tracking' };
   const BY_H2 = { 'Mail Letter Template':'outreach', 'Skip-Trace Priority':'tracking', 'Scan History':'tracking' };
   const secs = [...document.querySelectorAll('main.page > .card, main.page > .map-pair')];
   secs.forEach(el => { el.classList.remove('collapsed'); el.dataset.tab = BY_ID[el.id] || BY_H2[(el.querySelector('h2') || {}).textContent] || 'tracking'; });
