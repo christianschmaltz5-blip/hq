@@ -415,6 +415,7 @@
         <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:10px;">
           <label style="font-size:12.5px;color:var(--text-soft);">Print round <select class="filter-input" id="otRound"><option value="1">1st letter</option><option value="2">Follow-up 2</option><option value="3">Follow-up 3 (last)</option></select></label>
           <button class="mail-btn" onclick="otPrint('letter')">🖨 Print letters</button>
+          <button class="mail-btn" onclick="otPrintStack()">🖨 Print all: letters + one-pagers</button>
           <button class="mail-btn" onclick="otPrint('env')">🖨 Print #10 envelopes</button>
           <span id="otPrintNote" style="font-size:12px;color:var(--text-soft);">Prints for every lead in the table below, so set the score and Show filters first.</span>
         </div>
@@ -1263,16 +1264,25 @@ function otLinks(l){
     onePagerLink(l) ? lk('📄 One-pager', `phx-onepager.html?apn=${encodeURIComponent(l.apn)}`, 'target="_blank" rel="noopener"') : ''
   ].join('');
 }
+const letterPage = (l, round, date, ret) => `<div class="mp-page"><div class="mp-from">${esc(ret)}</div><p>${date}</p><p>${esc(fmtEnvelope(l).lines)}</p><p>${esc(handSal(l))}</p><p>${esc(mailBody(l, round))}</p><div style="height:.95in"></div><p>Thank you,\n\n\n\nChristian Schmaltz\n605-786-5520</p></div>`;
 function mailPrint(kind, leads, round){
   const ok = leads.filter(l => l.ownerMailAddress && !fmtEnvelope(l).warn), skipped = leads.length - ok.length;
   const date = new Date().toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'});
   const ret = 'Christian Schmaltz\nP.O. Box 11097\nPhoenix, AZ 85061';
   document.getElementById('mailPrint').innerHTML = ok.map(l => kind === 'env'
     ? `<div class="mp-env"><div class="r">${esc(ret)}</div><div class="to">${esc(fmtEnvelope(l).lines)}</div></div>`
-    : `<div class="mp-page"><div class="mp-from">${esc(ret)}</div><p>${date}</p><p>${esc(fmtEnvelope(l).lines)}</p><p>${esc(handSal(l))}</p><p>${esc(mailBody(l, round))}</p><div style="height:.95in"></div><p>Thank you,\n\n\n\nChristian Schmaltz\n605-786-5520</p></div>`).join('');
+    : letterPage(l, round, date, ret)).join('');
   document.getElementById('mailPage').textContent = kind === 'env' ? '@page{size:9.5in 4.125in;margin:0}' : '@page{size:8.5in 11in;margin:0}';
   if(ok.length){ document.body.classList.add('printing-mail'); window.addEventListener('afterprint', () => document.body.classList.remove('printing-mail'), {once:true}); window.print(); }
   return {printed: ok.length, skipped};
+}
+function otPrintStack(){   // one tab: each ready lead's letter followed by its one-pager, in the order you stuff the envelopes
+  const ok = (window._otRows || []).filter(l => l.ownerMailAddress && !fmtEnvelope(l).warn);
+  if(!ok.length){ document.getElementById('otPrintNote').textContent = 'Nothing to print: no leads in the table have a good mailing address.'; return; }
+  const date = new Date().toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'}), ret = 'Christian Schmaltz\nP.O. Box 11097\nPhoenix, AZ 85061';
+  try{ localStorage.setItem('onepagerBatch', JSON.stringify(ok.map(l => ({apn: l.apn, encl: !!onePagerLink(l), letter: letterPage(l, 1, date, ret)})))); }catch(e){ document.getElementById('otPrintNote').textContent = 'Could not prepare the stack (browser storage is full or blocked).'; return; }
+  window.open('phx-onepager.html?batch=1', '_blank');
+  document.getElementById('otPrintNote').textContent = `Opened ${ok.length} letters with their one-pagers in a new tab. Click Print all there once the maps finish loading.`;
 }
 function otPrint(kind){
   const r = mailPrint(kind, window._otRows || [], Number(document.getElementById('otRound').value));
