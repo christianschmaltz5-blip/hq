@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Store USGS 3DEP slope per lead in phx-land-leads/slope.json (mirror of fetchElevation in phx-land-leads.html).
+"""Store USGS 3DEP slope per lead in phx-land-leads/slope/<apn>.json (mirror of fetchElevation in phx-land-leads.html).
 
-Incremental + resumable: leads already in slope.json are skipped. Deterministic failures (no boundary, mostly
+Incremental + resumable: leads that already have a file are skipped. Deterministic failures (no boundary, mostly
 NoData) are stored as {failed:true, reason} and only retried with --retry-failed; network errors are NOT stored
 (retried next run). Run: python3 slope.py [--retry-failed] [--workers 4] [--limit N]
 """
@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA, OUT = ROOT / "phx-land-leads" / "data.js", ROOT / "phx-land-leads" / "slope.json"
+DATA, OUT = ROOT / "phx-land-leads" / "data.js", ROOT / "phx-land-leads" / "slope"
 GIS_PARCELS = "https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3"
 USGS = "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/getSamples"
 FT = 3.28084
@@ -159,10 +159,11 @@ def load_leads():
     return sorted(d["leads"], key=lambda l: rank.get((l.get("verdict") or {}).get("label"), 2))
 
 
-def save(store):
-    tmp = OUT.with_suffix(".tmp")
-    tmp.write_text(json.dumps(store, separators=(",", ":")))
-    os.replace(tmp, OUT)
+def save(apn, rec):
+    f = OUT / f"{apn}.json"
+    tmp = f.with_suffix(".tmp")
+    tmp.write_text(json.dumps(rec, separators=(",", ":")))
+    os.replace(tmp, f)
 
 
 def log(*a):
@@ -175,7 +176,8 @@ def main():
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--limit", type=int, default=0)
     a = ap.parse_args()
-    store = json.loads(OUT.read_text()) if OUT.exists() else {}
+    OUT.mkdir(exist_ok=True)
+    store = {f.stem: json.loads(f.read_text()) for f in OUT.glob("*.json")}
     todo = [l["apn"] for l in load_leads() if l["apn"] not in store or (a.retry_failed and store[l["apn"]].get("failed"))]
     if a.limit:
         todo = todo[:a.limit]
@@ -187,6 +189,7 @@ def main():
             apn = futs[f]
             try:
                 store[apn] = f.result()
+                save(apn, store[apn])
                 streak = 0
                 log(apn, "FAILED: " + store[apn]["reason"] if store[apn].get("failed") else f"avg {store[apn]['avg']:.2f}%")
             except NetError as e:
@@ -199,9 +202,6 @@ def main():
                         g.cancel()
                     break
             done += 1
-            if done % 10 == 0:
-                save(store)
-    save(store)
     log(f"done: {len(store)} stored, {sum(1 for r in store.values() if r.get('failed'))} failed, {net} network errors this run")
 
 

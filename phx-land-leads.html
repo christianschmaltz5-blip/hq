@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>North Phoenix Land Leads — Christian's HQ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="modulepreload" href="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.module.min.js" crossorigin>   <!-- downloads beside data.js (the hero 3D card is above the fold); execution still waits for the near-viewport import in reelHero/mount3d. Delete this line to fetch three.js only on demand. -->
+<link rel="preconnect" href="https://gis.mcassessor.maricopa.gov" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/shell.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
@@ -1482,6 +1486,13 @@ renderLeads(currentLeads);
 // ── Parcel map: parcel boundary + zoning (county/city GIS) + an illustrative lot layout ──
 // Everything here is a PRELIMINARY screen. The yellow boxes are not lots: a rectangle that fits inside the boundary says nothing about access, frontage, setbacks or approval.
 var acresPerLot = (function(){ try{ const v = parseFloat(localStorage.getItem('acresPerLot')); return v > 0 ? v : 0.33; }catch(e){ return 0.33; } })();   // planning assumption (ours), not a verified local average or a zoning rule
+// Precomputed parcel + site + zoning for one lead (agents/phx_land_leads/site_cache.mjs -> phx-land-leads/site/<apn>.json, produced by running fetchParcel/fetchSite/fetchZone below).
+// One small file per lead; null when missing or malformed, so the callers fall back to the live county calls. Not re-checked against the live boundary (too slow): the plan note shows the retrieval date.
+const siteFiles = {};
+function siteFile(lead){
+  return siteFiles[lead.apn] || (siteFiles[lead.apn] = fetch('phx-land-leads/site/' + encodeURIComponent(lead.apn) + '.json').then(r => r.ok ? r.json() : null)
+    .then(j => j && j.par && Array.isArray(j.par.ring) && j.par.ring.length > 2 && j.site && Array.isArray(j.site.roads) && Array.isArray(j.site.bldgs) && j.ringHash === ringHash(j.par.ring) ? j : null).catch(() => null));
+}
 var usablePct = (function(){ try{ const v = parseFloat(localStorage.getItem('usablePct')); return v > 0 && v <= 100 ? v : 85; }catch(e){ return 85; } })();   // shared usable-area estimate for parcel capacity and underwriting
 const parcelCache = {}, zoneCache = {};
 const GIS_PARCELS = 'https://gis.mcassessor.maricopa.gov/arcgis/rest/services/MaricopaDynamicQueryService/MapServer/3';
@@ -1495,6 +1506,7 @@ function minLotFromZone(z){   // R1-18 = 18,000 sf, RE-35 = 35,000 sf, county RU
 }
 async function fetchParcel(lead){
   if(parcelCache[lead.apn]) return parcelCache[lead.apn];
+  const cf = await siteFile(lead); if(cf) return (parcelCache[lead.apn] = Object.assign({ cachedAt: cf.fetchedAt }, cf.par));
   const body = new URLSearchParams({ where: `APN='${String(lead.apn).replace(/'/g, '')}'`, outFields: 'APN,JURISDICTION', returnGeometry: 'true', outSR: '4326', f: 'json' });
   const r = await (await fetch(GIS_PARCELS + '/query', { method: 'POST', body, signal: AbortSignal.timeout(20000) })).json();
   const f = (r.features || [])[0], ring = f && f.geometry && f.geometry.rings && f.geometry.rings.slice().sort((a, b) => b.length - a.length)[0];
@@ -1504,6 +1516,7 @@ async function fetchParcel(lead){
 async function fetchZone(lead){
   if(zoneCache[lead.apn]) return zoneCache[lead.apn];
   if(lead.currentZoning) return (zoneCache[lead.apn] = { zone: lead.currentZoning, url: lead.zoningSourceUrl || GIS_PHX_ZONING, name: lead.zoningSource || 'City of Phoenix zoning map', date: (lead.lastSeen || '') + ' (daily scan)' });
+  const cf = await siteFile(lead); if(cf && 'zn' in cf){ if(cf.zn) return (zoneCache[lead.apn] = cf.zn); throw new Error('no zoning polygon at this point'); }
   const q = new URLSearchParams({ geometry: `${lead.lng},${lead.lat}`, geometryType: 'esriGeometryPoint', inSR: '4326', spatialRel: 'esriSpatialRelIntersects', outFields: 'ZONE,JURIS', returnGeometry: 'false', f: 'json' });
   const r = await (await fetch(GIS_COUNTY_ZONING + '/query?' + q, { signal: AbortSignal.timeout(20000) })).json();
   const a = ((r.features || [])[0] || {}).attributes;
@@ -1544,6 +1557,7 @@ function insetPoly(poly, d){   // shrink a (convex) polygon by d meters on every
 // Building footprints (FEMA/ORNL USA Structures, derived from imagery) and road centerlines (Census TIGER) around the parcel
 async function fetchSite(lead, ring){
   if(siteCache[lead.apn]) return siteCache[lead.apn];
+  const cf = await siteFile(lead); if(cf && cf.ringHash === ringHash(ring)) return (siteCache[lead.apn] = cf.site);
   const xs = ring.map(p => p[0]), ys = ring.map(p => p[1]), pad = 0.0004;
   const env = [Math.min(...xs) - pad, Math.min(...ys) - pad, Math.max(...xs) + pad, Math.max(...ys) + pad].join(',');
   const get = async (url, outFields) => { const d = await (await fetch(url + '/query?' + new URLSearchParams({ geometry: env, geometryType: 'esriGeometryEnvelope', inSR: '4326', spatialRel: 'esriSpatialRelIntersects', where: '1=1', outFields, returnGeometry: 'true', outSR: '4326', f: 'json' }), { signal: AbortSignal.timeout(20000) })).json(); if(d.error) throw new Error(d.error.message || 'service error'); return d.features || []; };
@@ -1582,7 +1596,7 @@ function siteContext(lead, par, site){
   const addB = (rg, src) => { const xyp = rg.map(xy); if(xyp.some(p => pip(p, pts)) || pip(xyp[0], pts) || pts.some(p => pip(p, xyp))) bldgs.push({ src, poly: xyp.map(toUV), ring: rg }); };
   (site.bldgs || []).forEach(rg => addB(rg, 'auto'));
   (tracedAll()[lead.apn] || []).forEach(rg => addB(rg, 'traced'));
-  return { pts, P: pts.map(toUV), front: front.map(e => [toUV(e[0]), toUV(e[1])]), frontKnown: front.length > 0, roadName, bldgs, toLL, fromLL, areaM2: polyArea(pts), frontLL: front.map(e => [toLL(toUV(e[0])), toLL(toUV(e[1]))]) };
+  return { cachedAt: par.cachedAt, pts, P: pts.map(toUV), front: front.map(e => [toUV(e[0]), toUV(e[1])]), frontKnown: front.length > 0, roadName, bldgs, toLL, fromLL, areaM2: polyArea(pts), frontLL: front.map(e => [toLL(toUV(e[0])), toLL(toUV(e[1]))]) };
 }
 function frontLen(poly, front){   // meters of this lot's boundary that lie on the road-frontage edges
   let n = 0;
@@ -1724,10 +1738,10 @@ async function fetchElevation(ring, lng0, lat0, kx){
   const sl = slopeCells(v, nx, ny, dx, dy).filter((s, k) => s != null && cells[k].inside), zs = ins.map(c => c.z);
   return sl.length ? { cells, sl: slopeCells(v, nx, ny, dx, dy), dx, dy, avg: sl.reduce((t, s) => t + s, 0) / sl.length, max: Math.max(...sl), reliefFt: (Math.max(...zs) - Math.min(...zs)) * FT } : null;
 }
-// Stored slope (agents/phx_land_leads/slope.py -> phx-land-leads/slope.json): used when its ringHash matches the current boundary, so no USGS call
+// Stored slope (agents/phx_land_leads/slope.py -> phx-land-leads/slope/<apn>.json, one file per lead): used when its ringHash matches the current boundary, so no USGS call
 function ringHash(ring){ let h = 0x811c9dc5; for(const b of new TextEncoder().encode(ring.map(p => p[0].toFixed(6) + ',' + p[1].toFixed(6)).join(','))) h = Math.imul(h ^ b, 0x01000193) >>> 0; return h.toString(16).padStart(8, '0'); }   // FNV-1a, same as slope.py
-let slopeStore;
-const slopeReady = fetch('phx-land-leads/slope.json').then(r => r.ok ? r.json() : {}).catch(() => ({})).then(j => { slopeStore = j || {}; });
+const slopeStore = {}, slopeReq = {};   // apn -> stored record or null (no file), filled by slopeLoad
+function slopeLoad(apn){ return slopeReq[apn] || (slopeReq[apn] = fetch('phx-land-leads/slope/' + encodeURIComponent(apn) + '.json').then(r => r.ok ? r.json() : null).catch(() => null).then(j => { slopeStore[apn] = j; })); }
 const elevCache = {};   // apn -> undefined (not asked) | 'pending' | result | null (unavailable)
 const houseSel = {}, p3dRedraw = {};   // apn -> 'comps' | square feet picked in the 3D plan
 function pickHouseSf(apn, k){ houseSel[apn] = k === 'comps' ? 'comps' : +k; if(p3dRedraw[apn]) p3dRedraw[apn](); }
@@ -1766,7 +1780,7 @@ function p3dCmd(id, c){
 }
 async function mount3d(id, a){
   const box = document.getElementById('p3dv-' + id); if(!box) return;
-  const io = new IntersectionObserver(es => { if(es.some(e => e.isIntersecting)){ io.disconnect(); go(); } }); io.observe(box);   // lazy: hidden / off-screen panels never take a WebGL context
+  const io = new IntersectionObserver(es => { if(es.some(e => e.isIntersecting)){ io.disconnect(); go(); } }, { rootMargin: '300px' }); io.observe(box);   // lazy: hidden / off-screen panels never take a WebGL context
   const go = async () => {
     for(const k in p3dViews) if(!p3dViews[k].box.isConnected) disposeView(k);   // panels that were redrawn away
     let T; try{ T = await loadThree(); }catch(e){ return p3dFail(box, id); }
@@ -1939,10 +1953,10 @@ function plan3d(lead, ring, ctx, lots, redraw){
   if(redraw) p3dRedraw[lead.apn] = redraw;
   let el = elevCache[lead.apn];
   const ek = 'elev1:' + lead.apn;
-  if(el === undefined && slopeStore === undefined) slopeReady.then(() => { if(redraw) redraw(); });   // wait for the stored file before any live fetch
+  if(el === undefined && !(lead.apn in slopeStore)) slopeLoad(lead.apn).then(() => { if(redraw) redraw(); });   // wait for the stored file before any live fetch
   else if(el === undefined){ const st = slopeStore[lead.apn]; if(st && !st.failed && st.cells && st.sl && st.ringHash === ringHash(ring)) el = elevCache[lead.apn] = st; }
-  if(el === undefined && slopeStore !== undefined){ try{ const c = JSON.parse(localStorage.getItem(ek)); if(c && c.cells && c.sl) el = elevCache[lead.apn] = c; }catch(e){} }   // ground doesn't change: reuse a past result
-  if(el === undefined && slopeStore !== undefined){ elevCache[lead.apn] = 'pending'; fetchElevation(ring, lng0, lat0, kx).catch(() => null).then(r => { elevCache[lead.apn] = r || null; if(r) try{ localStorage.setItem(ek, JSON.stringify(r)); }catch(e){} if(redraw) redraw(); }); }
+  if(el === undefined && lead.apn in slopeStore){ try{ const c = JSON.parse(localStorage.getItem(ek)); if(c && c.cells && c.sl) el = elevCache[lead.apn] = c; }catch(e){} }   // ground doesn't change: reuse a past result
+  if(el === undefined && lead.apn in slopeStore){ elevCache[lead.apn] = 'pending'; fetchElevation(ring, lng0, lat0, kx).catch(() => null).then(r => { elevCache[lead.apn] = r || null; if(r) try{ localStorage.setItem(ek, JSON.stringify(r)); }catch(e){} if(redraw) redraw(); }); }
   if(el === 'pending') el = undefined;
   const R = ring.map(loc), split = LOT_SPLITS && lots.length > 0, Ls = split ? lots.map(l => l.map(ll)) : [R], Fr = ctx ? ctx.frontLL.map(e => e.map(ll)) : [];
   const cs = compSfs(lead), hs = houseSel[lead.apn], key = hs !== undefined ? (hs === 'comps' && !cs.med ? 3500 : hs) : cs.med ? 'comps' : 3500, hsf = key === 'comps' ? cs.med : key, hd = houseDims(hsf), hstyle = houseStyle[lead.apn] === 'B' ? 'B' : 'A';
@@ -1955,17 +1969,21 @@ function plan3d(lead, ring, ctx, lots, redraw){
   const view = `<div class="p3d-view" id="p3dv-${id}"><div class="pm-why" style="padding:14px;">Loading 3D viewer…</div></div><div class="p3d-sizes" id="p3db-${id}">${btn('aerial', 'Aerial')}${btn('eye', 'Eye level')}${btn('reset', 'Reset')}${typeof landBtn === 'function' ? landBtn(apn) : ''}${btn('in', '+', 'Zoom in')}${btn('out', '&minus;', 'Zoom out')}<span class="pm-why">drag to orbit, scroll or pinch to zoom</span></div>${typeof landUI === 'function' ? landUI(apn) : ''}`;
   const sizes = `<div class="p3d-sizes">House size: ${(cs.med ? [['comps', 'Comps ~' + cs.med.toLocaleString() + ' sf']] : []).concat([2500, 3000, 3500, 4000].map(v => [v, v.toLocaleString() + ' sf'])).map(([k, t]) => `<button type="button" class="${k === key ? 'on' : ''}" onclick="pickHouseSf('${apn}','${k}')">${t}</button>`).join('')}${cs.n ? ` <span class="pm-why">nearby new builds: ${cs.lo.toLocaleString()}-${cs.hi.toLocaleString()} sf (${cs.n} sales)</span>` : ''}</div><div class="p3d-sizes">Style: ${['A', 'B'].map(s => `<button type="button" class="${s === hstyle ? 'on' : ''}" onclick="pickHouseStyle('${apn}','${s}')">Style ${s}</button>`).join('')}<span class="pm-why">${hstyle === 'A' ? 'curved parapet, barrel-tile roof, balcony + curved stair' : 'hip tile roofs, roof terrace, pergola porch'}</span></div>`;
   const legend = el ? `<div class="pm-why">Slope: ${['&lt;5%', '5-10%', '10-15%', '&ge;15% (steep)'].map((t, i) => `<span style="background:${SC[i]};display:inline-block;width:10px;height:10px;margin:0 3px 0 8px;"></span>${t}`).join('')} &middot; terrain relief drawn 1.5&times; exaggerated</div>` : '';
-  return `<div class="p3d"><b>3D site plan + costs</b> ${CF('e', 'schematic')}${view}${sizes}${legend}<div class="p3d-pills">${pills}</div><div class="p3d-note pm-why">Schematic drawn from the county parcel boundary: NOT LiDAR or surveyed terrain. ${el ? 'Slope colors and relief are estimated from USGS 3DEP public elevation data (relief drawn 1.5&times; exaggerated), not a survey.' : 'The ground is drawn flat.'} ${split ? 'Lot lines are the sketch above; ' : LOT_SPLITS ? 'No lot split could be drawn here; ' : 'One house on the whole parcel, no lot split (switch Lot splits on at the top to sketch splits); '}the house is a massing model sized by square feet (1 story to 3,000 sf, 2 above; footprint = sf per story + 700 sf garage/porch; Spanish Style A or B), not a design or floor plan. ${p ? `Costs are the profit model's ${p.n} home${p.n > 1 ? 's' : ''}: all-in = land, build, soft costs, site work, demolition, split and financing; site work = homes × the calculator's site-work input. Estimates, not bids.` : 'Costs unavailable: no priced comps or land basis for this lead.'}</div></div>`;
+  return `<div class="p3d"><b>3D site plan + costs</b> ${CF('e', 'schematic')}${view}${sizes}${legend}<div class="p3d-pills">${pills}</div><div class="p3d-note pm-why">Schematic drawn from the county parcel boundary: NOT LiDAR or surveyed terrain. ${ctx && ctx.cachedAt ? 'Site data retrieved ' + ctx.cachedAt.slice(0, 10) + '. ' : ''}${el ? 'Slope colors and relief are estimated from USGS 3DEP public elevation data (relief drawn 1.5&times; exaggerated), not a survey.' : 'The ground is drawn flat.'} ${split ? 'Lot lines are the sketch above; ' : LOT_SPLITS ? 'No lot split could be drawn here; ' : 'One house on the whole parcel, no lot split (switch Lot splits on at the top to sketch splits); '}the house is a massing model sized by square feet (1 story to 3,000 sf, 2 above; footprint = sf per story + 700 sf garage/porch; Spanish Style A or B), not a design or floor plan. ${p ? `Costs are the profit model's ${p.n} home${p.n > 1 ? 's' : ''}: all-in = land, build, soft costs, site work, demolition, split and financing; site work = homes × the calculator's site-work input. Estimates, not bids.` : 'Costs unavailable: no priced comps or land basis for this lead.'}</div></div>`;
 }
 async function reelHero(){
   const el = document.getElementById('reel-hero');
   const lead = (D.leads || []).filter(l => !isDiscarded(l.apn) && (l.verdict || {}).label === 'Good').sort((a, b) => b.score - a.score)[0];   // same order as the ranked list
   if(!lead) return;
-  el.style.display = ''; el.innerHTML = '<h2>3D Site Plans + Costs</h2><div class="pm-why">Loading the parcel boundary…</div>';
+  const title = `<h2>3D Site Plans + Costs</h2><div style="font-weight:700;margin-bottom:4px;">${esc(String(lead.address || lead.apn).split(/\s{2,}/)[0])} <span class="pill3d">GOOD screen</span></div>`;
+  el.style.display = '';
+  el.innerHTML = title + '<div style="background:#fff;color:var(--text);border-radius:10px;padding:8px;"><div class="p3d"><b>3D site plan + costs</b><div class="p3d-view"><div class="pm-why" style="padding:14px;">Loading 3D plan…</div></div></div></div>';   // skeleton: same box size as the final view, so nothing shifts
+  const warm = new IntersectionObserver(es => { if(es.some(e => e.isIntersecting)){ warm.disconnect(); loadThree().catch(() => {}); } }, { rootMargin: '400px' }); warm.observe(el);   // start the three.js download while the site data loads, but only once the card is near the viewport
+  slopeLoad(lead.apn);
   let ring = null, ctx = null, lots = [];
   try{
-    const par = await fetchParcel(lead); ring = par.ring;
-    const site = await fetchSite(lead, ring).catch(e => ({ bldgs: [], roads: [], roadErr: e.message })), zn = await fetchZone(lead).catch(() => null);
+    const znP = fetchZone(lead).catch(() => null), par = await fetchParcel(lead); ring = par.ring;   // zoning only needs the lead's point: run beside the boundary call
+    const site = await fetchSite(lead, ring).catch(e => ({ bldgs: [], roads: [], roadErr: e.message })), zn = await znP;
     ctx = siteContext(lead, par, site);
     const acres = lead.landAcres || (lead.landSf || 0) / 43560, minLot = lead.minLotVerified === false ? 0 : lead.minLotSf || (zn && zn.zone ? minLotFromZone(zn.zone) : 0);
     const st = layoutState[lead.apn] || { style: 'auto', exact: true, scenario: ctx.bldgs.length ? 'keep' : 'removal', cuts: null, rear: null };
@@ -1974,7 +1992,7 @@ async function reelHero(){
       if(!res.lay.failed && res.pieces.length > 1) lots = res.pieces.filter(p => p.kind === 'lot').map(p => p.poly.map(ctx.toLL));
     }
   }catch(e){ ring = null; }
-  const draw = () => { el.innerHTML = `<h2>3D Site Plans + Costs</h2><div style="font-weight:700;margin-bottom:4px;">${esc(String(lead.address || lead.apn).split(/\s{2,}/)[0])} <span class="pill3d">GOOD screen</span></div><div style="background:#fff;color:var(--text);border-radius:10px;padding:8px;">${plan3d(lead, ring, ctx, lots, draw)}</div><button class="mail-btn" type="button" onclick="openLeadScenario('${esc(lead.apn)}')">Open this site plan</button>`; };
+  const draw = () => { el.innerHTML = `${title}<div style="background:#fff;color:var(--text);border-radius:10px;padding:8px;">${plan3d(lead, ring, ctx, lots, draw)}</div><button class="mail-btn" type="button" onclick="openLeadScenario('${esc(lead.apn)}')">Open this site plan</button>`; };
   window.heroDraw = draw; draw();
 }
 async function initParcelMap(lead, idx){
