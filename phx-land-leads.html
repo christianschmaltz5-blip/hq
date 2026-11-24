@@ -597,6 +597,7 @@ BEFORE YOU SIGN ANYTHING
 
 <script src="phx-land-leads/data.js"></script>
 <script src="phx-land-leads/landscape.js"></script>
+<script src="phx-land-leads/houses.js"></script>
 <script src="assets/js/shell.js"></script>
 <script>
 const D = window.PHX_LAND_LEADS || {leads:[], history:[], zipCodes:[]};
@@ -634,6 +635,7 @@ document.getElementById('meta-row').innerHTML = `
 // $10k-$40k per lot), not a real local civil bid — get one before trusting
 // this number.
 // SCREEN: extra costs the quick screen carries (placeholders; mirror A in verdict.py). close = land closing % of land, cont = contingency % of build+soft+site, hold = tax/insurance/utilities $ per home.
+const slopeStore = {}, slopeReq = {};   // apn -> stored record or null (no file), filled by slopeLoad
 const SCREEN = { close: 0.01, cont: 0.10, hold: 20000 };
 const SUBDIVISION_DEFAULTS = {
   costPerLot: 65000, lotSalePrice: 130000, sellingCostPct: 0.07, holdYears: 2,
@@ -1715,6 +1717,42 @@ function traceClear(idx, apn){
   try{ localStorage.setItem('tracedBldgs', JSON.stringify(all)); }catch(e){}
   if(box){ box._tracing = false; box._trace = []; box.style.cursor = ''; if(box._traceGroup) box._traceGroup.clearLayers(); box._redraw(); }
 }
+// Buildable-area estimate: grid cells (centre inside the parcel and >= setback from every boundary edge); steepAt(x,y) -> slope % or null. Pure, tested in tests/buildable.test.mjs.
+// ponytail: cell-centre sampling, area good to ~2-3%; works for any (also concave) ring. Setback is the page's single placeholder value, not a zoning rule.
+function buildableGrid(R, sb, steepAt){
+  const xs = R.map(p => p[0]), ys = R.map(p => p[1]), x0 = Math.min(...xs), y0 = Math.min(...ys), w = Math.max(...xs) - x0, h = Math.max(...ys) - y0, cs = Math.max(.75, Math.max(w, h) / 90), cells = [];
+  for(let y = y0 + cs / 2; y < y0 + h; y += cs) for(let x = x0 + cs / 2; x < x0 + w; x += cs){
+    if(!pip([x, y], R) || R.some((a, i) => ptSeg([x, y], a, R[(i + 1) % R.length]) < sb)) continue;
+    const sl = steepAt ? steepAt(x, y) : null; cells.push({ x, y, steep: sl != null && sl >= 15 });
+  }
+  const a = cs * cs, st = cells.filter(c => c.steep).length;
+  return { cs, cells, total: polyArea(R), envelope: cells.length * a, steep: st * a, buildable: (cells.length - st) * a };
+}
+function slopeAtFn(el){   // (x,y) local meters -> slope % of the USGS grid cell, or null
+  if(!el) return () => null;
+  const c = el.cells, nx = Math.max(1, c.findIndex(k => k.y !== c[0].y) < 0 ? c.length : c.findIndex(k => k.y !== c[0].y)), ny = c.length / nx;
+  return (x, y) => { const i = Math.min(nx - 1, Math.max(0, Math.floor((x - (c[0].x - el.dx / 2)) / el.dx))), j = Math.min(ny - 1, Math.max(0, Math.floor((y - (c[0].y - el.dy / 2)) / el.dy))); return el.sl[j * nx + i]; };
+}
+// Solar position for the lot: clock hour in Phoenix standard time (MST, UTC-7, no DST) -> {alt, az} degrees (az from north, clockwise). Declination + equation of time; good to ~1 deg. Tested in tests/sun.test.mjs.
+function sunAt(lat, lng, doy, hour){
+  const d = Math.PI / 180, B = 2 * Math.PI * (doy - 81) / 364, eot = 9.87 * Math.sin(2 * B) - 7.53 * Math.cos(B) - 1.5 * Math.sin(B), decl = 23.44 * Math.sin(2 * Math.PI * (284 + doy) / 365) * d;
+  const solar = hour + (4 * (lng + 105) + eot) / 60, H = (solar - 12) * 15 * d, la = lat * d;   // lng - (-105 deg MST meridian), 4 min per degree
+  const sa = Math.sin(la) * Math.sin(decl) + Math.cos(la) * Math.cos(decl) * Math.cos(H), alt = Math.asin(sa);
+  let az = Math.atan2(Math.sin(H), Math.cos(H) * Math.sin(la) - Math.tan(decl) * Math.cos(la)) / d + 180;   // from north: morning < 180 (east), afternoon > 180 (west)
+  return { alt: alt / d, az: (az + 360) % 360 };
+}
+// Hillside slope-to-cost adder (separate estimate, never feeds stored verdicts). Unit rates are judgment estimates, NOT bids; none web-sourced. Spec: slope_cost_model.md. Each tuple = LOW / BASE / HIGH.
+function slopeAdder(stats, sf, stories, acres){
+  const P = { earth: [12, 25, 45], wall: [45, 75, 120], share: [0, .25, .5, .75], found: [[0, 0, 0], [4, 8, 12], [10, 18, 30], [25, 40, 60]], drain: [[0, 0, 0], [3e3, 6e3, 10e3], [6e3, 12e3, 20e3], [12e3, 22e3, 40e3]],
+    drive: [[0, 0, 0], [3e3, 6e3, 10e3], [8e3, 15e3, 25e3], [15e3, 30e3, 60e3]], rock: [[0, 0, 0], [10, 20, 35], [15, 30, 50], [25, 45, 80]], soft: [[0, 0, 0], [4e3, 7e3, 12e3], [10e3, 16e3, 25e3], [18e3, 30e3, 50e3]] };
+  const avg = stats.avg, mx = stats.max, relief = stats.reliefFt, b = avg < 5 ? 0 : avg < 10 ? 1 : avg < 15 ? 2 : 3, cap = 60 * sf, fp = sf / (stories || 1) + 650, pad = 1.5 * fp, W = Math.sqrt(pad), runs = 150 + 100 * Math.sqrt(acres || 0);
+  const one = c => { if(!b) return { adder: 0, capped: false };
+    const s = [avg, (avg + mx) / 2, mx][c] / 100, dh = Math.min(s * W, relief), cut = pad * dh / 8 / 27;
+    const raw = 2 * cut * P.earth[c] + 2 * W * P.share[b] * (dh / 2 + 1) * P.wall[c] + fp * P.found[b][c] + P.drain[b][c] + P.drive[b][c] + runs * P.rock[b][c] + P.soft[b][c];
+    return { adder: Math.round(Math.min(raw, cap)), capped: raw > cap }; };
+  const [lo, ba, hi] = [0, 1, 2].map(one);
+  return { low: lo.adder, base: ba.adder, high: hi.adder, band: b, capped: ba.capped, flag: mx >= 30 || avg >= 20 || ba.capped };
+}
 // 3D schematic of the county parcel polygon + the page's lot sketch; every number comes from profitFor() / the calculator inputs / ctx
 // Slope % per grid cell (row-major z in meters, null = no sample) from neighbour rise/run; pure, tested in tests/slope.test.mjs
 function slopeCells(z, nx, ny, dx, dy){
@@ -1740,11 +1778,11 @@ async function fetchElevation(ring, lng0, lat0, kx){
 }
 // Stored slope (agents/phx_land_leads/slope.py -> phx-land-leads/slope/<apn>.json, one file per lead): used when its ringHash matches the current boundary, so no USGS call
 function ringHash(ring){ let h = 0x811c9dc5; for(const b of new TextEncoder().encode(ring.map(p => p[0].toFixed(6) + ',' + p[1].toFixed(6)).join(','))) h = Math.imul(h ^ b, 0x01000193) >>> 0; return h.toString(16).padStart(8, '0'); }   // FNV-1a, same as slope.py
-const slopeStore = {}, slopeReq = {};   // apn -> stored record or null (no file), filled by slopeLoad
 function slopeLoad(apn){ return slopeReq[apn] || (slopeReq[apn] = fetch('phx-land-leads/slope/' + encodeURIComponent(apn) + '.json').then(r => r.ok ? r.json() : null).catch(() => null).then(j => { slopeStore[apn] = j; })); }
 const elevCache = {};   // apn -> undefined (not asked) | 'pending' | result | null (unavailable)
-const houseSel = {}, p3dRedraw = {};   // apn -> 'comps' | square feet picked in the 3D plan
-function pickHouseSf(apn, k){ houseSel[apn] = k === 'comps' ? 'comps' : +k; if(p3dRedraw[apn]) p3dRedraw[apn](); }
+const sunSt = {}, bldOn = {}, houseSel = {}, p3dRedraw = {};   // apn -> 'comps' | square feet picked in the 3D plan
+function redraw3d(apn){ if(p3dRedraw[apn]) p3dRedraw[apn](); if(window.heroDraw && String(window.heroApn) === String(apn)) window.heroDraw(); }   // the hero card and the lead card can show the same lead
+function pickHouseSf(apn, k){ houseSel[apn] = k === 'comps' ? 'comps' : +k; redraw3d(apn); }
 function houseDims(sf){   // massing only: 1 story to 3,000 sf, 2 above; footprint = sf/stories + 700 sf garage/porch, 1.5:1; meters
   const st = sf > 3000 ? 2 : 1, a = (sf / st + 700) * SF2M, w = Math.sqrt(a * 1.5);
   return { st, w, d: w / 1.5, h: st * 3.2, area: a };
@@ -1756,7 +1794,13 @@ function compSfs(l){   // nearby new-build sale sizes (sf) from the stored comps
 // ---- Real 3D viewer: three.js r160 (ES module, loaded on first use; cdnjs, jsdelivr as fallback). Own tiny orbit control, render on demand, disposed on every redraw.
 const P3D_LIBS = ['https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.module.min.js', 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js'];
 const p3dViews = {}, p3dCam = {}, houseStyle = {}; let p3dLib = null, p3dSeq = 0;
-function pickHouseStyle(apn, s){ houseStyle[apn] = s === 'B' ? 'B' : 'A'; if(p3dRedraw[apn]) p3dRedraw[apn](); }
+function sunSet(id, apn, patch){   // in-place: moves the light, no rebuild; patch {on,h,season}
+  const s = sunSt[apn] = Object.assign({ on: false, h: 12, season: 'summer' }, sunSt[apn], patch), v = p3dViews[id], t = Math.round(s.h * 4) / 4, hh = Math.floor(t), mm = Math.round((t - hh) * 60), q = (k, x) => { const e = document.getElementById(k + id); if(e) x(e); };
+  q('p3dsun-', e => { e.value = s.h; }); q('p3dsunS-', e => e.classList.toggle('on', s.on && s.season === 'summer')); q('p3dsunW-', e => e.classList.toggle('on', s.on && s.season === 'winter'));
+  if(v && v.setSun) q('p3dsunT-', e => { const r = v.setSun(s.on ? s : null); e.textContent = r ? `${(hh % 12) || 12}:${String(mm).padStart(2, '0')} ${hh < 12 ? 'AM' : 'PM'} MST, ${s.season === 'summer' ? 'Jun 21' : 'Dec 21'} · ${r.alt > 0 ? 'sun ' + Math.round(r.alt) + '° up' : 'sun below horizon'}` : 'default light'; });
+}
+function pickBuildable(id, apn, b){ const on = bldOn[apn] = !bldOn[apn], v = p3dViews[id]; if(b) b.classList.toggle('on', on); ['p3dbldp-', 'p3dbldn-'].forEach(k => { const e = document.getElementById(k + id); if(e) e.style.display = on ? (k === 'p3dbldp-' ? 'contents' : '') : 'none'; }); if(v){ v.bld.visible = on; v.req(); } }
+function pickHouseStyle(apn, s){ houseStyle[apn] = s === 'B' || s === 'C' ? s : 'A'; redraw3d(apn); }
 function loadThree(){
   if(!p3dLib) p3dLib = (async () => { for(const u of P3D_LIBS){ try{ return await import(u); }catch(e){} } throw new Error('three.js did not load'); })().catch(e => { p3dLib = null; throw e; });
   return p3dLib;
@@ -1785,7 +1829,7 @@ async function mount3d(id, a){
     for(const k in p3dViews) if(!p3dViews[k].box.isConnected) disposeView(k);   // panels that were redrawn away
     let T; try{ T = await loadThree(); }catch(e){ return p3dFail(box, id); }
     if(!box.isConnected) return;
-    try{ p3dViews[id] = buildView(T, box, a); }catch(e){ console.warn('3D viewer', e); p3dFail(box, id); }
+    try{ p3dViews[id] = buildView(T, box, a); if(sunSt[a.apn] && sunSt[a.apn].on) sunSet(id, a.apn, {}); }catch(e){ console.warn('3D viewer', e); p3dFail(box, id); }
   };
 }
 // pure-ish scene helpers
@@ -1881,13 +1925,13 @@ function buildHouse(T, style, hd){
 function buildView(T, box, a){
   const { R, Ls, Fr, el, hd, style, split, apn } = a, V3 = T.Vector3, EX = 1.5, GREEN = '#cfd9bf', SC = ['#4caf50', '#fdd835', '#fb8c00', '#d32f2f'], sc4 = s => s >= 15 ? 3 : s >= 10 ? 2 : s >= 5 ? 1 : 0;
   const renderer = new T.WebGLRenderer({ antialias: true }); renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2)); renderer.shadowMap.enabled = true; renderer.shadowMap.type = T.PCFSoftShadowMap;
-  const scene = new T.Scene(); scene.background = new T.Color('#eef2f6'); const cam = new T.PerspectiveCamera(42, 4 / 3, .5, 6000), gh = p3dElev(el, EX);
+  const scene = new T.Scene(); scene.background = new T.Color('#eef2f6'); try{ if(typeof applyStudioLook === 'function') applyStudioLook(T, renderer, scene); }catch(e){ console.warn('studio look', e); } const cam = new T.PerspectiveCamera(42, 4 / 3, .5, 6000), gh = p3dElev(el, EX);
   const xs = R.map(p => p[0]), ys = R.map(p => p[1]), bx = (Math.min(...xs) + Math.max(...xs)) / 2, by = (Math.min(...ys) + Math.max(...ys)) / 2, span = Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys), 20);
   const P3 = (x, y, h) => new V3(x, h, -y), navy = new T.MeshBasicMaterial({ color: '#1f3a5f' }), cyan = new T.MeshBasicMaterial({ color: '#00bcd4' }), gold = new T.MeshBasicMaterial({ color: '#b8860b' });
   // ground: triangulated county ring, subdivided so slope colors / relief follow the USGS grid; flat slab when there is no elevation data
   const rr = R.slice(); if(rr.length > 1 && rr[0][0] === rr[rr.length - 1][0] && rr[0][1] === rr[rr.length - 1][1]) rr.pop();
   const nx = el ? Math.max(1, el.cells.findIndex(k => k.y !== el.cells[0].y) < 0 ? el.cells.length : el.cells.findIndex(k => k.y !== el.cells[0].y)) : 1, ny = el ? el.cells.length / nx : 1;
-  const colAt = (x, y) => { if(!el) return GREEN; const i = Math.min(nx - 1, Math.max(0, Math.floor((x - (el.cells[0].x - el.dx / 2)) / el.dx))), j = Math.min(ny - 1, Math.max(0, Math.floor((y - (el.cells[0].y - el.dy / 2)) / el.dy))), s = el.sl[j * nx + i]; return s == null ? GREEN : SC[sc4(s)]; };
+  const slopeAt = slopeAtFn(el), colAt = (x, y) => { const s = slopeAt(x, y); return s == null ? GREEN : SC[sc4(s)]; };
   const pos = [], col = [], cc = new T.Color(), tgt = el ? Math.min(el.dx, el.dy) * .7 : 1e9;
   const emit = (A, B, C) => { const q = [A, B, C].map(p => P3(p[0], p[1], gh(p[0], p[1]))); if(q[1].clone().sub(q[0]).cross(q[2].clone().sub(q[0])).y < 0) q.reverse(); cc.set(colAt((A[0] + B[0] + C[0]) / 3, (A[1] + B[1] + C[1]) / 3)); q.forEach(p => { pos.push(p.x, p.y, p.z); col.push(cc.r, cc.g, cc.b); }); };
   const sub = (A, B, C, dp) => { const L = Math.max(Math.hypot(A[0] - B[0], A[1] - B[1]), Math.hypot(B[0] - C[0], B[1] - C[1]), Math.hypot(C[0] - A[0], C[1] - A[1])); if(L <= tgt || dp > 6) return emit(A, B, C);
@@ -1898,7 +1942,7 @@ function buildView(T, box, a){
   const sp = [], BASE = -2;   // slab sides
   rr.forEach((p, i) => { const q = rr[(i + 1) % rr.length], a0 = P3(p[0], p[1], gh(p[0], p[1])), b0 = P3(q[0], q[1], gh(q[0], q[1])); [a0, b0, new V3(b0.x, BASE, b0.z), a0, new V3(b0.x, BASE, b0.z), new V3(a0.x, BASE, a0.z)].forEach(v => sp.push(v.x, v.y, v.z)); });
   const sg = new T.BufferGeometry(); sg.setAttribute('position', new T.Float32BufferAttribute(sp, 3)); sg.computeVertexNormals(); scene.add(new T.Mesh(sg, new T.MeshStandardMaterial({ color: '#7d8b6e', roughness: 1, side: T.DoubleSide })));
-  const bar = (p, q, r, m) => { const dv = q.clone().sub(p), len = dv.length(); if(len < 1e-6) return; const o = new T.Mesh(new T.CylinderGeometry(r, r, len, 6), m); o.position.copy(p).add(q).multiplyScalar(.5); o.quaternion.setFromUnitVectors(new V3(0, 1, 0), dv.normalize()); scene.add(o); };
+  const bar = (p, q, r, m, par) => { const dv = q.clone().sub(p), len = dv.length(); if(len < 1e-6) return; const o = new T.Mesh(new T.CylinderGeometry(r, r, len, 6), m); o.position.copy(p).add(q).multiplyScalar(.5); o.quaternion.setFromUnitVectors(new V3(0, 1, 0), dv.normalize()); (par || scene).add(o); };
   const drape = (pts, closed, r, m) => { const n = closed ? pts.length : pts.length - 1; for(let i = 0; i < n; i++){ const p = pts[i], q = pts[(i + 1) % pts.length], k = Math.max(1, Math.ceil(Math.hypot(q[0] - p[0], q[1] - p[1]) / 4)); let last = null;
     for(let s = 0; s <= k; s++){ const x = p[0] + (q[0] - p[0]) * s / k, y = p[1] + (q[1] - p[1]) * s / k, v = P3(x, y, gh(x, y) + .15); if(last) bar(last, v, r, m); last = v; } } };
   const lr = Math.max(.25, span * .004); drape(rr, true, lr, navy); Fr.forEach(e => drape(e, false, lr * 1.4, cyan)); if(split) Ls.forEach(l => drape(l, true, lr * .8, gold));
@@ -1907,16 +1951,37 @@ function buildView(T, box, a){
   let front3 = new V3(0, 0, 1), c0 = new V3(bx, 0, -by), fdist = 30; const houses = [];
   Ls.forEach((l, li) => {
     const c = [l.reduce((t, p) => t + p[0], 0) / l.length, l.reduce((t, p) => t + p[1], 0) / l.length], mid = fe ? [(fe[0][0] + fe[1][0]) / 2 - c[0], (fe[0][1] + fe[1][1]) / 2 - c[1]] : [0, -1], s = (mid[0] * -sa + mid[1] * ca) >= 0 ? 1 : -1;
-    const xa = s > 0 ? new V3(-ca, 0, sa) : new V3(ca, 0, -sa), za = s > 0 ? new V3(-sa, 0, -ca) : new V3(sa, 0, ca), ya = new V3(0, 1, 0), hg = buildHouse(T, style, hd), hw = hd.w / 2, hz = hd.d / 2;
+    const xa = s > 0 ? new V3(-ca, 0, sa) : new V3(ca, 0, -sa), za = s > 0 ? new V3(-sa, 0, -ca) : new V3(sa, 0, ca), ya = new V3(0, 1, 0), hg = (() => { try{ if(typeof buildHouseV2 === 'function') return buildHouseV2(T, style, hd); }catch(e){ console.warn('houses.js', e); } return buildHouse(T, style, hd); })(), hw = hd.w / 2, hz = hd.d / 2;
     const ys2 = [[0, 0], [hw, hz], [-hw, hz], [hw, -hz], [-hw, -hz]].map(([u, v]) => gh(c[0] + u * xa.x + v * za.x, c[1] - u * xa.z - v * za.z)), top0 = Math.max(...ys2), low = Math.min(...ys2);
     const og = new T.Group(); og.add(hg); og.quaternion.setFromRotationMatrix(new T.Matrix4().makeBasis(xa, ya, za)); og.position.set(c[0], top0, -c[1]); scene.add(og);
     const fnd = new T.Mesh(new T.BoxGeometry(hd.w, top0 - low + 1, hd.d), new T.MeshStandardMaterial({ color: '#d8ccb4', roughness: 1 })); fnd.position.set(0, -(top0 - low + 1) / 2, 0); og.add(fnd);
     og.traverse(o => { if(o.isMesh){ o.castShadow = true; o.receiveShadow = true; } }); houses.push({ c, xa: [xa.x, -xa.z], za: [za.x, -za.z], w: hd.w, d: hd.d, top0 });
     if(li === 0){ front3 = za.clone(); c0 = new V3(c[0], top0, -c[1]); fdist = fe ? mid[0] * za.x - mid[1] * za.z : 30; }
   });
+  // buildable envelope (off until toggled): navy fill = inside the setback, red hatch = steep (>=15%) cells, dashed navy edge = the setback line
+  const bg = new T.Group(); bg.visible = !!bldOn[apn]; scene.add(bg); 
+  if(a.bz){ const B = a.bz, h = B.cs / 2, ok = [], stp = [], put = (arr, c) => { [[-h, -h], [h, -h], [h, h], [-h, -h], [h, h], [-h, h]].forEach(([dx, dy]) => { const x = c.x + dx, y = c.y + dy, q = P3(x, y, gh(x, y) + .25); arr.push(q.x, q.y, q.z, x / 3, y / 3); }); };
+    B.cells.forEach(c => put(c.steep ? stp : ok, c));
+    const mk = (arr, mat) => { if(!arr.length) return; const g = new T.BufferGeometry(), pa = [], ua = []; arr.forEach((n, i) => (i % 5 < 3 ? pa : ua).push(n)); g.setAttribute('position', new T.Float32BufferAttribute(pa, 3)); g.setAttribute('uv', new T.Float32BufferAttribute(ua, 2)); const m = new T.Mesh(g, mat); m.renderOrder = 2; bg.add(m); };
+    const cv2 = document.createElement('canvas'); cv2.width = cv2.height = 32; const cx2 = cv2.getContext('2d'); cx2.fillStyle = 'rgba(211,47,47,.22)'; cx2.fillRect(0, 0, 32, 32); cx2.strokeStyle = 'rgba(211,47,47,.85)'; cx2.lineWidth = 5; cx2.beginPath(); cx2.moveTo(-4, 36); cx2.lineTo(36, -4); cx2.stroke(); const tex = new T.CanvasTexture(cv2); tex.wrapS = tex.wrapT = T.RepeatWrapping; tex.colorSpace = T.SRGBColorSpace;
+    const po = { transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2, side: T.DoubleSide };
+    mk(ok, new T.MeshBasicMaterial({ color: '#1f3a5f', opacity: .3, ...po })); mk(stp, new T.MeshBasicMaterial({ map: tex, ...po }));
+    const ins = a.bzEdge; if(ins) ins.forEach((p, i) => { const q = ins[(i + 1) % ins.length], L = Math.hypot(q[0] - p[0], q[1] - p[1]), k = Math.max(1, Math.round(L / 4));
+      for(let t = 0; t < k; t++){ const f0 = t / k, f1 = (t + .6) / k, e = f => { const x = p[0] + (q[0] - p[0]) * f, y = p[1] + (q[1] - p[1]) * f; return P3(x, y, gh(x, y) + .3); }; bar(e(f0), e(f1), lr * .8, navy, bg); } });
+  }
   addLandscape(scene, a.ctx, { T, gh, R, Ls, span, Fr, el, hd, top, houses, apn });
-  scene.add(new T.HemisphereLight('#ffffff', '#b5b09a', 1.8)); const sun = new T.DirectionalLight('#fff4e0', 2.4), sr = span * .75 + 25;
+  const hemi = new T.HemisphereLight('#ffffff', '#b5b09a', 1.8); scene.add(hemi); const sun = new T.DirectionalLight('#fff4e0', 2.4), sr = span * .75 + 25;
   sun.position.set(bx + sr * .9, sr * 1.3, -by + sr * .6); sun.target.position.set(bx, 0, -by); sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); Object.assign(sun.shadow.camera, { left: -sr, right: sr, top: sr, bottom: -sr, near: 1, far: sr * 4 }); sun.shadow.bias = -.0004; sun.shadow.radius = 3; scene.add(sun, sun.target);
+  try{ if(typeof tuneStudioLights === 'function') tuneStudioLights(sun, hemi, sr); }catch(e){ console.warn('studio lights', e); }
+  // Sun control: setSun(null) restores the fixed default light; otherwise real solar position for the lot (local meters: x east, y north -> three x, -z)
+  const sun0 = sun.position.clone(), bg0 = scene.background.clone(), lerpC = (c1, c2, t) => new T.Color(c1).lerp(new T.Color(c2), Math.max(0, Math.min(1, t)));
+    const setSun = s => {
+    if(!s){ sun.position.copy(sun0); sun.intensity = 2.4; sun.color.set('#fff4e0'); hemi.intensity = 1.8; scene.background.copy(bg0); return null; }
+    const r = sunAt(a.lat, a.lng, s.season === 'summer' ? 172 : 355, s.h), al = Math.max(r.alt, 3) * Math.PI / 180, az = r.az * Math.PI / 180, day = Math.min(1, Math.max(0, r.alt / 8)), warm = Math.min(1, Math.max(0, (r.alt - 3) / 30));
+    sun.position.set(bx + sr * 1.8 * Math.cos(al) * Math.sin(az), sr * 1.8 * Math.sin(al), -by - sr * 1.8 * Math.cos(al) * Math.cos(az));
+    sun.intensity = 2.4 * day; sun.color.copy(lerpC('#ff9a4d', '#fff4e0', warm)); hemi.intensity = .35 + 1.45 * day;
+    scene.background.copy(lerpC('#1c2640', lerpC('#f1c9a4', '#eef2f6', warm), day)); return r;
+  };
   // camera state + the two preset views
   const th0 = Math.atan2(front3.x, front3.z), fd = Math.max(14, Math.min(30, fdist - 1)), eyeP = c0.clone().addScaledVector(front3, fd); eyeP.y = gh(eyeP.x, -eyeP.z) + 1.7;
   const eyeT = new V3(c0.x, c0.y + 3.8, c0.z), ed = eyeP.clone().sub(eyeT), views = {
@@ -1931,9 +1996,10 @@ function buildView(T, box, a){
     w.tx += rt.x * mx + up.x * my; w.ty += rt.y * mx + up.y * my; w.tz += rt.z * mx + up.z * my; w.r *= Math.max(x1 - x0, y1 - y0) / 1.5; } }); frame();
   const st = Object.assign({}, p3dCam[apn] || views.reset), maxR = span * 5 + 100;
   const place = () => { st.ph = Math.min(1.75, Math.max(.05, st.ph)); st.r = Math.min(maxR, Math.max(4, st.r)); cam.position.set(st.tx + st.r * Math.sin(st.ph) * Math.sin(st.th), st.ty + st.r * Math.cos(st.ph), st.tz + st.r * Math.sin(st.ph) * Math.cos(st.th)); cam.lookAt(st.tx, st.ty, st.tz); };
-  const v = { box, apn, renderer, scene, st, views, maxR, q: 0, name: p3dCam[apn] ? null : 'reset' };
+  const v = { setSun, bld: bg, box, apn, renderer, scene, st, views, maxR, q: 0, name: p3dCam[apn] ? null : 'reset' };
   v.draw = () => { v.q = 0; place(); renderer.render(scene, cam); }; v.req = () => { if(!v.q) v.q = requestAnimationFrame(v.draw); };
   const fit = () => { const W = box.clientWidth, Hh = box.clientHeight; if(!W || !Hh) return; renderer.setSize(W, Hh, false); if(Math.abs(W / Hh - cam.aspect) > .01){ cam.aspect = W / Hh; cam.updateProjectionMatrix(); frame(); if(v.name) Object.assign(st, views[v.name]); } cam.aspect = W / Hh; cam.updateProjectionMatrix(); v.req(); };
+  if(sunSt[apn] && sunSt[apn].on) setSun(sunSt[apn]);
   v.ro = new ResizeObserver(fit); v.ro.observe(box);
   const cv = renderer.domElement, ptr = new Map(); cv.setAttribute('role', 'img'); cv.setAttribute('aria-label', '3D site model: drag to orbit, scroll or pinch to zoom');
   cv.addEventListener('pointerdown', e => { cv.setPointerCapture(e.pointerId); ptr.set(e.pointerId, e); });
@@ -1959,17 +2025,21 @@ function plan3d(lead, ring, ctx, lots, redraw){
   if(el === undefined && lead.apn in slopeStore){ elevCache[lead.apn] = 'pending'; fetchElevation(ring, lng0, lat0, kx).catch(() => null).then(r => { elevCache[lead.apn] = r || null; if(r) try{ localStorage.setItem(ek, JSON.stringify(r)); }catch(e){} if(redraw) redraw(); }); }
   if(el === 'pending') el = undefined;
   const R = ring.map(loc), split = LOT_SPLITS && lots.length > 0, Ls = split ? lots.map(l => l.map(ll)) : [R], Fr = ctx ? ctx.frontLL.map(e => e.map(ll)) : [];
-  const cs = compSfs(lead), hs = houseSel[lead.apn], key = hs !== undefined ? (hs === 'comps' && !cs.med ? 3500 : hs) : cs.med ? 'comps' : 3500, hsf = key === 'comps' ? cs.med : key, hd = houseDims(hsf), hstyle = houseStyle[lead.apn] === 'B' ? 'B' : 'A';
+  const cs = compSfs(lead), hs = houseSel[lead.apn], key = hs !== undefined ? (hs === 'comps' && !cs.med ? 3500 : hs) : cs.med ? 'comps' : 3500, hsf = key === 'comps' ? cs.med : key, hd = houseDims(hsf), hstyle = houseStyle[lead.apn] === 'B' || houseStyle[lead.apn] === 'C' ? houseStyle[lead.apn] : 'A';
   const SC = ['#4caf50', '#fdd835', '#fb8c00', '#d32f2f'], id = ++p3dSeq, apn = esc(String(lead.apn));
-  setTimeout(() => mount3d(id, { apn: lead.apn, R, Ls, Fr, el, hd, style: hstyle, split, ctx }), 0);
+  const sbM = setbackFt / FT, bz = buildableGrid(R, sbM, slopeAtFn(el)), bzEdge = (() => { const e = insetPoly(R, sbM); return e.length > 2 && Math.abs(polyArea(e) / bz.envelope - 1) < .08 ? e : null; })(), bon = !!bldOn[lead.apn];   // dashed edge only when the simple convex inset agrees with the grid (concave lots: fill only)
+  setTimeout(() => mount3d(id, { apn: lead.apn, R, Ls, Fr, el, hd, style: hstyle, split, ctx, bz, bzEdge, lat: lead.lat || lat0, lng: lead.lng || lng0 }), 0);
   const m = n => '$' + Math.round(n).toLocaleString(), p = profitFor(lead, 0, 0), pill = (t, e) => `<span class="pill3d">${t}${e ? ' <small>est.</small>' : ''}</span>`;
   const frontFt = ctx && ctx.frontKnown ? ctx.front.reduce((t, e) => t + Math.hypot(e[1][0] - e[0][0], e[1][1] - e[0][1]), 0) * FT : 0;
-  const pills = [ctx && !ctx.frontKnown ? pill('road not found: house direction not set') : '', split ? pill(lots.length + ' lots (sketch)') : pill(LOT_SPLITS ? 'no split drawable' : '1 house'), p ? pill(m(p.cost / p.n) + '/home all-in', 1) + pill('Site work ' + m(p.n * (parseFloat(document.getElementById('hcSite').value) || 0)), 1) : '', frontFt ? pill(Math.round(frontFt).toLocaleString() + ' ft frontage', 1) : '', pill('House ' + hsf.toLocaleString() + ' sf · ' + hd.st + '-story', 1) + pill('Build ~' + m(hsf * (parseFloat(document.getElementById('hcHard').value) || 0)), 1) + (hd.area > .3 * Math.min(...Ls.map(polyArea)) ? pill('tight fit: check setbacks') : '') + pill((lead.landAcres || 0).toFixed(2) + ' ac'), el ? pill('Avg slope ' + el.avg.toFixed(1) + '%', 1) + pill('Max ' + el.max.toFixed(0) + '%', 1) + pill('Relief ' + el.reliefFt.toFixed(0) + ' ft', 1) : el === null ? pill('slope unavailable (reload to retry)') : !el ? pill('loading slope…') : ''].join('');
+  const sa = el ? slopeAdder(el, hsf, hd.st, lead.landAcres || 0) : null, siteN = (p ? p.n : 1) * (parseFloat(document.getElementById('hcSite').value) || 0);
+  const slopePills = sa ? pill('Slope premium ~' + m(sa.base), 1) + pill('Site work with slope ' + m(siteN + (p ? p.n : 1) * sa.base), 1) + (sa.flag ? pill('needs geotech/civil before offer') : '') : '';
+  const pills = [ctx && !ctx.frontKnown ? pill('road not found: house direction not set') : '', split ? pill(lots.length + ' lots (sketch)') : pill(LOT_SPLITS ? 'no split drawable' : '1 house'), p ? pill(m(p.cost / p.n) + '/home all-in', 1) + pill('Site work ' + m(p.n * (parseFloat(document.getElementById('hcSite').value) || 0)), 1) : '', frontFt ? pill(Math.round(frontFt).toLocaleString() + ' ft frontage', 1) : '', pill('House ' + hsf.toLocaleString() + ' sf · ' + hd.st + '-story', 1) + pill('Build ~' + m(hsf * (parseFloat(document.getElementById('hcHard').value) || 0)), 1) + (hd.area > .3 * Math.min(...Ls.map(polyArea)) ? pill('tight fit: check setbacks') : '') + pill((lead.landAcres || 0).toFixed(2) + ' ac'), el ? pill('Avg slope ' + el.avg.toFixed(1) + '%', 1) + pill('Max ' + el.max.toFixed(0) + '%', 1) + pill('Relief ' + el.reliefFt.toFixed(0) + ' ft', 1) : el === null ? pill('slope unavailable (reload to retry)') : !el ? pill('loading slope…') : ''].join('') + slopePills + `<span id="p3dbldp-${id}" style="display:${bon ? 'contents' : 'none'}">${pill('Buildable ~' + Math.round(bz.buildable / SF2M).toLocaleString() + ' sf of ' + Math.round(bz.total / SF2M).toLocaleString() + ' sf (' + Math.round(100 * bz.buildable / bz.total) + '%)', 1)}</span>`;
   const btn = (c, t, l) => `<button type="button" onclick="p3dCmd(${id},'${c}')"${l ? ` aria-label="${l}"` : ''}>${t}</button>`;
-  const view = `<div class="p3d-view" id="p3dv-${id}"><div class="pm-why" style="padding:14px;">Loading 3D viewer…</div></div><div class="p3d-sizes" id="p3db-${id}">${btn('aerial', 'Aerial')}${btn('eye', 'Eye level')}${btn('reset', 'Reset')}${typeof landBtn === 'function' ? landBtn(apn) : ''}${btn('in', '+', 'Zoom in')}${btn('out', '&minus;', 'Zoom out')}<span class="pm-why">drag to orbit, scroll or pinch to zoom</span></div>${typeof landUI === 'function' ? landUI(apn) : ''}`;
-  const sizes = `<div class="p3d-sizes">House size: ${(cs.med ? [['comps', 'Comps ~' + cs.med.toLocaleString() + ' sf']] : []).concat([2500, 3000, 3500, 4000].map(v => [v, v.toLocaleString() + ' sf'])).map(([k, t]) => `<button type="button" class="${k === key ? 'on' : ''}" onclick="pickHouseSf('${apn}','${k}')">${t}</button>`).join('')}${cs.n ? ` <span class="pm-why">nearby new builds: ${cs.lo.toLocaleString()}-${cs.hi.toLocaleString()} sf (${cs.n} sales)</span>` : ''}</div><div class="p3d-sizes">Style: ${['A', 'B'].map(s => `<button type="button" class="${s === hstyle ? 'on' : ''}" onclick="pickHouseStyle('${apn}','${s}')">Style ${s}</button>`).join('')}<span class="pm-why">${hstyle === 'A' ? 'curved parapet, barrel-tile roof, balcony + curved stair' : 'hip tile roofs, roof terrace, pergola porch'}</span></div>`;
+  const ss = sunSt[lead.apn] || { on: false, h: 12, season: 'summer' }, sunRow = `<div class="p3d-sizes">Sun: <input type="range" id="p3dsun-${id}" min="6" max="19" step="0.25" value="${ss.h}" aria-label="Time of day" oninput="sunSet(${id},'${apn}',{on:true,h:+this.value})" style="width:150px;vertical-align:middle;"> <button type="button" id="p3dsunS-${id}" class="${ss.on && ss.season === 'summer' ? 'on' : ''}" onclick="sunSet(${id},'${apn}',{on:true,season:'summer'})">Summer</button><button type="button" id="p3dsunW-${id}" class="${ss.on && ss.season === 'winter' ? 'on' : ''}" onclick="sunSet(${id},'${apn}',{on:true,season:'winter'})">Winter</button><button type="button" onclick="sunSet(${id},'${apn}',{on:false})">Default light</button> <span class="pm-why" id="p3dsunT-${id}">default light</span></div>`;
+  const view = `<div class="p3d-view" id="p3dv-${id}"><div class="pm-why" style="padding:14px;">Loading 3D viewer…</div></div><div class="p3d-sizes" id="p3db-${id}">${btn('aerial', 'Aerial')}${btn('eye', 'Eye level')}${btn('reset', 'Reset')}<button type="button" class="${bon ? 'on' : ''}" onclick="pickBuildable(${id},'${apn}',this)">Buildable area</button>${typeof landBtn === 'function' ? landBtn(apn) : ''}${btn('in', '+', 'Zoom in')}${btn('out', '&minus;', 'Zoom out')}<span class="pm-why">drag to orbit, scroll or pinch to zoom</span></div>${sunRow}${typeof landUI === 'function' ? landUI(apn) : ''}`;
+  const sizes = `<div class="p3d-sizes">House size: ${(cs.med ? [['comps', 'Comps ~' + cs.med.toLocaleString() + ' sf']] : []).concat([2500, 3000, 3500, 4000].map(v => [v, v.toLocaleString() + ' sf'])).map(([k, t]) => `<button type="button" class="${k === key ? 'on' : ''}" onclick="pickHouseSf('${apn}','${k}')">${t}</button>`).join('')}${cs.n ? ` <span class="pm-why">nearby new builds: ${cs.lo.toLocaleString()}-${cs.hi.toLocaleString()} sf (${cs.n} sales)</span>` : ''}</div><div class="p3d-sizes">Style: ${['A', 'B', 'C'].map(s => `<button type="button" class="${s === hstyle ? 'on' : ''}" onclick="pickHouseStyle('${apn}','${s}')">Style ${s}</button>`).join('')}<span class="pm-why">${hstyle === 'A' ? 'curved parapet, barrel-tile roof, balcony + curved stair' : hstyle === 'C' ? 'single-story ranch, courtyard loggia, 3-car garage' : 'hip tile roofs, roof terrace, pergola porch'}</span></div>`;
   const legend = el ? `<div class="pm-why">Slope: ${['&lt;5%', '5-10%', '10-15%', '&ge;15% (steep)'].map((t, i) => `<span style="background:${SC[i]};display:inline-block;width:10px;height:10px;margin:0 3px 0 8px;"></span>${t}`).join('')} &middot; terrain relief drawn 1.5&times; exaggerated</div>` : '';
-  return `<div class="p3d"><b>3D site plan + costs</b> ${CF('e', 'schematic')}${view}${sizes}${legend}<div class="p3d-pills">${pills}</div><div class="p3d-note pm-why">Schematic drawn from the county parcel boundary: NOT LiDAR or surveyed terrain. ${ctx && ctx.cachedAt ? 'Site data retrieved ' + ctx.cachedAt.slice(0, 10) + '. ' : ''}${el ? 'Slope colors and relief are estimated from USGS 3DEP public elevation data (relief drawn 1.5&times; exaggerated), not a survey.' : 'The ground is drawn flat.'} ${split ? 'Lot lines are the sketch above; ' : LOT_SPLITS ? 'No lot split could be drawn here; ' : 'One house on the whole parcel, no lot split (switch Lot splits on at the top to sketch splits); '}the house is a massing model sized by square feet (1 story to 3,000 sf, 2 above; footprint = sf per story + 700 sf garage/porch; Spanish Style A or B), not a design or floor plan. ${p ? `Costs are the profit model's ${p.n} home${p.n > 1 ? 's' : ''}: all-in = land, build, soft costs, site work, demolition, split and financing; site work = homes × the calculator's site-work input. Estimates, not bids.` : 'Costs unavailable: no priced comps or land basis for this lead.'}</div></div>`;
+  return `<div class="p3d"><b>3D site plan + costs</b> ${CF('e', 'schematic')}${view}${sizes}${legend}<div class="p3d-pills">${pills}</div><div class="p3d-note pm-why" id="p3dbldn-${id}" style="display:${bon ? '' : 'none'}"><b>Buildable area</b>: navy = inside a ${setbackFt} ft setback from every parcel edge; red hatch = steep (&ge;15% slope), limited. The setback is this page's single placeholder assumption (front, side and rear alike), NOT the zoning code; hillside-ordinance limits are not modeled. Estimate, not a survey.</div><div class="p3d-note pm-why">Schematic drawn from the county parcel boundary: NOT LiDAR or surveyed terrain. ${ctx && ctx.cachedAt ? 'Site data retrieved ' + ctx.cachedAt.slice(0, 10) + '. ' : ''}${el ? 'Slope colors and relief are estimated from USGS 3DEP public elevation data (relief drawn 1.5&times; exaggerated), not a survey.' : 'The ground is drawn flat.'} ${split ? 'Lot lines are the sketch above; ' : LOT_SPLITS ? 'No lot split could be drawn here; ' : 'One house on the whole parcel, no lot split (switch Lot splits on at the top to sketch splits); '}the house is a massing model sized by square feet (1 story to 3,000 sf, 2 above; footprint = sf per story + 700 sf garage/porch; Spanish Style A or B), not a design or floor plan. ${p ? `Costs are the profit model's ${p.n} home${p.n > 1 ? 's' : ''}: all-in = land, build, soft costs, site work, demolition, split and financing; site work = homes × the calculator's site-work input. Estimates, not bids.${sa ? ' <b>Slope premium</b> is a separate hillside estimate (grading, walls, stepped/pier foundations, drainage, driveway, rock trenching, engineering): unit rates are judgment estimates, NOT bids, none web-sourced; hillside-ordinance effects are not modeled.' : ''}` : 'Costs unavailable: no priced comps or land basis for this lead.'}</div></div>`;
 }
 async function reelHero(){
   const el = document.getElementById('reel-hero');
@@ -1993,7 +2063,7 @@ async function reelHero(){
     }
   }catch(e){ ring = null; }
   const draw = () => { el.innerHTML = `${title}<div style="background:#fff;color:var(--text);border-radius:10px;padding:8px;">${plan3d(lead, ring, ctx, lots, draw)}</div><button class="mail-btn" type="button" onclick="openLeadScenario('${esc(lead.apn)}')">Open this site plan</button>`; };
-  window.heroDraw = draw; draw();
+  window.heroDraw = draw; window.heroApn = lead.apn; draw();
 }
 async function initParcelMap(lead, idx){
   const box = document.getElementById('pm-' + idx), info = document.getElementById('pminfo-' + idx), note = document.getElementById('pmnote-' + idx); if(!box) return;
@@ -2916,6 +2986,15 @@ function sellerSignals(l){
   if(o.yearsHeld >= 15) s.push('held ' + Math.round(o.yearsHeld) + 'y');
   return s;
 }
+// Extra line only: existing profit is untouched. Same profitFor with site work + the BASE slope adder (profitFor applies its own 1.10 contingency and financing, so none is added here).
+function slopeProfitHtml(l, m){
+  const a = l.apn, st = slopeStore[a];
+  if(!(a in slopeStore)){ if(!slopeReq[a] && 'IntersectionObserver' in window) setTimeout(() => { const el = document.querySelector('[data-profit-apn="' + CSS.escape(String(a)) + '"]'); if(!el) return; const io = new IntersectionObserver(es => { if(es.some(e => e.isIntersecting)){ io.disconnect(); slopeLoad(a).then(() => document.querySelectorAll('[data-profit-apn="' + CSS.escape(String(a)) + '"]').forEach(e => { const h = profitLine(l); if(h) e.outerHTML = h; })); } }); io.observe(el); }, 0); return ''; }
+  if(!st || st.failed || st.avg == null) return '';
+  const sf = parseFloat(document.getElementById('hcSf').value) || 0, sa = slopeAdder(st, sf, houseDims(sf).st, l.landAcres || 0), site = parseFloat(document.getElementById('hcSite').value) || 0, q = profitFor(l, 0, 0, { site: site + sa.base });
+  if(!q) return '';
+  return ` · <span title="Existing profit plus a hillside estimate: site work + ${m(sa.base)} (low ${m(sa.low)}, high ${m(sa.high)}) from avg ${st.avg.toFixed(1)}% / max ${st.max.toFixed(0)}% / relief ${Math.round(st.reliefFt)} ft. Unit rates are judgment estimates, NOT bids, not web-sourced; hillside-ordinance effects not modeled. Verdict is not changed."><b>Profit with slope costs (est.)</b> <b style="color:${q.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(q.profit)}</b> (${(q.margin * 100).toFixed(0)}%)${sa.flag ? ' · needs geotech/civil before offer' : ''}</span>`;
+}
 function profitLine(l){
   const p = profitFor(l); if(!p) return '';
   const m = n => (n < 0 ? '−$' : '$') + Math.abs(Math.round(n)).toLocaleString(), m2 = m;
@@ -2931,7 +3010,7 @@ function profitLine(l){
   }
   const alt = p.n > 1 && Math.abs((parseFloat(document.getElementById('moSplitHaircut').value) || 0) - 80) > 0.5 ? profitFor(l, 0, 0, { haircut: 0.8 }) : null;   // display only: split homes at 80% (the AGENTS.md figure)
   const altNote = alt ? ` · <span title="Display only: split homes valued at 80% instead of the page's split factor.">at 80% split value: ${m(alt.profit)} (${(alt.margin * 100).toFixed(0)}%)</span>` : '';
-  return `<div class="lead-sub" data-profit-apn="${esc(l.apn)}" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${badge}📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%)${altNote} · risk ${p.risk}${selectedComps(l).fellBack ? ' · ⚠ FALLBACK comps' : ''}${runNote}${[l.landCompLookup,l.newBuildLookup].filter(x => x && x.error).map(x => `<div>Lookup error: ${esc(x.error)} · attempted ${esc(x.retrievedAt || 'unknown')}</div>`).join('')}${compSensitivityHtml(l)}${landBasis(l).areaAvg ? '<div><b>' + esc(landBasis(l).areaAvg.landBasisNote) + '</b> (guess, not a land comp; risk forced High)</div>' : ''}${landBasis(l).override ? '<div style="margin-top:6px;">' + priceBasisHtml(l) + '</div>' : ''}</div>`;
+  return `<div class="lead-sub" data-profit-apn="${esc(l.apn)}" style="padding:0 16px 8px;" onclick="event.stopPropagation()">${badge}📈 <b>${p.strategy}</b> · land ~${m(p.land)} · finished ~${m(p.finished)} · profit <b style="color:${p.profit > 0 ? '#2f6b47' : '#b03a3a'};">${m(p.profit)}</b> (${(p.margin * 100).toFixed(0)}%)${altNote}${typeof slopeProfitHtml === 'function' ? slopeProfitHtml(l, m) : ''} · risk ${p.risk}${selectedComps(l).fellBack ? ' · ⚠ FALLBACK comps' : ''}${runNote}${[l.landCompLookup,l.newBuildLookup].filter(x => x && x.error).map(x => `<div>Lookup error: ${esc(x.error)} · attempted ${esc(x.retrievedAt || 'unknown')}</div>`).join('')}${compSensitivityHtml(l)}${landBasis(l).areaAvg ? '<div><b>' + esc(landBasis(l).areaAvg.landBasisNote) + '</b> (guess, not a land comp; risk forced High)</div>' : ''}${landBasis(l).override ? '<div style="margin-top:6px;">' + priceBasisHtml(l) + '</div>' : ''}</div>`;
 }
 // Owner one-pager link: non-preliminary leads where the deal still works at a $400/sf build if the owner credits their land
 // at no less than ONEPAGER_MIN_LAND_SHARE of the estimated land value (the sheet shows no land price; it is agreed later).

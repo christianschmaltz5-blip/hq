@@ -16,3 +16,11 @@ test('house size: 4,000 sf is 2-story and footprint = sf/2 + 700 sf; comps media
   const c = compSfs({ newBuild: { examples: [{ sf: 2898 }, { sf: 3765 }, { sf: 3697 }, { sf: 50 }] } }); assert.deepEqual([c.n, c.lo, c.hi, c.med], [3, 2898, 3765, 3700]);
   assert.equal(compSfs({}).n, 0);
 });
+const slopeAdder = new Function(html.match(/function slopeAdder[\s\S]*?\n}\n/)[0] + 'return slopeAdder;')();
+test('slope cost adder: flat = 0, monotonic in band, capped at $60/sf, worked example ~$131.5k', () => {
+  assert.equal(slopeAdder({ avg: 3, max: 4, reliefFt: 5 }, 3750, 2, 1).base, 0);
+  const b = [[4.9, 9, 10], [7, 9, 10], [12, 18, 30], [20, 30, 60]].map(([avg, max, reliefFt]) => slopeAdder({ avg, max, reliefFt }, 3750, 2, 1).base);
+  assert.deepEqual(b, [...b].sort((x, y) => x - y)); assert.ok(b[1] > 0);
+  const c = slopeAdder({ avg: 40, max: 60, reliefFt: 200 }, 3750, 2, 1); assert.equal(c.high, 60 * 3750); assert.ok(c.capped && c.flag);
+  const w = slopeAdder({ avg: 12.6, max: 19, reliefFt: 36 }, 3750, 2, 0.97); assert.ok(Math.abs(w.base / 131486 - 1) < .02, w.base); assert.ok(w.low < w.base && w.base < w.high && !w.flag);
+});
