@@ -5023,5 +5023,35 @@
   "slopeSamples": 25,
   "slopeStatus": "ok: USGS 3DEP via EPQS",
   "method": 2
+ },
+ "21647994": {
+  "inEsl": true,
+  "landform": "Upper Desert",
+  "otherLandforms": [],
+  "retrieved": "2026-11-24",
+  "slopePct": 5.12,
+  "slopeSamples": 25,
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
+ },
+ "21647995": {
+  "inEsl": true,
+  "landform": "Upper Desert",
+  "otherLandforms": [],
+  "retrieved": "2026-11-24",
+  "slopePct": 6.7,
+  "slopeSamples": 24,
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
+ },
+ "21647993": {
+  "inEsl": true,
+  "landform": "Upper Desert",
+  "otherLandforms": [],
+  "retrieved": "2026-11-24",
+  "slopePct": 6.23,
+  "slopeSamples": 25,
+  "slopeStatus": "ok: USGS 3DEP via EPQS",
+  "method": 2
  }
 }
