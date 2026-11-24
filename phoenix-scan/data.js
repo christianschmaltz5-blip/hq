@@ -18,11 +18,13 @@
 // };
 
 window.PHX_SCAN = {
-  updated: "2026-11-09",
-  listingsScanned: 18,
+  updated: "2026-11-23",
+  listingsScanned: 14,
   benchmarks: { "A": 4.75, "B": 4.90, "C": 5.40, "2-4 unit": 5.50 },
 
-  qualifying: [
+  qualifying: [],
+
+  nearMisses: [
     {
       name: "2242 E Taylor St",
       address: "2242 E Taylor St, Phoenix AZ 85006",
@@ -30,49 +32,59 @@ window.PHX_SCAN = {
       ask: 639000,
       units: 5,
       cls: "C",
-      noi: 56100,
-      capPct: 8.78,
-      spreadBps: 338,
-      confidence: "LOW",
-      notes: "Headline states '5 Units | $127k/Unit | 8.78% Current Cap Rate' (implied NOI ~$56.1k). No rents, P&L or year built visible, so the cap is unverified marketing. Story note (spread >=200bps): at $127k/unit in 85006 an 8.78% cap likely reflects deferred maintenance, understated expenses or pro forma figures; confirm rent roll and actual expenses.",
-      url: "https://www.crexi.com/properties/search?term=2242%20E%20Taylor%20St%20Phoenix%20AZ%2085006"
+      noi: 40135,
+      capPct: 6.28,
+      spreadBps: 88,
+      confidence: "MEDIUM",
+      notes: "Re-underwritten from stated avg rent $1,214 x 5 units: EGI $69.2k (95%), 42% opex (built 1944) = NOI ~$40.1k. Broker states 8.78% (detail page also says 8.32%), implying NOI ~$56k and a ~19% expense ratio = pro-forma fluff. 1944 build, 'updated' units, unverified rents; confirm rent roll and T-12.",
+      url: "https://www.crexi.com/properties/2357577/arizona-2242-e-taylor-st"
     },
     {
-      name: "Midtown Phoenix 8-unit (Fairmount)",
-      address: "1017-1031 E Fairmount Ave, Phoenix AZ 85014",
-      zip: "85014",
-      ask: 1895000,
-      units: 8,
-      cls: "C",
-      noi: 123200,
-      capPct: 6.50,
-      spreadBps: 110,
-      confidence: "LOW",
-      notes: "Headline states '8 Units | Midtown Phoenix | 6.50% Current Cap Rate' (implied NOI ~$123.2k, $237k/unit). No rents or P&L visible, so unverified; class assumed C as no year built shown.",
-      url: "https://www.crexi.com/properties/search?term=1017%20E%20Fairmount%20Ave%20Phoenix%20AZ%2085014"
+      name: "Row 31",
+      address: "1435 E Taylor St, Phoenix AZ 85006",
+      zip: "85006",
+      ask: 5999000,
+      units: 31,
+      cls: "A",
+      noi: 336516,
+      capPct: 5.61,
+      spreadBps: 86,
+      confidence: "MEDIUM",
+      notes: "Re-underwritten from stated avg rent $1,587 x 31 units: EGI $560.9k (95%), 40% opex = NOI ~$336.5k. Broker states 7.39% (implied NOI ~$443k, ~21% expense ratio = fluff). 2026 build still in lease-up, so in-place rents/occupancy are unproven; 2BR rents said to be ~$358 below comps.",
+      url: "https://www.crexi.com/properties/2619345/arizona-row-31"
     }
   ],
 
-  nearMisses: [],
-
   disqualified: [
     {
-      address: "1477 S Warner Dr, Apache Junction AZ 85120 (Mesquite Ranch RV Park)",
-      statedCapPct: null,
-      realCapPct: null,
-      reason: "$1,125,000 ask, 20 RV sites ($53k/site). No cap shown in this run's feed. RV park, outside conventional multifamily."
+      address: "1017-1031 E Fairmount Ave, Phoenix AZ 85014 (8 units, 1966, $1.895M)",
+      statedCapPct: 6.50,
+      realCapPct: 4.27,
+      reason: "Stated 6.50% (6.68% in body) implies ~$123k NOI, ~12% expense ratio. At $1,528 avg rent, 95% EGI, 42% opex (pre-1980) NOI is ~$80.8k = 4.27%, -113bps vs Class C."
     },
     {
-      address: "No financials disclosed (cannot underwrite): 1747 E Virginia Ave Phoenix ($825k, 4 units); 3020 E Yale St Phoenix ($759k, triplex); The Mojave, 2020 W Orangewood Ave ($3.895M, 27 units, 1986); Clubhouse at Arcadia ($11.8M, 43 units); Arcadia 52 ($10.1M); 118-unit 1429 N Scottsdale Rd Tempe ($19M)",
+      address: "8916-8918 N 11th St, Phoenix AZ 85020 (duplex + rear parcel, $525k)",
       statedCapPct: null,
-      realCapPct: null,
-      reason: "No cap rate, NOI or rents in the logged-out view."
+      realCapPct: 3.98,
+      reason: "Stated current NOI $20,874 on $525k = 3.98%, -152bps vs 2-4 unit benchmark; part of price is for the rear parcel."
     },
     {
-      address: "Land: The Capistrano Glendale ($18M), 903 & 909 N Miller Rd Tempe ($7.1M), I-17 Corridor land. Outside metro/specialty: Bouse RV Park, Globe retail+2 apts, 113 & 119 E District St Tucson quadplex, Jerome 3-unit, Whispering Pines Resort Pinetop, Patton's Playground RV Salome",
+      address: "Fairmount Recovery Housing, 1841 W Fairmount Ave, Phoenix AZ 85015 ($3.04M)",
+      statedCapPct: 10.67,
+      realCapPct: null,
+      reason: "Absolute NNN 7-yr lease to a recovery-housing operator: specialty/credit-dependent income, not conventional multifamily. Spread would be +527bps but unverifiable; excluded."
+    },
+    {
+      address: "No financials disclosed (cannot underwrite): 1747 E Virginia Ave Phoenix ($825k, 4 units, 1971); 3020 E Yale St Phoenix ($759k, triplex, 1961); The Mojave, 2020 W Orangewood Ave ($3.595M, 27 units, 1986); Duplex on 13th, 1444 S 13th Pl ($699k); 2432 W Turney Ave ($2.9M, MF/special purpose)",
       statedCapPct: null,
       realCapPct: null,
-      reason: "Land, hospitality/RV/specialty, or outside the Phoenix metro; no financials to underwrite."
+      reason: "No cap rate, NOI or rents visible in the logged-out view."
+    },
+    {
+      address: "Outside Phoenix metro: Eleven on 10th St Casa Grande ($1.925M), 2076 Swanson Ave Lake Havasu City ($2.45M, 13 units), 5733 S Morris Blvd Tucson ($1.695M, 12 units), 2873 N Edmond Dantes Ct Tucson ($990k, 7 townhomes needing completion)",
+      statedCapPct: null,
+      realCapPct: null,
+      reason: "Outside the Phoenix metro and no financials to underwrite."
     }
   ],
 
@@ -88,6 +100,7 @@ window.PHX_SCAN = {
     { date: "2026-10-12", scanned: 19, qualifyingCount: 0, top: "No qualifiers, no near misses. Headless scrape again returned only the unfiltered 'Recommended' feed (439 in pool, 17 unique search listings plus 2 extra detail pages) with nearly all financials login-gated. Closest: 2719 W Maryland Ave (8 units, 1958) stated 7.82% but re-underwrites to 5.29% (-11bps vs Class C) at stated rents with 42% opex. Payson 2-home property stated 7.83% re-underwrites to 5.78% (+28bps, outside metro). Clubhouse at Arcadia (prior near miss) had no financials visible this run - verify individually." },
     { date: "2026-10-19", scanned: 12, qualifyingCount: 0, top: "No qualifiers, no near misses. Headless scrape again returned only the unfiltered 'Recommended' feed (430 in pool; 12 unique search listings, pages 1-2 populated, page 3 empty) plus 6 detail pages; nearly all financials login-gated. Only stated cap in feed: Rare Arcadia 9.37% (5 units), previously identified as sober-living/specialty income, excluded. Last week's 2719 W Maryland Ave and Payson 2-home property not in this scrape and dropped. Clubhouse at Arcadia (prior near miss) has no financials visible - verify individually." },
     { date: "2026-11-02", scanned: 16, qualifyingCount: 2, top: "5035 N 23rd Ave +178bps (Class C, 9 units, broker-stated 2025 NOI $122k = 7.18%, MEDIUM) and 8910-8912 N 3rd St +142bps (Class C, 10 units, 6.82% stated, LOW; calculator shows 7.85% likely pro forma). Headless scrape again returned only the unfiltered 'Recommended' feed (442 in pool; 12 unique search listings plus 4 extra detail pages); most financials login-gated and nothing independently verified. Tucson Benson Hwy 7.61% (+221bps) excluded as outside the Phoenix metro. Clubhouse at Arcadia (prior near miss) not in this scrape and dropped - verify individually." },
-    { date: "2026-11-09", scanned: 18, qualifyingCount: 2, top: "2242 E Taylor St +338bps (5 units, Class C, 8.78% stated, LOW, unverified) and 1017-1031 E Fairmount Ave +110bps (8 units, 6.50% stated, LOW). Headless scrape again returned only the unfiltered 'Recommended' feed (451 in pool; 18 unique search listings, 6 detail pages all outside the metro); no financials visible, nothing independently verified. 5035 N 23rd Ave and 8910-8912 N 3rd St (last week's qualifiers) not in this scrape and dropped - verify individually." }
+    { date: "2026-11-09", scanned: 18, qualifyingCount: 2, top: "2242 E Taylor St +338bps (5 units, Class C, 8.78% stated, LOW, unverified) and 1017-1031 E Fairmount Ave +110bps (8 units, 6.50% stated, LOW). Headless scrape again returned only the unfiltered 'Recommended' feed (451 in pool; 18 unique search listings, 6 detail pages all outside the metro); no financials visible, nothing independently verified. 5035 N 23rd Ave and 8910-8912 N 3rd St (last week's qualifiers) not in this scrape and dropped - verify individually." },
+    { date: "2026-11-23", scanned: 14, qualifyingCount: 0, top: "No qualifiers. Near misses: 2242 E Taylor St +88bps (5 units, Class C, re-underwritten 6.28% vs 8.78% stated, MEDIUM) and Row 31 +86bps (31 units, Class A, 2026 lease-up, 5.61% vs 7.39% stated, MEDIUM). Headless scrape again returned only the unfiltered 'Recommended' feed (456 in pool; 8 unique search listings plus 6 detail pages); most financials login-gated. 1017-1031 E Fairmount Ave (last week's qualifier) re-underwrites to 4.27% (-113bps) and is disqualified; Fairmount Recovery Housing 10.67% NNN excluded as specialty." }
   ]
 };
