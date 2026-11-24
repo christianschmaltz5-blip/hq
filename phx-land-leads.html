@@ -2364,13 +2364,14 @@ function printPreviewLetter(){
 })();
 // Short version to copy by hand: envelope block, then ~90 words. Greeting guessed from the county's "SURNAME FIRST/SPOUSE" owner format.
 // Mailing-block formatter: USPS style (name / street / CITY ST ZIP+4). Returns {lines, warn}; warn = needs a human look before mailing.
+const personTrust = o => { const u = String(o || '').replace(/\s+/g, ' ').trim().toUpperCase(); if(/\/|LAND TRUST/.test(u)) return null; const m = u.match(/^([A-Z]{2,})(?: [A-Z])? ([A-Z]{2,}) (?:AND|&) ([A-Z]{2,})(?: [A-Z])? \2\b.*\bTRUST\b/); return m && [m[1], m[3]]; };   // "SCOTT C ROGERS AND BERNADETTE B ROGERS 1998 FAMILY TRUST" -> Scott, Bernadette
 function fmtEnvelope(lead){
   const own = lead.ownership || {};
   const fixEnt = s => titleCase(s).replace(/\b(And|Of|De|La|Las|Del|The)\b(?!$)/g, (m, w, o) => o ? w.toLowerCase() : w).replace(/\b[A-Z]\d+[A-Za-z]\d+\b/g, m => m.toUpperCase()).replace(/\b(Llc|Lp|Llp|Lllp|Inc|Pllc|Hoa|Ii|Iii|Iv|Jr|Sr|Nw|Ne|Sw|Se|Po)\b/g, m => m.toUpperCase()).replace(/\bL L C\b/gi, 'LLC').replace(/\bP O\b/gi, 'PO');
   let o = (lead.ownerName || '').replace(/\s+/g, ' ').trim(), warn = '';
   const ENT = /\b(LLC|L L C|LP|LLP|LLLP|INC|CORP|CO|COMPANY|TRUST|TRUSTEES?|ESTATE|PARTNERS|PARTNERSHIP|PROPERTIES|HOLDINGS|ASSOCIATION|BANK|CHURCH|FOUNDATION|FUND|GROUP|ENTERPRISES|INVESTMENTS?|VENTURES?|DEVELOPMENT|BUILDERS|HOMES|REALTY|APARTMENTS)\b/;
   let name;
-  if(ENT.test(o) || !o) name = fixEnt(o || 'Property Owner') + (own.isHiddenOwner ? '\nAttn: Owner' : '');
+  if(ENT.test(o) || !o) name = fixEnt(o || 'Property Owner') + (own.isHiddenOwner && !personTrust(o) ? '\nAttn: Owner' : '');
   else {
     const tr = /\s(TR|TRS|TTEE|TTEES)$/.test(o); o = o.replace(/\s(TR|TRS|TTEE|TTEES|ETAL|ET AL|ETUX|ETVIR)$/, '');
     const flip = s => { const w = s.trim().split(' '), sfx = /^(JR|SR|II|III|IV)$/.test(w[w.length-1]) ? w.pop() : ''; const n = w.length > 1 ? titleCase(w.slice(1).join(' ') + ' ' + w[0]) : titleCase(w[0]); return n + (sfx ? ' ' + (/^(JR|SR)$/.test(sfx) ? titleCase(sfx) + '.' : sfx) : ''); };
@@ -2413,6 +2414,7 @@ function fmtEnvelope(lead){
 function handSal(lead){
   const own = lead.ownership || {}, o = (lead.ownerName || '').replace(/\s+/g,' ').trim(), p = o.split('/'), w = o.split(' ');
   let sal = 'Dear Property Owner,';
+  const pt = personTrust(o); if(pt) return `Dear ${titleCase(pt[0])} and ${titleCase(pt[1])},`;
   if(!own.isEntityOwner && p.length >= 2 && p[0].split(' ')[1] && p[1].split(' ')[0]) sal = `Dear ${titleCase(p[0].split(' ')[1])} and ${titleCase(p[1].split(' ')[0])},`;
   else if(!own.isEntityOwner && w[1] && w[1].length > 1) sal = `Dear ${titleCase(w[1])},`;
   return sal;
