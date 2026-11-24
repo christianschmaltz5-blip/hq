@@ -1256,16 +1256,11 @@ function otOpenLead(apn){
   showTab('leads'); applyFilters(); window.scrollTo(0, 0);
 }
 function otLinks(l){
-  const c = loadContacts()[l.apn] || {}, phones = c.phones || [], emails = c.emails || [], a = `'${esc(l.apn)}'`;
-  const lk = (t, href, extra) => `<a href="${href}" ${extra || ''} style="margin-right:8px;white-space:nowrap;">${t}</a>`;
+  const a = `'${esc(l.apn)}'`, lk = (t, href, extra) => `<a href="${href}" ${extra || ''} style="margin-right:10px;white-space:nowrap;">${t}</a>`;
   return [
-    lk('Open lead', '#', `onclick="event.preventDefault();otOpenLead(${a})"`),
-    onePagerLink(l) ? lk('📄 One-pager', `phx-onepager.html?apn=${encodeURIComponent(l.apn)}`, 'target="_blank" rel="noopener"') : '',
-    l.ownerMailAddress ? lk('✍️ Letter', '#', `onclick="event.preventDefault();openLetter('a:${esc(l.apn)}',true)"`) : '',
-    l.ownerMailAddress && !(l.ownership || {}).isHiddenOwner ? lk('✉️ Typed letter', '#', `onclick="event.preventDefault();openLetter('a:${esc(l.apn)}')"`) : '',
-    phones[0] && phones[0].n ? lk('📞 ' + esc(phones[0].n), 'tel:' + esc(String(phones[0].n).replace(/[^\d+]/g, ''))) : '',
-    emails[0] ? lk('✉ ' + esc(emails[0]), 'mailto:' + esc(emails[0])) : '',
-    l.lat && l.lng ? lk('🗺 Map', `https://www.google.com/maps/search/?api=1&query=${l.lat},${l.lng}`, 'target="_blank" rel="noopener"') : ''
+    lk('Open', '#', `onclick="event.preventDefault();otOpenLead(${a})"`),
+    l.ownerMailAddress && !fmtEnvelope(l).warn ? lk('🖨 Print letter', '#', `onclick="event.preventDefault();mailPrint('letter',[leadFor('a:'+${a})],1)"`) : '<span style="color:var(--text-soft);font-size:11.5px;">check address</span>',
+    onePagerLink(l) ? lk('📄 One-pager', `phx-onepager.html?apn=${encodeURIComponent(l.apn)}`, 'target="_blank" rel="noopener"') : ''
   ].join('');
 }
 function mailPrint(kind, leads, round){
@@ -1274,7 +1269,7 @@ function mailPrint(kind, leads, round){
   const ret = 'Christian Schmaltz\nP.O. Box 11097\nPhoenix, AZ 85061';
   document.getElementById('mailPrint').innerHTML = ok.map(l => kind === 'env'
     ? `<div class="mp-env"><div class="r">${esc(ret)}</div><div class="to">${esc(fmtEnvelope(l).lines)}</div></div>`
-    : `<div class="mp-page"><div class="mp-from">${esc(ret)}</div><p>${date}</p><p>${esc(handSal(l))}</p><p>${esc(mailBody(l, round))}</p><p>Thank you,\n\n\n\nChristian Schmaltz\n605-786-5520</p></div>`).join('');
+    : `<div class="mp-page"><div class="mp-from">${esc(ret)}</div><p>${date}</p><p>${esc(fmtEnvelope(l).lines)}</p><p>${esc(handSal(l))}</p><p>${esc(mailBody(l, round))}</p><div style="height:.95in"></div><p>Thank you,\n\n\n\nChristian Schmaltz\n605-786-5520</p></div>`).join('');
   document.getElementById('mailPage').textContent = kind === 'env' ? '@page{size:9.5in 4.125in;margin:0}' : '@page{size:8.5in 11in;margin:0}';
   if(ok.length){ document.body.classList.add('printing-mail'); window.addEventListener('afterprint', () => document.body.classList.remove('printing-mail'), {once:true}); window.print(); }
   return {printed: ok.length, skipped};
@@ -1291,6 +1286,8 @@ function renderOutreachTracker(){
   const any = l => m.phone[l.apn] || m.email[l.apn] || m.letter[l.apn];
   const rows = all.filter(l => show === 'all' || (show === 'none' && !any(l)) || (show === 'any' && any(l)) || (show === 'noletter' && !m.letter[l.apn]) || (show === 'nophone' && !m.phone[l.apn]) || (show === 'noemail' && !m.email[l.apn]));
   window._otRows = rows;
+  const nOk = rows.filter(l => l.ownerMailAddress && !fmtEnvelope(l).warn).length, pn = document.getElementById('otPrintNote');
+  if(pn) pn.textContent = `${nOk} of ${rows.length} leads below are ready to print` + (rows.length > nOk ? `; ${rows.length - nOk} are skipped because the mailing address needs a check.` : '.');
   const n = k => all.filter(l => m[k][l.apn]).length;
   document.getElementById('otSummary').textContent = `${all.length} leads at this score: ${n('phone')} called, ${n('email')} emailed, ${n('letter')} letters written`;
   const box = (k, l) => `<td style="text-align:center;white-space:nowrap;"><label style="cursor:pointer;"><input type="checkbox" ${m[k][l.apn] ? 'checked' : ''} onchange="otToggle('${k}','${esc(l.apn)}',this)"> <span style="font-size:11px;color:var(--text-soft);">${m[k][l.apn] ? esc(m[k][l.apn]) : ''}</span></label></td>`;
@@ -2415,7 +2412,7 @@ function mailBody(lead, round){
   const a = titleCase(String(lead.address || '').split(/\s{2,}/)[0]), enc = !!onePagerLink(lead);
   if(round === 2) return `I wrote a few weeks ago about your ${lead.landAcres}-acre lot at ${a}, and I wanted to make sure my letter reached you.\n\nIf you would ever consider selling, I would buy it as-is for cash. Or, if you would rather keep your lot's value, we could build a home together and share in the profit when it sells.\n\nNo pressure either way. I would just enjoy a short call.`;
   if(round === 3) return `This is my last note about your ${lead.landAcres}-acre lot at ${a}. If the timing was not right before, it may be now.\n\nMy offer still stands: a cash purchase as-is, or a partnership where we build a home on your lot together and share the profit. I would be glad to walk through real numbers for whichever you prefer.\n\nThank you for your time.`;
-  return `My name is Christian Schmaltz. I am a local home builder, and I noticed you own the ${lead.landAcres}-acre lot at ${a}. I am not a realtor.\n\nIf you would ever consider selling, I would buy it as-is for cash. Or, if you would rather keep your lot's value, we could build a home together and share in the profit when it sells.\n\n${enc ? 'I have enclosed a short summary of how a partnership would work on your lot. It shows your parcel outlined on a map, an example of the kind of home I would build, and recent home sales nearby.\n\n' : ''}Either way, no pressure. I would just enjoy a short call.`;
+  return `My name is Christian Schmaltz. I build custom homes in North Phoenix, and I am not a realtor. I noticed you own the ${lead.landAcres}-acre lot at ${a}, and I am writing to you directly because I would like to buy it or build on it with you.\n\nIf you would ever consider selling, I would buy it as-is for cash. Or, if you would rather keep your lot's value, we could build a home together and share in the profit when it sells.\n\n${enc ? 'I have enclosed a short summary of how a partnership would work on your lot. It shows your parcel outlined on a map, an example of the kind of home I would build, and recent home sales nearby.\n\n' : ''}Either way, no pressure. I would just enjoy a short call.`;
 }
 function buildHandLetter(lead){
   const sal = handSal(lead);
