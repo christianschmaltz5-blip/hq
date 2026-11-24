@@ -414,10 +414,11 @@
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:10px;">
           <label style="font-size:12.5px;color:var(--text-soft);">Print round <select class="filter-input" id="otRound"><option value="1">1st letter</option><option value="2">Follow-up 2</option><option value="3">Follow-up 3 (last)</option></select></label>
+          <label style="font-size:12.5px;color:var(--text-soft);">Max per batch <input class="filter-input" id="otMax" type="number" value="25" min="1" max="100" style="width:64px"></label>
           <button class="mail-btn" onclick="otPrint('letter')">🖨 Print letters</button>
           <button class="mail-btn" onclick="otPrintStack()">🖨 Print all: letters + one-pagers</button>
           <button class="mail-btn" onclick="otPrint('env')">🖨 Print #10 envelopes</button>
-          <span id="otPrintNote" style="font-size:12px;color:var(--text-soft);">Prints for every lead in the table below, so set the score and Show filters first.</span>
+          <span id="otPrintNote" style="font-size:12px;color:var(--text-soft);">Prints the top leads in the table below, up to Max per batch, so set the score and Show filters first (Show: No letter yet skips the ones you already wrote).</span>
         </div>
         <div style="overflow-x:auto;"><table class="comps-table" id="otTable"></table></div>
       </div>
@@ -1276,8 +1277,9 @@ function mailPrint(kind, leads, round){
   if(ok.length){ document.body.classList.add('printing-mail'); window.addEventListener('afterprint', () => document.body.classList.remove('printing-mail'), {once:true}); window.print(); }
   return {printed: ok.length, skipped};
 }
+const otMaxN = () => Math.max(1, parseInt((document.getElementById('otMax') || {}).value, 10) || 25);   // same cap for letters, stack and envelopes so the batches match
 function otPrintStack(){   // one tab: each ready lead's letter followed by its one-pager, in the order you stuff the envelopes
-  const ok = (window._otRows || []).filter(l => l.ownerMailAddress && !fmtEnvelope(l).warn);
+  const ok = (window._otRows || []).filter(l => l.ownerMailAddress && !fmtEnvelope(l).warn).slice(0, otMaxN());
   if(!ok.length){ document.getElementById('otPrintNote').textContent = 'Nothing to print: no leads in the table have a good mailing address.'; return; }
   const date = new Date().toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'}), ret = 'Christian Schmaltz\nP.O. Box 11097\nPhoenix, AZ 85061';
   try{ localStorage.setItem('onepagerBatch', JSON.stringify(ok.map(l => ({apn: l.apn, encl: !!onePagerLink(l), letter: letterPage(l, 1, date, ret)})))); }catch(e){ document.getElementById('otPrintNote').textContent = 'Could not prepare the stack (browser storage is full or blocked).'; return; }
@@ -1285,7 +1287,7 @@ function otPrintStack(){   // one tab: each ready lead's letter followed by its 
   document.getElementById('otPrintNote').textContent = `Opened ${ok.length} letters with their one-pagers in a new tab. Click Print all there once the maps finish loading.`;
 }
 function otPrint(kind){
-  const r = mailPrint(kind, window._otRows || [], Number(document.getElementById('otRound').value));
+  const r = mailPrint(kind, (window._otRows || []).filter(l => l.ownerMailAddress && !fmtEnvelope(l).warn).slice(0, otMaxN()), Number(document.getElementById('otRound').value));
   document.getElementById('otPrintNote').textContent = r.printed ? `Sent ${r.printed} ${kind === 'env' ? 'envelopes' : 'letters'} to the printer.` + (r.skipped ? ` Skipped ${r.skipped} with a bad or missing mailing address.` : '') : 'Nothing to print: no leads in the table have a good mailing address.';
 }
 function renderOutreachTracker(){
