@@ -2417,8 +2417,9 @@ function handSal(lead){
   const own = lead.ownership || {}, o = (lead.ownerName || '').replace(/\s+/g,' ').trim(), p = o.split('/'), w = o.split(' ');
   let sal = 'Dear Property Owner,';
   const pt = personTrust(o); if(pt) return `Dear ${titleCase(pt[0])} and ${titleCase(pt[1])},`;
-  if(!own.isEntityOwner && p.length >= 2 && p[0].split(' ')[1] && p[1].split(' ')[0]) sal = `Dear ${titleCase(p[0].split(' ')[1])} and ${titleCase(p[1].split(' ')[0])},`;
-  else if(!own.isEntityOwner && w[1] && w[1].length > 1) sal = `Dear ${titleCase(w[1])},`;
+  const biz = own.isEntityOwner || /\b(LLC|INC|LTD|LP|LLP|CORP|CO|ENTERPRISES|HOMES|BUILDERS|PROPERTIES|PARTNERS|HOLDINGS|TRUST)\b/i.test(o);
+  if(!biz && p.length >= 2 && p[0].split(' ')[1] && p[1].split(' ')[0]) sal = `Dear ${titleCase(p[0].split(' ')[1])} and ${titleCase(p[1].split(' ')[0])},`;
+  else if(!biz && w[1] && w[1].length > 1) sal = `Dear ${titleCase(w[1])},`;
   return sal;
 }
 // Body of the printed letter. Round 1 = the same words as the handwritten letter; rounds 2 and 3 are short follow-ups.
